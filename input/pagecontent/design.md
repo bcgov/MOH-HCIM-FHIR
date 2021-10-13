@@ -38,6 +38,7 @@ Extension Name | Description |
 Death valid flag | A boolean extension that indicates is the client's death has been verified by ...
 Client effective date | A Period extension at the Patient level that represents the entire record
 Address validation status | A code that represents the address validation status.  This will be part of every Patient.address
+{:.grid}
 
 >There are more extensions, need to fill this in
 
@@ -56,6 +57,7 @@ Patient.address.use|<span style="color:red">I think this is inferred to be alway
 Patient.identifier.system|<span style="color:red">Not sure</span>
 Patient.identifier.type|<span style="color:red">Not sure</span>
 Patient.identifier.use|<span style="color:red">Not sure</span>
+{:.grid}
 
 #### FHIR Operations
 
@@ -100,6 +102,7 @@ Parameter Name|Parameter Value|Comments
 message id|parameter.value[string]|Message (unique) id
 create time|parameter.value[dateTime]|Creation date of message
 request message id|parameter.value[string]|Message (unique) id
+{:.grid}
 
 #### Searches
 There are two searches available for Client Registry FHIR, Find Candidates and Get Demographics.  The operations are:
