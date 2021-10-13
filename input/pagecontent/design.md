@@ -76,9 +76,14 @@ https://..../$MergePatient.Async |
 Suffixes such as History and Async inform the Client Registry FHIR server to perform the operation in a particular way such as returning historical attributes or responding asynchronously.
 
 #### Requests
+
 The body of the request message will vary depending on the business context however all message bodies will consist of at least one Parameter resource which in turn includes two Parameter resources.  The first Parameter.Parameter will hold operation information such as unique identifiers for the message, creation time, sender, receiver, enterer, etc  The second Parameter.Parameter resource will contain all the business information such as search parameters, resources like Patient, etc.
 
+The image below shows the nested Parameters.  The Operation Parameters are for message meta data like timestamps and unique identifiers.  The Business Parameters are for search parameters or resources such as Patient.
+
+<span width="100%">
 ![FHIR Structure - Nested Parameters](design_nestedParameters.png "Nested Parameters")
+</span>
 
 #### Responses
 
@@ -135,7 +140,9 @@ The Get Demographics is a synchronous request-response transaction
 #### FHIR Structure for Searches
 Below is a figure that shows the FHIR structure for the two searches.  The request is a Parameter resource and the response is a searchset Bundle with 0 or more Patients and one OperationOutcome.  The OperationOutcome is where you'll find warnings and errors regarding the search.
 
+<span width="100%">
 ![FHIR Structure - Searches](searches_fhir.png "FHIR Structure for Searches")
+</span>
 
 Client Registry FHIR searches do not support parameters found in the FHIR international specification: _content, _id, _lastUpdated, _profile, _query, _security, _source, _tag, _text and _filter.  As well modifiers, prefixes, search hierarchies, chained parameters, reverse chaining, sorting, paging, includes, revincludes, 
 
@@ -233,6 +240,15 @@ If the demographics are updated at the same time as the merge, the demographic u
 
 The record the POS is keeping must be in the EMPI prior to the merge or the Merge Person message will fail. This record is known as the ‘survivor’ record.
 
+### FHIR Structure for Revise, Merge and Distributions
+
+The FHIR structure is the same for Merge, Revise and Distributions.  Responses (if required) are wrapped in collection Bundles and include OperationOutcome, Operation Parameters and Patient resources.
+
+<span width="100%">
+![FHIR Structure - Revise_Merge](revise_merge_fhir.png "FHIR Structure for Revise and Merge")
+</span>
+
+
 ### Asynchronous Operations
 The asynchronous pattern for Revise and Merge Patient follow the same pattern as V3.  That is 
 
@@ -244,9 +260,7 @@ The interactions are associated by the unique message id in the Parameters resou
 
 >What is the response end point?  Will it be https://..../$RevisePatient.Async ?
 
-![FHIR Structure - Revise_Merge](revise_merge_fhir.png "FHIR Structure for Revise and Merge")
-
-### Newborn
+### Revise Patient Newborn
 
 Newborn events use the RevisePatient.Newborn operation; a parameter, 'mothersPHN' is included.
 
@@ -254,27 +268,29 @@ Newborn events use the RevisePatient.Newborn operation; a parameter, 'mothersPHN
 
 Merge events use the MergePatient operation; a parameter, 'relatedPerson' is included to identify the non-survivors.
 
-### Revise Patient IN
+### Parameters for Revise and Merge
+
+#### Revise Patient IN
 
 Parameter Name|Parameter Value|Comments
 :---|:---|:---
 patient|Patient resource|A Patient resource
 
-### Revise Patient Newborn IN
+#### Revise Patient Newborn IN
 
 Parameter Name|Parameter Value|Comments
 :---|:---|:---
 patient|Patient resource|A Patient resource representing newborn
 mothersPHN|parameter.value[string]|The mothers PHN
 
-### Merge Patient IN
+#### Merge Patient IN
 
 Parameter Name|Parameter Value|Comments
 :---|:---|:---
 patient|Patient resource|A Patient resource that for Merge is the surviving client
 relatedPerson|parameter.value[Identifier]|<span style="color:red">Is this Identifier or something else?</span>
 
-### Revise Patient OUT Bundle
+#### Revise Patient OUT Bundle
 
 The Bundle type is collection.
 
@@ -284,7 +300,7 @@ Patient resource|A Patient resource
 OperationOutcome|Information about the operation; warnings and errors.
 Parameters resource|Any name value pair parameters such as message creation date and unique identifiers
 
-### Revise Patient Newborn OUT Bundle
+#### Revise Patient Newborn OUT Bundle
 
 The Bundle type is collection.
 
@@ -294,7 +310,7 @@ Patient resource|A Patient resource, the newborn
 OperationOutcome|Information about the operation; warnings and errors.
 Parameters resource|Any name value pair parameters such as message creation date and unique identifiers
 
-### Merge Patient OUT Bundle
+#### Merge Patient OUT Bundle
 
 The Bundle type is collection.
 
