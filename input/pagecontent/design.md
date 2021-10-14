@@ -135,7 +135,3 @@ These business transactions will allow the user to:
 
 [Revise and Merge page](reviseAndMerge.html "Revise and Merge Patient")
 
-### Distributions
-
-See Revise Patient; the Distribution message is a Revise Patient interaction sent to a consumer of client data.  However the expected success response is a HTTP code 200 without a body.  The RevisePatient.Newborn and RevisePatient.Async are not included in Distributions.
->The distributions are really a different set of requirements.  These are not part of the Client Registry FHIR design, but what we require from clients to successfully accept distribution interactions from the Client Registry.
