@@ -41,7 +41,6 @@ Parameter Name|Parameter Value|Comments
 :---|:---|:---
 identifier|<span style="color:red">Not sure need to include the structure for PHN, SSRIs</span>
 withHistory|parameter.value[boolean]|True or false
-{:.grid}
 
 #### Get Demographics Out Bundle
 
@@ -53,7 +52,6 @@ OperationOutcome resource|This resource contains the search warnings and errors
 Patient resource|For Get Demographics there may be 0 Patients if no match is found
 Parameters resource|These are the search parameters echoed back
 2nd Parameters resource|Any name value pair parameters such as message creation date and unique identifiers
-{:.grid}
 
 #### Find Candidates In
 
@@ -69,7 +67,6 @@ name|parameter.value[HumanName]|Includes: family, multiple given and use code
 telephone|parameter.value[ContactPoint]|Includes: use and value
 mothersPHN|parameter.value[string]|PHN
 returnIdentifiersOnly|parameter.value[boolean]|If true, instructs Client Registry to return Patients with only their identifiers
-{:.grid}
 
 >Does FC use wildcards?
 
@@ -86,7 +83,6 @@ OperationOutcome resource|This resource contains the search warnings and errors
 Patient resource|There may be 0 or more
 Parameters resource|These are the search parameters echoed back
 2nd Parameters resource|Any name value pair parameters such as message creation date and unique identifiers
-{:.grid}
 
 #### Search Score
 In a searchset Bundle the entry.search.score attribute in FHIR is a decimal number between and including 0 and 1.  The Client Registry FHIR profile is non-conformant as the score returned by the EMPI doesn't map well into the 0 to 1 range.  Therefore the EMPI match score will be returned as is allowing users to continue to interpret this score as they currently do.
