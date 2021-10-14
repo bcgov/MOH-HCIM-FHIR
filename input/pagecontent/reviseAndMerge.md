@@ -55,7 +55,6 @@ Merge events use the MergePatient operation; a parameter, 'relatedPerson' is inc
 Parameter Name|Parameter Value|Comments
 :---|:---|:---
 patient|Patient resource|A Patient resource
-{:.grid}
 
 #### Revise Patient Newborn IN
 
@@ -63,7 +62,6 @@ Parameter Name|Parameter Value|Comments
 :---|:---|:---
 patient|Patient resource|A Patient resource representing newborn
 mothersPHN|parameter.value[string]|The mothers PHN
-{:.grid}
 
 #### Merge Patient IN
 
@@ -71,7 +69,6 @@ Parameter Name|Parameter Value|Comments
 :---|:---|:---
 patient|Patient resource|A Patient resource that for Merge is the surviving client
 relatedPerson|parameter.value[Identifier]|<span style="color:red">Is this Identifier or something else?</span>
-{:.grid}
 
 #### Revise Patient OUT Bundle
 
@@ -82,7 +79,6 @@ Bundle Entry|Comments
 Patient resource|A Patient resource
 OperationOutcome|Information about the operation; warnings and errors.
 Parameters resource|Any name value pair parameters such as message creation date and unique identifiers
-{:.grid}
 
 #### Revise Patient Newborn OUT Bundle
 
@@ -93,7 +89,6 @@ Bundle Entry|Comments
 Patient resource|A Patient resource, the newborn
 OperationOutcome|Information about the operation; warnings and errors.
 Parameters resource|Any name value pair parameters such as message creation date and unique identifiers
-{:.grid}
 
 #### Merge Patient OUT Bundle
 
@@ -104,5 +99,4 @@ Bundle Entry|Comments
 Patient resource|A Patient resource, the survivor
 OperationOutcome|Information about the operation; warnings and errors.
 Parameters resource|Any name value pair parameters such as message creation date and unique identifiers
-{:.grid}
 
