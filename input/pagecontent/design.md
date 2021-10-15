@@ -16,6 +16,7 @@
 > Not sure if this is true, will users be able to use FHIR and V3 in some sort of combination?  I.e. Get Demo in FHIR than V# for Revise Patient?
 - The Client Registry FHIR design will become a Provincial standard
 - Asynchronous interactions will follow the same pattern as V3
+- Get Eligibility is not supported by FHIR (will still be supported by V3)
 
 ### Design Outcomes - Overview
 - The primary resource is Patient and Patient shall be used to communicate client attributes
@@ -114,9 +115,9 @@ Find Candidates may return 0 or more candidates, while Get Demographics is desig
 
 [Search page](search.html "Find Candidates and Get Demographics")
 
-### Revise and/or Merge Patient
+#### Revise and/or Merge Patient
 
-Revise and Merge Patient are maintain transactions that are closely related and therefore are described in the same section.  They use the same FHIR structure and resources; merge will have additional parameters.
+Revise and Merge Patient are maintain transactions that are closely related and therefore are described in the same section.  They use the same FHIR structure and resources; merge uses additional parameters.
 
 Revise and Merge Operations |
 :--- |
@@ -132,3 +133,6 @@ These business transactions will allow the user to:
 
 [Revise and Merge page](reviseAndMerge.html "Revise and Merge Patient")
 
+### Get Eligibility is Not Supported by FHIR
+
+Get Eligibility will not be supported by the Client Registry FHIR interactions.  If a FHIR-only user needs to know the claim eligibility status of a Patient they need to retrieve the Patient (the PHN) with a FHIR Get Demographics message and then use the PHN to submit a Get Eligibility message to <span style="color:red">the eligibility service (is there more information we can provide here, like a link to some documentation on the eligibility service)</span>
