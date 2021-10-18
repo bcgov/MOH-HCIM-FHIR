@@ -39,7 +39,7 @@ The IN search parameters for Get Demographics are as follows.
 
 Parameter Name|Parameter Value|Comments
 :---|:---|:---
-identifier|<span style="color:red">Not sure need to include the structure for PHN, SSRIs</span>
+identifier|**Not sure need to include the structure for PHN, SSRIs**
 withHistory|parameter.value[boolean]|True or false
 
 #### Get Demographics Out Bundle
