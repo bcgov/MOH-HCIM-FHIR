@@ -48,15 +48,15 @@ Address validation status | A code that represents the address validation status
 
 Attribute | Value Sets
 :---|:---
-Patient.name.use|<span style="color:red">Not sure how FHIR maps to Client Registry, is Legal the only code used?</span>
+Patient.name.use|**Not sure how FHIR maps to Client Registry, is Legal the only code used?**
 Patient.telecom.use|home, work, mobile are used and temp, old not allowed
 Patient.telecom.system|phone or email are allowed, not the others
-Patient.gender|male, female, unknown and other not allowed but <span style="color:red">Not sure</span>
+Patient.gender|male, female, unknown and other not allowed but **Not sure**
 Patient.address.type|postal and physical are used.  both not allowed
-Patient.address.use|<span style="color:red">I think this is inferred to be always home</span>
-Patient.identifier.system|<span style="color:red">Not sure</span>
-Patient.identifier.type|<span style="color:red">Not sure</span>
-Patient.identifier.use|<span style="color:red">Not sure</span>
+Patient.address.use|**I think this is inferred to be always home**
+Patient.identifier.system|**Not sure**
+Patient.identifier.type|**Not sure**
+Patient.identifier.use|**Not sure**
 
 #### FHIR Operations
 
