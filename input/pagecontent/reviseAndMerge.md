@@ -68,7 +68,7 @@ mothersPHN|parameter.value[string]|The mothers PHN
 Parameter Name|Parameter Value|Comments
 :---|:---|:---
 patient|Patient resource|A Patient resource that for Merge is the surviving client
-relatedPerson|parameter.value[Identifier]|<span style="color:red">Is this Identifier or something else?</span>
+relatedPerson|parameter.value[Identifier]|**Is this Identifier or something else?**
 
 #### Revise Patient OUT Bundle
 
