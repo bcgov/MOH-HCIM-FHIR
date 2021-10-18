@@ -135,4 +135,5 @@ These business transactions will allow the user to:
 
 ### Get Eligibility is Not Supported by FHIR
 
-Get Eligibility will not be supported by the Client Registry FHIR interactions.  If a FHIR-only user needs to know the claim eligibility status of a Patient they need to retrieve the Patient (the PHN) with a FHIR Get Demographics message and then use the PHN to submit a Get Eligibility message to <span style="color:red">the eligibility service (is there more information we can provide here, like a link to some documentation on the eligibility service)</span>
+Get Eligibility will not be supported by the Client Registry FHIR interactions.  If a FHIR-only user needs to know the claim eligibility status of a Patient they need to retrieve the Patient (the PHN) with a FHIR Get Demographics message and then use the PHN to submit a Get Eligibility message to the eligibility service.
+>Is there more information we can provide here, like a link to some documentation on the eligibility service?
