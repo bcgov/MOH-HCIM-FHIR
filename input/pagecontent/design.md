@@ -1,24 +1,30 @@
 >**Note**<br>This specification is currently published as a Draft Standard on the ministry github and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.
 
 ### Design Approach
+The approach to design a FHIR interface to the Client Registry was to keep the interactions as similar as possible to the current system.  However where necessary additions and improvements would be considered.
+
 - The design team matched current Client Registry interactions 1 to 1 with equivalent FHIR interactions for all the flavours of:
 	- Find Candidates
 	- Get Demographics
 	- Revise Patient
 	- Merge Patient
 	- Distribute Patient
-- Asynchronous interaction will be supported
-- New attributes will be included in FHIR that are not in V3 (such as more business dates)
+- Asynchronous interactions will be supported as with the current system
+- New attributes can be included in FHIR that are not in V3 (such as more business dates)
 
 ### Design Assumptions
+There are a number of assumption that were made at the start of design:
+
 - FHIR is not expected to adversely affect performance, i.e. SLA is not changing for FHIR but will be extended to include FHIR
 - Existing interfaces, such as V3, will not be deprecated and users can use a combination of V3 and FHIR to meet their needs
 > Not sure if this is true, will users be able to use FHIR and V3 in some sort of combination?  I.e. Get Demo in FHIR than V# for Revise Patient?
 - The Client Registry FHIR design will become a Provincial standard
-- Asynchronous interactions will follow the same pattern as V3
+- Asynchronous interactions will follow the same pattern as V3 (not the FHIR asynchronous pattern)
 - Get Eligibility is not supported by FHIR (will still be supported by V3)
 
 ### Design Outcomes - Overview
+The main outcomes from the design process were as follows:
+
 - The primary resource is Patient and Patient shall be used to communicate client attributes
 - The JSON text format shall be used to receive and transmit FHIR resources
 - FHIR Operations shall be used for Client Registry interactions
