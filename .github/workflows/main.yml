@@ -28,7 +28,7 @@ jobs:
       - name: Update the image to the latest publisher and then run it
         uses: docker://hl7fhir/ig-publisher-base:latest
         with:
-          args: ./_updatePublisher.sh --force; ./_genonce.sh
+          args: ./_updateAndRunPublisher.sh
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
