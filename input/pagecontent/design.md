@@ -43,6 +43,7 @@ Gender business dates | A Period extension
 Date of birth business dates | A Period extension
 Date of death business dates | A Period extension
 Death flag business dates | A period extension
+PHN business dates | A period extension for PHN
 
 ##### Terminologies, CodeableConcepts, Codes and Value Sets
 
