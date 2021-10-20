@@ -39,8 +39,10 @@ Extension Name | Description |
 Death valid flag | A boolean extension that indicates is the client's death has been verified by ...
 Client effective date | A Period extension at the Patient level that represents the entire record
 Address validation status | A code that represents the address validation status.  This will be part of every Patient.address
-
->There are more extensions, need to fill this in
+Gender business dates | A Period extension
+Date of birth business dates | A Period extension
+Date of death business dates | A Period extension
+Death flag business dates | A period extension
 
 ##### Terminologies, CodeableConcepts, Codes and Value Sets
 
