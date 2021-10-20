@@ -1,0 +1,243 @@
+{
+  "resourceType": "Bundle",
+  "id": "FindCandidatesResponse",
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f7a3b"
+  },
+  "type": "searchset",
+  "timestamp": "2011-09-13T16:11:43.000-07:00",
+  "total": 3,
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Parameters",
+        "id": "FindCandidates",
+        "parameter": [
+          {
+            "name": "address",
+            "valueAddress": {
+              "type": "postal",
+              "line": [
+                "123 Any St",
+                "line 2",
+                "line 3",
+                "line 4"
+              ],
+              "city": "Victoria",
+              "state": "BC",
+              "postalCode": "V1V1V1",
+              "country": "CA"
+            }
+          },
+          {
+            "name": "gender",
+            "valueCode": "male"
+          },
+          {
+            "name": "birthDate",
+            "valueDate": "1959-12-30"
+          },
+          {
+            "name": "deceased-date",
+            "valueDateTime": "2005-05-05"
+          },
+          {
+            "name": "identifier",
+            "valueIdentifier": {
+              "system": "http://hl7.org/fhir/sid/bc-phn",
+              "value": "12345892"
+            }
+          },
+          {
+            "name": "name",
+            "valueHumanName": {
+              "use": "official",
+              "family": "Purple",
+              "given": [
+                "Barney"
+              ]
+            }
+          },
+          {
+            "name": "telecom",
+            "valueContactPoint": {
+              "system": "phone",
+              "value": "1234567890",
+              "use": "home"
+            }
+          },
+          {
+            "name": "motherPHN",
+            "valueIdentifier": {
+              "system": "http://hl7.org/fhir/sid/bc-phn",
+              "value": "9xxxxxxxx"
+            }
+          },
+          {
+            "name": "requester",
+            "valueIdentifier": {
+              "system": "http://hl7.org/fhir/sid/bc-userId",
+              "value": "you@me.com"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient0Response",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 9999999999</p><p><b>name</b>: PURPLE BARNEY </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-06-06</p><p><b>address</b>: 666 YELLOW BRICK RD PRINCE GEORGE BC V8W 3P9 CA </p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/bc-phn",
+            "value": "9999999999"
+          }
+        ],
+        "name": [
+          {
+            "family": "BARNEY",
+            "given": [
+              "PURPLE"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "2505554848",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1940-06-06",
+        "address": [
+          {
+            "type": "physical",
+            "line": [
+              "666 YELLOW BRICK RD"
+            ],
+            "city": "PRINCE GEORGE",
+            "state": "BC",
+            "postalCode": "V8W 3P9",
+            "country": "CA"
+          }
+        ]
+      },
+      "search": {
+        "score": 31
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient1Response",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 9999999999</p><p><b>name</b>: SARAH LYNN PURPLE </p><p><b>telecom</b>: ph: 2505557841(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1973-05-18</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>123 Front St Victoria BC V6N2W2 CA </li></ul></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/bc-phn",
+            "value": "9999999999"
+          }
+        ],
+        "name": [
+          {
+            "family": "PURPLE",
+            "given": [
+              "SARAH",
+              "LYNN"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "2505557841",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1973-05-18",
+        "address": [
+          {
+            "type": "physical",
+            "line": [
+              "123 FRONT ST"
+            ],
+            "city": "VICTORIA",
+            "state": "BC",
+            "postalCode": "V6N2W2",
+            "country": "CA"
+          },
+          {
+            "type": "postal",
+            "line": [
+              "123 Front St"
+            ],
+            "city": "Victoria",
+            "state": "BC",
+            "postalCode": "V6N2W2",
+            "country": "CA"
+          }
+        ]
+      },
+      "search": {
+        "score": -53
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient2Response",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 9999999999</p><p><b>name</b>: BAILEY PURPLE </p><p><b>telecom</b>: ph: 2504283447(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1985-12-14</p><p><b>address</b>: PO BOX 5 CRESTON BC V0B 1G0 CA </p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/bc-phn",
+            "value": "9999999999"
+          }
+        ],
+        "name": [
+          {
+            "family": "PURPLE",
+            "given": [
+              "BAILEY"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "2504283447",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1985-12-14",
+        "address": [
+          {
+            "type": "postal",
+            "line": [
+              "PO BOX 5"
+            ],
+            "city": "CRESTON",
+            "state": "BC",
+            "postalCode": "V0B 1G0",
+            "country": "CA"
+          }
+        ]
+      },
+      "search": {
+        "score": -56
+      }
+    }
+  ]
+}

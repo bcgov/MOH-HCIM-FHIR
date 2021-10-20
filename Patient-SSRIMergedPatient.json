@@ -1,0 +1,157 @@
+{
+  "resourceType": "Patient",
+  "id": "SSRIMergedPatient",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: VPP_CER: CER123345, VPP_LION: VCHA23321, VPP_FPH: FOR2345, id: 9999999999</p><p><b>active</b>: true</p><p><b>name</b>: David Edward Adams , Dave (NICKNAME)</p><p><b>telecom</b>: ph: 2505552323(HOME), ph: 12505658896(WORK), ph: 2505883546(MOBILE)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1963-09-05</p><p><b>address</b>: </p><ul><li>3145 happy valley rd Suite 33 Attention - Dave Victoria BC V8C2P8 CA </li><li>3840 fort St Victoria BC V5C2P6 CA </li></ul><blockquote><p><b>link</b></p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote></div>"
+  },
+  "extension": [
+    {
+      "url": "http://fhir.bc.ca/extension/effectiveDate",
+      "valuePeriod": {
+        "start": "2012-04-11T13:19:00.000-07:00"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/codesystem/bc-source-type",
+            "code": "VPP_CER"
+          }
+        ]
+      },
+      "system": "http://hl7.org/fhir/sid/bc-source",
+      "value": "CER123345"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/codesystem/bc-source-type",
+            "code": "VPP_LION"
+          }
+        ]
+      },
+      "system": "http://hl7.org/fhir/sid/bc-source",
+      "value": "VCHA23321"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/codesystem/bc-source-type",
+            "code": "VPP_FPH"
+          }
+        ]
+      },
+      "system": "http://hl7.org/fhir/sid/bc-source",
+      "value": "FOR2345"
+    },
+    {
+      "system": "http://hl7.org/fhir/sid/bc-phn",
+      "value": "9999999999"
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "family": "Adams",
+      "given": [
+        "David",
+        "Edward"
+      ]
+    },
+    {
+      "use": "nickname",
+      "given": [
+        "Dave"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "2505552323",
+      "use": "home"
+    },
+    {
+      "system": "phone",
+      "value": "12505658896",
+      "use": "work"
+    },
+    {
+      "system": "phone",
+      "value": "2505883546",
+      "use": "mobile"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1963-09-05",
+  "address": [
+    {
+      "type": "physical",
+      "line": [
+        "3145 happy valley rd",
+        "Suite 33",
+        "Attention - Dave"
+      ],
+      "city": "Victoria",
+      "state": "BC",
+      "postalCode": "V8C2P8",
+      "country": "CA"
+    },
+    {
+      "type": "postal",
+      "line": [
+        "3840 fort St"
+      ],
+      "city": "Victoria",
+      "state": "BC",
+      "postalCode": "V5C2P6",
+      "country": "CA"
+    }
+  ],
+  "link": [
+    {
+      "extension": [
+        {
+          "url": "http://fhir.bc.ca/extension/merged-patient-status",
+          "valueCode": "obsolete"
+        }
+      ],
+      "other": {
+        "identifier": {
+          "type": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/codesystem/bc-source-type",
+                "code": "VPP_LION"
+              }
+            ]
+          },
+          "system": "http://hl7.org/fhir/sid/bc-source",
+          "value": "VCHA55555"
+        }
+      },
+      "type": "replaces"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://fhir.bc.ca/extension/merged-patient-status",
+          "valueCode": "cancelled"
+        }
+      ],
+      "other": {
+        "identifier": {
+          "system": "http://hl7.org/fhir/sid/bc-source",
+          "value": "VCHA99999"
+        }
+      },
+      "type": "replaces"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://moh.fhir.org/moh-hcim/RelatedPerson/MotherRelated> a fhir:RelatedPerson;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "MotherRelated"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: MOTHERPHN</p><p><b>patient</b>: <a href=\"Patient-Newborn.html\">Generated Summary: Baby Girl Schmotz ; Phone: 2503148867; gender: female; birthDate: 2013-07-10</a></p><p><b>relationship</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleCode MTH}\">mother</span></p></div>"
+  ];
+  fhir:RelatedPerson.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/bc-phn" ];
+     fhir:Identifier.value [ fhir:value "MOTHERPHN" ]
+  ];
+  fhir:RelatedPerson.patient [
+     fhir:link <http://moh.fhir.org/moh-hcim/Patient/Newborn>;
+     fhir:Reference.reference [ fhir:value "Patient/Newborn" ]
+  ];
+  fhir:RelatedPerson.relationship [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ];
+       fhir:Coding.code [ fhir:value "MTH" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://moh.fhir.org/moh-hcim/RelatedPerson/MotherRelated.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

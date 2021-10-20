@@ -1,0 +1,1149 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- broken links = 126, errors = 53, warn = 22, info = 0 -->
+<head>
+  <title>BCHCIM : Validation Results</title>
+  <link href="fhir.css" rel="stylesheet"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+    span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
+    span.toggle  { font-size: 10px }
+  </style>
+  <script>
+    function flip(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Reasoning') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Reasoning';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Reasoning';
+      }
+    }
+    function toggle(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Validation Information') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Validation Information';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Validation Information';
+      }
+    }
+  </script>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Validation Results for BCHCIM</h1>
+ <p>Generated Wed Oct 20 05:17:58 UTC 2021, FHIR version 4.0.1 for moh-hcim#0.1.0 (canonical = <a href="http://moh.fhir.org/moh-hcim">http://moh.fhir.org/moh-hcim</a> (<a href="http://moh.fhir.org/moh-hcim/history.html">history</a>)). See <a href="/github/workspace/output/qa.min.html">Errors Only</a></p>
+<table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.82</span></td></tr>
+ <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = moh-hcim, Canonical = http://moh.fhir.org/moh-hcim</td></tr>
+ <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
+ <tr><td>Version Check:</td><td>0.1.0: <span stlye="color: marron; font-weight: bold">no package-list.json - the guide is not ready for publishing</span></td></tr>
+ <tr><td>Supressed Messages:</td><td>No Suppressed Issues
+</td></tr>
+ <tr><td>Dependency Checks:</td><td><div><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The NPM Package Id">Package</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The version of the package">Version</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The version of FHIR that the package is based on">FHIR Release</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Canonical URL">Canonical</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Web Reference Base">Web Base</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Comments about this entry">Comment</span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/github/workspace/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAJUlEQVR4Xu3IIQEAAAgDsHd9/w4EQIOamFnaBgAA4MMKAACAKwNp30CqZFfFmwAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> moh-hcim</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0.1.0</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://moh.fhir.org/moh-hcim</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+</table><para>Templates: fhir.base.template#0.2.2</para></div></td></tr>
+ <tr><td>Publication Rules:</td><td>Code = n/a. package-list.json: file not found in /github/workspace <br/><br/>The copyrightYear parameter ('2021+') in the IG resource is good</td></tr>
+ <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://moh.fhir.org/moh-hcim (Problem #1 with package-list.json at http://moh.fhir.org/moh-hcim: moh.fhir.org)</td></tr>
+ <tr><td>Summary:</td><td> broken links = 126, errors = 53, warn = 22, info = 0</td></tr>
+</table>
+ <table class="grid">
+   <tr>
+     <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>126</b></td><td><b>12</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_fsh-generated_resources_Bundle-FindCandidatesResponse"><b>/github/workspace/fsh-generated/resources/Bundle-FindCandidatesResponse</b></a></td><td><b>10</b></td><td><b>2</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_fsh-generated_resources_Bundle-GetDemographicsResponse"><b>/github/workspace/fsh-generated/resources/Bundle-GetDemographicsResponse</b></a></td><td><b>6</b></td><td><b>2</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_CodeSystem-bc-client-registry-address-validation-code-system"><b>/github/workspace/fsh-generated/resources/CodeSystem-bc-client-registry-address-validation-code-system</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_ImplementationGuide-moh-hcim"><b>/github/workspace/fsh-generated/resources/ImplementationGuide-moh-hcim</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_fsh-generated_resources_Parameters-FindCandidates"><b>/github/workspace/fsh-generated/resources/Parameters-FindCandidates</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_fsh-generated_resources_Parameters-GetDemographics"><b>/github/workspace/fsh-generated/resources/Parameters-GetDemographics</b></a></td><td><b>2</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_fsh-generated_resources_Patient-MergedPatient"><b>/github/workspace/fsh-generated/resources/Patient-MergedPatient</b></a></td><td><b>10</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_Patient-Newborn"><b>/github/workspace/fsh-generated/resources/Patient-Newborn</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_fsh-generated_resources_Patient-Patient0Response"><b>/github/workspace/fsh-generated/resources/Patient-Patient0Response</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_fsh-generated_resources_Patient-Patient1Response"><b>/github/workspace/fsh-generated/resources/Patient-Patient1Response</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_fsh-generated_resources_Patient-Patient2Response"><b>/github/workspace/fsh-generated/resources/Patient-Patient2Response</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_fsh-generated_resources_Patient-PatientDemographicsResponse"><b>/github/workspace/fsh-generated/resources/Patient-PatientDemographicsResponse</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_fsh-generated_resources_Patient-SSRIMergedPatient"><b>/github/workspace/fsh-generated/resources/Patient-SSRIMergedPatient</b></a></td><td><b>17</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_fsh-generated_resources_RelatedPerson-MotherRelated"><b>/github/workspace/fsh-generated/resources/RelatedPerson-MotherRelated</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_StructureDefinition-bc-address-validation-status"><b>/github/workspace/fsh-generated/resources/StructureDefinition-bc-address-validation-status</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_StructureDefinition-bc-client-registry-address"><b>/github/workspace/fsh-generated/resources/StructureDefinition-bc-client-registry-address</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_StructureDefinition-bc-death-date-extension"><b>/github/workspace/fsh-generated/resources/StructureDefinition-bc-death-date-extension</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_StructureDefinition-bc-patient"><b>/github/workspace/fsh-generated/resources/StructureDefinition-bc-patient</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_StructureDefinition-bc-patient-business-date"><b>/github/workspace/fsh-generated/resources/StructureDefinition-bc-patient-business-date</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_StructureDefinition-bc-phn-business-date"><b>/github/workspace/fsh-generated/resources/StructureDefinition-bc-phn-business-date</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_ValueSet-bc-address-validation-value-set"><b>/github/workspace/fsh-generated/resources/ValueSet-bc-address-validation-value-set</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="internal"> </a>
+<h2><a href="">n/a</a> <span id="sv" class="toggle" onclick="toggle('v')">Show Validation Information</span> <span class="vcount" onclick="toggle('v')"></span></h2>
+ <div style="border: 1px grey solid; display: none" id="v"></div>
+ <table class="grid">
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Parameters/FindCandidates.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/FindCandidatesResponse.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Parameters/GetDemographics.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/GetDemographicsResponse.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Patient/MergedPatient.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource RelatedPerson/MotherRelated.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Patient/Newborn.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Patient/Patient0Response.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Patient/Patient1Response.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Patient/Patient2Response.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Patient/PatientDemographicsResponse.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Patient/SSRIMergedPatient.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Bundle-FindCandidatesResponse.change.history.html#l342">output/Bundle-FindCandidatesResponse.change.history.html#/html/body/div/div/div/p/a at Line 235, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Bundle-FindCandidatesResponse.html#l443">output/Bundle-FindCandidatesResponse.html#/html/body/div/div/div/p/a at Line 220, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Bundle-FindCandidatesResponse.json.html#l775">output/Bundle-FindCandidatesResponse.json.html#/html/body/div/div/div/p/a at Line 465, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Bundle-FindCandidatesResponse.ttl.html#l1180">output/Bundle-FindCandidatesResponse.ttl.html#/html/body/div/div/div/p/a at Line 431, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Bundle-FindCandidatesResponse.xml.html#l1117">output/Bundle-FindCandidatesResponse.xml.html#/html/body/div/div/div/p/a at Line 423, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Bundle-GetDemographicsResponse.change.history.html#l342">output/Bundle-GetDemographicsResponse.change.history.html#/html/body/div/div/div/p/a at Line 235, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Bundle-GetDemographicsResponse.html#l419">output/Bundle-GetDemographicsResponse.html#/html/body/div/div/div/p/a at Line 220, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Bundle-GetDemographicsResponse.json.html#l591">output/Bundle-GetDemographicsResponse.json.html#/html/body/div/div/div/p/a at Line 367, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Bundle-GetDemographicsResponse.ttl.html#l871">output/Bundle-GetDemographicsResponse.ttl.html#/html/body/div/div/div/p/a at Line 361, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Bundle-GetDemographicsResponse.xml.html#l840">output/Bundle-GetDemographicsResponse.xml.html#/html/body/div/div/div/p/a at Line 347, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="CodeSystem-bc-client-registry-address-validation-code-system.change.history.html#l342">output/CodeSystem-bc-client-registry-address-validation-code-system.change.history.html#/html/body/div/div/div/p/a at Line 235, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="CodeSystem-bc-client-registry-address-validation-code-system.html#l470">output/CodeSystem-bc-client-registry-address-validation-code-system.html#/html/body/div/div/div/p/a at Line 244, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="CodeSystem-bc-client-registry-address-validation-code-system.json.html#l435">output/CodeSystem-bc-client-registry-address-validation-code-system.json.html#/html/body/div/div/div/p/a at Line 256, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="CodeSystem-bc-client-registry-address-validation-code-system.ttl.html#l499">output/CodeSystem-bc-client-registry-address-validation-code-system.ttl.html#/html/body/div/div/div/p/a at Line 269, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="CodeSystem-bc-client-registry-address-validation-code-system.xml.html#l498">output/CodeSystem-bc-client-registry-address-validation-code-system.xml.html#/html/body/div/div/div/p/a at Line 257, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Parameters-FindCandidates.change.history.html#l342">output/Parameters-FindCandidates.change.history.html#/html/body/div/div/div/p/a at Line 235, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Parameters-FindCandidates.html#l400">output/Parameters-FindCandidates.html#/html/body/div/div/div/p/a at Line 220, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Parameters-FindCandidates.json.html#l478">output/Parameters-FindCandidates.json.html#/html/body/div/div/div/p/a at Line 295, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Parameters-FindCandidates.ttl.html#l622">output/Parameters-FindCandidates.ttl.html#/html/body/div/div/div/p/a at Line 305, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Parameters-FindCandidates.xml.html#l613">output/Parameters-FindCandidates.xml.html#/html/body/div/div/div/p/a at Line 289, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Parameters-GetDemographics.change.history.html#l342">output/Parameters-GetDemographics.change.history.html#/html/body/div/div/div/p/a at Line 235, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Parameters-GetDemographics.html#l370">output/Parameters-GetDemographics.html#/html/body/div/div/div/p/a at Line 220, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Parameters-GetDemographics.json.html#l400">output/Parameters-GetDemographics.json.html#/html/body/div/div/div/p/a at Line 246, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Parameters-GetDemographics.ttl.html#l436">output/Parameters-GetDemographics.ttl.html#/html/body/div/div/div/p/a at Line 257, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Parameters-GetDemographics.xml.html#l433">output/Parameters-GetDemographics.xml.html#/html/body/div/div/div/p/a at Line 244, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-MergedPatient.change.history.html#l342">output/Patient-MergedPatient.change.history.html#/html/body/div/div/div/p/a at Line 235, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-MergedPatient.html#l435">output/Patient-MergedPatient.html#/html/body/div/div/div/p/a at Line 220, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-MergedPatient.json.html#l561">output/Patient-MergedPatient.json.html#/html/body/div/div/div/p/a at Line 346, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-MergedPatient.ttl.html#l742">output/Patient-MergedPatient.ttl.html#/html/body/div/div/div/p/a at Line 337, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-MergedPatient.xml.html#l690">output/Patient-MergedPatient.xml.html#/html/body/div/div/div/p/a at Line 315, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-Newborn.change.history.html#l342">output/Patient-Newborn.change.history.html#/html/body/div/div/div/p/a at Line 235, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-Newborn.html#l375">output/Patient-Newborn.html#/html/body/div/div/div/p/a at Line 220, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-Newborn.json.html#l423">output/Patient-Newborn.json.html#/html/body/div/div/div/p/a at Line 258, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-Newborn.ttl.html#l475">output/Patient-Newborn.ttl.html#/html/body/div/div/div/p/a at Line 269, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-Newborn.xml.html#l462">output/Patient-Newborn.xml.html#/html/body/div/div/div/p/a at Line 248, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-Patient0Response.change.history.html#l342">output/Patient-Patient0Response.change.history.html#/html/body/div/div/div/p/a at Line 235, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-Patient0Response.html#l379">output/Patient-Patient0Response.html#/html/body/div/div/div/p/a at Line 220, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-Patient0Response.json.html#l435">output/Patient-Patient0Response.json.html#/html/body/div/div/div/p/a at Line 265, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-Patient0Response.ttl.html#l499">output/Patient-Patient0Response.ttl.html#/html/body/div/div/div/p/a at Line 275, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-Patient0Response.xml.html#l483">output/Patient-Patient0Response.xml.html#/html/body/div/div/div/p/a at Line 253, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-Patient1Response.change.history.html#l342">output/Patient-Patient1Response.change.history.html#/html/body/div/div/div/p/a at Line 235, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-Patient1Response.html#l384">output/Patient-Patient1Response.html#/html/body/div/div/div/p/a at Line 220, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-Patient1Response.json.html#l453">output/Patient-Patient1Response.json.html#/html/body/div/div/div/p/a at Line 276, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-Patient1Response.ttl.html#l547">output/Patient-Patient1Response.ttl.html#/html/body/div/div/div/p/a at Line 287, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-Patient1Response.xml.html#l528">output/Patient-Patient1Response.xml.html#/html/body/div/div/div/p/a at Line 262, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-Patient2Response.change.history.html#l342">output/Patient-Patient2Response.change.history.html#/html/body/div/div/div/p/a at Line 235, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-Patient2Response.html#l379">output/Patient-Patient2Response.html#/html/body/div/div/div/p/a at Line 220, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-Patient2Response.json.html#l435">output/Patient-Patient2Response.json.html#/html/body/div/div/div/p/a at Line 265, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-Patient2Response.ttl.html#l499">output/Patient-Patient2Response.ttl.html#/html/body/div/div/div/p/a at Line 275, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-Patient2Response.xml.html#l483">output/Patient-Patient2Response.xml.html#/html/body/div/div/div/p/a at Line 253, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-PatientDemographicsResponse.change.history.html#l342">output/Patient-PatientDemographicsResponse.change.history.html#/html/body/div/div/div/p/a at Line 235, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-PatientDemographicsResponse.html#l384">output/Patient-PatientDemographicsResponse.html#/html/body/div/div/div/p/a at Line 220, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-PatientDemographicsResponse.json.html#l444">output/Patient-PatientDemographicsResponse.json.html#/html/body/div/div/div/p/a at Line 278, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-PatientDemographicsResponse.ttl.html#l559">output/Patient-PatientDemographicsResponse.ttl.html#/html/body/div/div/div/p/a at Line 294, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-PatientDemographicsResponse.xml.html#l540">output/Patient-PatientDemographicsResponse.xml.html#/html/body/div/div/div/p/a at Line 264, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-SSRIMergedPatient.change.history.html#l342">output/Patient-SSRIMergedPatient.change.history.html#/html/body/div/div/div/p/a at Line 235, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-SSRIMergedPatient.html#l414">output/Patient-SSRIMergedPatient.html#/html/body/div/div/div/p/a at Line 220, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-SSRIMergedPatient.json.html#l609">output/Patient-SSRIMergedPatient.json.html#/html/body/div/div/div/p/a at Line 379, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-SSRIMergedPatient.ttl.html#l868">output/Patient-SSRIMergedPatient.ttl.html#/html/body/div/div/div/p/a at Line 369, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Patient-SSRIMergedPatient.xml.html#l813">output/Patient-SSRIMergedPatient.xml.html#/html/body/div/div/div/p/a at Line 344, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="RelatedPerson-MotherRelated.change.history.html#l342">output/RelatedPerson-MotherRelated.change.history.html#/html/body/div/div/div/p/a at Line 235, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="RelatedPerson-MotherRelated.html#l371">output/RelatedPerson-MotherRelated.html#/html/body/div/div/div/p/a at Line 220, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="RelatedPerson-MotherRelated.json.html#l405">output/RelatedPerson-MotherRelated.json.html#/html/body/div/div/div/p/a at Line 249, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="RelatedPerson-MotherRelated.ttl.html#l430">output/RelatedPerson-MotherRelated.ttl.html#/html/body/div/div/div/p/a at Line 259, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="RelatedPerson-MotherRelated.xml.html#l423">output/RelatedPerson-MotherRelated.xml.html#/html/body/div/div/div/p/a at Line 243, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-address-validation-status-definitions.html#l724">output/StructureDefinition-bc-address-validation-status-definitions.html#/html/body/div/div/div/p/a at Line 314, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-address-validation-status-mappings.html#l418">output/StructureDefinition-bc-address-validation-status-mappings.html#/html/body/div/div/div/p/a at Line 274, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-address-validation-status.html#l1381">output/StructureDefinition-bc-address-validation-status.html#/html/body/div/div/div/p/a at Line 530, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-address-validation-status.profile.history.html#l353">output/StructureDefinition-bc-address-validation-status.profile.history.html#/html/body/div/div/div/p/a at Line 256, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-address-validation-status.profile.json.html#l1030">output/StructureDefinition-bc-address-validation-status.profile.json.html#/html/body/div/div/div/p/a at Line 602, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-address-validation-status.profile.ttl.html#l1694">output/StructureDefinition-bc-address-validation-status.profile.ttl.html#/html/body/div/div/div/p/a at Line 569, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-address-validation-status.profile.xml.html#l1552">output/StructureDefinition-bc-address-validation-status.profile.xml.html#/html/body/div/div/div/p/a at Line 559, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-client-registry-address-definitions.html#l1282">output/StructureDefinition-bc-client-registry-address-definitions.html#/html/body/div/div/div/p/a at Line 410, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-client-registry-address-examples.html#l358">output/StructureDefinition-bc-client-registry-address-examples.html#/html/body/div/div/div/p/a at Line 267, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-client-registry-address-mappings.html#l698">output/StructureDefinition-bc-client-registry-address-mappings.html#/html/body/div/div/div/p/a at Line 317, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-client-registry-address.html#l1954">output/StructureDefinition-bc-client-registry-address.html#/html/body/div/div/div/p/a at Line 586, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-client-registry-address.profile.history.html#l353">output/StructureDefinition-bc-client-registry-address.profile.history.html#/html/body/div/div/div/p/a at Line 256, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-client-registry-address.profile.json.html#l1885">output/StructureDefinition-bc-client-registry-address.profile.json.html#/html/body/div/div/div/p/a at Line 1070, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-client-registry-address.profile.ttl.html#l3545">output/StructureDefinition-bc-client-registry-address.profile.ttl.html#/html/body/div/div/div/p/a at Line 955, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-client-registry-address.profile.xml.html#l3241">output/StructureDefinition-bc-client-registry-address.profile.xml.html#/html/body/div/div/div/p/a at Line 959, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-death-date-extension-definitions.html#l632">output/StructureDefinition-bc-death-date-extension-definitions.html#/html/body/div/div/div/p/a at Line 303, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-death-date-extension-mappings.html#l411">output/StructureDefinition-bc-death-date-extension-mappings.html#/html/body/div/div/div/p/a at Line 273, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-death-date-extension.html#l1161">output/StructureDefinition-bc-death-date-extension.html#/html/body/div/div/div/p/a at Line 498, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-death-date-extension.profile.history.html#l353">output/StructureDefinition-bc-death-date-extension.profile.history.html#/html/body/div/div/div/p/a at Line 256, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-death-date-extension.profile.json.html#l889">output/StructureDefinition-bc-death-date-extension.profile.json.html#/html/body/div/div/div/p/a at Line 531, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-death-date-extension.profile.ttl.html#l1412">output/StructureDefinition-bc-death-date-extension.profile.ttl.html#/html/body/div/div/div/p/a at Line 509, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-death-date-extension.profile.xml.html#l1300">output/StructureDefinition-bc-death-date-extension.profile.xml.html#/html/body/div/div/div/p/a at Line 496, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-patient-business-date-definitions.html#l632">output/StructureDefinition-bc-patient-business-date-definitions.html#/html/body/div/div/div/p/a at Line 303, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-patient-business-date-mappings.html#l411">output/StructureDefinition-bc-patient-business-date-mappings.html#/html/body/div/div/div/p/a at Line 273, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-patient-business-date.html#l1161">output/StructureDefinition-bc-patient-business-date.html#/html/body/div/div/div/p/a at Line 498, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-patient-business-date.profile.history.html#l353">output/StructureDefinition-bc-patient-business-date.profile.history.html#/html/body/div/div/div/p/a at Line 256, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-patient-business-date.profile.json.html#l889">output/StructureDefinition-bc-patient-business-date.profile.json.html#/html/body/div/div/div/p/a at Line 531, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-patient-business-date.profile.ttl.html#l1412">output/StructureDefinition-bc-patient-business-date.profile.ttl.html#/html/body/div/div/div/p/a at Line 509, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-patient-business-date.profile.xml.html#l1300">output/StructureDefinition-bc-patient-business-date.profile.xml.html#/html/body/div/div/div/p/a at Line 493, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-patient-definitions.html#l3611">output/StructureDefinition-bc-patient-definitions.html#/html/body/div/div/div/p/a at Line 777, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-patient-examples.html#l358">output/StructureDefinition-bc-patient-examples.html#/html/body/div/div/div/p/a at Line 267, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-patient-mappings.html#l1107">output/StructureDefinition-bc-patient-mappings.html#/html/body/div/div/div/p/a at Line 377, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-patient.html#l4442">output/StructureDefinition-bc-patient.html#/html/body/div/div/div/p/a at Line 856, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-patient.profile.history.html#l353">output/StructureDefinition-bc-patient.profile.history.html#/html/body/div/div/div/p/a at Line 256, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-patient.profile.json.html#l5089">output/StructureDefinition-bc-patient.profile.json.html#/html/body/div/div/div/p/a at Line 2721, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-patient.profile.ttl.html#l10463">output/StructureDefinition-bc-patient.profile.ttl.html#/html/body/div/div/div/p/a at Line 2409, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-patient.profile.xml.html#l9421">output/StructureDefinition-bc-patient.profile.xml.html#/html/body/div/div/div/p/a at Line 2482, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-phn-business-date-definitions.html#l632">output/StructureDefinition-bc-phn-business-date-definitions.html#/html/body/div/div/div/p/a at Line 303, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-phn-business-date-mappings.html#l411">output/StructureDefinition-bc-phn-business-date-mappings.html#/html/body/div/div/div/p/a at Line 273, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-phn-business-date.html#l1161">output/StructureDefinition-bc-phn-business-date.html#/html/body/div/div/div/p/a at Line 498, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-phn-business-date.profile.history.html#l353">output/StructureDefinition-bc-phn-business-date.profile.history.html#/html/body/div/div/div/p/a at Line 256, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-phn-business-date.profile.json.html#l889">output/StructureDefinition-bc-phn-business-date.profile.json.html#/html/body/div/div/div/p/a at Line 531, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-phn-business-date.profile.ttl.html#l1412">output/StructureDefinition-bc-phn-business-date.profile.ttl.html#/html/body/div/div/div/p/a at Line 509, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-bc-phn-business-date.profile.xml.html#l1300">output/StructureDefinition-bc-phn-business-date.profile.xml.html#/html/body/div/div/div/p/a at Line 493, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-bc-address-validation-value-set.change.history.html#l342">output/ValueSet-bc-address-validation-value-set.change.history.html#/html/body/div/div/div/p/a at Line 235, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-bc-address-validation-value-set.html#l572">output/ValueSet-bc-address-validation-value-set.html#/html/body/div/div/div/p/a at Line 282, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-bc-address-validation-value-set.json.html#l408">output/ValueSet-bc-address-validation-value-set.json.html#/html/body/div/div/div/p/a at Line 244, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-bc-address-validation-value-set.ttl.html#l436">output/ValueSet-bc-address-validation-value-set.ttl.html#/html/body/div/div/div/p/a at Line 256, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-bc-address-validation-value-set.xml.html#l435">output/ValueSet-bc-address-validation-value-set.xml.html#/html/body/div/div/div/p/a at Line 245, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="artifacts.html#l733">output/artifacts.html#/html/body/div/div/div/p/a at Line 411, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="connectedPartner.html#l359">output/connectedPartner.html#/html/body/div/div/div/p/a at Line 203, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="credits.html#l326">output/credits.html#/html/body/div/div/div/p/a at Line 188, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="design.html#l911">output/design.html#/html/body/div/div/div/p/a at Line 484, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="distributions.html#l344">output/distributions.html#/html/body/div/div/div/p/a at Line 198, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="index.html#l329">output/index.html#/html/body/div/div/div/p/a at Line 190, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="overview.html#l377">output/overview.html#/html/body/div/div/div/p/a at Line 212, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="reviseAndMerge.html#l728">output/reviseAndMerge.html#/html/body/div/div/div/p/a at Line 400, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="search.html#l736">output/search.html#/html/body/div/div/div/p/a at Line 392, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="terminology.html#l464">output/terminology.html#/html/body/div/div/div/p/a at Line 253, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="toc.html#l559">output/toc.html#/html/body/div/div/div/p/a at Line 171, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="v3Transition.html#l432">output/v3Transition.html#/html/body/div/div/div/p/a at Line 237, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_Bundle-FindCandidatesResponse"> </a>
+<h2><a href="Bundle-FindCandidatesResponse.html">fsh-generated/resources/Bundle-FindCandidatesResponse.json</a> <span id="svi1" class="toggle" onclick="toggle('vi1')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi1')">(5)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi1"><ul style="font-size: 7px"><li>Bundle: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></li><li>Bundle.entry[0].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li><li>Bundle.entry[1].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/patient.html">Patient</a></li><li>Bundle.entry[2].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/patient.html">Patient</a></li><li>Bundle.entry[3].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/patient.html">Patient</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[0].resource.ofType(Parameters).parameter[4].value.ofType(Identifier).system (l48/c58)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[0].resource.ofType(Parameters).parameter[7].value.ofType(Identifier).system (l73/c58)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[0].resource.ofType(Parameters).parameter[8].value.ofType(Identifier).system (l80/c61)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-userId' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[1].resource.ofType(Patient).identifier[0].system (l112/c56)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[2].resource.ofType(Patient).identifier[0].system (l166/c56)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[3].resource.ofType(Patient).identifier[0].system (l211/c56)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle (l1/c2)</b></td><td><b>warning</b></td><td title="BUNDLE_SEARCH_NOSELF"><b>SearchSet Bundles should have a self link that specifies what the search was</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle (l1/c2)</b></td><td><b>warning</b></td><td title="BUNDLE_SEARCH_NO_MODE"><b>SearchSet bundles should have search modes on the entries</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[0] (l12/c6)</b></td><td><b>error</b></td><td title="BUNDLE_BUNDLE_ENTRY_FULLURL_REQUIRED"><b>Except for transactions and batches, each entry in a Bundle must have a fullUrl which is the identity of the resource in the entry  </b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[1] (l87/c6)</b></td><td><b>error</b></td><td title="BUNDLE_BUNDLE_ENTRY_FULLURL_REQUIRED"><b>Except for transactions and batches, each entry in a Bundle must have a fullUrl which is the identity of the resource in the entry  </b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[2] (l131/c6)</b></td><td><b>error</b></td><td title="BUNDLE_BUNDLE_ENTRY_FULLURL_REQUIRED"><b>Except for transactions and batches, each entry in a Bundle must have a fullUrl which is the identity of the resource in the entry  </b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[3] (l186/c6)</b></td><td><b>error</b></td><td title="BUNDLE_BUNDLE_ENTRY_FULLURL_REQUIRED"><b>Except for transactions and batches, each entry in a Bundle must have a fullUrl which is the identity of the resource in the entry  </b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_Bundle-GetDemographicsResponse"> </a>
+<h2><a href="Bundle-GetDemographicsResponse.html">fsh-generated/resources/Bundle-GetDemographicsResponse.json</a> <span id="svi2" class="toggle" onclick="toggle('vi2')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi2')">(3)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi2"><ul style="font-size: 7px"><li>Bundle: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></li><li>Bundle.entry[0].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li><li>Bundle.entry[1].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/patient.html">Patient</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[0].resource.ofType(Parameters).parameter[4].value.ofType(Identifier).system (l47/c58)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[0].resource.ofType(Parameters).parameter[7].value.ofType(Identifier).system (l72/c58)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[0].resource.ofType(Parameters).parameter[8].value.ofType(Identifier).system (l79/c61)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-userId' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[1].resource.ofType(Patient).identifier[0].system (l122/c56)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle (l1/c2)</b></td><td><b>warning</b></td><td title="BUNDLE_SEARCH_NOSELF"><b>SearchSet Bundles should have a self link that specifies what the search was</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle (l1/c2)</b></td><td><b>warning</b></td><td title="BUNDLE_SEARCH_NO_MODE"><b>SearchSet bundles should have search modes on the entries</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[0] (l11/c6)</b></td><td><b>error</b></td><td title="BUNDLE_BUNDLE_ENTRY_FULLURL_REQUIRED"><b>Except for transactions and batches, each entry in a Bundle must have a fullUrl which is the identity of the resource in the entry  </b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[1] (l86/c6)</b></td><td><b>error</b></td><td title="BUNDLE_BUNDLE_ENTRY_FULLURL_REQUIRED"><b>Except for transactions and batches, each entry in a Bundle must have a fullUrl which is the identity of the resource in the entry  </b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_CodeSystem-bc-client-registry-address-validation-code-system"> </a>
+<h2><a href="CodeSystem-bc-client-registry-address-validation-code-system.html">fsh-generated/resources/CodeSystem-bc-client-registry-address-validation-code-system.json</a> <span id="svi3" class="toggle" onclick="toggle('vi3')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi3')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi3"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_ImplementationGuide-moh-hcim"> </a>
+<h2><a href="ImplementationGuide-moh-hcim.html">fsh-generated/resources/ImplementationGuide-moh-hcim.json</a> <span id="svi4" class="toggle" onclick="toggle('vi4')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi4')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi4"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_Parameters-FindCandidates"> </a>
+<h2><a href="Parameters-FindCandidates.html">fsh-generated/resources/Parameters-FindCandidates.json</a> <span id="svi5" class="toggle" onclick="toggle('vi5')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi5')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi5"><ul style="font-size: 7px"><li>Parameters: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Parameters.parameter[4].value.ofType(Identifier).system (l36/c52)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Parameters.parameter[7].value.ofType(Identifier).system (l61/c52)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Parameters.parameter[8].value.ofType(Identifier).system (l68/c55)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-userId' does not resolve</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_Parameters-GetDemographics"> </a>
+<h2><a href="Parameters-GetDemographics.html">fsh-generated/resources/Parameters-GetDemographics.json</a> <span id="svi6" class="toggle" onclick="toggle('vi6')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi6')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi6"><ul style="font-size: 7px"><li>Parameters: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Parameters.parameter[0].value.ofType(Identifier).system (l8/c52)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Parameters.parameter[2].value.ofType(Identifier).system (l19/c55)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-userId' does not resolve</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_Patient-MergedPatient"> </a>
+<h2><a href="Patient-MergedPatient.html">fsh-generated/resources/Patient-MergedPatient.json</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi7"><ul style="font-size: 7px"><li>Patient: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/patient.html">Patient</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.extension[0] (l5/c6)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://fhir.bc.ca/extension/effectiveDate is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.identifier[0].system (l15/c53)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-source' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.link[0].extension[0] (l68/c10)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://fhir.bc.ca/extension/merged-patient-status is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.link[0].other.identifier.system (l63/c57)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-source' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.link[1].extension[0] (l83/c10)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://fhir.bc.ca/extension/merged-patient-status is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.link[1].other.identifier.system (l78/c57)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-source' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.link[2].extension[0] (l98/c10)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://fhir.bc.ca/extension/merged-patient-status is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.link[2].other.identifier.system (l93/c57)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-source' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.link[3].extension[0] (l113/c10)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://fhir.bc.ca/extension/merged-patient-status is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.link[3].other.identifier.system (l108/c57)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-source' does not resolve</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_Patient-Newborn"> </a>
+<h2><a href="Patient-Newborn.html">fsh-generated/resources/Patient-Newborn.json</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi8"><ul style="font-size: 7px"><li>Patient: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/patient.html">Patient</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_Patient-Patient0Response"> </a>
+<h2><a href="Patient-Patient0Response.html">fsh-generated/resources/Patient-Patient0Response.json</a> <span id="svi9" class="toggle" onclick="toggle('vi9')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi9')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi9"><ul style="font-size: 7px"><li>Patient: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/patient.html">Patient</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.identifier[0].system (l25/c50)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_Patient-Patient1Response"> </a>
+<h2><a href="Patient-Patient1Response.html">fsh-generated/resources/Patient-Patient1Response.json</a> <span id="svi10" class="toggle" onclick="toggle('vi10')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi10')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi10"><ul style="font-size: 7px"><li>Patient: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/patient.html">Patient</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.identifier[0].system (l35/c50)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_Patient-Patient2Response"> </a>
+<h2><a href="Patient-Patient2Response.html">fsh-generated/resources/Patient-Patient2Response.json</a> <span id="svi11" class="toggle" onclick="toggle('vi11')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi11')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi11"><ul style="font-size: 7px"><li>Patient: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/patient.html">Patient</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.identifier[0].system (l25/c50)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_Patient-PatientDemographicsResponse"> </a>
+<h2><a href="Patient-PatientDemographicsResponse.html">fsh-generated/resources/Patient-PatientDemographicsResponse.json</a> <span id="svi12" class="toggle" onclick="toggle('vi12')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi12')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi12"><ul style="font-size: 7px"><li>Patient: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/patient.html">Patient</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.identifier[0].system (l36/c50)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_Patient-SSRIMergedPatient"> </a>
+<h2><a href="Patient-SSRIMergedPatient.html">fsh-generated/resources/Patient-SSRIMergedPatient.json</a> <span id="svi13" class="toggle" onclick="toggle('vi13')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi13')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi13"><ul style="font-size: 7px"><li>Patient: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/patient.html">Patient</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.extension[0] (l5/c6)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://fhir.bc.ca/extension/effectiveDate is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.identifier[0].type.coding[0] (l19/c12)</b></td><td><b>error</b></td><td title="Terminology_TX_System_Unknown"><b>Unknown Code System 'http://hl7.org/fhir/codesystem/bc-source-type'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.identifier[0].type.coding[0].system (l22/c12)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/codesystem/bc-source-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.identifier[0].system (l15/c53)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-source' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.identifier[1].type.coding[0] (l31/c12)</b></td><td><b>error</b></td><td title="Terminology_TX_System_Unknown"><b>Unknown Code System 'http://hl7.org/fhir/codesystem/bc-source-type'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.identifier[1].type.coding[0].system (l34/c12)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/codesystem/bc-source-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.identifier[1].system (l27/c53)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-source' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.identifier[2].type.coding[0] (l43/c12)</b></td><td><b>error</b></td><td title="Terminology_TX_System_Unknown"><b>Unknown Code System 'http://hl7.org/fhir/codesystem/bc-source-type'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.identifier[2].type.coding[0].system (l46/c12)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/codesystem/bc-source-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.identifier[2].system (l39/c53)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-source' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.identifier[3].system (l51/c50)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.link[0].extension[0] (l131/c10)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://fhir.bc.ca/extension/merged-patient-status is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.link[0].other.identifier.type.coding[0] (l122/c16)</b></td><td><b>error</b></td><td title="Terminology_TX_System_Unknown"><b>Unknown Code System 'http://hl7.org/fhir/codesystem/bc-source-type'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.link[0].other.identifier.type.coding[0].system (l125/c16)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/codesystem/bc-source-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.link[0].other.identifier.system (l118/c57)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-source' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.link[1].extension[0] (l146/c10)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://fhir.bc.ca/extension/merged-patient-status is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.link[1].other.identifier.system (l141/c57)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-source' does not resolve</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_RelatedPerson-MotherRelated"> </a>
+<h2><a href="RelatedPerson-MotherRelated.html">fsh-generated/resources/RelatedPerson-MotherRelated.json</a> <span id="svi14" class="toggle" onclick="toggle('vi14')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi14')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi14"><ul style="font-size: 7px"><li>RelatedPerson: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>RelatedPerson.identifier[0].system (l8/c6)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_StructureDefinition-bc-address-validation-status"> </a>
+<h2><a href="StructureDefinition-bc-address-validation-status.html">fsh-generated/resources/StructureDefinition-bc-address-validation-status.json</a> <span id="svi15" class="toggle" onclick="toggle('vi15')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi15')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi15"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://moh.fhir.org/moh-hcim/StructureDefinition/bc-address-validation-status')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this extension</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_StructureDefinition-bc-client-registry-address"> </a>
+<h2><a href="StructureDefinition-bc-client-registry-address.html">fsh-generated/resources/StructureDefinition-bc-client-registry-address.json</a> <span id="svi16" class="toggle" onclick="toggle('vi16')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi16')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi16"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://moh.fhir.org/moh-hcim/StructureDefinition/bc-client-registry-address')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this data type profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_StructureDefinition-bc-death-date-extension"> </a>
+<h2><a href="StructureDefinition-bc-death-date-extension.html">fsh-generated/resources/StructureDefinition-bc-death-date-extension.json</a> <span id="svi17" class="toggle" onclick="toggle('vi17')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi17')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi17"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://moh.fhir.org/moh-hcim/StructureDefinition/bc-death-date-extension')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this extension</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_StructureDefinition-bc-patient"> </a>
+<h2><a href="StructureDefinition-bc-patient.html">fsh-generated/resources/StructureDefinition-bc-patient.json</a> <span id="svi18" class="toggle" onclick="toggle('vi18')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi18')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi18"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://moh.fhir.org/moh-hcim/StructureDefinition/bc-patient')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_StructureDefinition-bc-patient-business-date"> </a>
+<h2><a href="StructureDefinition-bc-patient-business-date.html">fsh-generated/resources/StructureDefinition-bc-patient-business-date.json</a> <span id="svi19" class="toggle" onclick="toggle('vi19')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi19')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi19"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://moh.fhir.org/moh-hcim/StructureDefinition/bc-patient-business-date')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this extension</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_StructureDefinition-bc-phn-business-date"> </a>
+<h2><a href="StructureDefinition-bc-phn-business-date.html">fsh-generated/resources/StructureDefinition-bc-phn-business-date.json</a> <span id="svi20" class="toggle" onclick="toggle('vi20')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi20')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi20"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://moh.fhir.org/moh-hcim/StructureDefinition/bc-phn-business-date')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this extension</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_ValueSet-bc-address-validation-value-set"> </a>
+<h2><a href="ValueSet-bc-address-validation-value-set.html">fsh-generated/resources/ValueSet-bc-address-validation-value-set.json</a> <span id="svi21" class="toggle" onclick="toggle('vi21')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi21')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi21"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<a name="suppressed"> </a>
+<p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
+<p>No suppressed messsages</p><a name="sorted"> </a>
+<p><b>Errors sorted by type</b></p>
+<hr/>
+<a name="BUNDLE_BUNDLE_ENTRY_FULLURL_REQUIRED"> </a>
+<h2>BUNDLE_BUNDLE_ENTRY_FULLURL_REQUIRED</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-FindCandidatesResponse.html">fsh-generated/resources/Bundle-FindCandidatesResponse.json</a></td><td><b>Except for transactions and batches, each entry in a Bundle must have a fullUrl which is the identity of the resource in the entry  </b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-FindCandidatesResponse.html">fsh-generated/resources/Bundle-FindCandidatesResponse.json</a></td><td><b>Except for transactions and batches, each entry in a Bundle must have a fullUrl which is the identity of the resource in the entry  </b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-FindCandidatesResponse.html">fsh-generated/resources/Bundle-FindCandidatesResponse.json</a></td><td><b>Except for transactions and batches, each entry in a Bundle must have a fullUrl which is the identity of the resource in the entry  </b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-FindCandidatesResponse.html">fsh-generated/resources/Bundle-FindCandidatesResponse.json</a></td><td><b>Except for transactions and batches, each entry in a Bundle must have a fullUrl which is the identity of the resource in the entry  </b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-GetDemographicsResponse.html">fsh-generated/resources/Bundle-GetDemographicsResponse.json</a></td><td><b>Except for transactions and batches, each entry in a Bundle must have a fullUrl which is the identity of the resource in the entry  </b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-GetDemographicsResponse.html">fsh-generated/resources/Bundle-GetDemographicsResponse.json</a></td><td><b>Except for transactions and batches, each entry in a Bundle must have a fullUrl which is the identity of the resource in the entry  </b></td>
+   </tr>
+</table>
+<hr/>
+<a name="BUNDLE_SEARCH_NOSELF"> </a>
+<h2>BUNDLE_SEARCH_NOSELF</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="Bundle-FindCandidatesResponse.html">fsh-generated/resources/Bundle-FindCandidatesResponse.json</a></td><td><b>SearchSet Bundles should have a self link that specifies what the search was</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="Bundle-GetDemographicsResponse.html">fsh-generated/resources/Bundle-GetDemographicsResponse.json</a></td><td><b>SearchSet Bundles should have a self link that specifies what the search was</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="BUNDLE_SEARCH_NO_MODE"> </a>
+<h2>BUNDLE_SEARCH_NO_MODE</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="Bundle-FindCandidatesResponse.html">fsh-generated/resources/Bundle-FindCandidatesResponse.json</a></td><td><b>SearchSet bundles should have search modes on the entries</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="Bundle-GetDemographicsResponse.html">fsh-generated/resources/Bundle-GetDemographicsResponse.json</a></td><td><b>SearchSet bundles should have search modes on the entries</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="Extension_EXT_Unknown_NotHere"> </a>
+<h2>Extension_EXT_Unknown_NotHere</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-MergedPatient.html">fsh-generated/resources/Patient-MergedPatient.json</a></td><td><b>The extension http://fhir.bc.ca/extension/effectiveDate is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-MergedPatient.html">fsh-generated/resources/Patient-MergedPatient.json</a></td><td><b>The extension http://fhir.bc.ca/extension/merged-patient-status is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-MergedPatient.html">fsh-generated/resources/Patient-MergedPatient.json</a></td><td><b>The extension http://fhir.bc.ca/extension/merged-patient-status is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-MergedPatient.html">fsh-generated/resources/Patient-MergedPatient.json</a></td><td><b>The extension http://fhir.bc.ca/extension/merged-patient-status is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-MergedPatient.html">fsh-generated/resources/Patient-MergedPatient.json</a></td><td><b>The extension http://fhir.bc.ca/extension/merged-patient-status is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-SSRIMergedPatient.html">fsh-generated/resources/Patient-SSRIMergedPatient.json</a></td><td><b>The extension http://fhir.bc.ca/extension/effectiveDate is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-SSRIMergedPatient.html">fsh-generated/resources/Patient-SSRIMergedPatient.json</a></td><td><b>The extension http://fhir.bc.ca/extension/merged-patient-status is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-SSRIMergedPatient.html">fsh-generated/resources/Patient-SSRIMergedPatient.json</a></td><td><b>The extension http://fhir.bc.ca/extension/merged-patient-status is unknown, and not allowed here</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="Terminology_TX_System_Unknown"> </a>
+<h2>Terminology_TX_System_Unknown</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-SSRIMergedPatient.html">fsh-generated/resources/Patient-SSRIMergedPatient.json</a></td><td><b>Unknown Code System 'http://hl7.org/fhir/codesystem/bc-source-type'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-SSRIMergedPatient.html">fsh-generated/resources/Patient-SSRIMergedPatient.json</a></td><td><b>Unknown Code System 'http://hl7.org/fhir/codesystem/bc-source-type'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-SSRIMergedPatient.html">fsh-generated/resources/Patient-SSRIMergedPatient.json</a></td><td><b>Unknown Code System 'http://hl7.org/fhir/codesystem/bc-source-type'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-SSRIMergedPatient.html">fsh-generated/resources/Patient-SSRIMergedPatient.json</a></td><td><b>Unknown Code System 'http://hl7.org/fhir/codesystem/bc-source-type'</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="Type_Specific_Checks_DT_URL_Resolve"> </a>
+<h2>Type_Specific_Checks_DT_URL_Resolve</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-FindCandidatesResponse.html">fsh-generated/resources/Bundle-FindCandidatesResponse.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-FindCandidatesResponse.html">fsh-generated/resources/Bundle-FindCandidatesResponse.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-FindCandidatesResponse.html">fsh-generated/resources/Bundle-FindCandidatesResponse.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-userId' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-FindCandidatesResponse.html">fsh-generated/resources/Bundle-FindCandidatesResponse.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-FindCandidatesResponse.html">fsh-generated/resources/Bundle-FindCandidatesResponse.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-FindCandidatesResponse.html">fsh-generated/resources/Bundle-FindCandidatesResponse.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-GetDemographicsResponse.html">fsh-generated/resources/Bundle-GetDemographicsResponse.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-GetDemographicsResponse.html">fsh-generated/resources/Bundle-GetDemographicsResponse.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-GetDemographicsResponse.html">fsh-generated/resources/Bundle-GetDemographicsResponse.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-userId' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-GetDemographicsResponse.html">fsh-generated/resources/Bundle-GetDemographicsResponse.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Parameters-FindCandidates.html">fsh-generated/resources/Parameters-FindCandidates.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Parameters-FindCandidates.html">fsh-generated/resources/Parameters-FindCandidates.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Parameters-FindCandidates.html">fsh-generated/resources/Parameters-FindCandidates.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-userId' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Parameters-GetDemographics.html">fsh-generated/resources/Parameters-GetDemographics.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Parameters-GetDemographics.html">fsh-generated/resources/Parameters-GetDemographics.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-userId' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-MergedPatient.html">fsh-generated/resources/Patient-MergedPatient.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-source' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-MergedPatient.html">fsh-generated/resources/Patient-MergedPatient.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-source' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-MergedPatient.html">fsh-generated/resources/Patient-MergedPatient.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-source' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-MergedPatient.html">fsh-generated/resources/Patient-MergedPatient.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-source' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-MergedPatient.html">fsh-generated/resources/Patient-MergedPatient.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-source' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-Patient0Response.html">fsh-generated/resources/Patient-Patient0Response.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-Patient1Response.html">fsh-generated/resources/Patient-Patient1Response.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-Patient2Response.html">fsh-generated/resources/Patient-Patient2Response.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-PatientDemographicsResponse.html">fsh-generated/resources/Patient-PatientDemographicsResponse.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-SSRIMergedPatient.html">fsh-generated/resources/Patient-SSRIMergedPatient.json</a></td><td><b>URL value 'http://hl7.org/fhir/codesystem/bc-source-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-SSRIMergedPatient.html">fsh-generated/resources/Patient-SSRIMergedPatient.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-source' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-SSRIMergedPatient.html">fsh-generated/resources/Patient-SSRIMergedPatient.json</a></td><td><b>URL value 'http://hl7.org/fhir/codesystem/bc-source-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-SSRIMergedPatient.html">fsh-generated/resources/Patient-SSRIMergedPatient.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-source' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-SSRIMergedPatient.html">fsh-generated/resources/Patient-SSRIMergedPatient.json</a></td><td><b>URL value 'http://hl7.org/fhir/codesystem/bc-source-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-SSRIMergedPatient.html">fsh-generated/resources/Patient-SSRIMergedPatient.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-source' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-SSRIMergedPatient.html">fsh-generated/resources/Patient-SSRIMergedPatient.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-SSRIMergedPatient.html">fsh-generated/resources/Patient-SSRIMergedPatient.json</a></td><td><b>URL value 'http://hl7.org/fhir/codesystem/bc-source-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-SSRIMergedPatient.html">fsh-generated/resources/Patient-SSRIMergedPatient.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-source' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Patient-SSRIMergedPatient.html">fsh-generated/resources/Patient-SSRIMergedPatient.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-source' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="RelatedPerson-MotherRelated.html">fsh-generated/resources/RelatedPerson-MotherRelated.json</a></td><td><b>URL value 'http://hl7.org/fhir/sid/bc-phn' does not resolve</b></td>
+   </tr>
+</table>
+</body>
+</html>

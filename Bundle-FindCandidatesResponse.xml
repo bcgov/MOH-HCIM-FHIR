@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="FindCandidatesResponse"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f7a3b"/>
+  </identifier>
+  <type value="searchset"/>
+  <timestamp value="2011-09-13T16:11:43.000-07:00"/>
+  <total value="3"/>
+  <entry>
+    <resource>
+      <Parameters>
+        <id value="FindCandidates"/>
+        <parameter>
+          <name value="address"/>
+          <valueAddress>
+            <type value="postal"/>
+            <line value="123 Any St"/>
+            <line value="line 2"/>
+            <line value="line 3"/>
+            <line value="line 4"/>
+            <city value="Victoria"/>
+            <state value="BC"/>
+            <postalCode value="V1V1V1"/>
+            <country value="CA"/>
+          </valueAddress>
+        </parameter>
+        <parameter>
+          <name value="gender"/>
+          <valueCode value="male"/>
+        </parameter>
+        <parameter>
+          <name value="birthDate"/>
+          <valueDate value="1959-12-30"/>
+        </parameter>
+        <parameter>
+          <name value="deceased-date"/>
+          <valueDateTime value="2005-05-05"/>
+        </parameter>
+        <parameter>
+          <name value="identifier"/>
+          <valueIdentifier>
+            <system value="http://hl7.org/fhir/sid/bc-phn"/>
+            <value value="12345892"/>
+          </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="name"/>
+          <valueHumanName>
+            <use value="official"/>
+            <family value="Purple"/>
+            <given value="Barney"/>
+          </valueHumanName>
+        </parameter>
+        <parameter>
+          <name value="telecom"/>
+          <valueContactPoint>
+            <system value="phone"/>
+            <value value="1234567890"/>
+            <use value="home"/>
+          </valueContactPoint>
+        </parameter>
+        <parameter>
+          <name value="motherPHN"/>
+          <valueIdentifier>
+            <system value="http://hl7.org/fhir/sid/bc-phn"/>
+            <value value="9xxxxxxxx"/>
+          </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="requester"/>
+          <valueIdentifier>
+            <system value="http://hl7.org/fhir/sid/bc-userId"/>
+            <value value="you@me.com"/>
+          </valueIdentifier>
+        </parameter>
+      </Parameters>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Patient>
+        <id value="Patient0Response"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 9999999999</p><p><b>name</b>: PURPLE BARNEY </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-06-06</p><p><b>address</b>: 666 YELLOW BRICK RD PRINCE GEORGE BC V8W 3P9 CA </p></div>
+        </text>
+        <identifier>
+          <system value="http://hl7.org/fhir/sid/bc-phn"/>
+          <value value="9999999999"/>
+        </identifier>
+        <name>
+          <family value="BARNEY"/>
+          <given value="PURPLE"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="2505554848"/>
+          <use value="home"/>
+        </telecom>
+        <gender value="male"/>
+        <birthDate value="1940-06-06"/>
+        <address>
+          <type value="physical"/>
+          <line value="666 YELLOW BRICK RD"/>
+          <city value="PRINCE GEORGE"/>
+          <state value="BC"/>
+          <postalCode value="V8W 3P9"/>
+          <country value="CA"/>
+        </address>
+      </Patient>
+    </resource>
+    <search>
+      <score value="31"/>
+    </search>
+  </entry>
+  <entry>
+    <resource>
+      <Patient>
+        <id value="Patient1Response"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 9999999999</p><p><b>name</b>: SARAH LYNN PURPLE </p><p><b>telecom</b>: ph: 2505557841(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1973-05-18</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>123 Front St Victoria BC V6N2W2 CA </li></ul></div>
+        </text>
+        <identifier>
+          <system value="http://hl7.org/fhir/sid/bc-phn"/>
+          <value value="9999999999"/>
+        </identifier>
+        <name>
+          <family value="PURPLE"/>
+          <given value="SARAH"/>
+          <given value="LYNN"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="2505557841"/>
+          <use value="home"/>
+        </telecom>
+        <gender value="female"/>
+        <birthDate value="1973-05-18"/>
+        <address>
+          <type value="physical"/>
+          <line value="123 FRONT ST"/>
+          <city value="VICTORIA"/>
+          <state value="BC"/>
+          <postalCode value="V6N2W2"/>
+          <country value="CA"/>
+        </address>
+        <address>
+          <type value="postal"/>
+          <line value="123 Front St"/>
+          <city value="Victoria"/>
+          <state value="BC"/>
+          <postalCode value="V6N2W2"/>
+          <country value="CA"/>
+        </address>
+      </Patient>
+    </resource>
+    <search>
+      <score value="-53"/>
+    </search>
+  </entry>
+  <entry>
+    <resource>
+      <Patient>
+        <id value="Patient2Response"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 9999999999</p><p><b>name</b>: BAILEY PURPLE </p><p><b>telecom</b>: ph: 2504283447(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1985-12-14</p><p><b>address</b>: PO BOX 5 CRESTON BC V0B 1G0 CA </p></div>
+        </text>
+        <identifier>
+          <system value="http://hl7.org/fhir/sid/bc-phn"/>
+          <value value="9999999999"/>
+        </identifier>
+        <name>
+          <family value="PURPLE"/>
+          <given value="BAILEY"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="2504283447"/>
+          <use value="home"/>
+        </telecom>
+        <gender value="female"/>
+        <birthDate value="1985-12-14"/>
+        <address>
+          <type value="postal"/>
+          <line value="PO BOX 5"/>
+          <city value="CRESTON"/>
+          <state value="BC"/>
+          <postalCode value="V0B 1G0"/>
+          <country value="CA"/>
+        </address>
+      </Patient>
+    </resource>
+    <search>
+      <score value="-56"/>
+    </search>
+  </entry>
+</Bundle>

@@ -1,0 +1,47 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://moh.fhir.org/moh-hcim/CodeSystem/bc-client-registry-address-validation-code-system> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "bc-client-registry-address-validation-code-system"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://moh.fhir.org/moh-hcim/CodeSystem/bc-client-registry-address-validation-code-system defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">valid<a name=\"bc-client-registry-address-validation-code-system-valid\"> </a></td><td>valid</td><td>The address is valid, i.e. there is a reasonable good chance this address is known by Canada Post.</td></tr><tr><td style=\"white-space:nowrap\">invalid<a name=\"bc-client-registry-address-validation-code-system-invalid\"> </a></td><td>invalid</td><td>The address validation status is invalid and like not recognized by Canada Post.</td></tr><tr><td style=\"white-space:nowrap\">unknown<a name=\"bc-client-registry-address-validation-code-system-unknown\"> </a></td><td>unknown</td><td>The address validation status is unknown.</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://moh.fhir.org/moh-hcim/CodeSystem/bc-client-registry-address-validation-code-system"];
+  fhir:CodeSystem.version [ fhir:value "0.1.0"];
+  fhir:CodeSystem.name [ fhir:value "BCAddressValidationCS"];
+  fhir:CodeSystem.title [ fhir:value "BC Client Registry address validation status code"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2021-10-20T05:17:43+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.description [ fhir:value "Codes used to define the address validation status."];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "3"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "valid" ];
+     fhir:CodeSystem.concept.display [ fhir:value "valid" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "The address is valid, i.e. there is a reasonable good chance this address is known by Canada Post." ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "invalid" ];
+     fhir:CodeSystem.concept.display [ fhir:value "invalid" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "The address validation status is invalid and like not recognized by Canada Post." ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "unknown" ];
+     fhir:CodeSystem.concept.display [ fhir:value "unknown" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "The address validation status is unknown." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://moh.fhir.org/moh-hcim/CodeSystem/bc-client-registry-address-validation-code-system.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

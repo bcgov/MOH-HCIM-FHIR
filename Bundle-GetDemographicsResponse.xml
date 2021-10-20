@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="GetDemographicsResponse"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:b3a12f0c-a332-4ec9-94b9-d8539a02df48"/>
+  </identifier>
+  <type value="searchset"/>
+  <timestamp value="2011-09-07T12:18:23.000-07:00"/>
+  <entry>
+    <resource>
+      <Parameters>
+        <id value="FindCandidates"/>
+        <parameter>
+          <name value="address"/>
+          <valueAddress>
+            <type value="postal"/>
+            <line value="123 Any St"/>
+            <line value="line 2"/>
+            <line value="line 3"/>
+            <line value="line 4"/>
+            <city value="Victoria"/>
+            <state value="BC"/>
+            <postalCode value="V1V1V1"/>
+            <country value="CA"/>
+          </valueAddress>
+        </parameter>
+        <parameter>
+          <name value="gender"/>
+          <valueCode value="male"/>
+        </parameter>
+        <parameter>
+          <name value="birthDate"/>
+          <valueDate value="1959-12-30"/>
+        </parameter>
+        <parameter>
+          <name value="deceased-date"/>
+          <valueDateTime value="2005-05-05"/>
+        </parameter>
+        <parameter>
+          <name value="identifier"/>
+          <valueIdentifier>
+            <system value="http://hl7.org/fhir/sid/bc-phn"/>
+            <value value="12345892"/>
+          </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="name"/>
+          <valueHumanName>
+            <use value="official"/>
+            <family value="Purple"/>
+            <given value="Barney"/>
+          </valueHumanName>
+        </parameter>
+        <parameter>
+          <name value="telecom"/>
+          <valueContactPoint>
+            <system value="phone"/>
+            <value value="1234567890"/>
+            <use value="home"/>
+          </valueContactPoint>
+        </parameter>
+        <parameter>
+          <name value="motherPHN"/>
+          <valueIdentifier>
+            <system value="http://hl7.org/fhir/sid/bc-phn"/>
+            <value value="9xxxxxxxx"/>
+          </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="requester"/>
+          <valueIdentifier>
+            <system value="http://hl7.org/fhir/sid/bc-userId"/>
+            <value value="you@me.com"/>
+          </valueIdentifier>
+        </parameter>
+      </Parameters>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Patient>
+        <id value="PatientDemographicsResponse"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 9999999999</p><p><b>name</b>: JILLIAN DAWN THIRD NAME COOK-ADAMS </p><p><b>telecom</b>: ph: 6048883322(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1972-10-16</p><p><b>address</b>: </p><ul><li>321 SUNSHINE PL NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>1824 CROSS RD LINE 2 LINE 3 VANCOUVER BC V9L 4H2 </li></ul></div>
+        </text>
+        <identifier>
+          <system value="http://hl7.org/fhir/sid/bc-phn"/>
+          <value value="9999999999"/>
+        </identifier>
+        <name>
+          <family value="COOK-ADAMS"/>
+          <given value="JILLIAN"/>
+          <given value="DAWN"/>
+          <given value="THIRD NAME"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="6048883322"/>
+          <use value="home"/>
+        </telecom>
+        <gender value="female"/>
+        <birthDate value="1972-10-16"/>
+        <address>
+          <type value="physical"/>
+          <line value="321 SUNSHINE PL"/>
+          <line value="NEW LINE 2"/>
+          <line value="NEW LINE 3"/>
+          <city value="VANCOUVER"/>
+          <state value="BC"/>
+        </address>
+        <address>
+          <type value="postal"/>
+          <line value="1824 CROSS RD"/>
+          <line value="LINE 2"/>
+          <line value="LINE 3"/>
+          <city value="VANCOUVER"/>
+          <state value="BC"/>
+          <postalCode value="V9L 4H2"/>
+        </address>
+      </Patient>
+    </resource>
+  </entry>
+</Bundle>

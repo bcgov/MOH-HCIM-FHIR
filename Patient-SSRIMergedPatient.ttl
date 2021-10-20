@@ -1,0 +1,169 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://moh.fhir.org/moh-hcim/Patient/SSRIMergedPatient> a fhir:Patient;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "SSRIMergedPatient"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: VPP_CER: CER123345, VPP_LION: VCHA23321, VPP_FPH: FOR2345, id: 9999999999</p><p><b>active</b>: true</p><p><b>name</b>: David Edward Adams , Dave (NICKNAME)</p><p><b>telecom</b>: ph: 2505552323(HOME), ph: 12505658896(WORK), ph: 2505883546(MOBILE)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1963-09-05</p><p><b>address</b>: </p><ul><li>3145 happy valley rd Suite 33 Attention - Dave Victoria BC V8C2P8 CA </li><li>3840 fort St Victoria BC V5C2P6 CA </li></ul><blockquote><p><b>link</b></p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://fhir.bc.ca/extension/effectiveDate" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2012-04-11T13:19:00.000-07:00"^^xsd:dateTime ]
+     ]
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/codesystem/bc-source-type" ];
+         fhir:Coding.code [ fhir:value "VPP_CER" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/bc-source" ];
+     fhir:Identifier.value [ fhir:value "CER123345" ]
+  ], [
+     fhir:index 1;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/codesystem/bc-source-type" ];
+         fhir:Coding.code [ fhir:value "VPP_LION" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/bc-source" ];
+     fhir:Identifier.value [ fhir:value "VCHA23321" ]
+  ], [
+     fhir:index 2;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/codesystem/bc-source-type" ];
+         fhir:Coding.code [ fhir:value "VPP_FPH" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/bc-source" ];
+     fhir:Identifier.value [ fhir:value "FOR2345" ]
+  ], [
+     fhir:index 3;
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/bc-phn" ];
+     fhir:Identifier.value [ fhir:value "9999999999" ]
+  ];
+  fhir:Patient.active [ fhir:value "true"^^xsd:boolean];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "Adams" ];
+     fhir:HumanName.given [
+       fhir:value "David";
+       fhir:index 0
+     ], [
+       fhir:value "Edward";
+       fhir:index 1
+     ]
+  ], [
+     fhir:index 1;
+     fhir:HumanName.use [ fhir:value "nickname" ];
+     fhir:HumanName.given [
+       fhir:value "Dave";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "2505552323" ];
+     fhir:ContactPoint.use [ fhir:value "home" ]
+  ], [
+     fhir:index 1;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "12505658896" ];
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ], [
+     fhir:index 2;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "2505883546" ];
+     fhir:ContactPoint.use [ fhir:value "mobile" ]
+  ];
+  fhir:Patient.gender [ fhir:value "male"];
+  fhir:Patient.birthDate [ fhir:value "1963-09-05"^^xsd:date];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.type [ fhir:value "physical" ];
+     fhir:Address.line [
+       fhir:value "3145 happy valley rd";
+       fhir:index 0
+     ], [
+       fhir:value "Suite 33";
+       fhir:index 1
+     ], [
+       fhir:value "Attention - Dave";
+       fhir:index 2
+     ];
+     fhir:Address.city [ fhir:value "Victoria" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.postalCode [ fhir:value "V8C2P8" ];
+     fhir:Address.country [ fhir:value "CA" ]
+  ], [
+     fhir:index 1;
+     fhir:Address.type [ fhir:value "postal" ];
+     fhir:Address.line [
+       fhir:value "3840 fort St";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Victoria" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.postalCode [ fhir:value "V5C2P6" ];
+     fhir:Address.country [ fhir:value "CA" ]
+  ];
+  fhir:Patient.link [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.bc.ca/extension/merged-patient-status" ];
+       fhir:Extension.valueCode [ fhir:value "obsolete" ]
+     ];
+     fhir:Patient.link.other [
+       fhir:Reference.identifier [
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/codesystem/bc-source-type" ];
+             fhir:Coding.code [ fhir:value "VPP_LION" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/bc-source" ];
+         fhir:Identifier.value [ fhir:value "VCHA55555" ]
+       ]
+     ];
+     fhir:Patient.link.type [ fhir:value "replaces" ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.bc.ca/extension/merged-patient-status" ];
+       fhir:Extension.valueCode [ fhir:value "cancelled" ]
+     ];
+     fhir:Patient.link.other [
+       fhir:Reference.identifier [
+         fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/bc-source" ];
+         fhir:Identifier.value [ fhir:value "VCHA99999" ]
+       ]
+     ];
+     fhir:Patient.link.type [ fhir:value "replaces" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://moh.fhir.org/moh-hcim/Patient/SSRIMergedPatient.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

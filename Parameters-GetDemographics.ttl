@@ -1,0 +1,37 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://moh.fhir.org/moh-hcim/Parameters/GetDemographics> a fhir:Parameters;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "GetDemographics"];
+  fhir:Parameters.parameter [
+     fhir:index 0;
+     fhir:Parameters.parameter.name [ fhir:value "identifier" ];
+     fhir:Parameters.parameter.valueIdentifier [
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/bc-phn" ];
+       fhir:Identifier.value [ fhir:value "12345892" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Parameters.parameter.name [ fhir:value "history" ];
+     fhir:Parameters.parameter.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+  ], [
+     fhir:index 2;
+     fhir:Parameters.parameter.name [ fhir:value "requester" ];
+     fhir:Parameters.parameter.valueIdentifier [
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/bc-userId" ];
+       fhir:Identifier.value [ fhir:value "you@me.com" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://moh.fhir.org/moh-hcim/Parameters/GetDemographics.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

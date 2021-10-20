@@ -1,0 +1,145 @@
+{
+  "resourceType": "Bundle",
+  "id": "GetDemographicsResponse",
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:b3a12f0c-a332-4ec9-94b9-d8539a02df48"
+  },
+  "type": "searchset",
+  "timestamp": "2011-09-07T12:18:23.000-07:00",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Parameters",
+        "id": "FindCandidates",
+        "parameter": [
+          {
+            "name": "address",
+            "valueAddress": {
+              "type": "postal",
+              "line": [
+                "123 Any St",
+                "line 2",
+                "line 3",
+                "line 4"
+              ],
+              "city": "Victoria",
+              "state": "BC",
+              "postalCode": "V1V1V1",
+              "country": "CA"
+            }
+          },
+          {
+            "name": "gender",
+            "valueCode": "male"
+          },
+          {
+            "name": "birthDate",
+            "valueDate": "1959-12-30"
+          },
+          {
+            "name": "deceased-date",
+            "valueDateTime": "2005-05-05"
+          },
+          {
+            "name": "identifier",
+            "valueIdentifier": {
+              "system": "http://hl7.org/fhir/sid/bc-phn",
+              "value": "12345892"
+            }
+          },
+          {
+            "name": "name",
+            "valueHumanName": {
+              "use": "official",
+              "family": "Purple",
+              "given": [
+                "Barney"
+              ]
+            }
+          },
+          {
+            "name": "telecom",
+            "valueContactPoint": {
+              "system": "phone",
+              "value": "1234567890",
+              "use": "home"
+            }
+          },
+          {
+            "name": "motherPHN",
+            "valueIdentifier": {
+              "system": "http://hl7.org/fhir/sid/bc-phn",
+              "value": "9xxxxxxxx"
+            }
+          },
+          {
+            "name": "requester",
+            "valueIdentifier": {
+              "system": "http://hl7.org/fhir/sid/bc-userId",
+              "value": "you@me.com"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "PatientDemographicsResponse",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 9999999999</p><p><b>name</b>: JILLIAN DAWN THIRD NAME COOK-ADAMS </p><p><b>telecom</b>: ph: 6048883322(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1972-10-16</p><p><b>address</b>: </p><ul><li>321 SUNSHINE PL NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>1824 CROSS RD LINE 2 LINE 3 VANCOUVER BC V9L 4H2 </li></ul></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/bc-phn",
+            "value": "9999999999"
+          }
+        ],
+        "name": [
+          {
+            "family": "COOK-ADAMS",
+            "given": [
+              "JILLIAN",
+              "DAWN",
+              "THIRD NAME"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "6048883322",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1972-10-16",
+        "address": [
+          {
+            "type": "physical",
+            "line": [
+              "321 SUNSHINE PL",
+              "NEW LINE 2",
+              "NEW LINE 3"
+            ],
+            "city": "VANCOUVER",
+            "state": "BC"
+          },
+          {
+            "type": "postal",
+            "line": [
+              "1824 CROSS RD",
+              "LINE 2",
+              "LINE 3"
+            ],
+            "city": "VANCOUVER",
+            "state": "BC",
+            "postalCode": "V9L 4H2"
+          }
+        ]
+      }
+    }
+  ]
+}
