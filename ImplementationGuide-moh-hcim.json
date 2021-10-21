@@ -9,7 +9,7 @@
   "version": "0.1.0",
   "name": "BCHCIM",
   "status": "draft",
-  "date": "2021-10-20T19:53:48+00:00",
+  "date": "2021-10-21T22:21:25+00:00",
   "packageId": "moh-hcim",
   "license": "CC0-1.0",
   "fhirVersion": [
@@ -295,12 +295,38 @@
           }
         ],
         "reference": {
+          "reference": "StructureDefinition/BCMetadataParameters"
+        },
+        "name": "BCMetadataParameters",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
           "reference": "StructureDefinition/bc-patient"
         },
         "name": "BCPatient",
         "description": "General constraints on the Patient resource for use in the BC Client Registry project.",
         "exampleBoolean": false,
         "groupingId": "Patient"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/BCPatientBusinessParameters"
+        },
+        "name": "BCPatientBusinessParameters",
+        "exampleBoolean": false
       },
       {
         "extension": [
