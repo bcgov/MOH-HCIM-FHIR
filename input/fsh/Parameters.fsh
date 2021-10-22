@@ -19,7 +19,7 @@ Parent: Parameters
 * parameter[MessageDate].part 0..0
 
 Profile: BCPatientBusinessParameters
-Parent: Parameters
+Parent: BCMetadataParameters
 * parameter ^slicing.discriminator.type = #value
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #open
