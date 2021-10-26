@@ -1,0 +1,80 @@
+Instance: FindCandidatesQuery
+InstanceOf: OperationDefinition
+Description: "This operation is used to query for a patient.  The response can contain 0 or more Paitents."
+Usage: #definition
+* id = "bc-patient-find-candidates"
+* url = "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-find-candidates"
+* name = "FindCandidates"
+* title = "Find Candidates"
+* status = #draft
+* kind = #query
+* code = #FindCandidates
+* resource[0] = #Patient
+* system = false
+* type = true
+* instance = true
+* parameter[0].name = #messageId
+* parameter[0].use = #in
+* parameter[0].min = 1
+* parameter[0].max = "1"
+* parameter[0].documentation = "Unique message ID."
+* parameter[0].type = #string
+* parameter[0].searchType = #string
+* parameter[1].name = #messageDate
+* parameter[1].use = #in
+* parameter[1].min = 1
+* parameter[1].max = "1"
+* parameter[1].documentation = "Message date and time."
+* parameter[1].type = #string
+* parameter[1].searchType = #string
+* parameter[2].name = #address
+* parameter[2].use = #in
+* parameter[2].min = 0
+* parameter[2].max = "1"
+* parameter[2].documentation = "Patient address."
+* parameter[2].type = #Address
+* parameter[3].name = #gender
+* parameter[3].use = #in
+* parameter[3].min = 0
+* parameter[3].max = "1"
+* parameter[3].documentation = "Patient gender."
+* parameter[3].type = #code
+* parameter[4].name = #birthDate
+* parameter[4].use = #in
+* parameter[4].min = 0
+* parameter[4].max = "1"
+* parameter[4].documentation = "Patient birth date."
+* parameter[4].type = #dateTime
+* parameter[5].name = #deathDate
+* parameter[5].use = #in
+* parameter[5].min = 0
+* parameter[5].max = "1"
+* parameter[5].documentation = "Patient death date."
+* parameter[5].type = #dateTime
+* parameter[6].name = #name
+* parameter[6].use = #in
+* parameter[6].min = 0
+* parameter[6].max = "1"
+* parameter[6].documentation = "Patient name."
+* parameter[6].type = #HumanName
+* parameter[7].name = #telephone
+* parameter[7].use = #in
+* parameter[7].min = 0
+* parameter[7].max = "1"
+* parameter[7].documentation = "Patient telephone."
+* parameter[7].type = #ContactPoint
+* parameter[8].name = #mothersPHN
+* parameter[8].use = #in
+* parameter[8].min = 0
+* parameter[8].max = "1"
+* parameter[8].documentation = "Patient mother's PHN."
+* parameter[8].type = #string
+* parameter[9].name = #identifiersOnly
+* parameter[9].use = #in
+* parameter[9].min = 0
+* parameter[9].max = "1"
+* parameter[9].documentation = "Return Identifiers only."
+* parameter[9].type = #boolean
+
+
+

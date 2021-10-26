@@ -1,0 +1,1 @@
+The newborn revise patient operation.  This operation is the same as the revise patient operation except an addiontal IN parameter is required, the mother's PHN.  The Patient resource represent the newborn and the Client Registry needs to know the mother (thus including the mother's PHN) to add a newborn Patient.
