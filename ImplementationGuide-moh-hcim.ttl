@@ -16,7 +16,7 @@
   fhir:ImplementationGuide.version [ fhir:value "0.1.0"];
   fhir:ImplementationGuide.name [ fhir:value "BCHCIM"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
-  fhir:ImplementationGuide.date [ fhir:value "2021-10-22T16:49:58+00:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2021-10-26T17:35:26+00:00"^^xsd:dateTime];
   fhir:ImplementationGuide.packageId [ fhir:value "moh-hcim"];
   fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"];
   fhir:ImplementationGuide.fhirVersion [
@@ -554,6 +554,76 @@
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "SSRIMergedPatient" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 22;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "OperationDefinition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://moh.fhir.org/moh-hcim/OperationDefinition/bc-patient-find-candidates>;
+         fhir:Reference.reference [ fhir:value "OperationDefinition/bc-patient-find-candidates" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "FindCandidatesQuery" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This operation is used to query for a patient.  The response can contain 0 or more Paitents." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 23;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "OperationDefinition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://moh.fhir.org/moh-hcim/OperationDefinition/bc-patient-get-demographics>;
+         fhir:Reference.reference [ fhir:value "OperationDefinition/bc-patient-get-demographics" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "GetDemographicsQuery" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This operation is used to query for a patient.  The response can contain 0 or 1 Patient." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 24;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "OperationDefinition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://moh.fhir.org/moh-hcim/OperationDefinition/bc-patient-merge>;
+         fhir:Reference.reference [ fhir:value "OperationDefinition/bc-patient-merge" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MergePatient" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This operation is used to merge patients." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 25;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "OperationDefinition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://moh.fhir.org/moh-hcim/OperationDefinition/bc-patient-revise>;
+         fhir:Reference.reference [ fhir:value "OperationDefinition/bc-patient-revise" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "RevisePatient" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This operation is used to revise a patient's demographics." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 26;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "OperationDefinition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://moh.fhir.org/moh-hcim/OperationDefinition/bc-patient-revise-newborn>;
+         fhir:Reference.reference [ fhir:value "OperationDefinition/bc-patient-revise-newborn" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "RevisePatient.Newborn" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This operation is used to create a newborn patient." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ];
      fhir:ImplementationGuide.definition.page [
        fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.html" ];

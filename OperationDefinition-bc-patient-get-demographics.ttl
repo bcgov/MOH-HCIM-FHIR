@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://moh.fhir.org/moh-hcim/OperationDefinition/bc-patient-get-demographics> a fhir:OperationDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "bc-patient-get-demographics"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GetDemographics</h2><p>QUERY: GetDemographics</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics</pre><p>URL: [base]/Patient/$GetDemographics</p><p>URL: [base]/Patient/[id]/$GetDemographics</p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Unique message ID.</p>\n</div></td></tr><tr><td>IN</td><td>messageDate</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Message date and time.</p>\n</div></td></tr><tr><td>IN</td><td>PHN</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td/><td><div><p>Patient PHN.</p>\n</div></td></tr><tr><td>IN</td><td>withHistory</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a></td><td/><td><div><p>Boolean flag to return Patient's history.  If missing, defaults to false.</p>\n</div></td></tr></table></div>"
+  ];
+  fhir:OperationDefinition.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics"];
+  fhir:OperationDefinition.version [ fhir:value "0.1.0"];
+  fhir:OperationDefinition.name [ fhir:value "GetDemographics"];
+  fhir:OperationDefinition.title [ fhir:value "GetDemographics"];
+  fhir:OperationDefinition.status [ fhir:value "draft"];
+  fhir:OperationDefinition.kind [ fhir:value "query"];
+  fhir:OperationDefinition.date [ fhir:value "2021-10-26T17:35:26+00:00"^^xsd:dateTime];
+  fhir:OperationDefinition.code [ fhir:value "GetDemographics"];
+  fhir:OperationDefinition.resource [
+     fhir:value "Patient";
+     fhir:index 0
+  ];
+  fhir:OperationDefinition.system [ fhir:value "false"^^xsd:boolean];
+  fhir:OperationDefinition.type [ fhir:value "true"^^xsd:boolean];
+  fhir:OperationDefinition.instance [ fhir:value "true"^^xsd:boolean];
+  fhir:OperationDefinition.parameter [
+     fhir:index 0;
+     fhir:OperationDefinition.parameter.name [ fhir:value "messageId" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "1"^^xsd:integer ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "Unique message ID." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "string" ];
+     fhir:OperationDefinition.parameter.searchType [ fhir:value "string" ]
+  ], [
+     fhir:index 1;
+     fhir:OperationDefinition.parameter.name [ fhir:value "messageDate" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "1"^^xsd:integer ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "Message date and time." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "string" ];
+     fhir:OperationDefinition.parameter.searchType [ fhir:value "string" ]
+  ], [
+     fhir:index 2;
+     fhir:OperationDefinition.parameter.name [ fhir:value "PHN" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "1"^^xsd:integer ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "Patient PHN." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "string" ]
+  ], [
+     fhir:index 3;
+     fhir:OperationDefinition.parameter.name [ fhir:value "withHistory" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "0"^^xsd:integer ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "Boolean flag to return Patient's history.  If missing, defaults to false." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "boolean" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://moh.fhir.org/moh-hcim/OperationDefinition/bc-patient-get-demographics.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

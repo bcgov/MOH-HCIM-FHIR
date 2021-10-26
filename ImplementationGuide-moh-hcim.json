@@ -9,7 +9,7 @@
   "version": "0.1.0",
   "name": "BCHCIM",
   "status": "draft",
-  "date": "2021-10-22T16:49:58+00:00",
+  "date": "2021-10-26T17:35:26+00:00",
   "packageId": "moh-hcim",
   "license": "CC0-1.0",
   "fhirVersion": [
@@ -567,6 +567,76 @@
         },
         "name": "SSRIMergedPatient",
         "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "OperationDefinition"
+          }
+        ],
+        "reference": {
+          "reference": "OperationDefinition/bc-patient-find-candidates"
+        },
+        "name": "FindCandidatesQuery",
+        "description": "This operation is used to query for a patient.  The response can contain 0 or more Paitents.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "OperationDefinition"
+          }
+        ],
+        "reference": {
+          "reference": "OperationDefinition/bc-patient-get-demographics"
+        },
+        "name": "GetDemographicsQuery",
+        "description": "This operation is used to query for a patient.  The response can contain 0 or 1 Patient.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "OperationDefinition"
+          }
+        ],
+        "reference": {
+          "reference": "OperationDefinition/bc-patient-merge"
+        },
+        "name": "MergePatient",
+        "description": "This operation is used to merge patients.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "OperationDefinition"
+          }
+        ],
+        "reference": {
+          "reference": "OperationDefinition/bc-patient-revise"
+        },
+        "name": "RevisePatient",
+        "description": "This operation is used to revise a patient's demographics.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "OperationDefinition"
+          }
+        ],
+        "reference": {
+          "reference": "OperationDefinition/bc-patient-revise-newborn"
+        },
+        "name": "RevisePatient.Newborn",
+        "description": "This operation is used to create a newborn patient.",
+        "exampleBoolean": false
       }
     ],
     "page": {

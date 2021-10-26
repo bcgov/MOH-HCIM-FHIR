@@ -1,0 +1,50 @@
+{
+  "resourceType": "OperationDefinition",
+  "id": "bc-patient-revise",
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RevisePatient</h2><p>OPERATION: RevisePatient</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-revise</pre><p>URL: [base]/Patient/$RevisePatient</p><p>URL: [base]/Patient/[id]/$RevisePatient</p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Unique message ID.</p>\n</div></td></tr><tr><td>IN</td><td>messageDate</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Message date and time.</p>\n</div></td></tr><tr><td>IN</td><td>patient</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a></td><td/><td><div><p>The Patient.</p>\n</div></td></tr></table></div>"
+  },
+  "url": "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-revise",
+  "version": "0.1.0",
+  "name": "RevisePatient",
+  "title": "Revise Patient",
+  "status": "draft",
+  "kind": "operation",
+  "date": "2021-10-26T17:35:26+00:00",
+  "code": "RevisePatient",
+  "resource": [
+    "Patient"
+  ],
+  "system": false,
+  "type": true,
+  "instance": true,
+  "parameter": [
+    {
+      "name": "messageId",
+      "use": "in",
+      "min": 1,
+      "max": "1",
+      "documentation": "Unique message ID.",
+      "type": "string",
+      "searchType": "string"
+    },
+    {
+      "name": "messageDate",
+      "use": "in",
+      "min": 1,
+      "max": "1",
+      "documentation": "Message date and time.",
+      "type": "string",
+      "searchType": "string"
+    },
+    {
+      "name": "patient",
+      "use": "in",
+      "min": 1,
+      "max": "1",
+      "documentation": "The Patient.",
+      "type": "Patient"
+    }
+  ]
+}

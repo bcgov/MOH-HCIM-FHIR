@@ -9,7 +9,7 @@
   <version value="0.1.0"/>
   <name value="BCHCIM"/>
   <status value="draft"/>
-  <date value="2021-10-22T16:49:58+00:00"/>
+  <date value="2021-10-26T17:35:26+00:00"/>
   <packageId value="moh-hcim"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
@@ -398,6 +398,61 @@
       </reference>
       <name value="SSRIMergedPatient"/>
       <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="OperationDefinition/bc-patient-find-candidates"/>
+      </reference>
+      <name value="FindCandidatesQuery"/>
+      <description value="This operation is used to query for a patient.  The response can contain 0 or more Paitents."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="OperationDefinition/bc-patient-get-demographics"/>
+      </reference>
+      <name value="GetDemographicsQuery"/>
+      <description value="This operation is used to query for a patient.  The response can contain 0 or 1 Patient."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="OperationDefinition/bc-patient-merge"/>
+      </reference>
+      <name value="MergePatient"/>
+      <description value="This operation is used to merge patients."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="OperationDefinition/bc-patient-revise"/>
+      </reference>
+      <name value="RevisePatient"/>
+      <description value="This operation is used to revise a patient&#39;s demographics."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="OperationDefinition/bc-patient-revise-newborn"/>
+      </reference>
+      <name value="RevisePatient.Newborn"/>
+      <description value="This operation is used to create a newborn patient."/>
+      <exampleBoolean value="false"/>
     </resource>
     <page>
       <nameUrl value="toc.html"/>

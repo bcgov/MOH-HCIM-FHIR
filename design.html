@@ -178,6 +178,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </blockquote>
 
 <h3 id="design-approach">Design Approach</h3>
+<p>The approach to design a FHIR interface to the Client Registry was to keep the interactions as similar as possible to the current system.  However where necessary additions and improvements would be considered.</p>
+
 <ul>
   <li>The design team matched current Client Registry interactions 1 to 1 with equivalent FHIR interactions for all the flavours of:
     <ul>
@@ -188,11 +190,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li>Distribute Patient</li>
     </ul>
   </li>
-  <li>Asynchronous interaction will be supported</li>
-  <li>New attributes will be included in FHIR that are not in V3 (such as more business dates)</li>
+  <li>Asynchronous interactions will be supported as with the current system</li>
+  <li>New attributes can be included in FHIR that are not in V3 (such as more business dates)</li>
 </ul>
 
 <h3 id="design-assumptions">Design Assumptions</h3>
+<p>There are a number of assumption that were made at the start of design:</p>
+
 <ul>
   <li>FHIR is not expected to adversely affect performance, i.e. SLA is not changing for FHIR but will be extended to include FHIR</li>
   <li>Existing interfaces, such as V3, will not be deprecated and users can use a combination of V3 and FHIR to meet their needs
@@ -201,11 +205,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </blockquote>
   </li>
   <li>The Client Registry FHIR design will become a Provincial standard</li>
-  <li>Asynchronous interactions will follow the same pattern as V3</li>
+  <li>Asynchronous interactions will follow the same pattern as V3 (not the FHIR asynchronous pattern)</li>
   <li>Get Eligibility is not supported by FHIR (will still be supported by V3)</li>
 </ul>
 
 <h3 id="design-outcomes---overview">Design Outcomes - Overview</h3>
+<p>The main outcomes from the design process were as follows:</p>
+
 <ul>
   <li>The primary resource is Patient and Patient shall be used to communicate client attributes</li>
   <li>The JSON text format shall be used to receive and transmit FHIR resources</li>
@@ -504,8 +510,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
-        <p><a name="l960">​</a>
-          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="null"></a>.  Package moh-hcim#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Oct 22, 2021 16:49+0000">2021-10-22</span>
+        <p><a name="l969">​</a>
+          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="null"></a>.  Package moh-hcim#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 26, 2021 17:35+0000">2021-10-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

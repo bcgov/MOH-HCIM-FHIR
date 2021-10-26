@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-patient-find-candidates"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>FindCandidates</h2><p>QUERY: FindCandidates</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-find-candidates</pre><p>URL: [base]/Patient/$FindCandidates</p><p>URL: [base]/Patient/[id]/$FindCandidates</p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Unique message ID.</p>
+</div></td></tr><tr><td>IN</td><td>messageDate</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Message date and time.</p>
+</div></td></tr><tr><td>IN</td><td>address</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Address">Address</a></td><td/><td><div><p>Patient address.</p>
+</div></td></tr><tr><td>IN</td><td>gender</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td/><td><div><p>Patient gender.</p>
+</div></td></tr><tr><td>IN</td><td>birthDate</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></td><td/><td><div><p>Patient birth date.</p>
+</div></td></tr><tr><td>IN</td><td>deathDate</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></td><td/><td><div><p>Patient death date.</p>
+</div></td></tr><tr><td>IN</td><td>name</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#HumanName">HumanName</a></td><td/><td><div><p>Patient name.</p>
+</div></td></tr><tr><td>IN</td><td>telephone</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint">ContactPoint</a></td><td/><td><div><p>Patient telephone.</p>
+</div></td></tr><tr><td>IN</td><td>mothersPHN</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td/><td><div><p>Patient mother's PHN.</p>
+</div></td></tr><tr><td>IN</td><td>identifiersOnly</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td/><td><div><p>Return Identifiers only.</p>
+</div></td></tr></table></div>
+  </text>
+  <url value="http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-find-candidates"/>
+  <version value="0.1.0"/>
+  <name value="FindCandidates"/>
+  <title value="Find Candidates"/>
+  <status value="draft"/>
+  <kind value="query"/>
+  <date value="2021-10-26T17:35:26+00:00"/>
+  <code value="FindCandidates"/>
+  <resource value="Patient"/>
+  <system value="false"/>
+  <type value="true"/>
+  <instance value="true"/>
+  <parameter>
+    <name value="messageId"/>
+    <use value="in"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="Unique message ID."/>
+    <type value="string"/>
+    <searchType value="string"/>
+  </parameter>
+  <parameter>
+    <name value="messageDate"/>
+    <use value="in"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="Message date and time."/>
+    <type value="string"/>
+    <searchType value="string"/>
+  </parameter>
+  <parameter>
+    <name value="address"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Patient address."/>
+    <type value="Address"/>
+  </parameter>
+  <parameter>
+    <name value="gender"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Patient gender."/>
+    <type value="code"/>
+  </parameter>
+  <parameter>
+    <name value="birthDate"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Patient birth date."/>
+    <type value="dateTime"/>
+  </parameter>
+  <parameter>
+    <name value="deathDate"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Patient death date."/>
+    <type value="dateTime"/>
+  </parameter>
+  <parameter>
+    <name value="name"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Patient name."/>
+    <type value="HumanName"/>
+  </parameter>
+  <parameter>
+    <name value="telephone"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Patient telephone."/>
+    <type value="ContactPoint"/>
+  </parameter>
+  <parameter>
+    <name value="mothersPHN"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Patient mother&#39;s PHN."/>
+    <type value="string"/>
+  </parameter>
+  <parameter>
+    <name value="identifiersOnly"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Return Identifiers only."/>
+    <type value="boolean"/>
+  </parameter>
+</OperationDefinition>
