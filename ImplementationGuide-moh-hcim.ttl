@@ -16,7 +16,7 @@
   fhir:ImplementationGuide.version [ fhir:value "0.1.0"];
   fhir:ImplementationGuide.name [ fhir:value "BCHCIM"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
-  fhir:ImplementationGuide.date [ fhir:value "2021-10-26T20:20:15+00:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2021-10-27T20:25:30+00:00"^^xsd:dateTime];
   fhir:ImplementationGuide.packageId [ fhir:value "moh-hcim"];
   fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"];
   fhir:ImplementationGuide.fhirVersion [
@@ -258,6 +258,16 @@
        fhir:Element.id [ fhir:value "Patient" ];
        fhir:ImplementationGuide.definition.grouping.name [ fhir:value "Patient" ];
        fhir:ImplementationGuide.definition.grouping.description [ fhir:value "Artifcats associated with Patients" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "Capabilities" ];
+       fhir:ImplementationGuide.definition.grouping.name [ fhir:value "Capabilities" ];
+       fhir:ImplementationGuide.definition.grouping.description [ fhir:value "PLR CapabilityStatement, the defined Operations and the Bundle profiles associated with them" ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "Operation Responses" ];
+       fhir:ImplementationGuide.definition.grouping.name [ fhir:value "Response Bundles" ];
+       fhir:ImplementationGuide.definition.grouping.description [ fhir:value "A set of Bundle profiles used by the Client Registry to respond to searches and revise/merge requests" ]
      ];
      fhir:ImplementationGuide.definition.resource [
        fhir:index 0;
@@ -319,6 +329,36 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://moh.fhir.org/moh-hcim/StructureDefinition/bc-revise-and-merge-response-bundle>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-revise-and-merge-response-bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BCReviseAndMergeResponseBundle" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Bundle that is used in the Client Registry response to Revise and Merge Patient requests." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "Operation Responses" ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://moh.fhir.org/moh-hcim/StructureDefinition/bc-search-response-bundle>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-search-response-bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BCSearchResponseBundle" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Bundle that is used in the Client Registry response to Find Candidates and Get Demographics queries." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "Operation Responses" ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
          fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
@@ -329,7 +369,49 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "A code that represents the validation status of the address" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 5;
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://moh.fhir.org/moh-hcim/StructureDefinition/bc-birth-date-business-dates>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-birth-date-business-dates" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Patient Birth Date business date" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The effective dates for the Patient's Birth Date." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://moh.fhir.org/moh-hcim/StructureDefinition/bc-business-dates-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-business-dates-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC business dates" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Business dates recored by the Client Registry." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://moh.fhir.org/moh-hcim/StructureDefinition/bc-death-date-business-dates>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-death-date-business-dates" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Patient Death Date business date" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The effective dates for the Patient's Death Date." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 10;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -343,35 +425,91 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "The Patients death date and time as recorded in the Client Registry." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 6;
+       fhir:index 11;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
          fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://moh.fhir.org/moh-hcim/StructureDefinition/bc-phn-business-date>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-phn-business-date" ]
+         fhir:link <http://moh.fhir.org/moh-hcim/StructureDefinition/bc-death-date-flag-business-dates>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-death-date-flag-business-dates" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Patient Death Date flag business date" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The effective dates for the Patient's Death Date flag." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://moh.fhir.org/moh-hcim/StructureDefinition/bc-gender-business-dates>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-gender-business-dates" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Patient Gender business date" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The effective dates for the Patient's Gender." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://moh.fhir.org/moh-hcim/StructureDefinition/bc-phn-business-dates>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-phn-business-dates" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Patient PHN business date" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The effective start date for the Patient's PHN." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The effective dates for the Patient's PHN." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 7;
+       fhir:index 14;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
          fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://moh.fhir.org/moh-hcim/StructureDefinition/bc-patient-business-date>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-patient-business-date" ]
+         fhir:link <http://moh.fhir.org/moh-hcim/StructureDefinition/bc-phn-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-phn-extension" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Patient business date" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The effective start date for the Patient." ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC extension for source and business dates." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "BC extension for source and business dates." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 8;
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://moh.fhir.org/moh-hcim/StructureDefinition/bc-patient-business-dates>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-patient-business-dates" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Patient business dates" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The effective dates for the Patient." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://moh.fhir.org/moh-hcim/StructureDefinition/bc-source-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-source-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC source" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The elements source. I.e. who create/updated this element." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 17;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -385,7 +523,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "BC Address Validation value set used to desribe the validation status of an address" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 9;
+       fhir:index 18;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -399,7 +537,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes used to define the address validation status." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 10;
+       fhir:index 19;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -412,7 +550,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "FindCandidates" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 11;
+       fhir:index 20;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -425,7 +563,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "FindCandidatesResponse" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 12;
+       fhir:index 21;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -438,7 +576,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "GetDemographics" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 13;
+       fhir:index 22;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -451,7 +589,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "GetDemographicsResponse" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 14;
+       fhir:index 23;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -464,7 +602,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "MergedPatient" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 15;
+       fhir:index 24;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -477,7 +615,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "MotherRelated" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 16;
+       fhir:index 25;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -490,7 +628,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Newborn" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 17;
+       fhir:index 26;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -503,7 +641,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient0Response" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 18;
+       fhir:index 27;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -516,7 +654,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient1Response" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 19;
+       fhir:index 28;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -529,7 +667,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient2Response" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 20;
+       fhir:index 29;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -542,7 +680,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "PatientDemographicsResponse" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 21;
+       fhir:index 30;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -555,7 +693,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "SSRIMergedPatient" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 22;
+       fhir:index 31;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -567,9 +705,10 @@
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "FindCandidatesQuery" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This operation is used to query for a patient.  The response can contain 0 or more Paitents." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "Capabilities" ]
      ], [
-       fhir:index 23;
+       fhir:index 32;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -581,9 +720,10 @@
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "GetDemographicsQuery" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This operation is used to query for a patient.  The response can contain 0 or 1 Patient." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "Capabilities" ]
      ], [
-       fhir:index 24;
+       fhir:index 33;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -595,9 +735,10 @@
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "MergePatient" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This operation is used to merge patients." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "Capabilities" ]
      ], [
-       fhir:index 25;
+       fhir:index 34;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -609,9 +750,10 @@
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "RevisePatient" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This operation is used to revise a patient's demographics." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "Capabilities" ]
      ], [
-       fhir:index 26;
+       fhir:index 35;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -623,7 +765,8 @@
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "RevisePatient.Newborn" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This operation is used to create a newborn patient." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "Capabilities" ]
      ];
      fhir:ImplementationGuide.definition.page [
        fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.html" ];

@@ -370,12 +370,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h5 id="requests">Requests</h5>
 
-<p>The body of the request message will vary depending on the business context however all message bodies will consist of at least one Parameter resource which in turn includes two Parameter resources.  The first Parameter.Parameter will hold operation information such as unique identifiers for the message, creation time, sender, receiver, enterer, etc  The second Parameter.Parameter resource will contain all the business information such as search parameters, resources like Patient, etc.</p>
+<p><a name="l717">​</a>The body of the request message will vary depending on the business context however all message bodies will consist of at least one Parameter.  The Parameter resource has two profiles defined in this guide.  See <a href="StructureDefinition-BCMetadataParameters.html">Metadata Parameters</a> and <a href="StructureDefinition-BCPatientParametersParameters.html">Patient Business Parameters</a>.  The Metadata Parameters profile is to store request metadata name-value pairs such as request creation time and unique ID.  The Business Parameters profile includes the Metadata name-value paris and in addition business values such as Patients and Operation flags.</p>
 
-<p>The image below shows the nested Parameters.  The Operation Parameters are for message meta data like timestamps and unique identifiers.  The Business Parameters are for search parameters or resources such as Patient.</p>
+<p>The diagram below shows how the Paramters resource is generalized to a Metadata Parameters and then further to a Business Parameters resource.  The children inherit from the parents.</p>
 
-<p><span width="100%">
-<img src="design_nestedParameters.png" alt="FHIR Structure - Nested Parameters" title="Nested Parameters"/>
+<p><span>
+	<img src="design_nestedParameters.png" height="350"/>
 </span></p>
 
 <h5 id="responses">Responses</h5>
@@ -510,8 +510,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
-        <p><a name="l969">​</a>
-          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="null"></a>.  Package moh-hcim#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 26, 2021 20:20+0000">2021-10-26</span>
+        <p><a name="l975">​</a>
+          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="null"></a>.  Package moh-hcim#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 27, 2021 20:25+0000">2021-10-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

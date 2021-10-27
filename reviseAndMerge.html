@@ -169,9 +169,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#merge-patient" id="markdown-toc-merge-patient">Merge Patient</a></li>
   <li><a href="#fhir-structure-for-revise-merge-and-distributions" id="markdown-toc-fhir-structure-for-revise-merge-and-distributions">FHIR Structure for Revise, Merge and Distributions</a></li>
   <li><a href="#asynchronous-operations" id="markdown-toc-asynchronous-operations">Asynchronous Operations</a></li>
-  <li><a href="#revise-patient-newborn" id="markdown-toc-revise-patient-newborn">Revise Patient Newborn</a></li>
-  <li><a href="#merge-patient-1" id="markdown-toc-merge-patient-1">Merge Patient</a></li>
-  <li><a href="#parameters-for-revise-and-merge" id="markdown-toc-parameters-for-revise-and-merge">Parameters for Revise and Merge</a></li>
 </ul>
 
 </div>
@@ -205,180 +202,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>The FHIR structure is the same for Merge, Revise and Distributions.  Responses (if required) are wrapped in collection Bundles and include OperationOutcome, Operation Parameters and Patient resources.</p>
 
-<p><span width="100%">
-<img src="revise_merge_fhir.png" alt="FHIR Structure - Revise_Merge" title="FHIR Structure for Revise and Merge"/>
+<p><span>
+	<img src="revise_merge_fhir.png" height="450"/>
 </span></p>
 
 <h3 id="asynchronous-operations">Asynchronous Operations</h3>
-<p>The asynchronous pattern for Revise and Merge Patient follow the same pattern as V3.  That is</p>
 
-<p>client -&gt; request to Client Registry -&gt; Client Registry responds with OK</p>
+<p>The asynchronous pattern for Revise and Merge Patient follow the same pattern as V3.  The figure belows show the client requesting an operation from the Client Registry and the Client Registery responding, later, with the response.</p>
 
-<p>Client Registry -&gt; late, request to client with response</p>
+<p><span>
+	<img src="asyncSequence.png" height="350"/>
+</span></p>
 
-<p>The interactions are associated by the unique message id in the Parameters resource.  The client must create a FHIR Operation end point to receive the responses at a later time.</p>
+<p>The request/responses are associated by the unique message id in the Parameters resource.  The client must create a FHIR Operation end point to receive the responses at a later time.  Specifically the response will be a Bundle, as documented in the <a href="OperationDefinition-bc-patient-revise.html">RevisePatient</a> and <a href="OperationDefinition-bc-patient-merge.html">MergePatient</a> operations.  The Parameter resource profile is <a href="StructureDefinition-BCMetadataParameters.html">BCMetadataParameters</a> and contains the IN parameters MessageRequestID to link the MessageID in the request to the asynchronous response.</p>
 
 <blockquote>
-  <p>What is the response end point?  Will it be https://…./$RevisePatient.Async ?</p>
+  <p>What is the response end point?  Will it be https://…./$RevisePatient.Async?  Or do the clients get to decide?</p>
 </blockquote>
-
-<h3 id="revise-patient-newborn">Revise Patient Newborn</h3>
-
-<p>Newborn events use the RevisePatient.Newborn operation; a parameter, ‘mothersPHN’ is included.</p>
-
-<h3 id="merge-patient-1">Merge Patient</h3>
-
-<p>Merge events use the MergePatient operation; a parameter, ‘relatedPerson’ is included to identify the non-survivors.</p>
-
-<h3 id="parameters-for-revise-and-merge">Parameters for Revise and Merge</h3>
-
-<h4 id="revise-patient-in">Revise Patient IN</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Parameter Name</th>
-      <th style="text-align: left">Parameter Value</th>
-      <th style="text-align: left">Comments</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">patient</td>
-      <td style="text-align: left">Patient resource</td>
-      <td style="text-align: left">A Patient resource</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="revise-patient-newborn-in">Revise Patient Newborn IN</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Parameter Name</th>
-      <th style="text-align: left">Parameter Value</th>
-      <th style="text-align: left">Comments</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">patient</td>
-      <td style="text-align: left">Patient resource</td>
-      <td style="text-align: left">A Patient resource representing newborn</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">mothersPHN</td>
-      <td style="text-align: left">parameter.value[string]</td>
-      <td style="text-align: left">The mothers PHN</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="merge-patient-in">Merge Patient IN</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Parameter Name</th>
-      <th style="text-align: left">Parameter Value</th>
-      <th style="text-align: left">Comments</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">patient</td>
-      <td style="text-align: left">Patient resource</td>
-      <td style="text-align: left">A Patient resource that for Merge is the surviving client</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">relatedPerson</td>
-      <td style="text-align: left">parameter.value[Identifier]</td>
-      <td style="text-align: left"><strong>Is this Identifier or something else?</strong></td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="revise-patient-out-bundle">Revise Patient OUT Bundle</h4>
-
-<p>The Bundle type is collection.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Bundle Entry</th>
-      <th style="text-align: left">Comments</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">Patient resource</td>
-      <td style="text-align: left">A Patient resource</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">OperationOutcome</td>
-      <td style="text-align: left">Information about the operation; warnings and errors.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Parameters resource</td>
-      <td style="text-align: left">Any name value pair parameters such as message creation date and unique identifiers</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="revise-patient-newborn-out-bundle">Revise Patient Newborn OUT Bundle</h4>
-
-<p>The Bundle type is collection.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Bundle Entry</th>
-      <th style="text-align: left">Comments</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">Patient resource</td>
-      <td style="text-align: left">A Patient resource, the newborn</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">OperationOutcome</td>
-      <td style="text-align: left">Information about the operation; warnings and errors.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Parameters resource</td>
-      <td style="text-align: left">Any name value pair parameters such as message creation date and unique identifiers</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="merge-patient-out-bundle">Merge Patient OUT Bundle</h4>
-
-<p>The Bundle type is collection.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Bundle Entry</th>
-      <th style="text-align: left">Comments</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">Patient resource</td>
-      <td style="text-align: left">A Patient resource, the survivor</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">OperationOutcome</td>
-      <td style="text-align: left">Information about the operation; warnings and errors.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Parameters resource</td>
-      <td style="text-align: left">Any name value pair parameters such as message creation date and unique identifiers</td>
-    </tr>
-  </tbody>
-</table>
 
 
 
@@ -404,8 +244,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
-        <p><a name="l738">​</a>
-          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="null"></a>.  Package moh-hcim#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 26, 2021 20:20+0000">2021-10-26</span>
+        <p><a name="l434">​</a>
+          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="null"></a>.  Package moh-hcim#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 27, 2021 20:25+0000">2021-10-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

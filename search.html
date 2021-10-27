@@ -193,6 +193,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>The Find Candidates is a synchronous request-response transaction.</p>
 
 <h3 id="get-demographics-search">Get Demographics Search</h3>
+
 <p>This interaction is used to retrieve the most current demographic information (i.e., name, address, gender, date of birth, and date of death if applicable) from the Client Registry and confirm MSP eligibility for a specific person when the PHN is known.</p>
 
 <p>If the patient has a PHN, a ‘get’ is performed against the Client Registry and the demographics returned and displayed to the user.</p>
@@ -202,10 +203,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>The Get Demographics is a synchronous request-response transaction</p>
 
 <h3 id="fhir-structure-for-searches">FHIR Structure for Searches</h3>
+
 <p>Below is a figure that shows the FHIR structure for the two searches.  The request is a Parameter resource and the response is a searchset Bundle with 0 or more Patients and one OperationOutcome.  The OperationOutcome is where you’ll find warnings and errors regarding the search.</p>
 
-<p><span width="100%">
-<img src="searches_fhir.png" alt="FHIR Structure - Searches" title="FHIR Structure for Searches"/>
+<p><span>
+	<img src="searches_fhir.png" height="275"/>
 </span></p>
 
 <p>Client Registry FHIR searches do not support parameters found in the FHIR international specification: _content, _id, _lastUpdated, _profile, _query, _security, _source, _tag, _text and _filter.  As well modifiers, prefixes, search hierarchies, chained parameters, reverse chaining, sorting, paging, includes, revincludes,</p>
@@ -214,160 +216,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <p>Shamil reviewed PLR IG and wanted more like the above in the IG - lists of FHIR features our FHIR sever will not support in words and in the capability statement.  I’m not sure we want to make lists like the above all over the place in here.  It may be easier to say “This is what we support, nothing else.”</p>
 </blockquote>
 
-<h4 id="get-demographics-parameters-in">Get Demographics Parameters In</h4>
+<h4 id="get-demographics-parameters">Get Demographics Parameters</h4>
 
-<p>The IN search parameters for Get Demographics are as follows.</p>
+<p>The IN and OUT search parameters and resources for Get Demographics can be found here <a href="OperationDefinition-bc-patient-get-demographics.html">GetDemographics search</a>.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Parameter Name</th>
-      <th style="text-align: left">Parameter Value</th>
-      <th style="text-align: left">Comments</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">identifier</td>
-      <td style="text-align: left"><strong>Not sure need to include the structure for PHN, SSRIs</strong></td>
-      <td style="text-align: left">&nbsp;</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">withHistory</td>
-      <td style="text-align: left">parameter.value[boolean]</td>
-      <td style="text-align: left">True or false</td>
-    </tr>
-  </tbody>
-</table>
+<h4 id="find-candidates-parameters">Find Candidates Parameters</h4>
 
-<h4 id="get-demographics-out-bundle">Get Demographics Out Bundle</h4>
-
-<p>This is a searchset Bundle.  The Bundle will contain a search score (entry.search.score) directly copied from the EMPI (not scaled between 0 and 1 as the international FHIR specification states).</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Bundle Entry</th>
-      <th style="text-align: left">Comments</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">OperationOutcome resource</td>
-      <td style="text-align: left">This resource contains the search warnings and errors</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Patient resource</td>
-      <td style="text-align: left">For Get Demographics there may be 0 Patients if no match is found</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Parameters resource</td>
-      <td style="text-align: left">These are the search parameters echoed back</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">2nd Parameters resource</td>
-      <td style="text-align: left">Any name value pair parameters such as message creation date and unique identifiers</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="find-candidates-in">Find Candidates In</h4>
-
-<p>The IN search parameters for Find Candidates are as follows.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Parameter Name</th>
-      <th style="text-align: left">Parameter Value</th>
-      <th style="text-align: left">Comments</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">address</td>
-      <td style="text-align: left">parameter.value[Address]</td>
-      <td style="text-align: left">Includes: country, state, city, postalCode, line, use, type</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">gender</td>
-      <td style="text-align: left">parameter.value[code]</td>
-      <td style="text-align: left">Includes codes: female, male or other</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">birthTime</td>
-      <td style="text-align: left">parameter.value[dateTime]</td>
-      <td style="text-align: left">Date and time of birth</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">deceasedTime</td>
-      <td style="text-align: left">parameter.value[dateTime]</td>
-      <td style="text-align: left">Date and time of passing</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">name</td>
-      <td style="text-align: left">parameter.value[HumanName]</td>
-      <td style="text-align: left">Includes: family, multiple given and use code</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">telephone</td>
-      <td style="text-align: left">parameter.value[ContactPoint]</td>
-      <td style="text-align: left">Includes: use and value</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">mothersPHN</td>
-      <td style="text-align: left">parameter.value[string]</td>
-      <td style="text-align: left">PHN</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">returnIdentifiersOnly</td>
-      <td style="text-align: left">parameter.value[boolean]</td>
-      <td style="text-align: left">If true, instructs Client Registry to return Patients with only their identifiers</td>
-    </tr>
-  </tbody>
-</table>
-
-<blockquote>
-  <p>Does FC use wildcards?</p>
-</blockquote>
-
-<blockquote>
-  <p>Is birthTime date or dateTime?</p>
-</blockquote>
-
-<blockquote>
-  <p>Is deceasedTime date or dateTime?</p>
-</blockquote>
-
-<h4 id="find-candidate-out-bundle">Find Candidate Out Bundle</h4>
-<p>This is a searchset Bundle with the EMPI score copied directly into entry.search.score with no scaling.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Bundle Entry</th>
-      <th style="text-align: left">Comments</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">OperationOutcome resource</td>
-      <td style="text-align: left">This resource contains the search warnings and errors</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Patient resource</td>
-      <td style="text-align: left">There may be 0 or more</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Parameters resource</td>
-      <td style="text-align: left">These are the search parameters echoed back</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">2nd Parameters resource</td>
-      <td style="text-align: left">Any name value pair parameters such as message creation date and unique identifiers</td>
-    </tr>
-  </tbody>
-</table>
+<p>The IN and OUT search parameters for Find Candidates can be found here 
+<a href="OperationDefinition-bc-patient-find-candidates.html">FindCandidates search</a>.</p>
 
 <h4 id="search-score">Search Score</h4>
 <p>In a searchset Bundle the entry.search.score attribute in FHIR is a decimal number between and including 0 and 1.  The Client Registry FHIR profile is non-conformant as the score returned by the EMPI doesn’t map well into the 0 to 1 range.  Therefore the EMPI match score will be returned as is allowing users to continue to interpret this score as they currently do.</p>
@@ -396,8 +252,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
-        <p><a name="l746">​</a>
-          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="null"></a>.  Package moh-hcim#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 26, 2021 20:20+0000">2021-10-26</span>
+        <p><a name="l451">​</a>
+          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="null"></a>.  Package moh-hcim#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 27, 2021 20:25+0000">2021-10-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

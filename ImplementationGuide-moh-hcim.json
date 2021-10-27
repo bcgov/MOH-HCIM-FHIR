@@ -9,7 +9,7 @@
   "version": "0.1.0",
   "name": "BCHCIM",
   "status": "draft",
-  "date": "2021-10-26T20:20:15+00:00",
+  "date": "2021-10-27T20:25:30+00:00",
   "packageId": "moh-hcim",
   "license": "CC0-1.0",
   "fhirVersion": [
@@ -270,6 +270,16 @@
         "id": "Patient",
         "name": "Patient",
         "description": "Artifcats associated with Patients"
+      },
+      {
+        "id": "Capabilities",
+        "name": "Capabilities",
+        "description": "PLR CapabilityStatement, the defined Operations and the Bundle profiles associated with them"
+      },
+      {
+        "id": "Operation Responses",
+        "name": "Response Bundles",
+        "description": "A set of Bundle profiles used by the Client Registry to respond to searches and revise/merge requests"
       }
     ],
     "resource": [
@@ -332,6 +342,36 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/bc-revise-and-merge-response-bundle"
+        },
+        "name": "BCReviseAndMergeResponseBundle",
+        "description": "A Bundle that is used in the Client Registry response to Revise and Merge Patient requests.",
+        "exampleBoolean": false,
+        "groupingId": "Operation Responses"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/bc-search-response-bundle"
+        },
+        "name": "BCSearchResponseBundle",
+        "description": "A Bundle that is used in the Client Registry response to Find Candidates and Get Demographics queries.",
+        "exampleBoolean": false,
+        "groupingId": "Operation Responses"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "StructureDefinition:extension"
           }
         ],
@@ -340,6 +380,48 @@
         },
         "name": "BC Address validation status code",
         "description": "A code that represents the validation status of the address",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/bc-birth-date-business-dates"
+        },
+        "name": "BC Patient Birth Date business date",
+        "description": "The effective dates for the Patient's Birth Date.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/bc-business-dates-extension"
+        },
+        "name": "BC business dates",
+        "description": "Business dates recored by the Client Registry.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/bc-death-date-business-dates"
+        },
+        "name": "BC Patient Death Date business date",
+        "description": "The effective dates for the Patient's Death Date.",
         "exampleBoolean": false
       },
       {
@@ -364,10 +446,10 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/bc-phn-business-date"
+          "reference": "StructureDefinition/bc-death-date-flag-business-dates"
         },
-        "name": "BC Patient PHN business date",
-        "description": "The effective start date for the Patient's PHN.",
+        "name": "BC Patient Death Date flag business date",
+        "description": "The effective dates for the Patient's Death Date flag.",
         "exampleBoolean": false
       },
       {
@@ -378,10 +460,66 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/bc-patient-business-date"
+          "reference": "StructureDefinition/bc-gender-business-dates"
         },
-        "name": "BC Patient business date",
-        "description": "The effective start date for the Patient.",
+        "name": "BC Patient Gender business date",
+        "description": "The effective dates for the Patient's Gender.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/bc-phn-business-dates"
+        },
+        "name": "BC Patient PHN business date",
+        "description": "The effective dates for the Patient's PHN.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/bc-phn-extension"
+        },
+        "name": "BC extension for source and business dates.",
+        "description": "BC extension for source and business dates.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/bc-patient-business-dates"
+        },
+        "name": "BC Patient business dates",
+        "description": "The effective dates for the Patient.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/bc-source-extension"
+        },
+        "name": "BC source",
+        "description": "The elements source. I.e. who create/updated this element.",
         "exampleBoolean": false
       },
       {
@@ -580,7 +718,8 @@
         },
         "name": "FindCandidatesQuery",
         "description": "This operation is used to query for a patient.  The response can contain 0 or more Paitents.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "Capabilities"
       },
       {
         "extension": [
@@ -594,7 +733,8 @@
         },
         "name": "GetDemographicsQuery",
         "description": "This operation is used to query for a patient.  The response can contain 0 or 1 Patient.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "Capabilities"
       },
       {
         "extension": [
@@ -608,7 +748,8 @@
         },
         "name": "MergePatient",
         "description": "This operation is used to merge patients.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "Capabilities"
       },
       {
         "extension": [
@@ -622,7 +763,8 @@
         },
         "name": "RevisePatient",
         "description": "This operation is used to revise a patient's demographics.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "Capabilities"
       },
       {
         "extension": [
@@ -636,7 +778,8 @@
         },
         "name": "RevisePatient.Newborn",
         "description": "This operation is used to create a newborn patient.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "Capabilities"
       }
     ],
     "page": {
