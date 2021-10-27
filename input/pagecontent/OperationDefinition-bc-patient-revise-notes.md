@@ -4,3 +4,5 @@ The response to a RevisePatient Operation is a Bundle of type collection.  The B
 * a Parameters resource (specifically [BCMetadataParameters](StructureDefinition-BCMetadataParameters.html))
 
 If this is an asynchronous revise then the BCMetadataParameters must contain the request MessageID in the MessageRequestID field.
+
+See [Revise Patient response](StructureDefinition-bc-revise-and-merge-response-bundle.html)

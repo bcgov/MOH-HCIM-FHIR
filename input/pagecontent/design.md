@@ -86,12 +86,12 @@ Suffixes such as History and Async inform the Client Registry FHIR server to per
 
 ##### Requests
 
-The body of the request message will vary depending on the business context however all message bodies will consist of at least one Parameter resource which in turn includes two Parameter resources.  The first Parameter.Parameter will hold operation information such as unique identifiers for the message, creation time, sender, receiver, enterer, etc  The second Parameter.Parameter resource will contain all the business information such as search parameters, resources like Patient, etc.
+The body of the request message will vary depending on the business context however all message bodies will consist of at least one Parameter.  The Parameter resource has two profiles defined in this guide.  See [Metadata Parameters](StructureDefinition-BCMetadataParameters.html) and [Patient Business Parameters](StructureDefinition-BCPatientParametersParameters.html).  The Metadata Parameters profile is to store request metadata name-value pairs such as request creation time and unique ID.  The Business Parameters profile includes the Metadata name-value paris and in addition business values such as Patients and Operation flags.
 
-The image below shows the nested Parameters.  The Operation Parameters are for message meta data like timestamps and unique identifiers.  The Business Parameters are for search parameters or resources such as Patient.
+The diagram below shows how the Paramters resource is generalized to a Metadata Parameters and then further to a Business Parameters resource.  The children inherit from the parents.
 
-<span width="100%">
-![FHIR Structure - Nested Parameters](design_nestedParameters.png "Nested Parameters")
+<span>
+	<img src="design_nestedParameters.png" height="350"/>
 </span>
 
 ##### Responses

@@ -26,79 +26,21 @@ The record the POS is keeping must be in the EMPI prior to the merge or the Merg
 
 The FHIR structure is the same for Merge, Revise and Distributions.  Responses (if required) are wrapped in collection Bundles and include OperationOutcome, Operation Parameters and Patient resources.
 
-<span width="100%">
-![FHIR Structure - Revise_Merge](revise_merge_fhir.png "FHIR Structure for Revise and Merge")
+<span>
+	<img src="revise_merge_fhir.png" height="450"/>
 </span>
 
 
 ### Asynchronous Operations
-The asynchronous pattern for Revise and Merge Patient follow the same pattern as V3.  That is 
 
-client -> request to Client Registry -> Client Registry responds with OK
+The asynchronous pattern for Revise and Merge Patient follow the same pattern as V3.  The figure belows show the client requesting an operation from the Client Registry and the Client Registery responding, later, with the response.
 
-Client Registry -> late, request to client with response
+<span>
+	<img src="asyncSequence.png" height="350"/>
+</span>
 
-The interactions are associated by the unique message id in the Parameters resource.  The client must create a FHIR Operation end point to receive the responses at a later time.
 
->What is the response end point?  Will it be https://..../$RevisePatient.Async ?
+The request/responses are associated by the unique message id in the Parameters resource.  The client must create a FHIR Operation end point to receive the responses at a later time.  Specifically the response will be a Bundle, as documented in the [RevisePatient](OperationDefinition-bc-patient-revise.html) and [MergePatient](OperationDefinition-bc-patient-merge.html) operations.  The Parameter resource profile is [BCMetadataParameters](StructureDefinition-BCMetadataParameters.html) and contains the IN parameters MessageRequestID to link the MessageID in the request to the asynchronous response.
 
-### Revise Patient Newborn
-
-Newborn events use the RevisePatient.Newborn operation; a parameter, 'mothersPHN' is included.
-
-### Merge Patient
-
-Merge events use the MergePatient operation; a parameter, 'relatedPerson' is included to identify the non-survivors.
-
-### Parameters for Revise and Merge
-
-#### Revise Patient IN
-
-Parameter Name|Parameter Value|Comments
-:---|:---|:---
-patient|Patient resource|A Patient resource
-
-#### Revise Patient Newborn IN
-
-Parameter Name|Parameter Value|Comments
-:---|:---|:---
-patient|Patient resource|A Patient resource representing newborn
-mothersPHN|parameter.value[string]|The mothers PHN
-
-#### Merge Patient IN
-
-Parameter Name|Parameter Value|Comments
-:---|:---|:---
-patient|Patient resource|A Patient resource that for Merge is the surviving client
-relatedPerson|parameter.value[Identifier]|**Is this Identifier or something else?**
-
-#### Revise Patient OUT Bundle
-
-The Bundle type is collection.
-
-Bundle Entry|Comments
-:---|:---
-Patient resource|A Patient resource
-OperationOutcome|Information about the operation; warnings and errors.
-Parameters resource|Any name value pair parameters such as message creation date and unique identifiers
-
-#### Revise Patient Newborn OUT Bundle
-
-The Bundle type is collection.
-
-Bundle Entry|Comments
-:---|:---
-Patient resource|A Patient resource, the newborn
-OperationOutcome|Information about the operation; warnings and errors.
-Parameters resource|Any name value pair parameters such as message creation date and unique identifiers
-
-#### Merge Patient OUT Bundle
-
-The Bundle type is collection.
-
-Bundle Entry|Comments
-:---|:---
-Patient resource|A Patient resource, the survivor
-OperationOutcome|Information about the operation; warnings and errors.
-Parameters resource|Any name value pair parameters such as message creation date and unique identifiers
+>What is the response end point?  Will it be https://..../$RevisePatient.Async?  Or do the clients get to decide?
 

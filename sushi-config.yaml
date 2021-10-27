@@ -56,5 +56,18 @@ groups:
       description: Artifcats associated with Patients
       resources:
          - StructureDefinition/bc-patient
-
-
+   Capabilities:
+      name: Capabilities
+      description: PLR CapabilityStatement, the defined Operations and the Bundle profiles associated with them
+      resources:
+         - OperationDefinition/bc-patient-find-candidates
+         - OperationDefinition/bc-patient-get-demographics
+         - OperationDefinition/bc-patient-revise
+         - OperationDefinition/bc-patient-revise-newborn
+         - OperationDefinition/bc-patient-merge
+   Operation Responses:
+      name: Response Bundles
+      description: A set of Bundle profiles used by the Client Registry to respond to searches and revise/merge requests
+      resources:
+         - StructureDefinition/bc-search-response-bundle
+         - StructureDefinition/bc-revise-and-merge-response-bundle
