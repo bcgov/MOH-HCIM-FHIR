@@ -4,7 +4,7 @@ Parent: Parameters
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #open
 * parameter ^slicing.description = "The specific parameters to specify BC Metadata."
-* parameter contains MessageID 1..1 MS and MessageDate 1..1 MS and MessageRequestID 0..1 MS
+* parameter contains MessageID 1..1 MS and MessageDate 1..1 MS and MessageRequestID 0..1 MS and Author 1..1 MS and Sender 1..1 MS and Enterer 1..1 MS
 * parameter[MessageID].name MS
 * parameter[MessageID].name = "MessageID"
 * parameter[MessageID].value[x] 1..1 MS
@@ -23,6 +23,24 @@ Parent: Parameters
 * parameter[MessageRequestID].value[x] only string
 * parameter[MessageRequestID].resource 0..0
 * parameter[MessageRequestID].part 0..0
+* parameter[Author].name MS
+* parameter[Author].name = "Author"
+* parameter[Author].value[x] 1..1 MS
+* parameter[Author].value[x] only string
+* parameter[Author].resource 0..0
+* parameter[Author].part 0..0
+* parameter[Sender].name MS
+* parameter[Sender].name = "Sender"
+* parameter[Sender].value[x] 1..1 MS
+* parameter[Sender].value[x] only string
+* parameter[Sender].resource 0..0
+* parameter[Sender].part 0..0
+* parameter[Enterer].name MS
+* parameter[Enterer].name = "Enterer"
+* parameter[Enterer].value[x] 1..1 MS
+* parameter[Enterer].value[x] only string
+* parameter[Enterer].resource 0..0
+* parameter[Enterer].part 0..0
 
 Profile: BCPatientBusinessParameters
 Parent: BCMetadataParameters
