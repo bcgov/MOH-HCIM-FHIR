@@ -2,22 +2,46 @@
 
 <Parameters xmlns="http://hl7.org/fhir">
   <id value="GetDemographics"/>
+  <meta>
+    <profile value="http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters"/>
+  </meta>
+  <parameter>
+    <name value="messageId"/>
+    <valueString value="98028b44-882a-4c72-8c92-b87d916147e1"/>
+  </parameter>
+  <parameter>
+    <name value="messageDateTime"/>
+    <valueDateTime value="2015-02-07T13:28:17-08:00"/>
+  </parameter>
+  <parameter>
+    <name value="sender"/>
+    <valueIdentifier>
+      <system value="http://hl7.org/fhir/bc-hcim/bc-org"/>
+      <value value="VPP"/>
+    </valueIdentifier>
+  </parameter>
+  <parameter>
+    <name value="enterer"/>
+    <valueIdentifier>
+      <system value="http://hl7.org/fhir/bc-hcim/bc-userid"/>
+      <value value="bob@me.com"/>
+    </valueIdentifier>
+  </parameter>
   <parameter>
     <name value="identifier"/>
     <valueIdentifier>
-      <system value="http://hl7.org/fhir/sid/bc-phn"/>
-      <value value="12345892"/>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+          <code value="JHN"/>
+        </coding>
+      </type>
+      <system value="http://hl7.org/fhir/bc-hcim/bc-sri"/>
+      <value value="912345892"/>
     </valueIdentifier>
   </parameter>
   <parameter>
     <name value="history"/>
     <valueBoolean value="true"/>
-  </parameter>
-  <parameter>
-    <name value="requester"/>
-    <valueIdentifier>
-      <system value="http://hl7.org/fhir/sid/bc-userId"/>
-      <value value="you@me.com"/>
-    </valueIdentifier>
   </parameter>
 </Parameters>

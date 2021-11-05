@@ -1,7 +1,27 @@
 {
   "resourceType": "Parameters",
   "id": "FindCandidates",
+  "meta": {
+    "profile": [
+      "http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters"
+    ]
+  },
   "parameter": [
+    {
+      "name": "messageId",
+      "valueString": "98028b44-882a-4c72-8c92-b87d916147e1"
+    },
+    {
+      "name": "messageDateTime",
+      "valueDateTime": "2015-02-07T13:28:17-08:00"
+    },
+    {
+      "name": "sender",
+      "valueIdentifier": {
+        "system": "http://hl7.org/fhir/bc-hcim/bc-org",
+        "value": "VPP"
+      }
+    },
     {
       "name": "address",
       "valueAddress": {
@@ -31,13 +51,6 @@
       "valueDateTime": "2005-05-05"
     },
     {
-      "name": "identifier",
-      "valueIdentifier": {
-        "system": "http://hl7.org/fhir/sid/bc-phn",
-        "value": "12345892"
-      }
-    },
-    {
       "name": "name",
       "valueHumanName": {
         "use": "official",
@@ -56,18 +69,8 @@
       }
     },
     {
-      "name": "motherPHN",
-      "valueIdentifier": {
-        "system": "http://hl7.org/fhir/sid/bc-phn",
-        "value": "9xxxxxxxx"
-      }
-    },
-    {
-      "name": "requester",
-      "valueIdentifier": {
-        "system": "http://hl7.org/fhir/sid/bc-userId",
-        "value": "you@me.com"
-      }
+      "name": "identifiersOnly",
+      "valueBoolean": false
     }
   ]
 }

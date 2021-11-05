@@ -3,13 +3,13 @@
   "id": "moh-hcim",
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>BCHCIM</h2><p>The official URL for this implementation guide is: </p><pre>http://moh.fhir.org/moh-hcim/ImplementationGuide/moh-hcim</pre></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>BCHCIM</h2><p>The official URL for this implementation guide is: </p><pre>http://moh.fhir/bc-client/ImplementationGuide/moh-hcim</pre></div>"
   },
-  "url": "http://moh.fhir.org/moh-hcim/ImplementationGuide/moh-hcim",
+  "url": "http://moh.fhir/bc-client/ImplementationGuide/moh-hcim",
   "version": "0.1.0",
   "name": "BCHCIM",
   "status": "draft",
-  "date": "2021-10-28T17:05:20+00:00",
+  "date": "2021-11-05T15:02:58+00:00",
   "packageId": "moh-hcim",
   "license": "CC0-1.0",
   "fhirVersion": [
@@ -129,7 +129,7 @@
           },
           {
             "url": "value",
-            "valueString": "http://moh.fhir.org/moh-hcim/history.html"
+            "valueString": "http://moh.fhir/bc-client/history.html"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -272,14 +272,29 @@
         "description": "Artifcats associated with Patients"
       },
       {
-        "id": "Capabilities",
-        "name": "Capabilities",
-        "description": "PLR CapabilityStatement, the defined Operations and the Bundle profiles associated with them"
+        "id": "Operations",
+        "name": "Operations",
+        "description": "The defined Operations"
+      },
+      {
+        "id": "Operation Parameters",
+        "name": "Operation Parameters",
+        "description": "The parameter profiles associated with the Client Registry Operations"
       },
       {
         "id": "Operation Responses",
         "name": "Response Bundles",
         "description": "A set of Bundle profiles used by the Client Registry to respond to searches and revise/merge requests"
+      },
+      {
+        "id": "Operation Request Examples",
+        "name": "Operation Request Examples",
+        "description": "A set of operation request examples"
+      },
+      {
+        "id": "Operation Response Examples",
+        "name": "Operation Response Examples",
+        "description": "A set of operation response examples"
       }
     ],
     "resource": [
@@ -305,10 +320,12 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/BCMetadataParameters"
+          "reference": "StructureDefinition/bc-metadata-parameters"
         },
         "name": "BCMetadataParameters",
-        "exampleBoolean": false
+        "description": "Parameters profile for BC meta data",
+        "exampleBoolean": false,
+        "groupingId": "Operation Parameters"
       },
       {
         "extension": [
@@ -333,10 +350,12 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/BCPatientBusinessParameters"
+          "reference": "StructureDefinition/bc-patient-business-parameters"
         },
         "name": "BCPatientBusinessParameters",
-        "exampleBoolean": false
+        "description": "Parameters extended from BCMetadataParameters for a Patient resource",
+        "exampleBoolean": false,
+        "groupingId": "Operation Parameters"
       },
       {
         "extension": [
@@ -404,20 +423,6 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/bc-business-dates-extension"
-        },
-        "name": "BC business dates",
-        "description": "Business dates recored by the Client Registry.",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:extension"
-          }
-        ],
-        "reference": {
           "reference": "StructureDefinition/bc-death-date-business-dates"
         },
         "name": "BC Patient Death Date business date",
@@ -474,52 +479,10 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/bc-phn-business-dates"
-        },
-        "name": "BC Patient PHN business date",
-        "description": "The effective dates for the Patient's PHN.",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:extension"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/bc-phn-extension"
-        },
-        "name": "BC extension for source and business dates.",
-        "description": "BC extension for source and business dates.",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:extension"
-          }
-        ],
-        "reference": {
           "reference": "StructureDefinition/bc-patient-business-dates"
         },
         "name": "BC Patient business dates",
         "description": "The effective dates for the Patient.",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:extension"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/bc-source-extension"
-        },
-        "name": "BC source",
-        "description": "The elements source. I.e. who create/updated this element.",
         "exampleBoolean": false
       },
       {
@@ -561,7 +524,53 @@
           "reference": "Parameters/FindCandidates"
         },
         "name": "FindCandidates",
-        "exampleBoolean": true
+        "description": "Example of $FindCandidates operation",
+        "exampleCanonical": "http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters",
+        "groupingId": "Operation Request Examples"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Parameters"
+          }
+        ],
+        "reference": {
+          "reference": "Parameters/FindCandidates-MomsPHN"
+        },
+        "name": "FindCandidates-MomsPHN",
+        "description": "Example of $FindCandidates operation with mother's PHN",
+        "exampleCanonical": "http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters",
+        "groupingId": "Operation Request Examples"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Parameters"
+          }
+        ],
+        "reference": {
+          "reference": "Parameters/FindCandidates-ResponseMetadata"
+        },
+        "name": "FindCandidates-ResponseMetadata",
+        "description": "Example of $FindCandidates response Metadata parameters",
+        "exampleCanonical": "http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Parameters"
+          }
+        ],
+        "reference": {
+          "reference": "Parameters/FindCandidates-SSRI"
+        },
+        "name": "FindCandidates-SSRI",
+        "description": "Example of $FindCandidates operation with SSRI identifier",
+        "exampleCanonical": "http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters",
+        "groupingId": "Operation Request Examples"
       },
       {
         "extension": [
@@ -574,7 +583,9 @@
           "reference": "Bundle/FindCandidatesResponse"
         },
         "name": "FindCandidatesResponse",
-        "exampleBoolean": true
+        "description": "Example of $FindCandidates response Bundle.  Patient0 has PHN, alternate, SRI and SSRI identifier examples.",
+        "exampleBoolean": true,
+        "groupingId": "Operation Response Examples"
       },
       {
         "extension": [
@@ -587,6 +598,36 @@
           "reference": "Parameters/GetDemographics"
         },
         "name": "GetDemographics",
+        "description": "Example of $GetDemographics operation",
+        "exampleCanonical": "http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters",
+        "groupingId": "Operation Request Examples"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Parameters"
+          }
+        ],
+        "reference": {
+          "reference": "Parameters/GetDemographics-ResponseMetadata"
+        },
+        "name": "GetDemographics-ResponseMetadata",
+        "description": "Example of $FindCandidates response Metadata parameters",
+        "exampleCanonical": "http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Parameters"
+          }
+        ],
+        "reference": {
+          "reference": "Parameters/GetDemographicsINParameters"
+        },
+        "name": "GetDemographicsINParameters",
+        "description": "Example of $GetDemographics operation, IN parameters",
         "exampleBoolean": true
       },
       {
@@ -600,7 +641,9 @@
           "reference": "Bundle/GetDemographicsResponse"
         },
         "name": "GetDemographicsResponse",
-        "exampleBoolean": true
+        "description": "Example of $GetDemographics operation response Bundle",
+        "exampleBoolean": true,
+        "groupingId": "Operation Response Examples"
       },
       {
         "extension": [
@@ -613,6 +656,7 @@
           "reference": "Patient/MergedPatient"
         },
         "name": "MergedPatient",
+        "description": "Example of a merge patient request",
         "exampleBoolean": true
       },
       {
@@ -626,6 +670,7 @@
           "reference": "RelatedPerson/MotherRelated"
         },
         "name": "MotherRelated",
+        "description": "Example of related person's PHN as Identifier",
         "exampleBoolean": true
       },
       {
@@ -639,6 +684,7 @@
           "reference": "Patient/Newborn"
         },
         "name": "Newborn",
+        "description": "Example of new born Patient",
         "exampleBoolean": true
       },
       {
@@ -652,6 +698,7 @@
           "reference": "Patient/Patient0Response"
         },
         "name": "Patient0Response",
+        "description": "Example of Patient for query response Bundle with 4 different kinds of identifiers: SRI-PHN, SRI, SSRI and alternative.",
         "exampleBoolean": true
       },
       {
@@ -665,6 +712,7 @@
           "reference": "Patient/Patient1Response"
         },
         "name": "Patient1Response",
+        "description": "Example of Patient for query response Bundle",
         "exampleBoolean": true
       },
       {
@@ -678,6 +726,7 @@
           "reference": "Patient/Patient2Response"
         },
         "name": "Patient2Response",
+        "description": "Example of Patient for query response Bundle",
         "exampleBoolean": true
       },
       {
@@ -691,6 +740,7 @@
           "reference": "Patient/PatientDemographicsResponse"
         },
         "name": "PatientDemographicsResponse",
+        "description": "Example of Patient for $GetDemographics operation response",
         "exampleBoolean": true
       },
       {
@@ -704,6 +754,7 @@
           "reference": "Patient/SSRIMergedPatient"
         },
         "name": "SSRIMergedPatient",
+        "description": "Example of a merge patient with SSRI",
         "exampleBoolean": true
       },
       {
@@ -719,7 +770,7 @@
         "name": "FindCandidatesQuery",
         "description": "This operation is used to query for a patient.  The response can contain 0 or more Paitents.",
         "exampleBoolean": false,
-        "groupingId": "Capabilities"
+        "groupingId": "Operations"
       },
       {
         "extension": [
@@ -734,7 +785,7 @@
         "name": "GetDemographicsQuery",
         "description": "This operation is used to query for a patient.  The response can contain 0 or 1 Patient.",
         "exampleBoolean": false,
-        "groupingId": "Capabilities"
+        "groupingId": "Operations"
       },
       {
         "extension": [
@@ -749,7 +800,7 @@
         "name": "MergePatient",
         "description": "This operation is used to merge patients.",
         "exampleBoolean": false,
-        "groupingId": "Capabilities"
+        "groupingId": "Operations"
       },
       {
         "extension": [
@@ -764,7 +815,7 @@
         "name": "RevisePatient",
         "description": "This operation is used to revise a patient's demographics.",
         "exampleBoolean": false,
-        "groupingId": "Capabilities"
+        "groupingId": "Operations"
       },
       {
         "extension": [
@@ -779,7 +830,7 @@
         "name": "RevisePatient.Newborn",
         "description": "This operation is used to create a newborn patient.",
         "exampleBoolean": false,
-        "groupingId": "Capabilities"
+        "groupingId": "Operations"
       }
     ],
     "page": {

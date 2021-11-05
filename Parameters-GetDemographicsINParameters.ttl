@@ -1,0 +1,32 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://moh.fhir/bc-client/Parameters/GetDemographicsINParameters> a fhir:Parameters;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "GetDemographicsINParameters"];
+  fhir:Parameters.parameter [
+     fhir:index 0;
+     fhir:Parameters.parameter.name [ fhir:value "identifier" ];
+     fhir:Parameters.parameter.valueIdentifier [
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.code [ fhir:value "JHN" ]
+         ]
+       ];
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-sri" ];
+       fhir:Identifier.value [ fhir:value "9xxxxxxxx" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://moh.fhir/bc-client/Parameters/GetDemographicsINParameters.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

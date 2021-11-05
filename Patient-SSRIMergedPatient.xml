@@ -3,7 +3,7 @@
 <Patient xmlns="http://hl7.org/fhir">
   <id value="SSRIMergedPatient"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: VPP_CER: CER123345, VPP_LION: VCHA23321, VPP_FPH: FOR2345, id: 9999999999</p><p><b>active</b>: true</p><p><b>name</b>: David Edward Adams , Dave (NICKNAME)</p><p><b>telecom</b>: ph: 2505552323(HOME), ph: 12505658896(WORK), ph: 2505883546(MOBILE)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1963-09-05</p><p><b>address</b>: </p><ul><li>3145 happy valley rd Suite 33 Attention - Dave Victoria BC V8C2P8 CA </li><li>3840 fort St Victoria BC V5C2P6 CA </li></ul><blockquote><p><b>link</b></p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: VPP_CER: CER123345, VPP_LION: VCHA23321, VPP_FPH: FOR2345, PHN: 9999999999</p><p><b>active</b>: true</p><p><b>name</b>: David Edward Adams , Dave (NICKNAME)</p><p><b>telecom</b>: ph: 2505552323(HOME), ph: 12505658896(WORK), ph: 2505883546(MOBILE)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1963-09-05</p><p><b>address</b>: </p><ul><li>3145 happy valley rd Suite 33 Attention - Dave Victoria BC V8C2P8 CA </li><li>3840 fort St Victoria BC V5C2P6 CA </li></ul><blockquote><p><b>link</b></p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote></div>
   </text>
   <extension url="http://fhir.bc.ca/extension/effectiveDate">
     <valuePeriod>
@@ -13,35 +13,41 @@
   <identifier>
     <type>
       <coding>
-        <system value="http://hl7.org/fhir/codesystem/bc-source-type"/>
+        <system value="http://hl7.org/fhir/bc-hcim/codesystem/bc-source-type"/>
         <code value="VPP_CER"/>
       </coding>
     </type>
-    <system value="http://hl7.org/fhir/sid/bc-source"/>
+    <system value="http://hl7.org/fhir/bc-hcim/bc-source"/>
     <value value="CER123345"/>
   </identifier>
   <identifier>
     <type>
       <coding>
-        <system value="http://hl7.org/fhir/codesystem/bc-source-type"/>
+        <system value="http://hl7.org/fhir/bc-hcim/codesystem/bc-source-type"/>
         <code value="VPP_LION"/>
       </coding>
     </type>
-    <system value="http://hl7.org/fhir/sid/bc-source"/>
+    <system value="http://hl7.org/fhir/bc-hcim/codesystem/bc-source"/>
     <value value="VCHA23321"/>
   </identifier>
   <identifier>
     <type>
       <coding>
-        <system value="http://hl7.org/fhir/codesystem/bc-source-type"/>
+        <system value="http://hl7.org/fhir/bc-hcim/codesystem/bc-source-type"/>
         <code value="VPP_FPH"/>
       </coding>
     </type>
-    <system value="http://hl7.org/fhir/sid/bc-source"/>
+    <system value="http://hl7.org/fhir/bc-hcim/codesystem/bc-source"/>
     <value value="FOR2345"/>
   </identifier>
   <identifier>
-    <system value="http://hl7.org/fhir/sid/bc-phn"/>
+    <type>
+      <coding>
+        <system value="http://hl7.org/fhir/bc-hcim/codesystem/bc-source-type"/>
+        <code value="PHN"/>
+      </coding>
+    </type>
+    <system value="http://hl7.org/fhir/bc-hcim/codesystem/bc-source"/>
     <value value="9999999999"/>
   </identifier>
   <active value="true"/>

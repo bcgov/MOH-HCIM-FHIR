@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://moh.fhir.org/moh-hcim/Patient/MergedPatient> a fhir:Patient;
+<http://moh.fhir/bc-client/Patient/MergedPatient> a fhir:Patient;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "MergedPatient"];
   fhir:DomainResource.text [
@@ -75,7 +75,14 @@
      ];
      fhir:Patient.link.other [
        fhir:Reference.identifier [
-         fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/bc-source" ];
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/bc-hcim/codesystem/bc-source-type" ];
+             fhir:Coding.code [ fhir:value "PHN" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/codesystem/bc-source" ];
          fhir:Identifier.value [ fhir:value "203451T3" ]
        ]
      ];
@@ -89,7 +96,14 @@
      ];
      fhir:Patient.link.other [
        fhir:Reference.identifier [
-         fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/bc-source" ];
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/bc-hcim/codesystem/bc-source-type" ];
+             fhir:Coding.code [ fhir:value "PHN" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/codesystem/bc-source" ];
          fhir:Identifier.value [ fhir:value "616278P9" ]
        ]
      ];
@@ -103,7 +117,14 @@
      ];
      fhir:Patient.link.other [
        fhir:Reference.identifier [
-         fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/bc-source" ];
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/bc-hcim/codesystem/bc-source-type" ];
+             fhir:Coding.code [ fhir:value "PHN" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/codesystem/bc-source" ];
          fhir:Identifier.value [ fhir:value "203451T3" ]
        ]
      ];
@@ -117,7 +138,14 @@
      ];
      fhir:Patient.link.other [
        fhir:Reference.identifier [
-         fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/bc-source" ];
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/bc-hcim/codesystem/bc-source-type" ];
+             fhir:Coding.code [ fhir:value "PHN" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/codesystem/bc-source" ];
          fhir:Identifier.value [ fhir:value "203451T3" ]
        ]
      ];
@@ -126,7 +154,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://moh.fhir.org/moh-hcim/Patient/MergedPatient.ttl> a owl:Ontology;
+<http://moh.fhir/bc-client/Patient/MergedPatient.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

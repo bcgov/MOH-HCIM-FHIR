@@ -5,11 +5,33 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://moh.fhir.org/moh-hcim/Parameters/FindCandidates> a fhir:Parameters;
+<http://moh.fhir/bc-client/Parameters/FindCandidates> a fhir:Parameters;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "FindCandidates"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters";
+       fhir:index 0;
+       fhir:link <http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters>
+     ]
+  ];
   fhir:Parameters.parameter [
      fhir:index 0;
+     fhir:Parameters.parameter.name [ fhir:value "messageId" ];
+     fhir:Parameters.parameter.valueString [ fhir:value "98028b44-882a-4c72-8c92-b87d916147e1" ]
+  ], [
+     fhir:index 1;
+     fhir:Parameters.parameter.name [ fhir:value "messageDateTime" ];
+     fhir:Parameters.parameter.valueDateTime [ fhir:value "2015-02-07T13:28:17-08:00"^^xsd:dateTime ]
+  ], [
+     fhir:index 2;
+     fhir:Parameters.parameter.name [ fhir:value "sender" ];
+     fhir:Parameters.parameter.valueIdentifier [
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-org" ];
+       fhir:Identifier.value [ fhir:value "VPP" ]
+     ]
+  ], [
+     fhir:index 3;
      fhir:Parameters.parameter.name [ fhir:value "address" ];
      fhir:Parameters.parameter.valueAddress [
        fhir:Address.type [ fhir:value "postal" ];
@@ -32,26 +54,19 @@
        fhir:Address.country [ fhir:value "CA" ]
      ]
   ], [
-     fhir:index 1;
+     fhir:index 4;
      fhir:Parameters.parameter.name [ fhir:value "gender" ];
      fhir:Parameters.parameter.valueCode [ fhir:value "male" ]
   ], [
-     fhir:index 2;
+     fhir:index 5;
      fhir:Parameters.parameter.name [ fhir:value "birthDate" ];
      fhir:Parameters.parameter.valueDate [ fhir:value "1959-12-30"^^xsd:date ]
   ], [
-     fhir:index 3;
+     fhir:index 6;
      fhir:Parameters.parameter.name [ fhir:value "deceased-date" ];
      fhir:Parameters.parameter.valueDateTime [ fhir:value "2005-05-05"^^xsd:date ]
   ], [
-     fhir:index 4;
-     fhir:Parameters.parameter.name [ fhir:value "identifier" ];
-     fhir:Parameters.parameter.valueIdentifier [
-       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/bc-phn" ];
-       fhir:Identifier.value [ fhir:value "12345892" ]
-     ]
-  ], [
-     fhir:index 5;
+     fhir:index 7;
      fhir:Parameters.parameter.name [ fhir:value "name" ];
      fhir:Parameters.parameter.valueHumanName [
        fhir:HumanName.use [ fhir:value "official" ];
@@ -62,7 +77,7 @@
        ]
      ]
   ], [
-     fhir:index 6;
+     fhir:index 8;
      fhir:Parameters.parameter.name [ fhir:value "telecom" ];
      fhir:Parameters.parameter.valueContactPoint [
        fhir:ContactPoint.system [ fhir:value "phone" ];
@@ -70,24 +85,14 @@
        fhir:ContactPoint.use [ fhir:value "home" ]
      ]
   ], [
-     fhir:index 7;
-     fhir:Parameters.parameter.name [ fhir:value "motherPHN" ];
-     fhir:Parameters.parameter.valueIdentifier [
-       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/bc-phn" ];
-       fhir:Identifier.value [ fhir:value "9xxxxxxxx" ]
-     ]
-  ], [
-     fhir:index 8;
-     fhir:Parameters.parameter.name [ fhir:value "requester" ];
-     fhir:Parameters.parameter.valueIdentifier [
-       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/bc-userId" ];
-       fhir:Identifier.value [ fhir:value "you@me.com" ]
-     ]
+     fhir:index 9;
+     fhir:Parameters.parameter.name [ fhir:value "identifiersOnly" ];
+     fhir:Parameters.parameter.valueBoolean [ fhir:value "false"^^xsd:boolean ]
   ] .
 
 # - ontology header ------------------------------------------------------------
 
-<http://moh.fhir.org/moh-hcim/Parameters/FindCandidates.ttl> a owl:Ontology;
+<http://moh.fhir/bc-client/Parameters/FindCandidates.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

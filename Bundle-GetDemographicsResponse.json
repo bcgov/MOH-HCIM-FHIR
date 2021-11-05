@@ -9,91 +9,113 @@
   "timestamp": "2011-09-07T12:18:23.000-07:00",
   "entry": [
     {
+      "fullUrl": "61061501-9953-4fba-87fe-6ae30e79da33",
       "resource": {
         "resourceType": "Parameters",
-        "id": "FindCandidates",
+        "id": "GetDemographics-ResponseMetadata",
+        "meta": {
+          "profile": [
+            "http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters"
+          ]
+        },
         "parameter": [
           {
-            "name": "address",
-            "valueAddress": {
-              "type": "postal",
-              "line": [
-                "123 Any St",
-                "line 2",
-                "line 3",
-                "line 4"
-              ],
-              "city": "Victoria",
-              "state": "BC",
-              "postalCode": "V1V1V1",
-              "country": "CA"
-            }
+            "name": "messageId",
+            "valueString": "c087e71e-3e7e-4c22-a3ce-61523f600615"
           },
           {
-            "name": "gender",
-            "valueCode": "male"
+            "name": "messageDateTime",
+            "valueDateTime": "2015-02-07T13:29:17-08:00"
           },
           {
-            "name": "birthDate",
-            "valueDate": "1959-12-30"
-          },
-          {
-            "name": "deceased-date",
-            "valueDateTime": "2005-05-05"
-          },
-          {
-            "name": "identifier",
+            "name": "sender",
             "valueIdentifier": {
-              "system": "http://hl7.org/fhir/sid/bc-phn",
-              "value": "12345892"
+              "system": "http://hl7.org/fhir/bc-hcim/bc-org",
+              "value": "MOH_CRS"
             }
           },
           {
-            "name": "name",
-            "valueHumanName": {
-              "use": "official",
-              "family": "Purple",
-              "given": [
-                "Barney"
-              ]
-            }
-          },
-          {
-            "name": "telecom",
-            "valueContactPoint": {
-              "system": "phone",
-              "value": "1234567890",
-              "use": "home"
-            }
-          },
-          {
-            "name": "motherPHN",
-            "valueIdentifier": {
-              "system": "http://hl7.org/fhir/sid/bc-phn",
-              "value": "9xxxxxxxx"
-            }
-          },
-          {
-            "name": "requester",
-            "valueIdentifier": {
-              "system": "http://hl7.org/fhir/sid/bc-userId",
-              "value": "you@me.com"
-            }
+            "name": "messageRequestId",
+            "valueString": "98028b44-882a-4c72-8c92-b87d916147e1"
           }
         ]
       }
     },
     {
+      "fullUrl": "urn:uunid:753f756d-63b2-4086-86a4-d7768fd5374a",
+      "resource": {
+        "resourceType": "Parameters",
+        "id": "GetDemographics",
+        "meta": {
+          "profile": [
+            "http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters"
+          ]
+        },
+        "parameter": [
+          {
+            "name": "messageId",
+            "valueString": "98028b44-882a-4c72-8c92-b87d916147e1"
+          },
+          {
+            "name": "messageDateTime",
+            "valueDateTime": "2015-02-07T13:28:17-08:00"
+          },
+          {
+            "name": "sender",
+            "valueIdentifier": {
+              "system": "http://hl7.org/fhir/bc-hcim/bc-org",
+              "value": "VPP"
+            }
+          },
+          {
+            "name": "enterer",
+            "valueIdentifier": {
+              "system": "http://hl7.org/fhir/bc-hcim/bc-userid",
+              "value": "bob@me.com"
+            }
+          },
+          {
+            "name": "identifier",
+            "valueIdentifier": {
+              "type": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                    "code": "JHN"
+                  }
+                ]
+              },
+              "system": "http://hl7.org/fhir/bc-hcim/bc-sri",
+              "value": "912345892"
+            }
+          },
+          {
+            "name": "history",
+            "valueBoolean": true
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uunid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c",
       "resource": {
         "resourceType": "Patient",
         "id": "PatientDemographicsResponse",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 9999999999</p><p><b>name</b>: JILLIAN DAWN THIRD NAME COOK-ADAMS </p><p><b>telecom</b>: ph: 6048883322(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1972-10-16</p><p><b>address</b>: </p><ul><li>321 SUNSHINE PL NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>1824 CROSS RD LINE 2 LINE 3 VANCOUVER BC V9L 4H2 </li></ul></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: JILLIAN DAWN THIRD NAME COOK-ADAMS </p><p><b>telecom</b>: ph: 6048883322(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1972-10-16</p><p><b>address</b>: </p><ul><li>321 SUNSHINE PL NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>1824 CROSS RD LINE 2 LINE 3 VANCOUVER BC V9L 4H2 </li></ul></div>"
         },
         "identifier": [
           {
-            "system": "http://hl7.org/fhir/sid/bc-phn",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "JHN"
+                }
+              ]
+            },
+            "system": "http://hl7.org/fhir/bc-hcim/bc-sri",
             "value": "9999999999"
           }
         ],
