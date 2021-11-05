@@ -3,7 +3,7 @@
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: moh-hcim
-canonical: http://moh.fhir.org/moh-hcim
+canonical: http://moh.fhir/bc-client
 name: BCHCIM
 status: draft
 version: 0.1.0
@@ -56,18 +56,39 @@ groups:
       description: Artifcats associated with Patients
       resources:
          - StructureDefinition/bc-patient
-   Capabilities:
-      name: Capabilities
-      description: PLR CapabilityStatement, the defined Operations and the Bundle profiles associated with them
+   Operations:
+      name: Operations
+      description: The defined Operations
       resources:
          - OperationDefinition/bc-patient-find-candidates
          - OperationDefinition/bc-patient-get-demographics
          - OperationDefinition/bc-patient-revise
          - OperationDefinition/bc-patient-revise-newborn
          - OperationDefinition/bc-patient-merge
+   Operation Parameters:
+      name: Operation Parameters
+      description: The parameter profiles associated with the Client Registry Operations
+      resources:
+         - StructureDefinition/bc-metadata-parameters
+         - StructureDefinition/bc-patient-business-parameters
    Operation Responses:
       name: Response Bundles
       description: A set of Bundle profiles used by the Client Registry to respond to searches and revise/merge requests
       resources:
          - StructureDefinition/bc-search-response-bundle
-         - StructureDefinition/bc-revise-and-merge-response-bundle
+         - StructureDefinition/bc-revise-and-merge-response-bundle 
+   Operation Request Examples:
+      name: Operation Request Examples
+      description: A set of operation request examples
+      resources:
+         - Parameters/FindCandidates
+         - Parameters/FindCandidates-SSRI
+         - Parameters/FindCandidates-MomsPHN
+         - Parameters/GetDemographics
+   Operation Response Examples:
+      name: Operation Response Examples
+      description: A set of operation response examples
+      resources:
+         - Bundle/FindCandidatesResponse
+         - Bundle/GetDemographicsResponse
+

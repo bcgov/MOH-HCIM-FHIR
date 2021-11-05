@@ -1,5 +1,6 @@
 Instance: Newborn
 InstanceOf: Patient
+Description: "Example of new born Patient"
 * name.given = "Baby Girl"
 * name.family = "Schmotz"
 * gender = #female
@@ -15,6 +16,7 @@ InstanceOf: Patient
 
 Instance: MotherRelated
 InstanceOf: RelatedPerson
+Description: "Example of related person's PHN as Identifier"
 * identifier.value = "MOTHERPHN"
 * identifier.system = "http://hl7.org/fhir/sid/bc-phn"
 * patient = Reference(Newborn)

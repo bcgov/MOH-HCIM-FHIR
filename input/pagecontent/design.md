@@ -42,14 +42,13 @@ There are several extensions that are applied to the Patient resource.  The list
 
 Extension Name | Description | 
 :--- | :--- |
-bc-death-date-extension | A dateTime extension that indicates is the client's death has been verified by ...
 bc-patient-business-dates | A Period extension at the Patient level that represents the entire record
-bc-address-validation-status | A code that represents the address validation status.  This will be part of every Patient.address
-bc-gender-business-dates | A Period extension for effective dates
+bc-death-date-extension | A dateTime extension that indicates is the client's death has been verified by ...
 bc-birth-date-business-dates | A Period extension for effective dates
 bc-death-date-business-dates | A Period extension for effective dates
 bc-death-date-flag-business-dates | A Period extension for effective dates
-bc-phn-business-dates | A Period extension for effective dates
+bc-address-validation-status | A code that represents the address validation status.  This will be part of every Patient.address
+bc-gender-business-dates | A Period extension for effective dates
 
 ##### Terminologies, CodeableConcepts, Codes and Value Sets
 

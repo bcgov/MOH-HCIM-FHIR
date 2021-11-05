@@ -1,5 +1,6 @@
 Instance: MergedPatient
 InstanceOf: Patient
+Description: "Example of a merge patient request"
 * extension.url = "http://fhir.bc.ca/extension/effectiveDate"
 * extension.valuePeriod.start = 2012-12-07T16:35:00.000-07:00
 * active = true
@@ -23,42 +24,48 @@ InstanceOf: Patient
 * gender = #male
 * birthDate = 1966-10-01
 * link[0].type = #replaces
-* link[0].other.identifier.system = "http://hl7.org/fhir/sid/bc-source"
+* link[0].other.identifier.system = "http://hl7.org/fhir/bc-hcim/codesystem/bc-source"
 * link[0].other.identifier.value = "203451T3"
+* link[0].other.identifier.type = http://hl7.org/fhir/bc-hcim/codesystem/bc-source-type#PHN
 * link[0].extension.url = "http://fhir.bc.ca/extension/merged-patient-status"
 * link[0].extension.valueCode = #cancelled
 * link[1].type = #replaces
-* link[1].other.identifier.system = "http://hl7.org/fhir/sid/bc-source"
+* link[1].other.identifier.system = "http://hl7.org/fhir/bc-hcim/codesystem/bc-source"
 * link[1].other.identifier.value = "616278P9"
+* link[1].other.identifier.type = http://hl7.org/fhir/bc-hcim/codesystem/bc-source-type#PHN
 * link[1].extension.url = "http://fhir.bc.ca/extension/merged-patient-status"
 * link[1].extension.valueCode = #cancelled
 * link[2].type = #replaces
-* link[2].other.identifier.system = "http://hl7.org/fhir/sid/bc-source"
+* link[2].other.identifier.system = "http://hl7.org/fhir/bc-hcim/codesystem/bc-source"
 * link[2].other.identifier.value = "203451T3"
+* link[2].other.identifier.type = http://hl7.org/fhir/bc-hcim/codesystem/bc-source-type#PHN
 * link[2].extension.url = "http://fhir.bc.ca/extension/merged-patient-status"
 * link[2].extension.valueCode = #obsolete
 * link[3].type = #replaces
-* link[3].other.identifier.system = "http://hl7.org/fhir/sid/bc-source"
+* link[3].other.identifier.system = "http://hl7.org/fhir/bc-hcim/codesystem/bc-source"
 * link[3].other.identifier.value = "203451T3"
+* link[3].other.identifier.type = http://hl7.org/fhir/bc-hcim/codesystem/bc-source-type#PHN
 * link[3].extension.url = "http://fhir.bc.ca/extension/merged-patient-status"
 * link[3].extension.valueCode = #obsolete
 
 Instance: SSRIMergedPatient
 InstanceOf: Patient
+Description: "Example of a merge patient with SSRI"
 * extension.url = "http://fhir.bc.ca/extension/effectiveDate"
 * extension.valuePeriod.start = 2012-04-11T13:19:00.000-07:00
 * active = true
-* identifier.system = "http://hl7.org/fhir/sid/bc-source"
+* identifier.system = "http://hl7.org/fhir/bc-hcim/bc-source"
 * identifier.value = "CER123345"
-* identifier.type = http://hl7.org/fhir/codesystem/bc-source-type#VPP_CER
-* identifier[1].system = "http://hl7.org/fhir/sid/bc-source"
+* identifier.type = http://hl7.org/fhir/bc-hcim/codesystem/bc-source-type#VPP_CER
+* identifier[1].system = "http://hl7.org/fhir/bc-hcim/codesystem/bc-source"
 * identifier[1].value = "VCHA23321"
-* identifier[1].type = http://hl7.org/fhir/codesystem/bc-source-type#VPP_LION
-* identifier[2].system = "http://hl7.org/fhir/sid/bc-source"
+* identifier[1].type = http://hl7.org/fhir/bc-hcim/codesystem/bc-source-type#VPP_LION
+* identifier[2].system = "http://hl7.org/fhir/bc-hcim/codesystem/bc-source"
 * identifier[2].value = "FOR2345"
-* identifier[2].type = http://hl7.org/fhir/codesystem/bc-source-type#VPP_FPH
-* identifier[3].system = "http://hl7.org/fhir/sid/bc-phn"
+* identifier[2].type = http://hl7.org/fhir/bc-hcim/codesystem/bc-source-type#VPP_FPH
+* identifier[3].system = "http://hl7.org/fhir/bc-hcim/codesystem/bc-source"
 * identifier[3].value = "9999999999"
+* identifier[3].type = http://hl7.org/fhir/bc-hcim/codesystem/bc-source-type#PHN
 * address.type = #physical
 * address.line = "3145 happy valley rd"
 * address.line[1] = "Suite 33"

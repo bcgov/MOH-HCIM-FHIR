@@ -14,10 +14,11 @@ Description:  "A Bundle that is used in the Client Registry response to Find Can
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a search query."
-* entry contains Patient 0..* MS and Parameters 1..1 MS and OperationOutcome 1..1 MS
-* entry[Patient].resource only BCPatient
-* entry[Parameters].resource only BCMetadataParameters
-* entry[OperationOutcome].resource only OperationOutcome
+* entry contains patient 0..* MS and parameters 1..1 MS and parametersRequest 1..1 MS and operationOutcome 1..1 MS
+* entry[parametersRequest].resource only BCMetadataParameters
+* entry[parameters].resource only BCMetadataParameters
+* entry[patient].resource only BCPatient
+* entry[operationOutcome].resource only OperationOutcome
 
 Profile: BCReviseAndMergeResponseBundle
 Parent: Bundle
@@ -35,7 +36,8 @@ Description:  "A Bundle that is used in the Client Registry response to Revise a
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a revise or merge request."
-* entry contains Patient 1..1 MS and Parameters 1..1 MS and OperationOutcome 1..1 MS
-* entry[Patient].resource only BCPatient
-* entry[Parameters].resource only BCMetadataParameters
-* entry[OperationOutcome].resource only OperationOutcome
+* entry contains patient 1..1 MS and parameters 1..1 MS and parametersRequest 1..1 MS and operationOutcome 1..1 MS
+* entry[parametersRequest].resource only BCMetadataParameters
+* entry[patient].resource only BCPatient
+* entry[parameters].resource only BCMetadataParameters
+* entry[operationOutcome].resource only OperationOutcome

@@ -4,7 +4,7 @@ Description: "This operation is used to create a newborn patient."
 Usage: #definition
 * id = "bc-patient-revise-newborn"
 * url = "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-revise-newborn"
-* name = "RevisePatient.Newborn"
+* name = "RevisePatientNewborn"
 * title = "Revise Patient Newborn"
 * status = #draft
 * kind = #operation

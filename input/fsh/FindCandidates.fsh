@@ -13,6 +13,8 @@ Usage: #definition
 * system = false
 * type = true
 * instance = true
+* inputProfile = "BCPatientBusinessParameters"
+
 * parameter[0].name = #messageId
 * parameter[0].use = #in
 * parameter[0].min = 1
@@ -20,61 +22,84 @@ Usage: #definition
 * parameter[0].documentation = "Unique message ID."
 * parameter[0].type = #string
 * parameter[0].searchType = #string
-* parameter[1].name = #messageDate
+
+* parameter[1].name = #messageDateTime
 * parameter[1].use = #in
 * parameter[1].min = 1
 * parameter[1].max = "1"
 * parameter[1].documentation = "Message date and time."
-* parameter[1].type = #string
-* parameter[1].searchType = #string
-* parameter[2].name = #address
+* parameter[1].type = #dateTime
+
+* parameter[2].name = #sender
 * parameter[2].use = #in
-* parameter[2].min = 0
+* parameter[2].min = 1
 * parameter[2].max = "1"
-* parameter[2].documentation = "Patient address."
-* parameter[2].type = #Address
-* parameter[3].name = #gender
+* parameter[2].documentation = "Message sender"
+* parameter[2].type = #Identifier
+
+
+* parameter[3].name = #address
 * parameter[3].use = #in
 * parameter[3].min = 0
 * parameter[3].max = "1"
-* parameter[3].documentation = "Patient gender."
-* parameter[3].type = #code
-* parameter[4].name = #birthDate
+* parameter[3].documentation = "Patient address."
+* parameter[3].type = #Address
+
+* parameter[4].name = #gender
 * parameter[4].use = #in
 * parameter[4].min = 0
 * parameter[4].max = "1"
-* parameter[4].documentation = "Patient birth date."
-* parameter[4].type = #dateTime
-* parameter[5].name = #deathDate
+* parameter[4].documentation = "Patient gender."
+* parameter[4].type = #code
+
+* parameter[5].name = #birthDate
 * parameter[5].use = #in
 * parameter[5].min = 0
 * parameter[5].max = "1"
-* parameter[5].documentation = "Patient death date."
+* parameter[5].documentation = "Patient birth date."
 * parameter[5].type = #dateTime
-* parameter[6].name = #name
+
+* parameter[6].name = #deathDate
 * parameter[6].use = #in
 * parameter[6].min = 0
 * parameter[6].max = "1"
-* parameter[6].documentation = "Patient name."
-* parameter[6].type = #HumanName
-* parameter[7].name = #telephone
+* parameter[6].documentation = "Patient death date."
+* parameter[6].type = #dateTime
+
+* parameter[7].name = #name
 * parameter[7].use = #in
 * parameter[7].min = 0
 * parameter[7].max = "1"
-* parameter[7].documentation = "Patient telephone."
-* parameter[7].type = #ContactPoint
-* parameter[8].name = #mothersPHN
+* parameter[7].documentation = "Patient name."
+* parameter[7].type = #HumanName
+
+* parameter[8].name = #telephone
 * parameter[8].use = #in
 * parameter[8].min = 0
 * parameter[8].max = "1"
-* parameter[8].documentation = "Patient mother's PHN."
-* parameter[8].type = #string
-* parameter[9].name = #identifiersOnly
+* parameter[8].documentation = "Patient telephone."
+* parameter[8].type = #ContactPoint
+
+* parameter[9].name = #identifier
 * parameter[9].use = #in
 * parameter[9].min = 0
 * parameter[9].max = "1"
-* parameter[9].documentation = "Return Identifiers only."
-* parameter[9].type = #boolean
+* parameter[9].documentation = "Patient identifier."
+* parameter[9].type = #Identifier
+
+* parameter[10].name = #mothersPHN
+* parameter[10].use = #in
+* parameter[10].min = 0
+* parameter[10].max = "1"
+* parameter[10].documentation = "Patient mother's PHN."
+* parameter[10].type = #string
+
+* parameter[11].name = #identifiersOnly
+* parameter[11].use = #in
+* parameter[11].min = 0
+* parameter[11].max = "1"
+* parameter[11].documentation = "Instruct the Client Registery to return Patient Identifiers only."
+* parameter[11].type = #boolean
 
 
 
