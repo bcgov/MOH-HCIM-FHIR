@@ -14,7 +14,7 @@
 </div></td></tr><tr><td>IN</td><td>telephone</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint">ContactPoint</a></td><td/><td><div><p>Patient telephone.</p>
 </div></td></tr><tr><td>IN</td><td>identifier</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>Patient identifier.</p>
 </div></td></tr><tr><td>IN</td><td>mothersPHN</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td/><td><div><p>Patient mother's PHN.</p>
-</div></td></tr><tr><td>IN</td><td>identifiersOnly</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td/><td><div><p>Instruct the Client Registery to return Patient Identifiers only.</p>
+</div></td></tr><tr><td>IN</td><td>identifiersOnly</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td/><td><div><p>Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defauts to false.</p>
 </div></td></tr></table></div>
   </text>
   <url value="http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-find-candidates"/>
@@ -23,7 +23,7 @@
   <title value="Find Candidates"/>
   <status value="draft"/>
   <kind value="query"/>
-  <date value="2021-11-05T15:02:58+00:00"/>
+  <date value="2021-11-08T22:48:39+00:00"/>
   <code value="FindCandidates"/>
   <resource value="Patient"/>
   <system value="false"/>
@@ -124,7 +124,7 @@
     <use value="in"/>
     <min value="0"/>
     <max value="1"/>
-    <documentation value="Instruct the Client Registery to return Patient Identifiers only."/>
+    <documentation value="Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defauts to false."/>
     <type value="boolean"/>
   </parameter>
 </OperationDefinition>

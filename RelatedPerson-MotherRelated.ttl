@@ -5,20 +5,20 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://moh.fhir/bc-client/RelatedPerson/MotherRelated> a fhir:RelatedPerson;
+<http://moh.fhir/bc-clientregistry/RelatedPerson/MotherRelated> a fhir:RelatedPerson;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "MotherRelated"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: MOTHERPHN</p><p><b>patient</b>: <a href=\"Patient-Newborn.html\">Generated Summary: Baby Girl Schmotz ; Phone: 2503148867; gender: female; birthDate: 2013-07-10</a></p><p><b>relationship</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleCode MTH}\">mother</span></p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 9736546293</p><p><b>patient</b>: <a href=\"Patient/Newborn\">Patient/Newborn</a></p><p><b>relationship</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleCode MTH}\">mother</span></p></div>"
   ];
   fhir:RelatedPerson.identifier [
      fhir:index 0;
-     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/bc-phn" ];
-     fhir:Identifier.value [ fhir:value "MOTHERPHN" ]
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-sri" ];
+     fhir:Identifier.value [ fhir:value "9736546293" ]
   ];
   fhir:RelatedPerson.patient [
-     fhir:link <http://moh.fhir/bc-client/Patient/Newborn>;
+     fhir:link <http://moh.fhir/bc-clientregistry/Patient/Newborn>;
      fhir:Reference.reference [ fhir:value "Patient/Newborn" ]
   ];
   fhir:RelatedPerson.relationship [
@@ -32,7 +32,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://moh.fhir/bc-client/RelatedPerson/MotherRelated.ttl> a owl:Ontology;
+<http://moh.fhir/bc-clientregistry/RelatedPerson/MotherRelated.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

@@ -20,31 +20,31 @@ htmlxhtmldisplay","",0,1,"","","","Narrative {[]} {[]}
 "Patient.contained","","inline resources
 anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 ","Contained, inline Resources","These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.","This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.","","","","","","","","",,,,,"",,,,"DomainResource.contained",0,*,"","","N/A"
-"Patient.extension","","","",1,*,"","","","Extension {[]} {[]}
+"Patient.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.extension","effectiveDates","","",1,1,"","","","Extension {[CanonicalType[http://moh.fhir/bc-client/StructureDefinition/bc-patient-business-dates]]} {[]}
+"Patient.extension","effectiveDates","","",0,1,"","","","Extension {[CanonicalType[http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-dates-extension]]} {[]}
 ","BC Patient business dates","The effective dates for the Patient.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.extension","deathDate","","",0,1,"","","","Extension {[CanonicalType[http://moh.fhir/bc-client/StructureDefinition/bc-death-date-extension]]} {[]}
+"Patient.extension","deathDate","","",0,1,"","","","Extension {[CanonicalType[http://moh.fhir/bc-clientregistry/StructureDefinition/bc-death-date-extension]]} {[]}
 ","BC Patient death date","The Patients death date and time as recorded in the Client Registry.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.extension","birthDateEffectiveDates","","",0,1,"","","","Extension {[CanonicalType[http://moh.fhir/bc-client/StructureDefinition/bc-birth-date-business-dates]]} {[]}
+"Patient.extension","birthDateEffectiveDates","","",0,1,"","","","Extension {[CanonicalType[http://moh.fhir/bc-clientregistry/StructureDefinition/bc-birth-date-business-dates-extension]]} {[]}
 ","BC Patient Birth Date business date","The effective dates for the Patient's Birth Date.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.extension","deathDateEffectiveDates","","",0,1,"","","","Extension {[CanonicalType[http://moh.fhir/bc-client/StructureDefinition/bc-death-date-business-dates]]} {[]}
+"Patient.extension","deathDateEffectiveDates","","",0,1,"","","","Extension {[CanonicalType[http://moh.fhir/bc-clientregistry/StructureDefinition/bc-death-date-business-dates-extension]]} {[]}
 ","BC Patient Death Date business date","The effective dates for the Patient's Death Date.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.extension","deathDateFlagEffectiveDates","","",0,1,"","","","Extension {[CanonicalType[http://moh.fhir/bc-client/StructureDefinition/bc-death-date-flag-business-dates]]} {[]}
+"Patient.extension","deathDateFlagEffectiveDates","","",0,1,"","","","Extension {[CanonicalType[http://moh.fhir/bc-clientregistry/StructureDefinition/bc-death-date-flag-business-dates-extension]]} {[]}
 ","BC Patient Death Date flag business date","The effective dates for the Patient's Death Date flag.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.extension","genderEffectiveDates","","",0,1,"","","","Extension {[CanonicalType[http://moh.fhir/bc-client/StructureDefinition/bc-gender-business-dates]]} {[]}
+"Patient.extension","genderEffectiveDates","","",0,1,"","","","Extension {[CanonicalType[http://moh.fhir/bc-clientregistry/StructureDefinition/bc-gender-business-dates-extension]]} {[]}
 ","BC Patient Gender business date","The effective dates for the Patient's Gender.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
@@ -80,7 +80,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
 "Patient.deceased[x]","","","",0,1,"","Y","Y","boolean {[]} {[]}
 ","Indicates if the individual is deceased or not","Indicates if the individual is deceased or not.","If there's no value in the instance, it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.","The fact that a patient is deceased influences the clinical process. Also, in human communication and relation management it is necessary to know whether the person is alive.","","","","","","","",,,,,"",,,,"Patient.deceased[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedInd, player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedTime","n/a","PID-30  (bool) and PID-29 (datetime)"
-"Patient.address","","","",0,*,"Y","","","Address {[CanonicalType[http://moh.fhir/bc-client/StructureDefinition/bc-client-registry-address]]} {[]}
+"Patient.address","","","",0,*,"Y","","","Address {[CanonicalType[http://moh.fhir/bc-clientregistry/StructureDefinition/bc-client-registry-address]]} {[]}
 ","An address expressed using postal conventions (as opposed to GPS or other location definition formats)","An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world.","Note: address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates.  Postal addresses are often used as proxies for physical locations (also see the [Location](http://hl7.org/fhir/R4/location.html#) resource).","May need to keep track of patient addresses for contacting, billing or reporting requirements and also to help with identification.","","","","","","","",,,,,"",,,,"Patient.address",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a","AD","XAD"
@@ -164,7 +164,7 @@ Jurisdictions may decide that they can profile this down to 1 if desired, or 1 p
 "Patient.managingOrganization","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
 ","Organization that is the custodian of the patient record","Organization that is the custodian of the patient record.","There is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association).","Need to know who recognizes this patient record, manages and updates it.","","","","","","","",,,,,"",,,,"Patient.managingOrganization",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","scoper",".providerOrganization"
-"Patient.link","","","",0,1,"Y","Y","Y","BackboneElement {[]} {[]}
+"Patient.link","","","",0,*,"Y","Y","Y","BackboneElement {[]} {[]}
 ","Link to another patient resource that concerns the same actual person","Link to another patient resource that concerns the same actual patient.","There is no assumption that linked patient records have mutual links.","There are multiple use cases:   
 
 * Duplicate patient records due to the clerical errors associated with the difficulties of identifying humans consistently, and 

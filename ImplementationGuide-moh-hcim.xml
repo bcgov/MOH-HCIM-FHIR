@@ -3,13 +3,13 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="moh-hcim"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>BCHCIM</h2><p>The official URL for this implementation guide is: </p><pre>http://moh.fhir/bc-client/ImplementationGuide/moh-hcim</pre></div>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>BCHCIM</h2><p>The official URL for this implementation guide is: </p><pre>http://moh.fhir/bc-clientregistry/ImplementationGuide/moh-hcim</pre></div>
   </text>
-  <url value="http://moh.fhir/bc-client/ImplementationGuide/moh-hcim"/>
+  <url value="http://moh.fhir/bc-clientregistry/ImplementationGuide/moh-hcim"/>
   <version value="0.1.0"/>
   <name value="BCHCIM"/>
   <status value="draft"/>
-  <date value="2021-11-05T15:02:58+00:00"/>
+  <date value="2021-11-08T22:48:39+00:00"/>
   <packageId value="moh-hcim"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
@@ -83,7 +83,7 @@
         <valueString value="path-history"/>
       </extension>
       <extension url="value">
-        <valueString value="http://moh.fhir/bc-client/history.html"/>
+        <valueString value="http://moh.fhir/bc-clientregistry/history.html"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -178,10 +178,6 @@
       <name value="Operation Parameters"/>
       <description value="The parameter profiles associated with the Client Registry Operations"/>
     </grouping>
-    <grouping id="Operation Responses">
-      <name value="Response Bundles"/>
-      <description value="A set of Bundle profiles used by the Client Registry to respond to searches and revise/merge requests"/>
-    </grouping>
     <grouping id="Operation Request Examples">
       <name value="Operation Request Examples"/>
       <description value="A set of operation request examples"/>
@@ -247,7 +243,7 @@
       <name value="BCReviseAndMergeResponseBundle"/>
       <description value="A Bundle that is used in the Client Registry response to Revise and Merge Patient requests."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Operation Responses"/>
+      <groupingId value="Operation Response Examples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -259,14 +255,14 @@
       <name value="BCSearchResponseBundle"/>
       <description value="A Bundle that is used in the Client Registry response to Find Candidates and Get Demographics queries."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Operation Responses"/>
+      <groupingId value="Operation Response Examples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/bc-address-validation-status"/>
+        <reference value="StructureDefinition/bc-address-validation-status-extension"/>
       </reference>
       <name value="BC Address validation status code"/>
       <description value="A code that represents the validation status of the address"/>
@@ -277,7 +273,7 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/bc-birth-date-business-dates"/>
+        <reference value="StructureDefinition/bc-birth-date-business-dates-extension"/>
       </reference>
       <name value="BC Patient Birth Date business date"/>
       <description value="The effective dates for the Patient&#39;s Birth Date."/>
@@ -288,7 +284,7 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/bc-death-date-business-dates"/>
+        <reference value="StructureDefinition/bc-death-date-business-dates-extension"/>
       </reference>
       <name value="BC Patient Death Date business date"/>
       <description value="The effective dates for the Patient&#39;s Death Date."/>
@@ -310,7 +306,7 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/bc-death-date-flag-business-dates"/>
+        <reference value="StructureDefinition/bc-death-date-flag-business-dates-extension"/>
       </reference>
       <name value="BC Patient Death Date flag business date"/>
       <description value="The effective dates for the Patient&#39;s Death Date flag."/>
@@ -321,7 +317,7 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/bc-gender-business-dates"/>
+        <reference value="StructureDefinition/bc-gender-business-dates-extension"/>
       </reference>
       <name value="BC Patient Gender business date"/>
       <description value="The effective dates for the Patient&#39;s Gender."/>
@@ -332,7 +328,18 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/bc-patient-business-dates"/>
+        <reference value="StructureDefinition/bc-merge-status-extension"/>
+      </reference>
+      <name value="BC Merge status code"/>
+      <description value="A code that represents the Merge status of the Patient."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/bc-patient-business-dates-extension"/>
       </reference>
       <name value="BC Patient business dates"/>
       <description value="The effective dates for the Patient."/>
@@ -351,6 +358,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/bc-merge-status-value-set"/>
+      </reference>
+      <name value="BC Merge Status value set"/>
+      <description value="BC Merge Status value set used to desribe the merge status of a Patient."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
@@ -362,6 +380,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/bc-client-registry-merge-status-code-system"/>
+      </reference>
+      <name value="BC Client Registry merge status."/>
+      <description value="Codes used to describe the merge status."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Parameters"/>
       </extension>
       <reference>
@@ -369,7 +398,7 @@
       </reference>
       <name value="FindCandidates"/>
       <description value="Example of $FindCandidates operation"/>
-      <exampleCanonical value="http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters"/>
+      <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"/>
       <groupingId value="Operation Request Examples"/>
     </resource>
     <resource>
@@ -381,7 +410,7 @@
       </reference>
       <name value="FindCandidates-MomsPHN"/>
       <description value="Example of $FindCandidates operation with mother&#39;s PHN"/>
-      <exampleCanonical value="http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters"/>
+      <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"/>
       <groupingId value="Operation Request Examples"/>
     </resource>
     <resource>
@@ -393,7 +422,7 @@
       </reference>
       <name value="FindCandidates-ResponseMetadata"/>
       <description value="Example of $FindCandidates response Metadata parameters"/>
-      <exampleCanonical value="http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters"/>
+      <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -404,7 +433,7 @@
       </reference>
       <name value="FindCandidates-SSRI"/>
       <description value="Example of $FindCandidates operation with SSRI identifier"/>
-      <exampleCanonical value="http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters"/>
+      <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"/>
       <groupingId value="Operation Request Examples"/>
     </resource>
     <resource>
@@ -428,7 +457,7 @@
       </reference>
       <name value="GetDemographics"/>
       <description value="Example of $GetDemographics operation"/>
-      <exampleCanonical value="http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters"/>
+      <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"/>
       <groupingId value="Operation Request Examples"/>
     </resource>
     <resource>
@@ -440,7 +469,7 @@
       </reference>
       <name value="GetDemographics-ResponseMetadata"/>
       <description value="Example of $FindCandidates response Metadata parameters"/>
-      <exampleCanonical value="http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters"/>
+      <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -467,14 +496,15 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Patient"/>
+        <valueString value="Parameters"/>
       </extension>
       <reference>
-        <reference value="Patient/MergedPatient"/>
+        <reference value="Parameters/MergePatient-TwoID"/>
       </reference>
-      <name value="MergedPatient"/>
-      <description value="Example of a merge patient request"/>
-      <exampleBoolean value="true"/>
+      <name value="MergePatient-TwoID"/>
+      <description value="Example of $MergePatient operation."/>
+      <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-parameters"/>
+      <groupingId value="Operation Request Examples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -485,17 +515,6 @@
       </reference>
       <name value="MotherRelated"/>
       <description value="Example of related person&#39;s PHN as Identifier"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Patient"/>
-      </extension>
-      <reference>
-        <reference value="Patient/Newborn"/>
-      </reference>
-      <name value="Newborn"/>
-      <description value="Example of new born Patient"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -547,11 +566,80 @@
         <valueString value="Patient"/>
       </extension>
       <reference>
-        <reference value="Patient/SSRIMergedPatient"/>
+        <reference value="Patient/PatientMP"/>
       </reference>
-      <name value="SSRIMergedPatient"/>
-      <description value="Example of a merge patient with SSRI"/>
-      <exampleBoolean value="true"/>
+      <name value="PatientMP"/>
+      <description value="Example of a merge patient Patient"/>
+      <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/PatientRP"/>
+      </reference>
+      <name value="PatientRP"/>
+      <description value="Patient example for a RevicePatient operation"/>
+      <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/PatientRP-New"/>
+      </reference>
+      <name value="PatientRP-New"/>
+      <description value="The Patient is completely new to the Client Registry, no identifiers."/>
+      <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/PatientRP-Newborn"/>
+      </reference>
+      <name value="PatientRP-Newborn"/>
+      <description value="The Patient is completely new to the Client Registry, no identifiers."/>
+      <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/RevisePatient-New"/>
+      </reference>
+      <name value="RevisePatient-New"/>
+      <description value="Example of $RevisePatient operation where the Patient is new to the Client Registry."/>
+      <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-parameters"/>
+      <groupingId value="Operation Request Examples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/RevisePatient-Newborn"/>
+      </reference>
+      <name value="RevisePatient-Newborn"/>
+      <description value="Example of $RevisePatient.Newborn operation where the Patient is a newborn.  Awwwwww so cute."/>
+      <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-parameters"/>
+      <groupingId value="Operation Request Examples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/RevisePatient-UpdateExisting"/>
+      </reference>
+      <name value="RevisePatient-UpdateExisting"/>
+      <description value="Example of $RevisePatient operation that updates an existing Patient"/>
+      <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-parameters"/>
+      <groupingId value="Operation Request Examples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

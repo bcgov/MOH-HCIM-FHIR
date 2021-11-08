@@ -5,12 +5,12 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://moh.fhir/bc-client/Patient/Patient0Response> a fhir:Patient;
+<http://moh.fhir/bc-clientregistry/Patient/Patient0Response> a fhir:Patient;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "Patient0Response"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Jurisdictional health number: 9999999999, id: CER2234, id: VCHA234, id: 90348733a</p><p><b>name</b>: PURPLE BARNEY </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-06-06</p><p><b>address</b>: 666 YELLOW BRICK RD PRINCE GEORGE BC V8W 3P9 CA </p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Jurisdictional health number: 9999999999, id: CER2234, id: VCHA234, id: 90348733a</p><p><b>name</b>: PURPLE BARNEY </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-06-06</p><p><b>deceased</b>: false</p><p><b>address</b>: 666 YELLOW BRICK RD PRINCE GEORGE BC V8W 3P9 CA </p></div>"
   ];
   fhir:Patient.identifier [
      fhir:index 0;
@@ -61,6 +61,7 @@
   ];
   fhir:Patient.gender [ fhir:value "male"];
   fhir:Patient.birthDate [ fhir:value "1940-06-06"^^xsd:date];
+  fhir:Patient.deceasedBoolean [ fhir:value "false"^^xsd:boolean];
   fhir:Patient.address [
      fhir:index 0;
      fhir:Address.type [ fhir:value "physical" ];
@@ -76,7 +77,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://moh.fhir/bc-client/Patient/Patient0Response.ttl> a owl:Ontology;
+<http://moh.fhir/bc-clientregistry/Patient/Patient0Response.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

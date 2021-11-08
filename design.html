@@ -150,7 +150,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">BCHCIM - Local Development build (v0.1.0). See the <a href="http://moh.fhir/bc-client/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+    <!-- ReleaseHeader --><p id="publish-box">BCHCIM - Local Development build (v0.1.0). See the <a href="http://moh.fhir/bc-clientregistry/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   <h2>FHIR Design</h2>
   
 
@@ -178,10 +178,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </blockquote>
 
 <h3 id="design-approach">Design Approach</h3>
-<p>The approach to design a FHIR interface to the Client Registry was to keep the interactions as similar as possible to the current system.  However where necessary additions and improvements would be considered.</p>
-
+<p>The approach to design a FHIR interface to the Client Registry was to keep the interactions as similar as possible to the current system.  However where necessary additions and improvements would be considered.
+Namely:</p>
 <ul>
-  <li>The design team matched current Client Registry interactions 1 to 1 with equivalent FHIR interactions for all the flavours of:
+  <li>The design team will match current Client Registry interactions 1 to 1 with equivalent FHIR interactions for all the flavours of:
     <ul>
       <li>Find Candidates</li>
       <li>Get Demographics</li>
@@ -192,18 +192,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
   <li>Asynchronous interactions will be supported as with the current system</li>
   <li>New attributes can be included in FHIR that are not in V3 (such as more business dates)</li>
+  <li>The Client Registry profiles should conform to the Canadadian Baseline profiles</li>
 </ul>
 
 <h3 id="design-assumptions">Design Assumptions</h3>
-<p>There are a number of assumption that were made at the start of design:</p>
+<p>There are a number of assumptions that were made at the start of design:</p>
 
 <ul>
   <li>FHIR is not expected to adversely affect performance, i.e. SLA is not changing for FHIR but will be extended to include FHIR</li>
-  <li>Existing interfaces, such as V3, will not be deprecated and users can use a combination of V3 and FHIR to meet their needs
-    <blockquote>
-      <p>Not sure if this is true, will users be able to use FHIR and V3 in some sort of combination?  I.e. Get Demo in FHIR than V# for Revise Patient?</p>
-    </blockquote>
-  </li>
+  <li>Existing interfaces, such as V3, will not be deprecated</li>
+  <li>Users can use a combination of V3 and FHIR to meet their needs</li>
   <li>The Client Registry FHIR design will become a Provincial standard</li>
   <li>Asynchronous interactions will follow the same pattern as V3 (not the FHIR asynchronous pattern)</li>
   <li>Get Eligibility is not supported by FHIR (will still be supported by V3)</li>
@@ -213,15 +211,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>The main outcomes from the design process were as follows:</p>
 
 <ul>
-  <li>The primary resource is Patient and Patient shall be used to communicate client attributes</li>
-  <li>The JSON text format shall be used to receive and transmit FHIR resources</li>
-  <li>FHIR Operations shall be used for Client Registry interactions
+  <li>The primary resource is Patient and Patient will be used to communicate client attributes</li>
+  <li>The JSON text format will be used to receive and transmit FHIR resources</li>
+  <li>FHIR Operations will be used for Client Registry interactions</li>
+  <li>The Parameters resource used in the FHIR Operations may include Patient resources as well as name value pair parameters such as search parameters or unique request identifiers and creation times, etc</li>
+  <li>Some FHIR extensions are necessary as the Patient resource
     <blockquote>
-      <p>RESTful interfaces will not be implemented for FHIR</p>
+      <p>Do we align with CA Baseline?</p>
     </blockquote>
   </li>
-  <li>The Parameters resource used in Operations may include Patient resources as well as name value pair parameters such as search parameters or unique message identifiers and creation times</li>
-  <li>Some FHIR extensions are necessary</li>
 </ul>
 
 <h4 id="patient-resource">Patient Resource</h4>
@@ -274,13 +272,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h5 id="terminologies-codeableconcepts-codes-and-value-sets">Terminologies, CodeableConcepts, Codes and Value Sets</h5>
 
 <blockquote>
-  <p>Describe all the value sets being used and where we are using something different, I need help in this section</p>
+  <p><em>Describe all the value sets being used and where we are using something different, I need help in this section</em></p>
 </blockquote>
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: left">Attribute</th>
+      <th style="text-align: left">A_ttribute</th>
       <th style="text-align: left">Value Sets</th>
     </tr>
   </thead>
@@ -366,7 +364,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h5 id="requests">Requests</h5>
 
-<p><a name="l708">​</a>The body of the request message will vary depending on the business context however all message bodies will consist of at least one Parameter.  The Parameter resource has two profiles defined in this guide.  See <a href="StructureDefinition-BCMetadataParameters.html">Metadata Parameters</a> and <a href="StructureDefinition-BCPatientParametersParameters.html">Patient Business Parameters</a>.  The Metadata Parameters profile is to store request metadata name-value pairs such as request creation time and unique ID.  The Business Parameters profile includes the Metadata name-value paris and in addition business values such as Patients and Operation flags.</p>
+<p><a name="l709">​</a>The body of the request message will vary depending on the business context however all message bodies will consist of at least one Parameter.  The Parameter resource has two profiles defined in this guide.  See <a href="StructureDefinition-BCMetadataParameters.html">Metadata Parameters</a> and <a href="StructureDefinition-BCPatientParametersParameters.html">Patient Business Parameters</a>.  The Metadata Parameters profile is to store request metadata name-value pairs such as request creation time and unique ID.  The Business Parameters profile includes the Metadata name-value paris and in addition business values such as Patients and Operation flags.</p>
 
 <p>The diagram below shows how the Paramters resource is generalized to a Metadata Parameters and then further to a Business Parameters resource.  The children inherit from the parents.</p>
 
@@ -409,6 +407,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: left">parameter.value[string]</td>
       <td style="text-align: left">Message (unique) id</td>
     </tr>
+    <tr>
+      <td style="text-align: left">sender</td>
+      <td style="text-align: left">parameter.value[Identifier]</td>
+      <td style="text-align: left">Message sender</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">enterer</td>
+      <td style="text-align: left">paramtere.value[Identifier]</td>
+      <td style="text-align: left">UserId for message</td>
+    </tr>
   </tbody>
 </table>
 
@@ -434,7 +442,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>Find Candidates may return 0 or more candidates, while Get Demographics is designed to return a single match.  These searches are expected to provide the required information to confirm a person’s identify.</p>
+<p>Find Candidates may return zero or more candidates, while Get Demographics is designed to return zero or a single match.  These searches are expected to provide the required information to confirm a person’s identify.</p>
 
 <p><a href="search.html" title="Find Candidates and Get Demographics">Search page</a></p>
 
@@ -475,6 +483,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><a href="reviseAndMerge.html" title="Revise and Merge Patient">Revise and Merge page</a></p>
 
+<h5 id="asynchronous-operations">Asynchronous Operations</h5>
+<p>The asynchronous versions of Revise and Merge Operations share the same request and response profile.  The difference is that the response is sent back later and the requesting system should not block, wait for the response, but have an end point established to receive the respose when the responding system sends it.</p>
+
 <h3 id="get-eligibility-is-not-supported-by-fhir">Get Eligibility is Not Supported by FHIR</h3>
 
 <p>Get Eligibility will not be supported by the Client Registry FHIR interactions.  If a FHIR-only user needs to know the claim eligibility status of a Patient they need to retrieve the Patient (the PHN) with a FHIR Get Demographics message and then use the PHN to submit a Get Eligibility message to the eligibility service.</p>
@@ -506,8 +517,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
-        <p><a name="l966">​</a>
-          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="null"></a>.  Package moh-hcim#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Nov 5, 2021 15:02+0000">2021-11-05</span>
+        <p><a name="l997">​</a>
+          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="null"></a>.  Package moh-hcim#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 8, 2021 22:48+0000">2021-11-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

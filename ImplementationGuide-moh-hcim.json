@@ -3,13 +3,13 @@
   "id": "moh-hcim",
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>BCHCIM</h2><p>The official URL for this implementation guide is: </p><pre>http://moh.fhir/bc-client/ImplementationGuide/moh-hcim</pre></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>BCHCIM</h2><p>The official URL for this implementation guide is: </p><pre>http://moh.fhir/bc-clientregistry/ImplementationGuide/moh-hcim</pre></div>"
   },
-  "url": "http://moh.fhir/bc-client/ImplementationGuide/moh-hcim",
+  "url": "http://moh.fhir/bc-clientregistry/ImplementationGuide/moh-hcim",
   "version": "0.1.0",
   "name": "BCHCIM",
   "status": "draft",
-  "date": "2021-11-05T15:02:58+00:00",
+  "date": "2021-11-08T22:48:39+00:00",
   "packageId": "moh-hcim",
   "license": "CC0-1.0",
   "fhirVersion": [
@@ -129,7 +129,7 @@
           },
           {
             "url": "value",
-            "valueString": "http://moh.fhir/bc-client/history.html"
+            "valueString": "http://moh.fhir/bc-clientregistry/history.html"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -282,11 +282,6 @@
         "description": "The parameter profiles associated with the Client Registry Operations"
       },
       {
-        "id": "Operation Responses",
-        "name": "Response Bundles",
-        "description": "A set of Bundle profiles used by the Client Registry to respond to searches and revise/merge requests"
-      },
-      {
         "id": "Operation Request Examples",
         "name": "Operation Request Examples",
         "description": "A set of operation request examples"
@@ -370,7 +365,7 @@
         "name": "BCReviseAndMergeResponseBundle",
         "description": "A Bundle that is used in the Client Registry response to Revise and Merge Patient requests.",
         "exampleBoolean": false,
-        "groupingId": "Operation Responses"
+        "groupingId": "Operation Response Examples"
       },
       {
         "extension": [
@@ -385,7 +380,7 @@
         "name": "BCSearchResponseBundle",
         "description": "A Bundle that is used in the Client Registry response to Find Candidates and Get Demographics queries.",
         "exampleBoolean": false,
-        "groupingId": "Operation Responses"
+        "groupingId": "Operation Response Examples"
       },
       {
         "extension": [
@@ -395,7 +390,7 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/bc-address-validation-status"
+          "reference": "StructureDefinition/bc-address-validation-status-extension"
         },
         "name": "BC Address validation status code",
         "description": "A code that represents the validation status of the address",
@@ -409,7 +404,7 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/bc-birth-date-business-dates"
+          "reference": "StructureDefinition/bc-birth-date-business-dates-extension"
         },
         "name": "BC Patient Birth Date business date",
         "description": "The effective dates for the Patient's Birth Date.",
@@ -423,7 +418,7 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/bc-death-date-business-dates"
+          "reference": "StructureDefinition/bc-death-date-business-dates-extension"
         },
         "name": "BC Patient Death Date business date",
         "description": "The effective dates for the Patient's Death Date.",
@@ -451,7 +446,7 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/bc-death-date-flag-business-dates"
+          "reference": "StructureDefinition/bc-death-date-flag-business-dates-extension"
         },
         "name": "BC Patient Death Date flag business date",
         "description": "The effective dates for the Patient's Death Date flag.",
@@ -465,7 +460,7 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/bc-gender-business-dates"
+          "reference": "StructureDefinition/bc-gender-business-dates-extension"
         },
         "name": "BC Patient Gender business date",
         "description": "The effective dates for the Patient's Gender.",
@@ -479,7 +474,21 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/bc-patient-business-dates"
+          "reference": "StructureDefinition/bc-merge-status-extension"
+        },
+        "name": "BC Merge status code",
+        "description": "A code that represents the Merge status of the Patient.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/bc-patient-business-dates-extension"
         },
         "name": "BC Patient business dates",
         "description": "The effective dates for the Patient.",
@@ -503,6 +512,20 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/bc-merge-status-value-set"
+        },
+        "name": "BC Merge Status value set",
+        "description": "BC Merge Status value set used to desribe the merge status of a Patient.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "CodeSystem"
           }
         ],
@@ -517,6 +540,20 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/bc-client-registry-merge-status-code-system"
+        },
+        "name": "BC Client Registry merge status.",
+        "description": "Codes used to describe the merge status.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Parameters"
           }
         ],
@@ -525,7 +562,7 @@
         },
         "name": "FindCandidates",
         "description": "Example of $FindCandidates operation",
-        "exampleCanonical": "http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters",
+        "exampleCanonical": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters",
         "groupingId": "Operation Request Examples"
       },
       {
@@ -540,7 +577,7 @@
         },
         "name": "FindCandidates-MomsPHN",
         "description": "Example of $FindCandidates operation with mother's PHN",
-        "exampleCanonical": "http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters",
+        "exampleCanonical": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters",
         "groupingId": "Operation Request Examples"
       },
       {
@@ -555,7 +592,7 @@
         },
         "name": "FindCandidates-ResponseMetadata",
         "description": "Example of $FindCandidates response Metadata parameters",
-        "exampleCanonical": "http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters"
+        "exampleCanonical": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"
       },
       {
         "extension": [
@@ -569,7 +606,7 @@
         },
         "name": "FindCandidates-SSRI",
         "description": "Example of $FindCandidates operation with SSRI identifier",
-        "exampleCanonical": "http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters",
+        "exampleCanonical": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters",
         "groupingId": "Operation Request Examples"
       },
       {
@@ -599,7 +636,7 @@
         },
         "name": "GetDemographics",
         "description": "Example of $GetDemographics operation",
-        "exampleCanonical": "http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters",
+        "exampleCanonical": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters",
         "groupingId": "Operation Request Examples"
       },
       {
@@ -614,7 +651,7 @@
         },
         "name": "GetDemographics-ResponseMetadata",
         "description": "Example of $FindCandidates response Metadata parameters",
-        "exampleCanonical": "http://moh.fhir/bc-client/StructureDefinition/bc-metadata-parameters"
+        "exampleCanonical": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"
       },
       {
         "extension": [
@@ -649,15 +686,16 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Patient"
+            "valueString": "Parameters"
           }
         ],
         "reference": {
-          "reference": "Patient/MergedPatient"
+          "reference": "Parameters/MergePatient-TwoID"
         },
-        "name": "MergedPatient",
-        "description": "Example of a merge patient request",
-        "exampleBoolean": true
+        "name": "MergePatient-TwoID",
+        "description": "Example of $MergePatient operation.",
+        "exampleCanonical": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-parameters",
+        "groupingId": "Operation Request Examples"
       },
       {
         "extension": [
@@ -671,20 +709,6 @@
         },
         "name": "MotherRelated",
         "description": "Example of related person's PHN as Identifier",
-        "exampleBoolean": true
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Patient"
-          }
-        ],
-        "reference": {
-          "reference": "Patient/Newborn"
-        },
-        "name": "Newborn",
-        "description": "Example of new born Patient",
         "exampleBoolean": true
       },
       {
@@ -751,11 +775,98 @@
           }
         ],
         "reference": {
-          "reference": "Patient/SSRIMergedPatient"
+          "reference": "Patient/PatientMP"
         },
-        "name": "SSRIMergedPatient",
-        "description": "Example of a merge patient with SSRI",
-        "exampleBoolean": true
+        "name": "PatientMP",
+        "description": "Example of a merge patient Patient",
+        "exampleCanonical": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/PatientRP"
+        },
+        "name": "PatientRP",
+        "description": "Patient example for a RevicePatient operation",
+        "exampleCanonical": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/PatientRP-New"
+        },
+        "name": "PatientRP-New",
+        "description": "The Patient is completely new to the Client Registry, no identifiers.",
+        "exampleCanonical": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/PatientRP-Newborn"
+        },
+        "name": "PatientRP-Newborn",
+        "description": "The Patient is completely new to the Client Registry, no identifiers.",
+        "exampleCanonical": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Parameters"
+          }
+        ],
+        "reference": {
+          "reference": "Parameters/RevisePatient-New"
+        },
+        "name": "RevisePatient-New",
+        "description": "Example of $RevisePatient operation where the Patient is new to the Client Registry.",
+        "exampleCanonical": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-parameters",
+        "groupingId": "Operation Request Examples"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Parameters"
+          }
+        ],
+        "reference": {
+          "reference": "Parameters/RevisePatient-Newborn"
+        },
+        "name": "RevisePatient-Newborn",
+        "description": "Example of $RevisePatient.Newborn operation where the Patient is a newborn.  Awwwwww so cute.",
+        "exampleCanonical": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-parameters",
+        "groupingId": "Operation Request Examples"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Parameters"
+          }
+        ],
+        "reference": {
+          "reference": "Parameters/RevisePatient-UpdateExisting"
+        },
+        "name": "RevisePatient-UpdateExisting",
+        "description": "Example of $RevisePatient operation that updates an existing Patient",
+        "exampleCanonical": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-parameters",
+        "groupingId": "Operation Request Examples"
       },
       {
         "extension": [

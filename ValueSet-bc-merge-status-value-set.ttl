@@ -1,0 +1,35 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://moh.fhir/bc-clientregistry/ValueSet/bc-merge-status-value-set> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "bc-merge-status-value-set"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-bc-client-registry-merge-status-code-system.html\"><code>http://moh.fhir/bc-clientregistry/CodeSystem/bc-client-registry-merge-status-code-system</code></a></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://moh.fhir/bc-clientregistry/ValueSet/bc-merge-status-value-set"];
+  fhir:ValueSet.version [ fhir:value "0.1.0"];
+  fhir:ValueSet.name [ fhir:value "BCMergeStatusVS"];
+  fhir:ValueSet.title [ fhir:value "BC Merge Status value set"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2021-11-08T22:48:39+00:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "BC Merge Status value set used to desribe the merge status of a Patient."];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://moh.fhir/bc-clientregistry/CodeSystem/bc-client-registry-merge-status-code-system" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://moh.fhir/bc-clientregistry/ValueSet/bc-merge-status-value-set.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

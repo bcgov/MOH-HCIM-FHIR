@@ -12,17 +12,15 @@
   <sch:pattern>
     <sch:title>f:Patient</sch:title>
     <sch:rule context="f:Patient">
-      <sch:assert test="count(f:extension[@url = 'http://moh.fhir/bc-client/StructureDefinition/bc-patient-business-dates']) &gt;= 1">extension with URL = 'http://moh.fhir/bc-client/StructureDefinition/bc-patient-business-dates': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'http://moh.fhir/bc-client/StructureDefinition/bc-patient-business-dates']) &lt;= 1">extension with URL = 'http://moh.fhir/bc-client/StructureDefinition/bc-patient-business-dates': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'http://moh.fhir/bc-client/StructureDefinition/bc-death-date-extension']) &lt;= 1">extension with URL = 'http://moh.fhir/bc-client/StructureDefinition/bc-death-date-extension': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'http://moh.fhir/bc-client/StructureDefinition/bc-birth-date-business-dates']) &lt;= 1">extension with URL = 'http://moh.fhir/bc-client/StructureDefinition/bc-birth-date-business-dates': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'http://moh.fhir/bc-client/StructureDefinition/bc-death-date-business-dates']) &lt;= 1">extension with URL = 'http://moh.fhir/bc-client/StructureDefinition/bc-death-date-business-dates': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'http://moh.fhir/bc-client/StructureDefinition/bc-death-date-flag-business-dates']) &lt;= 1">extension with URL = 'http://moh.fhir/bc-client/StructureDefinition/bc-death-date-flag-business-dates': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'http://moh.fhir/bc-client/StructureDefinition/bc-gender-business-dates']) &lt;= 1">extension with URL = 'http://moh.fhir/bc-client/StructureDefinition/bc-gender-business-dates': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-dates-extension']) &lt;= 1">extension with URL = 'http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-dates-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://moh.fhir/bc-clientregistry/StructureDefinition/bc-death-date-extension']) &lt;= 1">extension with URL = 'http://moh.fhir/bc-clientregistry/StructureDefinition/bc-death-date-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://moh.fhir/bc-clientregistry/StructureDefinition/bc-birth-date-business-dates-extension']) &lt;= 1">extension with URL = 'http://moh.fhir/bc-clientregistry/StructureDefinition/bc-birth-date-business-dates-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://moh.fhir/bc-clientregistry/StructureDefinition/bc-death-date-business-dates-extension']) &lt;= 1">extension with URL = 'http://moh.fhir/bc-clientregistry/StructureDefinition/bc-death-date-business-dates-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://moh.fhir/bc-clientregistry/StructureDefinition/bc-death-date-flag-business-dates-extension']) &lt;= 1">extension with URL = 'http://moh.fhir/bc-clientregistry/StructureDefinition/bc-death-date-flag-business-dates-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://moh.fhir/bc-clientregistry/StructureDefinition/bc-gender-business-dates-extension']) &lt;= 1">extension with URL = 'http://moh.fhir/bc-clientregistry/StructureDefinition/bc-gender-business-dates-extension': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:name) &gt;= 1">name: minimum cardinality of 'name' is 1</sch:assert>
       <sch:assert test="count(f:gender) &gt;= 1">gender: minimum cardinality of 'gender' is 1</sch:assert>
       <sch:assert test="count(f:birthDate) &gt;= 1">birthDate: minimum cardinality of 'birthDate' is 1</sch:assert>
-      <sch:assert test="count(f:link) &lt;= 1">link: maximum cardinality of 'link' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

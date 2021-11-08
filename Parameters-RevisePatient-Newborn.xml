@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Parameters xmlns="http://hl7.org/fhir">
+  <id value="RevisePatient-Newborn"/>
+  <meta>
+    <profile value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-parameters"/>
+  </meta>
+  <parameter>
+    <name value="messageId"/>
+    <valueString value="98028b44-882a-4c72-8c92-b87d916147e1"/>
+  </parameter>
+  <parameter>
+    <name value="messageDateTime"/>
+    <valueDateTime value="2021-11-02T13:28:17-08:00"/>
+  </parameter>
+  <parameter>
+    <name value="sender"/>
+    <valueIdentifier>
+      <system value="http://hl7.org/fhir/bc-hcim/bc-org"/>
+      <value value="IHA"/>
+    </valueIdentifier>
+  </parameter>
+  <parameter>
+    <name value="patient"/>
+    <resource>
+      <Patient>
+        <id value="PatientRP-Newborn"/>
+        <meta>
+          <profile value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient"/>
+        </meta>
+        <extension url="http://moh.fhir/bc-client/StructureDefinition/bc-patient-business-dates">
+          <valuePeriod>
+            <start value="2021-11-02T22:00:17-08:00"/>
+          </valuePeriod>
+        </extension>
+        <identifier>
+          <system value="http://hl7.org/fhir/bc-hcim/bc-sri"/>
+          <value value="IHA2234"/>
+        </identifier>
+        <name>
+          <family value="Barness"/>
+          <given value="Baby Girl"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="2505554848"/>
+          <use value="home"/>
+        </telecom>
+        <gender value="unknown"/>
+        <birthDate value="2021-11-02"/>
+        <deceasedBoolean value="false"/>
+        <address>
+          <type value="physical"/>
+          <line value="222 First St"/>
+          <city value="Victoria"/>
+          <state value="BC"/>
+          <postalCode value="V8W 3P9"/>
+          <country value="CA"/>
+        </address>
+      </Patient>
+    </resource>
+  </parameter>
+  <parameter>
+    <name value="enterer"/>
+    <valueIdentifier>
+      <system value="http://hl7.org/fhir/bc-hcim/bc-user"/>
+      <value value="klgodfre"/>
+    </valueIdentifier>
+  </parameter>
+  <parameter>
+    <name value="mothersPHN"/>
+    <resource>
+      <RelatedPerson>
+        <id value="MotherRelated"/>
+        <identifier>
+          <system value="http://hl7.org/fhir/bc-hcim/bc-sri"/>
+          <value value="9736546293"/>
+        </identifier>
+        <patient>
+          <reference value="Patient/Newborn"/>
+        </patient>
+        <relationship>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="MTH"/>
+          </coding>
+        </relationship>
+      </RelatedPerson>
+    </resource>
+  </parameter>
+</Parameters>

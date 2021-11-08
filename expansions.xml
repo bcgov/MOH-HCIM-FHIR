@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="0d6710d8-b384-4d27-8448-dfc9fb64d31f"/>
+  <id value="33b523a9-a7ff-4f88-9523-02c866d4be10"/>
   <meta>
-    <lastUpdated value="2021-11-05T15:02:58.891+00:00"/>
+    <lastUpdated value="2021-11-08T22:48:39.733+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
-    <fullUrl value="http://moh.fhir/bc-client/ValueSet/bc-address-validation-value-set"/>
+    <fullUrl value="http://moh.fhir/bc-clientregistry/ValueSet/bc-address-validation-value-set"/>
     <resource>
       <ValueSet>
         <id value="bc-address-validation-value-set"/>
@@ -20,7 +20,7 @@
             </p>
             <p>All codes in this table are from the system 
               <a href="CodeSystem-bc-client-registry-address-validation-code-system.html">
-                <code>http://moh.fhir/bc-client/CodeSystem/bc-client-registry-address-validation-code-system</code>
+                <code>http://moh.fhir/bc-clientregistry/CodeSystem/bc-client-registry-address-validation-code-system</code>
               </a>
             </p>
             <table class="codes">
@@ -37,7 +37,7 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---moh.fhir-bc-client-CodeSystem-bc-client-registry-address-validation-code-system-valid"> </a>
+                  <a name="http---moh.fhir-bc-clientregistry-CodeSystem-bc-client-registry-address-validation-code-system-valid"> </a>
                   <a href="CodeSystem-bc-client-registry-address-validation-code-system.html#bc-client-registry-address-validation-code-system-valid">valid</a>
                 </td>
                 <td>valid</td>
@@ -45,7 +45,7 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---moh.fhir-bc-client-CodeSystem-bc-client-registry-address-validation-code-system-invalid"> </a>
+                  <a name="http---moh.fhir-bc-clientregistry-CodeSystem-bc-client-registry-address-validation-code-system-invalid"> </a>
                   <a href="CodeSystem-bc-client-registry-address-validation-code-system.html#bc-client-registry-address-validation-code-system-invalid">invalid</a>
                 </td>
                 <td>invalid</td>
@@ -53,7 +53,7 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---moh.fhir-bc-client-CodeSystem-bc-client-registry-address-validation-code-system-unknown"> </a>
+                  <a name="http---moh.fhir-bc-clientregistry-CodeSystem-bc-client-registry-address-validation-code-system-unknown"> </a>
                   <a href="CodeSystem-bc-client-registry-address-validation-code-system.html#bc-client-registry-address-validation-code-system-unknown">unknown</a>
                 </td>
                 <td>unknown</td>
@@ -62,16 +62,16 @@
             </table>
           </div>
         </text>
-        <url value="http://moh.fhir/bc-client/ValueSet/bc-address-validation-value-set"/>
+        <url value="http://moh.fhir/bc-clientregistry/ValueSet/bc-address-validation-value-set"/>
         <version value="0.1.0"/>
         <name value="BCAddressValidationVS"/>
         <title value="BC Address Validation value set"/>
         <status value="active"/>
-        <date value="2021-11-05T15:02:58+00:00"/>
+        <date value="2021-11-08T22:48:39+00:00"/>
         <description value="BC Address Validation value set used to desribe the validation status of an address"/>
         <expansion>
-          <identifier value="urn:uuid:023de11e-c7f9-456d-a50b-08775f3062f7"/>
-          <timestamp value="2021-11-05T15:03:14+00:00"/>
+          <identifier value="urn:uuid:81efc987-e307-461a-a46d-f2d78dd003e4"/>
+          <timestamp value="2021-11-08T22:49:00+00:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -79,22 +79,103 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://moh.fhir/bc-client/CodeSystem/bc-client-registry-address-validation-code-system|0.1.0"/>
+            <valueUri value="http://moh.fhir/bc-clientregistry/CodeSystem/bc-client-registry-address-validation-code-system|0.1.0"/>
           </parameter>
           <contains>
-            <system value="http://moh.fhir/bc-client/CodeSystem/bc-client-registry-address-validation-code-system"/>
+            <system value="http://moh.fhir/bc-clientregistry/CodeSystem/bc-client-registry-address-validation-code-system"/>
             <code value="valid"/>
             <display value="valid"/>
           </contains>
           <contains>
-            <system value="http://moh.fhir/bc-client/CodeSystem/bc-client-registry-address-validation-code-system"/>
+            <system value="http://moh.fhir/bc-clientregistry/CodeSystem/bc-client-registry-address-validation-code-system"/>
             <code value="invalid"/>
             <display value="invalid"/>
           </contains>
           <contains>
-            <system value="http://moh.fhir/bc-client/CodeSystem/bc-client-registry-address-validation-code-system"/>
+            <system value="http://moh.fhir/bc-clientregistry/CodeSystem/bc-client-registry-address-validation-code-system"/>
             <code value="unknown"/>
             <display value="unknown"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://moh.fhir/bc-clientregistry/ValueSet/bc-merge-status-value-set"/>
+    <resource>
+      <ValueSet>
+        <id value="bc-merge-status-value-set"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 2 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-bc-client-registry-merge-status-code-system.html">BC Client Registry merge status. v0.1.0 (CodeSystem)</a>
+            </p>
+            <p>All codes in this table are from the system 
+              <a href="CodeSystem-bc-client-registry-merge-status-code-system.html">
+                <code>http://moh.fhir/bc-clientregistry/CodeSystem/bc-client-registry-merge-status-code-system</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---moh.fhir-bc-clientregistry-CodeSystem-bc-client-registry-merge-status-code-system-obselete"> </a>
+                  <a href="CodeSystem-bc-client-registry-merge-status-code-system.html#bc-client-registry-merge-status-code-system-obselete">obselete</a>
+                </td>
+                <td>obselete</td>
+                <td>The merge obseletes this Patient.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---moh.fhir-bc-clientregistry-CodeSystem-bc-client-registry-merge-status-code-system-cancelled"> </a>
+                  <a href="CodeSystem-bc-client-registry-merge-status-code-system.html#bc-client-registry-merge-status-code-system-cancelled">cancelled</a>
+                </td>
+                <td>cancelled</td>
+                <td>The merge cancels this Patient.</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://moh.fhir/bc-clientregistry/ValueSet/bc-merge-status-value-set"/>
+        <version value="0.1.0"/>
+        <name value="BCMergeStatusVS"/>
+        <title value="BC Merge Status value set"/>
+        <status value="active"/>
+        <date value="2021-11-08T22:48:39+00:00"/>
+        <description value="BC Merge Status value set used to desribe the merge status of a Patient."/>
+        <expansion>
+          <identifier value="urn:uuid:62bf2ec1-a694-4d98-8b89-cee74fd9288c"/>
+          <timestamp value="2021-11-08T22:49:00+00:00"/>
+          <total value="2"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://moh.fhir/bc-clientregistry/CodeSystem/bc-client-registry-merge-status-code-system|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://moh.fhir/bc-clientregistry/CodeSystem/bc-client-registry-merge-status-code-system"/>
+            <code value="obselete"/>
+            <display value="obselete"/>
+          </contains>
+          <contains>
+            <system value="http://moh.fhir/bc-clientregistry/CodeSystem/bc-client-registry-merge-status-code-system"/>
+            <code value="cancelled"/>
+            <display value="cancelled"/>
           </contains>
         </expansion>
       </ValueSet>
