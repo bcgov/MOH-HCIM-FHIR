@@ -3,7 +3,7 @@
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: moh-hcim
-canonical: http://moh.fhir/bc-client
+canonical: http://moh.fhir/bc-clientregistry
 name: BCHCIM
 status: draft
 version: 0.1.0
@@ -71,12 +71,6 @@ groups:
       resources:
          - StructureDefinition/bc-metadata-parameters
          - StructureDefinition/bc-patient-business-parameters
-   Operation Responses:
-      name: Response Bundles
-      description: A set of Bundle profiles used by the Client Registry to respond to searches and revise/merge requests
-      resources:
-         - StructureDefinition/bc-search-response-bundle
-         - StructureDefinition/bc-revise-and-merge-response-bundle 
    Operation Request Examples:
       name: Operation Request Examples
       description: A set of operation request examples
@@ -85,10 +79,16 @@ groups:
          - Parameters/FindCandidates-SSRI
          - Parameters/FindCandidates-MomsPHN
          - Parameters/GetDemographics
+         - Parameters/RevisePatient-UpdateExisting
+         - Parameters/RevisePatient-New
+         - Parameters/RevisePatient-Newborn
+         - Parameters/MergePatient-TwoID
    Operation Response Examples:
       name: Operation Response Examples
       description: A set of operation response examples
       resources:
          - Bundle/FindCandidatesResponse
          - Bundle/GetDemographicsResponse
+         - StructureDefinition/bc-search-response-bundle
+         - StructureDefinition/bc-revise-and-merge-response-bundle 
 

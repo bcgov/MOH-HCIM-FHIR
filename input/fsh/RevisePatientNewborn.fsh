@@ -38,4 +38,4 @@ Usage: #definition
 * parameter[3].min = 1
 * parameter[3].max = "1"
 * parameter[3].documentation = "The newborn Patient mother's PHN."
-* parameter[3].type = #string
+* parameter[3].type = #RelatedPerson

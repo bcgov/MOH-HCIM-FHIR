@@ -2,8 +2,8 @@
 
 ### Design Approach
 The approach to design a FHIR interface to the Client Registry was to keep the interactions as similar as possible to the current system.  However where necessary additions and improvements would be considered.
-
-- The design team matched current Client Registry interactions 1 to 1 with equivalent FHIR interactions for all the flavours of:
+Namely:
+- The design team will match current Client Registry interactions 1 to 1 with equivalent FHIR interactions for all the flavours of:
 	- Find Candidates
 	- Get Demographics
 	- Revise Patient
@@ -11,13 +11,14 @@ The approach to design a FHIR interface to the Client Registry was to keep the i
 	- Distribute Patient
 - Asynchronous interactions will be supported as with the current system
 - New attributes can be included in FHIR that are not in V3 (such as more business dates)
+- The Client Registry profiles should conform to the Canadadian Baseline profiles
 
 ### Design Assumptions
-There are a number of assumption that were made at the start of design:
+There are a number of assumptions that were made at the start of design:
 
 - FHIR is not expected to adversely affect performance, i.e. SLA is not changing for FHIR but will be extended to include FHIR
-- Existing interfaces, such as V3, will not be deprecated and users can use a combination of V3 and FHIR to meet their needs
-> Not sure if this is true, will users be able to use FHIR and V3 in some sort of combination?  I.e. Get Demo in FHIR than V# for Revise Patient?
+- Existing interfaces, such as V3, will not be deprecated 
+- Users can use a combination of V3 and FHIR to meet their needs
 - The Client Registry FHIR design will become a Provincial standard
 - Asynchronous interactions will follow the same pattern as V3 (not the FHIR asynchronous pattern)
 - Get Eligibility is not supported by FHIR (will still be supported by V3)
@@ -25,12 +26,12 @@ There are a number of assumption that were made at the start of design:
 ### Design Outcomes - Overview
 The main outcomes from the design process were as follows:
 
-- The primary resource is Patient and Patient shall be used to communicate client attributes
-- The JSON text format shall be used to receive and transmit FHIR resources
-- FHIR Operations shall be used for Client Registry interactions
->RESTful interfaces will not be implemented for FHIR
-- The Parameters resource used in Operations may include Patient resources as well as name value pair parameters such as search parameters or unique message identifiers and creation times
-- Some FHIR extensions are necessary
+- The primary resource is Patient and Patient will be used to communicate client attributes
+- The JSON text format will be used to receive and transmit FHIR resources
+- FHIR Operations will be used for Client Registry interactions
+- The Parameters resource used in the FHIR Operations may include Patient resources as well as name value pair parameters such as search parameters or unique request identifiers and creation times, etc
+- Some FHIR extensions are necessary as the Patient resource
+>Do we align with CA Baseline?
 
 #### Patient Resource
 
@@ -52,9 +53,9 @@ bc-gender-business-dates | A Period extension for effective dates
 
 ##### Terminologies, CodeableConcepts, Codes and Value Sets
 
->Describe all the value sets being used and where we are using something different, I need help in this section
+>*Describe all the value sets being used and where we are using something different, I need help in this section*
 
-Attribute | Value Sets
+A_ttribute | Value Sets
 :---|:---
 Patient.name.use|**Not sure how FHIR maps to Client Registry, is Legal the only code used?**
 Patient.telecom.use|home, work, mobile are used and temp, old not allowed
@@ -109,6 +110,8 @@ Parameter Name|Parameter Value|Comments
 message id|parameter.value[string]|Message (unique) id
 create time|parameter.value[dateTime]|Creation date of message
 request message id|parameter.value[string]|Message (unique) id
+sender|parameter.value[Identifier]|Message sender
+enterer|paramtere.value[Identifier]|UserId for message
 
 #### Searches
 There are two searches available for Client Registry FHIR, Find Candidates and Get Demographics.  The operations are:
@@ -119,7 +122,7 @@ https://…./$FindCandidates |
 https://…./$GetDemographics |
 https://…./$GetDemographics.History |
 
-Find Candidates may return 0 or more candidates, while Get Demographics is designed to return a single match.  These searches are expected to provide the required information to confirm a person's identify.
+Find Candidates may return zero or more candidates, while Get Demographics is designed to return zero or a single match.  These searches are expected to provide the required information to confirm a person's identify.
 
 [Search page](search.html "Find Candidates and Get Demographics")
 
@@ -140,6 +143,9 @@ These business transactions will allow the user to:
 - generate a PHN for a new client.
 
 [Revise and Merge page](reviseAndMerge.html "Revise and Merge Patient")
+
+##### Asynchronous Operations
+The asynchronous versions of Revise and Merge Operations share the same request and response profile.  The difference is that the response is sent back later and the requesting system should not block, wait for the response, but have an end point established to receive the respose when the responding system sends it.
 
 ### Get Eligibility is Not Supported by FHIR
 

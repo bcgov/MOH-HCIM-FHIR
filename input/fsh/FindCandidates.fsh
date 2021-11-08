@@ -98,7 +98,7 @@ Usage: #definition
 * parameter[11].use = #in
 * parameter[11].min = 0
 * parameter[11].max = "1"
-* parameter[11].documentation = "Instruct the Client Registery to return Patient Identifiers only."
+* parameter[11].documentation = "Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defauts to false."
 * parameter[11].type = #boolean
 
 

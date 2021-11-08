@@ -242,6 +242,7 @@ Description: "Example of Patient for query response Bundle with 4 different kind
 * name.family = "BARNEY"
 * gender = #male
 * birthDate = 1940-06-06
+* deceasedBoolean = false
 
 Instance: Patient1Response
 InstanceOf: Patient
