@@ -10,6 +10,7 @@ version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: ci-build
+title: BC Client Registry FHIR Implemenation Guide
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
@@ -22,9 +23,11 @@ menu:
      Search Patient: search.html
      Revise And Merge Patient: reviseAndMerge.html
      Distributions: distributions.html
+     Identifiers: identifiers.html
   V3 Transition: v3Transition.html
   Connected Partner: connectedPartner.html
   Artifacts: artifacts.html
+  Future Plans: futurePlans.html
   Glossary: terminology.html
   Credits: credits.html
 
@@ -49,6 +52,10 @@ pages:
     title: Revise and Merge Patient
   distributions.md:
     title: Distribute Patient
+  futurePlans.md:
+    title: Future Plans
+  identifiers.md:
+    title: Identifiers
 
 groups:
    Patient:
@@ -65,14 +72,14 @@ groups:
          - OperationDefinition/bc-patient-revise
          - OperationDefinition/bc-patient-revise-newborn
          - OperationDefinition/bc-patient-merge
-   Operation Parameters:
-      name: Operation Parameters
+   OperationParameters:
+      name: OperationParameters
       description: The parameter profiles associated with the Client Registry Operations
       resources:
          - StructureDefinition/bc-metadata-parameters
          - StructureDefinition/bc-patient-business-parameters
-   Operation Request Examples:
-      name: Operation Request Examples
+   OperationRequestExamples:
+      name: OperationRequestExamples
       description: A set of operation request examples
       resources:
          - Parameters/FindCandidates
@@ -83,8 +90,8 @@ groups:
          - Parameters/RevisePatient-New
          - Parameters/RevisePatient-Newborn
          - Parameters/MergePatient-TwoID
-   Operation Response Examples:
-      name: Operation Response Examples
+   OperationResponseExamples:
+      name: OperationResponseExamples
       description: A set of operation response examples
       resources:
          - Bundle/FindCandidatesResponse

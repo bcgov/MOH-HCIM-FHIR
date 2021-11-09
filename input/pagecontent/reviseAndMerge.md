@@ -1,4 +1,4 @@
->**Note**<br>This specification is currently published as a Draft Standard on the ministry github and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.
+><span style="color:red">Note</span><br>This specification is currently published as a Draft Standard on the ministry github and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.
 
 ### Revise Patient
 
@@ -40,7 +40,7 @@ The asynchronous pattern for Revise and Merge Patient follow the same pattern as
 </span>
 
 
-The request/responses are associated by the unique message id in the Parameters resource.  The client must create a FHIR Operation end point to receive the responses at a later time.  Specifically the response will be a Bundle, as documented in the [RevisePatient](OperationDefinition-bc-patient-revise.html) and [MergePatient](OperationDefinition-bc-patient-merge.html) operations.  The Parameter resource profile is [BCMetadataParameters](StructureDefinition-BCMetadataParameters.html) and contains the IN parameters MessageRequestID to link the MessageID in the request to the asynchronous response.
+The request/responses are associated by the unique message id in the Parameters resource.  The client must create a FHIR Operation end point to receive the responses at a later time.  Specifically the response will be a Bundle, as documented in the [RevisePatient](OperationDefinition-bc-patient-revise.html) and [MergePatient](OperationDefinition-bc-patient-merge.html) operations.  The Parameter resource profile is [BCMetadataParameters](StructureDefinition-bc-metadata-parameters.html) and contains the IN parameters MessageRequestID to link the MessageID in the request to the asynchronous response.
 
 >What is the response end point?  Will it be https://..../$RevisePatient.Async?  Or do the clients get to decide?
 

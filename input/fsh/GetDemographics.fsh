@@ -13,7 +13,8 @@ Usage: #definition
 * system = false
 * type = true
 * instance = true
-* inputProfile = "BCPatientBusinessParameters"
+* inputProfile = Canonical(BCPatientBusinessParameters)
+
 * parameter[0].name = #messageId
 * parameter[0].use = #in
 * parameter[0].min = 1

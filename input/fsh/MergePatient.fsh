@@ -13,7 +13,8 @@ Usage: #definition
 * system = false
 * type = true
 * instance = true
-* inputProfile = "BCMetadataParameters"
+* inputProfile = Canonical(BCMetadataParameters)
+
 * parameter[0].name = #messageId
 * parameter[0].use = #in
 * parameter[0].min = 1

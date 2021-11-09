@@ -14,6 +14,10 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * link 0..* MS
 * link.other.identifier 1..1 MS
 * name 1..* MS
+* name.use 1..1 MS
+* name.use from BCNameUse (required)
+* telecom.use from BCContactPointUse (required)
+* telecom.system from BCContactPointSystem (required)
 * gender 1..1 MS
 * birthDate 1..1 MS
 
@@ -58,19 +62,8 @@ Parent: Address
 Id: bc-client-registry-address
 Description: "The BC Client Registry address profile."
 * extension contains AddressValidationStatusExtension named addressValidationStatus 0..1
-
-CodeSystem: BCMergeStatusCS
-Id: bc-client-registry-merge-status-code-system
-Title: "BC Client Registry merge status."
-Description: "Codes used to describe the merge status."
-* #obselete "obselete" "The merge obseletes this Patient."
-* #cancelled "cancelled" "The merge cancels this Patient."
-
-ValueSet: BCMergeStatusVS
-Title: "BC Merge Status value set"
-Id: bc-merge-status-value-set
-Description: "BC Merge Status value set used to desribe the merge status of a Patient."
-* codes from system BCMergeStatusCS
+* use from BCAddressUse (required)
+* type from BCAddressType (required)
 
 Extension: MergeStatusExtension
 Id: bc-merge-status-extension
@@ -78,21 +71,6 @@ Title: "BC Merge status code"
 Description: "A code that represents the Merge status of the Patient."
 * value[x] only code
 * valueCode from BCMergeStatusVS (required)
-
-
-CodeSystem: BCAddressValidationCS
-Id: bc-client-registry-address-validation-code-system
-Title: "BC Client Registry address validation status code"
-Description: "Codes used to define the address validation status."
-* #valid   "valid"   "The address is valid, i.e. there is a reasonable good chance this address is known to Canada Post."
-* #invalid "invalid" "The address validation status is invalid and like not recognized by Canada Post."
-* #unknown "unknown" "The address validation status is unknown."
-
-ValueSet: BCAddressValidationVS
-Title: "BC Address Validation value set"
-Id: bc-address-validation-value-set
-Description: "BC Address Validation value set used to desribe the validation status of an address"
-* codes from system BCAddressValidationCS
 
 Extension: AddressValidationStatusExtension
 Id: bc-address-validation-status-extension

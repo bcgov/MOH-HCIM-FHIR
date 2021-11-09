@@ -1,4 +1,4 @@
->**Note**<br>This specification is currently published as a Draft Standard on the ministry github and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.
+><span style="color:red">Note</span><br>This specification is currently published as a Draft Standard on the ministry github and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.
 
 ### Design Approach
 The approach to design a FHIR interface to the Client Registry was to keep the interactions as similar as possible to the current system.  However where necessary additions and improvements would be considered.
@@ -53,19 +53,17 @@ bc-gender-business-dates | A Period extension for effective dates
 
 ##### Terminologies, CodeableConcepts, Codes and Value Sets
 
->*Describe all the value sets being used and where we are using something different, I need help in this section*
+A few points should be highlighted around terminologies, codes and value sets.
 
-A_ttribute | Value Sets
+Attribute | Value Sets
 :---|:---
-Patient.name.use|**Not sure how FHIR maps to Client Registry, is Legal the only code used?**
-Patient.telecom.use|home, work, mobile are used and temp, old not allowed
-Patient.telecom.system|phone or email are allowed, not the others
-Patient.gender|male, female, unknown and other not allowed but **Not sure**
-Patient.address.type|postal and physical are used.  both not allowed
-Patient.address.use|**I think this is inferred to be always home**
-Patient.identifier.system|**Not sure**
-Patient.identifier.type|**Not sure**
-Patient.identifier.use|**Not sure**
+Patient.name.use| Only _usual_ or _official_ from NameUse value set.
+Patient.telecom.use| Only _home_, _work_, _mobile_ from the ContactPointUse value set.
+Patient.telecom.system| Only _phone_ or _email_ from the ContactPointSystem value set.
+Patient.gender|Only _male_, _female_ or _unknown_ from the AdministractiveGender value set.
+Patient.address.type|Only _postal_ or _physical_ from the AddressType value set.
+Patient.address.use|Only _home_ from the AddressUse value set.
+Patient.identifier.system|See the section on [identifiers](identifiers.html)
 
 #### FHIR Operations
 
@@ -86,7 +84,7 @@ Suffixes such as History and Async inform the Client Registry FHIR server to per
 
 ##### Requests
 
-The body of the request message will vary depending on the business context however all message bodies will consist of at least one Parameter.  The Parameter resource has two profiles defined in this guide.  See [Metadata Parameters](StructureDefinition-BCMetadataParameters.html) and [Patient Business Parameters](StructureDefinition-BCPatientParametersParameters.html).  The Metadata Parameters profile is to store request metadata name-value pairs such as request creation time and unique ID.  The Business Parameters profile includes the Metadata name-value paris and in addition business values such as Patients and Operation flags.
+The body of the request message will vary depending on the business context however all message bodies will consist of at least one Parameter.  The Parameter resource has two profiles defined in this guide.  See [Metadata Parameters](StructureDefinition-bc-metadata-parameters.html) and [Patient Business Parameters](StructureDefinition-bc-patient-business-parameters.html).  The Metadata Parameters profile is to store request metadata name-value pairs such as request creation time and unique ID.  The Business Parameters profile includes the Metadata name-value paris and in addition business values such as Patients and Operation flags.
 
 The diagram below shows how the Paramters resource is generalized to a Metadata Parameters and then further to a Business Parameters resource.  The children inherit from the parents.
 
