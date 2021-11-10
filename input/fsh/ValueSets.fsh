@@ -8,7 +8,7 @@ Description: "Codes used to describe the merge status."
 ValueSet: BCMergeStatusVS
 Title: "BC Merge Status value set"
 Id: bc-merge-status-value-set
-Description: "BC Merge Status value set used to desribe the merge status of a Patient."
+Description: "BC Merge Status value set used to 0 the merge status of a Patient."
 * codes from system BCMergeStatusCS
 
 CodeSystem: BCAddressValidationCS
@@ -22,7 +22,7 @@ Description: "Codes used to define the address validation status."
 ValueSet: BCAddressValidationVS
 Title: "BC Address Validation value set"
 Id: bc-address-validation-value-set
-Description: "BC Address Validation value set used to desribe the validation status of an address"
+Description: "BC Address Validation value set used to 0 the validation status of an address"
 * codes from system BCAddressValidationCS
 
 ValueSet: BCNameUse

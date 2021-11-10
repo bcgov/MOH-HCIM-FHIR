@@ -1,4 +1,4 @@
-This profile of Parameters is intended to force the inclusion of specific parameters that are common to all Operations.  Below is a list with desciptions.
+This profile of Parameters is intended to force the inclusion of specific parameters that are common to all Operations.  Below is a list with 0.
 
 Parameter Name | Description |
 :--- | :---

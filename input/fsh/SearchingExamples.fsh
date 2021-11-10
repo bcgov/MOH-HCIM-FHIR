@@ -192,7 +192,7 @@ Description: "Example of $FindCandidates response Bundle.  Patient0 has PHN, alt
 * entry[2].resource = Patient0Response
 * entry[2].search.score = 31
 //* entry[2].search.mode = #match
-* entry[2].fullUrl = "usr:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"
+* entry[2].fullUrl = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"
 
 * entry[3].resource = Patient1Response
 * entry[3].search.score = -53
@@ -300,10 +300,10 @@ Description: "Example of $GetDemographics operation response Bundle"
 * entry[0].fullUrl = "61061501-9953-4fba-87fe-6ae30e79da33"
 
 * entry[1].resource = GetDemographics
-* entry[1].fullUrl = "urn:uunid:753f756d-63b2-4086-86a4-d7768fd5374a"
+* entry[1].fullUrl = "urn:uuid:753f756d-63b2-4086-86a4-d7768fd5374a"
 
 * entry[2].resource = PatientDemographicsResponse
-* entry[2].fullUrl = "urn:uunid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c"
+* entry[2].fullUrl = "urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c"
 
 Instance: GetDemographicsINParameters
 InstanceOf: Parameters
