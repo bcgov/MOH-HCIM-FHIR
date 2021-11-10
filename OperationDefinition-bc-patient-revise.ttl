@@ -10,7 +10,7 @@
   fhir:Resource.id [ fhir:value "bc-patient-revise"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RevisePatient</h2><p>OPERATION: RevisePatient</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-revise</pre><p>URL: [base]/Patient/$RevisePatient</p><p>URL: [base]/Patient/[id]/$RevisePatient</p><p>Input parameters Profile: <pre>BCMetadataParameters</pre></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Unique message ID.</p>\n</div></td></tr><tr><td>IN</td><td>messageDate</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Message date and time.</p>\n</div></td></tr><tr><td>IN</td><td>patient</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a></td><td/><td><div><p>The Patient.</p>\n</div></td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RevisePatient</h2><p>OPERATION: RevisePatient</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-revise</pre><p>URL: [base]/Patient/$RevisePatient</p><p>URL: [base]/Patient/[id]/$RevisePatient</p><p>Input parameters Profile: <a href=\"StructureDefinition-bc-metadata-parameters.html\">BCMetadataParameters</a></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Unique message ID.</p>\n</div></td></tr><tr><td>IN</td><td>messageDate</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Message date and time.</p>\n</div></td></tr><tr><td>IN</td><td>patient</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a></td><td/><td><div><p>The Patient.</p>\n</div></td></tr></table></div>"
   ];
   fhir:OperationDefinition.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-revise"];
   fhir:OperationDefinition.version [ fhir:value "0.1.0"];
@@ -18,7 +18,7 @@
   fhir:OperationDefinition.title [ fhir:value "Revise Patient"];
   fhir:OperationDefinition.status [ fhir:value "draft"];
   fhir:OperationDefinition.kind [ fhir:value "operation"];
-  fhir:OperationDefinition.date [ fhir:value "2021-11-08T22:48:39+00:00"^^xsd:dateTime];
+  fhir:OperationDefinition.date [ fhir:value "2021-11-10T00:01:37+00:00"^^xsd:dateTime];
   fhir:OperationDefinition.code [ fhir:value "RevisePatient"];
   fhir:OperationDefinition.resource [
      fhir:value "Patient";
@@ -27,7 +27,10 @@
   fhir:OperationDefinition.system [ fhir:value "false"^^xsd:boolean];
   fhir:OperationDefinition.type [ fhir:value "true"^^xsd:boolean];
   fhir:OperationDefinition.instance [ fhir:value "true"^^xsd:boolean];
-  fhir:OperationDefinition.inputProfile [ fhir:value "BCMetadataParameters"];
+  fhir:OperationDefinition.inputProfile [
+     fhir:value "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters";
+     fhir:link <http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters>
+  ];
   fhir:OperationDefinition.parameter [
      fhir:index 0;
      fhir:OperationDefinition.parameter.name [ fhir:value "messageId" ];

@@ -41,8 +41,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"11.5"}
-    h3,h4,h5,h6{--heading-prefix:"11.5"}</style>
+    <style type="text/css">h2{--heading-prefix:"13.5"}
+    h3,h4,h5,h6{--heading-prefix:"13.5"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
           <!-- Left logo - typically the publisher's logo - project or affiliate -->
@@ -55,7 +55,7 @@
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold"></span><br/>0.1.0 - ci-build</p>
+          <p><span style="font-size:12pt;font-weight:bold">BC Client Registry FHIR Implemenation Guide</span><br/>0.1.0 - ci-build</p>
         </div>
       </div>   <!-- /container -->
     </div>    <!-- /segment-header -->
@@ -101,6 +101,9 @@
       <li>
         <a href="distributions.html">Distributions</a>
       </li>
+      <li>
+        <a href="identifiers.html">Identifiers</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -111,6 +114,9 @@
   </li>
   <li>
     <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="futurePlans.html">Future Plans</a>
   </li>
   <li>
     <a href="terminology.html">Glossary</a>
@@ -143,7 +149,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">BCHCIM - Local Development build (v0.1.0). See the <a href="http://moh.fhir/bc-clientregistry/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+    <!-- ReleaseHeader --><p id="publish-box">BC Client Registry FHIR Implemenation Guide - Local Development build (v0.1.0). See the <a href="http://moh.fhir/bc-clientregistry/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
 
   
 
@@ -210,7 +216,7 @@
 
 
 
-  <div><h2>RevisePatient</h2><p>OPERATION: RevisePatient</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-revise</pre><p>URL: [base]/Patient/$RevisePatient</p><p>URL: [base]/Patient/[id]/$RevisePatient</p><p>Input parameters Profile: <pre>BCMetadataParameters</pre></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td></td><td><div><p>Unique message ID.</p>
+  <div><h2>RevisePatient</h2><p>OPERATION: RevisePatient</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-revise</pre><p>URL: [base]/Patient/$RevisePatient</p><p>URL: [base]/Patient/[id]/$RevisePatient</p><p>Input parameters Profile: <a href="StructureDefinition-bc-metadata-parameters.html">BCMetadataParameters</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td></td><td><div><p>Unique message ID.</p>
 </div></td></tr><tr><td>IN</td><td>messageDate</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td></td><td><div><p>Message date and time.</p>
 </div></td></tr><tr><td>IN</td><td>patient</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td></td><td><div><p>The Patient.</p>
 </div></td></tr></table></div>
@@ -227,7 +233,7 @@
 <ul>
   <li>a Patient resource when the interaction was succesful</li>
   <li>a OperationOutcome resource where errors and warnings are returned</li>
-  <li><a name="l446">​</a>a Parameters resource (specifically <a href="StructureDefinition-BCMetadataParameters.html">BCMetadataParameters</a>)</li>
+  <li>a Parameters resource (specifically <a href="StructureDefinition-bc-metadata-parameters.html">BCMetadataParameters</a>)</li>
 </ul>
 
 <p>If this is an asynchronous revise then the BCMetadataParameters must contain the request MessageID in the MessageRequestID field.</p>
@@ -261,8 +267,8 @@
     <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
-        <p><a name="l499">​</a>
-          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="null"></a>.  Package moh-hcim#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 8, 2021 22:48+0000">2021-11-08</span>
+        <p><a name="l512">​</a>
+          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="null"></a>.  Package moh-hcim#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Nov 10, 2021 00:01+0000">2021-11-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

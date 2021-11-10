@@ -8,8 +8,9 @@
   <url value="http://moh.fhir/bc-clientregistry/ImplementationGuide/moh-hcim"/>
   <version value="0.1.0"/>
   <name value="BCHCIM"/>
+  <title value="BC Client Registry FHIR Implemenation Guide"/>
   <status value="draft"/>
-  <date value="2021-11-08T22:48:39+00:00"/>
+  <date value="2021-11-10T00:01:37+00:00"/>
   <packageId value="moh-hcim"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
@@ -174,16 +175,16 @@
       <name value="Operations"/>
       <description value="The defined Operations"/>
     </grouping>
-    <grouping id="Operation Parameters">
-      <name value="Operation Parameters"/>
+    <grouping id="OperationParameters">
+      <name value="OperationParameters"/>
       <description value="The parameter profiles associated with the Client Registry Operations"/>
     </grouping>
-    <grouping id="Operation Request Examples">
-      <name value="Operation Request Examples"/>
+    <grouping id="OperationRequestExamples">
+      <name value="OperationRequestExamples"/>
       <description value="A set of operation request examples"/>
     </grouping>
-    <grouping id="Operation Response Examples">
-      <name value="Operation Response Examples"/>
+    <grouping id="OperationResponseExamples">
+      <name value="OperationResponseExamples"/>
       <description value="A set of operation response examples"/>
     </grouping>
     <resource>
@@ -207,7 +208,7 @@
       <name value="BCMetadataParameters"/>
       <description value="Parameters profile for BC meta data"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Operation Parameters"/>
+      <groupingId value="OperationParameters"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -231,7 +232,7 @@
       <name value="BCPatientBusinessParameters"/>
       <description value="Parameters extended from BCMetadataParameters for a Patient resource"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Operation Parameters"/>
+      <groupingId value="OperationParameters"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -243,7 +244,7 @@
       <name value="BCReviseAndMergeResponseBundle"/>
       <description value="A Bundle that is used in the Client Registry response to Revise and Merge Patient requests."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Operation Response Examples"/>
+      <groupingId value="OperationResponseExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -255,7 +256,7 @@
       <name value="BCSearchResponseBundle"/>
       <description value="A Bundle that is used in the Client Registry response to Find Candidates and Get Demographics queries."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Operation Response Examples"/>
+      <groupingId value="OperationResponseExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -350,6 +351,28 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
+        <reference value="ValueSet/bc-address-type-value-set"/>
+      </reference>
+      <name value="BC Address Type value set."/>
+      <description value="BC Address Type value set, sliced to meet BC constraints."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/bc-address-use-value-set"/>
+      </reference>
+      <name value="BC Address Use value set."/>
+      <description value="BC Address Use value set, sliced to meet BC constraints."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
         <reference value="ValueSet/bc-address-validation-value-set"/>
       </reference>
       <name value="BC Address Validation value set"/>
@@ -361,10 +384,54 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
+        <reference value="ValueSet/bc-administrative-gender-value-set"/>
+      </reference>
+      <name value="BC Administrative Gender Use value set."/>
+      <description value="BC Administrative Gender value set, sliced to meet BC constraints."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/bc-contact-point-system-value-set"/>
+      </reference>
+      <name value="BC Contact Point System value set."/>
+      <description value="BC Contact Point System value set, sliced to meet BC constraints."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/bc-contact-point-use-value-set"/>
+      </reference>
+      <name value="BC Contact Point Use value set."/>
+      <description value="BC Contact Point Use value set, sliced to meet BC constraints."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
         <reference value="ValueSet/bc-merge-status-value-set"/>
       </reference>
       <name value="BC Merge Status value set"/>
       <description value="BC Merge Status value set used to desribe the merge status of a Patient."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/bc-name-use-value-set"/>
+      </reference>
+      <name value="BC Name Use value set."/>
+      <description value="BC Name Use value set, sliced to meet BC constraints."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -399,7 +466,7 @@
       <name value="FindCandidates"/>
       <description value="Example of $FindCandidates operation"/>
       <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"/>
-      <groupingId value="Operation Request Examples"/>
+      <groupingId value="OperationRequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -411,7 +478,7 @@
       <name value="FindCandidates-MomsPHN"/>
       <description value="Example of $FindCandidates operation with mother&#39;s PHN"/>
       <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"/>
-      <groupingId value="Operation Request Examples"/>
+      <groupingId value="OperationRequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -434,7 +501,7 @@
       <name value="FindCandidates-SSRI"/>
       <description value="Example of $FindCandidates operation with SSRI identifier"/>
       <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"/>
-      <groupingId value="Operation Request Examples"/>
+      <groupingId value="OperationRequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -446,7 +513,7 @@
       <name value="FindCandidatesResponse"/>
       <description value="Example of $FindCandidates response Bundle.  Patient0 has PHN, alternate, SRI and SSRI identifier examples."/>
       <exampleBoolean value="true"/>
-      <groupingId value="Operation Response Examples"/>
+      <groupingId value="OperationResponseExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -458,7 +525,7 @@
       <name value="GetDemographics"/>
       <description value="Example of $GetDemographics operation"/>
       <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"/>
-      <groupingId value="Operation Request Examples"/>
+      <groupingId value="OperationRequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -492,7 +559,7 @@
       <name value="GetDemographicsResponse"/>
       <description value="Example of $GetDemographics operation response Bundle"/>
       <exampleBoolean value="true"/>
-      <groupingId value="Operation Response Examples"/>
+      <groupingId value="OperationResponseExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -504,7 +571,7 @@
       <name value="MergePatient-TwoID"/>
       <description value="Example of $MergePatient operation."/>
       <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-parameters"/>
-      <groupingId value="Operation Request Examples"/>
+      <groupingId value="OperationRequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -615,7 +682,7 @@
       <name value="RevisePatient-New"/>
       <description value="Example of $RevisePatient operation where the Patient is new to the Client Registry."/>
       <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-parameters"/>
-      <groupingId value="Operation Request Examples"/>
+      <groupingId value="OperationRequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -627,7 +694,7 @@
       <name value="RevisePatient-Newborn"/>
       <description value="Example of $RevisePatient.Newborn operation where the Patient is a newborn.  Awwwwww so cute."/>
       <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-parameters"/>
-      <groupingId value="Operation Request Examples"/>
+      <groupingId value="OperationRequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -639,7 +706,7 @@
       <name value="RevisePatient-UpdateExisting"/>
       <description value="Example of $RevisePatient operation that updates an existing Patient"/>
       <exampleCanonical value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-parameters"/>
-      <groupingId value="Operation Request Examples"/>
+      <groupingId value="OperationRequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -753,6 +820,16 @@
       <page>
         <nameUrl value="distributions.html"/>
         <title value="Distribute Patient"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="futurePlans.html"/>
+        <title value="Future Plans"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="identifiers.html"/>
+        <title value="Identifiers"/>
         <generation value="markdown"/>
       </page>
     </page>

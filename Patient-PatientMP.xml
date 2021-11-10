@@ -6,9 +6,9 @@
     <profile value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 876092N4</p><p><b>active</b>: true</p><p><b>name</b>: Darrel Dwayne Barker , Dan (NICKNAME)</p><p><b>telecom</b>: ph: 2505559288(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1966-10-01</p><p><b>address</b>: 3216 Peach St Victoria BC V8Z W3Y CA </p><blockquote><p><b>link</b></p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote></div>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>BC Patient business dates</b>: Dec 7, 2012, 11:35:00 PM --&gt; (ongoing)</p><p><b>identifier</b>: id: 876092N4</p><p><b>active</b>: true</p><p><b>name</b>: Darrel Dwayne Barker , Dan (OFFICIAL)</p><p><b>telecom</b>: ph: 2505559288(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1966-10-01</p><p><b>address</b>: 3216 Peach St Victoria BC V8Z W3Y CA </p><blockquote><p><b>link</b></p><p><b>BC Merge status code</b>: cancelled</p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge status code</b>: cancelled</p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge status code</b>: obsolete</p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge status code</b>: obsolete</p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote></div>
   </text>
-  <extension url="http://fhir.bc.ca/extension/effectiveDate">
+  <extension url="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-dates-extension">
     <valuePeriod>
       <start value="2012-12-07T16:35:00.000-07:00"/>
     </valuePeriod>
@@ -19,6 +19,7 @@
   </identifier>
   <active value="true"/>
   <name>
+    <use value="usual"/>
     <family value="Barker"/>
     <given value="Darrel"/>
     <given value="Dwayne"/>
@@ -27,7 +28,7 @@
     </period>
   </name>
   <name>
-    <use value="nickname"/>
+    <use value="official"/>
     <given value="Dan"/>
   </name>
   <telecom>
@@ -46,7 +47,7 @@
     <country value="CA"/>
   </address>
   <link>
-    <extension url="http://moh.fhir/bc-clientregistry/extension/bc-merge-status-extension">
+    <extension url="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-merge-status-extension">
       <valueCode value="cancelled"/>
     </extension>
     <other>
@@ -58,13 +59,14 @@
     <type value="replaces"/>
   </link>
   <link>
-    <extension url="http://moh.fhir/bc-clientregistry/extension/bc-merge-status-extension">
+    <extension url="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-merge-status-extension">
       <valueCode value="cancelled"/>
     </extension>
     <other>
       <identifier>
         <type>
           <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
             <code value="JHN"/>
           </coding>
         </type>
@@ -75,7 +77,7 @@
     <type value="replaces"/>
   </link>
   <link>
-    <extension url="http://moh.fhir/bc-clientregistry/extension/bc-merge-status-extension">
+    <extension url="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-merge-status-extension">
       <valueCode value="obsolete"/>
     </extension>
     <other>
@@ -87,13 +89,14 @@
     <type value="replaces"/>
   </link>
   <link>
-    <extension url="http://moh.fhir/bc-clientregistry/extension/bc-merge-status-extension">
+    <extension url="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-merge-status-extension">
       <valueCode value="obsolete"/>
     </extension>
     <other>
       <identifier>
         <type>
           <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
             <code value="JHN"/>
           </coding>
         </type>

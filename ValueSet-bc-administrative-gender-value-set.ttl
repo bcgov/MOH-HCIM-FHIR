@@ -1,0 +1,47 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://moh.fhir/bc-clientregistry/ValueSet/bc-administrative-gender-value-set> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "bc-administrative-gender-value-set"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"http://hl7.org/fhir/R4/valueset-administrative-gender.html\">http://hl7.org/fhir/ValueSet/administrative-gender</a></li></ul><p>This value set excludes codes based on the following rules:</p><ul><li>Exclude these codes as defined in <a href=\"http://hl7.org/fhir/R4/codesystem-administrative-gender.html\"><code>http://hl7.org/fhir/administrative-gender</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-administrative-gender.html#administrative-gender-other\">other</a></td><td>Other</td><td>Other.</td></tr></table></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://moh.fhir/bc-clientregistry/ValueSet/bc-administrative-gender-value-set"];
+  fhir:ValueSet.version [ fhir:value "0.1.0"];
+  fhir:ValueSet.name [ fhir:value "BCAdministrativeGender"];
+  fhir:ValueSet.title [ fhir:value "BC Administrative Gender Use value set."];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2021-11-10T00:01:37+00:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "BC Administrative Gender value set, sliced to meet BC constraints."];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.valueSet [
+         fhir:value "http://hl7.org/fhir/ValueSet/administrative-gender";
+         fhir:index 0;
+         fhir:link <http://hl7.org/fhir/ValueSet/administrative-gender>
+       ]
+     ];
+     fhir:ValueSet.compose.exclude [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/administrative-gender" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "other" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://moh.fhir/bc-clientregistry/ValueSet/bc-administrative-gender-value-set.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,11 +1,102 @@
 {
   "resourceType" : "Bundle",
-  "id" : "33b523a9-a7ff-4f88-9523-02c866d4be10",
+  "id" : "ad5da585-87bb-4e37-b1de-d5f161f52159",
   "meta" : {
-    "lastUpdated" : "2021-11-08T22:48:39.733+00:00"
+    "lastUpdated" : "2021-11-10T00:01:37.524+00:00"
   },
   "type" : "collection",
   "entry" : [{
+    "fullUrl" : "http://moh.fhir/bc-clientregistry/ValueSet/bc-address-type-value-set",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "bc-address-type-value-set",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on: </p><ul><li><a href=\"http://hl7.org/fhir/R4/codesystem-address-type.html\">AddressType v4.0.1 (CodeSystem)</a></li><li><a href=\"http://hl7.org/fhir/R4/valueset-address-type.html\">AddressType v4.0.1 (ValueSet)</a></li></ul></div><p>All codes in this table are from the system <a href=\"http://hl7.org/fhir/R4/codesystem-address-type.html\"><code>http://hl7.org/fhir/address-type</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-address-type-postal\"> </a><a href=\"http://hl7.org/fhir/R4/codesystem-address-type.html#address-type-postal\">postal</a></td><td>Postal</td><td>Mailing addresses - PO Boxes and care-of addresses.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-address-type-physical\"> </a><a href=\"http://hl7.org/fhir/R4/codesystem-address-type.html#address-type-physical\">physical</a></td><td>Physical</td><td>A physical address that can be visited.</td></tr></table></div>"
+      },
+      "url" : "http://moh.fhir/bc-clientregistry/ValueSet/bc-address-type-value-set",
+      "version" : "0.1.0",
+      "name" : "BCAddressType",
+      "title" : "BC Address Type value set.",
+      "status" : "active",
+      "date" : "2021-11-10T00:01:37+00:00",
+      "description" : "BC Address Type value set, sliced to meet BC constraints.",
+      "expansion" : {
+        "identifier" : "urn:uuid:0decb1a4-e867-4862-af4f-30f3c3e94549",
+        "timestamp" : "2021-11-10T00:01:58+00:00",
+        "total" : 2,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/ValueSet/address-type|4.0.1"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/address-type|4.0.1"
+        }],
+        "contains" : [{
+          "system" : "http://hl7.org/fhir/address-type",
+          "abstract" : false,
+          "inactive" : false,
+          "code" : "postal",
+          "display" : "Postal"
+        },
+        {
+          "system" : "http://hl7.org/fhir/address-type",
+          "abstract" : false,
+          "inactive" : false,
+          "code" : "physical",
+          "display" : "Physical"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://moh.fhir/bc-clientregistry/ValueSet/bc-address-use-value-set",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "bc-address-use-value-set",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 1 concepts</p><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on: </p><ul><li><a href=\"http://hl7.org/fhir/R4/codesystem-address-use.html\">AddressUse v4.0.1 (CodeSystem)</a></li><li><a href=\"http://hl7.org/fhir/R4/valueset-address-use.html\">AddressUse v4.0.1 (ValueSet)</a></li></ul></div><p>All codes in this table are from the system <a href=\"http://hl7.org/fhir/R4/codesystem-address-use.html\"><code>http://hl7.org/fhir/address-use</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-address-use-home\"> </a><a href=\"http://hl7.org/fhir/R4/codesystem-address-use.html#address-use-home\">home</a></td><td>Home</td><td>A communication address at a home.</td></tr></table></div>"
+      },
+      "url" : "http://moh.fhir/bc-clientregistry/ValueSet/bc-address-use-value-set",
+      "version" : "0.1.0",
+      "name" : "BCAddressUse",
+      "title" : "BC Address Use value set.",
+      "status" : "active",
+      "date" : "2021-11-10T00:01:37+00:00",
+      "description" : "BC Address Use value set, sliced to meet BC constraints.",
+      "expansion" : {
+        "identifier" : "urn:uuid:495f4be9-fbb1-4301-b040-8e0600548cd1",
+        "timestamp" : "2021-11-10T00:01:58+00:00",
+        "total" : 1,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/ValueSet/address-use|4.0.1"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/address-use|4.0.1"
+        }],
+        "contains" : [{
+          "system" : "http://hl7.org/fhir/address-use",
+          "abstract" : false,
+          "inactive" : false,
+          "code" : "home",
+          "display" : "Home"
+        }]
+      }
+    }
+  },
+  {
     "fullUrl" : "http://moh.fhir/bc-clientregistry/ValueSet/bc-address-validation-value-set",
     "resource" : {
       "resourceType" : "ValueSet",
@@ -19,11 +110,11 @@
       "name" : "BCAddressValidationVS",
       "title" : "BC Address Validation value set",
       "status" : "active",
-      "date" : "2021-11-08T22:48:39+00:00",
+      "date" : "2021-11-10T00:01:37+00:00",
       "description" : "BC Address Validation value set used to desribe the validation status of an address",
       "expansion" : {
-        "identifier" : "urn:uuid:81efc987-e307-461a-a46d-f2d78dd003e4",
-        "timestamp" : "2021-11-08T22:49:00+00:00",
+        "identifier" : "urn:uuid:1d6843f0-6531-47c9-bcaf-bf8d332a9315",
+        "timestamp" : "2021-11-10T00:01:58+00:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -52,24 +143,185 @@
     }
   },
   {
+    "fullUrl" : "http://moh.fhir/bc-clientregistry/ValueSet/bc-administrative-gender-value-set",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "bc-administrative-gender-value-set",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on: </p><ul><li><a href=\"http://hl7.org/fhir/R4/codesystem-administrative-gender.html\">AdministrativeGender v4.0.1 (CodeSystem)</a></li><li><a href=\"http://hl7.org/fhir/R4/valueset-administrative-gender.html\">AdministrativeGender v4.0.1 (ValueSet)</a></li></ul></div><p>All codes in this table are from the system <a href=\"http://hl7.org/fhir/R4/codesystem-administrative-gender.html\"><code>http://hl7.org/fhir/administrative-gender</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-administrative-gender-male\"> </a><a href=\"http://hl7.org/fhir/R4/codesystem-administrative-gender.html#administrative-gender-male\">male</a></td><td>Male</td><td>Male.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-administrative-gender-female\"> </a><a href=\"http://hl7.org/fhir/R4/codesystem-administrative-gender.html#administrative-gender-female\">female</a></td><td>Female</td><td>Female.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-administrative-gender-unknown\"> </a><a href=\"http://hl7.org/fhir/R4/codesystem-administrative-gender.html#administrative-gender-unknown\">unknown</a></td><td>Unknown</td><td>Unknown.</td></tr></table></div>"
+      },
+      "url" : "http://moh.fhir/bc-clientregistry/ValueSet/bc-administrative-gender-value-set",
+      "version" : "0.1.0",
+      "name" : "BCAdministrativeGender",
+      "title" : "BC Administrative Gender Use value set.",
+      "status" : "active",
+      "date" : "2021-11-10T00:01:37+00:00",
+      "description" : "BC Administrative Gender value set, sliced to meet BC constraints.",
+      "expansion" : {
+        "identifier" : "urn:uuid:393c4732-9570-4b22-ba12-52ee4befa047",
+        "timestamp" : "2021-11-10T00:01:59+00:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/administrative-gender|4.0.1"
+        }],
+        "contains" : [{
+          "system" : "http://hl7.org/fhir/administrative-gender",
+          "abstract" : false,
+          "inactive" : false,
+          "code" : "male",
+          "display" : "Male"
+        },
+        {
+          "system" : "http://hl7.org/fhir/administrative-gender",
+          "abstract" : false,
+          "inactive" : false,
+          "code" : "female",
+          "display" : "Female"
+        },
+        {
+          "system" : "http://hl7.org/fhir/administrative-gender",
+          "abstract" : false,
+          "inactive" : false,
+          "code" : "unknown",
+          "display" : "Unknown"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://moh.fhir/bc-clientregistry/ValueSet/bc-contact-point-system-value-set",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "bc-contact-point-system-value-set",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on: </p><ul><li><a href=\"http://hl7.org/fhir/R4/valueset-contact-point-system.html\">ContactPointSystem v4.0.1 (ValueSet)</a></li><li><a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-system.html\">ContactPointSystem v4.0.1 (CodeSystem)</a></li></ul></div><p>All codes in this table are from the system <a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-system.html\"><code>http://hl7.org/fhir/contact-point-system</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-contact-point-system-phone\"> </a><a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-system.html#contact-point-system-phone\">phone</a></td><td>Phone</td><td>The value is a telephone number used for voice calls. Use of full international numbers starting with + is recommended to enable automatic dialing support but not required.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-contact-point-system-email\"> </a><a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-system.html#contact-point-system-email\">email</a></td><td>Email</td><td>The value is an email address.</td></tr></table></div>"
+      },
+      "url" : "http://moh.fhir/bc-clientregistry/ValueSet/bc-contact-point-system-value-set",
+      "version" : "0.1.0",
+      "name" : "BCContactPointSystem",
+      "title" : "BC Contact Point System value set.",
+      "status" : "active",
+      "date" : "2021-11-10T00:01:37+00:00",
+      "description" : "BC Contact Point System value set, sliced to meet BC constraints.",
+      "expansion" : {
+        "identifier" : "urn:uuid:2b502fd5-a73f-4fb3-b2b0-edda81f19344",
+        "timestamp" : "2021-11-10T00:01:59+00:00",
+        "total" : 2,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/contact-point-system|4.0.1"
+        }],
+        "contains" : [{
+          "system" : "http://hl7.org/fhir/contact-point-system",
+          "abstract" : false,
+          "inactive" : false,
+          "code" : "phone",
+          "display" : "Phone"
+        },
+        {
+          "system" : "http://hl7.org/fhir/contact-point-system",
+          "abstract" : false,
+          "inactive" : false,
+          "code" : "email",
+          "display" : "Email"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://moh.fhir/bc-clientregistry/ValueSet/bc-contact-point-use-value-set",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "bc-contact-point-use-value-set",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on: </p><ul><li><a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-use.html\">ContactPointUse v4.0.1 (CodeSystem)</a></li><li><a href=\"http://hl7.org/fhir/R4/valueset-contact-point-use.html\">ContactPointUse v4.0.1 (ValueSet)</a></li></ul></div><p>All codes in this table are from the system <a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-use.html\"><code>http://hl7.org/fhir/contact-point-use</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-contact-point-use-home\"> </a><a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-use.html#contact-point-use-home\">home</a></td><td>Home</td><td>A communication contact point at a home; attempted contacts for business purposes might intrude privacy and chances are one will contact family or other household members instead of the person one wishes to call. Typically used with urgent cases, or if no other contacts are available.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-contact-point-use-work\"> </a><a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-use.html#contact-point-use-work\">work</a></td><td>Work</td><td>An office contact point. First choice for business related contacts during business hours.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-contact-point-use-mobile\"> </a><a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-use.html#contact-point-use-mobile\">mobile</a></td><td>Mobile</td><td>A telecommunication device that moves and stays with its owner. May have characteristics of all other use codes, suitable for urgent matters, not the first choice for routine business.</td></tr></table></div>"
+      },
+      "url" : "http://moh.fhir/bc-clientregistry/ValueSet/bc-contact-point-use-value-set",
+      "version" : "0.1.0",
+      "name" : "BCContactPointUse",
+      "title" : "BC Contact Point Use value set.",
+      "status" : "active",
+      "date" : "2021-11-10T00:01:37+00:00",
+      "description" : "BC Contact Point Use value set, sliced to meet BC constraints.",
+      "expansion" : {
+        "identifier" : "urn:uuid:a31742cb-48a2-4b2b-a416-362ca07dcfcd",
+        "timestamp" : "2021-11-10T00:01:59+00:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/contact-point-use|4.0.1"
+        }],
+        "contains" : [{
+          "system" : "http://hl7.org/fhir/contact-point-use",
+          "abstract" : false,
+          "inactive" : false,
+          "code" : "home",
+          "display" : "Home"
+        },
+        {
+          "system" : "http://hl7.org/fhir/contact-point-use",
+          "abstract" : false,
+          "inactive" : false,
+          "code" : "work",
+          "display" : "Work"
+        },
+        {
+          "system" : "http://hl7.org/fhir/contact-point-use",
+          "abstract" : false,
+          "inactive" : false,
+          "code" : "mobile",
+          "display" : "Mobile"
+        }]
+      }
+    }
+  },
+  {
     "fullUrl" : "http://moh.fhir/bc-clientregistry/ValueSet/bc-merge-status-value-set",
     "resource" : {
       "resourceType" : "ValueSet",
       "id" : "bc-merge-status-value-set",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-bc-client-registry-merge-status-code-system.html\">BC Client Registry merge status. v0.1.0 (CodeSystem)</a></p><p>All codes in this table are from the system <a href=\"CodeSystem-bc-client-registry-merge-status-code-system.html\"><code>http://moh.fhir/bc-clientregistry/CodeSystem/bc-client-registry-merge-status-code-system</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---moh.fhir-bc-clientregistry-CodeSystem-bc-client-registry-merge-status-code-system-obselete\"> </a><a href=\"CodeSystem-bc-client-registry-merge-status-code-system.html#bc-client-registry-merge-status-code-system-obselete\">obselete</a></td><td>obselete</td><td>The merge obseletes this Patient.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---moh.fhir-bc-clientregistry-CodeSystem-bc-client-registry-merge-status-code-system-cancelled\"> </a><a href=\"CodeSystem-bc-client-registry-merge-status-code-system.html#bc-client-registry-merge-status-code-system-cancelled\">cancelled</a></td><td>cancelled</td><td>The merge cancels this Patient.</td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-bc-client-registry-merge-status-code-system.html\">BC Client Registry merge status. v0.1.0 (CodeSystem)</a></p><p>All codes in this table are from the system <a href=\"CodeSystem-bc-client-registry-merge-status-code-system.html\"><code>http://moh.fhir/bc-clientregistry/CodeSystem/bc-client-registry-merge-status-code-system</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---moh.fhir-bc-clientregistry-CodeSystem-bc-client-registry-merge-status-code-system-obsolete\"> </a><a href=\"CodeSystem-bc-client-registry-merge-status-code-system.html#bc-client-registry-merge-status-code-system-obsolete\">obsolete</a></td><td>obsolete</td><td>The merge obsoletes this Patient.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---moh.fhir-bc-clientregistry-CodeSystem-bc-client-registry-merge-status-code-system-cancelled\"> </a><a href=\"CodeSystem-bc-client-registry-merge-status-code-system.html#bc-client-registry-merge-status-code-system-cancelled\">cancelled</a></td><td>cancelled</td><td>The merge cancels this Patient.</td></tr></table></div>"
       },
       "url" : "http://moh.fhir/bc-clientregistry/ValueSet/bc-merge-status-value-set",
       "version" : "0.1.0",
       "name" : "BCMergeStatusVS",
       "title" : "BC Merge Status value set",
       "status" : "active",
-      "date" : "2021-11-08T22:48:39+00:00",
+      "date" : "2021-11-10T00:01:37+00:00",
       "description" : "BC Merge Status value set used to desribe the merge status of a Patient.",
       "expansion" : {
-        "identifier" : "urn:uuid:62bf2ec1-a694-4d98-8b89-cee74fd9288c",
-        "timestamp" : "2021-11-08T22:49:00+00:00",
+        "identifier" : "urn:uuid:4a88a1f7-3457-4458-a149-ef88ff41bf9b",
+        "timestamp" : "2021-11-10T00:01:59+00:00",
         "total" : 2,
         "parameter" : [{
           "name" : "excludeNested",
@@ -81,13 +333,62 @@
         }],
         "contains" : [{
           "system" : "http://moh.fhir/bc-clientregistry/CodeSystem/bc-client-registry-merge-status-code-system",
-          "code" : "obselete",
-          "display" : "obselete"
+          "code" : "obsolete",
+          "display" : "obsolete"
         },
         {
           "system" : "http://moh.fhir/bc-clientregistry/CodeSystem/bc-client-registry-merge-status-code-system",
           "code" : "cancelled",
           "display" : "cancelled"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://moh.fhir/bc-clientregistry/ValueSet/bc-name-use-value-set",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "bc-name-use-value-set",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on: </p><ul><li><a href=\"http://hl7.org/fhir/R4/codesystem-name-use.html\">NameUse v4.0.1 (CodeSystem)</a></li><li><a href=\"http://hl7.org/fhir/R4/valueset-name-use.html\">NameUse v4.0.1 (ValueSet)</a></li></ul></div><p>All codes in this table are from the system <a href=\"http://hl7.org/fhir/R4/codesystem-name-use.html\"><code>http://hl7.org/fhir/name-use</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-name-use-usual\"> </a><a href=\"http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-usual\">usual</a></td><td>Usual</td><td>Known as/conventional/the one you normally use.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-name-use-official\"> </a><a href=\"http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-official\">official</a></td><td>Official</td><td>The formal name as registered in an official (government) registry, but which name might not be commonly used. May be called &quot;legal name&quot;.</td></tr></table></div>"
+      },
+      "url" : "http://moh.fhir/bc-clientregistry/ValueSet/bc-name-use-value-set",
+      "version" : "0.1.0",
+      "name" : "BCNameUse",
+      "title" : "BC Name Use value set.",
+      "status" : "active",
+      "date" : "2021-11-10T00:01:37+00:00",
+      "description" : "BC Name Use value set, sliced to meet BC constraints.",
+      "expansion" : {
+        "identifier" : "urn:uuid:33d349f7-3ce9-4fda-9ca2-1b0212f4a5a5",
+        "timestamp" : "2021-11-10T00:01:59+00:00",
+        "total" : 2,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/ValueSet/name-use|4.0.1"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/name-use|4.0.1"
+        }],
+        "contains" : [{
+          "system" : "http://hl7.org/fhir/name-use",
+          "abstract" : false,
+          "inactive" : false,
+          "code" : "usual",
+          "display" : "Usual"
+        },
+        {
+          "system" : "http://hl7.org/fhir/name-use",
+          "abstract" : false,
+          "inactive" : false,
+          "code" : "official",
+          "display" : "Official"
         }]
       }
     }
