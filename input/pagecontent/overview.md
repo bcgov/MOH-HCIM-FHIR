@@ -1,4 +1,4 @@
-><span style="color:red">Note</span><br>This specification is currently published as a Draft Standard on the ministry github and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.
+><span style="color:red">Note</span><br>This specification is currently published as a Draft Standard on the ministry GitHub and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.
 
 # Client Registry Overview
 
@@ -18,6 +18,6 @@ Client Registry currently has a HL7 V3 implementation and this guide describes t
 
 See British Columbia's [Health Information Exchange](https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/software) for more for details on the Client Registry system and access to Client Registry.
 
-For design information start [here](design.html), to view details about profiles, operations, etxamples, etc, view this [page](artifacts.html).
+For design information start [here](design.html), to view details about profiles, operations, examples, etc, view this [page](artifacts.html).
 
 

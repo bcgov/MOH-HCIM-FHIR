@@ -1,4 +1,4 @@
-><span style="color:red">Note</span><br>This specification is currently published as a Draft Standard on the ministry github and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.
+><span style="color:red">Note</span><br>This specification is currently published as a Draft Standard on the ministry GitHub and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.
 
 ### Find Candidates Search
 The Find Candidates interaction uses the name and other criteria (e.g. date of birth) to find the client’s record and PHN via a “probabilistic search” in the Client Registry. In a probabilistic search, the outcome of the search cannot be predicted.
@@ -47,5 +47,5 @@ The IN and OUT search parameters for Find Candidates can be found here
 [FindCandidates search](OperationDefinition-bc-patient-find-candidates.html).
 
 #### Search Score
-In a searchset Bundle the entry.search.score attribute in FHIR is a decimal number between and including 0 and 1.  The Client Registry FHIR profile is non-conformant as the score returned by the EMPI doesn't map well into the 0 to 1 range.  Therefore the EMPI match score will be returned as is allowing users to continue to interpret this score as they currently do.
+In a searchset Bundle the entry.search.score attribute in FHIR is a decimal number between and including 0 and 1.  The Client Registry FHIR profile is non-conformant as the score returned by the Client Registry doesn't map well into the 0 to 1 range.  Therefore the Client Registry match score will be returned as is allowing users to continue to interpret this score as they currently do.
 

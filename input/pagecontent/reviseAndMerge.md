@@ -1,4 +1,4 @@
-><span style="color:red">Note</span><br>This specification is currently published as a Draft Standard on the ministry github and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.
+><span style="color:red">Note</span><br>This specification is currently published as a Draft Standard on the ministry GitHub and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.
 
 ### Revise Patient
 
@@ -20,7 +20,7 @@ If the records are merged on the POS application, a ‘Merged Patient’ message
 
 If the demographics are updated at the same time as the merge, the demographic update will be processed as a second ‘Revised Patient’ interaction was requested and will update the demographics once the merge is complete. 
 
-The record the POS is keeping must be in the EMPI prior to the merge or the Merge Person message will fail. This record is known as the ‘survivor’ record.
+The record the POS is keeping must be in the Client Registry prior to the merge or the Merge Person message will fail. This record is known as the ‘survivor’ record.
 
 ### FHIR Structure for Revise, Merge and Distributions
 
@@ -33,7 +33,7 @@ The FHIR structure is the same for Merge, Revise and Distributions.  Responses (
 
 ### Asynchronous Operations
 
-The asynchronous pattern for Revise and Merge Patient follow the same pattern as V3.  The figure belows show the client requesting an operation from the Client Registry and the Client Registery responding, later, with the response.
+The asynchronous pattern for Revise and Merge Patient follow the same pattern as V3.  The figure below show the client requesting an operation from the Client Registry and the Client Registry responding, later, with the response.
 
 <span>
 	<img src="asyncSequence.png" height="350"/>

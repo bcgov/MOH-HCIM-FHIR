@@ -21,7 +21,7 @@ Description: "Example of $RevisePatient operation that updates an existing Patie
 
 Instance: PatientRP
 InstanceOf: BCPatient
-Description: "Patient example for a RevicePatient operation"
+Description: "Patient example for a RevisePatient operation"
 * address.type = #physical
 * address.line = "636 YELLOW BRICK RD"
 * address.city = "PRINCE GEORGE"
@@ -157,7 +157,7 @@ Description: "Example of related person's PHN as Identifier"
 * identifier.system = "http://hl7.org/fhir/bc-hcim/bc-sri"
 // We have to populate patient with something, based on the operation $RevisePatient.Newborn
 // the client registry should look for the mothersPHN parameter to find the related person ...
-// this refernce is not used by HCIM in any way and here to satisfy FHIR
+// this reference is not used by HCIM in any way and here to satisfy FHIR
 * patient.reference = "Patient/Newborn"
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#MTH
 

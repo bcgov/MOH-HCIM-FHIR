@@ -1,4 +1,4 @@
-><span style="color:red">Note</span><br>This specification is currently published as a Draft Standard on the ministry github and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.
+><span style="color:red">Note</span><br>This specification is currently published as a Draft Standard on the ministry GitHub and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.
 
 ### Design Approach
 The approach to design a FHIR interface to the Client Registry was to keep the interactions as similar as possible to the current system.  However where necessary additions and improvements would be considered.
@@ -11,7 +11,7 @@ Namely:
 	- Distribute Patient
 - Asynchronous interactions will be supported as with the current system
 - New attributes can be included in FHIR that are not in V3 (such as more business dates)
-- The Client Registry profiles should conform to the Canadadian Baseline profiles
+- The Client Registry profiles should conform to the Canadian Baseline profiles
 
 ### Design Assumptions
 There are a number of assumptions that were made at the start of design:
@@ -60,7 +60,7 @@ Attribute | Value Sets
 Patient.name.use| Only _usual_ or _official_ from NameUse value set.
 Patient.telecom.use| Only _home_, _work_, _mobile_ from the ContactPointUse value set.
 Patient.telecom.system| Only _phone_ or _email_ from the ContactPointSystem value set.
-Patient.gender|Only _male_, _female_ or _unknown_ from the AdministractiveGender value set.
+Patient.gender|Only _male_, _female_ or _unknown_ from the AdministrativeGender value set.
 Patient.address.type|Only _postal_ or _physical_ from the AddressType value set.
 Patient.address.use|Only _home_ from the AddressUse value set.
 Patient.identifier.system|See the section on [identifiers](identifiers.html)
@@ -84,9 +84,9 @@ Suffixes such as History and Async inform the Client Registry FHIR server to per
 
 ##### Requests
 
-The body of the request message will vary depending on the business context however all message bodies will consist of at least one Parameter.  The Parameter resource has two profiles defined in this guide.  See [Metadata Parameters](StructureDefinition-bc-metadata-parameters.html) and [Patient Business Parameters](StructureDefinition-bc-patient-business-parameters.html).  The Metadata Parameters profile is to store request metadata name-value pairs such as request creation time and unique ID.  The Business Parameters profile includes the Metadata name-value paris and in addition business values such as Patients and Operation flags.
+The body of the request message will vary depending on the business context however all message bodies will consist of at least one Parameter.  The Parameter resource has two profiles defined in this guide.  See [Metadata Parameters](StructureDefinition-bc-metadata-parameters.html) and [Patient Business Parameters](StructureDefinition-bc-patient-business-parameters.html).  The Metadata Parameters profile is to store request metadata name-value pairs such as request creation time and unique ID.  The Business Parameters profile includes the Metadata name-value pairs and in addition business values such as Patients and Operation flags.
 
-The diagram below shows how the Paramters resource is generalized to a Metadata Parameters and then further to a Business Parameters resource.  The children inherit from the parents.
+The diagram below shows how the Parameters resource is generalized to a Metadata Parameters and then further to a Business Parameters resource.  The children inherit from the parents.
 
 <span>
 	<img src="design_nestedParameters.png" height="350"/>
@@ -109,7 +109,7 @@ message id|parameter.value[string]|Message (unique) id
 create time|parameter.value[dateTime]|Creation date of message
 request message id|parameter.value[string]|Message (unique) id
 sender|parameter.value[Identifier]|Message sender
-enterer|paramtere.value[Identifier]|UserId for message
+enterer|parameter.value[Identifier]|UserId for message
 
 #### Searches
 There are two searches available for Client Registry FHIR, Find Candidates and Get Demographics.  The operations are:
@@ -143,7 +143,7 @@ These business transactions will allow the user to:
 [Revise and Merge page](reviseAndMerge.html "Revise and Merge Patient")
 
 ##### Asynchronous Operations
-The asynchronous versions of Revise and Merge Operations share the same request and response profile.  The difference is that the response is sent back later and the requesting system should not block, wait for the response, but have an end point established to receive the respose when the responding system sends it.
+The asynchronous versions of Revise and Merge Operations share the same request and response profile.  The difference is that the response is sent back later and the requesting system should not block, wait for the response, but have an end point established to receive the response when the responding system sends it.
 
 ### Get Eligibility is Not Supported by FHIR
 

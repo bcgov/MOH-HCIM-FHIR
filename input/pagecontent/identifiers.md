@@ -4,7 +4,7 @@ The Client Registry makes use of several kinds of identifiers, each requiring di
 
 There are three identifier systems:  **http://hl7.org/fhir/bc-hcim/bc-ssri**, **http://hl7.org/fhir/bc-hcim/bc-out-of-province-sri** and **http://hl7.org/fhir/bc-hcim/bc-sri**.  
 
-The suffix, _bc-sri_, is a system of Client Registry health identifiers.  Usually the source is necessary to determine the type of identifier; this value is placed in assigner.display field.  If the bc-sri is a PHN, the identifier needs, additionaly, a type.coding.code of JHN from the type.coding.system of http://terminology.hl7.org/CodeSystem/v2-0203.  
+The suffix, _bc-sri_, is a system of Client Registry health identifiers.  Usually the source is necessary to determine the type of identifier; this value is placed in assigner.display field.  If the bc-sri is a PHN, the identifier needs, additionally, a type.coding.code of JHN from the type.coding.system of http://terminology.hl7.org/CodeSystem/v2-0203.  
 
 PHN example:
 
