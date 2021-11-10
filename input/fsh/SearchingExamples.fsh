@@ -191,17 +191,17 @@ Description: "Example of $FindCandidates response Bundle.  Patient0 has PHN, alt
 
 * entry[2].resource = Patient0Response
 * entry[2].search.score = 31
-// crashes sushi * entry[1].search.mode = #match
+//* entry[2].search.mode = #match
 * entry[2].fullUrl = "usr:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"
 
 * entry[3].resource = Patient1Response
 * entry[3].search.score = -53
-// crashes sushi * entry[2].search.mode = #match
+// crashes sushi * entry[3].search.mode = #match
 * entry[3].fullUrl = "urn:uuid:90bf49dc-4590-4302-8e28-f02bb4deb353"
 
 * entry[4].resource = Patient2Response
 * entry[4].search.score = -56
-// crashes sushi * entry[3].search.mode = #match
+// crashes sushi * entry[4].search.mode = #match
 * entry[4].fullUrl = "urn:uuid:072f48b7-43c5-4bec-8798-026cc432adcf"
 
 Instance: Patient0Response
