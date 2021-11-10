@@ -1,15 +1,15 @@
-><span style="color:red">Note</span><br>This specification is currently published as a Draft Standard on the ministry 0 and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.
+><span style="color:red">Note</span><br>This specification is currently published as a Draft Standard on the ministry github and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.
 
 # Transition from V3 to FHIR
 
 In the future stakeholders can transition from V3 to FHIR.  The older specification will not be deprecated however FHIR interactions have several advantages:
-* FHIR will allow users to 0 and send more information than is currently within the V3 specification.  Attributes such as Address Validation Status and comprehensive business dates on all Patient attributes will be available in FHIR, but not in V3.
+* FHIR will allow users to recieve and send more information than is currently within the V3 specification.  Attributes such as Address Validation Status and comprehensive business dates on all Patient attributes will be available in FHIR, but not in V3.
 * FHIR uses JSON which makes new implementations simpler than V3
 * FHIR is being adopted throughout the health care landscape and switching to FHIR may help interoperability with other health organizations and systems
 
 ## Note on Get Eligibility
 
-The Client Registry FHIR operations do not include a Get Eligibility operation.  The V3 implementation of Get Eligibility is composed of two interactions, a Get Demographics and then a Get Eligibility, which Client Registry does on behalf of the V3 message 0.  For FHIR, this will no longer be supported.  Users wishing to use Get Eligibility will need to use the FHIR Get Demographics operation and then send the Get Eligibility request to ....
+The Client Registry FHIR operations do not include a Get Eligibility operation.  The V3 implementation of Get Eligibility is composed of two interactions, a Get Demographics and then a Get Eligibility, which Client Registry does on behalf of the V3 message requestor.  For FHIR, this will no longer be supported.  Users wishing to use Get Eligibility will need to use the FHIR Get Demographics operation and then send the Get Eligibility request to ....
 >Where is the Get Eligibility supposed to be sent to
 
 ## FHIR Development

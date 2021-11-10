@@ -1,6 +1,6 @@
 Instance: FindCandidatesQuery
 InstanceOf: OperationDefinition
-Description: "This operation is used to query for a patient.  The response can contain 0 or more 1."
+Description: "This operation is used to query for a patient.  The response can contain 0 or more Paitents."
 Usage: #definition
 * id = "bc-patient-find-candidates"
 * url = "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-find-candidates"
@@ -98,7 +98,7 @@ Usage: #definition
 * parameter[11].use = #in
 * parameter[11].min = 0
 * parameter[11].max = "1"
-* parameter[11].documentation = "Instruct the Client Registry to return Patient Identifiers only when true.  If not present, 0 to false."
+* parameter[11].documentation = "Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defauts to false."
 * parameter[11].type = #boolean
 
 
