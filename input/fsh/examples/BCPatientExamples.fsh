@@ -1,24 +1,3 @@
-Instance: RevisePatient-UpdateExisting
-InstanceOf: BCPatientBusinessParameters
-Description: "Example of $RevisePatient operation that updates an existing Patient"
-
-* parameter[messageId].name = "messageId"
-* parameter[messageId].valueString = "98028b44-882a-4c72-8c92-b87d916147e1"
-
-* parameter[messageDateTime].name = "messageDateTime"
-* parameter[messageDateTime].valueDateTime = "2021-11-02T13:28:17-08:00"
-
-* parameter[sender].name = "sender"
-* parameter[sender].valueIdentifier.value = "PHARM"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/bc-hcim/bc-org"
-
-* parameter[enterer].name = "enterer"
-* parameter[enterer].valueIdentifier.value = "klgodfre"
-* parameter[enterer].valueIdentifier.system = "http://hl7.org/fhir/bc-hcim/bc-user"
-
-* parameter[patient].name = "patient"
-* parameter[patient].resource = PatientRP
-
 Instance: PatientRP
 InstanceOf: BCPatient
 Description: "Patient example for a RevisePatient operation"
@@ -57,27 +36,6 @@ Description: "Patient example for a RevisePatient operation"
 * birthDate = 1940-06-06
 * deceasedBoolean = false
 
-Instance: RevisePatient-New
-InstanceOf: BCPatientBusinessParameters
-Description: "Example of $RevisePatient operation where the Patient is new to the Client Registry."
-
-* parameter[messageId].name = "messageId"
-* parameter[messageId].valueString = "98028b44-882a-4c72-8c92-b87d916147e1"
-
-* parameter[messageDateTime].name = "messageDateTime"
-* parameter[messageDateTime].valueDateTime = "2021-11-02T13:28:17-08:00"
-
-* parameter[sender].name = "sender"
-* parameter[sender].valueIdentifier.value = "PHARM"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/bc-hcim/bc-org"
-
-* parameter[enterer].name = "enterer"
-* parameter[enterer].valueIdentifier.value = "klgodfre"
-* parameter[enterer].valueIdentifier.system = "http://hl7.org/fhir/bc-hcim/bc-user"
-
-* parameter[patient].name = "patient"
-* parameter[patient].resource = PatientRP-New
-
 Instance: PatientRP-New
 InstanceOf: BCPatient
 Description: "The Patient is completely new to the Client Registry, no identifiers."
@@ -99,30 +57,6 @@ Description: "The Patient is completely new to the Client Registry, no identifie
 * gender = #male
 * birthDate = 1940-06-06
 * deceasedBoolean = false
-
-Instance: RevisePatient-Newborn
-InstanceOf: BCPatientBusinessParameters
-Description: "Example of $RevisePatient.Newborn operation where the Patient is a newborn.  Awwwwww so cute."
-
-* parameter[messageId].name = "messageId"
-* parameter[messageId].valueString = "98028b44-882a-4c72-8c92-b87d916147e1"
-
-* parameter[messageDateTime].name = "messageDateTime"
-* parameter[messageDateTime].valueDateTime = "2021-11-02T13:28:17-08:00"
-
-* parameter[sender].name = "sender"
-* parameter[sender].valueIdentifier.value = "IHA"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/bc-hcim/bc-org"
-
-* parameter[enterer].name = "enterer"
-* parameter[enterer].valueIdentifier.value = "klgodfre"
-* parameter[enterer].valueIdentifier.system = "http://hl7.org/fhir/bc-hcim/bc-user"
-
-* parameter[patient].name = "patient"
-* parameter[patient].resource = PatientRP-Newborn
-
-* parameter[5].name = "mothersPHN"
-* parameter[5].resource = MotherRelated
 
 Instance: PatientRP-Newborn
 InstanceOf: BCPatient
@@ -146,40 +80,6 @@ Description: "The Patient is completely new to the Client Registry, no identifie
 * gender = #unknown
 * birthDate = 2021-11-02
 * deceasedBoolean = false
-
-Instance: MotherRelated
-InstanceOf: RelatedPerson
-Description: "Example of related person's PHN as Identifier"
-* identifier.value = "9736546293"
-* identifier.system = "http://hl7.org/fhir/bc-hcim/bc-sri"
-// We have to populate patient with something, based on the operation $RevisePatient.Newborn
-// the client registry should look for the mothersPHN parameter to find the related person ...
-// this reference is not used by HCIM in any way and here to satisfy FHIR
-* patient.reference = "Patient/Newborn"
-* relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#MTH
-
-
-Instance: MergePatient-TwoID
-InstanceOf: BCPatientBusinessParameters
-Description: "Example of $MergePatient operation."
-
-* parameter[messageId].name = "messageId"
-* parameter[messageId].valueString = "98028b44-882a-4c72-8c92-b87d916147e1"
-
-* parameter[messageDateTime].name = "messageDateTime"
-* parameter[messageDateTime].valueDateTime = "2021-11-02T13:28:17-08:00"
-
-* parameter[sender].name = "sender"
-* parameter[sender].valueIdentifier.value = "NHA"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/bc-hcim/bc-org"
-
-* parameter[enterer].name = "enterer"
-* parameter[enterer].valueIdentifier.value = "nvida"
-* parameter[enterer].valueIdentifier.system = "http://hl7.org/fhir/bc-hcim/bc-user"
-
-* parameter[patient].name = "patient"
-* parameter[patient].resource = PatientMP
-
 
 Instance: PatientMP
 InstanceOf: BCPatient
@@ -233,41 +133,132 @@ Description: "Example of a merge patient Patient"
 * link[3].extension.url = "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-merge-status-extension"
 * link[3].extension.valueCode = #obsolete
 
-Instance: RPMPOperationOutcome
-InstanceOf: BCOperationOutcome
-Description: "Example OperationOutcome for a Client Registry Revise or Merge"
-* issue.severity = #warning
-* issue.code = #business-rule
-* issue.details.text = "Warning: The Revise Patient name has been modified to filter out invalid characters."
-//system is HCIM codes, and not required, as FHIR docs say the system is inferred
-* issue.details.coding.code = #BCHCIM.RP.1.0017
-* issue[1].severity = #error
-* issue[1].code = #business-rule
-* issue[1].details.text = "The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ..."
-//system is HCIM codes, and not required, as FHIR docs say the system is inferred
-* issue[1].details.coding.code = #BCHCIM.RP.1.0017
+Instance: Patient0Response
+InstanceOf: BCPatient
+Description: "Example of Patient for query response Bundle with 4 different kinds of identifiers: SRI-PHN, SRI, SSRI and alternative."
+// Patient business date
+* extension[0].url = "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-dates-extension"
+* extension[0].valuePeriod.start = "2019-02-07T13:29:17-08:00"
+* address[0] = BCPatientAddress0Example
+* address[1] = BCPatientAddress1Example
+* telecom.use = #home
+* telecom.system = #phone
+* telecom.value = "2505554848"
 
-Instance: ReviseOrMergePatientResponse
-InstanceOf: BCReviseAndMergeResponseBundle
-Description: "A sample RevisePatient and MergePatient Operation response."
-* type = #collection
-* timestamp = "2011-09-13T16:11:43.000-07:00"
-* identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f7a3b"
-* link[0].relation = "self"
-* link[0].url = "urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1"
+* identifier.system = "http://hl7.org/fhir/bc-hcim/bc-sri"
+* identifier.value = "9999999999"
+* identifier.type.coding.code = #JHN
+* identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 
-* entry[0].resource = ReviseMergeResponseMetadata
-* entry[0].fullUrl = "urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33"
+* identifier[1].system = "http://hl7.org/fhir/bc-hcim/bc-sri"
+* identifier[1].value = "CER2234"
+* identifier[1].assigner.display = "VPP_CER"
 
-* entry[1].resource = RevisePatient-UpdateExisting
-* entry[1].fullUrl = "urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1"
+* identifier[2].system = "http://hl7.org/fhir/bc-hcim/bc-ssri"
+* identifier[2].value = "VCHA234"
+* identifier[2].assigner.display = "VPP_LION"
 
-* entry[2].resource = RPMPOperationOutcome
-* entry[2].fullUrl = "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"
+* identifier[3].system = "http://hl7.org/fhir/bc-hcim/bc-out-of-province-sri"
+* identifier[3].value = "90348733a"
+* identifier[3].assigner.display = "MB"
 
-* entry[3].resource = PatientRPMPResponse
-* entry[3].fullUrl = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"
+* name.given = "PURPLE"
+* name.family = "BARNEY"
+* name.use = http://hl7.org/fhir/name-use#usual
+* gender = #male
+* birthDate = 1940-06-06
+* deceasedBoolean = false
+* extension[1].url = "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-birth-date-business-dates-extension"
+* extension[1].valuePeriod.start = "2020-10-17T03:29:17-08:00"
+* extension[2].url = "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-gender-business-dates-extension"
+* extension[2].valuePeriod.start = "1973-05-18"
+
+Instance: Patient1Response
+InstanceOf: BCPatient
+Description: "Example of Patient for query response Bundle"
+* extension[0].url = "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-dates-extension"
+* extension[0].valuePeriod.start = "2019-02-07T13:29:17-08:00"
+* address[0] = BCPatientAddress0Example
+* address[1] = BCPatientAddress1Example
+* telecom.use = #home
+* telecom.system = #phone
+* telecom.value = "2505557841"
+* identifier.system = "http://hl7.org/fhir/bc-hcim/bc-sri"
+* identifier.value = "9999999999"
+* identifier.type.coding.code = #JHN
+* identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* name.given = "SARAH"
+* name.given[1] = "LYNN"
+* name.family = "PURPLE"
+* name.use = http://hl7.org/fhir/name-use#official
+* gender = #female
+* birthDate = 1973-05-18
+* deceasedBoolean = true
+* extension[1].url = "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-birth-date-business-dates-extension"
+* extension[1].valuePeriod.start = "2018-10-17T03:29:17-08:00"
+* extension[2].url = "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-death-date-business-dates-extension"
+* extension[2].valuePeriod.start = "2020-10-17T03:29:17-08:00"
+* extension[3].url = "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-death-date-extension"
+* extension[3].valueDateTime = "2021-11-17"
+* extension[4].url = "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-death-date-flag-business-dates-extension"
+* extension[4].valuePeriod.start = "2021-11-17"
+* extension[5].url = "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-gender-business-dates-extension"
+* extension[5].valuePeriod.start = "1973-05-18"
+
+Instance: Patient2Response
+InstanceOf: BCPatient
+Description: "Example of Patient for query response Bundle"
+* extension[0].url = "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-dates-extension"
+* extension[0].valuePeriod.start = "2019-02-07T13:29:17-08:00"
+* address[0] = BCPatientAddress0Example
+* address[1] = BCPatientAddress1Example
+* telecom.use = #home
+* telecom.system = #phone
+* telecom.value = "2504283447"
+* identifier.system = "http://hl7.org/fhir/bc-hcim/bc-sri"
+* identifier.value = "9999999999"
+* identifier.type.coding.code = #JHN
+* identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* name.given = "BAILEY"
+* name.family = "PURPLE"
+* name.use = http://hl7.org/fhir/name-use#usual
+* gender = #female
+* birthDate = 1985-12-14
+* extension[1].url = "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-birth-date-business-dates-extension"
+* extension[1].valuePeriod.start = "2019-10-17T03:29:17-08:00"
+* extension[2].url = "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-gender-business-dates-extension"
+* extension[2].valuePeriod.start = "1973-05-18"
+
+Instance: PatientDemographicsResponse
+InstanceOf: BCPatient
+Description: "Example of Patient for $GetDemographics operation response"
+* address.type = #physical
+* address.line = "321 SUNSHINE PL"
+* address.line[1] = "NEW LINE 2"
+* address.line[2] = "NEW LINE 3"
+* address.city = "VANCOUVER"
+* address.state = "BC"
+* address[1].type = #postal
+* address[1].line = "1824 CROSS RD"
+* address[1].line[1] = "LINE 2"
+* address[1].line[2] = "LINE 3"
+* address[1].city = "VANCOUVER"
+* address[1].state = "BC"
+* address[1].postalCode = "V9L 4H2"
+* telecom.use = #home
+* telecom.system = #phone
+* telecom.value = "6048883322"
+* identifier.system = "http://hl7.org/fhir/bc-hcim/bc-sri"
+* identifier.value = "9983652763"
+* identifier.type.coding.code = #JHN
+* identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* name.given = "JILLIAN"
+* name.given[1] = "DAWN"
+* name.given[2] = "THIRD NAME"
+* name.family = "COOK-ADAMS"
+* name.use = http://hl7.org/fhir/name-use#usual
+* gender = #female
+* birthDate = 1972-10-16
 
 Instance: PatientRPMPResponse
 InstanceOf: BCPatient
@@ -308,21 +299,4 @@ Description: "Example of Merge or Revise response Bundle with 4 different kinds 
 * deceasedBoolean = false
 * extension[1].url = "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-gender-business-dates-extension"
 * extension[1].valuePeriod.start = "1973-05-18"
-
-Instance: ReviseMergeResponseMetadata
-InstanceOf: BCMetadataParameters
-Description: "Example of Revise or Merge response Metadata parameters"
-
-* parameter[messageId].name = "messageId"
-* parameter[messageId].valueString = "c087e71e-3e7e-4c22-a3ce-61523f600615"
-
-* parameter[messageDateTime].name = "messageDateTime"
-* parameter[messageDateTime].valueDateTime = "2015-02-07T13:29:17-08:00"
-
-* parameter[messageRequestId].name = "messageRequestId"
-* parameter[messageRequestId].valueString = "98028b44-882a-4c72-8c92-b87d916147e1"
-
-* parameter[sender].name = "sender"
-* parameter[sender].valueIdentifier.value = "MOH_CRS"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/bc-hcim/bc-org"
 

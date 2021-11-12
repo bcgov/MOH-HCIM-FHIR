@@ -68,7 +68,8 @@ groups:
       description: Artifacts associated with resources that support Patient and Client Registry Operations
       resources:
          - StructureDefinition/bc-search-response-bundle
-         - StructureDefinition/bc-revise-and-merge-response-bundle 
+         - StructureDefinition/bc-revise-response-bundle 
+         - StructureDefinition/bc-merge-response-bundle 
          - StructureDefinition/bc-metadata-parameters
          - StructureDefinition/bc-patient-business-parameters
    Operations:
@@ -85,18 +86,19 @@ groups:
       description: A set of operation request examples
       resources:
          - Parameters/FindCandidates
-         - Parameters/FindCandidates-SSRI
-         - Parameters/FindCandidates-MomsPHN
+         - Parameters/FindCandidates-UsingSSRI
+         - Parameters/FindCandidates-UsingMomsPHN
          - Parameters/GetDemographics
          - Parameters/RevisePatient-UpdateExisting
          - Parameters/RevisePatient-New
          - Parameters/RevisePatient-Newborn
-         - Parameters/MergePatient-TwoID
+         - Parameters/MergePatient-TwoNonSurvivors
    ResponseExamples:
       name: ResponseExamples
       description: A set of operation response examples
       resources:
          - Bundle/FindCandidatesResponse
          - Bundle/GetDemographicsResponse
-         - Bundle/ReviseOrMergePatientResponse
+         - Bundle/RevisePatientResponse
+         - Bundle/MergePatientResponse
 

@@ -38,6 +38,11 @@ Description: "Parameters profile for BC meta data"
 * parameter[enterer].resource 0..0
 * parameter[enterer].part 0..0
 
+Profile: BCRequestMetadataParameters
+Parent: BCMetadataParameters
+Id: bc-request-metadata-parameters
+Description: "When echoing back the request metadata parameters, use this profile."
+
 Profile: BCPatientBusinessParameters
 Parent: BCMetadataParameters
 Id: bc-patient-business-parameters
@@ -52,4 +57,9 @@ Description: "Parameters extended from BCMetadataParameters for a Patient resour
 * parameter[patient].value[x] 0..0
 * parameter[patient].resource 1..1 MS
 * parameter[patient].resource only BCPatient
+
+Profile: BCRequestPatientBusinessParameters
+Parent: BCPatientBusinessParameters
+Id: bc-request-patient-business-parameters
+Description: "When echoing back the request business parameters, use this profile."
 

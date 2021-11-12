@@ -5,4 +5,4 @@ The response to a MergePatient Operation is a Bundle of type collection.  The Bu
 
 If this is an asynchronous merge then the BCMetadataParameters must contain the request MessageID in the MessageRequestID field.
 
-See [Merge Patient response](StructureDefinition-bc-revise-and-merge-response-bundle.html)
+See [Merge Patient response](StructureDefinition-bc-merge-response-bundle.html)
