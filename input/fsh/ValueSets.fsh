@@ -19,6 +19,12 @@ Description: "Codes used to define the address validation status."
 * #invalid "invalid" "The address validation status is invalid and like not recognized by Canada Post."
 * #unknown "unknown" "The address validation status is unknown."
 
+CodeSystem: BCOperationOutcomeDetailsCS
+Id: bc-operation-outcome-details-code-system
+Title: "BC Client Registry Operation Outcome details code system"
+Description: "BC Client Registry Operation Outcome details code system"
+
+
 ValueSet: BCAddressValidationVS
 Title: "BC Address Validation value set"
 Id: bc-address-validation-value-set
