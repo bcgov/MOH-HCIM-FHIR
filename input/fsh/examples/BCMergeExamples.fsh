@@ -68,15 +68,12 @@ Description: "A sample RevisePatient and MergePatient Operation response."
 * link[0].relation = "self"
 * link[0].url = "urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1"
 
-* entry[0].resource = MergeResponseMetadata
-* entry[0].fullUrl = "urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33"
+* entry[0].resource = MergePatient-EchoRequest
+* entry[0].fullUrl = "urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1"
 
-* entry[1].resource = MergePatient-EchoRequest
-* entry[1].fullUrl = "urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1"
+* entry[1].resource = RPMPOperationOutcome
+* entry[1].fullUrl = "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"
 
-* entry[2].resource = RPMPOperationOutcome
-* entry[2].fullUrl = "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"
-
-* entry[3].resource = PatientRPMPResponse
-* entry[3].fullUrl = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"
+* entry[2].resource = PatientRPMPResponse
+* entry[2].fullUrl = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"
 

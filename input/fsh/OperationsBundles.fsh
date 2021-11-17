@@ -14,9 +14,8 @@ Description:  "A Bundle that is used in the Client Registry response to Find Can
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a search query."
-* entry contains patient 0..* MS and parameters 1..1 MS and parametersRequest 1..1 MS and operationOutcome 0..1 MS
+* entry contains patient 0..* MS and parameters 1..1 MS and operationOutcome 0..1 MS
 * entry[parameters].resource only BCMetadataParameters
-* entry[parametersRequest].resource only BCRequestMetadataParameters
 * entry[operationOutcome].resource only BCOperationOutcome
 * entry[patient].resource only BCPatient
 
@@ -36,9 +35,8 @@ Description:  "A Bundle that is used in the Client Registry response to Revise P
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a revise or merge request."
-* entry contains patient 1..1 MS and parameters 1..1 MS and parametersRequest 1..1 MS and operationOutcome 0..1 MS
-* entry[parameters].resource only BCMetadataParameters
-* entry[parametersRequest].resource only BCRequestPatientBusinessParameters
+* entry contains patient 1..1 MS and parameters 1..1 MS and operationOutcome 0..1 MS
+* entry[parameters].resource only BCPatientBusinessParameters
 * entry[operationOutcome].resource only BCOperationOutcome
 * entry[patient].resource only BCPatient
 
@@ -58,8 +56,7 @@ Description:  "A Bundle that is used in the Client Registry response to Merge Pa
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a revise or merge request."
-* entry contains patient 1..1 MS and parameters 1..1 MS and parametersRequest 1..1 MS and operationOutcome 0..1 MS
-* entry[parameters].resource only BCMetadataParameters
-* entry[parametersRequest].resource only BCRequestPatientBusinessParameters
+* entry contains patient 1..1 MS and parameters 1..1 MS and operationOutcome 0..1 MS
+* entry[parameters].resource only BCPatientBusinessParameters
 * entry[operationOutcome].resource only BCOperationOutcome
 * entry[patient].resource only BCPatient
