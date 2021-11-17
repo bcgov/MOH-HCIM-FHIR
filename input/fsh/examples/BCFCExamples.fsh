@@ -10,7 +10,7 @@ Description: "Example of $FindCandidates operation"
 
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.value = "VPP"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/bc-hcim/bc-org"
+* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-org"
 
 * parameter[3].name = "address"
 * parameter[3].valueAddress.type = #postal
@@ -57,7 +57,7 @@ Description: "Example of $FindCandidates operation"
 
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.value = "VPP"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/bc-hcim/bc-org"
+* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-org"
 
 * parameter[3].name = "address"
 * parameter[3].valueAddress.type = #postal
@@ -104,7 +104,7 @@ Description: "Example of $FindCandidates operation with mother's PHN"
 
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.value = "VPP"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/bc-hcim/bc-org"
+* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-org"
 
 * parameter[3].name = "mothersPHN"
 * parameter[3].valueString = "9123123432"
@@ -121,7 +121,7 @@ Description: "Example of $FindCandidates operation with SSRI identifier"
 
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.value = "VPP"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/bc-hcim/bc-org"
+* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-org"
 
 * parameter[3].name = "address"
 * parameter[3].valueAddress.type = #postal
@@ -154,7 +154,7 @@ Description: "Example of $FindCandidates operation with SSRI identifier"
 * parameter[8].valueContactPoint.use = #home
 
 * parameter[9].name = "identifier"
-* parameter[9].valueIdentifier.system = "http://hl7.org/fhir/bc-hcim/bc-ssri"
+* parameter[9].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-ssri"
 * parameter[9].valueIdentifier.value = "24234"
 * parameter[9].valueIdentifier.assigner.display = "VPP_CER"
 
@@ -173,7 +173,7 @@ Description: "Example of $FindCandidates response Metadata parameters"
 
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.value = "MOH_CRS"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/bc-hcim/bc-org"
+* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-org"
 
 
 Instance: FindCandidatesResponse
