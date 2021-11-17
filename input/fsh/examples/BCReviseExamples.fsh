@@ -10,11 +10,11 @@ Description: "Example of $RevisePatient operation where the Patient is new to th
 
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.value = "PHARM"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-org"
+* parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
 * parameter[enterer].name = "enterer"
 * parameter[enterer].valueIdentifier.value = "klgodfre"
-* parameter[enterer].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-user"
+* parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
 
 * parameter[patient].name = "patient"
 * parameter[patient].resource = PatientRP-New
@@ -31,11 +31,11 @@ Description: "Example of $RevisePatient.Newborn operation where the Patient is a
 
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.value = "IHA"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-org"
+* parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
 * parameter[enterer].name = "enterer"
 * parameter[enterer].valueIdentifier.value = "klgodfre"
-* parameter[enterer].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-user"
+* parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
 
 * parameter[patient].name = "patient"
 * parameter[patient].resource = PatientRP-Newborn
@@ -55,11 +55,11 @@ Description: "Example of $RevisePatient operation that updates an existing Patie
 
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.value = "PHARM"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-org"
+* parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
 * parameter[enterer].name = "enterer"
 * parameter[enterer].valueIdentifier.value = "klgodfre"
-* parameter[enterer].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-user"
+* parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
 
 * parameter[patient].name = "patient"
 * parameter[patient].resource = PatientRP
@@ -76,11 +76,11 @@ Description: "Example of $RevisePatient operation that updates an existing Patie
 
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.value = "PHARM"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-org"
+* parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
 * parameter[enterer].name = "enterer"
 * parameter[enterer].valueIdentifier.value = "klgodfre"
-* parameter[enterer].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-user"
+* parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
 
 * parameter[patient].name = "patient"
 * parameter[patient].resource = PatientRP
@@ -100,7 +100,7 @@ Description: "Example of Revise response Metadata parameters"
 
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.value = "MOH_CRS"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-org"
+* parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
 Instance: RevisePatientResponse
 InstanceOf: BCReviseResponseBundle

@@ -9,7 +9,7 @@ Usage: #inline
 * country = "CA"
 * postalCode = "V6N2W2"
 // address validation status
-* extension.url = "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension"
+* extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-address-validation-status-extension"
 * extension.valueCode = #valid
 
 Instance: BCPatientAddress1Example
@@ -23,6 +23,6 @@ Usage: #inline
 * country = "CA"
 * postalCode = "V6N2R2"
 // address validation status
-* extension.url = "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension"
+* extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-address-validation-status-extension"
 * extension.valueCode = #invalid
 

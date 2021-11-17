@@ -9,14 +9,14 @@ Description: "Example of $GetDemographics operation"
 
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.value = "VPP"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-org"
+* parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
 * parameter[enterer].name = "enterer"
 * parameter[enterer].valueIdentifier.value = "bob@me.com"
-* parameter[enterer].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-userid"
+* parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-userid"
 
 * parameter[4].name = "identifier"
-* parameter[4].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-sri"
+* parameter[4].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
 * parameter[4].valueIdentifier.value = "912345892"
 * parameter[4].valueIdentifier.type.coding.code = #JHN
 * parameter[4].valueIdentifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
@@ -35,14 +35,14 @@ Description: "Example of $GetDemographics operation"
 
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.value = "VPP"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-org"
+* parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
 * parameter[enterer].name = "enterer"
 * parameter[enterer].valueIdentifier.value = "bob@me.com"
-* parameter[enterer].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-userid"
+* parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-userid"
 
 * parameter[4].name = "identifier"
-* parameter[4].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-sri"
+* parameter[4].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
 * parameter[4].valueIdentifier.value = "912345892"
 * parameter[4].valueIdentifier.type.coding.code = #JHN
 * parameter[4].valueIdentifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
@@ -65,7 +65,7 @@ Description: "Example of $FindCandidates response Metadata parameters"
 
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.value = "MOH_CRS"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-org"
+* parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
 Instance: GetDemographicsResponse
 InstanceOf: BCSearchResponseBundle
@@ -91,7 +91,7 @@ Instance: GetDemographicsINParameters
 InstanceOf: Parameters
 Description: "Example of $GetDemographics operation, IN parameters"
 * parameter[0].name = "identifier"
-* parameter[0].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-sri"
+* parameter[0].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
 * parameter[0].valueIdentifier.value = "9834902274"
 * parameter[0].valueIdentifier.type.coding.code = #JHN
 * parameter[0].valueIdentifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"

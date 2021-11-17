@@ -10,11 +10,11 @@ Description: "Example of $MergePatient operation."
 
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.value = "NHA"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-org"
+* parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
 * parameter[enterer].name = "enterer"
 * parameter[enterer].valueIdentifier.value = "nvida"
-* parameter[enterer].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-user"
+* parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
 
 * parameter[patient].name = "patient"
 * parameter[patient].resource = PatientMP
@@ -32,11 +32,11 @@ Description: "Example of $MergePatient operation that updates an existing Patien
 
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.value = "PHARM"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-org"
+* parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
 * parameter[enterer].name = "enterer"
 * parameter[enterer].valueIdentifier.value = "klgodfre"
-* parameter[enterer].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-user"
+* parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
 
 * parameter[patient].name = "patient"
 * parameter[patient].resource = PatientRP
@@ -56,7 +56,7 @@ Description: "Example of Merge response Metadata parameters"
 
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.value = "MOH_CRS"
-* parameter[sender].valueIdentifier.system = "http://hl7.org/fhir/ca-bc/client/bc-org"
+* parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
 Instance: MergePatientResponse
 InstanceOf: BCMergeResponseBundle

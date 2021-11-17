@@ -1,5 +1,5 @@
 id: fhir.ca-bc.client
-canonical: http://hl7.org/fhir/ca-bc/client
+canonical: http://hlth.gov.bc.ca/fhir/client
 name: BCHealthClientIdentityManagement
 title: BC Client Registry FHIR Implementation Guide
 description: FHIR Implementation Guide for BC MOH Client Registry
@@ -8,10 +8,10 @@ version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: Build CI
+jurisdiction: urn:iso:std:iso:3166#CA "Canada"
 publisher:
   name: BC Ministry of Health
   url: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health
-  jurisdiction: urn:iso:std:iso:3166#CA "Canada"
 
 menu:
   Home: index.html
@@ -56,13 +56,13 @@ pages:
     title: Identifiers
 
 groups:
-   Patient Profile:
-      name: PatientProfile
+   PatientProfile:
+      name: Patient Profile
       description: The BC Patient profile
       resources:
          - StructureDefinition/bc-patient
-   Supporting Profiles:
-      name: Profiles
+   SupportingProfiles:
+      name: Supporting Profiles
       description: Artifacts associated with resources that support Patient and Client Registry Operations
       resources:
          - StructureDefinition/bc-search-response-bundle
@@ -71,7 +71,7 @@ groups:
          - StructureDefinition/bc-metadata-parameters
          - StructureDefinition/bc-patient-business-parameters
    Operations:
-      name: OperationsDefinitions
+      name: Operation Definitions
       description: The defined Operations
       resources:
          - OperationDefinition/bc-patient-find-candidates
@@ -80,7 +80,7 @@ groups:
          - OperationDefinition/bc-patient-revise-newborn
          - OperationDefinition/bc-patient-merge
    RequestExamples:
-      name: RequestExamples
+      name: Request Examples
       description: A set of operation request examples
       resources:
          - Parameters/FindCandidates
@@ -92,7 +92,7 @@ groups:
          - Parameters/RevisePatient-Newborn
          - Parameters/MergePatient-TwoNonSurvivors
    ResponseExamples:
-      name: ResponseExamples
+      name: Response Examples
       description: A set of operation response examples
       resources:
          - Bundle/FindCandidatesResponse
