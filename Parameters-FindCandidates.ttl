@@ -5,14 +5,14 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://moh.fhir/bc-clientregistry/Parameters/FindCandidates> a fhir:Parameters;
+<http://hl7.org/fhir/ca-bc/client/Parameters/FindCandidates> a fhir:Parameters;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "FindCandidates"];
   fhir:Resource.meta [
      fhir:Meta.profile [
-       fhir:value "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters";
+       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters";
        fhir:index 0;
-       fhir:link <http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters>
+       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters>
      ]
   ];
   fhir:Parameters.parameter [
@@ -27,7 +27,7 @@
      fhir:index 2;
      fhir:Parameters.parameter.name [ fhir:value "sender" ];
      fhir:Parameters.parameter.valueIdentifier [
-       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-org" ];
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-org" ];
        fhir:Identifier.value [ fhir:value "VPP" ]
      ]
   ], [
@@ -92,8 +92,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://moh.fhir/bc-clientregistry/Parameters/FindCandidates.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+<http://hl7.org/fhir/ca-bc/client/Parameters/FindCandidates.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/ca-bc/client/Parameters/FindCandidates.ttl> .
 
 # -------------------------------------------------------------------------------------
 

@@ -3,7 +3,7 @@
 <Parameters xmlns="http://hl7.org/fhir">
   <id value="RevisePatient-New"/>
   <meta>
-    <profile value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-parameters"/>
+    <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-parameters"/>
   </meta>
   <parameter>
     <name value="messageId"/>
@@ -16,7 +16,7 @@
   <parameter>
     <name value="sender"/>
     <valueIdentifier>
-      <system value="http://hl7.org/fhir/bc-hcim/bc-org"/>
+      <system value="http://hl7.org/fhir/ca-bc/client/bc-org"/>
       <value value="PHARM"/>
     </valueIdentifier>
   </parameter>
@@ -26,13 +26,8 @@
       <Patient>
         <id value="PatientRP-New"/>
         <meta>
-          <profile value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient"/>
+          <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"/>
         </meta>
-        <extension url="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-dates-extension">
-          <valuePeriod>
-            <start value="2021-11-02T22:00:17-08:00"/>
-          </valuePeriod>
-        </extension>
         <name>
           <use value="usual"/>
           <family value="BARNEY"/>
@@ -60,7 +55,7 @@
   <parameter>
     <name value="enterer"/>
     <valueIdentifier>
-      <system value="http://hl7.org/fhir/bc-hcim/bc-user"/>
+      <system value="http://hl7.org/fhir/ca-bc/client/bc-user"/>
       <value value="klgodfre"/>
     </valueIdentifier>
   </parameter>

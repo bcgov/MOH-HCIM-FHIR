@@ -2,9 +2,27 @@
 
 <Patient xmlns="http://hl7.org/fhir">
   <id value="Patient2Response"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"/>
+  </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: BAILEY PURPLE </p><p><b>telecom</b>: ph: 2504283447(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1985-12-14</p><p><b>address</b>: PO BOX 5 CRESTON BC V0B 1G0 CA </p></div>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient2Response" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">BCPatient</a></p></div><p><b>BC Patient business dates</b>: Feb 7, 2019, 9:29:17 PM --&gt; (ongoing)</p><p><b>BC Patient Birth Date business date</b>: Oct 17, 2019, 11:29:17 AM --&gt; (ongoing)</p><p><b>BC Patient Gender business date</b>: 1973-05-18 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: BAILEY PURPLE </p><p><b>telecom</b>: ph: 2504283447(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1985-12-14</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>432 Douglas St Victoria BC V6N2R2 CA </li></ul></div>
   </text>
+  <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-dates-extension">
+    <valuePeriod>
+      <start value="2019-02-07T13:29:17-08:00"/>
+    </valuePeriod>
+  </extension>
+  <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-birth-date-business-dates-extension">
+    <valuePeriod>
+      <start value="2019-10-17T03:29:17-08:00"/>
+    </valuePeriod>
+  </extension>
+  <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-gender-business-dates-extension">
+    <valuePeriod>
+      <start value="1973-05-18"/>
+    </valuePeriod>
+  </extension>
   <identifier>
     <type>
       <coding>
@@ -12,10 +30,11 @@
         <code value="JHN"/>
       </coding>
     </type>
-    <system value="http://hl7.org/fhir/bc-hcim/bc-sri"/>
+    <system value="http://hl7.org/fhir/ca-bc/client/bc-sri"/>
     <value value="9999999999"/>
   </identifier>
   <name>
+    <use value="usual"/>
     <family value="PURPLE"/>
     <given value="BAILEY"/>
   </name>
@@ -27,11 +46,25 @@
   <gender value="female"/>
   <birthDate value="1985-12-14"/>
   <address>
-    <type value="postal"/>
-    <line value="PO BOX 5"/>
-    <city value="CRESTON"/>
+    <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension">
+      <valueCode value="valid"/>
+    </extension>
+    <type value="physical"/>
+    <line value="123 FRONT ST"/>
+    <city value="VICTORIA"/>
     <state value="BC"/>
-    <postalCode value="V0B 1G0"/>
+    <postalCode value="V6N2W2"/>
+    <country value="CA"/>
+  </address>
+  <address>
+    <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension">
+      <valueCode value="invalid"/>
+    </extension>
+    <type value="postal"/>
+    <line value="432 Douglas St"/>
+    <city value="Victoria"/>
+    <state value="BC"/>
+    <postalCode value="V6N2R2"/>
     <country value="CA"/>
   </address>
 </Patient>

@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters> a fhir:StructureDefinition;
+<http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters> a fhir:StructureDefinition;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "bc-metadata-parameters"];
   fhir:DomainResource.text [
@@ -17,11 +17,21 @@
      fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-category" ];
      fhir:Extension.valueString [ fhir:value "Foundation.Other" ]
   ];
-  fhir:StructureDefinition.url [ fhir:value "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"];
+  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters"];
   fhir:StructureDefinition.version [ fhir:value "0.1.0"];
   fhir:StructureDefinition.name [ fhir:value "BCMetadataParameters"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2021-11-10T18:31:12+00:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2021-11-17T18:19:53+00:00"^^xsd:dateTime];
+  fhir:StructureDefinition.publisher [ fhir:value "BC Ministry of Health"];
+  fhir:StructureDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "BC Ministry of Health" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health" ]
+     ]
+  ];
   fhir:StructureDefinition.description [ fhir:value "Parameters profile for BC meta data"];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [
@@ -2763,8 +2773,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+<http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/ca-bc/client/StructureDefinition/bc-metadata-parameters.ttl> .
 
 # -------------------------------------------------------------------------------------
 

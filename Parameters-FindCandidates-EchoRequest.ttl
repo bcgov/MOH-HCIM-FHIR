@@ -1,0 +1,100 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ca-bc/client/Parameters/FindCandidates-EchoRequest> a fhir:Parameters;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "FindCandidates-EchoRequest"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-request-metadata-parameters";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-request-metadata-parameters>
+     ]
+  ];
+  fhir:Parameters.parameter [
+     fhir:index 0;
+     fhir:Parameters.parameter.name [ fhir:value "messageId" ];
+     fhir:Parameters.parameter.valueString [ fhir:value "98028b44-882a-4c72-8c92-b87d916147e1" ]
+  ], [
+     fhir:index 1;
+     fhir:Parameters.parameter.name [ fhir:value "messageDateTime" ];
+     fhir:Parameters.parameter.valueDateTime [ fhir:value "2015-02-07T13:28:17-08:00"^^xsd:dateTime ]
+  ], [
+     fhir:index 2;
+     fhir:Parameters.parameter.name [ fhir:value "sender" ];
+     fhir:Parameters.parameter.valueIdentifier [
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-org" ];
+       fhir:Identifier.value [ fhir:value "VPP" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Parameters.parameter.name [ fhir:value "address" ];
+     fhir:Parameters.parameter.valueAddress [
+       fhir:Address.type [ fhir:value "postal" ];
+       fhir:Address.line [
+         fhir:value "123 Any St";
+         fhir:index 0
+       ], [
+         fhir:value "line 2";
+         fhir:index 1
+       ], [
+         fhir:value "line 3";
+         fhir:index 2
+       ], [
+         fhir:value "line 4";
+         fhir:index 3
+       ];
+       fhir:Address.city [ fhir:value "Victoria" ];
+       fhir:Address.state [ fhir:value "BC" ];
+       fhir:Address.postalCode [ fhir:value "V1V1V1" ];
+       fhir:Address.country [ fhir:value "CA" ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Parameters.parameter.name [ fhir:value "gender" ];
+     fhir:Parameters.parameter.valueCode [ fhir:value "male" ]
+  ], [
+     fhir:index 5;
+     fhir:Parameters.parameter.name [ fhir:value "birthDate" ];
+     fhir:Parameters.parameter.valueDate [ fhir:value "1959-12-30"^^xsd:date ]
+  ], [
+     fhir:index 6;
+     fhir:Parameters.parameter.name [ fhir:value "deceased-date" ];
+     fhir:Parameters.parameter.valueDateTime [ fhir:value "2005-05-05"^^xsd:date ]
+  ], [
+     fhir:index 7;
+     fhir:Parameters.parameter.name [ fhir:value "name" ];
+     fhir:Parameters.parameter.valueHumanName [
+       fhir:HumanName.use [ fhir:value "official" ];
+       fhir:HumanName.family [ fhir:value "Purple" ];
+       fhir:HumanName.given [
+         fhir:value "Barney";
+         fhir:index 0
+       ]
+     ]
+  ], [
+     fhir:index 8;
+     fhir:Parameters.parameter.name [ fhir:value "telecom" ];
+     fhir:Parameters.parameter.valueContactPoint [
+       fhir:ContactPoint.system [ fhir:value "phone" ];
+       fhir:ContactPoint.value [ fhir:value "1234567890" ];
+       fhir:ContactPoint.use [ fhir:value "home" ]
+     ]
+  ], [
+     fhir:index 9;
+     fhir:Parameters.parameter.name [ fhir:value "identifiersOnly" ];
+     fhir:Parameters.parameter.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/ca-bc/client/Parameters/FindCandidates-EchoRequest.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/ca-bc/client/Parameters/FindCandidates-EchoRequest.ttl> .
+
+# -------------------------------------------------------------------------------------
+

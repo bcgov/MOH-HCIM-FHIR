@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Parameters xmlns="http://hl7.org/fhir">
+  <id value="MergePatient-EchoRequest"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-parameters"/>
+  </meta>
+  <parameter>
+    <name value="messageId"/>
+    <valueString value="98028b44-882a-4c72-8c92-b87d916147e1"/>
+  </parameter>
+  <parameter>
+    <name value="messageDateTime"/>
+    <valueDateTime value="2021-11-02T13:28:17-08:00"/>
+  </parameter>
+  <parameter>
+    <name value="sender"/>
+    <valueIdentifier>
+      <system value="http://hl7.org/fhir/ca-bc/client/bc-org"/>
+      <value value="PHARM"/>
+    </valueIdentifier>
+  </parameter>
+  <parameter>
+    <name value="patient"/>
+    <resource>
+      <Patient>
+        <id value="PatientRP"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"/>
+        </meta>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="JHN"/>
+            </coding>
+          </type>
+          <system value="http://hl7.org/fhir/ca-bc/client/bc-sri"/>
+          <value value="9999999999"/>
+        </identifier>
+        <identifier>
+          <system value="http://hl7.org/fhir/ca-bc/client/bc-sri"/>
+          <value value="CER2234"/>
+          <assigner>
+            <display value="VPP_CER"/>
+          </assigner>
+        </identifier>
+        <identifier>
+          <system value="http://hl7.org/fhir/ca-bc/client/bc-ssri"/>
+          <value value="VCHA234"/>
+          <assigner>
+            <display value="VPP_LION"/>
+          </assigner>
+        </identifier>
+        <identifier>
+          <system value="http://hl7.org/fhir/ca-bc/client/bc-out-of-province-sri"/>
+          <value value="90348733a"/>
+          <assigner>
+            <display value="MB"/>
+          </assigner>
+        </identifier>
+        <name>
+          <use value="official"/>
+          <family value="BARNEY"/>
+          <given value="PURPLE"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="2505554848"/>
+          <use value="home"/>
+        </telecom>
+        <gender value="male"/>
+        <birthDate value="1940-06-06"/>
+        <deceasedBoolean value="false"/>
+        <address>
+          <type value="physical"/>
+          <line value="636 YELLOW BRICK RD"/>
+          <city value="PRINCE GEORGE"/>
+          <state value="BC"/>
+          <postalCode value="V8W 3P9"/>
+          <country value="CA"/>
+        </address>
+      </Patient>
+    </resource>
+  </parameter>
+  <parameter>
+    <name value="enterer"/>
+    <valueIdentifier>
+      <system value="http://hl7.org/fhir/ca-bc/client/bc-user"/>
+      <value value="klgodfre"/>
+    </valueIdentifier>
+  </parameter>
+</Parameters>

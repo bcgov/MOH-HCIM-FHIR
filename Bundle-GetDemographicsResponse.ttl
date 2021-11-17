@@ -5,9 +5,16 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://moh.fhir/bc-clientregistry/Bundle/GetDemographicsResponse> a fhir:Bundle;
+<http://hl7.org/fhir/ca-bc/client/Bundle/GetDemographicsResponse> a fhir:Bundle;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "GetDemographicsResponse"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-search-response-bundle";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-search-response-bundle>
+     ]
+  ];
   fhir:Bundle.identifier [
      fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
      fhir:Identifier.value [ fhir:value "urn:uuid:b3a12f0c-a332-4ec9-94b9-d8539a02df48" ]
@@ -16,25 +23,29 @@
   fhir:Bundle.timestamp [ fhir:value "2011-09-07T12:18:23.000-07:00"^^xsd:dateTime];
   fhir:Bundle.entry [
      fhir:index 0;
-     fhir:Bundle.entry.fullUrl [ fhir:value "61061501-9953-4fba-87fe-6ae30e79da33" ];
-     fhir:Bundle.entry.resource <61061501-9953-4fba-87fe-6ae30e79da33>
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33" ];
+     fhir:Bundle.entry.resource <urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33>
   ], [
      fhir:index 1;
      fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:753f756d-63b2-4086-86a4-d7768fd5374a" ];
      fhir:Bundle.entry.resource <urn:uuid:753f756d-63b2-4086-86a4-d7768fd5374a>
   ], [
      fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1" ];
+     fhir:Bundle.entry.resource <urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1>
+  ], [
+     fhir:index 3;
      fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c" ];
      fhir:Bundle.entry.resource <urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c>
   ] .
 
-<61061501-9953-4fba-87fe-6ae30e79da33> a fhir:Parameters;
+<urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33> a fhir:Parameters;
   fhir:Resource.id [ fhir:value "GetDemographics-ResponseMetadata"];
   fhir:Resource.meta [
      fhir:Meta.profile [
-       fhir:value "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters";
+       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters";
        fhir:index 0;
-       fhir:link <http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters>
+       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters>
      ]
   ];
   fhir:Parameters.parameter [
@@ -49,7 +60,7 @@
      fhir:index 2;
      fhir:Parameters.parameter.name [ fhir:value "sender" ];
      fhir:Parameters.parameter.valueIdentifier [
-       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-org" ];
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-org" ];
        fhir:Identifier.value [ fhir:value "MOH_CRS" ]
      ]
   ], [
@@ -59,12 +70,12 @@
   ] .
 
 <urn:uuid:753f756d-63b2-4086-86a4-d7768fd5374a> a fhir:Parameters;
-  fhir:Resource.id [ fhir:value "GetDemographics"];
+  fhir:Resource.id [ fhir:value "GetDemographics-EchoRequest"];
   fhir:Resource.meta [
      fhir:Meta.profile [
-       fhir:value "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters";
+       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-request-metadata-parameters";
        fhir:index 0;
-       fhir:link <http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters>
+       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-request-metadata-parameters>
      ]
   ];
   fhir:Parameters.parameter [
@@ -79,14 +90,14 @@
      fhir:index 2;
      fhir:Parameters.parameter.name [ fhir:value "sender" ];
      fhir:Parameters.parameter.valueIdentifier [
-       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-org" ];
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-org" ];
        fhir:Identifier.value [ fhir:value "VPP" ]
      ]
   ], [
      fhir:index 3;
      fhir:Parameters.parameter.name [ fhir:value "enterer" ];
      fhir:Parameters.parameter.valueIdentifier [
-       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-userid" ];
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-userid" ];
        fhir:Identifier.value [ fhir:value "bob@me.com" ]
      ]
   ], [
@@ -100,20 +111,64 @@
            fhir:Coding.code [ fhir:value "JHN" ]
          ]
        ];
-       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-sri" ];
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
        fhir:Identifier.value [ fhir:value "912345892" ]
      ]
   ], [
      fhir:index 5;
      fhir:Parameters.parameter.name [ fhir:value "history" ];
-     fhir:Parameters.parameter.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+     fhir:Parameters.parameter.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+  ] .
+
+<urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1> a fhir:OperationOutcome;
+  fhir:Resource.id [ fhir:value "SearchOperationOutcome"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-operation-outcome";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-operation-outcome>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"SearchOperationOutcome\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-operation-outcome.html\">BCOperationOutcome</a></p></div><blockquote><p><b>issue</b></p><p><b>severity</b>: warning</p><p><b>code</b>: business-rule</p><p><b>details</b>: Warning: The Find Candidates Patient name has been modified to filter out invalid characters. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#BCHCIM.GD.1.0017)</span></p></blockquote><blockquote><p><b>issue</b></p><p><b>severity</b>: error</p><p><b>code</b>: business-rule</p><p><b>details</b>: The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ... <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#BCHCIM.GD.1.0017)</span></p></blockquote></div>"
+  ];
+  fhir:OperationOutcome.issue [
+     fhir:index 0;
+     fhir:OperationOutcome.issue.severity [ fhir:value "warning" ];
+     fhir:OperationOutcome.issue.code [ fhir:value "business-rule" ];
+     fhir:OperationOutcome.issue.details [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "BCHCIM.GD.1.0017" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Warning: The Find Candidates Patient name has been modified to filter out invalid characters." ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:OperationOutcome.issue.severity [ fhir:value "error" ];
+     fhir:OperationOutcome.issue.code [ fhir:value "business-rule" ];
+     fhir:OperationOutcome.issue.details [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "BCHCIM.GD.1.0017" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ..." ]
+     ]
   ] .
 
 <urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c> a fhir:Patient;
   fhir:Resource.id [ fhir:value "PatientDemographicsResponse"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient>
+     ]
+  ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: JILLIAN DAWN THIRD NAME COOK-ADAMS </p><p><b>telecom</b>: ph: 6048883322(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1972-10-16</p><p><b>address</b>: </p><ul><li>321 SUNSHINE PL NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>1824 CROSS RD LINE 2 LINE 3 VANCOUVER BC V9L 4H2 </li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"PatientDemographicsResponse\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">BCPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9983652763</p><p><b>name</b>: JILLIAN DAWN THIRD NAME COOK-ADAMS </p><p><b>telecom</b>: ph: 6048883322(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1972-10-16</p><p><b>address</b>: </p><ul><li>321 SUNSHINE PL NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>1824 CROSS RD LINE 2 LINE 3 VANCOUVER BC V9L 4H2 </li></ul></div>"
   ];
   fhir:Patient.identifier [
      fhir:index 0;
@@ -124,11 +179,12 @@
          fhir:Coding.code [ fhir:value "JHN" ]
        ]
      ];
-     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-sri" ];
-     fhir:Identifier.value [ fhir:value "9999999999" ]
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
+     fhir:Identifier.value [ fhir:value "9983652763" ]
   ];
   fhir:Patient.name [
      fhir:index 0;
+     fhir:HumanName.use [ fhir:value "usual" ];
      fhir:HumanName.family [ fhir:value "COOK-ADAMS" ];
      fhir:HumanName.given [
        fhir:value "JILLIAN";
@@ -184,8 +240,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://moh.fhir/bc-clientregistry/Bundle/GetDemographicsResponse.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+<http://hl7.org/fhir/ca-bc/client/Bundle/GetDemographicsResponse.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/ca-bc/client/Bundle/GetDemographicsResponse.ttl> .
 
 # -------------------------------------------------------------------------------------
 

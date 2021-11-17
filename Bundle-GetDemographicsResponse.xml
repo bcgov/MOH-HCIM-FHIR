@@ -2,6 +2,9 @@
 
 <Bundle xmlns="http://hl7.org/fhir">
   <id value="GetDemographicsResponse"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-search-response-bundle"/>
+  </meta>
   <identifier>
     <system value="urn:ietf:rfc:3986"/>
     <value value="urn:uuid:b3a12f0c-a332-4ec9-94b9-d8539a02df48"/>
@@ -9,12 +12,12 @@
   <type value="searchset"/>
   <timestamp value="2011-09-07T12:18:23.000-07:00"/>
   <entry>
-    <fullUrl value="61061501-9953-4fba-87fe-6ae30e79da33"/>
+    <fullUrl value="urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33"/>
     <resource>
       <Parameters>
         <id value="GetDemographics-ResponseMetadata"/>
         <meta>
-          <profile value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"/>
+          <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters"/>
         </meta>
         <parameter>
           <name value="messageId"/>
@@ -27,7 +30,7 @@
         <parameter>
           <name value="sender"/>
           <valueIdentifier>
-            <system value="http://hl7.org/fhir/bc-hcim/bc-org"/>
+            <system value="http://hl7.org/fhir/ca-bc/client/bc-org"/>
             <value value="MOH_CRS"/>
           </valueIdentifier>
         </parameter>
@@ -42,9 +45,9 @@
     <fullUrl value="urn:uuid:753f756d-63b2-4086-86a4-d7768fd5374a"/>
     <resource>
       <Parameters>
-        <id value="GetDemographics"/>
+        <id value="GetDemographics-EchoRequest"/>
         <meta>
-          <profile value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"/>
+          <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-request-metadata-parameters"/>
         </meta>
         <parameter>
           <name value="messageId"/>
@@ -57,14 +60,14 @@
         <parameter>
           <name value="sender"/>
           <valueIdentifier>
-            <system value="http://hl7.org/fhir/bc-hcim/bc-org"/>
+            <system value="http://hl7.org/fhir/ca-bc/client/bc-org"/>
             <value value="VPP"/>
           </valueIdentifier>
         </parameter>
         <parameter>
           <name value="enterer"/>
           <valueIdentifier>
-            <system value="http://hl7.org/fhir/bc-hcim/bc-userid"/>
+            <system value="http://hl7.org/fhir/ca-bc/client/bc-userid"/>
             <value value="bob@me.com"/>
           </valueIdentifier>
         </parameter>
@@ -77,15 +80,49 @@
                 <code value="JHN"/>
               </coding>
             </type>
-            <system value="http://hl7.org/fhir/bc-hcim/bc-sri"/>
+            <system value="http://hl7.org/fhir/ca-bc/client/bc-sri"/>
             <value value="912345892"/>
           </valueIdentifier>
         </parameter>
         <parameter>
           <name value="history"/>
-          <valueBoolean value="true"/>
+          <valueBoolean value="false"/>
         </parameter>
       </Parameters>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"/>
+    <resource>
+      <OperationOutcome>
+        <id value="SearchOperationOutcome"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-operation-outcome"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "SearchOperationOutcome" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-operation-outcome.html">BCOperationOutcome</a></p></div><blockquote><p><b>issue</b></p><p><b>severity</b>: warning</p><p><b>code</b>: business-rule</p><p><b>details</b>: Warning: The Find Candidates Patient name has been modified to filter out invalid characters. <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#BCHCIM.GD.1.0017)</span></p></blockquote><blockquote><p><b>issue</b></p><p><b>severity</b>: error</p><p><b>code</b>: business-rule</p><p><b>details</b>: The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ... <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#BCHCIM.GD.1.0017)</span></p></blockquote></div>
+        </text>
+        <issue>
+          <severity value="warning"/>
+          <code value="business-rule"/>
+          <details>
+            <coding>
+              <code value="BCHCIM.GD.1.0017"/>
+            </coding>
+            <text value="Warning: The Find Candidates Patient name has been modified to filter out invalid characters."/>
+          </details>
+        </issue>
+        <issue>
+          <severity value="error"/>
+          <code value="business-rule"/>
+          <details>
+            <coding>
+              <code value="BCHCIM.GD.1.0017"/>
+            </coding>
+            <text value="The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ..."/>
+          </details>
+        </issue>
+      </OperationOutcome>
     </resource>
   </entry>
   <entry>
@@ -93,8 +130,11 @@
     <resource>
       <Patient>
         <id value="PatientDemographicsResponse"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"/>
+        </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: JILLIAN DAWN THIRD NAME COOK-ADAMS </p><p><b>telecom</b>: ph: 6048883322(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1972-10-16</p><p><b>address</b>: </p><ul><li>321 SUNSHINE PL NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>1824 CROSS RD LINE 2 LINE 3 VANCOUVER BC V9L 4H2 </li></ul></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "PatientDemographicsResponse" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">BCPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9983652763</p><p><b>name</b>: JILLIAN DAWN THIRD NAME COOK-ADAMS </p><p><b>telecom</b>: ph: 6048883322(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1972-10-16</p><p><b>address</b>: </p><ul><li>321 SUNSHINE PL NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>1824 CROSS RD LINE 2 LINE 3 VANCOUVER BC V9L 4H2 </li></ul></div>
         </text>
         <identifier>
           <type>
@@ -103,10 +143,11 @@
               <code value="JHN"/>
             </coding>
           </type>
-          <system value="http://hl7.org/fhir/bc-hcim/bc-sri"/>
-          <value value="9999999999"/>
+          <system value="http://hl7.org/fhir/ca-bc/client/bc-sri"/>
+          <value value="9983652763"/>
         </identifier>
         <name>
+          <use value="usual"/>
           <family value="COOK-ADAMS"/>
           <given value="JILLIAN"/>
           <given value="DAWN"/>

@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ca-bc/client/OperationOutcome/SearchOperationOutcome> a fhir:OperationOutcome;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "SearchOperationOutcome"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-operation-outcome";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-operation-outcome>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"SearchOperationOutcome\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-operation-outcome.html\">BCOperationOutcome</a></p></div><blockquote><p><b>issue</b></p><p><b>severity</b>: warning</p><p><b>code</b>: business-rule</p><p><b>details</b>: Warning: The Find Candidates Patient name has been modified to filter out invalid characters. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#BCHCIM.GD.1.0017)</span></p></blockquote><blockquote><p><b>issue</b></p><p><b>severity</b>: error</p><p><b>code</b>: business-rule</p><p><b>details</b>: The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ... <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#BCHCIM.GD.1.0017)</span></p></blockquote></div>"
+  ];
+  fhir:OperationOutcome.issue [
+     fhir:index 0;
+     fhir:OperationOutcome.issue.severity [ fhir:value "warning" ];
+     fhir:OperationOutcome.issue.code [ fhir:value "business-rule" ];
+     fhir:OperationOutcome.issue.details [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "BCHCIM.GD.1.0017" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Warning: The Find Candidates Patient name has been modified to filter out invalid characters." ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:OperationOutcome.issue.severity [ fhir:value "error" ];
+     fhir:OperationOutcome.issue.code [ fhir:value "business-rule" ];
+     fhir:OperationOutcome.issue.details [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "BCHCIM.GD.1.0017" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ..." ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/ca-bc/client/OperationOutcome/SearchOperationOutcome.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/ca-bc/client/OperationOutcome/SearchOperationOutcome.ttl> .
+
+# -------------------------------------------------------------------------------------
+

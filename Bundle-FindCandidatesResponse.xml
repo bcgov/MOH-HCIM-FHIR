@@ -2,6 +2,9 @@
 
 <Bundle xmlns="http://hl7.org/fhir">
   <id value="FindCandidatesResponse"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-search-response-bundle"/>
+  </meta>
   <identifier>
     <system value="urn:ietf:rfc:3986"/>
     <value value="urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f7a3b"/>
@@ -19,7 +22,7 @@
       <Parameters>
         <id value="FindCandidates-ResponseMetadata"/>
         <meta>
-          <profile value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"/>
+          <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters"/>
         </meta>
         <parameter>
           <name value="messageId"/>
@@ -32,7 +35,7 @@
         <parameter>
           <name value="sender"/>
           <valueIdentifier>
-            <system value="http://hl7.org/fhir/bc-hcim/bc-org"/>
+            <system value="http://hl7.org/fhir/ca-bc/client/bc-org"/>
             <value value="MOH_CRS"/>
           </valueIdentifier>
         </parameter>
@@ -47,9 +50,9 @@
     <fullUrl value="urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1"/>
     <resource>
       <Parameters>
-        <id value="FindCandidates"/>
+        <id value="FindCandidates-EchoRequest"/>
         <meta>
-          <profile value="http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"/>
+          <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-request-metadata-parameters"/>
         </meta>
         <parameter>
           <name value="messageId"/>
@@ -62,7 +65,7 @@
         <parameter>
           <name value="sender"/>
           <valueIdentifier>
-            <system value="http://hl7.org/fhir/bc-hcim/bc-org"/>
+            <system value="http://hl7.org/fhir/ca-bc/client/bc-org"/>
             <value value="VPP"/>
           </valueIdentifier>
         </parameter>
@@ -116,13 +119,65 @@
     </resource>
   </entry>
   <entry>
+    <fullUrl value="urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"/>
+    <resource>
+      <OperationOutcome>
+        <id value="SearchOperationOutcome"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-operation-outcome"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "SearchOperationOutcome" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-operation-outcome.html">BCOperationOutcome</a></p></div><blockquote><p><b>issue</b></p><p><b>severity</b>: warning</p><p><b>code</b>: business-rule</p><p><b>details</b>: Warning: The Find Candidates Patient name has been modified to filter out invalid characters. <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#BCHCIM.GD.1.0017)</span></p></blockquote><blockquote><p><b>issue</b></p><p><b>severity</b>: error</p><p><b>code</b>: business-rule</p><p><b>details</b>: The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ... <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#BCHCIM.GD.1.0017)</span></p></blockquote></div>
+        </text>
+        <issue>
+          <severity value="warning"/>
+          <code value="business-rule"/>
+          <details>
+            <coding>
+              <code value="BCHCIM.GD.1.0017"/>
+            </coding>
+            <text value="Warning: The Find Candidates Patient name has been modified to filter out invalid characters."/>
+          </details>
+        </issue>
+        <issue>
+          <severity value="error"/>
+          <code value="business-rule"/>
+          <details>
+            <coding>
+              <code value="BCHCIM.GD.1.0017"/>
+            </coding>
+            <text value="The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ..."/>
+          </details>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
     <fullUrl value="urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"/>
     <resource>
       <Patient>
         <id value="Patient0Response"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"/>
+        </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Jurisdictional health number: 9999999999, id: CER2234, id: VCHA234, id: 90348733a</p><p><b>name</b>: PURPLE BARNEY </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-06-06</p><p><b>deceased</b>: false</p><p><b>address</b>: 666 YELLOW BRICK RD PRINCE GEORGE BC V8W 3P9 CA </p></div>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient0Response" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">BCPatient</a></p></div><p><b>BC Patient business dates</b>: Feb 7, 2019, 9:29:17 PM --&gt; (ongoing)</p><p><b>BC Patient Birth Date business date</b>: Oct 17, 2020, 11:29:17 AM --&gt; (ongoing)</p><p><b>BC Patient Gender business date</b>: 1973-05-18 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9999999999, id: CER2234, id: VCHA234, id: 90348733a</p><p><b>name</b>: PURPLE BARNEY </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-06-06</p><p><b>deceased</b>: false</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>432 Douglas St Victoria BC V6N2R2 CA </li></ul></div>
         </text>
+        <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-dates-extension">
+          <valuePeriod>
+            <start value="2019-02-07T13:29:17-08:00"/>
+          </valuePeriod>
+        </extension>
+        <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-birth-date-business-dates-extension">
+          <valuePeriod>
+            <start value="2020-10-17T03:29:17-08:00"/>
+          </valuePeriod>
+        </extension>
+        <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-gender-business-dates-extension">
+          <valuePeriod>
+            <start value="1973-05-18"/>
+          </valuePeriod>
+        </extension>
         <identifier>
           <type>
             <coding>
@@ -130,31 +185,32 @@
               <code value="JHN"/>
             </coding>
           </type>
-          <system value="http://hl7.org/fhir/bc-hcim/bc-sri"/>
+          <system value="http://hl7.org/fhir/ca-bc/client/bc-sri"/>
           <value value="9999999999"/>
         </identifier>
         <identifier>
-          <system value="http://hl7.org/fhir/bc-hcim/bc-sri"/>
+          <system value="http://hl7.org/fhir/ca-bc/client/bc-sri"/>
           <value value="CER2234"/>
           <assigner>
             <display value="VPP_CER"/>
           </assigner>
         </identifier>
         <identifier>
-          <system value="http://hl7.org/fhir/bc-hcim/bc-ssri"/>
+          <system value="http://hl7.org/fhir/ca-bc/client/bc-ssri"/>
           <value value="VCHA234"/>
           <assigner>
             <display value="VPP_LION"/>
           </assigner>
         </identifier>
         <identifier>
-          <system value="http://hl7.org/fhir/bc-hcim/bc-out-of-province-sri"/>
+          <system value="http://hl7.org/fhir/ca-bc/client/bc-out-of-province-sri"/>
           <value value="90348733a"/>
           <assigner>
             <display value="MB"/>
           </assigner>
         </identifier>
         <name>
+          <use value="usual"/>
           <family value="BARNEY"/>
           <given value="PURPLE"/>
         </name>
@@ -167,11 +223,25 @@
         <birthDate value="1940-06-06"/>
         <deceasedBoolean value="false"/>
         <address>
+          <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension">
+            <valueCode value="valid"/>
+          </extension>
           <type value="physical"/>
-          <line value="666 YELLOW BRICK RD"/>
-          <city value="PRINCE GEORGE"/>
+          <line value="123 FRONT ST"/>
+          <city value="VICTORIA"/>
           <state value="BC"/>
-          <postalCode value="V8W 3P9"/>
+          <postalCode value="V6N2W2"/>
+          <country value="CA"/>
+        </address>
+        <address>
+          <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension">
+            <valueCode value="invalid"/>
+          </extension>
+          <type value="postal"/>
+          <line value="432 Douglas St"/>
+          <city value="Victoria"/>
+          <state value="BC"/>
+          <postalCode value="V6N2R2"/>
           <country value="CA"/>
         </address>
       </Patient>
@@ -185,9 +255,40 @@
     <resource>
       <Patient>
         <id value="Patient1Response"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"/>
+        </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: SARAH LYNN PURPLE </p><p><b>telecom</b>: ph: 2505557841(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1973-05-18</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>123 Front St Victoria BC V6N2W2 CA </li></ul></div>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient1Response" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">BCPatient</a></p></div><p><b>BC Patient business dates</b>: Feb 7, 2019, 9:29:17 PM --&gt; (ongoing)</p><p><b>BC Patient Birth Date business date</b>: Oct 17, 2018, 11:29:17 AM --&gt; (ongoing)</p><p><b>BC Patient Death Date business date</b>: Oct 17, 2020, 11:29:17 AM --&gt; (ongoing)</p><p><b>BC Patient death date</b>: 2021-11-17</p><p><b>BC Patient Death Date flag business date</b>: 2021-11-17 --&gt; (ongoing)</p><p><b>BC Patient Gender business date</b>: 1973-05-18 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: SARAH LYNN PURPLE (OFFICIAL)</p><p><b>telecom</b>: ph: 2505557841(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1973-05-18</p><p><b>deceased</b>: true</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>432 Douglas St Victoria BC V6N2R2 CA </li></ul></div>
         </text>
+        <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-dates-extension">
+          <valuePeriod>
+            <start value="2019-02-07T13:29:17-08:00"/>
+          </valuePeriod>
+        </extension>
+        <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-birth-date-business-dates-extension">
+          <valuePeriod>
+            <start value="2018-10-17T03:29:17-08:00"/>
+          </valuePeriod>
+        </extension>
+        <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-death-date-business-dates-extension">
+          <valuePeriod>
+            <start value="2020-10-17T03:29:17-08:00"/>
+          </valuePeriod>
+        </extension>
+        <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-death-date-extension">
+          <valueDateTime value="2021-11-17"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-death-date-flag-business-dates-extension">
+          <valuePeriod>
+            <start value="2021-11-17"/>
+          </valuePeriod>
+        </extension>
+        <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-gender-business-dates-extension">
+          <valuePeriod>
+            <start value="1973-05-18"/>
+          </valuePeriod>
+        </extension>
         <identifier>
           <type>
             <coding>
@@ -195,10 +296,11 @@
               <code value="JHN"/>
             </coding>
           </type>
-          <system value="http://hl7.org/fhir/bc-hcim/bc-sri"/>
+          <system value="http://hl7.org/fhir/ca-bc/client/bc-sri"/>
           <value value="9999999999"/>
         </identifier>
         <name>
+          <use value="official"/>
           <family value="PURPLE"/>
           <given value="SARAH"/>
           <given value="LYNN"/>
@@ -210,7 +312,11 @@
         </telecom>
         <gender value="female"/>
         <birthDate value="1973-05-18"/>
+        <deceasedBoolean value="true"/>
         <address>
+          <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension">
+            <valueCode value="valid"/>
+          </extension>
           <type value="physical"/>
           <line value="123 FRONT ST"/>
           <city value="VICTORIA"/>
@@ -219,11 +325,14 @@
           <country value="CA"/>
         </address>
         <address>
+          <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension">
+            <valueCode value="invalid"/>
+          </extension>
           <type value="postal"/>
-          <line value="123 Front St"/>
+          <line value="432 Douglas St"/>
           <city value="Victoria"/>
           <state value="BC"/>
-          <postalCode value="V6N2W2"/>
+          <postalCode value="V6N2R2"/>
           <country value="CA"/>
         </address>
       </Patient>
@@ -237,9 +346,27 @@
     <resource>
       <Patient>
         <id value="Patient2Response"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"/>
+        </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: BAILEY PURPLE </p><p><b>telecom</b>: ph: 2504283447(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1985-12-14</p><p><b>address</b>: PO BOX 5 CRESTON BC V0B 1G0 CA </p></div>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient2Response" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">BCPatient</a></p></div><p><b>BC Patient business dates</b>: Feb 7, 2019, 9:29:17 PM --&gt; (ongoing)</p><p><b>BC Patient Birth Date business date</b>: Oct 17, 2019, 11:29:17 AM --&gt; (ongoing)</p><p><b>BC Patient Gender business date</b>: 1973-05-18 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: BAILEY PURPLE </p><p><b>telecom</b>: ph: 2504283447(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1985-12-14</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>432 Douglas St Victoria BC V6N2R2 CA </li></ul></div>
         </text>
+        <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-dates-extension">
+          <valuePeriod>
+            <start value="2019-02-07T13:29:17-08:00"/>
+          </valuePeriod>
+        </extension>
+        <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-birth-date-business-dates-extension">
+          <valuePeriod>
+            <start value="2019-10-17T03:29:17-08:00"/>
+          </valuePeriod>
+        </extension>
+        <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-gender-business-dates-extension">
+          <valuePeriod>
+            <start value="1973-05-18"/>
+          </valuePeriod>
+        </extension>
         <identifier>
           <type>
             <coding>
@@ -247,10 +374,11 @@
               <code value="JHN"/>
             </coding>
           </type>
-          <system value="http://hl7.org/fhir/bc-hcim/bc-sri"/>
+          <system value="http://hl7.org/fhir/ca-bc/client/bc-sri"/>
           <value value="9999999999"/>
         </identifier>
         <name>
+          <use value="usual"/>
           <family value="PURPLE"/>
           <given value="BAILEY"/>
         </name>
@@ -262,11 +390,25 @@
         <gender value="female"/>
         <birthDate value="1985-12-14"/>
         <address>
-          <type value="postal"/>
-          <line value="PO BOX 5"/>
-          <city value="CRESTON"/>
+          <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension">
+            <valueCode value="valid"/>
+          </extension>
+          <type value="physical"/>
+          <line value="123 FRONT ST"/>
+          <city value="VICTORIA"/>
           <state value="BC"/>
-          <postalCode value="V0B 1G0"/>
+          <postalCode value="V6N2W2"/>
+          <country value="CA"/>
+        </address>
+        <address>
+          <extension url="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension">
+            <valueCode value="invalid"/>
+          </extension>
+          <type value="postal"/>
+          <line value="432 Douglas St"/>
+          <city value="Victoria"/>
+          <state value="BC"/>
+          <postalCode value="V6N2R2"/>
           <country value="CA"/>
         </address>
       </Patient>

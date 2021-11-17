@@ -5,14 +5,14 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://moh.fhir/bc-clientregistry/Parameters/RevisePatient-Newborn> a fhir:Parameters;
+<http://hl7.org/fhir/ca-bc/client/Parameters/RevisePatient-Newborn> a fhir:Parameters;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "RevisePatient-Newborn"];
   fhir:Resource.meta [
      fhir:Meta.profile [
-       fhir:value "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-parameters";
+       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-parameters";
        fhir:index 0;
-       fhir:link <http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-parameters>
+       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-parameters>
      ]
   ];
   fhir:Parameters.parameter [
@@ -27,7 +27,7 @@
      fhir:index 2;
      fhir:Parameters.parameter.name [ fhir:value "sender" ];
      fhir:Parameters.parameter.valueIdentifier [
-       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-org" ];
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-org" ];
        fhir:Identifier.value [ fhir:value "IHA" ]
      ]
   ], [
@@ -38,21 +38,21 @@
        fhir:Resource.id [ fhir:value "PatientRP-Newborn" ];
        fhir:Resource.meta [
          fhir:Meta.profile [
-           fhir:value "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient";
+           fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient";
            fhir:index 0;
-           fhir:link <http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient>
+           fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient>
          ]
        ];
        fhir:DomainResource.extension [
          fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-dates-extension" ];
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-dates-extension" ];
          fhir:Extension.valuePeriod [
            fhir:Period.start [ fhir:value "2021-11-02T22:00:17-08:00"^^xsd:dateTime ]
          ]
        ];
        fhir:Patient.identifier [
          fhir:index 0;
-         fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-sri" ];
+         fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
          fhir:Identifier.value [ fhir:value "IHA2234" ]
        ];
        fhir:Patient.name [
@@ -90,7 +90,7 @@
      fhir:index 4;
      fhir:Parameters.parameter.name [ fhir:value "enterer" ];
      fhir:Parameters.parameter.valueIdentifier [
-       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-user" ];
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-user" ];
        fhir:Identifier.value [ fhir:value "klgodfre" ]
      ]
   ], [
@@ -101,12 +101,14 @@
        fhir:Resource.id [ fhir:value "MotherRelated" ];
        fhir:RelatedPerson.identifier [
          fhir:index 0;
-         fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-sri" ];
+         fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
          fhir:Identifier.value [ fhir:value "9736546293" ]
        ];
        fhir:RelatedPerson.patient [
-         fhir:link <http://moh.fhir/bc-clientregistry/Patient/Newborn>;
-         fhir:Reference.reference [ fhir:value "Patient/Newborn" ]
+         fhir:Reference.identifier [
+           fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
+           fhir:Identifier.value [ fhir:value "IHA2234" ]
+         ]
        ];
        fhir:RelatedPerson.relationship [
          fhir:index 0;
@@ -121,8 +123,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://moh.fhir/bc-clientregistry/Parameters/RevisePatient-Newborn.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+<http://hl7.org/fhir/ca-bc/client/Parameters/RevisePatient-Newborn.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/ca-bc/client/Parameters/RevisePatient-Newborn.ttl> .
 
 # -------------------------------------------------------------------------------------
 

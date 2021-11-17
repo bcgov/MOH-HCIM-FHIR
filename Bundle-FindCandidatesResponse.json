@@ -1,6 +1,11 @@
 {
   "resourceType": "Bundle",
   "id": "FindCandidatesResponse",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-search-response-bundle"
+    ]
+  },
   "identifier": {
     "system": "urn:ietf:rfc:3986",
     "value": "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f7a3b"
@@ -22,7 +27,7 @@
         "id": "FindCandidates-ResponseMetadata",
         "meta": {
           "profile": [
-            "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"
+            "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters"
           ]
         },
         "parameter": [
@@ -37,7 +42,7 @@
           {
             "name": "sender",
             "valueIdentifier": {
-              "system": "http://hl7.org/fhir/bc-hcim/bc-org",
+              "system": "http://hl7.org/fhir/ca-bc/client/bc-org",
               "value": "MOH_CRS"
             }
           },
@@ -52,10 +57,10 @@
       "fullUrl": "urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1",
       "resource": {
         "resourceType": "Parameters",
-        "id": "FindCandidates",
+        "id": "FindCandidates-EchoRequest",
         "meta": {
           "profile": [
-            "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"
+            "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-request-metadata-parameters"
           ]
         },
         "parameter": [
@@ -70,7 +75,7 @@
           {
             "name": "sender",
             "valueIdentifier": {
-              "system": "http://hl7.org/fhir/bc-hcim/bc-org",
+              "system": "http://hl7.org/fhir/ca-bc/client/bc-org",
               "value": "VPP"
             }
           },
@@ -128,14 +133,81 @@
       }
     },
     {
+      "fullUrl": "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1",
+      "resource": {
+        "resourceType": "OperationOutcome",
+        "id": "SearchOperationOutcome",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-operation-outcome"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"SearchOperationOutcome\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-operation-outcome.html\">BCOperationOutcome</a></p></div><blockquote><p><b>issue</b></p><p><b>severity</b>: warning</p><p><b>code</b>: business-rule</p><p><b>details</b>: Warning: The Find Candidates Patient name has been modified to filter out invalid characters. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#BCHCIM.GD.1.0017)</span></p></blockquote><blockquote><p><b>issue</b></p><p><b>severity</b>: error</p><p><b>code</b>: business-rule</p><p><b>details</b>: The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ... <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#BCHCIM.GD.1.0017)</span></p></blockquote></div>"
+        },
+        "issue": [
+          {
+            "severity": "warning",
+            "code": "business-rule",
+            "details": {
+              "coding": [
+                {
+                  "code": "BCHCIM.GD.1.0017"
+                }
+              ],
+              "text": "Warning: The Find Candidates Patient name has been modified to filter out invalid characters."
+            }
+          },
+          {
+            "severity": "error",
+            "code": "business-rule",
+            "details": {
+              "coding": [
+                {
+                  "code": "BCHCIM.GD.1.0017"
+                }
+              ],
+              "text": "The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ..."
+            }
+          }
+        ]
+      }
+    },
+    {
       "fullUrl": "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50",
       "resource": {
         "resourceType": "Patient",
         "id": "Patient0Response",
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Jurisdictional health number: 9999999999, id: CER2234, id: VCHA234, id: 90348733a</p><p><b>name</b>: PURPLE BARNEY </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-06-06</p><p><b>deceased</b>: false</p><p><b>address</b>: 666 YELLOW BRICK RD PRINCE GEORGE BC V8W 3P9 CA </p></div>"
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"
+          ]
         },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Patient0Response\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">BCPatient</a></p></div><p><b>BC Patient business dates</b>: Feb 7, 2019, 9:29:17 PM --&gt; (ongoing)</p><p><b>BC Patient Birth Date business date</b>: Oct 17, 2020, 11:29:17 AM --&gt; (ongoing)</p><p><b>BC Patient Gender business date</b>: 1973-05-18 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9999999999, id: CER2234, id: VCHA234, id: 90348733a</p><p><b>name</b>: PURPLE BARNEY </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-06-06</p><p><b>deceased</b>: false</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>432 Douglas St Victoria BC V6N2R2 CA </li></ul></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-dates-extension",
+            "valuePeriod": {
+              "start": "2019-02-07T13:29:17-08:00"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-birth-date-business-dates-extension",
+            "valuePeriod": {
+              "start": "2020-10-17T03:29:17-08:00"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-gender-business-dates-extension",
+            "valuePeriod": {
+              "start": "1973-05-18"
+            }
+          }
+        ],
         "identifier": [
           {
             "type": {
@@ -146,25 +218,25 @@
                 }
               ]
             },
-            "system": "http://hl7.org/fhir/bc-hcim/bc-sri",
+            "system": "http://hl7.org/fhir/ca-bc/client/bc-sri",
             "value": "9999999999"
           },
           {
-            "system": "http://hl7.org/fhir/bc-hcim/bc-sri",
+            "system": "http://hl7.org/fhir/ca-bc/client/bc-sri",
             "value": "CER2234",
             "assigner": {
               "display": "VPP_CER"
             }
           },
           {
-            "system": "http://hl7.org/fhir/bc-hcim/bc-ssri",
+            "system": "http://hl7.org/fhir/ca-bc/client/bc-ssri",
             "value": "VCHA234",
             "assigner": {
               "display": "VPP_LION"
             }
           },
           {
-            "system": "http://hl7.org/fhir/bc-hcim/bc-out-of-province-sri",
+            "system": "http://hl7.org/fhir/ca-bc/client/bc-out-of-province-sri",
             "value": "90348733a",
             "assigner": {
               "display": "MB"
@@ -173,6 +245,7 @@
         ],
         "name": [
           {
+            "use": "usual",
             "family": "BARNEY",
             "given": [
               "PURPLE"
@@ -191,13 +264,35 @@
         "deceasedBoolean": false,
         "address": [
           {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension",
+                "valueCode": "valid"
+              }
+            ],
             "type": "physical",
             "line": [
-              "666 YELLOW BRICK RD"
+              "123 FRONT ST"
             ],
-            "city": "PRINCE GEORGE",
+            "city": "VICTORIA",
             "state": "BC",
-            "postalCode": "V8W 3P9",
+            "postalCode": "V6N2W2",
+            "country": "CA"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension",
+                "valueCode": "invalid"
+              }
+            ],
+            "type": "postal",
+            "line": [
+              "432 Douglas St"
+            ],
+            "city": "Victoria",
+            "state": "BC",
+            "postalCode": "V6N2R2",
             "country": "CA"
           }
         ]
@@ -211,10 +306,51 @@
       "resource": {
         "resourceType": "Patient",
         "id": "Patient1Response",
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: SARAH LYNN PURPLE </p><p><b>telecom</b>: ph: 2505557841(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1973-05-18</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>123 Front St Victoria BC V6N2W2 CA </li></ul></div>"
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"
+          ]
         },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Patient1Response\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">BCPatient</a></p></div><p><b>BC Patient business dates</b>: Feb 7, 2019, 9:29:17 PM --&gt; (ongoing)</p><p><b>BC Patient Birth Date business date</b>: Oct 17, 2018, 11:29:17 AM --&gt; (ongoing)</p><p><b>BC Patient Death Date business date</b>: Oct 17, 2020, 11:29:17 AM --&gt; (ongoing)</p><p><b>BC Patient death date</b>: 2021-11-17</p><p><b>BC Patient Death Date flag business date</b>: 2021-11-17 --&gt; (ongoing)</p><p><b>BC Patient Gender business date</b>: 1973-05-18 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: SARAH LYNN PURPLE (OFFICIAL)</p><p><b>telecom</b>: ph: 2505557841(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1973-05-18</p><p><b>deceased</b>: true</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>432 Douglas St Victoria BC V6N2R2 CA </li></ul></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-dates-extension",
+            "valuePeriod": {
+              "start": "2019-02-07T13:29:17-08:00"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-birth-date-business-dates-extension",
+            "valuePeriod": {
+              "start": "2018-10-17T03:29:17-08:00"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-death-date-business-dates-extension",
+            "valuePeriod": {
+              "start": "2020-10-17T03:29:17-08:00"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-death-date-extension",
+            "valueDateTime": "2021-11-17"
+          },
+          {
+            "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-death-date-flag-business-dates-extension",
+            "valuePeriod": {
+              "start": "2021-11-17"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-gender-business-dates-extension",
+            "valuePeriod": {
+              "start": "1973-05-18"
+            }
+          }
+        ],
         "identifier": [
           {
             "type": {
@@ -225,12 +361,13 @@
                 }
               ]
             },
-            "system": "http://hl7.org/fhir/bc-hcim/bc-sri",
+            "system": "http://hl7.org/fhir/ca-bc/client/bc-sri",
             "value": "9999999999"
           }
         ],
         "name": [
           {
+            "use": "official",
             "family": "PURPLE",
             "given": [
               "SARAH",
@@ -247,8 +384,15 @@
         ],
         "gender": "female",
         "birthDate": "1973-05-18",
+        "deceasedBoolean": true,
         "address": [
           {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension",
+                "valueCode": "valid"
+              }
+            ],
             "type": "physical",
             "line": [
               "123 FRONT ST"
@@ -259,13 +403,19 @@
             "country": "CA"
           },
           {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension",
+                "valueCode": "invalid"
+              }
+            ],
             "type": "postal",
             "line": [
-              "123 Front St"
+              "432 Douglas St"
             ],
             "city": "Victoria",
             "state": "BC",
-            "postalCode": "V6N2W2",
+            "postalCode": "V6N2R2",
             "country": "CA"
           }
         ]
@@ -279,10 +429,35 @@
       "resource": {
         "resourceType": "Patient",
         "id": "Patient2Response",
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: BAILEY PURPLE </p><p><b>telecom</b>: ph: 2504283447(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1985-12-14</p><p><b>address</b>: PO BOX 5 CRESTON BC V0B 1G0 CA </p></div>"
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"
+          ]
         },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Patient2Response\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">BCPatient</a></p></div><p><b>BC Patient business dates</b>: Feb 7, 2019, 9:29:17 PM --&gt; (ongoing)</p><p><b>BC Patient Birth Date business date</b>: Oct 17, 2019, 11:29:17 AM --&gt; (ongoing)</p><p><b>BC Patient Gender business date</b>: 1973-05-18 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: BAILEY PURPLE </p><p><b>telecom</b>: ph: 2504283447(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1985-12-14</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>432 Douglas St Victoria BC V6N2R2 CA </li></ul></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-dates-extension",
+            "valuePeriod": {
+              "start": "2019-02-07T13:29:17-08:00"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-birth-date-business-dates-extension",
+            "valuePeriod": {
+              "start": "2019-10-17T03:29:17-08:00"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-gender-business-dates-extension",
+            "valuePeriod": {
+              "start": "1973-05-18"
+            }
+          }
+        ],
         "identifier": [
           {
             "type": {
@@ -293,12 +468,13 @@
                 }
               ]
             },
-            "system": "http://hl7.org/fhir/bc-hcim/bc-sri",
+            "system": "http://hl7.org/fhir/ca-bc/client/bc-sri",
             "value": "9999999999"
           }
         ],
         "name": [
           {
+            "use": "usual",
             "family": "PURPLE",
             "given": [
               "BAILEY"
@@ -316,13 +492,35 @@
         "birthDate": "1985-12-14",
         "address": [
           {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension",
+                "valueCode": "valid"
+              }
+            ],
+            "type": "physical",
+            "line": [
+              "123 FRONT ST"
+            ],
+            "city": "VICTORIA",
+            "state": "BC",
+            "postalCode": "V6N2W2",
+            "country": "CA"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension",
+                "valueCode": "invalid"
+              }
+            ],
             "type": "postal",
             "line": [
-              "PO BOX 5"
+              "432 Douglas St"
             ],
-            "city": "CRESTON",
+            "city": "Victoria",
             "state": "BC",
-            "postalCode": "V0B 1G0",
+            "postalCode": "V6N2R2",
             "country": "CA"
           }
         ]

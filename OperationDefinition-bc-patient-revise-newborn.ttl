@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://moh.fhir/bc-clientregistry/OperationDefinition/bc-patient-revise-newborn> a fhir:OperationDefinition;
+<http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-revise-newborn> a fhir:OperationDefinition;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "bc-patient-revise-newborn"];
   fhir:DomainResource.text [
@@ -18,7 +18,17 @@
   fhir:OperationDefinition.title [ fhir:value "Revise Patient Newborn"];
   fhir:OperationDefinition.status [ fhir:value "draft"];
   fhir:OperationDefinition.kind [ fhir:value "operation"];
-  fhir:OperationDefinition.date [ fhir:value "2021-11-10T18:31:12+00:00"^^xsd:dateTime];
+  fhir:OperationDefinition.date [ fhir:value "2021-11-17T18:19:53+00:00"^^xsd:dateTime];
+  fhir:OperationDefinition.publisher [ fhir:value "BC Ministry of Health"];
+  fhir:OperationDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "BC Ministry of Health" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health" ]
+     ]
+  ];
   fhir:OperationDefinition.code [ fhir:value "RevisePatient.Newborn"];
   fhir:OperationDefinition.resource [
      fhir:value "Patient";
@@ -65,8 +75,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://moh.fhir/bc-clientregistry/OperationDefinition/bc-patient-revise-newborn.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+<http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-revise-newborn.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/ca-bc/client/OperationDefinition/bc-patient-revise-newborn.ttl> .
 
 # -------------------------------------------------------------------------------------
 

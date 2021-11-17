@@ -1,10 +1,10 @@
 {
-  "package": "moh-hcim",
+  "package": "fhir.ca-bc.client",
   "version": "0.1.0",
   "fhirVersion": "4.0.1",
   "extensions": [
     {
-      "url": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-address-validation-status-extension",
+      "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension",
       "title": "BC Address validation status code",
       "types": [
         "code",
@@ -12,42 +12,42 @@
       ]
     },
     {
-      "url": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-birth-date-business-dates-extension",
+      "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-birth-date-business-dates-extension",
       "title": "BC Patient Birth Date business date",
       "types": [
         "Period"
       ]
     },
     {
-      "url": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-death-date-business-dates-extension",
+      "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-death-date-business-dates-extension",
       "title": "BC Patient Death Date business date",
       "types": [
         "Period"
       ]
     },
     {
-      "url": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-death-date-extension",
+      "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-death-date-extension",
       "title": "BC Patient death date",
       "types": [
         "dateTime"
       ]
     },
     {
-      "url": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-death-date-flag-business-dates-extension",
+      "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-death-date-flag-business-dates-extension",
       "title": "BC Patient Death Date flag business date",
       "types": [
         "Period"
       ]
     },
     {
-      "url": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-gender-business-dates-extension",
+      "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-gender-business-dates-extension",
       "title": "BC Patient Gender business date",
       "types": [
         "Period"
       ]
     },
     {
-      "url": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-merge-status-extension",
+      "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-merge-status-extension",
       "title": "BC Merge status code",
       "types": [
         "code",
@@ -55,7 +55,7 @@
       ]
     },
     {
-      "url": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-dates-extension",
+      "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-dates-extension",
       "title": "BC Patient business dates",
       "types": [
         "Period"
@@ -63,26 +63,40 @@
     }
   ],
   "profiles": {
+    "Bundle": [
+      {
+        "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-revise-response-bundle",
+        "title": "BCReviseResponseBundle"
+      },
+      {
+        "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-search-response-bundle",
+        "title": "BCSearchResponseBundle"
+      }
+    ],
     "Parameters": [
       {
-        "url": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-parameters",
+        "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-parameters",
         "title": "BCPatientBusinessParameters"
+      },
+      {
+        "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-request-metadata-parameters",
+        "title": "BCRequestMetadataParameters"
+      },
+      {
+        "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-request-patient-business-parameters",
+        "title": "BCRequestPatientBusinessParameters"
+      }
+    ],
+    "OperationOutcome": [
+      {
+        "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-operation-outcome",
+        "title": "BCOperationOutcome"
       }
     ],
     "Patient": [
       {
-        "url": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient",
+        "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient",
         "title": "BCPatient"
-      }
-    ],
-    "Bundle": [
-      {
-        "url": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-revise-and-merge-response-bundle",
-        "title": "BCReviseAndMergeResponseBundle"
-      },
-      {
-        "url": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-search-response-bundle",
-        "title": "BCSearchResponseBundle"
       }
     ]
   },
@@ -123,37 +137,45 @@
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
       "StructureDefinition.snapshot.element"
     ],
+    "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension": [
+      "Address",
+      "Bundle.entry.resource.address",
+      "Patient.address"
+    ],
+    "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-birth-date-business-dates-extension": [
+      "Bundle.entry.resource",
+      "Patient"
+    ],
+    "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-death-date-business-dates-extension": [
+      "Bundle.entry.resource",
+      "Patient"
+    ],
+    "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-death-date-extension": [
+      "Bundle.entry.resource",
+      "Patient"
+    ],
+    "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-death-date-flag-business-dates-extension": [
+      "Bundle.entry.resource",
+      "Patient"
+    ],
+    "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-gender-business-dates-extension": [
+      "Bundle.entry.resource",
+      "Patient"
+    ],
+    "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-merge-status-extension": [
+      "Parameters.parameter.resource.link",
+      "Patient.link"
+    ],
+    "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-dates-extension": [
+      "Bundle.entry.resource",
+      "Parameters.parameter.resource",
+      "Patient"
+    ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
       "ImplementationGuide.definition"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
-    ],
-    "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-address-validation-status-extension": [
-      "Address"
-    ],
-    "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-birth-date-business-dates-extension": [
-      "Patient"
-    ],
-    "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-death-date-business-dates-extension": [
-      "Patient"
-    ],
-    "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-death-date-extension": [
-      "Patient"
-    ],
-    "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-death-date-flag-business-dates-extension": [
-      "Patient"
-    ],
-    "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-gender-business-dates-extension": [
-      "Patient"
-    ],
-    "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-merge-status-extension": [
-      "Parameters.parameter.resource.link",
-      "Patient.link"
-    ],
-    "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-dates-extension": [
-      "Parameters.parameter.resource",
-      "Patient"
     ]
   }
 }

@@ -3,7 +3,7 @@
   "id": "RevisePatient-New",
   "meta": {
     "profile": [
-      "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-parameters"
+      "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-parameters"
     ]
   },
   "parameter": [
@@ -18,7 +18,7 @@
     {
       "name": "sender",
       "valueIdentifier": {
-        "system": "http://hl7.org/fhir/bc-hcim/bc-org",
+        "system": "http://hl7.org/fhir/ca-bc/client/bc-org",
         "value": "PHARM"
       }
     },
@@ -29,17 +29,9 @@
         "id": "PatientRP-New",
         "meta": {
           "profile": [
-            "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient"
+            "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"
           ]
         },
-        "extension": [
-          {
-            "url": "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-patient-business-dates-extension",
-            "valuePeriod": {
-              "start": "2021-11-02T22:00:17-08:00"
-            }
-          }
-        ],
         "name": [
           {
             "use": "usual",
@@ -76,7 +68,7 @@
     {
       "name": "enterer",
       "valueIdentifier": {
-        "system": "http://hl7.org/fhir/bc-hcim/bc-user",
+        "system": "http://hl7.org/fhir/ca-bc/client/bc-user",
         "value": "klgodfre"
       }
     }

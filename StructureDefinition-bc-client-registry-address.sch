@@ -12,7 +12,7 @@
   <sch:pattern>
     <sch:title>f:Address</sch:title>
     <sch:rule context="f:Address">
-      <sch:assert test="count(f:extension[@url = 'http://moh.fhir/bc-clientregistry/StructureDefinition/bc-address-validation-status-extension']) &lt;= 1">extension with URL = 'http://moh.fhir/bc-clientregistry/StructureDefinition/bc-address-validation-status-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension': maximum cardinality of 'extension' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

@@ -5,9 +5,16 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://moh.fhir/bc-clientregistry/Bundle/FindCandidatesResponse> a fhir:Bundle;
+<http://hl7.org/fhir/ca-bc/client/Bundle/FindCandidatesResponse> a fhir:Bundle;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "FindCandidatesResponse"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-search-response-bundle";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-search-response-bundle>
+     ]
+  ];
   fhir:Bundle.identifier [
      fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
      fhir:Identifier.value [ fhir:value "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f7a3b" ]
@@ -30,20 +37,24 @@
      fhir:Bundle.entry.resource <urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1>
   ], [
      fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1" ];
+     fhir:Bundle.entry.resource <urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1>
+  ], [
+     fhir:index 3;
      fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50" ];
      fhir:Bundle.entry.resource <urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50>;
      fhir:Bundle.entry.search [
        fhir:Bundle.entry.search.score [ fhir:value "31"^^xsd:decimal ]
      ]
   ], [
-     fhir:index 3;
+     fhir:index 4;
      fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:90bf49dc-4590-4302-8e28-f02bb4deb353" ];
      fhir:Bundle.entry.resource <urn:uuid:90bf49dc-4590-4302-8e28-f02bb4deb353>;
      fhir:Bundle.entry.search [
        fhir:Bundle.entry.search.score [ fhir:value "-53"^^xsd:decimal ]
      ]
   ], [
-     fhir:index 4;
+     fhir:index 5;
      fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:072f48b7-43c5-4bec-8798-026cc432adcf" ];
      fhir:Bundle.entry.resource <urn:uuid:072f48b7-43c5-4bec-8798-026cc432adcf>;
      fhir:Bundle.entry.search [
@@ -55,9 +66,9 @@
   fhir:Resource.id [ fhir:value "FindCandidates-ResponseMetadata"];
   fhir:Resource.meta [
      fhir:Meta.profile [
-       fhir:value "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters";
+       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters";
        fhir:index 0;
-       fhir:link <http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters>
+       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters>
      ]
   ];
   fhir:Parameters.parameter [
@@ -72,7 +83,7 @@
      fhir:index 2;
      fhir:Parameters.parameter.name [ fhir:value "sender" ];
      fhir:Parameters.parameter.valueIdentifier [
-       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-org" ];
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-org" ];
        fhir:Identifier.value [ fhir:value "MOH_CRS" ]
      ]
   ], [
@@ -82,12 +93,12 @@
   ] .
 
 <urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1> a fhir:Parameters;
-  fhir:Resource.id [ fhir:value "FindCandidates"];
+  fhir:Resource.id [ fhir:value "FindCandidates-EchoRequest"];
   fhir:Resource.meta [
      fhir:Meta.profile [
-       fhir:value "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters";
+       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-request-metadata-parameters";
        fhir:index 0;
-       fhir:link <http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters>
+       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-request-metadata-parameters>
      ]
   ];
   fhir:Parameters.parameter [
@@ -102,7 +113,7 @@
      fhir:index 2;
      fhir:Parameters.parameter.name [ fhir:value "sender" ];
      fhir:Parameters.parameter.valueIdentifier [
-       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-org" ];
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-org" ];
        fhir:Identifier.value [ fhir:value "VPP" ]
      ]
   ], [
@@ -165,11 +176,74 @@
      fhir:Parameters.parameter.valueBoolean [ fhir:value "false"^^xsd:boolean ]
   ] .
 
-<urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50> a fhir:Patient;
-  fhir:Resource.id [ fhir:value "Patient0Response"];
+<urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1> a fhir:OperationOutcome;
+  fhir:Resource.id [ fhir:value "SearchOperationOutcome"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-operation-outcome";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-operation-outcome>
+     ]
+  ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Jurisdictional health number: 9999999999, id: CER2234, id: VCHA234, id: 90348733a</p><p><b>name</b>: PURPLE BARNEY </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-06-06</p><p><b>deceased</b>: false</p><p><b>address</b>: 666 YELLOW BRICK RD PRINCE GEORGE BC V8W 3P9 CA </p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"SearchOperationOutcome\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-operation-outcome.html\">BCOperationOutcome</a></p></div><blockquote><p><b>issue</b></p><p><b>severity</b>: warning</p><p><b>code</b>: business-rule</p><p><b>details</b>: Warning: The Find Candidates Patient name has been modified to filter out invalid characters. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#BCHCIM.GD.1.0017)</span></p></blockquote><blockquote><p><b>issue</b></p><p><b>severity</b>: error</p><p><b>code</b>: business-rule</p><p><b>details</b>: The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ... <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#BCHCIM.GD.1.0017)</span></p></blockquote></div>"
+  ];
+  fhir:OperationOutcome.issue [
+     fhir:index 0;
+     fhir:OperationOutcome.issue.severity [ fhir:value "warning" ];
+     fhir:OperationOutcome.issue.code [ fhir:value "business-rule" ];
+     fhir:OperationOutcome.issue.details [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "BCHCIM.GD.1.0017" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Warning: The Find Candidates Patient name has been modified to filter out invalid characters." ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:OperationOutcome.issue.severity [ fhir:value "error" ];
+     fhir:OperationOutcome.issue.code [ fhir:value "business-rule" ];
+     fhir:OperationOutcome.issue.details [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "BCHCIM.GD.1.0017" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ..." ]
+     ]
+  ] .
+
+<urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50> a fhir:Patient;
+  fhir:Resource.id [ fhir:value "Patient0Response"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Patient0Response\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">BCPatient</a></p></div><p><b>BC Patient business dates</b>: Feb 7, 2019, 9:29:17 PM --&gt; (ongoing)</p><p><b>BC Patient Birth Date business date</b>: Oct 17, 2020, 11:29:17 AM --&gt; (ongoing)</p><p><b>BC Patient Gender business date</b>: 1973-05-18 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9999999999, id: CER2234, id: VCHA234, id: 90348733a</p><p><b>name</b>: PURPLE BARNEY </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-06-06</p><p><b>deceased</b>: false</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>432 Douglas St Victoria BC V6N2R2 CA </li></ul></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-dates-extension" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2019-02-07T13:29:17-08:00"^^xsd:dateTime ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-birth-date-business-dates-extension" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2020-10-17T03:29:17-08:00"^^xsd:dateTime ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-gender-business-dates-extension" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "1973-05-18"^^xsd:date ]
+     ]
   ];
   fhir:Patient.identifier [
      fhir:index 0;
@@ -180,25 +254,25 @@
          fhir:Coding.code [ fhir:value "JHN" ]
        ]
      ];
-     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-sri" ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
      fhir:Identifier.value [ fhir:value "9999999999" ]
   ], [
      fhir:index 1;
-     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-sri" ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
      fhir:Identifier.value [ fhir:value "CER2234" ];
      fhir:Identifier.assigner [
        fhir:Reference.display [ fhir:value "VPP_CER" ]
      ]
   ], [
      fhir:index 2;
-     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-ssri" ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-ssri" ];
      fhir:Identifier.value [ fhir:value "VCHA234" ];
      fhir:Identifier.assigner [
        fhir:Reference.display [ fhir:value "VPP_LION" ]
      ]
   ], [
      fhir:index 3;
-     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-out-of-province-sri" ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-out-of-province-sri" ];
      fhir:Identifier.value [ fhir:value "90348733a" ];
      fhir:Identifier.assigner [
        fhir:Reference.display [ fhir:value "MB" ]
@@ -206,6 +280,7 @@
   ];
   fhir:Patient.name [
      fhir:index 0;
+     fhir:HumanName.use [ fhir:value "usual" ];
      fhir:HumanName.family [ fhir:value "BARNEY" ];
      fhir:HumanName.given [
        fhir:value "PURPLE";
@@ -223,22 +298,85 @@
   fhir:Patient.deceasedBoolean [ fhir:value "false"^^xsd:boolean];
   fhir:Patient.address [
      fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "valid" ]
+     ];
      fhir:Address.type [ fhir:value "physical" ];
      fhir:Address.line [
-       fhir:value "666 YELLOW BRICK RD";
+       fhir:value "123 FRONT ST";
        fhir:index 0
      ];
-     fhir:Address.city [ fhir:value "PRINCE GEORGE" ];
+     fhir:Address.city [ fhir:value "VICTORIA" ];
      fhir:Address.state [ fhir:value "BC" ];
-     fhir:Address.postalCode [ fhir:value "V8W 3P9" ];
+     fhir:Address.postalCode [ fhir:value "V6N2W2" ];
+     fhir:Address.country [ fhir:value "CA" ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "invalid" ]
+     ];
+     fhir:Address.type [ fhir:value "postal" ];
+     fhir:Address.line [
+       fhir:value "432 Douglas St";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Victoria" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.postalCode [ fhir:value "V6N2R2" ];
      fhir:Address.country [ fhir:value "CA" ]
   ] .
 
 <urn:uuid:90bf49dc-4590-4302-8e28-f02bb4deb353> a fhir:Patient;
   fhir:Resource.id [ fhir:value "Patient1Response"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient>
+     ]
+  ];
   fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: SARAH LYNN PURPLE </p><p><b>telecom</b>: ph: 2505557841(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1973-05-18</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>123 Front St Victoria BC V6N2W2 CA </li></ul></div>"
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Patient1Response\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">BCPatient</a></p></div><p><b>BC Patient business dates</b>: Feb 7, 2019, 9:29:17 PM --&gt; (ongoing)</p><p><b>BC Patient Birth Date business date</b>: Oct 17, 2018, 11:29:17 AM --&gt; (ongoing)</p><p><b>BC Patient Death Date business date</b>: Oct 17, 2020, 11:29:17 AM --&gt; (ongoing)</p><p><b>BC Patient death date</b>: 2021-11-17</p><p><b>BC Patient Death Date flag business date</b>: 2021-11-17 --&gt; (ongoing)</p><p><b>BC Patient Gender business date</b>: 1973-05-18 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: SARAH LYNN PURPLE (OFFICIAL)</p><p><b>telecom</b>: ph: 2505557841(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1973-05-18</p><p><b>deceased</b>: true</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>432 Douglas St Victoria BC V6N2R2 CA </li></ul></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-dates-extension" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2019-02-07T13:29:17-08:00"^^xsd:dateTime ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-birth-date-business-dates-extension" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2018-10-17T03:29:17-08:00"^^xsd:dateTime ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-death-date-business-dates-extension" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2020-10-17T03:29:17-08:00"^^xsd:dateTime ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-death-date-extension" ];
+     fhir:Extension.valueDateTime [ fhir:value "2021-11-17"^^xsd:date ]
+  ], [
+     fhir:index 4;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-death-date-flag-business-dates-extension" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2021-11-17"^^xsd:date ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-gender-business-dates-extension" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "1973-05-18"^^xsd:date ]
+     ]
   ];
   fhir:Patient.identifier [
      fhir:index 0;
@@ -249,11 +387,12 @@
          fhir:Coding.code [ fhir:value "JHN" ]
        ]
      ];
-     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-sri" ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
      fhir:Identifier.value [ fhir:value "9999999999" ]
   ];
   fhir:Patient.name [
      fhir:index 0;
+     fhir:HumanName.use [ fhir:value "official" ];
      fhir:HumanName.family [ fhir:value "PURPLE" ];
      fhir:HumanName.given [
        fhir:value "SARAH";
@@ -271,8 +410,14 @@
   ];
   fhir:Patient.gender [ fhir:value "female"];
   fhir:Patient.birthDate [ fhir:value "1973-05-18"^^xsd:date];
+  fhir:Patient.deceasedBoolean [ fhir:value "true"^^xsd:boolean];
   fhir:Patient.address [
      fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "valid" ]
+     ];
      fhir:Address.type [ fhir:value "physical" ];
      fhir:Address.line [
        fhir:value "123 FRONT ST";
@@ -284,22 +429,53 @@
      fhir:Address.country [ fhir:value "CA" ]
   ], [
      fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "invalid" ]
+     ];
      fhir:Address.type [ fhir:value "postal" ];
      fhir:Address.line [
-       fhir:value "123 Front St";
+       fhir:value "432 Douglas St";
        fhir:index 0
      ];
      fhir:Address.city [ fhir:value "Victoria" ];
      fhir:Address.state [ fhir:value "BC" ];
-     fhir:Address.postalCode [ fhir:value "V6N2W2" ];
+     fhir:Address.postalCode [ fhir:value "V6N2R2" ];
      fhir:Address.country [ fhir:value "CA" ]
   ] .
 
 <urn:uuid:072f48b7-43c5-4bec-8798-026cc432adcf> a fhir:Patient;
   fhir:Resource.id [ fhir:value "Patient2Response"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient>
+     ]
+  ];
   fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: BAILEY PURPLE </p><p><b>telecom</b>: ph: 2504283447(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1985-12-14</p><p><b>address</b>: PO BOX 5 CRESTON BC V0B 1G0 CA </p></div>"
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Patient2Response\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">BCPatient</a></p></div><p><b>BC Patient business dates</b>: Feb 7, 2019, 9:29:17 PM --&gt; (ongoing)</p><p><b>BC Patient Birth Date business date</b>: Oct 17, 2019, 11:29:17 AM --&gt; (ongoing)</p><p><b>BC Patient Gender business date</b>: 1973-05-18 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: BAILEY PURPLE </p><p><b>telecom</b>: ph: 2504283447(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1985-12-14</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>432 Douglas St Victoria BC V6N2R2 CA </li></ul></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-dates-extension" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2019-02-07T13:29:17-08:00"^^xsd:dateTime ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-birth-date-business-dates-extension" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2019-10-17T03:29:17-08:00"^^xsd:dateTime ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-gender-business-dates-extension" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "1973-05-18"^^xsd:date ]
+     ]
   ];
   fhir:Patient.identifier [
      fhir:index 0;
@@ -310,11 +486,12 @@
          fhir:Coding.code [ fhir:value "JHN" ]
        ]
      ];
-     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/bc-hcim/bc-sri" ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
      fhir:Identifier.value [ fhir:value "9999999999" ]
   ];
   fhir:Patient.name [
      fhir:index 0;
+     fhir:HumanName.use [ fhir:value "usual" ];
      fhir:HumanName.family [ fhir:value "PURPLE" ];
      fhir:HumanName.given [
        fhir:value "BAILEY";
@@ -331,21 +508,43 @@
   fhir:Patient.birthDate [ fhir:value "1985-12-14"^^xsd:date];
   fhir:Patient.address [
      fhir:index 0;
-     fhir:Address.type [ fhir:value "postal" ];
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "valid" ]
+     ];
+     fhir:Address.type [ fhir:value "physical" ];
      fhir:Address.line [
-       fhir:value "PO BOX 5";
+       fhir:value "123 FRONT ST";
        fhir:index 0
      ];
-     fhir:Address.city [ fhir:value "CRESTON" ];
+     fhir:Address.city [ fhir:value "VICTORIA" ];
      fhir:Address.state [ fhir:value "BC" ];
-     fhir:Address.postalCode [ fhir:value "V0B 1G0" ];
+     fhir:Address.postalCode [ fhir:value "V6N2W2" ];
+     fhir:Address.country [ fhir:value "CA" ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "invalid" ]
+     ];
+     fhir:Address.type [ fhir:value "postal" ];
+     fhir:Address.line [
+       fhir:value "432 Douglas St";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Victoria" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.postalCode [ fhir:value "V6N2R2" ];
      fhir:Address.country [ fhir:value "CA" ]
   ] .
 
 # - ontology header ------------------------------------------------------------
 
-<http://moh.fhir/bc-clientregistry/Bundle/FindCandidatesResponse.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+<http://hl7.org/fhir/ca-bc/client/Bundle/FindCandidatesResponse.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/ca-bc/client/Bundle/FindCandidatesResponse.ttl> .
 
 # -------------------------------------------------------------------------------------
 

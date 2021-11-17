@@ -1,0 +1,67 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ca-bc/client/Parameters/GetDemographics-EchoRequest> a fhir:Parameters;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "GetDemographics-EchoRequest"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-request-metadata-parameters";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-request-metadata-parameters>
+     ]
+  ];
+  fhir:Parameters.parameter [
+     fhir:index 0;
+     fhir:Parameters.parameter.name [ fhir:value "messageId" ];
+     fhir:Parameters.parameter.valueString [ fhir:value "98028b44-882a-4c72-8c92-b87d916147e1" ]
+  ], [
+     fhir:index 1;
+     fhir:Parameters.parameter.name [ fhir:value "messageDateTime" ];
+     fhir:Parameters.parameter.valueDateTime [ fhir:value "2015-02-07T13:28:17-08:00"^^xsd:dateTime ]
+  ], [
+     fhir:index 2;
+     fhir:Parameters.parameter.name [ fhir:value "sender" ];
+     fhir:Parameters.parameter.valueIdentifier [
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-org" ];
+       fhir:Identifier.value [ fhir:value "VPP" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Parameters.parameter.name [ fhir:value "enterer" ];
+     fhir:Parameters.parameter.valueIdentifier [
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-userid" ];
+       fhir:Identifier.value [ fhir:value "bob@me.com" ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Parameters.parameter.name [ fhir:value "identifier" ];
+     fhir:Parameters.parameter.valueIdentifier [
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+           fhir:Coding.code [ fhir:value "JHN" ]
+         ]
+       ];
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
+       fhir:Identifier.value [ fhir:value "912345892" ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:Parameters.parameter.name [ fhir:value "history" ];
+     fhir:Parameters.parameter.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/ca-bc/client/Parameters/GetDemographics-EchoRequest.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/ca-bc/client/Parameters/GetDemographics-EchoRequest.ttl> .
+
+# -------------------------------------------------------------------------------------
+

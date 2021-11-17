@@ -1,6 +1,11 @@
 {
   "resourceType": "Bundle",
   "id": "GetDemographicsResponse",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-search-response-bundle"
+    ]
+  },
   "identifier": {
     "system": "urn:ietf:rfc:3986",
     "value": "urn:uuid:b3a12f0c-a332-4ec9-94b9-d8539a02df48"
@@ -9,13 +14,13 @@
   "timestamp": "2011-09-07T12:18:23.000-07:00",
   "entry": [
     {
-      "fullUrl": "61061501-9953-4fba-87fe-6ae30e79da33",
+      "fullUrl": "urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33",
       "resource": {
         "resourceType": "Parameters",
         "id": "GetDemographics-ResponseMetadata",
         "meta": {
           "profile": [
-            "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"
+            "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters"
           ]
         },
         "parameter": [
@@ -30,7 +35,7 @@
           {
             "name": "sender",
             "valueIdentifier": {
-              "system": "http://hl7.org/fhir/bc-hcim/bc-org",
+              "system": "http://hl7.org/fhir/ca-bc/client/bc-org",
               "value": "MOH_CRS"
             }
           },
@@ -45,10 +50,10 @@
       "fullUrl": "urn:uuid:753f756d-63b2-4086-86a4-d7768fd5374a",
       "resource": {
         "resourceType": "Parameters",
-        "id": "GetDemographics",
+        "id": "GetDemographics-EchoRequest",
         "meta": {
           "profile": [
-            "http://moh.fhir/bc-clientregistry/StructureDefinition/bc-metadata-parameters"
+            "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-request-metadata-parameters"
           ]
         },
         "parameter": [
@@ -63,14 +68,14 @@
           {
             "name": "sender",
             "valueIdentifier": {
-              "system": "http://hl7.org/fhir/bc-hcim/bc-org",
+              "system": "http://hl7.org/fhir/ca-bc/client/bc-org",
               "value": "VPP"
             }
           },
           {
             "name": "enterer",
             "valueIdentifier": {
-              "system": "http://hl7.org/fhir/bc-hcim/bc-userid",
+              "system": "http://hl7.org/fhir/ca-bc/client/bc-userid",
               "value": "bob@me.com"
             }
           },
@@ -85,13 +90,55 @@
                   }
                 ]
               },
-              "system": "http://hl7.org/fhir/bc-hcim/bc-sri",
+              "system": "http://hl7.org/fhir/ca-bc/client/bc-sri",
               "value": "912345892"
             }
           },
           {
             "name": "history",
-            "valueBoolean": true
+            "valueBoolean": false
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1",
+      "resource": {
+        "resourceType": "OperationOutcome",
+        "id": "SearchOperationOutcome",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-operation-outcome"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"SearchOperationOutcome\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-operation-outcome.html\">BCOperationOutcome</a></p></div><blockquote><p><b>issue</b></p><p><b>severity</b>: warning</p><p><b>code</b>: business-rule</p><p><b>details</b>: Warning: The Find Candidates Patient name has been modified to filter out invalid characters. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#BCHCIM.GD.1.0017)</span></p></blockquote><blockquote><p><b>issue</b></p><p><b>severity</b>: error</p><p><b>code</b>: business-rule</p><p><b>details</b>: The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ... <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#BCHCIM.GD.1.0017)</span></p></blockquote></div>"
+        },
+        "issue": [
+          {
+            "severity": "warning",
+            "code": "business-rule",
+            "details": {
+              "coding": [
+                {
+                  "code": "BCHCIM.GD.1.0017"
+                }
+              ],
+              "text": "Warning: The Find Candidates Patient name has been modified to filter out invalid characters."
+            }
+          },
+          {
+            "severity": "error",
+            "code": "business-rule",
+            "details": {
+              "coding": [
+                {
+                  "code": "BCHCIM.GD.1.0017"
+                }
+              ],
+              "text": "The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ..."
+            }
           }
         ]
       }
@@ -101,9 +148,14 @@
       "resource": {
         "resourceType": "Patient",
         "id": "PatientDemographicsResponse",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"
+          ]
+        },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: JILLIAN DAWN THIRD NAME COOK-ADAMS </p><p><b>telecom</b>: ph: 6048883322(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1972-10-16</p><p><b>address</b>: </p><ul><li>321 SUNSHINE PL NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>1824 CROSS RD LINE 2 LINE 3 VANCOUVER BC V9L 4H2 </li></ul></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"PatientDemographicsResponse\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">BCPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9983652763</p><p><b>name</b>: JILLIAN DAWN THIRD NAME COOK-ADAMS </p><p><b>telecom</b>: ph: 6048883322(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1972-10-16</p><p><b>address</b>: </p><ul><li>321 SUNSHINE PL NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>1824 CROSS RD LINE 2 LINE 3 VANCOUVER BC V9L 4H2 </li></ul></div>"
         },
         "identifier": [
           {
@@ -115,12 +167,13 @@
                 }
               ]
             },
-            "system": "http://hl7.org/fhir/bc-hcim/bc-sri",
-            "value": "9999999999"
+            "system": "http://hl7.org/fhir/ca-bc/client/bc-sri",
+            "value": "9983652763"
           }
         ],
         "name": [
           {
+            "use": "usual",
             "family": "COOK-ADAMS",
             "given": [
               "JILLIAN",

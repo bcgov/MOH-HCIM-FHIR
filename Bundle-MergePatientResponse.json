@@ -1,0 +1,330 @@
+{
+  "resourceType": "Bundle",
+  "id": "MergePatientResponse",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-merge-response-bundle"
+    ]
+  },
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f7a3b"
+  },
+  "type": "collection",
+  "timestamp": "2011-09-13T16:11:43.000-07:00",
+  "link": [
+    {
+      "relation": "self",
+      "url": "urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33",
+      "resource": {
+        "resourceType": "Parameters",
+        "id": "MergeResponseMetadata",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters"
+          ]
+        },
+        "parameter": [
+          {
+            "name": "messageId",
+            "valueString": "c087e71e-3e7e-4c22-a3ce-61523f600615"
+          },
+          {
+            "name": "messageDateTime",
+            "valueDateTime": "2015-02-07T13:29:17-08:00"
+          },
+          {
+            "name": "sender",
+            "valueIdentifier": {
+              "system": "http://hl7.org/fhir/ca-bc/client/bc-org",
+              "value": "MOH_CRS"
+            }
+          },
+          {
+            "name": "messageRequestId",
+            "valueString": "98028b44-882a-4c72-8c92-b87d916147e1"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1",
+      "resource": {
+        "resourceType": "Parameters",
+        "id": "MergePatient-EchoRequest",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-parameters"
+          ]
+        },
+        "parameter": [
+          {
+            "name": "messageId",
+            "valueString": "98028b44-882a-4c72-8c92-b87d916147e1"
+          },
+          {
+            "name": "messageDateTime",
+            "valueDateTime": "2021-11-02T13:28:17-08:00"
+          },
+          {
+            "name": "sender",
+            "valueIdentifier": {
+              "system": "http://hl7.org/fhir/ca-bc/client/bc-org",
+              "value": "PHARM"
+            }
+          },
+          {
+            "name": "patient",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "PatientRP",
+              "meta": {
+                "profile": [
+                  "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"
+                ]
+              },
+              "identifier": [
+                {
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "JHN"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/ca-bc/client/bc-sri",
+                  "value": "9999999999"
+                },
+                {
+                  "system": "http://hl7.org/fhir/ca-bc/client/bc-sri",
+                  "value": "CER2234",
+                  "assigner": {
+                    "display": "VPP_CER"
+                  }
+                },
+                {
+                  "system": "http://hl7.org/fhir/ca-bc/client/bc-ssri",
+                  "value": "VCHA234",
+                  "assigner": {
+                    "display": "VPP_LION"
+                  }
+                },
+                {
+                  "system": "http://hl7.org/fhir/ca-bc/client/bc-out-of-province-sri",
+                  "value": "90348733a",
+                  "assigner": {
+                    "display": "MB"
+                  }
+                }
+              ],
+              "name": [
+                {
+                  "use": "official",
+                  "family": "BARNEY",
+                  "given": [
+                    "PURPLE"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "2505554848",
+                  "use": "home"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1940-06-06",
+              "deceasedBoolean": false,
+              "address": [
+                {
+                  "type": "physical",
+                  "line": [
+                    "636 YELLOW BRICK RD"
+                  ],
+                  "city": "PRINCE GEORGE",
+                  "state": "BC",
+                  "postalCode": "V8W 3P9",
+                  "country": "CA"
+                }
+              ]
+            }
+          },
+          {
+            "name": "enterer",
+            "valueIdentifier": {
+              "system": "http://hl7.org/fhir/ca-bc/client/bc-user",
+              "value": "klgodfre"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1",
+      "resource": {
+        "resourceType": "OperationOutcome",
+        "id": "RPMPOperationOutcome",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-operation-outcome"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"RPMPOperationOutcome\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-operation-outcome.html\">BCOperationOutcome</a></p></div><blockquote><p><b>issue</b></p><p><b>severity</b>: warning</p><p><b>code</b>: business-rule</p><p><b>details</b>: Warning: The Revise Patient name has been modified to filter out invalid characters. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#BCHCIM.RP.1.0017)</span></p></blockquote><blockquote><p><b>issue</b></p><p><b>severity</b>: error</p><p><b>code</b>: business-rule</p><p><b>details</b>: The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ... <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#BCHCIM.RP.1.0017)</span></p></blockquote></div>"
+        },
+        "issue": [
+          {
+            "severity": "warning",
+            "code": "business-rule",
+            "details": {
+              "coding": [
+                {
+                  "code": "BCHCIM.RP.1.0017"
+                }
+              ],
+              "text": "Warning: The Revise Patient name has been modified to filter out invalid characters."
+            }
+          },
+          {
+            "severity": "error",
+            "code": "business-rule",
+            "details": {
+              "coding": [
+                {
+                  "code": "BCHCIM.RP.1.0017"
+                }
+              ],
+              "text": "The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ..."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "PatientRPMPResponse",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"
+          ]
+        },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"PatientRPMPResponse\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">BCPatient</a></p></div><p><b>BC Patient Birth Date business date</b>: Oct 17, 2020, 11:29:17 AM --&gt; (ongoing)</p><p><b>BC Patient Gender business date</b>: 1973-05-18 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9999999999, id: CER2234, id: VCHA234, id: 90348733a</p><p><b>name</b>: PURPLE BARNEY </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-06-06</p><p><b>deceased</b>: false</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>432 Douglas St Victoria BC V6N2R2 CA </li></ul></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-birth-date-business-dates-extension",
+            "valuePeriod": {
+              "start": "2020-10-17T03:29:17-08:00"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-gender-business-dates-extension",
+            "valuePeriod": {
+              "start": "1973-05-18"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "JHN"
+                }
+              ]
+            },
+            "system": "http://hl7.org/fhir/ca-bc/client/bc-sri",
+            "value": "9999999999"
+          },
+          {
+            "system": "http://hl7.org/fhir/ca-bc/client/bc-sri",
+            "value": "CER2234",
+            "assigner": {
+              "display": "VPP_CER"
+            }
+          },
+          {
+            "system": "http://hl7.org/fhir/ca-bc/client/bc-ssri",
+            "value": "VCHA234",
+            "assigner": {
+              "display": "VPP_LION"
+            }
+          },
+          {
+            "system": "http://hl7.org/fhir/ca-bc/client/bc-out-of-province-sri",
+            "value": "90348733a",
+            "assigner": {
+              "display": "MB"
+            }
+          }
+        ],
+        "name": [
+          {
+            "use": "usual",
+            "family": "BARNEY",
+            "given": [
+              "PURPLE"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "2505554848",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1940-06-06",
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension",
+                "valueCode": "valid"
+              }
+            ],
+            "type": "physical",
+            "line": [
+              "123 FRONT ST"
+            ],
+            "city": "VICTORIA",
+            "state": "BC",
+            "postalCode": "V6N2W2",
+            "country": "CA"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-address-validation-status-extension",
+                "valueCode": "invalid"
+              }
+            ],
+            "type": "postal",
+            "line": [
+              "432 Douglas St"
+            ],
+            "city": "Victoria",
+            "state": "BC",
+            "postalCode": "V6N2R2",
+            "country": "CA"
+          }
+        ]
+      }
+    }
+  ]
+}
