@@ -5,19 +5,19 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/ca-bc/client/CodeSystem/bc-client-registry-merge-status-code-system> a fhir:CodeSystem;
+<http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-merge-status-code-system> a fhir:CodeSystem;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "bc-client-registry-merge-status-code-system"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://hl7.org/fhir/ca-bc/client/CodeSystem/bc-client-registry-merge-status-code-system defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">obsolete<a name=\"bc-client-registry-merge-status-code-system-obsolete\"> </a></td><td>obsolete</td><td>The merge obsoletes this Patient.</td></tr><tr><td style=\"white-space:nowrap\">cancelled<a name=\"bc-client-registry-merge-status-code-system-cancelled\"> </a></td><td>cancelled</td><td>The merge cancels this Patient.</td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-merge-status-code-system defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">obsolete<a name=\"bc-client-registry-merge-status-code-system-obsolete\"> </a></td><td>obsolete</td><td>The merge obsoletes this Patient.</td></tr><tr><td style=\"white-space:nowrap\">cancelled<a name=\"bc-client-registry-merge-status-code-system-cancelled\"> </a></td><td>cancelled</td><td>The merge cancels this Patient.</td></tr></table></div>"
   ];
-  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/CodeSystem/bc-client-registry-merge-status-code-system"];
+  fhir:CodeSystem.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-merge-status-code-system"];
   fhir:CodeSystem.version [ fhir:value "0.1.0"];
   fhir:CodeSystem.name [ fhir:value "BCMergeStatusCS"];
   fhir:CodeSystem.title [ fhir:value "BC Client Registry merge status."];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2021-11-17T18:19:53+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2021-11-17T21:28:52+00:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "BC Ministry of Health"];
   fhir:CodeSystem.contact [
      fhir:index 0;
@@ -29,6 +29,15 @@
      ]
   ];
   fhir:CodeSystem.description [ fhir:value "Codes used to describe the merge status."];
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "CA" ];
+       fhir:Coding.display [ fhir:value "Canada" ]
+     ]
+  ];
   fhir:CodeSystem.content [ fhir:value "complete"];
   fhir:CodeSystem.count [ fhir:value "2"^^xsd:nonNegativeInteger];
   fhir:CodeSystem.concept [
@@ -45,9 +54,8 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/ca-bc/client/CodeSystem/bc-client-registry-merge-status-code-system.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/ca-bc/client/CodeSystem/bc-client-registry-merge-status-code-system.ttl> .
+<http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-merge-status-code-system.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

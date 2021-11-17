@@ -26,11 +26,11 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
     <valueCode value="not-classified"/>
   </extension>
-  <url value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-revise-response-bundle"/>
+  <url value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle"/>
   <version value="0.1.0"/>
   <name value="BCReviseResponseBundle"/>
   <status value="active"/>
-  <date value="2021-11-17T18:19:53+00:00"/>
+  <date value="2021-11-17T21:28:52+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -40,6 +40,13 @@
     </telecom>
   </contact>
   <description value="A Bundle that is used in the Client Registry response to Revise Patient requests."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="CA"/>
+      <display value="Canada"/>
+    </coding>
+  </jurisdiction>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="v2"/>
@@ -1784,7 +1791,7 @@
       </base>
       <type>
         <code value="Patient"/>
-        <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"/>
+        <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
       </type>
       <constraint>
         <key value="dom-2"/>
@@ -2803,7 +2810,7 @@
       </base>
       <type>
         <code value="Parameters"/>
-        <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters"/>
+        <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
       </type>
       <isModifier value="false"/>
       <isSummary value="false"/>
@@ -3776,7 +3783,7 @@
       </base>
       <type>
         <code value="Parameters"/>
-        <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-request-patient-business-parameters"/>
+        <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-patient-business-parameters"/>
       </type>
       <isModifier value="false"/>
       <isSummary value="false"/>
@@ -4749,7 +4756,7 @@
       </base>
       <type>
         <code value="OperationOutcome"/>
-        <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-operation-outcome"/>
+        <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-operation-outcome"/>
       </type>
       <constraint>
         <key value="dom-2"/>
@@ -5626,7 +5633,7 @@
       <path value="Bundle.entry.resource"/>
       <type>
         <code value="Patient"/>
-        <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"/>
+        <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
       </type>
     </element>
     <element id="Bundle.entry:parameters">
@@ -5640,7 +5647,7 @@
       <path value="Bundle.entry.resource"/>
       <type>
         <code value="Parameters"/>
-        <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters"/>
+        <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
       </type>
     </element>
     <element id="Bundle.entry:parametersRequest">
@@ -5654,7 +5661,7 @@
       <path value="Bundle.entry.resource"/>
       <type>
         <code value="Parameters"/>
-        <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-request-patient-business-parameters"/>
+        <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-patient-business-parameters"/>
       </type>
     </element>
     <element id="Bundle.entry:operationOutcome">
@@ -5668,7 +5675,7 @@
       <path value="Bundle.entry.resource"/>
       <type>
         <code value="OperationOutcome"/>
-        <profile value="http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-operation-outcome"/>
+        <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-operation-outcome"/>
       </type>
     </element>
   </differential>

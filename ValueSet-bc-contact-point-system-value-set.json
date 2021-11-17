@@ -5,12 +5,12 @@
     "status": "extensions",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"http://hl7.org/fhir/R4/valueset-contact-point-system.html\">http://hl7.org/fhir/ValueSet/contact-point-system</a></li></ul><p>This value set excludes codes based on the following rules:</p><ul><li>Exclude these codes as defined in <a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-system.html\"><code>http://hl7.org/fhir/contact-point-system</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-system.html#contact-point-system-fax\">fax</a></td><td>Fax</td><td>The value is a fax machine. Use of full international numbers starting with + is recommended to enable automatic dialing support but not required.</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-system.html#contact-point-system-pager\">pager</a></td><td>Pager</td><td>The value is a pager number. These may be local pager numbers that are only usable on a particular pager system.</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-system.html#contact-point-system-url\">url</a></td><td>URL</td><td>A contact that is not a phone, fax, pager or email address and is expressed as a URL.  This is intended for various institutional or personal contacts including web sites, blogs, Skype, Twitter, Facebook, etc. Do not use for email addresses.</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-system.html#contact-point-system-sms\">sms</a></td><td>SMS</td><td>A contact that can be used for sending an sms message (e.g. mobile phones, some landlines).</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-system.html#contact-point-system-other\">other</a></td><td>Other</td><td>A contact that is not a phone, fax, page or email address and is not expressible as a URL.  E.g. Internal mail address.  This SHOULD NOT be used for contacts that are expressible as a URL (e.g. Skype, Twitter, Facebook, etc.)  Extensions may be used to distinguish &quot;other&quot; contact types.</td></tr></table></li></ul></div>"
   },
-  "url": "http://hl7.org/fhir/ca-bc/client/ValueSet/bc-contact-point-system-value-set",
+  "url": "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set",
   "version": "0.1.0",
   "name": "BCContactPointSystem",
   "title": "BC Contact Point System value set.",
   "status": "active",
-  "date": "2021-11-17T18:19:53+00:00",
+  "date": "2021-11-17T21:28:52+00:00",
   "publisher": "BC Ministry of Health",
   "contact": [
     {
@@ -24,6 +24,17 @@
     }
   ],
   "description": "BC Contact Point System value set, sliced to meet BC constraints.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CA",
+          "display": "Canada"
+        }
+      ]
+    }
+  ],
   "compose": {
     "include": [
       {

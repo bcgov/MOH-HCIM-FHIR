@@ -5,14 +5,14 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/ca-bc/client/Parameters/GetDemographics> a fhir:Parameters;
+<http://hlth.gov.bc.ca/fhir/client/Parameters/GetDemographics> a fhir:Parameters;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "GetDemographics"];
   fhir:Resource.meta [
      fhir:Meta.profile [
-       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters";
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters";
        fhir:index 0;
-       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters>
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters>
      ]
   ];
   fhir:Parameters.parameter [
@@ -27,14 +27,14 @@
      fhir:index 2;
      fhir:Parameters.parameter.name [ fhir:value "sender" ];
      fhir:Parameters.parameter.valueIdentifier [
-       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-org" ];
+       fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-org" ];
        fhir:Identifier.value [ fhir:value "VPP" ]
      ]
   ], [
      fhir:index 3;
      fhir:Parameters.parameter.name [ fhir:value "enterer" ];
      fhir:Parameters.parameter.valueIdentifier [
-       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-userid" ];
+       fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-userid" ];
        fhir:Identifier.value [ fhir:value "bob@me.com" ]
      ]
   ], [
@@ -48,7 +48,7 @@
            fhir:Coding.code [ fhir:value "JHN" ]
          ]
        ];
-       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
+       fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
        fhir:Identifier.value [ fhir:value "912345892" ]
      ]
   ], [
@@ -59,9 +59,8 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/ca-bc/client/Parameters/GetDemographics.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/ca-bc/client/Parameters/GetDemographics.ttl> .
+<http://hlth.gov.bc.ca/fhir/client/Parameters/GetDemographics.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

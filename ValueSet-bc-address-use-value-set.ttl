@@ -5,19 +5,19 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/ca-bc/client/ValueSet/bc-address-use-value-set> a fhir:ValueSet;
+<http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-address-use-value-set> a fhir:ValueSet;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "bc-address-use-value-set"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"http://hl7.org/fhir/R4/valueset-address-use.html\">http://hl7.org/fhir/ValueSet/address-use</a></li></ul><p>This value set excludes codes based on the following rules:</p><ul><li>Exclude these codes as defined in <a href=\"http://hl7.org/fhir/R4/codesystem-address-use.html\"><code>http://hl7.org/fhir/address-use</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-address-use.html#address-use-work\">work</a></td><td>Work</td><td>An office address. First choice for business related contacts during business hours.</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-address-use.html#address-use-temp\">temp</a></td><td>Temporary</td><td>A temporary address. The period can provide more detailed information.</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-address-use.html#address-use-old\">old</a></td><td>Old / Incorrect</td><td>This address is no longer in use (or was never correct but retained for records).</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-address-use.html#address-use-billing\">billing</a></td><td>Billing</td><td>An address to be used to send bills, invoices, receipts etc.</td></tr></table></li></ul></div>"
   ];
-  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/ValueSet/bc-address-use-value-set"];
+  fhir:ValueSet.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-address-use-value-set"];
   fhir:ValueSet.version [ fhir:value "0.1.0"];
   fhir:ValueSet.name [ fhir:value "BCAddressUse"];
   fhir:ValueSet.title [ fhir:value "BC Address Use value set."];
   fhir:ValueSet.status [ fhir:value "active"];
-  fhir:ValueSet.date [ fhir:value "2021-11-17T18:19:53+00:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2021-11-17T21:28:52+00:00"^^xsd:dateTime];
   fhir:ValueSet.publisher [ fhir:value "BC Ministry of Health"];
   fhir:ValueSet.contact [
      fhir:index 0;
@@ -29,6 +29,15 @@
      ]
   ];
   fhir:ValueSet.description [ fhir:value "BC Address Use value set, sliced to meet BC constraints."];
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "CA" ];
+       fhir:Coding.display [ fhir:value "Canada" ]
+     ]
+  ];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
@@ -59,9 +68,8 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/ca-bc/client/ValueSet/bc-address-use-value-set.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/ca-bc/client/ValueSet/bc-address-use-value-set.ttl> .
+<http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-address-use-value-set.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

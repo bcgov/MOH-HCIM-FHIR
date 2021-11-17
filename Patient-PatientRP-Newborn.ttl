@@ -5,14 +5,14 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/ca-bc/client/Patient/PatientRP-Newborn> a fhir:Patient;
+<http://hlth.gov.bc.ca/fhir/client/Patient/PatientRP-Newborn> a fhir:Patient;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "PatientRP-Newborn"];
   fhir:Resource.meta [
      fhir:Meta.profile [
-       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient";
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
        fhir:index 0;
-       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient>
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
      ]
   ];
   fhir:DomainResource.text [
@@ -21,14 +21,14 @@
   ];
   fhir:DomainResource.extension [
      fhir:index 0;
-     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-dates-extension" ];
+     fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-dates-extension" ];
      fhir:Extension.valuePeriod [
        fhir:Period.start [ fhir:value "2021-11-02T22:00:17-08:00"^^xsd:dateTime ]
      ]
   ];
   fhir:Patient.identifier [
      fhir:index 0;
-     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
      fhir:Identifier.value [ fhir:value "IHA2234" ]
   ];
   fhir:Patient.name [
@@ -64,9 +64,8 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/ca-bc/client/Patient/PatientRP-Newborn.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/ca-bc/client/Patient/PatientRP-Newborn.ttl> .
+<http://hlth.gov.bc.ca/fhir/client/Patient/PatientRP-Newborn.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

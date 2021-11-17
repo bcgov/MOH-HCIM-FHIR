@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/ca-bc/client/RelatedPerson/MotherRelated> a fhir:RelatedPerson;
+<http://hlth.gov.bc.ca/fhir/client/RelatedPerson/MotherRelated> a fhir:RelatedPerson;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "MotherRelated"];
   fhir:DomainResource.text [
@@ -14,12 +14,12 @@
   ];
   fhir:RelatedPerson.identifier [
      fhir:index 0;
-     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
      fhir:Identifier.value [ fhir:value "9736546293" ]
   ];
   fhir:RelatedPerson.patient [
      fhir:Reference.identifier [
-       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
+       fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
        fhir:Identifier.value [ fhir:value "IHA2234" ]
      ]
   ];
@@ -34,9 +34,8 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/ca-bc/client/RelatedPerson/MotherRelated.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/ca-bc/client/RelatedPerson/MotherRelated.ttl> .
+<http://hlth.gov.bc.ca/fhir/client/RelatedPerson/MotherRelated.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

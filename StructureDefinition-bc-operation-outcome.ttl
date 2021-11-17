@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-operation-outcome> a fhir:StructureDefinition;
+<http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-operation-outcome> a fhir:StructureDefinition;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "bc-operation-outcome"];
   fhir:DomainResource.text [
@@ -17,11 +17,11 @@
      fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-category" ];
      fhir:Extension.valueString [ fhir:value "Foundation.Other" ]
   ];
-  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-operation-outcome"];
+  fhir:StructureDefinition.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-operation-outcome"];
   fhir:StructureDefinition.version [ fhir:value "0.1.0"];
   fhir:StructureDefinition.name [ fhir:value "BCOperationOutcome"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2021-11-17T18:19:53+00:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2021-11-17T21:28:52+00:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "BC Ministry of Health"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -33,6 +33,15 @@
      ]
   ];
   fhir:StructureDefinition.description [ fhir:value "OperationOutcome profile for BC."];
+  fhir:StructureDefinition.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "CA" ];
+       fhir:Coding.display [ fhir:value "Canada" ]
+     ]
+  ];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [
      fhir:index 0;
@@ -979,9 +988,8 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-operation-outcome.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/ca-bc/client/StructureDefinition/bc-operation-outcome.ttl> .
+<http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-operation-outcome.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

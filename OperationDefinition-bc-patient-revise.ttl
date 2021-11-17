@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-revise> a fhir:OperationDefinition;
+<http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-revise> a fhir:OperationDefinition;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "bc-patient-revise"];
   fhir:DomainResource.text [
@@ -18,7 +18,7 @@
   fhir:OperationDefinition.title [ fhir:value "Revise Patient"];
   fhir:OperationDefinition.status [ fhir:value "draft"];
   fhir:OperationDefinition.kind [ fhir:value "operation"];
-  fhir:OperationDefinition.date [ fhir:value "2021-11-17T18:19:53+00:00"^^xsd:dateTime];
+  fhir:OperationDefinition.date [ fhir:value "2021-11-17T21:28:52+00:00"^^xsd:dateTime];
   fhir:OperationDefinition.publisher [ fhir:value "BC Ministry of Health"];
   fhir:OperationDefinition.contact [
      fhir:index 0;
@@ -27,6 +27,15 @@
        fhir:index 0;
        fhir:ContactPoint.system [ fhir:value "url" ];
        fhir:ContactPoint.value [ fhir:value "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health" ]
+     ]
+  ];
+  fhir:OperationDefinition.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "CA" ];
+       fhir:Coding.display [ fhir:value "Canada" ]
      ]
   ];
   fhir:OperationDefinition.code [ fhir:value "RevisePatient"];
@@ -38,8 +47,8 @@
   fhir:OperationDefinition.type [ fhir:value "true"^^xsd:boolean];
   fhir:OperationDefinition.instance [ fhir:value "true"^^xsd:boolean];
   fhir:OperationDefinition.inputProfile [
-     fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters";
-     fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters>
+     fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters";
+     fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters>
   ];
   fhir:OperationDefinition.parameter [
      fhir:index 0;
@@ -71,9 +80,8 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-revise.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/ca-bc/client/OperationDefinition/bc-patient-revise.ttl> .
+<http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-revise.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

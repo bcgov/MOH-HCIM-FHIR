@@ -3,14 +3,14 @@
   "id": "fhir.ca-bc.client",
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>BCHealthClientIdentityManagement</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/ca-bc/client/ImplementationGuide/fhir.ca-bc.client</pre><div><p>FHIR Implementation Guide for BC MOH Client Registry</p>\n</div></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>BCHealthClientIdentityManagement</h2><p>The official URL for this implementation guide is: </p><pre>http://hlth.gov.bc.ca/fhir/client/ImplementationGuide/fhir.ca-bc.client</pre><div><p>FHIR Implementation Guide for BC MOH Client Registry</p>\n</div></div>"
   },
-  "url": "http://hl7.org/fhir/ca-bc/client/ImplementationGuide/fhir.ca-bc.client",
+  "url": "http://hlth.gov.bc.ca/fhir/client/ImplementationGuide/fhir.ca-bc.client",
   "version": "0.1.0",
   "name": "BCHealthClientIdentityManagement",
   "title": "BC Client Registry FHIR Implementation Guide",
   "status": "draft",
-  "date": "2021-11-17T18:19:53+00:00",
+  "date": "2021-11-17T21:28:52+00:00",
   "publisher": "BC Ministry of Health",
   "contact": [
     {
@@ -24,6 +24,17 @@
     }
   ],
   "description": "FHIR Implementation Guide for BC MOH Client Registry",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CA",
+          "display": "Canada"
+        }
+      ]
+    }
+  ],
   "packageId": "fhir.ca-bc.client",
   "license": "CC0-1.0",
   "fhirVersion": [
@@ -53,19 +64,6 @@
           {
             "url": "value",
             "valueString": "Build CI"
-          }
-        ],
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-      },
-      {
-        "extension": [
-          {
-            "url": "code",
-            "valueString": "path-history"
-          },
-          {
-            "url": "value",
-            "valueString": "http://hl7.org/fhir/ca-bc/client/history.html"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -144,6 +142,19 @@
           {
             "url": "value",
             "valueString": "input/ignoreWarnings.txt"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-history"
+          },
+          {
+            "url": "value",
+            "valueString": "http://hlth.gov.bc.ca/fhir/client/history.html"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -281,28 +292,28 @@
     ],
     "grouping": [
       {
-        "id": "Patient Profile",
-        "name": "PatientProfile",
+        "id": "PatientProfile",
+        "name": "Patient Profile",
         "description": "The BC Patient profile"
       },
       {
-        "id": "Supporting Profiles",
-        "name": "Profiles",
+        "id": "SupportingProfiles",
+        "name": "Supporting Profiles",
         "description": "Artifacts associated with resources that support Patient and Client Registry Operations"
       },
       {
         "id": "Operations",
-        "name": "OperationsDefinitions",
+        "name": "Operation Definitions",
         "description": "The defined Operations"
       },
       {
         "id": "RequestExamples",
-        "name": "RequestExamples",
+        "name": "Request Examples",
         "description": "A set of operation request examples"
       },
       {
         "id": "ResponseExamples",
-        "name": "ResponseExamples",
+        "name": "Response Examples",
         "description": "A set of operation response examples"
       }
     ],
@@ -334,7 +345,7 @@
         "name": "BCMergeResponseBundle",
         "description": "A Bundle that is used in the Client Registry response to Merge Patient requests.",
         "exampleBoolean": false,
-        "groupingId": "Supporting Profiles"
+        "groupingId": "SupportingProfiles"
       },
       {
         "extension": [
@@ -349,7 +360,7 @@
         "name": "BCMetadataParameters",
         "description": "Parameters profile for BC meta data",
         "exampleBoolean": false,
-        "groupingId": "Supporting Profiles"
+        "groupingId": "SupportingProfiles"
       },
       {
         "extension": [
@@ -378,7 +389,7 @@
         "name": "BCPatient",
         "description": "General constraints on the Patient resource for use in the BC Client Registry project.",
         "exampleBoolean": false,
-        "groupingId": "Patient Profile"
+        "groupingId": "PatientProfile"
       },
       {
         "extension": [
@@ -393,7 +404,7 @@
         "name": "BCPatientBusinessParameters",
         "description": "Parameters extended from BCMetadataParameters for a Patient resource",
         "exampleBoolean": false,
-        "groupingId": "Supporting Profiles"
+        "groupingId": "SupportingProfiles"
       },
       {
         "extension": [
@@ -436,7 +447,7 @@
         "name": "BCReviseResponseBundle",
         "description": "A Bundle that is used in the Client Registry response to Revise Patient requests.",
         "exampleBoolean": false,
-        "groupingId": "Supporting Profiles"
+        "groupingId": "SupportingProfiles"
       },
       {
         "extension": [
@@ -451,7 +462,7 @@
         "name": "BCSearchResponseBundle",
         "description": "A Bundle that is used in the Client Registry response to Find Candidates and Get Demographics queries.",
         "exampleBoolean": false,
-        "groupingId": "Supporting Profiles"
+        "groupingId": "SupportingProfiles"
       },
       {
         "extension": [
@@ -731,7 +742,7 @@
         },
         "name": "FindCandidates",
         "description": "Example of $FindCandidates operation",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters",
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters",
         "groupingId": "RequestExamples"
       },
       {
@@ -746,7 +757,7 @@
         },
         "name": "FindCandidates-EchoRequest",
         "description": "Example of $FindCandidates operation",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-request-metadata-parameters"
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-metadata-parameters"
       },
       {
         "extension": [
@@ -760,7 +771,7 @@
         },
         "name": "FindCandidates-ResponseMetadata",
         "description": "Example of $FindCandidates response Metadata parameters",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters"
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"
       },
       {
         "extension": [
@@ -774,7 +785,7 @@
         },
         "name": "FindCandidates-UsingMomsPHN",
         "description": "Example of $FindCandidates operation with mother's PHN",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters",
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters",
         "groupingId": "RequestExamples"
       },
       {
@@ -789,7 +800,7 @@
         },
         "name": "FindCandidates-UsingSSRI",
         "description": "Example of $FindCandidates operation with SSRI identifier",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters",
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters",
         "groupingId": "RequestExamples"
       },
       {
@@ -804,7 +815,7 @@
         },
         "name": "FindCandidatesResponse",
         "description": "Example of FindCandidates response Bundle.  Patient0 has PHN, alternate, SRI and SSRI identifier examples.",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-search-response-bundle",
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
         "groupingId": "ResponseExamples"
       },
       {
@@ -819,7 +830,7 @@
         },
         "name": "GetDemographics",
         "description": "Example of $GetDemographics operation",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters",
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters",
         "groupingId": "RequestExamples"
       },
       {
@@ -834,7 +845,7 @@
         },
         "name": "GetDemographics-EchoRequest",
         "description": "Example of $GetDemographics operation",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-request-metadata-parameters"
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-metadata-parameters"
       },
       {
         "extension": [
@@ -848,7 +859,7 @@
         },
         "name": "GetDemographics-ResponseMetadata",
         "description": "Example of $FindCandidates response Metadata parameters",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters"
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"
       },
       {
         "extension": [
@@ -876,7 +887,7 @@
         },
         "name": "GetDemographicsResponse",
         "description": "Example of $GetDemographics operation response Bundle",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-search-response-bundle",
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
         "groupingId": "ResponseExamples"
       },
       {
@@ -891,7 +902,7 @@
         },
         "name": "MergePatient-EchoRequest",
         "description": "Example of $MergePatient operation that updates an existing Patient",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-parameters"
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters"
       },
       {
         "extension": [
@@ -905,7 +916,7 @@
         },
         "name": "MergePatient-TwoNonSurvivors",
         "description": "Example of $MergePatient operation.",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-parameters",
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters",
         "groupingId": "RequestExamples"
       },
       {
@@ -920,7 +931,7 @@
         },
         "name": "MergePatientResponse",
         "description": "A sample RevisePatient and MergePatient Operation response.",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-merge-response-bundle",
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle",
         "groupingId": "ResponseExamples"
       },
       {
@@ -935,7 +946,7 @@
         },
         "name": "MergeResponseMetadata",
         "description": "Example of Merge response Metadata parameters",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters"
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"
       },
       {
         "extension": [
@@ -963,7 +974,7 @@
         },
         "name": "Patient0Response",
         "description": "Example of Patient for query response Bundle with 4 different kinds of identifiers: SRI-PHN, SRI, SSRI and alternative.",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
       },
       {
         "extension": [
@@ -977,7 +988,7 @@
         },
         "name": "Patient1Response",
         "description": "Example of Patient for query response Bundle",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
       },
       {
         "extension": [
@@ -991,7 +1002,7 @@
         },
         "name": "Patient2Response",
         "description": "Example of Patient for query response Bundle",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
       },
       {
         "extension": [
@@ -1005,7 +1016,7 @@
         },
         "name": "PatientDemographicsResponse",
         "description": "Example of Patient for $GetDemographics operation response",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
       },
       {
         "extension": [
@@ -1019,7 +1030,7 @@
         },
         "name": "PatientMP",
         "description": "Example of a merge patient Patient",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
       },
       {
         "extension": [
@@ -1033,7 +1044,7 @@
         },
         "name": "PatientRP",
         "description": "Patient example for a RevisePatient operation",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
       },
       {
         "extension": [
@@ -1047,7 +1058,7 @@
         },
         "name": "PatientRP-New",
         "description": "The Patient is completely new to the Client Registry, no identifiers.",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
       },
       {
         "extension": [
@@ -1061,7 +1072,7 @@
         },
         "name": "PatientRP-Newborn",
         "description": "The Patient is completely new to the Client Registry, no identifiers.",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
       },
       {
         "extension": [
@@ -1075,7 +1086,7 @@
         },
         "name": "PatientRPMPResponse",
         "description": "Example of Merge or Revise response Bundle with 4 different kinds of identifiers: SRI-PHN, SRI, SSRI and alternative.",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient"
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
       },
       {
         "extension": [
@@ -1089,7 +1100,7 @@
         },
         "name": "RPMPOperationOutcome",
         "description": "Example OperationOutcome for a Client Registry Revise or Merge",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-operation-outcome"
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-operation-outcome"
       },
       {
         "extension": [
@@ -1103,7 +1114,7 @@
         },
         "name": "RevisePatient-EchoRequest",
         "description": "Example of $RevisePatient operation that updates an existing Patient",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-parameters"
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters"
       },
       {
         "extension": [
@@ -1117,7 +1128,7 @@
         },
         "name": "RevisePatient-New",
         "description": "Example of $RevisePatient operation where the Patient is new to the Client Registry.",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-parameters",
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters",
         "groupingId": "RequestExamples"
       },
       {
@@ -1132,7 +1143,7 @@
         },
         "name": "RevisePatient-Newborn",
         "description": "Example of $RevisePatient.Newborn operation where the Patient is a newborn.  Awwwwww so cute.",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-parameters",
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters",
         "groupingId": "RequestExamples"
       },
       {
@@ -1147,7 +1158,7 @@
         },
         "name": "RevisePatient-UpdateExisting",
         "description": "Example of $RevisePatient operation that updates an existing Patient",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient-business-parameters",
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters",
         "groupingId": "RequestExamples"
       },
       {
@@ -1162,7 +1173,7 @@
         },
         "name": "RevisePatientResponse",
         "description": "A sample RevisePatient and MergePatient Operation response.",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-revise-response-bundle",
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle",
         "groupingId": "ResponseExamples"
       },
       {
@@ -1177,7 +1188,7 @@
         },
         "name": "ReviseResponseMetadata",
         "description": "Example of Revise response Metadata parameters",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-metadata-parameters"
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"
       },
       {
         "extension": [
@@ -1191,7 +1202,7 @@
         },
         "name": "SearchOperationOutcome",
         "description": "Example OperationOutcome for a Client Registry Search",
-        "exampleCanonical": "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-operation-outcome"
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-operation-outcome"
       },
       {
         "extension": [

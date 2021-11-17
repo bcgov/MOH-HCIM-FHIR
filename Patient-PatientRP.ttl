@@ -5,14 +5,14 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/ca-bc/client/Patient/PatientRP> a fhir:Patient;
+<http://hlth.gov.bc.ca/fhir/client/Patient/PatientRP> a fhir:Patient;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "PatientRP"];
   fhir:Resource.meta [
      fhir:Meta.profile [
-       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient";
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
        fhir:index 0;
-       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient>
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
      ]
   ];
   fhir:DomainResource.text [
@@ -28,25 +28,25 @@
          fhir:Coding.code [ fhir:value "JHN" ]
        ]
      ];
-     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
      fhir:Identifier.value [ fhir:value "9999999999" ]
   ], [
      fhir:index 1;
-     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
      fhir:Identifier.value [ fhir:value "CER2234" ];
      fhir:Identifier.assigner [
        fhir:Reference.display [ fhir:value "VPP_CER" ]
      ]
   ], [
      fhir:index 2;
-     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-ssri" ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-ssri" ];
      fhir:Identifier.value [ fhir:value "VCHA234" ];
      fhir:Identifier.assigner [
        fhir:Reference.display [ fhir:value "VPP_LION" ]
      ]
   ], [
      fhir:index 3;
-     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-out-of-province-sri" ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-out-of-province-sri" ];
      fhir:Identifier.value [ fhir:value "90348733a" ];
      fhir:Identifier.assigner [
        fhir:Reference.display [ fhir:value "MB" ]
@@ -85,9 +85,8 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/ca-bc/client/Patient/PatientRP.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/ca-bc/client/Patient/PatientRP.ttl> .
+<http://hlth.gov.bc.ca/fhir/client/Patient/PatientRP.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

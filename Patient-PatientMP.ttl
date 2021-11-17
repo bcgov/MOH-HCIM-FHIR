@@ -5,14 +5,14 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/ca-bc/client/Patient/PatientMP> a fhir:Patient;
+<http://hlth.gov.bc.ca/fhir/client/Patient/PatientMP> a fhir:Patient;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "PatientMP"];
   fhir:Resource.meta [
      fhir:Meta.profile [
-       fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient";
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
        fhir:index 0;
-       fhir:link <http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-patient>
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
      ]
   ];
   fhir:DomainResource.text [
@@ -21,7 +21,7 @@
   ];
   fhir:Patient.identifier [
      fhir:index 0;
-     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
      fhir:Identifier.value [ fhir:value "876092N4" ]
   ];
   fhir:Patient.active [ fhir:value "true"^^xsd:boolean];
@@ -71,12 +71,12 @@
      fhir:index 0;
      fhir:Element.extension [
        fhir:index 0;
-       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-merge-status-extension" ];
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension" ];
        fhir:Extension.valueCode [ fhir:value "cancelled" ]
      ];
      fhir:Patient.link.other [
        fhir:Reference.identifier [
-         fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
+         fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
          fhir:Identifier.value [ fhir:value "203451T3" ]
        ]
      ];
@@ -85,7 +85,7 @@
      fhir:index 1;
      fhir:Element.extension [
        fhir:index 0;
-       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-merge-status-extension" ];
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension" ];
        fhir:Extension.valueCode [ fhir:value "cancelled" ]
      ];
      fhir:Patient.link.other [
@@ -97,7 +97,7 @@
              fhir:Coding.code [ fhir:value "JHN" ]
            ]
          ];
-         fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
+         fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
          fhir:Identifier.value [ fhir:value "9876345146" ]
        ]
      ];
@@ -106,12 +106,12 @@
      fhir:index 2;
      fhir:Element.extension [
        fhir:index 0;
-       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-merge-status-extension" ];
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension" ];
        fhir:Extension.valueCode [ fhir:value "obsolete" ]
      ];
      fhir:Patient.link.other [
        fhir:Reference.identifier [
-         fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
+         fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
          fhir:Identifier.value [ fhir:value "203451T3" ]
        ]
      ];
@@ -120,7 +120,7 @@
      fhir:index 3;
      fhir:Element.extension [
        fhir:index 0;
-       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/StructureDefinition/bc-merge-status-extension" ];
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension" ];
        fhir:Extension.valueCode [ fhir:value "obsolete" ]
      ];
      fhir:Patient.link.other [
@@ -132,7 +132,7 @@
              fhir:Coding.code [ fhir:value "JHN" ]
            ]
          ];
-         fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ca-bc/client/bc-sri" ];
+         fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
          fhir:Identifier.value [ fhir:value "9876345146" ]
        ]
      ];
@@ -141,9 +141,8 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/ca-bc/client/Patient/PatientMP.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/ca-bc/client/Patient/PatientMP.ttl> .
+<http://hlth.gov.bc.ca/fhir/client/Patient/PatientMP.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 
