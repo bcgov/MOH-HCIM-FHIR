@@ -1,14 +1,14 @@
 ﻿BCHealthClientIdentityManagement : Validation Results
 =========================================
 
-err = 14, warn = 23, info = 55
+err = 0, warn = 24, info = 1
 IG Publisher Version: 1.1.86
-Generated Wed Nov 17 21:29:42 UTC 2021. FHIR version 4.0.1 for fhir.ca-bc.client#0.1.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
+Generated Wed Nov 17 22:00:48 UTC 2021. FHIR version 4.0.1 for fhir.ca-bc.client#0.1.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
  Build Errors : 0 / 0 / 0
- /github/workspace/fsh-generated/resources/Bundle-FindCandidatesResponse : 4 / 5 / 40
- /github/workspace/fsh-generated/resources/Bundle-GetDemographicsResponse : 4 / 6 / 17
- /github/workspace/fsh-generated/resources/Bundle-MergePatientResponse : 3 / 4 / 19
- /github/workspace/fsh-generated/resources/Bundle-RevisePatientResponse : 3 / 4 / 19
+ /github/workspace/fsh-generated/resources/Bundle-FindCandidatesResponse : 0 / 6 / 17
+ /github/workspace/fsh-generated/resources/Bundle-GetDemographicsResponse : 0 / 6 / 10
+ /github/workspace/fsh-generated/resources/Bundle-MergePatientResponse : 0 / 4 / 15
+ /github/workspace/fsh-generated/resources/Bundle-RevisePatientResponse : 0 / 4 / 15
  /github/workspace/fsh-generated/resources/CodeSystem-bc-client-registry-address-validation-code-system : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-bc-client-registry-merge-status-code-system : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-bc-operation-outcome-details-code-system : 0 / 0 / 1
@@ -21,12 +21,10 @@ Generated Wed Nov 17 21:29:42 UTC 2021. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/OperationOutcome-RPMPOperationOutcome : 0 / 2 / 1
  /github/workspace/fsh-generated/resources/OperationOutcome-SearchOperationOutcome : 0 / 2 / 1
  /github/workspace/fsh-generated/resources/Parameters-FindCandidates : 0 / 0 / 8
- /github/workspace/fsh-generated/resources/Parameters-FindCandidates-EchoRequest : 0 / 0 / 8
  /github/workspace/fsh-generated/resources/Parameters-FindCandidates-ResponseMetadata : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Parameters-FindCandidates-UsingMomsPHN : 0 / 0 / 2
  /github/workspace/fsh-generated/resources/Parameters-FindCandidates-UsingSSRI : 0 / 0 / 8
  /github/workspace/fsh-generated/resources/Parameters-GetDemographics : 0 / 0 / 3
- /github/workspace/fsh-generated/resources/Parameters-GetDemographics-EchoRequest : 0 / 0 / 3
  /github/workspace/fsh-generated/resources/Parameters-GetDemographics-ResponseMetadata : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Parameters-GetDemographicsINParameters : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Parameters-MergePatient-EchoRequest : 0 / 0 / 4
@@ -61,8 +59,6 @@ Generated Wed Nov 17 21:29:42 UTC 2021. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-patient : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-patient-business-dates-extension : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-patient-business-parameters : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-bc-request-metadata-parameters : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-bc-request-patient-business-parameters : 0 / 0 / 2
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-revise-response-bundle : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-search-response-bundle : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-bc-address-type-value-set : 0 / 0 / 1
@@ -76,69 +72,30 @@ Generated Wed Nov 17 21:29:42 UTC 2021. FHIR version 4.0.1 for fhir.ca-bc.client
 </table>
 == n/a ==
 == fsh-generated/resources/Bundle-FindCandidatesResponse.json ==
-ERROR: Bundle/FindCandidatesResponse: Bundle.entry[0]: Profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle, Element matches more than one slice - parameters, parametersRequest
-ERROR: Bundle/FindCandidatesResponse: Bundle.entry[1]: Profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle, Element matches more than one slice - parameters, parametersRequest
-ERROR: Bundle/FindCandidatesResponse: Bundle: Bundle.entry:parameters: max allowed = 1, but found 2 (from http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle)
-ERROR: Bundle/FindCandidatesResponse: Bundle: Bundle.entry:parametersRequest: minimum required = 1, but only found 0 (from http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle)
-INFORMATION: Bundle/FindCandidatesResponse: Bundle.entry[1].resource.parameter[3]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Bundle/FindCandidatesResponse: Bundle.entry[1].resource.parameter[4]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Bundle/FindCandidatesResponse: Bundle.entry[1].resource.parameter[5]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Bundle/FindCandidatesResponse: Bundle.entry[1].resource.parameter[6]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Bundle/FindCandidatesResponse: Bundle.entry[1].resource.parameter[7]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Bundle/FindCandidatesResponse: Bundle.entry[1].resource.parameter[8]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Bundle/FindCandidatesResponse: Bundle.entry[1].resource.parameter[9]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Bundle/FindCandidatesResponse: Bundle.entry[1].resource.parameter[3]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-metadata-parameters
-INFORMATION: Bundle/FindCandidatesResponse: Bundle.entry[1].resource.parameter[4]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-metadata-parameters
-INFORMATION: Bundle/FindCandidatesResponse: Bundle.entry[1].resource.parameter[5]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-metadata-parameters
-INFORMATION: Bundle/FindCandidatesResponse: Bundle.entry[1].resource.parameter[6]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-metadata-parameters
-INFORMATION: Bundle/FindCandidatesResponse: Bundle.entry[1].resource.parameter[7]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-metadata-parameters
-INFORMATION: Bundle/FindCandidatesResponse: Bundle.entry[1].resource.parameter[8]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-metadata-parameters
-INFORMATION: Bundle/FindCandidatesResponse: Bundle.entry[1].resource.parameter[9]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-metadata-parameters
-WARNING: Bundle/FindCandidatesResponse: Bundle.entry[2].resource.issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/FindCandidatesResponse: Bundle.entry[2].resource.issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/FindCandidatesResponse: Bundle.entry[2].resource.ofType(OperationOutcome).issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/FindCandidatesResponse: Bundle.entry[2].resource.ofType(OperationOutcome).issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Bundle/FindCandidatesResponse: Bundle.entry[1].resource.issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Bundle/FindCandidatesResponse: Bundle.entry[1].resource.issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Bundle/FindCandidatesResponse: Bundle.entry[1].resource.ofType(OperationOutcome).issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Bundle/FindCandidatesResponse: Bundle.entry[1].resource.ofType(OperationOutcome).issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Bundle/FindCandidatesResponse: Bundle: No types could be determined from the search string, so the types can't be checked
-INFORMATION: Bundle/FindCandidatesResponse: Bundle.entry[0].resource: Unable to determine if this resource is a valid resource type for this search 
-INFORMATION: Bundle/FindCandidatesResponse: Bundle.entry[1].resource: Unable to determine if this resource is a valid resource type for this search 
-INFORMATION: Bundle/FindCandidatesResponse: Bundle.entry[2].resource: Unable to determine if this resource is a valid resource type for this search 
-INFORMATION: Bundle/FindCandidatesResponse: Bundle.entry[3].resource: Unable to determine if this resource is a valid resource type for this search 
-INFORMATION: Bundle/FindCandidatesResponse: Bundle.entry[4].resource: Unable to determine if this resource is a valid resource type for this search 
-INFORMATION: Bundle/FindCandidatesResponse: Bundle.entry[5].resource: Unable to determine if this resource is a valid resource type for this search 
-WARNING: Bundle/FindCandidatesResponse: Bundle: SearchSet bundles should have search modes on the entries
+WARNING: Bundle/FindCandidatesResponse: Bundle.entry[0]: SearchSet bundles should have search modes on the entries
+WARNING: Bundle/FindCandidatesResponse: Bundle.entry[1]: SearchSet bundles should have search modes on the entries
 == fsh-generated/resources/Bundle-GetDemographicsResponse.json ==
-ERROR: Bundle/GetDemographicsResponse: Bundle.entry[0]: Profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle, Element matches more than one slice - parameters, parametersRequest
-ERROR: Bundle/GetDemographicsResponse: Bundle.entry[1]: Profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle, Element matches more than one slice - parameters, parametersRequest
-ERROR: Bundle/GetDemographicsResponse: Bundle: Bundle.entry:parameters: max allowed = 1, but found 2 (from http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle)
-ERROR: Bundle/GetDemographicsResponse: Bundle: Bundle.entry:parametersRequest: minimum required = 1, but only found 0 (from http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle)
-INFORMATION: Bundle/GetDemographicsResponse: Bundle.entry[1].resource.parameter[4]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Bundle/GetDemographicsResponse: Bundle.entry[1].resource.parameter[5]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Bundle/GetDemographicsResponse: Bundle.entry[1].resource.parameter[4]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-metadata-parameters
-INFORMATION: Bundle/GetDemographicsResponse: Bundle.entry[1].resource.parameter[5]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-metadata-parameters
-WARNING: Bundle/GetDemographicsResponse: Bundle.entry[2].resource.issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/GetDemographicsResponse: Bundle.entry[2].resource.issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/GetDemographicsResponse: Bundle.entry[2].resource.ofType(OperationOutcome).issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/GetDemographicsResponse: Bundle.entry[2].resource.ofType(OperationOutcome).issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Bundle/GetDemographicsResponse: Bundle.entry[1].resource.issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Bundle/GetDemographicsResponse: Bundle.entry[1].resource.issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Bundle/GetDemographicsResponse: Bundle.entry[1].resource.ofType(OperationOutcome).issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Bundle/GetDemographicsResponse: Bundle.entry[1].resource.ofType(OperationOutcome).issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
 WARNING: Bundle/GetDemographicsResponse: Bundle: SearchSet Bundles should have a self link that specifies what the search was
 WARNING: Bundle/GetDemographicsResponse: Bundle: SearchSet bundles should have search modes on the entries
 == fsh-generated/resources/Bundle-MergePatientResponse.json ==
-ERROR: Bundle/MergePatientResponse: Bundle.entry[1]: Profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle, Element matches more than one slice - parameters, parametersRequest
-ERROR: Bundle/MergePatientResponse: Bundle: Bundle.entry:parameters: max allowed = 1, but found 2 (from http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle)
-ERROR: Bundle/MergePatientResponse: Bundle: Bundle.entry:parametersRequest: minimum required = 1, but only found 0 (from http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle)
-INFORMATION: Bundle/MergePatientResponse: Bundle.entry[1].resource.parameter[3]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-WARNING: Bundle/MergePatientResponse: Bundle.entry[2].resource.issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/MergePatientResponse: Bundle.entry[2].resource.issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/MergePatientResponse: Bundle.entry[2].resource.ofType(OperationOutcome).issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/MergePatientResponse: Bundle.entry[2].resource.ofType(OperationOutcome).issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Bundle/MergePatientResponse: Bundle.entry[1].resource.issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Bundle/MergePatientResponse: Bundle.entry[1].resource.issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Bundle/MergePatientResponse: Bundle.entry[1].resource.ofType(OperationOutcome).issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Bundle/MergePatientResponse: Bundle.entry[1].resource.ofType(OperationOutcome).issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/Bundle-RevisePatientResponse.json ==
-ERROR: Bundle/RevisePatientResponse: Bundle.entry[1]: Profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle, Element matches more than one slice - parameters, parametersRequest
-ERROR: Bundle/RevisePatientResponse: Bundle: Bundle.entry:parameters: max allowed = 1, but found 2 (from http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle)
-ERROR: Bundle/RevisePatientResponse: Bundle: Bundle.entry:parametersRequest: minimum required = 1, but only found 0 (from http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle)
-INFORMATION: Bundle/RevisePatientResponse: Bundle.entry[1].resource.parameter[3]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-WARNING: Bundle/RevisePatientResponse: Bundle.entry[2].resource.issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/RevisePatientResponse: Bundle.entry[2].resource.issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/RevisePatientResponse: Bundle.entry[2].resource.ofType(OperationOutcome).issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/RevisePatientResponse: Bundle.entry[2].resource.ofType(OperationOutcome).issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Bundle/RevisePatientResponse: Bundle.entry[1].resource.issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Bundle/RevisePatientResponse: Bundle.entry[1].resource.issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Bundle/RevisePatientResponse: Bundle.entry[1].resource.ofType(OperationOutcome).issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Bundle/RevisePatientResponse: Bundle.entry[1].resource.ofType(OperationOutcome).issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/CodeSystem-bc-client-registry-address-validation-code-system.json ==
 == fsh-generated/resources/CodeSystem-bc-client-registry-merge-status-code-system.json ==
 == fsh-generated/resources/CodeSystem-bc-operation-outcome-details-code-system.json ==
@@ -155,38 +112,10 @@ WARNING: OperationOutcome/RPMPOperationOutcome: OperationOutcome.issue[1].detail
 WARNING: OperationOutcome/SearchOperationOutcome: OperationOutcome.issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
 WARNING: OperationOutcome/SearchOperationOutcome: OperationOutcome.issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/Parameters-FindCandidates.json ==
-INFORMATION: Parameters/FindCandidates: Parameters.parameter[3]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Parameters/FindCandidates: Parameters.parameter[4]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Parameters/FindCandidates: Parameters.parameter[5]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Parameters/FindCandidates: Parameters.parameter[6]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Parameters/FindCandidates: Parameters.parameter[7]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Parameters/FindCandidates: Parameters.parameter[8]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Parameters/FindCandidates: Parameters.parameter[9]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-== fsh-generated/resources/Parameters-FindCandidates-EchoRequest.json ==
-INFORMATION: Parameters/FindCandidates-EchoRequest: Parameters.parameter[3]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-metadata-parameters
-INFORMATION: Parameters/FindCandidates-EchoRequest: Parameters.parameter[4]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-metadata-parameters
-INFORMATION: Parameters/FindCandidates-EchoRequest: Parameters.parameter[5]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-metadata-parameters
-INFORMATION: Parameters/FindCandidates-EchoRequest: Parameters.parameter[6]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-metadata-parameters
-INFORMATION: Parameters/FindCandidates-EchoRequest: Parameters.parameter[7]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-metadata-parameters
-INFORMATION: Parameters/FindCandidates-EchoRequest: Parameters.parameter[8]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-metadata-parameters
-INFORMATION: Parameters/FindCandidates-EchoRequest: Parameters.parameter[9]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-metadata-parameters
 == fsh-generated/resources/Parameters-FindCandidates-ResponseMetadata.json ==
 == fsh-generated/resources/Parameters-FindCandidates-UsingMomsPHN.json ==
-INFORMATION: Parameters/FindCandidates-UsingMomsPHN: Parameters.parameter[3]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
 == fsh-generated/resources/Parameters-FindCandidates-UsingSSRI.json ==
-INFORMATION: Parameters/FindCandidates-UsingSSRI: Parameters.parameter[3]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Parameters/FindCandidates-UsingSSRI: Parameters.parameter[4]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Parameters/FindCandidates-UsingSSRI: Parameters.parameter[5]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Parameters/FindCandidates-UsingSSRI: Parameters.parameter[6]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Parameters/FindCandidates-UsingSSRI: Parameters.parameter[7]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Parameters/FindCandidates-UsingSSRI: Parameters.parameter[8]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Parameters/FindCandidates-UsingSSRI: Parameters.parameter[9]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
 == fsh-generated/resources/Parameters-GetDemographics.json ==
-INFORMATION: Parameters/GetDemographics: Parameters.parameter[4]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-INFORMATION: Parameters/GetDemographics: Parameters.parameter[5]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-== fsh-generated/resources/Parameters-GetDemographics-EchoRequest.json ==
-INFORMATION: Parameters/GetDemographics-EchoRequest: Parameters.parameter[4]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-metadata-parameters
-INFORMATION: Parameters/GetDemographics-EchoRequest: Parameters.parameter[5]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-metadata-parameters
 == fsh-generated/resources/Parameters-GetDemographics-ResponseMetadata.json ==
 == fsh-generated/resources/Parameters-GetDemographicsINParameters.json ==
 == fsh-generated/resources/Parameters-MergePatient-EchoRequest.json ==
@@ -195,7 +124,6 @@ INFORMATION: Parameters/GetDemographics-EchoRequest: Parameters.parameter[5]: Th
 == fsh-generated/resources/Parameters-RevisePatient-EchoRequest.json ==
 == fsh-generated/resources/Parameters-RevisePatient-New.json ==
 == fsh-generated/resources/Parameters-RevisePatient-Newborn.json ==
-INFORMATION: Parameters/RevisePatient-Newborn: Parameters.parameter[5]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters
 == fsh-generated/resources/Parameters-RevisePatient-UpdateExisting.json ==
 == fsh-generated/resources/Parameters-ReviseResponseMetadata.json ==
 == fsh-generated/resources/Patient-Patient0Response.json ==
@@ -222,9 +150,6 @@ INFORMATION: Parameters/RevisePatient-Newborn: Parameters.parameter[5]: This ele
 == fsh-generated/resources/StructureDefinition-bc-patient.json ==
 == fsh-generated/resources/StructureDefinition-bc-patient-business-dates-extension.json ==
 == fsh-generated/resources/StructureDefinition-bc-patient-business-parameters.json ==
-== fsh-generated/resources/StructureDefinition-bc-request-metadata-parameters.json ==
-== fsh-generated/resources/StructureDefinition-bc-request-patient-business-parameters.json ==
-INFORMATION: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-request-patient-business-parameters'): The Implementation Guide contains no explicitly linked examples for this profile
 == fsh-generated/resources/StructureDefinition-bc-revise-response-bundle.json ==
 == fsh-generated/resources/StructureDefinition-bc-search-response-bundle.json ==
 == fsh-generated/resources/ValueSet-bc-address-type-value-set.json ==
