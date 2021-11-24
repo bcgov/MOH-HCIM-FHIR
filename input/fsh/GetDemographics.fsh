@@ -13,7 +13,7 @@ Usage: #definition
 * system = false
 * type = true
 * instance = true
-* inputProfile = Canonical(BCPatientBusinessParameters)
+* inputProfile = Canonical(BCMetadataParameters)
 
 * parameter[0].name = #messageId
 * parameter[0].use = #in
@@ -51,3 +51,9 @@ Usage: #definition
 * parameter[4].documentation = "Boolean flag to return Patient's history.  If missing, defaults to false."
 * parameter[4].type = #boolean
 
+* parameter[5].name = #enterer
+* parameter[5].use = #in                                                                    
+* parameter[5].min = 0
+* parameter[5].max = "1"
+* parameter[5].documentation = "UserId of sender."
+* parameter[5].type = #Identifier

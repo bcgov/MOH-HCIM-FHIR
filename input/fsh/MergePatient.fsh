@@ -33,3 +33,9 @@ Usage: #definition
 * parameter[2].max = "1"
 * parameter[2].documentation = "The Patient."
 * parameter[2].type = #Patient
+* parameter[3].name = #enterer                                                              
+* parameter[3].use = #in                                                                    
+* parameter[3].min = 0
+* parameter[3].max = "1"
+* parameter[3].documentation = "UserId of sender."
+* parameter[3].type = #Identifier

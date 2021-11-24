@@ -12,7 +12,7 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * address only BCClientRegistryAddress
 * address MS
 * link 0..* MS
-* link.other.identifier 1..1 MS
+//* link.other.identifier 1..1 MS
 * name 1..* MS
 * name.use 1..1 MS
 * name.use from BCNameUse (required)

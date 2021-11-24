@@ -300,3 +300,82 @@ Description: "Example of Merge or Revise response Bundle with 4 different kinds 
 * extension[1].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-business-dates-extension"
 * extension[1].valuePeriod.start = "1973-05-18"
 
+
+Instance: PatientBabyBoy
+InstanceOf: BCPatient
+Description: "Example of Patient new bornfor query response Bundle"
+* extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-dates-extension"
+* extension[0].valuePeriod.start = "2019-11-12T13:29:17-08:00"
+* address[0] = BCPatientAddress0Example
+* address[1] = BCPatientAddress1Example
+* telecom.use = #home
+* telecom.system = #phone
+* telecom.value = "2504283447"
+* identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
+* identifier.value = "9123123124"
+* identifier.type.coding.code = #JHN
+* identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* name.given = "Baby Boy"
+* name.family = "PURPLE"
+* name.use = http://hl7.org/fhir/name-use#usual
+* gender = #male
+* birthDate = 2019-12-12
+* extension[1].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birth-date-business-dates-extension"
+* extension[1].valuePeriod.start = "2019-11-12T03:29:17-08:00"
+* extension[2].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-business-dates-extension"
+* extension[2].valuePeriod.start = "2019-11-12"
+
+
+Instance: PatientBabyGirl
+InstanceOf: BCPatient
+Description: "Example of Patient newborn for query response Bundle"
+* extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-dates-extension"
+* extension[0].valuePeriod.start = "2019-11-12T13:21:13-08:00"
+* address[0] = BCPatientAddress0Example
+* address[1] = BCPatientAddress1Example
+* telecom.use = #home
+* telecom.system = #phone
+* telecom.value = "2504283447"
+* identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
+* identifier.value = "9123123123"
+* identifier.type.coding.code = #JHN
+* identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* name.given = "Baby Girl"
+* name.family = "PURPLE"
+* name.use = http://hl7.org/fhir/name-use#usual
+* gender = #female
+* birthDate = 2019-12-12
+* extension[1].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birth-date-business-dates-extension"
+* extension[1].valuePeriod.start = "2019-11-12T03:29:17-08:00"
+* extension[2].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-business-dates-extension"
+* extension[2].valuePeriod.start = "2019-11-12"
+
+
+Instance: PatientMother
+InstanceOf: BCPatient
+Description: "Example of Patient for query response Bundle"
+* extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-dates-extension"
+* extension[0].valuePeriod.start = "2019-02-07T13:29:17-08:00"
+* address[0] = BCPatientAddress0Example
+* address[1] = BCPatientAddress1Example
+* telecom.use = #home
+* telecom.system = #phone
+* telecom.value = "2504283447"
+* identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
+* identifier.value = "9999999999"
+* identifier.type.coding.code = #JHN
+* identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* name.given = "BAILEY"
+* name.family = "PURPLE"
+* name.use = http://hl7.org/fhir/name-use#usual
+* gender = #female
+* birthDate = 1985-12-14
+* extension[1].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birth-date-business-dates-extension"
+* extension[1].valuePeriod.start = "2019-10-17T03:29:17-08:00"
+* extension[2].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-business-dates-extension"
+* extension[2].valuePeriod.start = "1973-05-18"
+* link[0].other.reference = "urn:uuid:425b6c71-b198-4e75-b32c-1b3086935c6a"
+* link[0].type = #seealso
+* link[1].other.reference = "urn:uuid:4a288971-8af6-4d77-a071-4ba3a10042e5"
+* link[1].type = #seealso
+

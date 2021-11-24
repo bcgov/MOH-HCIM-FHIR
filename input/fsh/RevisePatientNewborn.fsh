@@ -39,3 +39,10 @@ Usage: #definition
 * parameter[3].max = "1"
 * parameter[3].documentation = "The newborn Patient mother's PHN."
 * parameter[3].type = #RelatedPerson
+* parameter[4].name = #enterer                                                              
+* parameter[4].use = #in                                                                    
+* parameter[4].min = 0
+* parameter[4].max = "1"
+* parameter[4].documentation = "UserId of sender."
+* parameter[4].type = #Identifier
+

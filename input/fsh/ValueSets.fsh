@@ -61,13 +61,6 @@ Id: bc-contact-point-system-value-set
 * exclude http://hl7.org/fhir/contact-point-system#sms
 * exclude http://hl7.org/fhir/contact-point-system#other
 
-ValueSet: BCAdministrativeGender
-Title: "BC Administrative Gender Use value set."
-Description: "BC Administrative Gender value set, sliced to meet BC constraints."
-Id: bc-administrative-gender-value-set
-* include codes from valueset AdministrativeGender
-* exclude http://hl7.org/fhir/administrative-gender#other
-
 ValueSet: BCAddressUse
 Title: "BC Address Use value set."
 Description: "BC Address Use value set, sliced to meet BC constraints."

@@ -21,3 +21,10 @@ See British Columbia's [Health Information Exchange](https://www2.gov.bc.ca/gov/
 For design information start [here](design.html), to view details about profiles, operations, examples, etc, view this [page](artifacts.html).
 
 
+## Miscellaneous
+
+Conformance verbs - SHALL, SHOULD, MAY - used in this guide are defined in [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html#conflang).
+
+No form of data absent reason is supported; mandatory data must always be present.
+
+All of the Profiles include elements that are marked as Must Support. For the purposes of this guide, Must Support is intended to represent those fields that will be exchanged between client applications and the Client Registry server. Client applications who are receving information SHALL be able to receive all fields marked as Must Support without raising an exception. When sending information to the Client Registry server, client applications SHOULD be able to send any fields marked as Must Support.

@@ -12,3 +12,16 @@ Description: "Example of related person's PHN as Identifier"
 //* patient.reference = "Patient/Newborn"
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#MTH
 
+Instance: MotherRelatedFCBabyGirl
+InstanceOf: RelatedPerson
+Description: "Example of related person who is the mother"
+* relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#NCHILD
+* patient.reference = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"
+
+Instance: MotherRelatedFCBabyBoy
+InstanceOf: RelatedPerson
+Description: "Example of related person who is the mother"
+* relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#NCHILD
+* patient.reference = "urn:uuid:90bf49dc-4590-4302-8e28-f02bb4deb353"
+
+

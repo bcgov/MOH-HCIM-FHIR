@@ -13,7 +13,7 @@ Usage: #definition
 * system = false
 * type = true
 * instance = true
-* inputProfile = Canonical(BCPatientBusinessParameters)
+* inputProfile = Canonical(BCMetadataParameters)
 
 * parameter[0].name = #messageId
 * parameter[0].use = #in
@@ -36,7 +36,6 @@ Usage: #definition
 * parameter[2].max = "1"
 * parameter[2].documentation = "Message sender"
 * parameter[2].type = #Identifier
-
 
 * parameter[3].name = #address
 * parameter[3].use = #in
@@ -100,6 +99,13 @@ Usage: #definition
 * parameter[11].max = "1"
 * parameter[11].documentation = "Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defaults to false."
 * parameter[11].type = #boolean
+
+* parameter[12].name = #enterer
+* parameter[12].use = #in
+* parameter[12].min = 0
+* parameter[12].max = "1"
+* parameter[12].documentation = "UserId of sender."
+* parameter[12].type = #Identifier
 
 
 

@@ -60,7 +60,6 @@ Attribute | Value Sets
 Patient.name.use| Only _usual_ or _official_ from NameUse value set.
 Patient.telecom.use| Only _home_, _work_, _mobile_ from the ContactPointUse value set.
 Patient.telecom.system| Only _phone_ or _email_ from the ContactPointSystem value set.
-Patient.gender|Only _male_, _female_ or _unknown_ from the AdministrativeGender value set.
 Patient.address.type|Only _postal_ or _physical_ from the AddressType value set.
 Patient.address.use|Only _home_ from the AddressUse value set.
 Patient.identifier.system|See the section on [identifiers](identifiers.html)
@@ -73,14 +72,14 @@ Operations |
 :--- |
 https://..../$FindCandidates |
 https://..../$GetDemographics |
-https://..../$GetDemographics.History |
 https://..../$RevisePatient |
 https://..../$RevisePatient.Newborn |
+https://..../$RevisePatient.Newborn.Async |
 https://..../$RevisePatient.Async |
 https://..../$MergePatient |
 https://..../$MergePatient.Async |
 
-Suffixes such as History and Async inform the Client Registry FHIR server to perform the operation in a particular way such as returning historical attributes or responding asynchronously.
+Suffixes such as Async inform the Client Registry FHIR server to perform the operation in a particular way such as responding asynchronously.
 
 ##### Requests
 
@@ -133,6 +132,7 @@ Revise and Merge Operations |
 https://..../$RevisePatient |
 https://..../$RevisePatient.Async |
 https://..../$RevisePatient.Newborn |
+https://..../$RevisePatient.Newborn.Async |
 https://..../$MergePatient |
 https://..../$MergePatient.Async |
 
@@ -143,9 +143,23 @@ These business transactions will allow the user to:
 [Revise and Merge page](reviseAndMerge.html "Revise and Merge Patient")
 
 ##### Asynchronous Operations
-The asynchronous versions of Revise and Merge Operations share the same request and response profile.  The difference is that the response is sent back later and the requesting system should not block, wait for the response, but have an end point established to receive the response when the responding system sends it.
+The asynchronous versions of Revise and Merge Operations share the same request and response profile as the synchronous version.
+
+The FHIR asynchornous pattern is not followed by this FHIR implementation.  The existing pattern the Client Registry uses today will be mimicked.  I.e.
+1. User sends request
+1. Client Registry responds with HTTP 202 Accepted
+1. Client Registry sends request to user's end point
+1. User system responds with 202 Accepted
 
 ### Get Eligibility is Not Supported by FHIR
 
 Get Eligibility will not be supported by the Client Registry FHIR interactions.  If a FHIR-only user needs to know the claim eligibility status of a Patient they need to retrieve the Patient (the PHN) with a FHIR Get Demographics message and then use the PHN to submit a Get Eligibility message to the eligibility service.
 >Is there more information we can provide here, like a link to some documentation on the eligibility service?
+
+### Error Handling
+
+This implemenation of FHIR will follow the standard FHIR error handling.  E.g. return an OperationOutcome in a Bundle with the appropirate HTTP status code.  User are expected to monitor the http status codes and the OperationOutcome resources for issues.
+
+### Success Status Codes
+
+HTTP 200 (OK) will be returned in all cases where the request was sucessful.  This includes a search that was a valid Operation but did not match any Patients.  The only exceptions when a Patient is first created, the status code response is 201 (Created).

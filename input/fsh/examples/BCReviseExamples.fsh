@@ -15,7 +15,6 @@ Description: "Example of $RevisePatient operation where the Patient is new to th
 * parameter[enterer].name = "enterer"
 * parameter[enterer].valueIdentifier.value = "klgodfre"
 * parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
-
 * parameter[patient].name = "patient"
 * parameter[patient].resource = PatientRP-New
 
@@ -36,7 +35,6 @@ Description: "Example of $RevisePatient.Newborn operation where the Patient is a
 * parameter[enterer].name = "enterer"
 * parameter[enterer].valueIdentifier.value = "klgodfre"
 * parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
-
 * parameter[patient].name = "patient"
 * parameter[patient].resource = PatientRP-Newborn
 
@@ -44,27 +42,6 @@ Description: "Example of $RevisePatient.Newborn operation where the Patient is a
 * parameter[5].resource = MotherRelated
 
 Instance: RevisePatient-UpdateExisting
-InstanceOf: BCPatientBusinessParameters
-Description: "Example of $RevisePatient operation that updates an existing Patient"
-
-* parameter[messageId].name = "messageId"
-* parameter[messageId].valueString = "98028b44-882a-4c72-8c92-b87d916147e1"
-
-* parameter[messageDateTime].name = "messageDateTime"
-* parameter[messageDateTime].valueDateTime = "2021-11-02T13:28:17-08:00"
-
-* parameter[sender].name = "sender"
-* parameter[sender].valueIdentifier.value = "PHARM"
-* parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
-
-* parameter[enterer].name = "enterer"
-* parameter[enterer].valueIdentifier.value = "klgodfre"
-* parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
-
-* parameter[patient].name = "patient"
-* parameter[patient].resource = PatientRP
-
-Instance: RevisePatient-EchoRequest
 InstanceOf: BCPatientBusinessParameters
 Description: "Example of $RevisePatient operation that updates an existing Patient"
 
@@ -112,7 +89,7 @@ Description: "A sample RevisePatient and MergePatient Operation response."
 * link[0].relation = "self"
 * link[0].url = "urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1"
 
-* entry[0].resource = RevisePatient-EchoRequest
+* entry[0].resource = ReviseResponseMetadata
 * entry[0].fullUrl = "urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33"
 
 * entry[1].resource = RPMPOperationOutcome
