@@ -2,13 +2,11 @@ Profile: BCPatient
 Parent: Patient
 Id: bc-patient
 Description: "General constraints on the Patient resource for use in the BC Client Registry project."
-* extension contains PatientBusinessDateExtension named effectiveDates 0..1
-* extension contains DeathDateExtension named deathDate 0..1
-* extension contains BirthDateBusinessDateExtension named birthDateEffectiveDates 0..1
-* extension contains DeathDateBusinessDateExtension named deathDateEffectiveDates 0..1
-* extension contains DeathDateFlagBusinessDateExtension named deathDateFlagEffectiveDates 0..1
-* extension contains GenderBusinessDateExtension named genderEffectiveDates 0..1
+* extension contains BusinessPeriodExtension named effectiveDates 0..1
 * deceased[x] only boolean
+* deceased[x].extension contains DeathDateExtension named deathDate 0..1
+* deceased[x].extension contains BusinessPeriodExtension named deathDateEffectiveDates 0..1
+* deceased[x].extension contains DeathDateFlagBusinessPeriodExtension named deathDateFlagEffectiveDates 0..1
 * address only BCClientRegistryAddress
 * address MS
 * link 0..* MS
@@ -19,12 +17,15 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * telecom.use from BCContactPointUse (required)
 * telecom.system from BCContactPointSystem (required)
 * gender 1..1 MS
+* gender.extension contains BusinessPeriodExtension named genderEffectiveDates 0..1
 * birthDate 1..1 MS
+* birthDate.extension contains BusinessPeriodExtension named birthDateEffectiveDates 0..1
+* multipleBirth[x].extension contains BusinessPeriodExtension named multipleBirthBusinessDates 0..1
 
-Extension: PatientBusinessDateExtension
-Id: bc-patient-business-dates-extension
-Title: "BC Patient business dates"
-Description: "The effective dates for the Patient."
+Extension: BusinessPeriodExtension
+Id: bc-business-period-extension
+Title: "BC business dates"
+Description: "The effective dates for the parent element."
 * value[x] only Period
 
 Extension: DeathDateExtension
@@ -33,35 +34,17 @@ Title: "BC Patient death date"
 Description: "The Patients death date and time as recorded in the Client Registry."
 * value[x] only dateTime
 
-Extension: DeathDateBusinessDateExtension
-Id: bc-death-date-business-dates-extension
-Title: "BC Patient Death Date business date"
-Description: "The effective dates for the Patient's Death Date."
-* value[x] only Period
-
-Extension: DeathDateFlagBusinessDateExtension
-Id: bc-death-date-flag-business-dates-extension
+Extension: DeathDateFlagBusinessPeriodExtension
+Id: bc-death-date-flag-business-period-extension
 Title: "BC Patient Death Date flag business date"
 Description: "The effective dates for the Patient's Death Date flag."
-* value[x] only Period
-
-Extension: GenderBusinessDateExtension
-Id: bc-gender-business-dates-extension
-Title: "BC Patient Gender business date"
-Description: "The effective dates for the Patient's Gender."
-* value[x] only Period
-
-Extension: BirthDateBusinessDateExtension
-Id: bc-birth-date-business-dates-extension
-Title: "BC Patient Birth Date business date"
-Description: "The effective dates for the Patient's Birth Date."
 * value[x] only Period
 
 Profile: BCClientRegistryAddress
 Parent: Address
 Id: bc-client-registry-address
 Description: "The BC Client Registry address profile."
-* extension contains AddressValidationStatusExtension named addressValidationStatus 0..1
+* extension contains ValidationStatusExtension named validationStatus 0..1
 * use from BCAddressUse (required)
 * type from BCAddressType (required)
 
@@ -72,8 +55,8 @@ Description: "A code that represents the Merge status of the Patient."
 * value[x] only code
 * valueCode from BCMergeStatusVS (required)
 
-Extension: AddressValidationStatusExtension
-Id: bc-address-validation-status-extension
+Extension: ValidationStatusExtension
+Id: bc-validation-status-extension
 Title: "BC Address validation status code"
 Description: "A code that represents the validation status of the address"
 * value[x] only code

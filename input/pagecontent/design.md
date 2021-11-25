@@ -9,8 +9,9 @@ Namely:
 	- Revise Patient
 	- Merge Patient
 	- Distribute Patient
-- Asynchronous interactions will be supported as with the current system
+- Asynchronous interactions will be supported as with the current system; supporting asynchronous for interactions that write data to the Client Registry.
 - New attributes can be included in FHIR that are not in V3 (such as more business dates)
+- HL7 V3 will be deprecated at some future time
 - The Client Registry profiles should conform to the Canadian Baseline profiles
 
 ### Design Assumptions
@@ -48,7 +49,7 @@ bc-death-date-extension | A dateTime extension that indicates is the client's de
 bc-birth-date-business-dates | A Period extension for effective dates
 bc-death-date-business-dates | A Period extension for effective dates
 bc-death-date-flag-business-dates | A Period extension for effective dates
-bc-address-validation-status | A code that represents the address validation status.  This will be part of every Patient.address
+bc-validation-status | A code that represents the address validation status.  This will be part of every Patient.address
 bc-gender-business-dates | A Period extension for effective dates
 
 ##### Terminologies, CodeableConcepts, Codes and Value Sets

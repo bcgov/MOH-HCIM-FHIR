@@ -78,7 +78,7 @@ The Client Registry users SHALL monitor the HTTP reponse codes returned in a res
 <h3>Search</h3>
 <h4>Find Candidates</h4>
 <p>
-The Find Candidates search SHALL use the following name-value paramters pairs, mandatory or optional according to the cardinality rules below.  This search may return zero or more Patients using the BCPatient profile.
+The Find Candidates search SHALL use the following name-value paramters pairs, mandatory or optional according to the cardinality rules below.  This search may return zero or more Patients using the BCPatient profile.  Wildcards are not permitted.
 </p>
 
 

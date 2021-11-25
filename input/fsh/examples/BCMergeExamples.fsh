@@ -29,8 +29,8 @@ Description: "Example of Merge response Metadata parameters"
 * parameter[messageDateTime].name = "messageDateTime"
 * parameter[messageDateTime].valueDateTime = "2015-02-07T13:29:17-08:00"
 
-* parameter[messageRequestId].name = "messageRequestId"
-* parameter[messageRequestId].valueString = "98028b44-882a-4c72-8c92-b87d916147e1"
+* parameter[requestMessageId].name = "requestMessageId"
+* parameter[requestMessageId].valueString = "98028b44-882a-4c72-8c92-b87d916147e1"
 
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.value = "MOH_CRS"
@@ -51,7 +51,4 @@ Description: "A sample RevisePatient and MergePatient Operation response."
 
 * entry[1].resource = RPMPOperationOutcome
 * entry[1].fullUrl = "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"
-
-* entry[2].resource = PatientRPMPResponse
-* entry[2].fullUrl = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"
 

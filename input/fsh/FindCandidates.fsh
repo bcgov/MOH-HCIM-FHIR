@@ -56,14 +56,14 @@ Usage: #definition
 * parameter[5].min = 0
 * parameter[5].max = "1"
 * parameter[5].documentation = "Patient birth date."
-* parameter[5].type = #dateTime
+* parameter[5].type = #date
 
 * parameter[6].name = #deathDate
 * parameter[6].use = #in
 * parameter[6].min = 0
 * parameter[6].max = "1"
 * parameter[6].documentation = "Patient death date."
-* parameter[6].type = #dateTime
+* parameter[6].type = #date
 
 * parameter[7].name = #name
 * parameter[7].use = #in

@@ -6,12 +6,12 @@ The Find Candidates interaction uses the name and other criteria (e.g. date of b
 The Find Candidates transaction could return many matches depending on the information provided.
 
 Specific search criteria include: 
-- Surname; 
-- Given names; 
+- Name (Given *and* Surname); 
 - Date of birth; 
 - Phone number; 
 - Street address; or 
-- Postal code. 
+- Postal code.
+- Mother's PHN (if used, just Mother's PHN)
 
 The Find Candidates is a synchronous request-response transaction.
 

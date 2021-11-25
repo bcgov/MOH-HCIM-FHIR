@@ -6,7 +6,7 @@ Description: "Parameters profile for BC meta data"
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #open
 * parameter ^slicing.description = "The specific parameters to specify BC Metadata."
-* parameter contains messageId 1..1 MS and messageDateTime 1..1 MS and messageRequestId 0..1 MS and sender 1..1 MS and enterer 0..1 MS
+* parameter contains messageId 1..1 MS and messageDateTime 1..1 MS and requestMessageId 0..1 MS and sender 1..1 MS and enterer 0..1 MS
 * parameter[messageId].name MS
 * parameter[messageId].name = "messageId"
 * parameter[messageId].value[x] only string
@@ -19,12 +19,12 @@ Description: "Parameters profile for BC meta data"
 * parameter[messageDateTime].value[x] only dateTime
 * parameter[messageDateTime].resource 0..0
 * parameter[messageDateTime].part 0..0
-* parameter[messageRequestId].name MS
-* parameter[messageRequestId].name = "messageRequestId"
-* parameter[messageRequestId].valueString 0..1 MS
-* parameter[messageRequestId].value[x] only string
-* parameter[messageRequestId].resource 0..0
-* parameter[messageRequestId].part 0..0
+* parameter[requestMessageId].name MS
+* parameter[requestMessageId].name = "requestMessageId"
+* parameter[requestMessageId].valueString 0..1 MS
+* parameter[requestMessageId].value[x] only string
+* parameter[requestMessageId].resource 0..0
+* parameter[requestMessageId].part 0..0
 * parameter[sender].name MS
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier 1..1 MS

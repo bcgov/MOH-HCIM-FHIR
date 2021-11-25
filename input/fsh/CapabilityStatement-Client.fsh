@@ -3,14 +3,14 @@ InstanceOf: CapabilityStatement
 * text.status = #generated
 * text.div = "<div>
 
-<p>This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when acting as a client.  I.e. when sending Distributions</p>
+<p>This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when acting as a client.  I.e. when sending Patient change notifications.</p>
 
 <p>
-A Distribution is a RevisePatient FHIR Operation where the Client Registry sends a Patient/$RevisePatient request to a client.  After an onboardeding process by the Client Registry operational support team and developing an endpoint, clients are perpared to receive these requests.
+A Patient change notification is a RevisePatient FHIR Operation where the Client Registry sends a Patient/$RevisePatient request to a client.  After an onboardeding process by the Client Registry operational support team and developing an endpoint, clients are perpared to receive these requests.
 </p>
 
 <p>
-The following table describes the request and the three parameters; all are mandatory.  The Client Registry SHALL use the following IN parameters when sending a distribution.
+The following table describes the request and the three parameters; all are mandatory.  The Client Registry SHALL use the following IN parameters when sending a change notification.
 </p>
 <table class=\"grid\">
 	<tr>
@@ -91,7 +91,7 @@ The Client Registry expects a 200 HTTP status code in return when the request is
 * status = #draft
 * date = "2021-11-18"
 * publisher = "BC Ministry of Health"
-* description = "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a client. I.e. sending distributions."
+* description = "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a client. I.e. sending notifications."
 
 * kind = #capability
 * software.name = "BC HCIM FHIR Implementation"

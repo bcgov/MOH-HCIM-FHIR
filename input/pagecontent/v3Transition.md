@@ -9,8 +9,7 @@ In the future stakeholders can transition from V3 to FHIR.  The older specificat
 
 ## Note on Get Eligibility
 
-The Client Registry FHIR operations do not include a Get Eligibility operation.  The V3 implementation of Get Eligibility is composed of two interactions, a Get Demographics and then a Get Eligibility, which Client Registry does on behalf of the V3 message requester.  For FHIR, this will no longer be supported.  Users wishing to use Get Eligibility will need to use the FHIR Get Demographics operation and then send the Get Eligibility request to ....
->Where is the Get Eligibility supposed to be sent to
+The Client Registry FHIR operations do not include a Get Eligibility operation.  The V3 implementation of Get Eligibility is composed of two interactions, a Get Demographics and then a Get Eligibility, which Client Registry does on behalf of the V3 message requester.  For FHIR, this will no longer be supported.  Users wishing to use Get Eligibility will need to use the FHIR Get Demographics operation and then send the Get Eligibility request to the RAPID system.
 
 ## FHIR Development
 
