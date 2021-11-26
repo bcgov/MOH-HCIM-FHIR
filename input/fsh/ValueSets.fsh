@@ -31,18 +31,17 @@ Id: bc-address-validation-value-set
 Description: "BC Address Validation value set used to describe the validation status of an address"
 * codes from system BCAddressValidationCS
 
-ValueSet: BCNameUse
+ValueSet: BCNameUseVS
 Title: "BC Name Use value set."
 Description: "BC Name Use value set, sliced to meet BC constraints."
 Id: bc-name-use-value-set
 * include codes from valueset NameUse
 * exclude http://hl7.org/fhir/name-use#temp
-* exclude http://hl7.org/fhir/name-use#nickname
 * exclude http://hl7.org/fhir/name-use#anonymous
 * exclude http://hl7.org/fhir/name-use#old
 * exclude http://hl7.org/fhir/name-use#maiden
 
-ValueSet: BCContactPointUse
+ValueSet: BCContactPointUseVS
 Title: "BC Contact Point Use value set."
 Description: "BC Contact Point Use value set, sliced to meet BC constraints."
 Id: bc-contact-point-use-value-set
@@ -50,7 +49,7 @@ Id: bc-contact-point-use-value-set
 * exclude http://hl7.org/fhir/contact-point-use#old
 * exclude http://hl7.org/fhir/contact-point-use#temp
 
-ValueSet: BCContactPointSystem
+ValueSet: BCContactPointSystemVS
 Title: "BC Contact Point System value set."
 Description: "BC Contact Point System value set, sliced to meet BC constraints."
 Id: bc-contact-point-system-value-set
@@ -61,17 +60,17 @@ Id: bc-contact-point-system-value-set
 * exclude http://hl7.org/fhir/contact-point-system#sms
 * exclude http://hl7.org/fhir/contact-point-system#other
 
-ValueSet: BCAddressUse
-Title: "BC Address Use value set."
-Description: "BC Address Use value set, sliced to meet BC constraints."
-Id: bc-address-use-value-set
-* include codes from valueset AddressUse
-* exclude http://hl7.org/fhir/address-use#work
-* exclude http://hl7.org/fhir/address-use#temp
-* exclude http://hl7.org/fhir/address-use#old
-* exclude http://hl7.org/fhir/address-use#billing
+//ValueSet: BCAddressUse
+//Title: "BC Address Use value set."
+//Description: "BC Address Use value set, sliced to meet BC constraints."
+//Id: bc-address-use-value-set
+//* include codes from valueset AddressUse
+//* exclude http://hl7.org/fhir/address-use#work
+//* exclude http://hl7.org/fhir/address-use#temp
+//* exclude http://hl7.org/fhir/address-use#old
+//* exclude http://hl7.org/fhir/address-use#billing
 
-ValueSet: BCAddressType
+ValueSet: BCAddressTypeVS
 Title: "BC Address Type value set."
 Description: "BC Address Type value set, sliced to meet BC constraints."
 Id: bc-address-type-value-set

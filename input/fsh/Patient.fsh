@@ -2,20 +2,21 @@ Profile: BCPatient
 Parent: Patient
 Id: bc-patient
 Description: "General constraints on the Patient resource for use in the BC Client Registry project."
-* extension contains BusinessPeriodExtension named effectiveDates 0..1
-* deceased[x] only boolean
+* extension contains BusinessPeriodExtension named effectiveDates 0..1 MS
+* deceased[x] 0..1 MS
+* deceased[x] only boolean 
 * deceased[x].extension contains DeathDateExtension named deathDate 0..1
 * deceased[x].extension contains BusinessPeriodExtension named deathDateEffectiveDates 0..1
 * deceased[x].extension contains DeathDateFlagBusinessPeriodExtension named deathDateFlagEffectiveDates 0..1
-* address only BCClientRegistryAddress
 * address MS
 * link 0..* MS
 //* link.other.identifier 1..1 MS
 * name 1..* MS
-* name.use 1..1 MS
-* name.use from BCNameUse (required)
-* telecom.use from BCContactPointUse (required)
-* telecom.system from BCContactPointSystem (required)
+* name.use 1..1
+* name.use from BCNameUseVS (required)
+* telecom 0..* MS
+* telecom.use from BCContactPointUseVS (required)
+* telecom.system from BCContactPointSystemVS (required)
 * gender 1..1 MS
 * gender.extension contains BusinessPeriodExtension named genderEffectiveDates 0..1
 * birthDate 1..1 MS
@@ -40,13 +41,13 @@ Title: "BC Patient Death Date flag business date"
 Description: "The effective dates for the Patient's Death Date flag."
 * value[x] only Period
 
-Profile: BCClientRegistryAddress
-Parent: Address
-Id: bc-client-registry-address
-Description: "The BC Client Registry address profile."
-* extension contains ValidationStatusExtension named validationStatus 0..1
-* use from BCAddressUse (required)
-* type from BCAddressType (required)
+//Profile: BCClientRegistryAddress
+//Parent: Address
+//Id: bc-client-registry-address
+//Description: "The BC Client Registry address profile."
+//* extension contains ValidationStatusExtension named validationStatus 0..1
+//* use from BCAddressUse (required)
+//* type from BCAddressTypeVS (required)
 
 Extension: MergeStatusExtension
 Id: bc-merge-status-extension

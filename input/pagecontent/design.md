@@ -44,26 +44,41 @@ There are several extensions that are applied to the Patient resource.  The list
 
 Extension Name | Description | 
 :--- | :--- |
-bc-patient-business-dates | A Period extension at the Patient level that represents the entire record
-bc-death-date-extension | A dateTime extension that indicates is the client's death has been verified by ...
-bc-birth-date-business-dates | A Period extension for effective dates
-bc-death-date-business-dates | A Period extension for effective dates
-bc-death-date-flag-business-dates | A Period extension for effective dates
-bc-validation-status | A code that represents the address validation status.  This will be part of every Patient.address
-bc-gender-business-dates | A Period extension for effective dates
+bc-business-period-extension | A Period extension for effective dates.
+bc-validation-status-extension | A code that represents the address validation status.  This will be part of every Patient.address
+bc-death-date-extension | An extension that indicates the date of death.  The Patient resource has a boolean flag for death, this is the date.
+bc-death-date-flag-business-period-extension | A Period extension for effective dates on the death date flag.
 
-##### Terminologies, CodeableConcepts, Codes and Value Sets
+##### Codes and Value Sets
 
-A few points should be highlighted around terminologies, codes and value sets.
+The Client Registry doesn't recognize all the codes for the elements that must be supported, see the table below which indicates the supported codes.
 
 Attribute | Value Sets
 :---|:---
-Patient.name.use| Only _usual_ or _official_ from NameUse value set.
+Patient.name.use| Only _usual_,  _official_ or _nickname_ from NameUse value set.
 Patient.telecom.use| Only _home_, _work_, _mobile_ from the ContactPointUse value set.
 Patient.telecom.system| Only _phone_ or _email_ from the ContactPointSystem value set.
 Patient.address.type|Only _postal_ or _physical_ from the AddressType value set.
-Patient.address.use|Only _home_ from the AddressUse value set.
 Patient.identifier.system|See the section on [identifiers](identifiers.html)
+
+The following table maps the FHIR codes to Client Registry codes.
+
+FHIR Code Type | FHIR Code | HCIM Equivalent
+:--- | :--- | :---
+Name.use | usual | preferred
+Name.use | official | card
+Name.use | nickname | declared
+Telecom.use | home | home
+Telecom.use | work | work
+Telecom.use | mobile | mobile
+Telecom.system | phone | phone
+Telecom.system | email | email
+Address.type | postal | mailing
+Address.type | physical | physical
+Gender | other | undifferentiated
+Gender | unknown | unknown
+Gender | male | male
+Gender | female | female
 
 #### FHIR Operations
 
@@ -74,13 +89,13 @@ Operations |
 https://..../$FindCandidates |
 https://..../$GetDemographics |
 https://..../$RevisePatient |
+https://..../$RevisePatient.Async |
 https://..../$RevisePatient.Newborn |
 https://..../$RevisePatient.Newborn.Async |
-https://..../$RevisePatient.Async |
 https://..../$MergePatient |
 https://..../$MergePatient.Async |
 
-Suffixes such as Async inform the Client Registry FHIR server to perform the operation in a particular way such as responding asynchronously.
+Suffixes such as Async inform the Client Registry FHIR server to perform the operation in a particular way such as responding asynchronously or that the Client Registry is expecting a newly born Patient.
 
 ##### Requests
 
@@ -114,11 +129,11 @@ enterer|parameter.value[Identifier]|UserId for message
 #### Searches
 There are two searches available for Client Registry FHIR, Find Candidates and Get Demographics.  The operations are:
 
-Search Operations |
+Search Operations | Description
 :--- |
-https://…./$FindCandidates |
-https://…./$GetDemographics |
-https://…./$GetDemographics.History |
+https://…./$FindCandidates | Searching for Patients that match the search criteria
+https://…./$GetDemographics | Searching for a single Patient
+https://…./$GetDemographics.History | Searching for a single Patient and requesting that Patients historical attributes (as well as current attributes) be included in the response
 
 Find Candidates may return zero or more candidates, while Get Demographics is designed to return zero or a single match.  These searches are expected to provide the required information to confirm a person's identify.
 
@@ -128,20 +143,21 @@ Find Candidates may return zero or more candidates, while Get Demographics is de
 
 Revise and Merge Patient are maintain transactions that are closely related and therefore are described in the same section.  They use the same FHIR structure and resources; merge uses additional parameters.
 
-Revise and Merge Operations |
-:--- |
-https://..../$RevisePatient |
-https://..../$RevisePatient.Async |
-https://..../$RevisePatient.Newborn |
-https://..../$RevisePatient.Newborn.Async |
-https://..../$MergePatient |
-https://..../$MergePatient.Async |
+
+Add, Revise and Merge Operations | Description
+:--- | :---
+https://..../$RevisePatient | Creating or updating a Patient
+https://..../$RevisePatient.Async | Creating or updating a Patient asynchronously
+https://..../$RevisePatient.Newborn | Creating a newborn Patient
+https://..../$RevisePatient.Newborn.Async | Creating a newborn asynchronously
+https://..../$MergePatient | Resolving duplicate Patients records (same individual)
+https://..../$MergePatient.Async | Resolving duplicate Patients records (same individual) asynchronously
 
 These business transactions will allow the user to:
 - update demographic information, if the patient exists within the Client Registry; or
 - generate a PHN for a new client.
 
-[Revise and Merge page](reviseAndMerge.html "Revise and Merge Patient")
+[Revise and Merge page](reviseAndMerge.html)
 
 ##### Asynchronous Operations
 The asynchronous versions of Revise and Merge Operations share the same request and response profile as the synchronous version.
@@ -155,7 +171,6 @@ The FHIR asynchornous pattern is not followed by this FHIR implementation.  The 
 ### Get Eligibility is Not Supported by FHIR
 
 Get Eligibility will not be supported by the Client Registry FHIR interactions.  If a FHIR-only user needs to know the claim eligibility status of a Patient they need to retrieve the Patient (the PHN) with a FHIR Get Demographics message and then use the PHN to submit a Get Eligibility message to the eligibility service.
->Is there more information we can provide here, like a link to some documentation on the eligibility service?
 
 ### Error Handling
 

@@ -1,5 +1,5 @@
 Instance: BCPatientAddress0Example
-InstanceOf: BCClientRegistryAddress
+InstanceOf: Address
 Description: "Address example physical, validation status valid"
 Usage: #inline
 * type = #physical
@@ -13,7 +13,7 @@ Usage: #inline
 * extension.valueCode = #valid
 
 Instance: BCPatientAddress1Example
-InstanceOf: BCClientRegistryAddress
+InstanceOf: Address
 Description: "Address example postal, validation status invalid"
 Usage: #inline
 * type = #postal
