@@ -6,21 +6,11 @@
     <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
   </meta>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient2Response" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">BCPatient</a></p></div><p><b>BC Patient business dates</b>: Feb 7, 2019, 9:29:17 PM --&gt; (ongoing)</p><p><b>BC Patient Birth Date business date</b>: Oct 17, 2019, 11:29:17 AM --&gt; (ongoing)</p><p><b>BC Patient Gender business date</b>: 1973-05-18 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: BAILEY PURPLE </p><p><b>telecom</b>: ph: 2504283447(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1985-12-14</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>432 Douglas St Victoria BC V6N2R2 CA </li></ul></div>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient2Response" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">BCPatient</a></p></div><p><b>BC business dates</b>: 2019-02-07T13:29:17-08:00 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: BAILEY PURPLE </p><p><b>telecom</b>: ph: 2504283447(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1985-12-14</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>432 Douglas St Victoria BC V6N2R2 CA </li></ul><p><b>multipleBirth</b>: false</p></div>
   </text>
-  <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-dates-extension">
+  <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
     <valuePeriod>
       <start value="2019-02-07T13:29:17-08:00"/>
-    </valuePeriod>
-  </extension>
-  <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birth-date-business-dates-extension">
-    <valuePeriod>
-      <start value="2019-10-17T03:29:17-08:00"/>
-    </valuePeriod>
-  </extension>
-  <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-business-dates-extension">
-    <valuePeriod>
-      <start value="1973-05-18"/>
     </valuePeriod>
   </extension>
   <identifier>
@@ -43,10 +33,22 @@
     <value value="2504283447"/>
     <use value="home"/>
   </telecom>
-  <gender value="female"/>
-  <birthDate value="1985-12-14"/>
+  <gender value="female">
+    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+      <valuePeriod>
+        <start value="2017-04-05T16:16:16-08:00"/>
+      </valuePeriod>
+    </extension>
+  </gender>
+  <birthDate value="1985-12-14">
+    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+      <valuePeriod>
+        <start value="2019-10-17T03:29:17-08:00"/>
+      </valuePeriod>
+    </extension>
+  </birthDate>
   <address>
-    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-address-validation-status-extension">
+    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
       <valueCode value="valid"/>
     </extension>
     <type value="physical"/>
@@ -57,7 +59,7 @@
     <country value="CA"/>
   </address>
   <address>
-    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-address-validation-status-extension">
+    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
       <valueCode value="invalid"/>
     </extension>
     <type value="postal"/>
@@ -67,4 +69,11 @@
     <postalCode value="V6N2R2"/>
     <country value="CA"/>
   </address>
+  <multipleBirthBoolean value="false">
+    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+      <valuePeriod>
+        <start value="2019-10-17T03:29:17-08:00"/>
+      </valuePeriod>
+    </extension>
+  </multipleBirthBoolean>
 </Patient>

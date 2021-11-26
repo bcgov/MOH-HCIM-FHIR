@@ -113,6 +113,9 @@
     <a href="connectedPartner.html">Connected Partner</a>
   </li>
   <li>
+    <a href="capabilityStatement.html">Capability Statement</a>
+  </li>
+  <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
   <li>
@@ -176,6 +179,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#design-outcomes---overview" id="markdown-toc-design-outcomes---overview">Design Outcomes - Overview</a></li>
   <li><a href="#design-outcomes---details" id="markdown-toc-design-outcomes---details">Design Outcomes - Details</a></li>
   <li><a href="#get-eligibility-is-not-supported-by-fhir" id="markdown-toc-get-eligibility-is-not-supported-by-fhir">Get Eligibility is Not Supported by FHIR</a></li>
+  <li><a href="#error-handling" id="markdown-toc-error-handling">Error Handling</a></li>
+  <li><a href="#success-status-codes" id="markdown-toc-success-status-codes">Success Status Codes</a></li>
 </ul>
 
 </div>
@@ -196,8 +201,9 @@ Namely:</p>
       <li>Distribute Patient</li>
     </ul>
   </li>
-  <li>Asynchronous interactions will be supported as with the current system</li>
+  <li>Asynchronous interactions will be supported as with the current system; supporting asynchronous for interactions that write data to the Client Registry.</li>
   <li>New attributes can be included in FHIR that are not in V3 (such as more business dates)</li>
+  <li>HL7 V3 will be deprecated at some future time</li>
   <li>The Client Registry profiles should conform to the Canadian Baseline profiles</li>
 </ul>
 
@@ -245,39 +251,27 @@ Namely:</p>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">bc-patient-business-dates</td>
-      <td style="text-align: left">A Period extension at the Patient level that represents the entire record</td>
+      <td style="text-align: left">bc-business-period-extension</td>
+      <td style="text-align: left">A Period extension for effective dates.</td>
     </tr>
     <tr>
-      <td style="text-align: left">bc-death-date-extension</td>
-      <td style="text-align: left">A dateTime extension that indicates is the client’s death has been verified by …</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">bc-birth-date-business-dates</td>
-      <td style="text-align: left">A Period extension for effective dates</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">bc-death-date-business-dates</td>
-      <td style="text-align: left">A Period extension for effective dates</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">bc-death-date-flag-business-dates</td>
-      <td style="text-align: left">A Period extension for effective dates</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">bc-address-validation-status</td>
+      <td style="text-align: left">bc-validation-status-extension</td>
       <td style="text-align: left">A code that represents the address validation status.  This will be part of every Patient.address</td>
     </tr>
     <tr>
-      <td style="text-align: left">bc-gender-business-dates</td>
-      <td style="text-align: left">A Period extension for effective dates</td>
+      <td style="text-align: left">bc-death-date-extension</td>
+      <td style="text-align: left">An extension that indicates the date of death.  The Patient resource has a boolean flag for death, this is the date.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">bc-death-date-flag-business-period-extension</td>
+      <td style="text-align: left">A Period extension for effective dates on the death date flag.</td>
     </tr>
   </tbody>
 </table>
 
-<h5 id="terminologies-codeableconcepts-codes-and-value-sets">Terminologies, CodeableConcepts, Codes and Value Sets</h5>
+<h5 id="codes-and-value-sets">Codes and Value Sets</h5>
 
-<p>A few points should be highlighted around terminologies, codes and value sets.</p>
+<p>The Client Registry doesn’t recognize all the codes for the elements that must be supported, see the table below which indicates the supported codes.</p>
 
 <table>
   <thead>
@@ -289,7 +283,7 @@ Namely:</p>
   <tbody>
     <tr>
       <td style="text-align: left">Patient.name.use</td>
-      <td style="text-align: left">Only <em>usual</em> or <em>official</em> from NameUse value set.</td>
+      <td style="text-align: left">Only <em>usual</em>,  <em>official</em> or <em>nickname</em> from NameUse value set.</td>
     </tr>
     <tr>
       <td style="text-align: left">Patient.telecom.use</td>
@@ -300,20 +294,96 @@ Namely:</p>
       <td style="text-align: left">Only <em>phone</em> or <em>email</em> from the ContactPointSystem value set.</td>
     </tr>
     <tr>
-      <td style="text-align: left">Patient.gender</td>
-      <td style="text-align: left">Only <em>male</em>, <em>female</em> or <em>unknown</em> from the AdministrativeGender value set.</td>
-    </tr>
-    <tr>
       <td style="text-align: left">Patient.address.type</td>
       <td style="text-align: left">Only <em>postal</em> or <em>physical</em> from the AddressType value set.</td>
     </tr>
     <tr>
-      <td style="text-align: left">Patient.address.use</td>
-      <td style="text-align: left">Only <em>home</em> from the AddressUse value set.</td>
-    </tr>
-    <tr>
       <td style="text-align: left">Patient.identifier.system</td>
       <td style="text-align: left">See the section on <a href="identifiers.html">identifiers</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table maps the FHIR codes to Client Registry codes.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">FHIR Code Type</th>
+      <th style="text-align: left">FHIR Code</th>
+      <th style="text-align: left">HCIM Equivalent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Name.use</td>
+      <td style="text-align: left">usual</td>
+      <td style="text-align: left">preferred</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Name.use</td>
+      <td style="text-align: left">official</td>
+      <td style="text-align: left">card</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Name.use</td>
+      <td style="text-align: left">nickname</td>
+      <td style="text-align: left">declared</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Telecom.use</td>
+      <td style="text-align: left">home</td>
+      <td style="text-align: left">home</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Telecom.use</td>
+      <td style="text-align: left">work</td>
+      <td style="text-align: left">work</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Telecom.use</td>
+      <td style="text-align: left">mobile</td>
+      <td style="text-align: left">mobile</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Telecom.system</td>
+      <td style="text-align: left">phone</td>
+      <td style="text-align: left">phone</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Telecom.system</td>
+      <td style="text-align: left">email</td>
+      <td style="text-align: left">email</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Address.type</td>
+      <td style="text-align: left">postal</td>
+      <td style="text-align: left">mailing</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Address.type</td>
+      <td style="text-align: left">physical</td>
+      <td style="text-align: left">physical</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Gender</td>
+      <td style="text-align: left">other</td>
+      <td style="text-align: left">undifferentiated</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Gender</td>
+      <td style="text-align: left">unknown</td>
+      <td style="text-align: left">unknown</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Gender</td>
+      <td style="text-align: left">male</td>
+      <td style="text-align: left">male</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Gender</td>
+      <td style="text-align: left">female</td>
+      <td style="text-align: left">female</td>
     </tr>
   </tbody>
 </table>
@@ -336,16 +406,16 @@ Namely:</p>
       <td style="text-align: left">https://…./$GetDemographics</td>
     </tr>
     <tr>
-      <td style="text-align: left">https://…./$GetDemographics.History</td>
+      <td style="text-align: left">https://…./$RevisePatient</td>
     </tr>
     <tr>
-      <td style="text-align: left">https://…./$RevisePatient</td>
+      <td style="text-align: left">https://…./$RevisePatient.Async</td>
     </tr>
     <tr>
       <td style="text-align: left">https://…./$RevisePatient.Newborn</td>
     </tr>
     <tr>
-      <td style="text-align: left">https://…./$RevisePatient.Async</td>
+      <td style="text-align: left">https://…./$RevisePatient.Newborn.Async</td>
     </tr>
     <tr>
       <td style="text-align: left">https://…./$MergePatient</td>
@@ -356,7 +426,7 @@ Namely:</p>
   </tbody>
 </table>
 
-<p>Suffixes such as History and Async inform the Client Registry FHIR server to perform the operation in a particular way such as returning historical attributes or responding asynchronously.</p>
+<p>Suffixes such as Async inform the Client Registry FHIR server to perform the operation in a particular way such as responding asynchronously or that the Client Registry is expecting a newly born Patient.</p>
 
 <h5 id="requests">Requests</h5>
 
@@ -423,17 +493,21 @@ Namely:</p>
   <thead>
     <tr>
       <th style="text-align: left">Search Operations</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align: left">https://…./$FindCandidates</td>
+      <td>Searching for Patients that match the search criteria</td>
     </tr>
     <tr>
       <td style="text-align: left">https://…./$GetDemographics</td>
+      <td>Searching for a single Patient</td>
     </tr>
     <tr>
       <td style="text-align: left">https://…./$GetDemographics.History</td>
+      <td>Searching for a single Patient and requesting that Patients historical attributes (as well as current attributes) be included in the response</td>
     </tr>
   </tbody>
 </table>
@@ -449,24 +523,34 @@ Namely:</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: left">Revise and Merge Operations</th>
+      <th style="text-align: left">Add, Revise and Merge Operations</th>
+      <th style="text-align: left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align: left">https://…./$RevisePatient</td>
+      <td style="text-align: left">Creating or updating a Patient</td>
     </tr>
     <tr>
       <td style="text-align: left">https://…./$RevisePatient.Async</td>
+      <td style="text-align: left">Creating or updating a Patient asynchronously</td>
     </tr>
     <tr>
       <td style="text-align: left">https://…./$RevisePatient.Newborn</td>
+      <td style="text-align: left">Creating a newborn Patient</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">https://…./$RevisePatient.Newborn.Async</td>
+      <td style="text-align: left">Creating a newborn asynchronously</td>
     </tr>
     <tr>
       <td style="text-align: left">https://…./$MergePatient</td>
+      <td style="text-align: left">Resolving duplicate Patients records (same individual)</td>
     </tr>
     <tr>
       <td style="text-align: left">https://…./$MergePatient.Async</td>
+      <td style="text-align: left">Resolving duplicate Patients records (same individual) asynchronously</td>
     </tr>
   </tbody>
 </table>
@@ -477,17 +561,30 @@ Namely:</p>
   <li>generate a PHN for a new client.</li>
 </ul>
 
-<p><a href="reviseAndMerge.html" title="Revise and Merge Patient">Revise and Merge page</a></p>
+<p><a href="reviseAndMerge.html">Revise and Merge page</a></p>
 
 <h5 id="asynchronous-operations">Asynchronous Operations</h5>
-<p>The asynchronous versions of Revise and Merge Operations share the same request and response profile.  The difference is that the response is sent back later and the requesting system should not block, wait for the response, but have an end point established to receive the response when the responding system sends it.</p>
+<p>The asynchronous versions of Revise and Merge Operations share the same request and response profile as the synchronous version.</p>
+
+<p>The FHIR asynchornous pattern is not followed by this FHIR implementation.  The existing pattern the Client Registry uses today will be mimicked.  I.e.</p>
+<ol>
+  <li>User sends request</li>
+  <li>Client Registry responds with HTTP 202 Accepted</li>
+  <li>Client Registry sends request to user’s end point</li>
+  <li>User system responds with 202 Accepted</li>
+</ol>
 
 <h3 id="get-eligibility-is-not-supported-by-fhir">Get Eligibility is Not Supported by FHIR</h3>
 
 <p>Get Eligibility will not be supported by the Client Registry FHIR interactions.  If a FHIR-only user needs to know the claim eligibility status of a Patient they need to retrieve the Patient (the PHN) with a FHIR Get Demographics message and then use the PHN to submit a Get Eligibility message to the eligibility service.</p>
-<blockquote>
-  <p>Is there more information we can provide here, like a link to some documentation on the eligibility service?</p>
-</blockquote>
+
+<h3 id="error-handling">Error Handling</h3>
+
+<p>This implemenation of FHIR will follow the standard FHIR error handling.  E.g. return an OperationOutcome in a Bundle with the appropirate HTTP status code.  User are expected to monitor the http status codes and the OperationOutcome resources for issues.</p>
+
+<h3 id="success-status-codes">Success Status Codes</h3>
+
+<p>HTTP 200 (OK) will be returned in all cases where the request was sucessful.  This includes a search that was a valid Operation but did not match any Patients.  The only exceptions when a Patient is first created, the status code response is 201 (Created).</p>
 
 
 
@@ -514,7 +611,7 @@ Namely:</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Nov 17, 2021 22:00+0000">2021-11-17</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Nov 26, 2021 18:59+0000">2021-11-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

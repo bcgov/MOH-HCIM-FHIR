@@ -5,23 +5,8 @@
   "jurisdiction": "CA",
   "extensions": [
     {
-      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-address-validation-status-extension",
-      "title": "BC Address validation status code",
-      "types": [
-        "code",
-        "code"
-      ]
-    },
-    {
-      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birth-date-business-dates-extension",
-      "title": "BC Patient Birth Date business date",
-      "types": [
-        "Period"
-      ]
-    },
-    {
-      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-business-dates-extension",
-      "title": "BC Patient Death Date business date",
+      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+      "title": "BC business dates",
       "types": [
         "Period"
       ]
@@ -34,15 +19,8 @@
       ]
     },
     {
-      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-flag-business-dates-extension",
+      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-flag-business-period-extension",
       "title": "BC Patient Death Date flag business date",
-      "types": [
-        "Period"
-      ]
-    },
-    {
-      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-business-dates-extension",
-      "title": "BC Patient Gender business date",
       "types": [
         "Period"
       ]
@@ -56,10 +34,11 @@
       ]
     },
     {
-      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-dates-extension",
-      "title": "BC Patient business dates",
+      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+      "title": "BC Address validation status code",
       "types": [
-        "Period"
+        "code",
+        "code"
       ]
     }
   ],
@@ -109,8 +88,8 @@
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
       "StructureDefinition.snapshot.element.binding"
     ],
-    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
-      "StructureDefinition.snapshot.element"
+    "http://hl7.org/fhir/StructureDefinition/regex": [
+      "StructureDefinition.snapshot.element.type"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-category": [
       "StructureDefinition"
@@ -136,39 +115,37 @@
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
     ],
-    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-address-validation-status-extension": [
-      "Address",
-      "Bundle.entry.resource.address",
-      "Patient.address"
-    ],
-    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birth-date-business-dates-extension": [
+    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension": [
       "Bundle.entry.resource",
-      "Patient"
-    ],
-    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-business-dates-extension": [
-      "Bundle.entry.resource",
-      "Patient"
+      "Bundle.entry.resource.birthDate",
+      "Bundle.entry.resource.deceasedBoolean",
+      "Bundle.entry.resource.gender",
+      "Bundle.entry.resource.multipleBirthBoolean",
+      "Patient",
+      "Patient.birthDate",
+      "Patient.deceasedBoolean",
+      "Patient.deceased[x]",
+      "Patient.gender",
+      "Patient.multipleBirthBoolean",
+      "Patient.multipleBirth[x]"
     ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-extension": [
-      "Bundle.entry.resource",
-      "Patient"
+      "Bundle.entry.resource.deceasedBoolean",
+      "Patient.deceasedBoolean",
+      "Patient.deceased[x]"
     ],
-    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-flag-business-dates-extension": [
-      "Bundle.entry.resource",
-      "Patient"
-    ],
-    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-business-dates-extension": [
-      "Bundle.entry.resource",
-      "Patient"
+    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-flag-business-period-extension": [
+      "Bundle.entry.resource.deceasedBoolean",
+      "Patient.deceasedBoolean",
+      "Patient.deceased[x]"
     ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension": [
       "Parameters.parameter.resource.link",
       "Patient.link"
     ],
-    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-dates-extension": [
-      "Bundle.entry.resource",
-      "Parameters.parameter.resource",
-      "Patient"
+    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension": [
+      "Bundle.entry.resource.address",
+      "Patient.address"
     ]
   }
 }

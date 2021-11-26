@@ -21,7 +21,7 @@
   fhir:StructureDefinition.version [ fhir:value "0.1.0"];
   fhir:StructureDefinition.name [ fhir:value "BCPatientBusinessParameters"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2021-11-17T22:00:02+00:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2021-11-26T18:59:02+00:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "BC Ministry of Health"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -1422,9 +1422,9 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 31;
-       fhir:Element.id [ fhir:value "Parameters.parameter:messageRequestId" ];
+       fhir:Element.id [ fhir:value "Parameters.parameter:requestMessageId" ];
        fhir:ElementDefinition.path [ fhir:value "Parameters.parameter" ];
-       fhir:ElementDefinition.sliceName [ fhir:value "messageRequestId" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "requestMessageId" ];
        fhir:ElementDefinition.short [ fhir:value "Operation Parameter" ];
        fhir:ElementDefinition.definition [ fhir:value "A parameter passed to or received from the operation." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -1466,7 +1466,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 32;
-       fhir:Element.id [ fhir:value "Parameters.parameter:messageRequestId.id" ];
+       fhir:Element.id [ fhir:value "Parameters.parameter:requestMessageId.id" ];
        fhir:ElementDefinition.path [ fhir:value "Parameters.parameter.id" ];
        fhir:ElementDefinition.representation [
          fhir:value "xmlAttr";
@@ -1499,7 +1499,7 @@
        ]
      ], [
        fhir:index 33;
-       fhir:Element.id [ fhir:value "Parameters.parameter:messageRequestId.extension" ];
+       fhir:Element.id [ fhir:value "Parameters.parameter:requestMessageId.extension" ];
        fhir:ElementDefinition.path [ fhir:value "Parameters.parameter.extension" ];
        fhir:ElementDefinition.short [ fhir:value "Additional content defined by implementations" ];
        fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
@@ -1554,7 +1554,7 @@
        ]
      ], [
        fhir:index 34;
-       fhir:Element.id [ fhir:value "Parameters.parameter:messageRequestId.modifierExtension" ];
+       fhir:Element.id [ fhir:value "Parameters.parameter:requestMessageId.modifierExtension" ];
        fhir:ElementDefinition.path [ fhir:value "Parameters.parameter.modifierExtension" ];
        fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored even if unrecognized" ];
        fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." ];
@@ -1614,7 +1614,7 @@
        ]
      ], [
        fhir:index 35;
-       fhir:Element.id [ fhir:value "Parameters.parameter:messageRequestId.name" ];
+       fhir:Element.id [ fhir:value "Parameters.parameter:requestMessageId.name" ];
        fhir:ElementDefinition.path [ fhir:value "Parameters.parameter.name" ];
        fhir:ElementDefinition.short [ fhir:value "Name from the definition" ];
        fhir:ElementDefinition.definition [ fhir:value "The name of the parameter (reference to the operation definition)." ];
@@ -1629,7 +1629,7 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "string" ]
        ];
-       fhir:ElementDefinition.patternString [ fhir:value "messageRequestId" ];
+       fhir:ElementDefinition.patternString [ fhir:value "requestMessageId" ];
        fhir:ElementDefinition.constraint [
          fhir:index 0;
          fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
@@ -1647,7 +1647,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 36;
-       fhir:Element.id [ fhir:value "Parameters.parameter:messageRequestId.value[x]" ];
+       fhir:Element.id [ fhir:value "Parameters.parameter:requestMessageId.value[x]" ];
        fhir:ElementDefinition.path [ fhir:value "Parameters.parameter.value[x]" ];
        fhir:ElementDefinition.slicing [
          fhir:ElementDefinition.slicing.discriminator [
@@ -1691,7 +1691,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 37;
-       fhir:Element.id [ fhir:value "Parameters.parameter:messageRequestId.value[x]:valueString" ];
+       fhir:Element.id [ fhir:value "Parameters.parameter:requestMessageId.value[x]:valueString" ];
        fhir:ElementDefinition.path [ fhir:value "Parameters.parameter.value[x]" ];
        fhir:ElementDefinition.sliceName [ fhir:value "valueString" ];
        fhir:ElementDefinition.short [ fhir:value "If parameter is a data type" ];
@@ -1728,7 +1728,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 38;
-       fhir:Element.id [ fhir:value "Parameters.parameter:messageRequestId.resource" ];
+       fhir:Element.id [ fhir:value "Parameters.parameter:requestMessageId.resource" ];
        fhir:ElementDefinition.path [ fhir:value "Parameters.parameter.resource" ];
        fhir:ElementDefinition.short [ fhir:value "If parameter is a whole resource" ];
        fhir:ElementDefinition.definition [ fhir:value "If the parameter is a whole resource." ];
@@ -1752,7 +1752,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 39;
-       fhir:Element.id [ fhir:value "Parameters.parameter:messageRequestId.part" ];
+       fhir:Element.id [ fhir:value "Parameters.parameter:requestMessageId.part" ];
        fhir:ElementDefinition.path [ fhir:value "Parameters.parameter.part" ];
        fhir:ElementDefinition.short [ fhir:value "Named part of a multi-part parameter" ];
        fhir:ElementDefinition.definition [ fhir:value "A named part of a multi-part parameter." ];

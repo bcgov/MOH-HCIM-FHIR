@@ -7,6 +7,7 @@
 </div></td></tr><tr><td>IN</td><td>messageDate</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Message date and time.</p>
 </div></td></tr><tr><td>IN</td><td>patient</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td/><td><div><p>The newborn Patient.</p>
 </div></td></tr><tr><td>IN</td><td>mothersPHN</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a></td><td/><td><div><p>The newborn Patient mother's PHN.</p>
+</div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>UserId of sender.</p>
 </div></td></tr></table></div>
   </text>
   <url value="http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-revise-newborn"/>
@@ -15,7 +16,7 @@
   <title value="Revise Patient Newborn"/>
   <status value="draft"/>
   <kind value="operation"/>
-  <date value="2021-11-17T22:00:02+00:00"/>
+  <date value="2021-11-26T18:59:02+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -69,5 +70,13 @@
     <max value="1"/>
     <documentation value="The newborn Patient mother&#39;s PHN."/>
     <type value="RelatedPerson"/>
+  </parameter>
+  <parameter>
+    <name value="enterer"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="UserId of sender."/>
+    <type value="Identifier"/>
   </parameter>
 </OperationDefinition>

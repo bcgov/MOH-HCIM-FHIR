@@ -35,6 +35,20 @@
     "name": "RevisePatientNewborn"
   },
   {
+    "id": "bc-hcim-capability-statement-client",
+    "type": "CapabilityStatement",
+    "url": "http://hlth.gov.bc.ca/fhir/client/CapabilityStatement/bc-hcim-capability-statement-client",
+    "version": "0.1.0",
+    "name": "BCHCIMCapabilityStatement"
+  },
+  {
+    "id": "bc-hcim-capability-statement-server",
+    "type": "CapabilityStatement",
+    "url": "http://hlth.gov.bc.ca/fhir/client/CapabilityStatement/bc-hcim-capability-statement-server",
+    "version": "0.1.0",
+    "name": "BCHCIMCapabilityStatement"
+  },
+  {
     "id": "bc-client-registry-address-validation-code-system",
     "type": "CodeSystem",
     "url": "http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-address-validation-code-system",
@@ -63,32 +77,11 @@
     "name": "BCHealthClientIdentityManagement"
   },
   {
-    "id": "bc-address-validation-status-extension",
+    "id": "bc-business-period-extension",
     "type": "StructureDefinition",
-    "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-address-validation-status-extension",
+    "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
     "version": "0.1.0",
-    "name": "AddressValidationStatusExtension"
-  },
-  {
-    "id": "bc-birth-date-business-dates-extension",
-    "type": "StructureDefinition",
-    "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birth-date-business-dates-extension",
-    "version": "0.1.0",
-    "name": "BirthDateBusinessDateExtension"
-  },
-  {
-    "id": "bc-client-registry-address",
-    "type": "StructureDefinition",
-    "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-client-registry-address",
-    "version": "0.1.0",
-    "name": "BCClientRegistryAddress"
-  },
-  {
-    "id": "bc-death-date-business-dates-extension",
-    "type": "StructureDefinition",
-    "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-business-dates-extension",
-    "version": "0.1.0",
-    "name": "DeathDateBusinessDateExtension"
+    "name": "BusinessPeriodExtension"
   },
   {
     "id": "bc-death-date-extension",
@@ -98,18 +91,11 @@
     "name": "DeathDateExtension"
   },
   {
-    "id": "bc-death-date-flag-business-dates-extension",
+    "id": "bc-death-date-flag-business-period-extension",
     "type": "StructureDefinition",
-    "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-flag-business-dates-extension",
+    "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-flag-business-period-extension",
     "version": "0.1.0",
-    "name": "DeathDateFlagBusinessDateExtension"
-  },
-  {
-    "id": "bc-gender-business-dates-extension",
-    "type": "StructureDefinition",
-    "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-business-dates-extension",
-    "version": "0.1.0",
-    "name": "GenderBusinessDateExtension"
+    "name": "DeathDateFlagBusinessPeriodExtension"
   },
   {
     "id": "bc-merge-response-bundle",
@@ -147,13 +133,6 @@
     "name": "BCPatient"
   },
   {
-    "id": "bc-patient-business-dates-extension",
-    "type": "StructureDefinition",
-    "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-dates-extension",
-    "version": "0.1.0",
-    "name": "PatientBusinessDateExtension"
-  },
-  {
     "id": "bc-patient-business-parameters",
     "type": "StructureDefinition",
     "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters",
@@ -175,18 +154,18 @@
     "name": "BCSearchResponseBundle"
   },
   {
+    "id": "bc-validation-status-extension",
+    "type": "StructureDefinition",
+    "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+    "version": "0.1.0",
+    "name": "ValidationStatusExtension"
+  },
+  {
     "id": "bc-address-type-value-set",
     "type": "ValueSet",
     "url": "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-address-type-value-set",
     "version": "0.1.0",
-    "name": "BCAddressType"
-  },
-  {
-    "id": "bc-address-use-value-set",
-    "type": "ValueSet",
-    "url": "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-address-use-value-set",
-    "version": "0.1.0",
-    "name": "BCAddressUse"
+    "name": "BCAddressTypeVS"
   },
   {
     "id": "bc-address-validation-value-set",
@@ -196,25 +175,18 @@
     "name": "BCAddressValidationVS"
   },
   {
-    "id": "bc-administrative-gender-value-set",
-    "type": "ValueSet",
-    "url": "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-administrative-gender-value-set",
-    "version": "0.1.0",
-    "name": "BCAdministrativeGender"
-  },
-  {
     "id": "bc-contact-point-system-value-set",
     "type": "ValueSet",
     "url": "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set",
     "version": "0.1.0",
-    "name": "BCContactPointSystem"
+    "name": "BCContactPointSystemVS"
   },
   {
     "id": "bc-contact-point-use-value-set",
     "type": "ValueSet",
     "url": "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set",
     "version": "0.1.0",
-    "name": "BCContactPointUse"
+    "name": "BCContactPointUseVS"
   },
   {
     "id": "bc-merge-status-value-set",
@@ -228,6 +200,6 @@
     "type": "ValueSet",
     "url": "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set",
     "version": "0.1.0",
-    "name": "BCNameUse"
+    "name": "BCNameUseVS"
   }
 ]

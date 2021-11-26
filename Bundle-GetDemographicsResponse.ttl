@@ -61,7 +61,7 @@
      ]
   ], [
      fhir:index 3;
-     fhir:Parameters.parameter.name [ fhir:value "messageRequestId" ];
+     fhir:Parameters.parameter.name [ fhir:value "requestMessageId" ];
      fhir:Parameters.parameter.valueString [ fhir:value "98028b44-882a-4c72-8c92-b87d916147e1" ]
   ] .
 
@@ -148,8 +148,26 @@
      fhir:ContactPoint.value [ fhir:value "6048883322" ];
      fhir:ContactPoint.use [ fhir:value "home" ]
   ];
-  fhir:Patient.gender [ fhir:value "female"];
-  fhir:Patient.birthDate [ fhir:value "1972-10-16"^^xsd:date];
+  fhir:Patient.gender [
+     fhir:value "female";
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+       fhir:Extension.valuePeriod [
+         fhir:Period.start [ fhir:value "2017-04-05T16:16:16-08:00"^^xsd:dateTime ]
+       ]
+     ]
+  ];
+  fhir:Patient.birthDate [
+     fhir:value "1972-10-16"^^xsd:date;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+       fhir:Extension.valuePeriod [
+         fhir:Period.start [ fhir:value "2018-03-17T03:29:17-08:00"^^xsd:dateTime ]
+       ]
+     ]
+  ];
   fhir:Patient.address [
      fhir:index 0;
      fhir:Address.type [ fhir:value "physical" ];

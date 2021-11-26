@@ -3,11 +3,12 @@
 <OperationDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-patient-get-demographics"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>GetDemographics</h2><p>QUERY: GetDemographics</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics</pre><p>URL: [base]/Patient/$GetDemographics</p><p>URL: [base]/Patient/[id]/$GetDemographics</p><p>Input parameters Profile: <a href="StructureDefinition-bc-patient-business-parameters.html">BCPatientBusinessParameters</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Unique message ID.</p>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>GetDemographics</h2><p>QUERY: GetDemographics</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics</pre><p>URL: [base]/Patient/$GetDemographics</p><p>URL: [base]/Patient/[id]/$GetDemographics</p><p>Input parameters Profile: <a href="StructureDefinition-bc-metadata-parameters.html">BCMetadataParameters</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Unique message ID.</p>
 </div></td></tr><tr><td>IN</td><td>messageDateTime</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></td><td/><td><div><p>Message date and time.</p>
 </div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>Source of request</p>
 </div></td></tr><tr><td>IN</td><td>PHN</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td/><td><div><p>Patient PHN.</p>
 </div></td></tr><tr><td>IN</td><td>withHistory</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td/><td><div><p>Boolean flag to return Patient's history.  If missing, defaults to false.</p>
+</div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>UserId of sender.</p>
 </div></td></tr></table></div>
   </text>
   <url value="http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics"/>
@@ -16,7 +17,7 @@
   <title value="GetDemographics"/>
   <status value="draft"/>
   <kind value="query"/>
-  <date value="2021-11-17T22:00:02+00:00"/>
+  <date value="2021-11-26T18:59:02+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -37,7 +38,7 @@
   <system value="false"/>
   <type value="true"/>
   <instance value="true"/>
-  <inputProfile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters"/>
+  <inputProfile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
   <parameter>
     <name value="messageId"/>
     <use value="in"/>
@@ -78,5 +79,13 @@
     <max value="1"/>
     <documentation value="Boolean flag to return Patient&#39;s history.  If missing, defaults to false."/>
     <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="enterer"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="UserId of sender."/>
+    <type value="Identifier"/>
   </parameter>
 </OperationDefinition>

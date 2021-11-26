@@ -41,8 +41,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"13"}
-    h3,h4,h5,h6{--heading-prefix:"13.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"14"}
+    h3,h4,h5,h6{--heading-prefix:"14.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Left logo - typically the publisher's logo - project or affiliate -->
@@ -113,6 +113,9 @@
     <a href="connectedPartner.html">Connected Partner</a>
   </li>
   <li>
+    <a href="capabilityStatement.html">Capability Statement</a>
+  </li>
+  <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
   <li>
@@ -166,25 +169,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
    <p>Contents:</p>
    <ul>
       <li>
-         <a href="#1">Patient Profile</a>
+         <a href="#1">Capability Statement</a>
       </li>
       <li>
-         <a href="#2">Supporting Profiles</a>
+         <a href="#2">Patient Profile</a>
       </li>
       <li>
-         <a href="#3">Operation Definitions</a>
+         <a href="#3">Supporting Profiles</a>
       </li>
       <li>
-         <a href="#4">Request Examples</a>
+         <a href="#4">Operation Definitions</a>
       </li>
       <li>
-         <a href="#5">Response Examples</a>
+         <a href="#5">Request Examples</a>
       </li>
       <li>
-         <a href="#6">Structures: Resource Profiles</a>
+         <a href="#6">Response Examples</a>
       </li>
       <li>
-         <a href="#7">Structures: Data Type Profiles</a>
+         <a href="#7">Structures: Resource Profiles</a>
       </li>
       <li>
          <a href="#8">Structures: Extension Definitions</a>
@@ -205,6 +208,43 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      xmlns:f="http://hl7.org/fhir">
    <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
    <a name="1"> </a>
+   <h3>Capability Statement </h3>
+   <p>
+    <p>The Capability Statement for Client Registry</p>
+</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="CapabilityStatement-bc-hcim-capability-statement-client.html"
+                     title="CapabilityStatement/bc-hcim-capability-statement-client">BCHCIMCapabilityStatementClient</a>
+               </td>
+               <td>
+<p>This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a client. I.e. sending notifications.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="CapabilityStatement-bc-hcim-capability-statement-server.html"
+                     title="CapabilityStatement/bc-hcim-capability-statement-server">BCHCIMCapabilityStatementServer</a>
+               </td>
+               <td>
+<p>This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry whe it is acting as a server.</p>
+
+<ul>
+  <li>Find Candidates - used when a user would like to find a Patient, but without an identifier, typically with name, address or edge cases like mother’s PHN.</li>
+  <li>Get Demographics - used when a user would like to find a Patient and has an identifier that Client Registry recognizes</li>
+  <li>Revise Patient - used when a user is communicating a change to the Client Registry</li>
+  <li>Merge Patient - used when a user is communicating that an individual has multiple Patient records and which record should survive and which record(s) should be marked as non-surviving</li>
+</ul>
+</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+   <a name="2"> </a>
    <h3>Patient Profile </h3>
    <p>
     <p>The BC Patient profile</p>
@@ -225,7 +265,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tbody>
       </table>
    </p>
-   <a name="2"> </a>
+   <a name="3"> </a>
    <h3>Supporting Profiles </h3>
    <p>
     <p>Artifacts associated with resources that support Patient and Client Registry Operations</p>
@@ -282,7 +322,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tbody>
       </table>
    </p>
-   <a name="3"> </a>
+   <a name="4"> </a>
    <h3>Operation Definitions </h3>
    <p>
     <p>The defined Operations</p>
@@ -339,7 +379,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tbody>
       </table>
    </p>
-   <a name="4"> </a>
+   <a name="5"> </a>
    <h3>Request Examples </h3>
    <p>
     <p>A set of operation request examples</p>
@@ -394,8 +434,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Parameters-RevisePatient-New.html"
-                     title="Parameters/RevisePatient-New">RevisePatient-New</a>
+                  <a href="Parameters-RevisePatient-NewPatient.html"
+                     title="Parameters/RevisePatient-NewPatient">RevisePatient-NewPatient</a>
                </td>
                <td>
 <p>Example of $RevisePatient operation where the Patient is new to the Client Registry.</p>
@@ -422,7 +462,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tbody>
       </table>
    </p>
-   <a name="5"> </a>
+   <a name="6"> </a>
    <h3>Response Examples </h3>
    <p>
     <p>A set of operation response examples</p>
@@ -470,7 +510,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tbody>
       </table>
    </p>
-   <a name="6"> </a>
+   <a name="7"> </a>
    <h3>Structures: Resource Profiles </h3>
    <p>
     <p>These define constraints on FHIR resources for systems conforming to this implementation guide</p>
@@ -491,27 +531,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tbody>
       </table>
    </p>
-   <a name="7"> </a>
-   <h3>Structures: Data Type Profiles </h3>
-   <p>
-    <p>These define constraints on FHIR data types for systems conforming to this implementation guide</p>
-</p>
-   <p>
-      <table class="grid">
-         <col style="width:20%"/>
-         <tbody>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-client-registry-address.html"
-                     title="StructureDefinition/bc-client-registry-address">BCClientRegistryAddress</a>
-               </td>
-               <td>
-<p>The BC Client Registry address profile.</p>
-</td>
-            </tr>
-         </tbody>
-      </table>
-   </p>
    <a name="8"> </a>
    <h3>Structures: Extension Definitions </h3>
    <p>
@@ -523,29 +542,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tbody>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-address-validation-status-extension.html"
-                     title="StructureDefinition/bc-address-validation-status-extension">BC Address validation status code</a>
+                  <a href="StructureDefinition-bc-business-period-extension.html"
+                     title="StructureDefinition/bc-business-period-extension">BC business dates</a>
                </td>
                <td>
-<p>A code that represents the validation status of the address</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-birth-date-business-dates-extension.html"
-                     title="StructureDefinition/bc-birth-date-business-dates-extension">BC Patient Birth Date business date</a>
-               </td>
-               <td>
-<p>The effective dates for the Patient’s Birth Date.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-death-date-business-dates-extension.html"
-                     title="StructureDefinition/bc-death-date-business-dates-extension">BC Patient Death Date business date</a>
-               </td>
-               <td>
-<p>The effective dates for the Patient’s Death Date.</p>
+<p>The effective dates for the parent element.</p>
 </td>
             </tr>
             <tr>
@@ -559,20 +560,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-death-date-flag-business-dates-extension.html"
-                     title="StructureDefinition/bc-death-date-flag-business-dates-extension">BC Patient Death Date flag business date</a>
+                  <a href="StructureDefinition-bc-death-date-flag-business-period-extension.html"
+                     title="StructureDefinition/bc-death-date-flag-business-period-extension">BC Patient Death Date flag business date</a>
                </td>
                <td>
 <p>The effective dates for the Patient’s Death Date flag.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-gender-business-dates-extension.html"
-                     title="StructureDefinition/bc-gender-business-dates-extension">BC Patient Gender business date</a>
-               </td>
-               <td>
-<p>The effective dates for the Patient’s Gender.</p>
 </td>
             </tr>
             <tr>
@@ -586,11 +578,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-patient-business-dates-extension.html"
-                     title="StructureDefinition/bc-patient-business-dates-extension">BC Patient business dates</a>
+                  <a href="StructureDefinition-bc-validation-status-extension.html"
+                     title="StructureDefinition/bc-validation-status-extension">BC Address validation status code</a>
                </td>
                <td>
-<p>The effective dates for the Patient.</p>
+<p>A code that represents the validation status of the address</p>
 </td>
             </tr>
          </tbody>
@@ -616,29 +608,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="ValueSet-bc-address-use-value-set.html"
-                     title="ValueSet/bc-address-use-value-set">BC Address Use value set.</a>
-               </td>
-               <td>
-<p>BC Address Use value set, sliced to meet BC constraints.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
                   <a href="ValueSet-bc-address-validation-value-set.html"
                      title="ValueSet/bc-address-validation-value-set">BC Address Validation value set</a>
                </td>
                <td>
 <p>BC Address Validation value set used to describe the validation status of an address</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="ValueSet-bc-administrative-gender-value-set.html"
-                     title="ValueSet/bc-administrative-gender-value-set">BC Administrative Gender Use value set.</a>
-               </td>
-               <td>
-<p>BC Administrative Gender value set, sliced to meet BC constraints.</p>
 </td>
             </tr>
             <tr>
@@ -739,6 +713,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="Bundle-FindCandidatesResponse-MomsPHN.html"
+                     title="Bundle/FindCandidatesResponse-MomsPHN">FindCandidatesResponse-MomsPHN</a>
+               </td>
+               <td>
+<p>Example of FindCandidates with mother’s PHN response Bundle.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="Parameters-GetDemographics-ResponseMetadata.html"
                      title="Parameters/GetDemographics-ResponseMetadata">GetDemographics-ResponseMetadata</a>
                </td>
@@ -757,15 +740,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Parameters-MergePatient-EchoRequest.html"
-                     title="Parameters/MergePatient-EchoRequest">MergePatient-EchoRequest</a>
-               </td>
-               <td>
-<p>Example of $MergePatient operation that updates an existing Patient</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
                   <a href="Parameters-MergeResponseMetadata.html"
                      title="Parameters/MergeResponseMetadata">MergeResponseMetadata</a>
                </td>
@@ -780,6 +754,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </td>
                <td>
 <p>Example of related person’s PHN as Identifier</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="RelatedPerson-MotherRelatedFCBabyBoy.html"
+                     title="RelatedPerson/MotherRelatedFCBabyBoy">MotherRelatedFCBabyBoy</a>
+               </td>
+               <td>
+<p>Example of related person who is the mother</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="RelatedPerson-MotherRelatedFCBabyGirl.html"
+                     title="RelatedPerson/MotherRelatedFCBabyGirl">MotherRelatedFCBabyGirl</a>
+               </td>
+               <td>
+<p>Example of related person who is the mother</p>
 </td>
             </tr>
             <tr>
@@ -808,6 +800,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="Patient-PatientBabyBoy.html" title="Patient/PatientBabyBoy">PatientBabyBoy</a>
+               </td>
+               <td>
+<p>Example of Patient new bornfor query response Bundle</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Patient-PatientBabyGirl.html" title="Patient/PatientBabyGirl">PatientBabyGirl</a>
+               </td>
+               <td>
+<p>Example of Patient newborn for query response Bundle</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="Patient-PatientDemographicsResponse.html"
                      title="Patient/PatientDemographicsResponse">PatientDemographicsResponse</a>
                </td>
@@ -825,6 +833,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="Patient-PatientMother.html" title="Patient/PatientMother">PatientMother</a>
+               </td>
+               <td>
+<p>Example of Patient for query response Bundle</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="Patient-PatientRP.html" title="Patient/PatientRP">PatientRP</a>
                </td>
                <td>
@@ -833,7 +849,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Patient-PatientRP-New.html" title="Patient/PatientRP-New">PatientRP-New</a>
+                  <a href="Patient-PatientRP-NewPatient.html"
+                     title="Patient/PatientRP-NewPatient">PatientRP-NewPatient</a>
                </td>
                <td>
 <p>The Patient is completely new to the Client Registry, no identifiers.</p>
@@ -863,15 +880,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </td>
                <td>
 <p>Example OperationOutcome for a Client Registry Revise or Merge</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Parameters-RevisePatient-EchoRequest.html"
-                     title="Parameters/RevisePatient-EchoRequest">RevisePatient-EchoRequest</a>
-               </td>
-               <td>
-<p>Example of $RevisePatient operation that updates an existing Patient</p>
 </td>
             </tr>
             <tr>
@@ -919,7 +927,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Nov 17, 2021 22:00+0000">2021-11-17</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Nov 26, 2021 18:59+0000">2021-11-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
