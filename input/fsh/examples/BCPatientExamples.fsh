@@ -308,7 +308,7 @@ Description: "Example of Merge or Revise response Bundle with 4 different kinds 
 
 Instance: PatientBabyBoy
 InstanceOf: BCPatient
-Description: "Example of Patient new bornfor query response Bundle"
+Description: "Example of Patient newborn for query response Bundle"
 * extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension[0].valuePeriod.start = "2019-11-12T13:29:17-08:00"
 * address[0] = BCPatientAddress0Example

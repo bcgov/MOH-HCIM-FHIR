@@ -35,6 +35,7 @@ Description: "Example of $RevisePatient.Newborn operation where the Patient is a
 * parameter[enterer].name = "enterer"
 * parameter[enterer].valueIdentifier.value = "klgodfre"
 * parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
+
 * parameter[patient].name = "patient"
 * parameter[patient].resource = PatientRP-Newborn
 

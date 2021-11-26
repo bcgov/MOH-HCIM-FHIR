@@ -65,9 +65,9 @@ The following table maps the FHIR codes to Client Registry codes.
 
 FHIR Code Type | FHIR Code | HCIM Equivalent
 :--- | :--- | :---
-Name.use | usual | preferred
+Name.use | usual | declared
 Name.use | official | card
-Name.use | nickname | declared
+Name.use | nickname | preferred
 Telecom.use | home | home
 Telecom.use | work | work
 Telecom.use | mobile | mobile
@@ -90,12 +90,10 @@ https://..../$FindCandidates |
 https://..../$GetDemographics |
 https://..../$RevisePatient |
 https://..../$RevisePatient.Async |
-https://..../$RevisePatient.Newborn |
-https://..../$RevisePatient.Newborn.Async |
 https://..../$MergePatient |
 https://..../$MergePatient.Async |
 
-Suffixes such as Async inform the Client Registry FHIR server to perform the operation in a particular way such as responding asynchronously or that the Client Registry is expecting a newly born Patient.
+Suffixes such as Async inform the Client Registry FHIR server to perform the operation in a particular way such as responding asynchronously.
 
 ##### Requests
 
@@ -148,8 +146,6 @@ Add, Revise and Merge Operations | Description
 :--- | :---
 https://..../$RevisePatient | Creating or updating a Patient
 https://..../$RevisePatient.Async | Creating or updating a Patient asynchronously
-https://..../$RevisePatient.Newborn | Creating a newborn Patient
-https://..../$RevisePatient.Newborn.Async | Creating a newborn asynchronously
 https://..../$MergePatient | Resolving duplicate Patients records (same individual)
 https://..../$MergePatient.Async | Resolving duplicate Patients records (same individual) asynchronously
 

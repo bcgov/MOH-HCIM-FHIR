@@ -23,8 +23,6 @@ InstanceOf: CapabilityStatement
 <li>$GetDemographics</li>
 <li>$RevisePatient</li>
 <li>$RevisePatient.Async</li>
-<li>$RevisePatient.Newborn</li>
-<li>$RevisePatient.Newborn.Async</li>
 <li>$MergePatient</li>
 <li>$MergePatient.Async</li>
 </ul>
@@ -442,91 +440,8 @@ The Revise Patient FHIR Operation SHALL use the following name-value paramters p
 	</tr>
 </table>
 
-<h3>Revise Patient Newborn</h3>
-<p>
-The Revise Patient Newborn FHIR Operation SHALL use the following name-value paramters pairs, mandatory or optional according to the cardinality rules below.
-</p>
-<table class=\"grid\">
-	<tr>
-		<td>
-			<b>Use</b>
-		</td>
-		<td>
-			<b>Name</b>
-		</td>
-		<td>
-			<b>Cardinality</b>
-		</td>
-		<td>
-			<b>Type</b>
-		</td>
-		<td>
-			<b>Binding</b>
-		</td>
-		<td>
-			<b>Documentation</b>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>messageId</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
-                </td>
-		<td></td>
-		<td>
-			<div>
-				<p>Unique message ID.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>messageDate</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
-                </td>
-		<td></td>
-		<td>
-			<div>
-				<p>Message date and time.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>patient</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>The Patient.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>mothersPHN</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/relatedPerson.html\">RelatedPerson</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>The newborn Patient's mother's PHN.</p>
-			</div>
-		</td>
-	</tr>
-</table>
-
 <h3>Merge Person</h3>
-<p>                                                                                          The Merge Patient Newborn FHIR Operation SHALL use the following name-value paramters pairs, mandatory or optional according to the cardinality rules below.
+<p>                                                                                          The Merge Patient FHIR Operation SHALL use the following name-value paramters pairs, mandatory or optional according to the cardinality rules below.
 The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 </p>
 <table class=\"grid\">
@@ -622,8 +537,6 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 * rest[0].resource[0].operation[1].definition = Canonical(GetDemographicsQuery)
 * rest[0].resource[0].operation[2].name = "RevisePatient"
 * rest[0].resource[0].operation[2].definition = Canonical(RevisePatient)
-* rest[0].resource[0].operation[3].name = "RevisePatient.Newborn"
-* rest[0].resource[0].operation[3].definition = Canonical(RevisePatient.Newborn)
 * rest[0].resource[0].operation[4].name = "MergePatient"
 * rest[0].resource[0].operation[4].definition = Canonical(MergePatient)
 
@@ -631,16 +544,10 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 * rest[0].resource[0].operation[5].name = "MergePatient.Async"
 * rest[0].resource[0].operation[5].definition = Canonical(MergePatient)
 * rest[0].resource[0].operation[5].documentation = "
-Although this is an independent Operation the definition is the same as the [RevisePatient](OperationDefinition-bc-patient-revise.html)
-"
+Although this is an independent Operation the definition is the same as the [RevisePatient](OperationDefinition-bc-patient-revise.html)"
+
 * rest[0].resource[0].operation[6].name = "RevisePatient.Async"
 * rest[0].resource[0].operation[6].definition = Canonical(RevisePatient)
 * rest[0].resource[0].operation[6].documentation = "
-Although this is an independent Operation the definition is the same as the [MergePatient](OperationDefinition-bc-patient-merge.html)
-"
-* rest[0].resource[0].operation[7].name = "RevisePatient.Newborn.Async"
-* rest[0].resource[0].operation[7].definition = Canonical(RevisePatient)
-* rest[0].resource[0].operation[7].documentation = "
-Although this is an independent Operation the definition is the same as the [RevisePatient](OperationDefinition-bc-patient-merge.html)
-"
+Although this is an independent Operation the definition is the same as the [MergePatient](OperationDefinition-bc-patient-merge.html)"
 
