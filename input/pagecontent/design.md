@@ -95,6 +95,7 @@ https://..../$MergePatient.Async |
 
 Suffixes such as Async inform the Client Registry FHIR server to perform the operation in a particular way such as responding asynchronously.
 
+The Client Registry does not support any other interactions than the Operations listed above.
 ##### Requests
 
 The body of the request message will vary depending on the business context however all message bodies will consist of at least one Parameter.  The Parameter resource has two profiles defined in this guide.  See [Metadata Parameters](StructureDefinition-bc-metadata-parameters.html) and [Patient Business Parameters](StructureDefinition-bc-patient-business-parameters.html).  The Metadata Parameters profile is to store request metadata name-value pairs such as request creation time and unique ID.  The Business Parameters profile includes the Metadata name-value pairs and in addition business values such as Patients and Operation flags.

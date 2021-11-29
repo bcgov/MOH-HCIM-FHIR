@@ -21,7 +21,7 @@ The Find Candidates is a synchronous request-response transaction.
 
 ### Get Demographics Search
 
-This interaction is used to retrieve the most current demographic information (i.e., name, address, gender, date of birth, and date of death if applicable) from the Client Registry and confirm MSP eligibility for a specific person when the PHN is known. 
+This interaction is used to retrieve the most current demographic information (i.e., name, address, gender, date of birth, and date of death if applicable) from the Client Registry if the PHN is known. 
 
 If the patient has a PHN, a ‘get’ is performed against the Client Registry and the demographics returned and displayed to the user.
 
@@ -37,9 +37,6 @@ Below is a figure that shows the FHIR structure for the two searches.  The reque
 	<img src="searches_fhir.png" height="275"/>
 </span>
 
-Client Registry FHIR searches do not support parameters found in the FHIR international specification: _content, _id, _lastUpdated, _profile, _query, _security, _source, _tag, _text and _filter.  As well modifiers, prefixes, search hierarchies, chained parameters, reverse chaining, sorting, paging, includes, revincludes, 
-
->Shamil reviewed PLR IG and wanted more like the above in the IG - lists of FHIR features our FHIR sever will not support in words and in the capability statement.  I'm not sure we want to make lists like the above all over the place in here.  It may be easier to say "This is what we support, nothing else."
 
 #### Get Demographics Parameters
 

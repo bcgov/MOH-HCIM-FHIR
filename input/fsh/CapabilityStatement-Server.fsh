@@ -8,7 +8,7 @@ InstanceOf: CapabilityStatement
 <ul>
 <li>Find Candidates - used when a user would like to find a Patient, but without an identifier, typically with name, address or edge cases like mother's PHN.</li>
 <li>Get Demographics - used when a user would like to find a Patient and has an identifier that Client Registry recognizes.</li>
-<li>Revise Patient - used when a user is communicating a change to the Client Registry.</li>
+<li>Revise Patient - used when a user is communicating a change or request for a new PHN to the Client Registry.</li>
 <li>Merge Patient - used when a user is communicating that an individual has multiple Patient records and which record should survive and which record(s) should be marked as non-surviving.</li>
 </ul>
 
