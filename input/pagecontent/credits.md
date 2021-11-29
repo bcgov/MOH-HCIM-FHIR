@@ -4,8 +4,8 @@
 
 This specification was written and built by:
 
-* BC Ministry of Health (Khushwinder Sekhon)
-* CGI (Jonathan Wiebe, Linda Woo, Neil Shrimpton)
+* BC Ministry of Health (Laura Kingcott)
+* CGI (Jonathan Wiebe, Patrick Weckermann)
 * Constable Consulting (Lorraine Constable)
 * Duteau Design (Jean Duteau)
 

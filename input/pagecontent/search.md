@@ -11,7 +11,11 @@ Specific search criteria include:
 - Phone number; 
 - Street address; or 
 - Postal code.
-- Mother's PHN (if used, just Mother's PHN)
+- Mother's PHN
+
+There are two  of what can be used:
+- Mother's PHN can be used alone and will return the mother and children
+- Name is mandatory with at least one of date of birth, address number and street, postal code or phone number
 
 The Find Candidates is a synchronous request-response transaction.
 
