@@ -1,0 +1,90 @@
+{
+  "resourceType": "OperationDefinition",
+  "id": "bc-patient-add",
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>AddPatient</h2><p>OPERATION: AddPatient</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-add</pre><p>URL: [base]/Patient/$AddPatient</p><p>URL: [base]/Patient/[id]/$AddPatient</p><p>Input parameters Profile: <a href=\"StructureDefinition-bc-patient-business-parameters.html\">BCPatientBusinessParameters</a></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Unique message ID.</p>\n</div></td></tr><tr><td>IN</td><td>messageDate</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Message date and time.</p>\n</div></td></tr><tr><td>IN</td><td>patient</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a></td><td/><td><div><p>The Patient.</p>\n</div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>UserId of sender.</p>\n</div></td></tr><tr><td>IN</td><td>mothersPHN</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/relatedperson.html\">RelatedPerson</a></td><td/><td><div><p>The newborn Patient mother's PHN in a RelatedPerson resource.</p>\n</div></td></tr></table></div>"
+  },
+  "url": "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-add",
+  "version": "0.1.0",
+  "name": "AddPatient",
+  "title": "AddPatient",
+  "status": "draft",
+  "kind": "operation",
+  "date": "2021-11-30T19:25:31+00:00",
+  "publisher": "BC Ministry of Health",
+  "contact": [
+    {
+      "name": "BC Ministry of Health",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+        }
+      ]
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CA",
+          "display": "Canada"
+        }
+      ]
+    }
+  ],
+  "code": "AddPatient",
+  "resource": [
+    "Patient"
+  ],
+  "system": false,
+  "type": true,
+  "instance": true,
+  "inputProfile": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters",
+  "parameter": [
+    {
+      "name": "messageId",
+      "use": "in",
+      "min": 1,
+      "max": "1",
+      "documentation": "Unique message ID.",
+      "type": "string",
+      "searchType": "string"
+    },
+    {
+      "name": "messageDate",
+      "use": "in",
+      "min": 1,
+      "max": "1",
+      "documentation": "Message date and time.",
+      "type": "string",
+      "searchType": "string"
+    },
+    {
+      "name": "patient",
+      "use": "in",
+      "min": 1,
+      "max": "1",
+      "documentation": "The Patient.",
+      "type": "Patient"
+    },
+    {
+      "name": "enterer",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "UserId of sender.",
+      "type": "Identifier"
+    },
+    {
+      "name": "mothersPHN",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "The newborn Patient mother's PHN in a RelatedPerson resource.",
+      "type": "RelatedPerson"
+    }
+  ]
+}

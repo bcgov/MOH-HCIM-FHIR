@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Parameters xmlns="http://hl7.org/fhir">
+  <id value="Parameters-AddPatient-Newborn-Example"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters"/>
+  </meta>
+  <parameter>
+    <name value="messageId"/>
+    <valueString value="98028b44-882a-4c72-8c92-b87d916147e1"/>
+  </parameter>
+  <parameter>
+    <name value="messageDateTime"/>
+    <valueDateTime value="2021-11-02T13:28:17-08:00"/>
+  </parameter>
+  <parameter>
+    <name value="sender"/>
+    <valueIdentifier>
+      <system value="http://hlth.gov.bc.ca/fhir/client/bc-org"/>
+      <value value="IHA"/>
+    </valueIdentifier>
+  </parameter>
+  <parameter>
+    <name value="patient"/>
+    <resource>
+      <Patient>
+        <id value="Patient-AddPatient-Newborn-Example"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+        </meta>
+        <identifier>
+          <system value="http://hlth.gov.bc.ca/fhir/client/bc-sri"/>
+          <value value="IHA2234"/>
+        </identifier>
+        <name>
+          <use value="usual"/>
+          <family value="Barness"/>
+          <given value="Baby Girl"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="2505554848"/>
+          <use value="home"/>
+        </telecom>
+        <gender value="unknown"/>
+        <birthDate value="2021-11-02"/>
+        <deceasedBoolean value="false"/>
+        <address>
+          <type value="physical"/>
+          <line value="222 First St"/>
+          <city value="Victoria"/>
+          <state value="BC"/>
+          <postalCode value="V8W 3P9"/>
+          <country value="CA"/>
+        </address>
+      </Patient>
+    </resource>
+  </parameter>
+  <parameter>
+    <name value="enterer"/>
+    <valueIdentifier>
+      <system value="http://hlth.gov.bc.ca/fhir/client/bc-user"/>
+      <value value="klgodfre"/>
+    </valueIdentifier>
+  </parameter>
+  <parameter>
+    <name value="mothersPHN"/>
+    <resource>
+      <RelatedPerson>
+        <id value="RelatedPerson-Mother-Example"/>
+        <identifier>
+          <system value="http://hlth.gov.bc.ca/fhir/client/bc-sri"/>
+          <value value="9736546293"/>
+        </identifier>
+        <patient>
+          <identifier>
+            <system value="http://hlth.gov.bc.ca/fhir/client/bc-sri"/>
+            <value value="IHA2234"/>
+          </identifier>
+        </patient>
+        <relationship>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="MTH"/>
+          </coding>
+        </relationship>
+      </RelatedPerson>
+    </resource>
+  </parameter>
+</Parameters>

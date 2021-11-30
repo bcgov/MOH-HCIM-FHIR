@@ -1,0 +1,497 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Bundle/Bundle-FindCandidates-Response-MomsPHN-Example> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Bundle-FindCandidates-Response-MomsPHN-Example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle>
+     ]
+  ];
+  fhir:Bundle.identifier [
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f7a3b" ]
+  ];
+  fhir:Bundle.type [ fhir:value "searchset"];
+  fhir:Bundle.timestamp [ fhir:value "2011-09-13T16:11:43.000-07:00"^^xsd:dateTime];
+  fhir:Bundle.total [ fhir:value "3"^^xsd:nonNegativeInteger];
+  fhir:Bundle.link [
+     fhir:index 0;
+     fhir:Bundle.link.relation [ fhir:value "self" ];
+     fhir:Bundle.link.url [ fhir:value "urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1" ]
+  ];
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "61061501-9953-4fba-87fe-6ae30e79da33" ];
+     fhir:Bundle.entry.resource <61061501-9953-4fba-87fe-6ae30e79da33>
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1" ];
+     fhir:Bundle.entry.resource <urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1>
+  ], [
+     fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50" ];
+     fhir:Bundle.entry.resource <urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50>;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ];
+       fhir:Bundle.entry.search.score [ fhir:value "100"^^xsd:decimal ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:90bf49dc-4590-4302-8e28-f02bb4deb353" ];
+     fhir:Bundle.entry.resource <urn:uuid:90bf49dc-4590-4302-8e28-f02bb4deb353>;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ];
+       fhir:Bundle.entry.search.score [ fhir:value "100"^^xsd:decimal ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:072f48b7-43c5-4bec-8798-026cc432adcf" ];
+     fhir:Bundle.entry.resource <urn:uuid:072f48b7-43c5-4bec-8798-026cc432adcf>;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ];
+       fhir:Bundle.entry.search.score [ fhir:value "100"^^xsd:decimal ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:425b6c71-b198-4e75-b32c-1b3086935c6a" ];
+     fhir:Bundle.entry.resource <urn:uuid:425b6c71-b198-4e75-b32c-1b3086935c6a>
+  ], [
+     fhir:index 6;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:4a288971-8af6-4d77-a071-4ba3a10042e5" ];
+     fhir:Bundle.entry.resource <urn:uuid:4a288971-8af6-4d77-a071-4ba3a10042e5>
+  ] .
+
+<61061501-9953-4fba-87fe-6ae30e79da33> a fhir:Parameters;
+  fhir:Resource.id [ fhir:value "Parameters-FindCandidates-Response-Example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters>
+     ]
+  ];
+  fhir:Parameters.parameter [
+     fhir:index 0;
+     fhir:Parameters.parameter.name [ fhir:value "messageId" ];
+     fhir:Parameters.parameter.valueString [ fhir:value "c087e71e-3e7e-4c22-a3ce-61523f600615" ]
+  ], [
+     fhir:index 1;
+     fhir:Parameters.parameter.name [ fhir:value "messageDateTime" ];
+     fhir:Parameters.parameter.valueDateTime [ fhir:value "2015-02-07T13:29:17-08:00"^^xsd:dateTime ]
+  ], [
+     fhir:index 2;
+     fhir:Parameters.parameter.name [ fhir:value "sender" ];
+     fhir:Parameters.parameter.valueIdentifier [
+       fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-org" ];
+       fhir:Identifier.value [ fhir:value "MOH_CRS" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Parameters.parameter.name [ fhir:value "requestMessageId" ];
+     fhir:Parameters.parameter.valueString [ fhir:value "98028b44-882a-4c72-8c92-b87d916147e1" ]
+  ] .
+
+<urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1> a fhir:OperationOutcome;
+  fhir:Resource.id [ fhir:value "OperationOutcome-Search-Example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-operation-outcome";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-operation-outcome>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"OperationOutcome-Search-Example\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-operation-outcome.html\">BCOperationOutcome</a></p></div><blockquote><p><b>issue</b></p><p><b>severity</b>: warning</p><p><b>code</b>: business-rule</p><p><b>details</b>: Warning: The Find Candidates Patient name has been modified to filter out invalid characters. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#BCHCIM.GD.1.0017)</span></p></blockquote><blockquote><p><b>issue</b></p><p><b>severity</b>: error</p><p><b>code</b>: business-rule</p><p><b>details</b>: The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ... <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#BCHCIM.GD.1.0017)</span></p></blockquote></div>"
+  ];
+  fhir:OperationOutcome.issue [
+     fhir:index 0;
+     fhir:OperationOutcome.issue.severity [ fhir:value "warning" ];
+     fhir:OperationOutcome.issue.code [ fhir:value "business-rule" ];
+     fhir:OperationOutcome.issue.details [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "BCHCIM.GD.1.0017" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Warning: The Find Candidates Patient name has been modified to filter out invalid characters." ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:OperationOutcome.issue.severity [ fhir:value "error" ];
+     fhir:OperationOutcome.issue.code [ fhir:value "business-rule" ];
+     fhir:OperationOutcome.issue.details [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "BCHCIM.GD.1.0017" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ..." ]
+     ]
+  ] .
+
+<urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50> a fhir:Patient;
+  fhir:Resource.id [ fhir:value "Patient-BabyGirl-Example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Patient-BabyGirl-Example\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">BCPatient</a></p></div><p><b>BC business dates</b>: 2019-11-12T13:21:13-08:00 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9123123123</p><p><b>name</b>: Baby Girl PURPLE </p><p><b>telecom</b>: ph: 2504283447(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 2019-12-12</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>432 Douglas St Victoria BC V6N2R2 CA </li></ul></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2019-11-12T13:21:13-08:00"^^xsd:dateTime ]
+     ]
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "JHN" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
+     fhir:Identifier.value [ fhir:value "9123123123" ]
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "usual" ];
+     fhir:HumanName.family [ fhir:value "PURPLE" ];
+     fhir:HumanName.given [
+       fhir:value "Baby Girl";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "2504283447" ];
+     fhir:ContactPoint.use [ fhir:value "home" ]
+  ];
+  fhir:Patient.gender [
+     fhir:value "female";
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+       fhir:Extension.valuePeriod [
+         fhir:Period.start [ fhir:value "2017-04-05T16:16:16-08:00"^^xsd:dateTime ]
+       ]
+     ]
+  ];
+  fhir:Patient.birthDate [
+     fhir:value "2019-12-12"^^xsd:date;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+       fhir:Extension.valuePeriod [
+         fhir:Period.start [ fhir:value "2019-11-12T03:29:17-08:00"^^xsd:dateTime ]
+       ]
+     ]
+  ];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "valid" ]
+     ];
+     fhir:Address.type [ fhir:value "physical" ];
+     fhir:Address.line [
+       fhir:value "123 FRONT ST";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "VICTORIA" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.postalCode [ fhir:value "V6N2W2" ];
+     fhir:Address.country [ fhir:value "CA" ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "invalid" ]
+     ];
+     fhir:Address.type [ fhir:value "postal" ];
+     fhir:Address.line [
+       fhir:value "432 Douglas St";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Victoria" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.postalCode [ fhir:value "V6N2R2" ];
+     fhir:Address.country [ fhir:value "CA" ]
+  ] .
+
+<urn:uuid:90bf49dc-4590-4302-8e28-f02bb4deb353> a fhir:Patient;
+  fhir:Resource.id [ fhir:value "Patient-BabyBoy-Example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Patient-BabyBoy-Example\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">BCPatient</a></p></div><p><b>BC business dates</b>: 2019-11-12T13:29:17-08:00 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9123123124</p><p><b>name</b>: Baby Boy PURPLE </p><p><b>telecom</b>: ph: 2504283447(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 2019-12-12</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>432 Douglas St Victoria BC V6N2R2 CA </li></ul></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2019-11-12T13:29:17-08:00"^^xsd:dateTime ]
+     ]
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "JHN" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
+     fhir:Identifier.value [ fhir:value "9123123124" ]
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "usual" ];
+     fhir:HumanName.family [ fhir:value "PURPLE" ];
+     fhir:HumanName.given [
+       fhir:value "Baby Boy";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "2504283447" ];
+     fhir:ContactPoint.use [ fhir:value "home" ]
+  ];
+  fhir:Patient.gender [
+     fhir:value "male";
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+       fhir:Extension.valuePeriod [
+         fhir:Period.start [ fhir:value "2017-04-05T16:16:16-08:00"^^xsd:dateTime ]
+       ]
+     ]
+  ];
+  fhir:Patient.birthDate [
+     fhir:value "2019-12-12"^^xsd:date;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+       fhir:Extension.valuePeriod [
+         fhir:Period.start [ fhir:value "2019-11-12T03:29:17-08:00"^^xsd:dateTime ]
+       ]
+     ]
+  ];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "valid" ]
+     ];
+     fhir:Address.type [ fhir:value "physical" ];
+     fhir:Address.line [
+       fhir:value "123 FRONT ST";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "VICTORIA" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.postalCode [ fhir:value "V6N2W2" ];
+     fhir:Address.country [ fhir:value "CA" ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "invalid" ]
+     ];
+     fhir:Address.type [ fhir:value "postal" ];
+     fhir:Address.line [
+       fhir:value "432 Douglas St";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Victoria" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.postalCode [ fhir:value "V6N2R2" ];
+     fhir:Address.country [ fhir:value "CA" ]
+  ] .
+
+<urn:uuid:072f48b7-43c5-4bec-8798-026cc432adcf> a fhir:Patient;
+  fhir:Resource.id [ fhir:value "Patient-Mother-Example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Patient-Mother-Example\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">BCPatient</a></p></div><p><b>BC business dates</b>: 2019-02-07T13:29:17-08:00 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: BAILEY PURPLE </p><p><b>telecom</b>: ph: 2504283447(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1985-12-14</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>432 Douglas St Victoria BC V6N2R2 CA </li></ul><blockquote><p><b>link</b></p><p><b>other</b>: <a href=\"#RelatedPerson_RelatedPerson-MotherOfBabyBoy-Example\">See above (urn:uuid:425b6c71-b198-4e75-b32c-1b3086935c6a)</a></p><p><b>type</b>: seealso</p></blockquote><blockquote><p><b>link</b></p><p><b>other</b>: <a href=\"#RelatedPerson_RelatedPerson-MotherOfBabyGirl-Example\">See above (urn:uuid:4a288971-8af6-4d77-a071-4ba3a10042e5)</a></p><p><b>type</b>: seealso</p></blockquote></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2019-02-07T13:29:17-08:00"^^xsd:dateTime ]
+     ]
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "JHN" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
+     fhir:Identifier.value [ fhir:value "9999999999" ]
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "usual" ];
+     fhir:HumanName.family [ fhir:value "PURPLE" ];
+     fhir:HumanName.given [
+       fhir:value "BAILEY";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "2504283447" ];
+     fhir:ContactPoint.use [ fhir:value "home" ]
+  ];
+  fhir:Patient.gender [
+     fhir:value "female";
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+       fhir:Extension.valuePeriod [
+         fhir:Period.start [ fhir:value "2017-04-05T16:16:16-08:00"^^xsd:dateTime ]
+       ]
+     ]
+  ];
+  fhir:Patient.birthDate [
+     fhir:value "1985-12-14"^^xsd:date;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+       fhir:Extension.valuePeriod [
+         fhir:Period.start [ fhir:value "2019-10-17T03:29:17-08:00"^^xsd:dateTime ]
+       ]
+     ]
+  ];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "valid" ]
+     ];
+     fhir:Address.type [ fhir:value "physical" ];
+     fhir:Address.line [
+       fhir:value "123 FRONT ST";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "VICTORIA" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.postalCode [ fhir:value "V6N2W2" ];
+     fhir:Address.country [ fhir:value "CA" ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "invalid" ]
+     ];
+     fhir:Address.type [ fhir:value "postal" ];
+     fhir:Address.line [
+       fhir:value "432 Douglas St";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Victoria" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.postalCode [ fhir:value "V6N2R2" ];
+     fhir:Address.country [ fhir:value "CA" ]
+  ];
+  fhir:Patient.link [
+     fhir:index 0;
+     fhir:Patient.link.other [
+       fhir:Reference.reference [ fhir:value "urn:uuid:425b6c71-b198-4e75-b32c-1b3086935c6a" ]
+     ];
+     fhir:Patient.link.type [ fhir:value "seealso" ]
+  ], [
+     fhir:index 1;
+     fhir:Patient.link.other [
+       fhir:Reference.reference [ fhir:value "urn:uuid:4a288971-8af6-4d77-a071-4ba3a10042e5" ]
+     ];
+     fhir:Patient.link.type [ fhir:value "seealso" ]
+  ] .
+
+<urn:uuid:425b6c71-b198-4e75-b32c-1b3086935c6a> a fhir:RelatedPerson;
+  fhir:Resource.id [ fhir:value "RelatedPerson-MotherOfBabyBoy-Example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"RelatedPerson-MotherOfBabyBoy-Example\" </p></div><p><b>patient</b>: <a href=\"#Patient_Patient-BabyBoy-Example\">See above (urn:uuid:90bf49dc-4590-4302-8e28-f02bb4deb353)</a></p><p><b>relationship</b>: natural child <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/2.1.0/CodeSystem-v3-RoleCode.html\">RoleCode</a>#NCHILD)</span></p></div>"
+  ];
+  fhir:RelatedPerson.patient [
+     fhir:Reference.reference [ fhir:value "urn:uuid:90bf49dc-4590-4302-8e28-f02bb4deb353" ]
+  ];
+  fhir:RelatedPerson.relationship [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ];
+       fhir:Coding.code [ fhir:value "NCHILD" ]
+     ]
+  ] .
+
+<urn:uuid:4a288971-8af6-4d77-a071-4ba3a10042e5> a fhir:RelatedPerson;
+  fhir:Resource.id [ fhir:value "RelatedPerson-MotherOfBabyGirl-Example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"RelatedPerson-MotherOfBabyGirl-Example\" </p></div><p><b>patient</b>: <a href=\"#Patient_Patient-BabyGirl-Example\">See above (urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50)</a></p><p><b>relationship</b>: natural child <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/2.1.0/CodeSystem-v3-RoleCode.html\">RoleCode</a>#NCHILD)</span></p></div>"
+  ];
+  fhir:RelatedPerson.patient [
+     fhir:Reference.reference [ fhir:value "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50" ]
+  ];
+  fhir:RelatedPerson.relationship [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ];
+       fhir:Coding.code [ fhir:value "NCHILD" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Bundle/Bundle-FindCandidates-Response-MomsPHN-Example.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

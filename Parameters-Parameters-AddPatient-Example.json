@@ -1,0 +1,76 @@
+{
+  "resourceType": "Parameters",
+  "id": "Parameters-AddPatient-Example",
+  "meta": {
+    "profile": [
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "messageId",
+      "valueString": "98028b44-882a-4c72-8c92-b87d916147e1"
+    },
+    {
+      "name": "messageDateTime",
+      "valueDateTime": "2021-11-02T13:28:17-08:00"
+    },
+    {
+      "name": "sender",
+      "valueIdentifier": {
+        "system": "http://hlth.gov.bc.ca/fhir/client/bc-org",
+        "value": "PHARM"
+      }
+    },
+    {
+      "name": "patient",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient-AddPatient-Example",
+        "meta": {
+          "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+          ]
+        },
+        "name": [
+          {
+            "use": "usual",
+            "family": "BARNEY",
+            "given": [
+              "PURPLE"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "pbarney@thepark.com",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1940-06-06",
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "type": "physical",
+            "line": [
+              "667 YELLOW BRICK RD"
+            ],
+            "city": "PRINCE GEORGE",
+            "state": "BC",
+            "postalCode": "V8W 3P9",
+            "country": "CA"
+          }
+        ]
+      }
+    },
+    {
+      "name": "enterer",
+      "valueIdentifier": {
+        "system": "http://hlth.gov.bc.ca/fhir/client/bc-user",
+        "value": "klgodfre"
+      }
+    }
+  ]
+}

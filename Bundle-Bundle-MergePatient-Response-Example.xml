@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="Bundle-MergePatient-Response-Example"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle"/>
+  </meta>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f7a3b"/>
+  </identifier>
+  <type value="collection"/>
+  <timestamp value="2011-09-13T16:11:43.000-07:00"/>
+  <link>
+    <relation value="self"/>
+    <url value="urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1"/>
+  </link>
+  <entry>
+    <fullUrl value="urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1"/>
+    <resource>
+      <Parameters>
+        <id value="Parameters-MergePatient-Response-Example"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
+        </meta>
+        <parameter>
+          <name value="messageId"/>
+          <valueString value="c087e71e-3e7e-4c22-a3ce-61523f600615"/>
+        </parameter>
+        <parameter>
+          <name value="messageDateTime"/>
+          <valueDateTime value="2015-02-07T13:29:17-08:00"/>
+        </parameter>
+        <parameter>
+          <name value="sender"/>
+          <valueIdentifier>
+            <system value="http://hlth.gov.bc.ca/fhir/client/bc-org"/>
+            <value value="MOH_CRS"/>
+          </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="requestMessageId"/>
+          <valueString value="98028b44-882a-4c72-8c92-b87d916147e1"/>
+        </parameter>
+      </Parameters>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"/>
+    <resource>
+      <OperationOutcome>
+        <id value="OperationOutcome-Example"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-operation-outcome"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "OperationOutcome-Example" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-operation-outcome.html">BCOperationOutcome</a></p></div><blockquote><p><b>issue</b></p><p><b>severity</b>: warning</p><p><b>code</b>: business-rule</p><p><b>details</b>: Warning: The Revise Patient name has been modified to filter out invalid characters. <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#BCHCIM.RP.1.0017)</span></p></blockquote><blockquote><p><b>issue</b></p><p><b>severity</b>: error</p><p><b>code</b>: business-rule</p><p><b>details</b>: The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ... <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#BCHCIM.RP.1.0017)</span></p></blockquote></div>
+        </text>
+        <issue>
+          <severity value="warning"/>
+          <code value="business-rule"/>
+          <details>
+            <coding>
+              <code value="BCHCIM.RP.1.0017"/>
+            </coding>
+            <text value="Warning: The Revise Patient name has been modified to filter out invalid characters."/>
+          </details>
+        </issue>
+        <issue>
+          <severity value="error"/>
+          <code value="business-rule"/>
+          <details>
+            <coding>
+              <code value="BCHCIM.RP.1.0017"/>
+            </coding>
+            <text value="The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ..."/>
+          </details>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+</Bundle>
