@@ -47,22 +47,22 @@ All interactions with Patient resources SHALL use the BCPatient profile. E.g. /P
 The Parameters profile for searches SHALL be BCMetadataParameters.
 </li>  
 <li>
-The Parameters profile for Revise and Merge SHALL be BCBusinessDataParameters.
+The Paramaters profile for Revise and Merge SHALL be BCBusinessDataParameters.
 </li>
 <li>
 Only the 'resource type' FHIR Operation is supported by the Client Registry, e.g. /Patient/$[Operation Name]; not system /$[Operation Name] and not resource instance /Patient/[id]/$[Operation Name].  Requesting users SHALL use only the resource type FHIR Operation
 </li>
-All of the Profiles include elements that are marked as Must Support. For the purposes of this guide, Must Support is intended to represent those fields that will be exchanged between client applications and the Client Registry server. Client applications who are receiving information SHALL be able to receive all fields marked as Must Support without raising an exception. When sending information to the Client Registry server, client applications SHOULD be able to send any fields marked as Must Support.
+All of the Profiles include elements that are marked as Must Support. For the purposes of this guide, Must Support is intended to represent those fields that will be exchanged between client applications and the Client Registry server. Client applications who are receving information SHALL be able to receive all fields marked as Must Support without raising an exception. When sending information to the Client Registry server, client applications SHOULD be able to send any fields marked as Must Support.
 <li>
-The FHIR asynchronous pattern is not followed by this FHIR implementation.  The existing pattern the Client Registry uses today will be mimicked.  I.e.                                   1. User sends request                                                                        1. Client Registry responds with HTTP 202 Accepted                                           1. Client Registry sends request to user's end point                                         1. User system responds with 202 Accepted
+The FHIR asynchornous pattern is not followed by this FHIR implementation.  The existing pattern the Client Registry uses today will be mimicked.  I.e.                                   1. User sends request                                                                        1. Client Registry responds with HTTP 202 Accepted                                           1. Client Registry sends request to user's end point                                         1. User system responds with 202 Accepted
 
-Users SHALL follow the above asynchronous pattern when invoking an asynchronous version of a Operation.
+Users SHALL follow the above asynchrous pattern when invoking an ayschronous version of a Operation.
 </li>
 </ul>
 
 <h3>General Rules OUT</h3>
 <p>
-Each Operation returns a Bundle.  The Bundles may be of type searchset or collection.  The two searches, GetDemographics and FindCandidates both return searchset bundles.  The Revise and Merge return collection Bundle resources.  Each Bundle will have a Parameters entry (profile BCMetadataParameters) that has the response metadata, including echoing back the request unique id, and zero or more Patient entries that either meet the search criteria or are the result of a Revise or Merge Operation.  In addition each Bundle has an OperationOutcome resource with warnings and errors relevant to the FHIR Operation request.  And finally, the searchset Bundle will also have the search criteria echoed back in an additional Parameters resource.
+Each Operation returns a Bundle.  The Bundles may be of type searchset or collection.  The two searches, GetDemographics and FindCandidates both return searchset bundles.  The Revise and Merge reutrn collection Bundle resources.  Each Bundle will have a Parameters entry (profile BCMetadataParameters) that has the response metadata, including echoing back the request unique id, and zero or more Patient entries that either meet the search criteria or are the result of a Revise or Merge Operation.  In addition each Bundle has an OperationOutcome resource with warnings and errors relevant to the FHIR Operation request.  And finally, the seachset Bundle will also have the search criteria echoed back in an additional Parameters resource.
 </p>
 <p>
 In summary the response Bundles for every Operation will be structured as follows:
@@ -70,19 +70,19 @@ In summary the response Bundles for every Operation will be structured as follow
 <ul>
 <li>Entry of BCMetadataParameters</li>
 <li>Zero or more entries of Patient</li>
-<li>Entry with OperationOutcome</li>
+<li>Entry with OperationOutcom</li>
 <li>If a search, the request Parameters are echoed back in a Parameters resource</li>
 </ul>
 
 <h3>Error Handling</h3>
 <p>
-The Client Registry users SHALL monitor the HTTP response codes returned in a response.  If the code is not 2xx the user will find the errors in the OperationOutcome resource in the response Bundle.
+The Client Registry users SHALL monitor the HTTP reponse codes returned in a response.  If the code is not 2xx the user will find the errors in the OperationOutcome resource in the response Bundle.
 </p>
 
 <h3>Search</h3>
 <h4>Find Candidates</h4>
 <p>
-The FindCandidates FHIR Operation search SHALL use the following name-value parameters pairs, mandatory or optional according to the cardinality rules below.  This search may return zero or more Patients using the BCPatient profile.  Wildcards are not permitted.
+The FindCandidates FHIR Operation search SHALL use the following name-value paramters pairs, mandatory or optional according to the cardinality rules below.  This search may return zero or more Patients using the BCPatient profile.  Wildcards are not permitted.
 </p>
 
 
@@ -279,7 +279,7 @@ The FindCandidates FHIR Operation search SHALL use the following name-value para
 
 <h4>Get Demographics</h4>
 <p>
-The GetDemographics FHIR Operation SHALL use the following name-value parameters pairs, mandatory or optional according to the cardinality rules below.  This search may return zero or one Patient using the BCPatient profile.
+The GetDemographics FHIR Operation SHALL use the following name-value paramters pairs, mandatory or optional according to the cardinality rules below.  This search may return zero or one Patient using the BCPatient profile.
 </p>
 <table class=\"grid\">
 	<tr>
@@ -375,7 +375,7 @@ The GetDemographics FHIR Operation SHALL use the following name-value parameters
 </table>
 <h3>Add and Revise Patient</h3>
 <p>
-The AddPatient and RevisePatient FHIR Operations SHALL use the following name-value parameters pairs, mandatory or optional according to the cardinality rules below.
+The AddPatient and RevisePatient FHIR Operations SHALL use the following name-value paramters pairs, mandatory or optional according to the cardinality rules below.
 </p>
 <table class=\"grid\">
 	<tr>
@@ -443,7 +443,7 @@ The AddPatient and RevisePatient FHIR Operations SHALL use the following name-va
 </table>
 
 <h3>Merge Person</h3>
-<p>                                                                                          The Merge Patient FHIR Operation SHALL use the following name-value parameters pairs, mandatory or optional according to the cardinality rules below.
+<p>                                                                                          The Merge Patient FHIR Operation SHALL use the following name-value paramters pairs, mandatory or optional according to the cardinality rules below.
 The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 </p>
 <table class=\"grid\">
@@ -519,7 +519,7 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 * status = #draft
 * date = "2021-11-18"
 * publisher = "BC Ministry of Health"
-* description = "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a server.
+* description = "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry whe it is acting as a server.
 
 * Find Candidates - used when a user would like to find a Patient, but without an identifier, typically with name, address or edge cases like mother's PHN.
 * Get Demographics - used when a user would like to find a Patient and has an identifier that Client Registry recognizes

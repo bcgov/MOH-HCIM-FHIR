@@ -45,5 +45,5 @@ Usage: #definition
 * parameter[4].use = #in
 * parameter[4].min = 0
 * parameter[4].max = "1"
-* parameter[4].documentation = "The newborn Patient mother's PHN in a RealtedPerson resource."
+* parameter[4].documentation = "The newborn Patient mother's PHN in a RelatedPerson resource."
 * parameter[4].type = #RelatedPerson
