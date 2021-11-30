@@ -1,4 +1,4 @@
-Instance: GetDemographics
+Instance: Parameters-GetDemographics-Example
 InstanceOf: BCMetadataParameters
 Description: "Example of $GetDemographics operation"
 * parameter[messageId].name = "messageId"
@@ -24,7 +24,7 @@ Description: "Example of $GetDemographics operation"
 * parameter[5].name = "history"
 * parameter[5].valueBoolean = false
 
-Instance: GetDemographics-ResponseMetadata
+Instance: Parameters-GetDemographics-Response-Example
 InstanceOf: BCMetadataParameters
 Description: "Example of $FindCandidates response Metadata parameters"
 
@@ -41,7 +41,7 @@ Description: "Example of $FindCandidates response Metadata parameters"
 * parameter[sender].valueIdentifier.value = "MOH_CRS"
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
-Instance: GetDemographicsResponse
+Instance: Bundle-GetDemographics-Response-Example
 InstanceOf: BCSearchResponseBundle
 Description: "Example of $GetDemographics operation response Bundle"
 * type = #searchset
@@ -49,16 +49,16 @@ Description: "Example of $GetDemographics operation response Bundle"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:b3a12f0c-a332-4ec9-94b9-d8539a02df48"
 
-* entry[parameters].resource = GetDemographics-ResponseMetadata
+* entry[parameters].resource = Parameters-GetDemographics-Response-Example
 * entry[parameters].fullUrl = "urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33"
 
-* entry[operationOutcome].resource = SearchOperationOutcome
+* entry[operationOutcome].resource = OperationOutcome-Search-Example
 * entry[operationOutcome].fullUrl = "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"
 
-* entry[2].resource = PatientDemographicsResponse
+* entry[2].resource = Patient-GetDemographics-Example
 * entry[2].fullUrl = "urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c"
 
-Instance: GetDemographicsINParameters
+Instance: Parameters-GetDemographics-IN-Example
 InstanceOf: Parameters
 Description: "Example of $GetDemographics operation, IN parameters"
 * parameter[0].name = "identifier"

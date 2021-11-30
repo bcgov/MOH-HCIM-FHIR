@@ -1,6 +1,5 @@
 This is the Revise Patient operation.
 
-A Patient resource is required to revise a patient.  The Revise Patient operation is used to notifiy users of patient changes (for those users who have registered for this service).  It is expected that the user adheres to this implementation guide when setting their $RevisePatient operation end point.
-
+A Patient resource is required to update a patient.  Empty attributes will be deleted from the Client Registry.
 
 

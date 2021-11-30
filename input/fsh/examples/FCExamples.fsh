@@ -1,4 +1,4 @@
-Instance: FindCandidates
+Instance: Parameters-FindCandidates-Example
 InstanceOf: BCMetadataParameters
 Description: "Example of $FindCandidates operation"
 
@@ -45,7 +45,7 @@ Description: "Example of $FindCandidates operation"
 * parameter[9].name = "identifiersOnly"
 * parameter[9].valueBoolean = false
 
-Instance: FindCandidates-UsingMomsPHN
+Instance: Parameters-FindCandidates-UsingMomsPHN-Example
 InstanceOf: BCMetadataParameters
 Description: "Example of $FindCandidates operation with mother's PHN"
 
@@ -62,7 +62,7 @@ Description: "Example of $FindCandidates operation with mother's PHN"
 * parameter[3].name = "mothersPHN"
 * parameter[3].valueString = "9123123432"
 
-Instance: FindCandidates-ResponseMetadata
+Instance: Parameters-FindCandidates-Response-Example
 InstanceOf: BCMetadataParameters
 Description: "Example of $FindCandidates response Metadata parameters"
 
@@ -80,7 +80,7 @@ Description: "Example of $FindCandidates response Metadata parameters"
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
 
-Instance: FindCandidatesResponse
+Instance: Bundle-FindCandidates-Response-Example
 InstanceOf: BCSearchResponseBundle
 Description: "Example of FindCandidates response Bundle.  Patient0 has PHN, alternate, SRI and SSRI identifier examples."
 * type = #searchset
@@ -91,28 +91,28 @@ Description: "Example of FindCandidates response Bundle.  Patient0 has PHN, alte
 * link[0].relation = "self"
 * link[0].url = "urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1"
 
-* entry[parameters].resource = FindCandidates-ResponseMetadata
+* entry[parameters].resource = Parameters-FindCandidates-Response-Example
 * entry[parameters].fullUrl = "61061501-9953-4fba-87fe-6ae30e79da33"
 
-* entry[operationOutcome].resource = SearchOperationOutcome
+* entry[operationOutcome].resource = OperationOutcome-Search-Example
 * entry[operationOutcome].fullUrl = "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"
 
-* entry[2].resource = Patient0Response
+* entry[2].resource = Patient-0-Example
 * entry[2].search.score = 31
 * entry[2].search.mode = #match
 * entry[2].fullUrl = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"
 
-* entry[3].resource = Patient1Response
+* entry[3].resource = Patient-1-Example
 * entry[3].search.score = -53
 * entry[3].search.mode = #match
 * entry[3].fullUrl = "urn:uuid:90bf49dc-4590-4302-8e28-f02bb4deb353"
 
-* entry[4].resource = Patient2Response
+* entry[4].resource = Patient-2-Example
 * entry[4].search.score = -56
 * entry[4].search.mode = #match
 * entry[4].fullUrl = "urn:uuid:072f48b7-43c5-4bec-8798-026cc432adcf"
 
-Instance: FindCandidatesResponse-MomsPHN
+Instance: Bundle-FindCandidates-Response-MomsPHN-Example
 InstanceOf: BCSearchResponseBundle
 Description: "Example of FindCandidates with mother's PHN response Bundle."
 * type = #searchset
@@ -123,10 +123,10 @@ Description: "Example of FindCandidates with mother's PHN response Bundle."
 * link[0].relation = "self"
 * link[0].url = "urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1"
 
-* entry[parameters].resource = FindCandidates-ResponseMetadata
+* entry[parameters].resource = Parameters-FindCandidates-Response-Example
 * entry[parameters].fullUrl = "61061501-9953-4fba-87fe-6ae30e79da33"
 
-* entry[operationOutcome].resource = SearchOperationOutcome
+* entry[operationOutcome].resource = OperationOutcome-Search-Example
 * entry[operationOutcome].fullUrl = "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"
 
 // This response is complex .... the response to the Find Candidates
@@ -147,25 +147,25 @@ Description: "Example of FindCandidates with mother's PHN response Bundle."
 
 
 //child 1
-* entry[2].resource = PatientBabyGirl
+* entry[2].resource = Patient-BabyGirl-Example
 * entry[2].search.score = 100
 * entry[2].search.mode = #match
 * entry[2].fullUrl = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"
 
 // child 2
-* entry[3].resource = PatientBabyBoy
+* entry[3].resource = Patient-BabyBoy-Example
 * entry[3].search.score = 100
 * entry[3].search.mode = #match
 * entry[3].fullUrl = "urn:uuid:90bf49dc-4590-4302-8e28-f02bb4deb353"
 
 // mother
-* entry[4].resource = PatientMother
+* entry[4].resource = Patient-Mother-Example
 * entry[4].search.score = 100
 * entry[4].search.mode = #match
 * entry[4].fullUrl = "urn:uuid:072f48b7-43c5-4bec-8798-026cc432adcf"
 
-* entry[5].resource = MotherRelatedFCBabyBoy
+* entry[5].resource = RelatedPerson-MotherOfBabyBoy-Example
 * entry[5].fullUrl = "urn:uuid:425b6c71-b198-4e75-b32c-1b3086935c6a"
 
-* entry[6].resource = MotherRelatedFCBabyGirl
+* entry[6].resource = RelatedPerson-MotherOfBabyGirl-Example
 * entry[6].fullUrl = "urn:uuid:4a288971-8af6-4d77-a071-4ba3a10042e5"

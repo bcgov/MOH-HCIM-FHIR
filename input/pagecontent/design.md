@@ -53,7 +53,7 @@ bc-death-date-flag-business-period-extension | A Period extension for effective 
 
 The Client Registry doesn't recognize all the codes for the elements that must be supported, see the table below which indicates the supported codes.
 
-Attribute | Value Sets
+Attribute | Supported Codes
 :---|:---
 Patient.name.use| Only _usual_,  _official_ or _nickname_ from NameUse value set.
 Patient.telecom.use| Only _home_, _work_, _mobile_ from the ContactPointUse value set.
@@ -90,15 +90,18 @@ https://..../$FindCandidates |
 https://..../$GetDemographics |
 https://..../$RevisePatient |
 https://..../$RevisePatient.Async |
+https://..../$AddPatient |
+https://..../$AddPatient.Async |
 https://..../$MergePatient |
 https://..../$MergePatient.Async |
 
-Suffixes such as Async inform the Client Registry FHIR server to perform the operation in a particular way such as responding asynchronously.
+The Async suffix informs the Client Registry FHIR server to perform the operation in an asynchronous manner.  The profiles and examples used in the Async versions of the Operations are identical to the synchronous Operations.
 
-The Client Registry does not support any other interactions than the Operations listed above.
+The Client Registry does not support any other interactions (Restful or otherwise) than the Operations listed above.
+
 ##### Requests
 
-The body of the request message will vary depending on the business context however all message bodies will consist of at least one Parameter.  The Parameter resource has two profiles defined in this guide.  See [Metadata Parameters](StructureDefinition-bc-metadata-parameters.html) and [Patient Business Parameters](StructureDefinition-bc-patient-business-parameters.html).  The Metadata Parameters profile is to store request metadata name-value pairs such as request creation time and unique ID.  The Business Parameters profile includes the Metadata name-value pairs and in addition business values such as Patients and Operation flags.
+The body of the request message will vary depending on the business context however all message bodies will consist of at least one Parameter.  The Parameter resource has two profiles defined in this guide.  See [Metadata Parameters](StructureDefinition-bc-metadata-parameters.html) and [Patient Business Parameters](StructureDefinition-bc-patient-business-parameters.html).  The Metadata Parameters profile is to store request/response metadata name-value pairs such as creation time and unique ID.  The Business Parameters profile includes the Metadata name-value pairs and in addition business values such as Patients and Operation flags.
 
 The diagram below shows how the Parameters resource is generalized to a Metadata Parameters and then further to a Business Parameters resource.  The children inherit from the parents.
 
@@ -108,22 +111,25 @@ The diagram below shows how the Parameters resource is generalized to a Metadata
 
 ##### Responses
 
-Response resources are wrapped in Bundles that contain Patients and a OperationOutcome.  A search operation like Get Demographics or Find Candidates will be a searchset Bundle that echoes back the search parameters by including a Parameters resource in the Bundle.
+Response resources are wrapped in Bundles that contain Patients and a OperationOutcome.  A search operation like Get Demographics or Find Candidates will be a searchset Bundle that echoes back the search parameters by including an extra Parameters resource in the Bundle.
 
 ### Design Outcomes - Details
 
 This guide touches on some of the business and conformance rules regarding use of the Client Registry.  However this guide is not the source of conformance or business rules and the audience is referred to British Columbia's [Health Information Exchange](https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/software) web site for details on the Client Registry system and access to Client Registry.
 
 #### Operational Parameter Resource
-As stated above each Parameter resource will contain two additional Parameter resources:  one for message operational attributes and the second for business elements.  Below are the allowed IN and OUT parameters for the operational Parameter resources.  These should be common to all messages.
 
-Parameter Name|Parameter Value|Comments
-:---|:---|:---
-message id|parameter.value[string]|Message (unique) id
-create time|parameter.value[dateTime]|Creation date of message
-request message id|parameter.value[string]|Message (unique) id
-sender|parameter.value[Identifier]|Message sender
-enterer|parameter.value[Identifier]|UserId for message
+Each interaction is a FHIR Operation and as such has a set of possbile parameters.  The table below outlines the parameters and whether they are IN, OUT or could apply to both requests and responses.  
+
+The table is only showing the standard interaction parameters, each Operation may have more parameters such as Patient, OperationOutcome, etc.  More detailed information regarding each Operation can be found in the [Operation definitions](artifacts.html#operation-definitions).
+
+Parameter Name|Parameter Value|Comments|IN, OUT, both
+:---|:---|:---|:---
+message id|parameter.value[string]|Message (unique) id|both
+create time|parameter.value[dateTime]|Creation date of message|both
+request message id|parameter.value[string]|Message (unique) id|OUT
+sender|parameter.value[Identifier]|Message sender|both
+enterer|parameter.value[Identifier]|UserId for message|both
 
 #### Searches
 There are two searches available for Client Registry FHIR, Find Candidates and Get Demographics.  The operations are:
@@ -132,32 +138,34 @@ Search Operations | Description
 :--- |
 https://…./$FindCandidates | Searching for Patients that match the search criteria
 https://…./$GetDemographics | Searching for a single Patient
-https://…./$GetDemographics.History | Searching for a single Patient and requesting that Patients historical attributes (as well as current attributes) be included in the response
 
-Find Candidates may return zero or more candidates, while Get Demographics is designed to return zero or a single match.  These searches are expected to provide the required information to confirm a person's identify.
+Find Candidates may return zero or more candidates, while Get Demographics is designed to return zero Patients or a single matching Patient.  These searches are expected to provide the required information to confirm a person's identify.
 
 [Search page](search.html "Find Candidates and Get Demographics")
 
-#### Revise and/or Merge Patient
+#### Add, Revise and/or Merge Patient
 
-Revise and Merge Patient are maintain transactions that are closely related and therefore are described in the same section.  They use the same FHIR structure and resources; merge uses additional parameters.
+Add, Revise and Merge Patient are maintain transactions that are closely related and therefore are described in the same section.  They use the same FHIR structure and resources; merge uses additional parameters.
 
 
 Add, Revise and Merge Operations | Description
 :--- | :---
-https://..../$RevisePatient | Creating or updating a Patient
-https://..../$RevisePatient.Async | Creating or updating a Patient asynchronously
+https://..../$RevisePatient | Updating a Patient
+https://..../$RevisePatient.Async | Updating a Patient asynchronously
+https://..../$AddPatient | Creating a Patient
+https://..../$AddPatient.Async | Creating a Patient asynchronously
 https://..../$MergePatient | Resolving duplicate Patients records (same individual)
 https://..../$MergePatient.Async | Resolving duplicate Patients records (same individual) asynchronously
 
 These business transactions will allow the user to:
 - update demographic information, if the patient exists within the Client Registry; or
-- generate a PHN for a new client.
+- generate a PHN for a new client; or
+- resolve duplicate Patients.
 
 [Revise and Merge page](reviseAndMerge.html)
 
 ##### Asynchronous Operations
-The asynchronous versions of Revise and Merge Operations share the same request and response profile as the synchronous version.
+The asynchronous versions of Add, Revise and Merge Operations share the same request and response profile as the synchronous version.
 
 The FHIR asynchornous pattern is not followed by this FHIR implementation.  The existing pattern the Client Registry uses today will be mimicked.  I.e.
 1. User sends request

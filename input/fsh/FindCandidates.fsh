@@ -1,4 +1,4 @@
-Instance: FindCandidatesQuery
+Instance: FindCandidates
 InstanceOf: OperationDefinition
 Description: "This operation is used to query for a patient.  The response can contain 0 or more Patients."
 Usage: #definition

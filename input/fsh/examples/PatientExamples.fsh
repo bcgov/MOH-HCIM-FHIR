@@ -1,4 +1,4 @@
-Instance: PatientRP
+Instance: Patient-RevisePerson-Example
 InstanceOf: BCPatient
 Description: "Patient example for a RevisePatient operation"
 // Patient business date
@@ -36,7 +36,7 @@ Description: "Patient example for a RevisePatient operation"
 * birthDate = 1940-06-06
 * deceasedBoolean = false
 
-Instance: PatientRP-NewPatient
+Instance: Patient-AddPatient-Example
 InstanceOf: BCPatient
 Description: "The Patient is completely new to the Client Registry, no identifiers."
 * address.type = #physical
@@ -58,7 +58,7 @@ Description: "The Patient is completely new to the Client Registry, no identifie
 * birthDate = 1940-06-06
 * deceasedBoolean = false
 
-Instance: PatientRP-Newborn
+Instance: Patient-AddPatient-Newborn-Example
 InstanceOf: BCPatient
 Description: "The Patient is completely new to the Client Registry, no identifiers."
 * identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
@@ -79,7 +79,7 @@ Description: "The Patient is completely new to the Client Registry, no identifie
 * birthDate = 2021-11-02
 * deceasedBoolean = false
 
-Instance: PatientMP
+Instance: Patient-MergePatient-Example
 InstanceOf: BCPatient
 Description: "Example of a merge patient Patient"
 * active = true
@@ -131,14 +131,14 @@ Description: "Example of a merge patient Patient"
 * link[3].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"
 * link[3].extension.valueCode = #obsolete
 
-Instance: Patient0Response
+Instance: Patient-0-Example
 InstanceOf: BCPatient
 Description: "Example of Patient for query response Bundle with 4 different kinds of identifiers: SRI-PHN, SRI, SSRI and alternative."
 // Patient business date
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension.valuePeriod.start = "2019-02-07T13:29:17-08:00"
-* address[0] = BCPatientAddress0Example
-* address[1] = BCPatientAddress1Example
+* address[0] = Address-0-Example
+* address[1] = Address-1-Example
 * telecom.use = #home
 * telecom.system = #phone
 * telecom.value = "2505554848"
@@ -171,13 +171,13 @@ Description: "Example of Patient for query response Bundle with 4 different kind
 * birthDate.extension.valuePeriod.start = "2020-10-17T03:29:17-08:00"
 * deceasedBoolean = false
 
-Instance: Patient1Response
+Instance: Patient-1-Example
 InstanceOf: BCPatient
 Description: "Example of Patient for query response Bundle"
 * extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension[0].valuePeriod.start = "2019-02-07T13:29:17-08:00"
-* address[0] = BCPatientAddress0Example
-* address[1] = BCPatientAddress1Example
+* address[0] = Address-0-Example
+* address[1] = Address-1-Example
 * telecom.use = #home
 * telecom.system = #phone
 * telecom.value = "2505557841"
@@ -203,13 +203,13 @@ Description: "Example of Patient for query response Bundle"
 * deceasedBoolean.extension[2].valuePeriod.start = 2021-10-12
 * deceasedBoolean.extension[2].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-flag-business-period-extension"
 
-Instance: Patient2Response
+Instance: Patient-2-Example
 InstanceOf: BCPatient
 Description: "Example of Patient for query response Bundle"
 * extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension[0].valuePeriod.start = "2019-02-07T13:29:17-08:00"
-* address[0] = BCPatientAddress0Example
-* address[1] = BCPatientAddress1Example
+* address[0] = Address-0-Example
+* address[1] = Address-1-Example
 * telecom.use = #home
 * telecom.system = #phone
 * telecom.value = "2504283447"
@@ -230,7 +230,7 @@ Description: "Example of Patient for query response Bundle"
 * multipleBirthBoolean.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * multipleBirthBoolean.extension.valuePeriod.start = "2019-10-17T03:29:17-08:00"
 
-Instance: PatientDemographicsResponse
+Instance: Patient-GetDemographics-Example
 InstanceOf: BCPatient
 Description: "Example of Patient for $GetDemographics operation response"
 * address.type = #physical
@@ -265,14 +265,14 @@ Description: "Example of Patient for $GetDemographics operation response"
 * birthDate.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * birthDate.extension.valuePeriod.start = "2018-03-17T03:29:17-08:00"
 
-Instance: PatientRPMPResponse
+Instance: Patient-AddReviseOrMergePatient-Response-Example
 InstanceOf: BCPatient
 Description: "Example of Merge or Revise response Bundle with 4 different kinds of identifiers: SRI-PHN, SRI, SSRI and alternative."
 // Patient business date
 * extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension[0].valuePeriod.start = "2019-02-07T13:29:17-08:00"
-* address[0] = BCPatientAddress0Example
-* address[1] = BCPatientAddress1Example
+* address[0] = Address-0-Example
+* address[1] = Address-1-Example
 * telecom.use = #home
 * telecom.system = #phone
 * telecom.value = "2505554848"
@@ -306,13 +306,13 @@ Description: "Example of Merge or Revise response Bundle with 4 different kinds 
 * deceasedBoolean = false
 
 
-Instance: PatientBabyBoy
+Instance: Patient-BabyBoy-Example
 InstanceOf: BCPatient
 Description: "Example of Patient newborn for query response Bundle"
 * extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension[0].valuePeriod.start = "2019-11-12T13:29:17-08:00"
-* address[0] = BCPatientAddress0Example
-* address[1] = BCPatientAddress1Example
+* address[0] = Address-0-Example
+* address[1] = Address-1-Example
 * telecom.use = #home
 * telecom.system = #phone
 * telecom.value = "2504283447"
@@ -331,13 +331,13 @@ Description: "Example of Patient newborn for query response Bundle"
 * birthDate.extension.valuePeriod.start = "2019-11-12T03:29:17-08:00"
 
 
-Instance: PatientBabyGirl
+Instance: Patient-BabyGirl-Example
 InstanceOf: BCPatient
 Description: "Example of Patient newborn for query response Bundle"
 * extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension[0].valuePeriod.start = "2019-11-12T13:21:13-08:00"
-* address[0] = BCPatientAddress0Example
-* address[1] = BCPatientAddress1Example
+* address[0] = Address-0-Example
+* address[1] = Address-1-Example
 * telecom.use = #home
 * telecom.system = #phone
 * telecom.value = "2504283447"
@@ -356,13 +356,13 @@ Description: "Example of Patient newborn for query response Bundle"
 * birthDate.extension.valuePeriod.start = "2019-11-12T03:29:17-08:00"
 
 
-Instance: PatientMother
+Instance: Patient-Mother-Example
 InstanceOf: BCPatient
 Description: "Example of Patient for query response Bundle"
 * extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension[0].valuePeriod.start = "2019-02-07T13:29:17-08:00"
-* address[0] = BCPatientAddress0Example
-* address[1] = BCPatientAddress1Example
+* address[0] = Address-0-Example
+* address[1] = Address-1-Example
 * telecom.use = #home
 * telecom.system = #phone
 * telecom.value = "2504283447"

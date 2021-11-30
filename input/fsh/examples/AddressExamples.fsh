@@ -1,4 +1,4 @@
-Instance: BCPatientAddress0Example
+Instance: Address-0-Example
 InstanceOf: Address
 Description: "Address example physical, validation status valid"
 Usage: #inline
@@ -12,7 +12,7 @@ Usage: #inline
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"
 * extension.valueCode = #valid
 
-Instance: BCPatientAddress1Example
+Instance: Address-1-Example
 InstanceOf: Address
 Description: "Address example postal, validation status invalid"
 Usage: #inline

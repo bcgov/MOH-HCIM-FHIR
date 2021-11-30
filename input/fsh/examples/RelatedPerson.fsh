@@ -1,4 +1,4 @@
-Instance: MotherRelated
+Instance: RelatedPerson-Mother-Example
 InstanceOf: RelatedPerson
 Description: "Example of related person's PHN as Identifier"
 
@@ -13,13 +13,13 @@ Description: "Example of related person's PHN as Identifier"
 // the relationship
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#MTH
 
-Instance: MotherRelatedFCBabyGirl
+Instance: RelatedPerson-MotherOfBabyGirl-Example
 InstanceOf: RelatedPerson
 Description: "Example of related person who is the mother"
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#NCHILD
 * patient.reference = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"
 
-Instance: MotherRelatedFCBabyBoy
+Instance: RelatedPerson-MotherOfBabyBoy-Example
 InstanceOf: RelatedPerson
 Description: "Example of related person who is the mother"
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#NCHILD

@@ -1,4 +1,4 @@
-Instance: SearchOperationOutcome
+Instance: OperationOutcome-Search-Example
 InstanceOf: BCOperationOutcome
 Description: "Example OperationOutcome for a Client Registry Search"
 * issue.severity = #warning
@@ -12,9 +12,9 @@ Description: "Example OperationOutcome for a Client Registry Search"
 //* issue.details.coding.system = "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes"
 * issue[1].details.coding.code = #BCHCIM.GD.1.0017
 
-Instance: RPMPOperationOutcome
+Instance: OperationOutcome-Example
 InstanceOf: BCOperationOutcome
-Description: "Example OperationOutcome for a Client Registry Revise or Merge"
+Description: "Example OperationOutcome for a Client Registry Add, Revise or Merge."
 * issue.severity = #warning
 * issue.code = #business-rule
 * issue.details.text = "Warning: The Revise Patient name has been modified to filter out invalid characters."

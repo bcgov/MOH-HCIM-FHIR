@@ -17,6 +17,8 @@ InstanceOf: CapabilityStatement
 <ul>
 <li>$FindCandidates</li>
 <li>$GetDemographics</li>
+<li>$AddPatient</li>
+<li>$AddPatient.Async</li>
 <li>$RevisePatient</li>
 <li>$RevisePatient.Async</li>
 <li>$MergePatient</li>
@@ -24,7 +26,7 @@ InstanceOf: CapabilityStatement
 </ul>
 
 <p>
-RESTful interactions, beyond the Operations listed above, are not supported.
+RESTful interactions of any type, beyond the Operations listed above, are not supported.
 </p>
 
 <h3>General Rules IN</h3>
@@ -32,6 +34,9 @@ RESTful interactions, beyond the Operations listed above, are not supported.
 There are several rules that apply to all interactions with the Client Registry:
 </p>
 <ul>
+<li>
+When adding a Patient (a new PHN) Client Registry users SHALL use AddPatient the FHIR Operation.  This is different from V3, where the user can use Revise to create or update a record.
+</li>
 <li>
 The Client Registry FHIR implementation only supports JSON format and the clients SHALL use JSON for all interactions.
 </li>
@@ -47,6 +52,7 @@ The Paramaters profile for Revise and Merge SHALL be BCBusinessDataParameters.
 <li>
 Only the 'resource type' FHIR Operation is supported by the Client Registry, e.g. /Patient/$[Operation Name]; not system /$[Operation Name] and not resource instance /Patient/[id]/$[Operation Name].  Requesting users SHALL use only the resource type FHIR Operation
 </li>
+All of the Profiles include elements that are marked as Must Support. For the purposes of this guide, Must Support is intended to represent those fields that will be exchanged between client applications and the Client Registry server. Client applications who are receving information SHALL be able to receive all fields marked as Must Support without raising an exception. When sending information to the Client Registry server, client applications SHOULD be able to send any fields marked as Must Support.
 <li>
 The FHIR asynchornous pattern is not followed by this FHIR implementation.  The existing pattern the Client Registry uses today will be mimicked.  I.e.                                   1. User sends request                                                                        1. Client Registry responds with HTTP 202 Accepted                                           1. Client Registry sends request to user's end point                                         1. User system responds with 202 Accepted
 
@@ -76,7 +82,7 @@ The Client Registry users SHALL monitor the HTTP reponse codes returned in a res
 <h3>Search</h3>
 <h4>Find Candidates</h4>
 <p>
-The Find Candidates search SHALL use the following name-value paramters pairs, mandatory or optional according to the cardinality rules below.  This search may return zero or more Patients using the BCPatient profile.  Wildcards are not permitted.
+The FindCandidates FHIR Operation search SHALL use the following name-value paramters pairs, mandatory or optional according to the cardinality rules below.  This search may return zero or more Patients using the BCPatient profile.  Wildcards are not permitted.
 </p>
 
 
@@ -273,7 +279,7 @@ The Find Candidates search SHALL use the following name-value paramters pairs, m
 
 <h4>Get Demographics</h4>
 <p>
-The Get Demographics FHIR Operation SHALL use the following name-value paramters pairs, mandatory or optional according to the cardinality rules below.  This search may return zero or one Patient using the BCPatient profile.
+The GetDemographics FHIR Operation SHALL use the following name-value paramters pairs, mandatory or optional according to the cardinality rules below.  This search may return zero or one Patient using the BCPatient profile.
 </p>
 <table class=\"grid\">
 	<tr>
@@ -367,9 +373,9 @@ The Get Demographics FHIR Operation SHALL use the following name-value paramters
 		</td>
 	</tr>
 </table>
-<h3>Revise Patient</h3>
+<h3>Add and Revise Patient</h3>
 <p>
-The Revise Patient FHIR Operation SHALL use the following name-value paramters pairs, mandatory or optional according to the cardinality rules below.
+The AddPatient and RevisePatient FHIR Operations SHALL use the following name-value paramters pairs, mandatory or optional according to the cardinality rules below.
 </p>
 <table class=\"grid\">
 	<tr>
@@ -528,20 +534,26 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 * rest[0].mode = #server
 * rest[0].resource[0].type = #Parameters
 * rest[0].resource[0].operation[0].name = "FindCandidates"
-* rest[0].resource[0].operation[0].definition = Canonical(FindCandidatesQuery)
+* rest[0].resource[0].operation[0].definition = Canonical(FindCandidates)
 * rest[0].resource[0].operation[1].name = "GetDemographics"
-* rest[0].resource[0].operation[1].definition = Canonical(GetDemographicsQuery)
+* rest[0].resource[0].operation[1].definition = Canonical(GetDemographics)
 * rest[0].resource[0].operation[2].name = "RevisePatient"
 * rest[0].resource[0].operation[2].definition = Canonical(RevisePatient)
-* rest[0].resource[0].operation[3].name = "MergePatient"
-* rest[0].resource[0].operation[3].definition = Canonical(MergePatient)
+* rest[0].resource[0].operation[3].name = "AddPatient"
+* rest[0].resource[0].operation[3].definition = Canonical(AddPatient)
+* rest[0].resource[0].operation[4].name = "MergePatient"
+* rest[0].resource[0].operation[4].definition = Canonical(MergePatient)
 
 // definition of async is the same as the synchronous
-* rest[0].resource[0].operation[4].name = "MergePatient.Async"
-* rest[0].resource[0].operation[4].definition = Canonical(MergePatient)
-* rest[0].resource[0].operation[4].documentation = "
-Although this is an independent Operation the definition is the same as the [RevisePatient](OperationDefinition-bc-patient-revise.html)"
-* rest[0].resource[0].operation[5].name = "RevisePatient.Async"
-* rest[0].resource[0].operation[5].definition = Canonical(RevisePatient)
+* rest[0].resource[0].operation[5].name = "AddPatient.Async"
+* rest[0].resource[0].operation[5].definition = Canonical(AddPatient)
 * rest[0].resource[0].operation[5].documentation = "
+Although this is an independent Operation the definition is the same as the [AddPatient](OperationDefinition-bc-patient-add.html)"
+* rest[0].resource[0].operation[6].name = "RevisePatient.Async"
+* rest[0].resource[0].operation[6].definition = Canonical(RevisePatient)
+* rest[0].resource[0].operation[6].documentation = "
+Although this is an independent Operation the definition is the same as the [RevisePatient](OperationDefinition-bc-patient-revise.html)"
+* rest[0].resource[0].operation[7].name = "MergePatient.Async"
+* rest[0].resource[0].operation[7].definition = Canonical(MergePatient)
+* rest[0].resource[0].operation[7].documentation = "
 Although this is an independent Operation the definition is the same as the [MergePatient](OperationDefinition-bc-patient-merge.html)"

@@ -19,7 +19,7 @@ menu:
   Design: 
      Summary: design.html
      Search Patient: search.html
-     Revise And Merge Patient: reviseAndMerge.html
+     Add, Revise And Merge Patient: reviseAndMerge.html
      Patient Change Notificaitons: distributions.html
      Identifiers: identifiers.html
   V3 Transition: v3Transition.html
@@ -75,6 +75,7 @@ groups:
       description: Artifacts associated with resources that support Patient and Client Registry Operations
       resources:
          - StructureDefinition/bc-search-response-bundle
+         - StructureDefinition/bc-add-response-bundle 
          - StructureDefinition/bc-revise-response-bundle 
          - StructureDefinition/bc-merge-response-bundle 
          - StructureDefinition/bc-metadata-parameters
@@ -85,25 +86,28 @@ groups:
       resources:
          - OperationDefinition/bc-patient-find-candidates
          - OperationDefinition/bc-patient-get-demographics
+         - OperationDefinition/bc-patient-add
          - OperationDefinition/bc-patient-revise
          - OperationDefinition/bc-patient-merge
    RequestExamples:
       name: Request Examples
       description: A set of operation request examples
       resources:
-         - Parameters/FindCandidates
-         - Parameters/FindCandidates-UsingMomsPHN
-         - Parameters/GetDemographics
-         - Parameters/RevisePatient-UpdateExisting
-         - Parameters/RevisePatient-NewPatient
-         - Parameters/RevisePatient-Newborn
-         - Parameters/MergePatient-TwoNonSurvivors
+         - Parameters/Parameters-FindCandidates-Example
+         - Parameters/Parameters-FindCandidates-UsingMomsPHN-Example
+         - Parameters/Parameters-GetDemographics-Example
+         - Parameters/Parameters-RevisePatient-Example
+         - Parameters/Parameters-AddPatient-Example
+         - Parameters/Parameters-AddPatient-Newborn-Example
+         - Parameters/Parameters-MergePatient-TwoNonSurvivors-Example
    ResponseExamples:
       name: Response Examples
       description: A set of operation response examples
       resources:
-         - Bundle/FindCandidatesResponse
-         - Bundle/GetDemographicsResponse
-         - Bundle/RevisePatientResponse
-         - Bundle/MergePatientResponse
+         - Bundle/Bundle-FindCandidates-Response-Example
+         - Bundle/Bundle-FindCandidates-Response-MomsPHN-Example
+         - Bundle/Bundle-GetDemographics-Response-Example
+         - Bundle/Bundle-AddPatient-Response-Example
+         - Bundle/Bundle-RevisePatient-Response-Example
+         - Bundle/Bundle-MergePatient-Response-Example
 

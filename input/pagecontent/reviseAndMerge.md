@@ -1,10 +1,10 @@
 ><span style="color:red">Note</span><br>This specification is currently published as a Draft Standard on the ministry GitHub and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.
 
-### Revise Patient
-
-The Revise Patient interaction is used to add or update client information in the Client Registry.  If the demographics are updated on the POS application, a ‘Revise Patient’ message must be automatically generated to the Client Registry. 
+### Add Patient
 
 An add is defined as an event where at least the minimum Client Registry data elements are gathered for the first time, validated using trusted identification provided by the client and a new PHN and client record is created. 
+
+### Revise Patient
 
 An update is defined as an event where at least the minimum Client Registry data elements of an existing client with a PHN are verified using trusted identification provided by the client and updated. 
 
@@ -22,9 +22,9 @@ If the demographics are updated at the same time as the merge, the demographic u
 
 The record the POS is keeping must be in the Client Registry prior to the merge or the Merge Person message will fail. This record is known as the ‘survivor’ record.
 
-### FHIR Structure for Revise, Merge and Distributions
+### FHIR Structure for Add, Revise, Merge and Distributions
 
-The FHIR structure is the same for Merge, Revise and Distributions.  Responses (if required) are wrapped in collection Bundles and include OperationOutcome, Operation Parameters and Patient resources.
+The FHIR structure is the same for Add, Merge, Revise and Distributions.  Responses (if required) are wrapped in collection Bundles and include OperationOutcome, Operation Parameters and Patient resources.
 
 <span>
 	<img src="revise_merge_fhir.png" height="450"/>
