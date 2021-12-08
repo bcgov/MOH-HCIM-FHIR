@@ -1,6 +1,6 @@
-Instance: Parameters-GetDemographics-Example
+Instance: Parameters-GetDemographicsWithEligibility-Example
 InstanceOf: BCMetadataParameters
-Description: "Example of $GetDemographics operation"
+Description: "Example of $GetDemographics.withEligibility operation"
 * parameter[messageId].name = "messageId"
 * parameter[messageId].valueString = "98028b44-882a-4c72-8c92-b87d916147e1"
 
@@ -21,12 +21,10 @@ Description: "Example of $GetDemographics operation"
 * parameter[4].valueIdentifier.type.coding.code = #JHN
 * parameter[4].valueIdentifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 
-* parameter[5].name = "history"
-* parameter[5].valueBoolean = false
 
-Instance: Parameters-GetDemographics-Response-Example
+Instance: Parameters-GetDemographicsWithEligibility-Response-Example
 InstanceOf: BCMetadataParameters
-Description: "Example of $GetDemographics response Metadata parameters"
+Description: "Example of $GetDemographics.withEligibility response Metadata parameters"
 
 * parameter[messageId].name = "messageId"
 * parameter[messageId].valueString = "c087e71e-3e7e-4c22-a3ce-61523f600615"
@@ -41,15 +39,15 @@ Description: "Example of $GetDemographics response Metadata parameters"
 * parameter[sender].valueIdentifier.value = "MOH_CRS"
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
-Instance: Bundle-GetDemographics-Response-Example
+Instance: Bundle-GetDemographicsWithEligibility-Response-Example
 InstanceOf: BCSearchResponseBundle
-Description: "Example of $GetDemographics operation response Bundle"
+Description: "Example of $GetDemographics.withEligibility operation response Bundle"
 * type = #searchset
 * timestamp = "2011-09-07T12:18:23.000-07:00"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:b3a12f0c-a332-4ec9-94b9-d8539a02df48"
 
-* entry[parameters].resource = Parameters-GetDemographics-Response-Example
+* entry[parameters].resource = Parameters-GetDemographicsWithEligibility-Response-Example
 * entry[parameters].fullUrl = "urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33"
 
 * entry[operationOutcome].resource = OperationOutcome-Search-Example
@@ -58,12 +56,26 @@ Description: "Example of $GetDemographics operation response Bundle"
 * entry[2].resource = Patient-GetDemographics-Example
 * entry[2].fullUrl = "urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c"
 
-Instance: Parameters-GetDemographics-IN-Example
-InstanceOf: Parameters
-Description: "Example of $GetDemographics operation, IN parameters"
-* parameter[0].name = "identifier"
-* parameter[0].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* parameter[0].valueIdentifier.value = "9834902274"
-* parameter[0].valueIdentifier.type.coding.code = #JHN
-* parameter[0].valueIdentifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* entry[3].resource = Coverage-Active-Example
+* entry[3].fullUrl = "urn:uuid:0e65065f-76a8-4578-a286-eb9c1ac3dbbc"
+
+Instance: Coverage-Active-Example
+InstanceOf: Coverage
+Description: "Example of Get Eligibility response, the patient is eligible."
+* status = #active
+* type.coding.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+* type.coding.code = #MANDPOL
+* period.start = "2021-01-17"
+* beneficiary.reference = "urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c"
+* payor.display = "Health Insurance BC"
+
+Instance: Coverage-InActive-Example
+InstanceOf: Coverage
+Description: "Example of Get Eligibility response, the patient is not eligible."
+* status = #cancelled
+* type.coding.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+* type.coding.code = #MANDPOL
+* period.start = "2021-01-17"
+* beneficiary.reference = "urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c"
+* payor.display = "Health Insurance BC"
 

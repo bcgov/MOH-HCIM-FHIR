@@ -1,6 +1,6 @@
 Instance: AddPatient
 InstanceOf: OperationDefinition
-Description: "This operation is used to add patient to the Client Registry."
+Description: "This operation is used for newborns or to 'force create' a patient."
 Usage: #definition
 * id = "bc-patient-add"
 * url = "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-add"

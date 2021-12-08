@@ -29,6 +29,10 @@ Using Get Demographics is referred to as performing a “deterministic search”
 
 The Get Demographics is a synchronous request-response transaction
 
+#### Get Demographics Search with Eligibility
+
+There is a special operation when the user is requesting a GetDemographics search and also requesting that the Client Registry query an external site for the British Columbia insurance status of a Patient.  This a different FHIR Operation than GetDemographics.
+
 ### FHIR Structure for Searches
 
 Below is a figure that shows the FHIR structure for the two searches.  The request is a Parameter resource and the response is a searchset Bundle with 0 or more Patients and one OperationOutcome.  The OperationOutcome is where you'll find warnings and errors regarding the search.
@@ -40,7 +44,7 @@ Below is a figure that shows the FHIR structure for the two searches.  The reque
 
 #### Get Demographics Parameters
 
-The IN and OUT search parameters and resources for Get Demographics can be found here [GetDemographics search](OperationDefinition-bc-patient-get-demographics.html).
+The IN and OUT search parameters and resources for Get Demographics can be found here [GetDemographics search](OperationDefinition-bc-patient-get-demographics.html).  For the withEligibility search see [GetDemograhics.withEligibility](OperationDefinition-bc-patient-get-demographics-withEligibility.html).
 
 #### Find Candidates Parameters
 

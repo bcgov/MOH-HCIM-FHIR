@@ -1,5 +1,5 @@
 Instance: OperationOutcome-Search-Example
-InstanceOf: BCOperationOutcome
+InstanceOf: OperationOutcome
 Description: "Example OperationOutcome for a Client Registry Search"
 * issue.severity = #warning
 * issue.code = #business-rule
@@ -13,7 +13,7 @@ Description: "Example OperationOutcome for a Client Registry Search"
 * issue[1].details.coding.code = #BCHCIM.GD.1.0017
 
 Instance: OperationOutcome-Example
-InstanceOf: BCOperationOutcome
+InstanceOf: OperationOutcome
 Description: "Example OperationOutcome for a Client Registry Add, Revise or Merge."
 * issue.severity = #warning
 * issue.code = #business-rule

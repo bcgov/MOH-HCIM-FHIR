@@ -6,10 +6,24 @@ InstanceOf: CapabilityStatement
 <p>This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a server.</p>
 
 <ul>
-<li>Find Candidates - used when a user would like to find a Patient, but without an identifier, typically with name, address or edge cases like mother's PHN.</li>
-<li>Get Demographics - used when a user would like to find a Patient and has an identifier that Client Registry recognizes.</li>
-<li>Revise Patient - used when a user is communicating a change or request for a new PHN to the Client Registry.</li>
-<li>Merge Patient - used when a user is communicating that an individual has multiple Patient records and which record should survive and which record(s) should be marked as non-surviving.</li>
+<li>
+Find Candidates - used when a user would like to find a Patient, but without an identifier, typically with name, address or edge cases like mother's PHN.
+</li>
+<li>
+Get Demographics - used when a user would like to find a Patient and has an identifier that Client Registry recognizes.
+</li>
+<li>
+Get Demographics with Eligibility- used when a user would like to find a Patient and has an identifier that Client Registry recognizes.  The Client Registry, in addition to returning a Patient, also returns the Health Insurance of BC eligibility status.  The Client Registry makes a webservice call to Health Insurance of BC on behalf of the requestor to determine the eligibility status.
+</li>
+<li>
+Revise Patient - used when a user is communicating a change or request for a new PHN to the Client Registry.
+</li>
+<li>
+Merge Patient - used when a user is communicating that an individual has multiple Patient records and which record should survive and which record(s) should be marked as non-surviving.
+</li>
+<li>
+Add Paitent - used for newborns and 'force create' interactions
+</li>
 </ul>
 
 <p>There are several versions of some of the above services.  The Client Registry has created FHIR Operations for each of the above and their variations.</p>
@@ -17,6 +31,7 @@ InstanceOf: CapabilityStatement
 <ul>
 <li>$FindCandidates</li>
 <li>$GetDemographics</li>
+<li>$GetDemographics.withEligibility</li>
 <li>$AddPatient</li>
 <li>$AddPatient.Async</li>
 <li>$RevisePatient</li>
@@ -35,10 +50,10 @@ There are several rules that apply to all interactions with the Client Registry:
 </p>
 <ul>
 <li>
-When adding a Patient (a new PHN) Client Registry users SHALL use AddPatient the FHIR Operation.  This is different from V3, where the user can use Revise to create or update a record.
+When adding a newborn or using 'force create' Client Registry users SHALL use AddPatient the FHIR Operation.  This is different from V3, where the user can use Revise to create or update a record in there scenarios.
 </li>
 <li>
-The Client Registry FHIR implementation only supports JSON format and the clients SHALL use JSON for all interactions.
+The Client Registry FHIR implementation only supports JSON format and the clients SHALL use JSON for all interactions.  THe MIME-type of application/fhir+json is the only one supported by the Client Registry.
 </li>
 <li>
 All interactions with Patient resources SHALL use the BCPatient profile. E.g. /Patient/$RevisePatient
@@ -47,10 +62,10 @@ All interactions with Patient resources SHALL use the BCPatient profile. E.g. /P
 The Parameters profile for searches SHALL be BCMetadataParameters.
 </li>  
 <li>
-The Parameters profile for Revise and Merge SHALL be BCBusinessDataParameters.
+The Parameters profile for Add, Revise and Merge SHALL be BCBusinessDataParameters.
 </li>
 <li>
-Only the 'resource type' FHIR Operation is supported by the Client Registry, e.g. /Patient/$[Operation Name]; not system /$[Operation Name] and not resource instance /Patient/[id]/$[Operation Name].  Requesting users SHALL use only the resource type FHIR Operation
+Only the 'resource type' FHIR Operation is supported by the Client Registry, e.g. /Patient/$[Operation Name]; not system /$[Operation Name] and not resource instance /Patient/[id]/$[Operation Name].  Requesting users SHALL use only the resource type of FHIR Operation.
 </li>
 All of the Profiles include elements that are marked as Must Support. For the purposes of this guide, Must Support is intended to represent those fields that will be exchanged between client applications and the Client Registry server. Client applications who are receiving information SHALL be able to receive all fields marked as Must Support without raising an exception. When sending information to the Client Registry server, client applications SHOULD be able to send any fields marked as Must Support.
 <li>
@@ -62,7 +77,7 @@ Users SHALL follow the above asynchronous pattern when invoking an asynchronous 
 
 <h3>General Rules OUT</h3>
 <p>
-Each Operation returns a Bundle.  The Bundles may be of type searchset or collection.  The two searches, GetDemographics and FindCandidates both return searchset bundles.  The Revise and Merge return collection Bundle resources.  Each Bundle will have a Parameters entry (profile BCMetadataParameters) that has the response metadata, including echoing back the request unique id, and zero or more Patient entries that either meet the search criteria or are the result of a Revise or Merge Operation.  In addition each Bundle has an OperationOutcome resource with warnings and errors relevant to the FHIR Operation request.  And finally, the searchset Bundle will also have the search criteria echoed back in an additional Parameters resource.
+Each Operation returns a Bundle.  The Bundles may be of type searchset or collection.  The two searches, GetDemographics and FindCandidates both return searchset bundles.  The Add, Revise and Merge return collection Bundle resources.  Each Bundle will have a Parameters entry (profile BCMetadataParameters) that has the response metadata, including echoing back the request unique id, and zero or more Patient entries that either meet the search criteria or are the result of a Revise or Merge Operation.  In addition each Bundle has an OperationOutcome resource with warnings and errors relevant to the FHIR Operation request.  And finally, the searchset Bundle will also have the search criteria echoed back in an additional Parameters resource.
 </p>
 <p>
 In summary the response Bundles for every Operation will be structured as follows:
@@ -372,7 +387,135 @@ The GetDemographics FHIR Operation SHALL use the following name-value parameters
 			</div>
 		</td>
 	</tr>
+	<tr>
+		<td>IN</td>
+		<td>enterer</td>
+		<td>0..1</td>
+		<td>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
+		</td>
+		<td></td>
+		<td>
+			<div>
+				<p>UserId of sender</p>
+			</div>
+		</td>
+	</tr>
 </table>
+
+
+<h4>Get Demographics with Eligibility</h4>
+<p>
+The GetDemographics.withEligibility FHIR Operation SHALL use the following name-value parameters pairs, mandatory or optional according to the cardinality rules below.  This search may return zero or one Patient using the BCPatient profile.
+</p>
+<table class=\"grid\">
+	<tr>
+		<td>
+			<b>Use</b>
+		</td>
+		<td>
+			<b>Name</b>
+		</td>
+		<td>
+			<b>Cardinality</b>
+		</td>
+		<td>
+			<b>Type</b>
+		</td>
+		<td>
+			<b>Binding</b>
+		</td>
+		<td>
+			<b>Documentation</b>
+		</td>
+	</tr>
+	<tr>
+		<td>IN</td>
+		<td>messageId</td>
+		<td>1..1</td>
+		<td>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
+		</td>
+		<td></td>
+		<td>
+			<div>
+				<p>Unique message ID</p>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>IN</td>
+		<td>messageDateTime</td>
+		<td>1..1</td>
+		<td>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a>
+		</td>
+		<td></td>
+		<td>
+			<div>
+				<p>Message date and time</p>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>IN</td>
+		<td>sender</td>
+		<td>1..1</td>
+		<td>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
+		</td>
+		<td></td>
+		<td>
+			<div>
+				<p>Source of request</p>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>IN</td>
+		<td>enterer</td>
+		<td>0..1</td>
+		<td>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
+		</td>
+		<td></td>
+		<td>
+			<div>
+				<p>UserId of sender</p>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>IN</td>
+		<td>PHN</td>
+		<td>1..1</td>
+		<td>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
+		</td>
+		<td></td>
+		<td>
+			<div>
+				<p>Patient PHN</p>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>IN</td>
+		<td>eligibilityRequest</td>
+		<td>1..1</td>
+		<td>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#CoverageEligibilityRequest\">CoverageEligibilityRequest</a>
+		</td>
+		<td></td>
+		<td>
+			<div>
+				<p>An eligibility request</p>
+			</div>
+		</td>
+	</tr>
+</table>
+
+
 <h3>Add and Revise Patient</h3>
 <p>
 The AddPatient and RevisePatient FHIR Operations SHALL use the following name-value parameters pairs, mandatory or optional according to the cardinality rules below.
@@ -519,13 +662,7 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 * status = #draft
 * date = "2021-11-18"
 * publisher = "BC Ministry of Health"
-* description = "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a server.
-
-* Find Candidates - used when a user would like to find a Patient, but without an identifier, typically with name, address or edge cases like mother's PHN.
-* Get Demographics - used when a user would like to find a Patient and has an identifier that Client Registry recognizes
-* Revise Patient - used when a user is communicating a change to the Client Registry 
-* Merge Patient - used when a user is communicating that an individual has multiple Patient records and which record should survive and which record(s) should be marked as non-surviving
-"
+* description = "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a server."
 * kind = #capability
 * software.name = "BC HCIM FHIR Implementation"
 * fhirVersion = #4.0.1
@@ -537,23 +674,25 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 * rest[0].resource[0].operation[0].definition = Canonical(FindCandidates)
 * rest[0].resource[0].operation[1].name = "GetDemographics"
 * rest[0].resource[0].operation[1].definition = Canonical(GetDemographics)
-* rest[0].resource[0].operation[2].name = "RevisePatient"
-* rest[0].resource[0].operation[2].definition = Canonical(RevisePatient)
-* rest[0].resource[0].operation[3].name = "AddPatient"
-* rest[0].resource[0].operation[3].definition = Canonical(AddPatient)
-* rest[0].resource[0].operation[4].name = "MergePatient"
-* rest[0].resource[0].operation[4].definition = Canonical(MergePatient)
+* rest[0].resource[0].operation[2].name = "GetDemographics.withEligibility"
+* rest[0].resource[0].operation[2].definition = Canonical(GetDemographics.withEligibility)
+* rest[0].resource[0].operation[3].name = "RevisePatient"
+* rest[0].resource[0].operation[3].definition = Canonical(RevisePatient)
+* rest[0].resource[0].operation[4].name = "AddPatient"
+* rest[0].resource[0].operation[4].definition = Canonical(AddPatient)
+* rest[0].resource[0].operation[5].name = "MergePatient"
+* rest[0].resource[0].operation[5].definition = Canonical(MergePatient)
 
 // definition of async is the same as the synchronous
-* rest[0].resource[0].operation[5].name = "AddPatient.Async"
-* rest[0].resource[0].operation[5].definition = Canonical(AddPatient)
-* rest[0].resource[0].operation[5].documentation = "
-Although this is an independent Operation the definition is the same as the [AddPatient](OperationDefinition-bc-patient-add.html)"
-* rest[0].resource[0].operation[6].name = "RevisePatient.Async"
-* rest[0].resource[0].operation[6].definition = Canonical(RevisePatient)
+* rest[0].resource[0].operation[6].name = "AddPatient.Async"
+* rest[0].resource[0].operation[6].definition = Canonical(AddPatient)
 * rest[0].resource[0].operation[6].documentation = "
-Although this is an independent Operation the definition is the same as the [RevisePatient](OperationDefinition-bc-patient-revise.html)"
-* rest[0].resource[0].operation[7].name = "MergePatient.Async"
-* rest[0].resource[0].operation[7].definition = Canonical(MergePatient)
+Although this is an independent Operation the definition is the same as the [AddPatient](OperationDefinition-bc-patient-add.html)"
+* rest[0].resource[0].operation[7].name = "RevisePatient.Async"
+* rest[0].resource[0].operation[7].definition = Canonical(RevisePatient)
 * rest[0].resource[0].operation[7].documentation = "
+Although this is an independent Operation the definition is the same as the [RevisePatient](OperationDefinition-bc-patient-revise.html)"
+* rest[0].resource[0].operation[8].name = "MergePatient.Async"
+* rest[0].resource[0].operation[8].definition = Canonical(MergePatient)
+* rest[0].resource[0].operation[8].documentation = "
 Although this is an independent Operation the definition is the same as the [MergePatient](OperationDefinition-bc-patient-merge.html)"

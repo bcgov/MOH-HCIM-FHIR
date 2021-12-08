@@ -17,7 +17,7 @@ Description: "Example of $RevisePatient operation that updates an existing Patie
 * parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
 
 * parameter[patient].name = "patient"
-* parameter[patient].resource = Patient-RevisePerson-Example
+* parameter[patient].resource = Patient-RevisePatient-Example
 
 Instance: Parameters-RevisePatient-Response-Example
 InstanceOf: BCMetadataParameters

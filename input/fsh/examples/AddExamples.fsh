@@ -1,6 +1,6 @@
 Instance: Parameters-AddPatient-Example
 InstanceOf: BCPatientBusinessParameters
-Description: "Example of $RevisePatient operation where the Patient is new to the Client Registry."
+Description: "Example of $AddPatient operation where the Patient is new to the Client Registry."
 
 * parameter[messageId].name = "messageId"
 * parameter[messageId].valueString = "98028b44-882a-4c72-8c92-b87d916147e1"

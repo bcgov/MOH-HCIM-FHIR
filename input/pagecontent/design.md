@@ -22,7 +22,6 @@ There are a number of assumptions that were made at the start of design:
 - Users can use a combination of V3 and FHIR to meet their needs
 - The Client Registry FHIR design will become a Provincial standard
 - Asynchronous interactions will follow the same pattern as V3 (not the FHIR asynchronous pattern)
-- Get Eligibility is not supported by FHIR (will still be supported by V3)
 
 ### Design Outcomes - Overview
 The main outcomes from the design process were as follows:
@@ -88,6 +87,7 @@ Operations |
 :--- |
 https://..../$FindCandidates |
 https://..../$GetDemographics |
+https://..../$GetDemographics.withEligibility |
 https://..../$RevisePatient |
 https://..../$RevisePatient.Async |
 https://..../$AddPatient |
@@ -119,7 +119,7 @@ This guide touches on some of the business and conformance rules regarding use o
 
 #### Operational Parameter Resource
 
-Each interaction is a FHIR Operation and as such has a set of possbile parameters.  The table below outlines the parameters and whether they are IN, OUT or could apply to both requests and responses.  
+Each interaction is a FHIR Operation and as such has a set of possbile parameters.  The table below outlines the parameters and whether they are IN, OUT or could apply to both requests and responses.
 
 The table is only showing the standard interaction parameters, each Operation may have more parameters such as Patient, OperationOutcome, etc.  More detailed information regarding each Operation can be found in the [Operation definitions](artifacts.html#operation-definitions).
 
@@ -138,8 +138,9 @@ Search Operations | Description
 :--- |
 https://…./$FindCandidates | Searching for Patients that match the search criteria
 https://…./$GetDemographics | Searching for a single Patient
+https://…./$GetDemographics.withEligibility | Searching for a single Patient and asking the Client Registry to also return the British Columnbia medical insurance eligibility for this Patient
 
-Find Candidates may return zero or more candidates, while Get Demographics is designed to return zero Patients or a single matching Patient.  These searches are expected to provide the required information to confirm a person's identify.
+Find Candidates may return zero or more candidates, while Get Demographics is designed to return zero or a single matching Patient.  These searches are expected to provide the required information to confirm a person's identify.
 
 [Search page](search.html "Find Candidates and Get Demographics")
 
@@ -152,8 +153,8 @@ Add, Revise and Merge Operations | Description
 :--- | :---
 https://..../$RevisePatient | Updating a Patient
 https://..../$RevisePatient.Async | Updating a Patient asynchronously
-https://..../$AddPatient | Creating a Patient
-https://..../$AddPatient.Async | Creating a Patient asynchronously
+https://..../$AddPatient | For newborns or to 'force create' a Patient
+https://..../$AddPatient.Async | The asynchronous version of AddPatient
 https://..../$MergePatient | Resolving duplicate Patients records (same individual)
 https://..../$MergePatient.Async | Resolving duplicate Patients records (same individual) asynchronously
 
@@ -162,7 +163,7 @@ These business transactions will allow the user to:
 - generate a PHN for a new client; or
 - resolve duplicate Patients.
 
-[Revise and Merge page](reviseAndMerge.html)
+[Add, Revise and Merge page](reviseAndMerge.html)
 
 ##### Asynchronous Operations
 The asynchronous versions of Add, Revise and Merge Operations share the same request and response profile as the synchronous version.
@@ -172,10 +173,6 @@ The FHIR asynchornous pattern is not followed by this FHIR implementation.  The 
 1. Client Registry responds with HTTP 202 Accepted
 1. Client Registry sends request to user's end point
 1. User system responds with 202 Accepted
-
-### Get Eligibility is Not Supported by FHIR
-
-Get Eligibility will not be supported by the Client Registry FHIR interactions.  If a FHIR-only user needs to know the claim eligibility status of a Patient they need to retrieve the Patient (the PHN) with a FHIR Get Demographics message and then use the PHN to submit a Get Eligibility message to the eligibility service.
 
 ### Error Handling
 

@@ -4,6 +4,6 @@
 
 This is is an interaction for which the Client Registry acts as the requester (the client) and the user system acts as the FHIR server; the Client Registry is sending Patient change notifications.  Notifications are sent when a patient record is created or changed and the user has been registered to receive notifications (in the form of a FHIR message) that contain new patient data.  More specifically users apply to receive a distribution based on an event such as PHN change or merge.  The full patient record is sent, and any missing data indicates that that particular data has been deleted in the Client Registry.
 
-See Add, Revise Patient; the request message is a Revise Patient interaction sent to a user's system.  The expected success response is a HTTP code 200 without a body.  The RevisePatient.Async and AddPatient.Async is not included in notifications.
+See Revise Patient; the request message is a Revise Patient interaction sent to a user's system.  The expected success response is a HTTP code 200 without a body.  The RevisePatient.Async and AddPatient.Async is not included in notifications.
 
 It is the user's responsibility to create a conformant FHIR endpoint for the Add and Revise Patient interactions.  As such, this guide, and other FHIR specifications should be understood by the user and utilized to create the FHIR endpoint.
