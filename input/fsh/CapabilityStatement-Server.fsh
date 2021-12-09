@@ -46,7 +46,7 @@ Add Patient - used for newborns and 'force create' interactions
 </ul>
 
 <p>
-RESTful interactions of any type, beyond the Operations listed above, are not supported.
+RESTful interactions of any type, beyond the Operations listed above, are not supported.  Client Registry user SHALL use only the above FHIR Operations.
 </p>
 
 <h3>General Rules IN</h3>
@@ -72,9 +72,11 @@ The Parameters profile for Add, Revise and Merge SHALL be BCBusinessDataParamete
 <li>
 Only the 'resource type' FHIR Operation is supported by the Client Registry, e.g. /Patient/$[Operation Name]; not system /$[Operation Name] and not resource instance /Patient/[id]/$[Operation Name].  Requesting users SHALL use only the resource type of FHIR Operation.
 </li>
-All of the Profiles include elements that are marked as Must Support. For the purposes of this guide, Must Support is intended to represent those fields that will be exchanged between client applications and the Client Registry server. Client applications who are receiving information SHALL be able to receive all fields marked as Must Support without raising an exception. When sending information to the Client Registry server, client applications SHOULD be able to send any fields marked as Must Support.
 <li>
-The FHIR asynchronous pattern is not followed by this FHIR implementation.  The existing pattern the Client Registry uses today will be mimicked.  I.e.                                   1. User sends request                                                                        1. Client Registry responds with HTTP 202 Accepted                                           1. Client Registry sends request to user's end point                                         1. User system responds with 202 Accepted
+All of the Profiles include elements that are marked as Must Support. For the purposes of this guide, Must Support is intended to represent those fields that will be exchanged between client applications and the Client Registry server. Client applications who are receiving information SHALL be able to receive all fields marked as Must Support without raising an exception. When sending information to the Client Registry server, client applications SHOULD be able to send any fields marked as Must Support.
+</li>
+<li>
+The FHIR asynchronous pattern is not followed by this FHIR implementation.  The existing pattern the Client Registry uses today will be mimicked.  I.e.                                   1. User sends request                                                                        2. Client Registry responds with HTTP 202 Accepted                                           3. Client Registry sends request to user's end point                                         4. User system responds with 202 Accepted
 
 Users SHALL follow the above asynchronous pattern when invoking an asynchronous version of a Operation.
 </li>

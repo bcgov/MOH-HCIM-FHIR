@@ -13,9 +13,7 @@ Specific search criteria include:
 - Postal code.
 - Mother's PHN
 
-There are two  of what can be used:
-- Mother's PHN can be used alone and will return the mother and children
-- Name is mandatory with at least one of date of birth, address number and street, postal code or phone number
+The Mother's PHN can be used alone and will return the mother and children.  Otherwise, name is mandatory with at least one of date of birth, address number and street, postal code or phone number
 
 The Find Candidates is a synchronous request-response transaction.
 
@@ -44,7 +42,7 @@ Below is a figure that shows the FHIR structure for the two searches.  The reque
 
 #### Get Demographics Parameters
 
-The IN and OUT search parameters and resources for Get Demographics can be found here [GetDemographics search](OperationDefinition-bc-patient-get-demographics.html).  For the withEligibility search see [GetDemograhics.withEligibility](OperationDefinition-bc-patient-get-demographics-withEligibility.html).
+The IN and OUT search parameters and resources for Get Demographics can be found here [GetDemographics search](OperationDefinition-bc-patient-get-demographics.html).  For the withEligibility search see [GetDemographics.withEligibility](OperationDefinition-bc-patient-get-demographics-withEligibility.html).
 
 #### Find Candidates Parameters
 

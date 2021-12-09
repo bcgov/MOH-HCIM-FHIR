@@ -30,25 +30,25 @@ The main outcomes from the design process were as follows:
 - The JSON text format will be used to receive and transmit FHIR resources
 - FHIR Operations will be used for Client Registry interactions
 - The Parameters resource used in the FHIR Operations may include Patient resources as well as name value pair parameters such as search parameters or unique request identifiers and creation times, etc
-- Some FHIR extensions are necessary as the Patient resource
-- There are several _proposed_ new interactions and features, these are described below
+- Some FHIR extensions are necessary, they are outlined below
+- There are several new interactions and features, these are described below
 
 >Do we align with CA Baseline?
 
-#### Proposed Design Items
+#### New Interactions and Features
 
-These items are new to the Client Registry and are proposed to be included in the FHIR specification.
+These items are new to the Client Registry interface and subject to change as they are reviewed and evolve.
 
 Proposal | Description | 
 :--- | :--- |
-Add Patient | Add Patient moves some of the features normally down through the Revise Patient interaction.  Specifically, 'force create' and newborn interactions are now down with Add Patient. |
-Partial Revise | A Partial Revise interaction allows users to logically delete, add or change part of the Patient resource.  This is useful when a stakeholder doesn't need (or persist) certain Patient attributes, but today, must query and then echoe back these attributesin a Revise Patient interaction.  Knowledge of [FHIRPath](http://hl7.org/fhirpath/N1/) is required to use this interaction.|
-Business dates | Attributes will have business dates that haven't been present in V3. | 
-Get Eligibility | This guide includes sections describing a Get Eligibility interaction that is similar to V3.  However the Get Eligibility FHIR specification should be provided by Health Insurance BC (HIBC).  This guide speculates on how those request and resonpose may be structured but the Client Registry FHIR team still needs to consult with HIBC.|
+Add Patient interaction | Some of the features normally done through the Revise Patient interaction are now part of Add Patient.  Specifically, 'force create' and newborn interactions are now done with Add Patient. |
+Partial Revise interaction | A Partial Revise interaction allows users to logically delete, add or change part of the Patient resource.  This is useful when a stakeholder doesn't need (or persist) certain Patient attributes, but today, must query and then echo back these attributes in a Revise Patient interaction.  Knowledge of [FHIRPath](http://hl7.org/fhirpath/N1/) is required to use this interaction.  The exact patch operations allowed by the Client Registry is to be determined.|
+Business dates feature | Attributes will have business dates that haven't been present in V3. | 
+Get Eligibility interaction | This guide includes sections describing a Get Eligibility interaction that is similar to V3.  However the Get Eligibility FHIR specification should be provided by Health Insurance BC (HIBC).  This guide speculates on how those requests and responses may be structured but the Client Registry _FHIR team still needs to consult with HIBC_.|
 
 #### Patient Resource
 
-All interactions will primarily use the Patient resource.  The Patient resource is ideal to represent clients as Patients has almost all of the necessary attributes and will require only a few extensions.  Patients also are recommended for enterprise master patient indices by the HL7 group and is in a Normative state, i.e. stable and ready for implementation.  See [FHIR standards evolution](http://hl7.org/fhir/versions.html#std-process) for a description of Normative. 
+All interactions will primarily use the Patient resource.  The Patient resource is ideal to represent clients as the Patient resource has almost all of the necessary attributes and will require only a few extensions.  Patients also are recommended for enterprise master patient indices by the HL7 group and is in a Normative state, i.e. stable and ready for implementation.  See [FHIR standards evolution](http://hl7.org/fhir/versions.html#std-process) for a description of Normative. 
 
 ##### Patient Extensions
 
@@ -56,7 +56,7 @@ There are several extensions that are applied to the Patient resource.  The list
 
 Extension Name | Description | 
 :--- | :--- |
-bc-business-period-extension | A Period extension for effective dates.
+bc-business-period-extension | A Period extension for the business effective dates.
 bc-validation-status-extension | A code that represents the address validation status.  This will be part of every Patient.address
 bc-death-date-extension | An extension that indicates the date of death.  The Patient resource has a boolean flag for death, this is the date.
 bc-death-date-flag-business-period-extension | A Period extension for effective dates on the death date flag.
@@ -104,6 +104,8 @@ https://..../$GetDemographics |
 https://..../$GetDemographics.withEligibility |
 https://..../$RevisePatient |
 https://..../$RevisePatient.Async |
+https://..../$PartialRevisePatient |
+https://..../$PartialRevisePatient.Async |
 https://..../$AddPatient |
 https://..../$AddPatient.Async |
 https://..../$MergePatient |
@@ -125,7 +127,7 @@ The diagram below shows how the Parameters resource is generalized to a Metadata
 
 ##### Responses
 
-Response resources are wrapped in Bundles that contain Patients and a OperationOutcome.  A search operation like Get Demographics or Find Candidates will be a searchset Bundle that echoes back the search parameters by including an extra Parameters resource in the Bundle.
+Response resources are wrapped in Bundles that contain Patients and an OperationOutcome.  A search operation like Get Demographics or Find Candidates will be a searchset Bundle that echoes back the search parameters by including an extra Parameters resource in the Bundle.
 
 ### Design Outcomes - Details
 
@@ -133,7 +135,7 @@ This guide touches on some of the business and conformance rules regarding use o
 
 #### Operational Parameter Resource
 
-Each interaction is a FHIR Operation and as such has a set of possbile parameters.  The table below outlines the parameters and whether they are IN, OUT or could apply to both requests and responses.
+Each interaction is a FHIR Operation and as such has a set of possible parameters.  The table below outlines the parameters and whether they are IN, OUT or could apply to both requests and responses.
 
 The table is only showing the standard interaction parameters, each Operation may have more parameters such as Patient, OperationOutcome, etc.  More detailed information regarding each Operation can be found in the [Operation definitions](artifacts.html#operation-definitions).
 
@@ -152,7 +154,7 @@ Search Operations | Description
 :--- |
 https://…./$FindCandidates | Searching for Patients that match the search criteria
 https://…./$GetDemographics | Searching for a single Patient
-https://…./$GetDemographics.withEligibility | Searching for a single Patient and asking the Client Registry to also return the British Columnbia medical insurance eligibility for this Patient
+https://…./$GetDemographics.withEligibility | Searching for a single Patient and asking the Client Registry to also return the British Columbia medical insurance eligibility for this Patient
 
 Find Candidates may return zero or more candidates, while Get Demographics is designed to return zero or a single matching Patient.  These searches are expected to provide the required information to confirm a person's identify.
 
@@ -167,6 +169,8 @@ Add, Revise and Merge Operations | Description
 :--- | :---
 https://..../$RevisePatient | Updating a Patient
 https://..../$RevisePatient.Async | Updating a Patient asynchronously
+https://..../$PartialRevisePatient | Updating a specific Patient attribute
+https://..../$PartialRevisePatient.Async | Updating a specific Patient attribute asynchronously
 https://..../$AddPatient | For newborns or to 'force create' a Patient
 https://..../$AddPatient.Async | The asynchronous version of AddPatient
 https://..../$MergePatient | Resolving duplicate Patients records (same individual)
@@ -182,7 +186,7 @@ These business transactions will allow the user to:
 ##### Asynchronous Operations
 The asynchronous versions of Add, Revise and Merge Operations share the same request and response profile as the synchronous version.
 
-The FHIR asynchornous pattern is not followed by this FHIR implementation.  The existing pattern the Client Registry uses today will be mimicked.  I.e.
+The FHIR asynchronous pattern is not followed by this FHIR implementation.  The existing pattern the Client Registry uses today will be mimicked.  I.e.
 1. User sends request
 1. Client Registry responds with HTTP 202 Accepted
 1. Client Registry sends request to user's end point
@@ -190,8 +194,8 @@ The FHIR asynchornous pattern is not followed by this FHIR implementation.  The 
 
 ### Error Handling
 
-This implemenation of FHIR will follow the standard FHIR error handling.  E.g. return an OperationOutcome in a Bundle with the appropirate HTTP status code.  User are expected to monitor the http status codes and the OperationOutcome resources for issues.
+This implementation of FHIR will follow the standard FHIR error handling.  E.g. return an OperationOutcome in a Bundle with the appropriate HTTP status code.  Users are expected to monitor the http status codes and the OperationOutcome resources for issues.
 
 ### Success Status Codes
 
-HTTP 200 (OK) will be returned in all cases where the request was sucessful.  This includes a search that was a valid Operation but did not match any Patients.  The only exceptions when a Patient is first created, the status code response is 201 (Created).
+HTTP 200 (OK) will be returned in all cases where the request was successful.  This includes a search that was a valid FHIR Operation but did not match any Patients.  The only exceptions when a Patient is first created, the status code response is 201 (Created).
