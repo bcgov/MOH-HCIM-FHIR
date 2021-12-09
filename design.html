@@ -225,17 +225,17 @@ Namely:</p>
   <li>The JSON text format will be used to receive and transmit FHIR resources</li>
   <li>FHIR Operations will be used for Client Registry interactions</li>
   <li>The Parameters resource used in the FHIR Operations may include Patient resources as well as name value pair parameters such as search parameters or unique request identifiers and creation times, etc</li>
-  <li>Some FHIR extensions are necessary as the Patient resource</li>
-  <li>There are several <em>proposed</em> new interactions and features, these are described below</li>
+  <li>Some FHIR extensions are necessary, they are outlined below</li>
+  <li>There are several new interactions and features, these are described below</li>
 </ul>
 
 <blockquote>
   <p>Do we align with CA Baseline?</p>
 </blockquote>
 
-<h4 id="proposed-design-items">Proposed Design Items</h4>
+<h4 id="new-interactions-and-features">New Interactions and Features</h4>
 
-<p>These items are new to the Client Registry and are proposed to be included in the FHIR specification.</p>
+<p>These items are new to the Client Registry interface and subject to change as they are reviewed and evolve.</p>
 
 <table>
   <thead>
@@ -246,27 +246,27 @@ Namely:</p>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">Add Patient</td>
-      <td style="text-align: left">Add Patient moves some of the features normally down through the Revise Patient interaction.  Specifically, ‘force create’ and newborn interactions are now down with Add Patient.</td>
+      <td style="text-align: left">Add Patient interaction</td>
+      <td style="text-align: left">Some of the features normally done through the Revise Patient interaction are now part of Add Patient.  Specifically, ‘force create’ and newborn interactions are now done with Add Patient.</td>
     </tr>
     <tr>
-      <td style="text-align: left">Partial Revise</td>
-      <td style="text-align: left">A Partial Revise interaction allows users to logically delete, add or change part of the Patient resource.  This is useful when a stakeholder doesn’t need (or persist) certain Patient attributes, but today, must query and then echoe back these attributesin a Revise Patient interaction.  Knowledge of <a href="http://hl7.org/fhirpath/N1/">FHIRPath</a> is required to use this interaction.</td>
+      <td style="text-align: left">Partial Revise interaction</td>
+      <td style="text-align: left">A Partial Revise interaction allows users to logically delete, add or change part of the Patient resource.  This is useful when a stakeholder doesn’t need (or persist) certain Patient attributes, but today, must query and then echo back these attributes in a Revise Patient interaction.  Knowledge of <a href="http://hl7.org/fhirpath/N1/">FHIRPath</a> is required to use this interaction.  The exact patch operations allowed by the Client Registry is to be determined.</td>
     </tr>
     <tr>
-      <td style="text-align: left">Business dates</td>
+      <td style="text-align: left">Business dates feature</td>
       <td style="text-align: left">Attributes will have business dates that haven’t been present in V3.</td>
     </tr>
     <tr>
-      <td style="text-align: left">Get Eligibility</td>
-      <td style="text-align: left">This guide includes sections describing a Get Eligibility interaction that is similar to V3.  However the Get Eligibility FHIR specification should be provided by Health Insurance BC (HIBC).  This guide speculates on how those request and resonpose may be structured but the Client Registry FHIR team still needs to consult with HIBC.</td>
+      <td style="text-align: left">Get Eligibility interaction</td>
+      <td style="text-align: left">This guide includes sections describing a Get Eligibility interaction that is similar to V3.  However the Get Eligibility FHIR specification should be provided by Health Insurance BC (HIBC).  This guide speculates on how those requests and responses may be structured but the Client Registry <em>FHIR team still needs to consult with HIBC</em>.</td>
     </tr>
   </tbody>
 </table>
 
 <h4 id="patient-resource">Patient Resource</h4>
 
-<p>All interactions will primarily use the Patient resource.  The Patient resource is ideal to represent clients as Patients has almost all of the necessary attributes and will require only a few extensions.  Patients also are recommended for enterprise master patient indices by the HL7 group and is in a Normative state, i.e. stable and ready for implementation.  See <a href="http://hl7.org/fhir/versions.html#std-process">FHIR standards evolution</a> for a description of Normative.</p>
+<p>All interactions will primarily use the Patient resource.  The Patient resource is ideal to represent clients as the Patient resource has almost all of the necessary attributes and will require only a few extensions.  Patients also are recommended for enterprise master patient indices by the HL7 group and is in a Normative state, i.e. stable and ready for implementation.  See <a href="http://hl7.org/fhir/versions.html#std-process">FHIR standards evolution</a> for a description of Normative.</p>
 
 <h5 id="patient-extensions">Patient Extensions</h5>
 
@@ -282,7 +282,7 @@ Namely:</p>
   <tbody>
     <tr>
       <td style="text-align: left">bc-business-period-extension</td>
-      <td style="text-align: left">A Period extension for effective dates.</td>
+      <td style="text-align: left">A Period extension for the business effective dates.</td>
     </tr>
     <tr>
       <td style="text-align: left">bc-validation-status-extension</td>
@@ -449,6 +449,12 @@ Namely:</p>
       <td style="text-align: left">https://…./$RevisePatient.Async</td>
     </tr>
     <tr>
+      <td style="text-align: left">https://…./$PartialRevisePatient</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">https://…./$PartialRevisePatient.Async</td>
+    </tr>
+    <tr>
       <td style="text-align: left">https://…./$AddPatient</td>
     </tr>
     <tr>
@@ -479,7 +485,7 @@ Namely:</p>
 
 <h5 id="responses">Responses</h5>
 
-<p>Response resources are wrapped in Bundles that contain Patients and a OperationOutcome.  A search operation like Get Demographics or Find Candidates will be a searchset Bundle that echoes back the search parameters by including an extra Parameters resource in the Bundle.</p>
+<p>Response resources are wrapped in Bundles that contain Patients and an OperationOutcome.  A search operation like Get Demographics or Find Candidates will be a searchset Bundle that echoes back the search parameters by including an extra Parameters resource in the Bundle.</p>
 
 <h3 id="design-outcomes---details">Design Outcomes - Details</h3>
 
@@ -487,7 +493,7 @@ Namely:</p>
 
 <h4 id="operational-parameter-resource">Operational Parameter Resource</h4>
 
-<p>Each interaction is a FHIR Operation and as such has a set of possbile parameters.  The table below outlines the parameters and whether they are IN, OUT or could apply to both requests and responses.</p>
+<p>Each interaction is a FHIR Operation and as such has a set of possible parameters.  The table below outlines the parameters and whether they are IN, OUT or could apply to both requests and responses.</p>
 
 <p>The table is only showing the standard interaction parameters, each Operation may have more parameters such as Patient, OperationOutcome, etc.  More detailed information regarding each Operation can be found in the <a href="artifacts.html#operation-definitions">Operation definitions</a>.</p>
 
@@ -555,7 +561,7 @@ Namely:</p>
     </tr>
     <tr>
       <td style="text-align: left">https://…./$GetDemographics.withEligibility</td>
-      <td>Searching for a single Patient and asking the Client Registry to also return the British Columnbia medical insurance eligibility for this Patient</td>
+      <td>Searching for a single Patient and asking the Client Registry to also return the British Columbia medical insurance eligibility for this Patient</td>
     </tr>
   </tbody>
 </table>
@@ -583,6 +589,14 @@ Namely:</p>
     <tr>
       <td style="text-align: left">https://…./$RevisePatient.Async</td>
       <td style="text-align: left">Updating a Patient asynchronously</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">https://…./$PartialRevisePatient</td>
+      <td style="text-align: left">Updating a specific Patient attribute</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">https://…./$PartialRevisePatient.Async</td>
+      <td style="text-align: left">Updating a specific Patient attribute asynchronously</td>
     </tr>
     <tr>
       <td style="text-align: left">https://…./$AddPatient</td>
@@ -615,7 +629,7 @@ Namely:</p>
 <h5 id="asynchronous-operations">Asynchronous Operations</h5>
 <p>The asynchronous versions of Add, Revise and Merge Operations share the same request and response profile as the synchronous version.</p>
 
-<p>The FHIR asynchornous pattern is not followed by this FHIR implementation.  The existing pattern the Client Registry uses today will be mimicked.  I.e.</p>
+<p>The FHIR asynchronous pattern is not followed by this FHIR implementation.  The existing pattern the Client Registry uses today will be mimicked.  I.e.</p>
 <ol>
   <li>User sends request</li>
   <li>Client Registry responds with HTTP 202 Accepted</li>
@@ -625,11 +639,11 @@ Namely:</p>
 
 <h3 id="error-handling">Error Handling</h3>
 
-<p>This implemenation of FHIR will follow the standard FHIR error handling.  E.g. return an OperationOutcome in a Bundle with the appropirate HTTP status code.  User are expected to monitor the http status codes and the OperationOutcome resources for issues.</p>
+<p>This implementation of FHIR will follow the standard FHIR error handling.  E.g. return an OperationOutcome in a Bundle with the appropriate HTTP status code.  Users are expected to monitor the http status codes and the OperationOutcome resources for issues.</p>
 
 <h3 id="success-status-codes">Success Status Codes</h3>
 
-<p>HTTP 200 (OK) will be returned in all cases where the request was sucessful.  This includes a search that was a valid Operation but did not match any Patients.  The only exceptions when a Patient is first created, the status code response is 201 (Created).</p>
+<p>HTTP 200 (OK) will be returned in all cases where the request was successful.  This includes a search that was a valid FHIR Operation but did not match any Patients.  The only exceptions when a Patient is first created, the status code response is 201 (Created).</p>
 
 
 
@@ -656,7 +670,7 @@ Namely:</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 9, 2021 17:37+0000">2021-12-09</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 9, 2021 21:10+0000">2021-12-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
