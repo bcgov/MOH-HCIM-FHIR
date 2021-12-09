@@ -13,7 +13,7 @@ Find Candidates - used when a user would like to find a Patient, but without an 
 Get Demographics - used when a user would like to find a Patient and has an identifier that Client Registry recognizes.
 </li>
 <li>
-Get Demographics with Eligibility- used when a user would like to find a Patient and has an identifier that Client Registry recognizes.  The Client Registry, in addition to returning a Patient, also returns the Health Insurance of BC eligibility status.  The Client Registry makes a webservice call to Health Insurance of BC on behalf of the requestor to determine the eligibility status.
+Get Demographics with Eligibility- used when a user would like to find a Patient and has an identifier that Client Registry recognizes.  The Client Registry, in addition to returning a Patient, also returns the Health Insurance of BC eligibility status.  The Client Registry makes a webservice call to Health Insurance of BC on behalf of the requester to determine the eligibility status.
 </li>
 <li>
 Revise Patient - used when a user is communicating a change or request for a new PHN to the Client Registry.
@@ -58,7 +58,7 @@ There are several rules that apply to all interactions with the Client Registry:
 When adding a newborn or using 'force create' Client Registry users SHALL use AddPatient the FHIR Operation.  This is different from V3, where the user can use Revise to create or update a record in there scenarios.
 </li>
 <li>
-The Client Registry FHIR implementation only supports JSON format and the clients SHALL use JSON for all interactions.  THe MIME-type of application/fhir+json is the only one supported by the Client Registry.
+The Client Registry FHIR implementation only supports JSON format and the clients SHALL use JSON for all interactions.  The MIME-type of application/fhir+json is the only one supported by the Client Registry.
 </li>
 <li>
 All interactions with Patient resources SHALL use the BCPatient profile. E.g. /Patient/$RevisePatient
