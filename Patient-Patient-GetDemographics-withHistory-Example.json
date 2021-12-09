@@ -1,0 +1,277 @@
+{
+  "resourceType": "Patient",
+  "id": "Patient-GetDemographics-withHistory-Example",
+  "meta": {
+    "profile": [
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Patient-GetDemographics-withHistory-Example\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">BCPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9983652763</p><p><b>name</b>: JILLIAN DAWN THIRD NAME COOK-ADAMS , TILLIAN DUSK THIRD NAME COOK-ADAMS </p><p><b>telecom</b>: ph: 6048883322(HOME), ph: 6048883322(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1972-10-16</p><p><b>deceased</b>: false</p><p><b>address</b>: </p><ul><li>321 SUNSHINE PL NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>421 SUNSHINE PL NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>521 CLOUDY RD NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>1824 CROSS RD LINE 2 LINE 3 VANCOUVER BC V9L 4H2 </li></ul><p><b>multipleBirth</b>: true</p></div>"
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "JHN"
+          }
+        ]
+      },
+      "system": "http://hlth.gov.bc.ca/fhir/client/bc-sri",
+      "value": "9983652763"
+    }
+  ],
+  "name": [
+    {
+      "use": "usual",
+      "family": "COOK-ADAMS",
+      "given": [
+        "JILLIAN",
+        "DAWN",
+        "THIRD NAME"
+      ],
+      "period": {
+        "start": "2021-01-01"
+      }
+    },
+    {
+      "use": "usual",
+      "family": "COOK-ADAMS",
+      "given": [
+        "TILLIAN",
+        "DUSK",
+        "THIRD NAME"
+      ],
+      "period": {
+        "start": "2020-01-01T00:00:00-08:00",
+        "end": "2021-01-01T00:00:00-08:00"
+      }
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "6048883322",
+      "use": "home",
+      "period": {
+        "start": "2021-01-01T00:00:00-08:00"
+      }
+    },
+    {
+      "system": "phone",
+      "value": "6048883322",
+      "use": "home",
+      "period": {
+        "start": "2019-01-01T00:00:00-08:00",
+        "end": "2021-01-01T00:00:00-08:00"
+      }
+    }
+  ],
+  "gender": "female",
+  "_gender": {
+    "extension": [
+      {
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+        "valuePeriod": {
+          "start": "2018-04-05T16:16:16-08:00"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "businessDates",
+            "valuePeriod": {
+              "start": "2017-04-05T16:16:16-08:00",
+              "end": "2018-04-05T16:16:16-08:00"
+            }
+          },
+          {
+            "url": "gender",
+            "valueCode": "unknown"
+          }
+        ],
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension"
+      }
+    ]
+  },
+  "birthDate": "1972-10-16",
+  "_birthDate": {
+    "extension": [
+      {
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+        "valuePeriod": {
+          "start": "2020-03-17T00:00:00-08:00"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "businessDates",
+            "valuePeriod": {
+              "start": "2018-03-17T00:00:00-08:00"
+            }
+          },
+          {
+            "url": "birthDate",
+            "valueDate": "1972-11-16"
+          }
+        ],
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birthdate-history-extension"
+      }
+    ]
+  },
+  "deceasedBoolean": false,
+  "_deceasedBoolean": {
+    "extension": [
+      {
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+        "valuePeriod": {
+          "start": "2021-12-12"
+        }
+      },
+      {
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-extension",
+        "valueDateTime": "2021-12-11T00:00:00-08:00"
+      },
+      {
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-flag-business-period-extension",
+        "valuePeriod": {
+          "start": "2021-12-11"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "deathDateBusinessDates",
+            "valuePeriod": {
+              "start": "2021-12-10T00:00:00-08:00",
+              "end": "2021-12-11T00:00:00-08:00"
+            }
+          },
+          {
+            "url": "deathDate",
+            "valueDateTime": "2021-12-10T00:00:00-08:00"
+          }
+        ],
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-deathdate-history-extension"
+      },
+      {
+        "extension": [
+          {
+            "url": "deathDateFlagBusinessDates",
+            "valuePeriod": {
+              "start": "2021-12-10T00:00:00-08:00",
+              "end": "2021-12-11T00:00:00-08:00"
+            }
+          },
+          {
+            "url": "deathDateFlag",
+            "valueBoolean": true
+          }
+        ],
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-deathdate-flag-history-extension"
+      }
+    ]
+  },
+  "address": [
+    {
+      "type": "physical",
+      "line": [
+        "321 SUNSHINE PL",
+        "NEW LINE 2",
+        "NEW LINE 3"
+      ],
+      "city": "VANCOUVER",
+      "state": "BC",
+      "period": {
+        "start": "2017-04-05T00:00:00-08:00",
+        "end": "2018-04-05T00:00:00-08:00"
+      }
+    },
+    {
+      "type": "physical",
+      "line": [
+        "421 SUNSHINE PL",
+        "NEW LINE 2",
+        "NEW LINE 3"
+      ],
+      "city": "VANCOUVER",
+      "state": "BC",
+      "period": {
+        "start": "2018-04-05T00:00:00-08:00",
+        "end": "2019-04-05T00:00:00-08:00"
+      }
+    },
+    {
+      "type": "physical",
+      "line": [
+        "521 CLOUDY RD",
+        "NEW LINE 2",
+        "NEW LINE 3"
+      ],
+      "city": "VANCOUVER",
+      "state": "BC",
+      "period": {
+        "start": "2019-04-05T00:00:00-08:00",
+        "end": "2022-04-05T00:00:00-08:00"
+      }
+    },
+    {
+      "type": "postal",
+      "line": [
+        "1824 CROSS RD",
+        "LINE 2",
+        "LINE 3"
+      ],
+      "city": "VANCOUVER",
+      "state": "BC",
+      "postalCode": "V9L 4H2"
+    }
+  ],
+  "multipleBirthBoolean": true,
+  "_multipleBirthBoolean": {
+    "extension": [
+      {
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+        "valuePeriod": {
+          "start": "2021-04-01T00:00:00-08:00"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "businessDates",
+            "valuePeriod": {
+              "start": "2018-03-17T03:29:17-08:00",
+              "end": "2019-03-17T03:29:17-08:00"
+            }
+          },
+          {
+            "url": "multipleBirth",
+            "valueBoolean": true
+          }
+        ],
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-multiplebirth-history-extension"
+      },
+      {
+        "extension": [
+          {
+            "url": "businessDates",
+            "valuePeriod": {
+              "start": "2019-03-17T03:29:17-08:00",
+              "end": "2020-03-17T03:29:17-08:00"
+            }
+          },
+          {
+            "url": "multipleBirth",
+            "valueBoolean": false
+          }
+        ],
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-multiplebirth-history-extension"
+      }
+    ]
+  }
+}

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="Bundle-GetDemographicsWithEligibility-Response-Example"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
+  </meta>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:b3a12f0c-a332-4ec9-94b9-d8539a02df48"/>
+  </identifier>
+  <type value="searchset"/>
+  <timestamp value="2011-09-07T12:18:23.000-07:00"/>
+  <entry>
+    <fullUrl value="urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33"/>
+    <resource>
+      <Parameters>
+        <id value="Parameters-GetDemographicsWithEligibility-Response-Example"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
+        </meta>
+        <parameter>
+          <name value="messageId"/>
+          <valueString value="c087e71e-3e7e-4c22-a3ce-61523f600615"/>
+        </parameter>
+        <parameter>
+          <name value="messageDateTime"/>
+          <valueDateTime value="2015-02-07T13:29:17-08:00"/>
+        </parameter>
+        <parameter>
+          <name value="sender"/>
+          <valueIdentifier>
+            <system value="http://hlth.gov.bc.ca/fhir/client/bc-org"/>
+            <value value="MOH_CRS"/>
+          </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="requestMessageId"/>
+          <valueString value="98028b44-882a-4c72-8c92-b87d916147e1"/>
+        </parameter>
+      </Parameters>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"/>
+    <resource>
+      <OperationOutcome>
+        <id value="OperationOutcome-Search-Example"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "OperationOutcome-Search-Example" </p></div><blockquote><p><b>issue</b></p><p><b>severity</b>: warning</p><p><b>code</b>: business-rule</p><p><b>details</b>: Warning: The Find Candidates Patient name has been modified to filter out invalid characters. <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#BCHCIM.GD.1.0017)</span></p></blockquote><blockquote><p><b>issue</b></p><p><b>severity</b>: error</p><p><b>code</b>: business-rule</p><p><b>details</b>: The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ... <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#BCHCIM.GD.1.0017)</span></p></blockquote></div>
+        </text>
+        <issue>
+          <severity value="warning"/>
+          <code value="business-rule"/>
+          <details>
+            <coding>
+              <code value="BCHCIM.GD.1.0017"/>
+            </coding>
+            <text value="Warning: The Find Candidates Patient name has been modified to filter out invalid characters."/>
+          </details>
+        </issue>
+        <issue>
+          <severity value="error"/>
+          <code value="business-rule"/>
+          <details>
+            <coding>
+              <code value="BCHCIM.GD.1.0017"/>
+            </coding>
+            <text value="The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ..."/>
+          </details>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c"/>
+    <resource>
+      <Patient>
+        <id value="Patient-GetDemographics-Example"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient-GetDemographics-Example" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">BCPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9983652763</p><p><b>name</b>: JILLIAN DAWN THIRD NAME COOK-ADAMS </p><p><b>telecom</b>: ph: 6048883322(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1972-10-16</p><p><b>address</b>: </p><ul><li>321 SUNSHINE PL NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>1824 CROSS RD LINE 2 LINE 3 VANCOUVER BC V9L 4H2 </li></ul></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="JHN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/bc-sri"/>
+          <value value="9983652763"/>
+        </identifier>
+        <name>
+          <use value="usual"/>
+          <family value="COOK-ADAMS"/>
+          <given value="JILLIAN"/>
+          <given value="DAWN"/>
+          <given value="THIRD NAME"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="6048883322"/>
+          <use value="home"/>
+        </telecom>
+        <gender value="female">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2017-04-05T16:16:16-08:00"/>
+            </valuePeriod>
+          </extension>
+        </gender>
+        <birthDate value="1972-10-16">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2018-03-17T03:29:17-08:00"/>
+            </valuePeriod>
+          </extension>
+        </birthDate>
+        <address>
+          <type value="physical"/>
+          <line value="321 SUNSHINE PL"/>
+          <line value="NEW LINE 2"/>
+          <line value="NEW LINE 3"/>
+          <city value="VANCOUVER"/>
+          <state value="BC"/>
+        </address>
+        <address>
+          <type value="postal"/>
+          <line value="1824 CROSS RD"/>
+          <line value="LINE 2"/>
+          <line value="LINE 3"/>
+          <city value="VANCOUVER"/>
+          <state value="BC"/>
+          <postalCode value="V9L 4H2"/>
+        </address>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:0e65065f-76a8-4578-a286-eb9c1ac3dbbc"/>
+    <resource>
+      <Coverage>
+        <id value="Coverage-Active-Example"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Coverage-Active-Example" </p></div><p><b>status</b>: active</p><p><b>type</b>: mandatory health program <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.0.0/CodeSystem-v3-ActCode.html">ActCode</a>#MANDPOL)</span></p><p><b>beneficiary</b>: <a href="#Patient_Patient-GetDemographics-Example">See above (urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c)</a></p><p><b>period</b>: 2021-01-17 --&gt; (ongoing)</p><p><b>payor</b>: <span>: Health Insurance BC</span></p></div>
+        </text>
+        <status value="active"/>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+            <code value="MANDPOL"/>
+          </coding>
+        </type>
+        <beneficiary>
+          <reference value="urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c"/>
+        </beneficiary>
+        <period>
+          <start value="2021-01-17"/>
+        </period>
+        <payor>
+          <display value="Health Insurance BC"/>
+        </payor>
+      </Coverage>
+    </resource>
+  </entry>
+</Bundle>

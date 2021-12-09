@@ -187,19 +187,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#6">Response Examples</a>
       </li>
       <li>
-         <a href="#7">Structures: Resource Profiles</a>
+         <a href="#7">Structures: Extension Definitions</a>
       </li>
       <li>
-         <a href="#8">Structures: Extension Definitions</a>
+         <a href="#8">Terminology: Value Sets</a>
       </li>
       <li>
-         <a href="#9">Terminology: Value Sets</a>
+         <a href="#9">Terminology: Code Systems</a>
       </li>
       <li>
-         <a href="#10">Terminology: Code Systems</a>
-      </li>
-      <li>
-         <a href="#11">Example: Example Instances</a>
+         <a href="#10">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -232,13 +229,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </td>
                <td>
 <p>This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a server.</p>
-
-<ul>
-  <li>Find Candidates - used when a user would like to find a Patient, but without an identifier, typically with name, address or edge cases like mother’s PHN.</li>
-  <li>Get Demographics - used when a user would like to find a Patient and has an identifier that Client Registry recognizes</li>
-  <li>Revise Patient - used when a user is communicating a change to the Client Registry</li>
-  <li>Merge Patient - used when a user is communicating that an individual has multiple Patient records and which record should survive and which record(s) should be marked as non-surviving</li>
-</ul>
 </td>
             </tr>
          </tbody>
@@ -303,6 +293,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-partial-revise-response-bundle.html"
+                     title="StructureDefinition/bc-partial-revise-response-bundle">BCPartialReviseResponseBundle</a>
+               </td>
+               <td>
+<p>A Bundle that is used in the Client Registry response to Partial Revise Patient requests.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="StructureDefinition-bc-patient-business-parameters.html"
                      title="StructureDefinition/bc-patient-business-parameters">BCPatientBusinessParameters</a>
                </td>
@@ -328,6 +327,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>A Bundle that is used in the Client Registry response to Find Candidates and Get Demographics queries.</p>
 </td>
             </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-search-withEligibility-response-bundle.html"
+                     title="StructureDefinition/bc-search-withEligibility-response-bundle">BCSearchWithEligibilityResponseBundle</a>
+               </td>
+               <td>
+<p>A Bundle that is used in the Client Registry response to Get Demographics with Eligibility queries.</p>
+</td>
+            </tr>
          </tbody>
       </table>
    </p>
@@ -346,7 +354,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                      title="OperationDefinition/bc-patient-add">AddPatient</a>
                </td>
                <td>
-<p>This operation is used to add patient to the Client Registry.</p>
+<p>This operation is used for newborns or to ‘force create’ a patient.</p>
 </td>
             </tr>
             <tr>
@@ -369,11 +377,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="OperationDefinition-bc-patient-get-demographics-withEligibility.html"
+                     title="OperationDefinition/bc-patient-get-demographics-withEligibility">GetDemographics.withEligibility</a>
+               </td>
+               <td>
+<p>This operation is used to query for a patient.  The response can contain 0 or 1 Patient and the insurance eligibility.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="OperationDefinition-bc-patient-merge.html"
                      title="OperationDefinition/bc-patient-merge">MergePatient</a>
                </td>
                <td>
 <p>This operation is used to merge patients.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="OperationDefinition-bc-patient-partial-revise.html"
+                     title="OperationDefinition/bc-patient-partial-revise">PartialRevisePatient</a>
+               </td>
+               <td>
+<p>This operation is used to revise a patient’s demographics, applied to only specific Patient attributes.</p>
 </td>
             </tr>
             <tr>
@@ -403,7 +429,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                      title="Parameters/Parameters-AddPatient-Example">Parameters-AddPatient-Example</a>
                </td>
                <td>
-<p>Example of $RevisePatient operation where the Patient is new to the Client Registry.</p>
+<p>Example of $AddPatient operation where the Patient is new to the Client Registry.</p>
 </td>
             </tr>
             <tr>
@@ -444,11 +470,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="Parameters-Parameters-GetDemographicsWithEligibility-Example.html"
+                     title="Parameters/Parameters-GetDemographicsWithEligibility-Example">Parameters-GetDemographicsWithEligibility-Example</a>
+               </td>
+               <td>
+<p>Example of $GetDemographics.withEligibility operation</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="Parameters-Parameters-MergePatient-TwoNonSurvivors-Example.html"
                      title="Parameters/Parameters-MergePatient-TwoNonSurvivors-Example">Parameters-MergePatient-TwoNonSurvivors-Example</a>
                </td>
                <td>
 <p>Example of $MergePatient operation.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Parameters-Parameters-PartialRevisePatient-Example.html"
+                     title="Parameters/Parameters-PartialRevisePatient-Example">Parameters-PartialRevisePatient-Example</a>
+               </td>
+               <td>
+<p>Example of $RevisePatient operation that updates an existing Patient</p>
 </td>
             </tr>
             <tr>
@@ -510,11 +554,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="Bundle-Bundle-GetDemographicsWithEligibility-Response-Example.html"
+                     title="Bundle/Bundle-GetDemographicsWithEligibility-Response-Example">Bundle-GetDemographicsWithEligibility-Response-Example</a>
+               </td>
+               <td>
+<p>Example of $GetDemographics.withEligibility operation response Bundle</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="Bundle-Bundle-MergePatient-Response-Example.html"
                      title="Bundle/Bundle-MergePatient-Response-Example">Bundle-MergePatient-Response-Example</a>
                </td>
                <td>
 <p>A sample MergePatient Operation response.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Bundle-Bundle-PartialRevisePatient-Response-Example.html"
+                     title="Bundle/Bundle-PartialRevisePatient-Response-Example">Bundle-PartialRevisePatient-Response-Example</a>
+               </td>
+               <td>
+<p>A sample PartialRevisePatient Operation response.</p>
 </td>
             </tr>
             <tr>
@@ -530,27 +592,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </table>
    </p>
    <a name="7"> </a>
-   <h3>Structures: Resource Profiles </h3>
-   <p>
-    <p>These define constraints on FHIR resources for systems conforming to this implementation guide</p>
-</p>
-   <p>
-      <table class="grid">
-         <col style="width:20%"/>
-         <tbody>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-operation-outcome.html"
-                     title="StructureDefinition/bc-operation-outcome">BCOperationOutcome</a>
-               </td>
-               <td>
-<p>OperationOutcome profile for BC.</p>
-</td>
-            </tr>
-         </tbody>
-      </table>
-   </p>
-   <a name="8"> </a>
    <h3>Structures: Extension Definitions </h3>
    <p>
     <p>These define constraints on FHIR data types for systems conforming to this implementation guide</p>
@@ -559,6 +600,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <table class="grid">
          <col style="width:20%"/>
          <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-birthdate-history-extension.html"
+                     title="StructureDefinition/bc-birthdate-history-extension">BC Birth Date history</a>
+               </td>
+               <td>
+<p>This extension allows the Client Registry to include historical birth dates in a single Patient resource.</p>
+</td>
+            </tr>
             <tr>
                <td style="column-width:30%">
                   <a href="StructureDefinition-bc-business-period-extension.html"
@@ -588,11 +638,47 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-deathdate-flag-history-extension.html"
+                     title="StructureDefinition/bc-deathdate-flag-history-extension">BC Death Date history</a>
+               </td>
+               <td>
+<p>This extension allows the Client Registry to include historical death dates and flags in a single Patient resource.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-deathdate-history-extension.html"
+                     title="StructureDefinition/bc-deathdate-history-extension">BC Death Date history</a>
+               </td>
+               <td>
+<p>This extension allows the Client Registry to include historical death dates and flags in a single Patient resource.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-gender-history-extension.html"
+                     title="StructureDefinition/bc-gender-history-extension">BC gender history</a>
+               </td>
+               <td>
+<p>This extension allows the Client Registry to include historical gender codes in a single Patient resource.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="StructureDefinition-bc-merge-status-extension.html"
                      title="StructureDefinition/bc-merge-status-extension">BC Merge status code</a>
                </td>
                <td>
 <p>A code that represents the Merge status of the Patient.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-multiplebirth-history-extension.html"
+                     title="StructureDefinition/bc-multiplebirth-history-extension">BC multiple birth history</a>
+               </td>
+               <td>
+<p>This extension allows the Client Registry to include historical multiple birth values in a single Patient resource.</p>
 </td>
             </tr>
             <tr>
@@ -607,7 +693,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tbody>
       </table>
    </p>
-   <a name="9"> </a>
+   <a name="8"> </a>
    <h3>Terminology: Value Sets </h3>
    <p>
     <p>These define sets of codes used by systems conforming to this implementation guide</p>
@@ -673,7 +759,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tbody>
       </table>
    </p>
-   <a name="10"> </a>
+   <a name="9"> </a>
    <h3>Terminology: Code Systems </h3>
    <p>
     <p>These define new code systems used by systems conforming to this implementation guide</p>
@@ -712,7 +798,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tbody>
       </table>
    </p>
-   <a name="11"> </a>
+   <a name="10"> </a>
    <h3>Example: Example Instances </h3>
    <p>
     <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like</p>
@@ -721,6 +807,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <table class="grid">
          <col style="width:20%"/>
          <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Coverage-Coverage-Active-Example.html"
+                     title="Coverage/Coverage-Active-Example">Coverage-Active-Example</a>
+               </td>
+               <td>
+<p>Example of Get Eligibility response, the patient is eligible.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Coverage-Coverage-InActive-Example.html"
+                     title="Coverage/Coverage-InActive-Example">Coverage-InActive-Example</a>
+               </td>
+               <td>
+<p>Example of Get Eligibility response, the patient is not eligible.</p>
+</td>
+            </tr>
             <tr>
                <td style="column-width:30%">
                   <a href="OperationOutcome-OperationOutcome-Example.html"
@@ -750,6 +854,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="Parameters-Parameters-DeletePatch-Example.html"
+                     title="Parameters/Parameters-DeletePatch-Example">Parameters-DeletePatch-Example</a>
+               </td>
+               <td>
+<p>An example of a delete patch, which is used for a partial update of a Patient resource.  This example deletes a physical address.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="Parameters-Parameters-FindCandidates-Response-Example.html"
                      title="Parameters/Parameters-FindCandidates-Response-Example">Parameters-FindCandidates-Response-Example</a>
                </td>
@@ -772,7 +885,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                      title="Parameters/Parameters-GetDemographics-Response-Example">Parameters-GetDemographics-Response-Example</a>
                </td>
                <td>
-<p>Example of $FindCandidates response Metadata parameters</p>
+<p>Example of $GetDemographics response Metadata parameters</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Parameters-Parameters-GetDemographicsWithEligibility-Response-Example.html"
+                     title="Parameters/Parameters-GetDemographicsWithEligibility-Response-Example">Parameters-GetDemographicsWithEligibility-Response-Example</a>
+               </td>
+               <td>
+<p>Example of $GetDemographics.withEligibility response Metadata parameters</p>
 </td>
             </tr>
             <tr>
@@ -782,6 +904,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </td>
                <td>
 <p>Example of Merge response Metadata parameters</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Parameters-Parameters-PartialRevisePatient-Response-Example.html"
+                     title="Parameters/Parameters-PartialRevisePatient-Response-Example">Parameters-PartialRevisePatient-Response-Example</a>
+               </td>
+               <td>
+<p>Example of PartialRevise response Metadata parameters</p>
 </td>
             </tr>
             <tr>
@@ -873,6 +1004,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="Patient-Patient-GetDemographics-withHistory-Example.html"
+                     title="Patient/Patient-GetDemographics-withHistory-Example">Patient-GetDemographics-withHistory-Example</a>
+               </td>
+               <td>
+<p>Example of Patient for $GetDemographics operation response</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="Patient-Patient-MergePatient-Example.html"
                      title="Patient/Patient-MergePatient-Example">Patient-MergePatient-Example</a>
                </td>
@@ -891,8 +1031,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Patient-Patient-RevisePerson-Example.html"
-                     title="Patient/Patient-RevisePerson-Example">Patient-RevisePerson-Example</a>
+                  <a href="Patient-Patient-RevisePatient-Example.html"
+                     title="Patient/Patient-RevisePatient-Example">Patient-RevisePatient-Example</a>
                </td>
                <td>
 <p>Patient example for a RevisePatient operation</p>
@@ -952,7 +1092,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 2, 2021 21:15+0000">2021-12-02</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 9, 2021 00:03+0000">2021-12-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

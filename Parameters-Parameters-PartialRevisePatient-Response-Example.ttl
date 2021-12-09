@@ -1,0 +1,45 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Parameters/Parameters-PartialRevisePatient-Response-Example> a fhir:Parameters;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Parameters-PartialRevisePatient-Response-Example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters>
+     ]
+  ];
+  fhir:Parameters.parameter [
+     fhir:index 0;
+     fhir:Parameters.parameter.name [ fhir:value "messageId" ];
+     fhir:Parameters.parameter.valueString [ fhir:value "c087e71e-3e7e-4c22-a3ce-61523f600615" ]
+  ], [
+     fhir:index 1;
+     fhir:Parameters.parameter.name [ fhir:value "messageDateTime" ];
+     fhir:Parameters.parameter.valueDateTime [ fhir:value "2015-02-07T13:29:17-08:00"^^xsd:dateTime ]
+  ], [
+     fhir:index 2;
+     fhir:Parameters.parameter.name [ fhir:value "sender" ];
+     fhir:Parameters.parameter.valueIdentifier [
+       fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-org" ];
+       fhir:Identifier.value [ fhir:value "MOH_CRS" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Parameters.parameter.name [ fhir:value "requestMessageId" ];
+     fhir:Parameters.parameter.valueString [ fhir:value "98028b44-882a-4c72-8c92-b87d916147e1" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Parameters/Parameters-PartialRevisePatient-Response-Example.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

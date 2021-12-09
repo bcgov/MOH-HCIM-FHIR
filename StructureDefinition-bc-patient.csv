@@ -117,6 +117,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","BC business dates","The effective dates for the parent element.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Patient.gender.extension","history","","",0,*,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension]]} {[]}
+","BC gender history","This extension allows the Client Registry to include historical gender codes in a single Patient resource.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.gender.value","","","",0,1,"","","","string {[]} {[]}
 ","Primitive value for code","Primitive value for code","","","","","","","","","",,,,,"",,,,"string.value",0,1,"",""
 "Patient.birthDate","","","",1,1,"Y","","Y","date {[]} {[]}
@@ -130,6 +134,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.birthDate.extension","birthDateEffectiveDates","","",0,1,"","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension]]} {[]}
 ","BC business dates","The effective dates for the parent element.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Patient.birthDate.extension","history","","",0,*,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birthdate-history-extension]]} {[]}
+","BC Birth Date history","This extension allows the Client Registry to include historical birth dates in a single Patient resource.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.birthDate.value","","","",0,1,"","","","date {[]} {[]}
@@ -155,6 +163,14 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","BC Patient Death Date flag business date","The effective dates for the Patient's Death Date flag.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Patient.deceased[x].extension","deathDateHistory","","",0,1,"","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-deathdate-history-extension]]} {[]}
+","BC Death Date history","This extension allows the Client Registry to include historical death dates and flags in a single Patient resource.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Patient.deceased[x].extension","deathDateFlagHistory","","",0,1,"","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-deathdate-flag-history-extension]]} {[]}
+","BC Death Date history","This extension allows the Client Registry to include historical death dates and flags in a single Patient resource.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.deceased[x].value","","","",0,1,"","","","boolean {[]} {[]}
 ","Primitive value for boolean","The actual value","","","","","","","","","",,,,,"",,,,"boolean.value",0,1,"",""
 "Patient.address","","","",0,*,"Y","","Y","Address {[]} {[]}
@@ -173,7 +189,10 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
-"Patient.multipleBirth[x].extension","multipleBirthBusinessDates","","",0,1,"","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension]]} {[]}
+"Patient.multipleBirth[x].extension","history","","",0,*,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-multiplebirth-history-extension]]} {[]}
+","BC multiple birth history","This extension allows the Client Registry to include historical multiple birth values in a single Patient resource.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Patient.multipleBirth[x].extension","multipleBirthEffectiveDates","","",0,1,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension]]} {[]}
 ","BC business dates","The effective dates for the parent element.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.photo","","","",0,*,"","","","Attachment {[]} {[]}

@@ -217,6 +217,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>The Get Demographics is a synchronous request-response transaction</p>
 
+<h4 id="get-demographics-search-with-eligibility">Get Demographics Search with Eligibility</h4>
+
+<p>There is a special operation when the user is requesting a GetDemographics search and also requesting that the Client Registry query an external site for the British Columbia insurance status of a Patient.  This a different FHIR Operation than GetDemographics.</p>
+
 <h3 id="fhir-structure-for-searches">FHIR Structure for Searches</h3>
 
 <p>Below is a figure that shows the FHIR structure for the two searches.  The request is a Parameter resource and the response is a searchset Bundle with 0 or more Patients and one OperationOutcome.  The OperationOutcome is where you’ll find warnings and errors regarding the search.</p>
@@ -227,7 +231,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="get-demographics-parameters">Get Demographics Parameters</h4>
 
-<p>The IN and OUT search parameters and resources for Get Demographics can be found here <a href="OperationDefinition-bc-patient-get-demographics.html">GetDemographics search</a>.</p>
+<p>The IN and OUT search parameters and resources for Get Demographics can be found here <a href="OperationDefinition-bc-patient-get-demographics.html">GetDemographics search</a>.  For the withEligibility search see <a href="OperationDefinition-bc-patient-get-demographics-withEligibility.html">GetDemograhics.withEligibility</a>.</p>
 
 <h4 id="find-candidates-parameters">Find Candidates Parameters</h4>
 
@@ -262,7 +266,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 2, 2021 21:15+0000">2021-12-02</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 9, 2021 00:03+0000">2021-12-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

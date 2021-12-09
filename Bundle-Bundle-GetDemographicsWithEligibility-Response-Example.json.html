@@ -1,0 +1,489 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>FHIR.CA-BC.CLIENT\Bundle-GetDemographicsWithEligibility-Response-Example - JSON Representation - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/bc-fhir.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"14.32"}
+    h3,h4,h5,h6{--heading-prefix:"14.32"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">
+            <img height="71" alt="Project home" src="assets/images/BCMinistry.png"/>
+          </a>
+        </div>
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">BC Client Registry FHIR Implementation Guide</span><br/>0.1.0 - Build CI</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="overview.html">Overview</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Design
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="design.html">Summary</a>
+      </li>
+      <li>
+        <a href="search.html">Search Patient</a>
+      </li>
+      <li>
+        <a href="reviseAndMerge.html">Add, Revise And Merge Patient</a>
+      </li>
+      <li>
+        <a href="distributions.html">Patient Change Notificaitons</a>
+      </li>
+      <li>
+        <a href="identifiers.html">Identifiers</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="v3Transition.html">V3 Transition</a>
+  </li>
+  <li>
+    <a href="connectedPartner.html">Connected Partner</a>
+  </li>
+  <li>
+    <a href="capabilityStatement.html">Capability Statement</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="futurePlans.html">Future Plans</a>
+  </li>
+  <li>
+    <a href="terminology.html">Glossary</a>
+  </li>
+  <li>
+    <a href="credits.html">Credits</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Bundle-GetDemographicsWithEligibility-Response-Example</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v0.1.0). See the <a href="http://hlth.gov.bc.ca/fhir/client/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Bundle-Bundle-GetDemographicsWithEligibility-Response-Example.html">Narrative Content</a>
+  </li>
+
+
+  
+    <li>
+      <a href="Bundle-Bundle-GetDemographicsWithEligibility-Response-Example.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-Bundle-GetDemographicsWithEligibility-Response-Example.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: Bundle-GetDemographicsWithEligibility-Response-Example - JSON Representation</h2>
+
+<p><a href="Bundle-Bundle-GetDemographicsWithEligibility-Response-Example.json" no-download="true">Raw json</a> | <a href="Bundle-Bundle-GetDemographicsWithEligibility-Response-Example.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle">resourceType</a>" : "Bundle",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.id">id</a>" : "Bundle-GetDemographicsWithEligibility-Response-Example",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.identifier">identifier</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:ietf:rfc:3986",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "urn:uuid:b3a12f0c-a332-4ec9-94b9-d8539a02df48"
+  },
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">type</a>" : "searchset",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.timestamp">timestamp</a>" : "2011-09-07T12:18:23.000-07:00",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33",
+      "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/parameters.html">resourceType</a>" : "Parameters",
+        "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.id">id</a>" : "Parameters-GetDemographicsWithEligibility-Response-Example",
+        "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter">parameter</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "messageId",
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueString</a>" : "c087e71e-3e7e-4c22-a3ce-61523f600615"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "messageDateTime",
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueDateTime</a>" : "2015-02-07T13:29:17-08:00"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "sender",
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueIdentifier</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://hlth.gov.bc.ca/fhir/client/bc-org",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "MOH_CRS"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "requestMessageId",
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueString</a>" : "98028b44-882a-4c72-8c92-b87d916147e1"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1",
+      "<a href="http://hl7.org/fhir/R4/operationoutcome.html#OperationOutcome">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/operationoutcome.html">resourceType</a>" : "OperationOutcome",
+        "<a href="http://hl7.org/fhir/R4/operationoutcome.html#OperationOutcome.id">id</a>" : "OperationOutcome-Search-Example",
+        "<a href="http://hl7.org/fhir/R4/operationoutcome.html#OperationOutcome.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource \&quot;OperationOutcome-Search-Example\&quot; &lt;/p&gt;&lt;/div&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;issue&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;severity&lt;/b&gt;: warning&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: business-rule&lt;/p&gt;&lt;p&gt;&lt;b&gt;details&lt;/b&gt;: Warning: The Find Candidates Patient name has been modified to filter out invalid characters. &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; ([not stated]#BCHCIM.GD.1.0017)&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;issue&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;severity&lt;/b&gt;: error&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: business-rule&lt;/p&gt;&lt;p&gt;&lt;b&gt;details&lt;/b&gt;: The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ... &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; ([not stated]#BCHCIM.GD.1.0017)&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/operationoutcome.html#OperationOutcome.issue">issue</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/operationoutcome.html#OperationOutcome.issue.severity">severity</a>" : "warning",
+            "<a href="http://hl7.org/fhir/R4/operationoutcome.html#OperationOutcome.issue.code">code</a>" : "business-rule",
+            "<a href="http://hl7.org/fhir/R4/operationoutcome.html#OperationOutcome.issue.details">details</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "BCHCIM.GD.1.0017"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Warning: The Find Candidates Patient name has been modified to filter out invalid characters."
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/operationoutcome.html#OperationOutcome.issue.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/operationoutcome.html#OperationOutcome.issue.code">code</a>" : "business-rule",
+            "<a href="http://hl7.org/fhir/R4/operationoutcome.html#OperationOutcome.issue.details">details</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "BCHCIM.GD.1.0017"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ..."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c",
+      "<a href="http://hl7.org/fhir/R4/patient.html#Patient">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/patient.html">resourceType</a>" : "Patient",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.id">id</a>" : "Patient-GetDemographics-Example",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource \&quot;Patient-GetDemographics-Example\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-bc-patient.html\&quot;&gt;BCPatient&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Jurisdictional health number: 9983652763&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: JILLIAN DAWN THIRD NAME COOK-ADAMS &lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: ph: 6048883322(HOME)&lt;/p&gt;&lt;p&gt;&lt;b&gt;gender&lt;/b&gt;: female&lt;/p&gt;&lt;p&gt;&lt;b&gt;birthDate&lt;/b&gt;: 1972-10-16&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;321 SUNSHINE PL NEW LINE 2 NEW LINE 3 VANCOUVER BC &lt;/li&gt;&lt;li&gt;1824 CROSS RD LINE 2 LINE 3 VANCOUVER BC V9L 4H2 &lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "JHN"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://hlth.gov.bc.ca/fhir/client/bc-sri",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "9983652763"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.name">name</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.use">use</a>" : "usual",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a>" : "COOK-ADAMS",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a>" : [
+              "JILLIAN",
+              "DAWN",
+              "THIRD NAME"
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.telecom">telecom</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "6048883322",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "home"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.gender">gender</a>" : "female",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.gender">_gender</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#code#code.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valuePeriod</a>" : {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2017-04-05T16:16:16-08:00"
+              }
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">birthDate</a>" : "1972-10-16",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">_birthDate</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#date#date.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valuePeriod</a>" : {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2018-03-17T03:29:17-08:00"
+              }
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.address">address</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.type">type</a>" : "physical",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a>" : [
+              "321 SUNSHINE PL",
+              "NEW LINE 2",
+              "NEW LINE 3"
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a>" : "VANCOUVER",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.state">state</a>" : "BC"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.type">type</a>" : "postal",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a>" : [
+              "1824 CROSS RD",
+              "LINE 2",
+              "LINE 3"
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a>" : "VANCOUVER",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.state">state</a>" : "BC",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.postalCode">postalCode</a>" : "V9L 4H2"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:0e65065f-76a8-4578-a286-eb9c1ac3dbbc",
+      "<a href="http://hl7.org/fhir/R4/coverage.html#Coverage">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/coverage.html">resourceType</a>" : "Coverage",
+        "<a href="http://hl7.org/fhir/R4/coverage.html#Coverage.id">id</a>" : "Coverage-Active-Example",
+        "<a href="http://hl7.org/fhir/R4/coverage.html#Coverage.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource \&quot;Coverage-Active-Example\&quot; &lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: mandatory health program &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;http://terminology.hl7.org/3.0.0/CodeSystem-v3-ActCode.html\&quot;&gt;ActCode&lt;/a&gt;#MANDPOL)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;beneficiary&lt;/b&gt;: &lt;a href=\&quot;#Patient_Patient-GetDemographics-Example\&quot;&gt;See above (urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;period&lt;/b&gt;: 2021-01-17 --&amp;gt; (ongoing)&lt;/p&gt;&lt;p&gt;&lt;b&gt;payor&lt;/b&gt;: &lt;span&gt;: Health Insurance BC&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/coverage.html#Coverage.status">status</a>" : "active",
+        "<a href="http://hl7.org/fhir/R4/coverage.html#Coverage.type">type</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "MANDPOL"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/coverage.html#Coverage.beneficiary">beneficiary</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c"
+        },
+        "<a href="http://hl7.org/fhir/R4/coverage.html#Coverage.period">period</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2021-01-17"
+        },
+        "<a href="http://hl7.org/fhir/R4/coverage.html#Coverage.payor">payor</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Health Insurance BC"
+          }
+        ]
+      }
+    }
+  ]
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 9, 2021 00:03+0000">2021-12-09</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)"></span>
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,40 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Coverage/Coverage-Active-Example> a fhir:Coverage;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Coverage-Active-Example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Coverage-Active-Example\" </p></div><p><b>status</b>: active</p><p><b>type</b>: mandatory health program <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-v3-ActCode.html\">ActCode</a>#MANDPOL)</span></p><p><b>beneficiary</b>: <a href=\"Bundle-Bundle-GetDemographics-Response-Example.html#urn-uuid-4e795f80-6032-42e3-bbfd-24e27f0c3e7c\">urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c</a></p><p><b>period</b>: 2021-01-17 --&gt; (ongoing)</p><p><b>payor</b>: <span>: Health Insurance BC</span></p></div>"
+  ];
+  fhir:Coverage.status [ fhir:value "active"];
+  fhir:Coverage.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ];
+       fhir:Coding.code [ fhir:value "MANDPOL" ]
+     ]
+  ];
+  fhir:Coverage.beneficiary [
+     fhir:Reference.reference [ fhir:value "urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c" ]
+  ];
+  fhir:Coverage.period [
+     fhir:Period.start [ fhir:value "2021-01-17"^^xsd:date ]
+  ];
+  fhir:Coverage.payor [
+     fhir:index 0;
+     fhir:Reference.display [ fhir:value "Health Insurance BC" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Coverage/Coverage-Active-Example.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
