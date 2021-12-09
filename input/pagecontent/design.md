@@ -18,7 +18,7 @@ Namely:
 There are a number of assumptions that were made at the start of design:
 
 - FHIR is not expected to adversely affect performance, i.e. SLA is not changing for FHIR but will be extended to include FHIR
-- Existing interfaces, such as V3, will not be deprecated 
+- Existing interfaces, such as V3, will not immediately be deprecated 
 - Users can use a combination of V3 and FHIR to meet their needs
 - The Client Registry FHIR design will become a Provincial standard
 - Asynchronous interactions will follow the same pattern as V3 (not the FHIR asynchronous pattern)
@@ -31,7 +31,20 @@ The main outcomes from the design process were as follows:
 - FHIR Operations will be used for Client Registry interactions
 - The Parameters resource used in the FHIR Operations may include Patient resources as well as name value pair parameters such as search parameters or unique request identifiers and creation times, etc
 - Some FHIR extensions are necessary as the Patient resource
+- There are several _proposed_ new interactions and features, these are described below
+
 >Do we align with CA Baseline?
+
+#### Proposed Design Items
+
+These items are new to the Client Registry and are proposed to be included in the FHIR specification.
+
+Proposal | Description | 
+:--- | :--- |
+Add Patient | Add Patient moves some of the features normally down through the Revise Patient interaction.  Specifically, 'force create' and newborn interactions are now down with Add Patient. |
+Partial Revise | A Partial Revise interaction allows users to logically delete, add or change part of the Patient resource.  This is useful when a stakeholder doesn't need (or persist) certain Patient attributes, but today, must query and then echoe back these attributesin a Revise Patient interaction.  Knowledge of [FHIRPath](http://hl7.org/fhirpath/N1/) is required to use this interaction.|
+Business dates | Attributes will have business dates that haven't been present in V3. | 
+Get Eligibility | This guide includes sections describing a Get Eligibility interaction that is similar to V3.  However the Get Eligibility FHIR specification should be provided by Health Insurance BC (HIBC).  This guide speculates on how those request and resonpose may be structured but the Client Registry FHIR team still needs to consult with HIBC.|
 
 #### Patient Resource
 
@@ -39,7 +52,7 @@ All interactions will primarily use the Patient resource.  The Patient resource 
 
 ##### Patient Extensions
 
-There are several extensions that are applied to the Patient resource.  The list below is an overview, more details on the extensions can be found be following the links on the Patient snapshot page.
+There are several extensions that are applied to the Patient resource.  The list below is an overview, more details on the extensions can be found by following the links on the Patient resource snapshot [page](StructureDefinition-bc-patient.html) .
 
 Extension Name | Description | 
 :--- | :--- |
@@ -47,6 +60,7 @@ bc-business-period-extension | A Period extension for effective dates.
 bc-validation-status-extension | A code that represents the address validation status.  This will be part of every Patient.address
 bc-death-date-extension | An extension that indicates the date of death.  The Patient resource has a boolean flag for death, this is the date.
 bc-death-date-flag-business-period-extension | A Period extension for effective dates on the death date flag.
+bc-*-history-extension | The set of history extensions are necessary to add historical records to the Patient resource such as gender.
 
 ##### Codes and Value Sets
 

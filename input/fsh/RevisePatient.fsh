@@ -41,9 +41,10 @@ Usage: #definition
 * parameter[3].max = "1"
 * parameter[3].documentation = "UserId of sender."
 * parameter[3].type = #Identifier
-* parameter[4].name = #mothersPHN
+* parameter[4].name = #sender
 * parameter[4].use = #in
-* parameter[4].min = 0
+* parameter[4].min = 1
 * parameter[4].max = "1"
-* parameter[4].documentation = "The newborn Patient mother's PHN in a RelatedPerson resource."
-* parameter[4].type = #RelatedPerson
+* parameter[4].documentation = "Source of request"
+* parameter[4].type = #Identifier
+

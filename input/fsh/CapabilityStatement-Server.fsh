@@ -19,10 +19,13 @@ Get Demographics with Eligibility- used when a user would like to find a Patient
 Revise Patient - used when a user is communicating a change or request for a new PHN to the Client Registry.
 </li>
 <li>
+Partial Revise Patient - used when a user is communicating a change to the Client Registry and isn't capable of sending in the full Patient resource.  E.g. all Patient attributes are not locally persisted.
+</li>
+<li>
 Merge Patient - used when a user is communicating that an individual has multiple Patient records and which record should survive and which record(s) should be marked as non-surviving.
 </li>
 <li>
-Add Paitent - used for newborns and 'force create' interactions
+Add Patient - used for newborns and 'force create' interactions
 </li>
 </ul>
 
@@ -36,6 +39,8 @@ Add Paitent - used for newborns and 'force create' interactions
 <li>$AddPatient.Async</li>
 <li>$RevisePatient</li>
 <li>$RevisePatient.Async</li>
+<li>$PartialRevisePatient</li>
+<li>$PartialRevisePatient.Async</li>
 <li>$MergePatient</li>
 <li>$MergePatient.Async</li>
 </ul>
@@ -161,6 +166,20 @@ The FindCandidates FHIR Operation search SHALL use the following name-value para
 		<td>
 			<div>
 				<p>Message sender</p>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>IN</td>
+		<td>enterer</td>
+		<td>0..1</td>
+		<td>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
+		</td>
+		<td></td>
+		<td>
+			<div>
+				<p>UserId of sender</p>
 			</div>
 		</td>
 	</tr>
@@ -571,6 +590,34 @@ The AddPatient and RevisePatient FHIR Operations SHALL use the following name-va
 	</tr>
 	<tr>
 		<td>IN</td>
+		<td>sender</td>
+		<td>1..1</td>
+		<td>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
+		</td>
+		<td></td>
+		<td>
+			<div>
+				<p>Source of request</p>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>IN</td>
+		<td>enterer</td>
+		<td>0..1</td>
+		<td>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
+		</td>
+		<td></td>
+		<td>
+			<div>
+				<p>UserId of sender</p>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>IN</td>
 		<td>patient</td>
 		<td>1..1</td>
 		<td>
@@ -580,6 +627,103 @@ The AddPatient and RevisePatient FHIR Operations SHALL use the following name-va
 		<td>
 			<div>
 				<p>The Patient.</p>
+			</div>
+		</td>
+	</tr>
+</table>
+
+<h3>Partial Revise Patient</h3>
+<p>
+The PartialRevisePatient FHIR Operation SHALL use the following name-value parameters pairs, mandatory or optional according to the cardinality rules below.
+</p>
+<table class=\"grid\">
+	<tr>
+		<td>
+			<b>Use</b>
+		</td>
+		<td>
+			<b>Name</b>
+		</td>
+		<td>
+			<b>Cardinality</b>
+		</td>
+		<td>
+			<b>Type</b>
+		</td>
+		<td>
+			<b>Binding</b>
+		</td>
+		<td>
+			<b>Documentation</b>
+		</td>
+	</tr>
+	<tr>
+		<td>IN</td>
+		<td>messageId</td>
+		<td>1..1</td>
+		<td>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
+                </td>
+		<td></td>
+		<td>
+			<div>
+				<p>Unique message ID.</p>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>IN</td>
+		<td>messageDate</td>
+		<td>1..1</td>
+		<td>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
+                </td>
+		<td></td>
+		<td>
+			<div>
+				<p>Message date and time.</p>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>IN</td>
+		<td>sender</td>
+		<td>1..1</td>
+		<td>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
+		</td>
+		<td></td>
+		<td>
+			<div>
+				<p>Source of request</p>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>IN</td>
+		<td>enterer</td>
+		<td>0..1</td>
+		<td>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
+		</td>
+		<td></td>
+		<td>
+			<div>
+				<p>UserId of sender</p>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>IN</td>
+		<td>patchOperation</td>
+		<td>1..1</td>
+		<td>
+			<a href=\"http://hl7.org/fhir/R4/parameters.html\">Parameters</a>
+		</td>
+		<td></td>
+		<td>
+			<div>
+				<p>The path operation parameters.</p>
 			</div>
 		</td>
 	</tr>
@@ -640,6 +784,20 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 	</tr>
 	<tr>
 		<td>IN</td>
+		<td>sender</td>
+		<td>1..1</td>
+		<td>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
+		</td>
+		<td></td>
+		<td>
+			<div>
+				<p>Source of request</p>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>IN</td>
 		<td>patient</td>
 		<td>1..1</td>
 		<td>
@@ -678,20 +836,26 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 * rest[0].resource[0].operation[2].definition = Canonical(GetDemographics.withEligibility)
 * rest[0].resource[0].operation[3].name = "RevisePatient"
 * rest[0].resource[0].operation[3].definition = Canonical(RevisePatient)
-* rest[0].resource[0].operation[4].name = "AddPatient"
-* rest[0].resource[0].operation[4].definition = Canonical(AddPatient)
-* rest[0].resource[0].operation[5].name = "MergePatient"
-* rest[0].resource[0].operation[5].definition = Canonical(MergePatient)
+* rest[0].resource[0].operation[4].name = "PartialRevisePatient"
+* rest[0].resource[0].operation[4].definition = Canonical(PartialRevisePatient)
+* rest[0].resource[0].operation[5].name = "AddPatient"
+* rest[0].resource[0].operation[5].definition = Canonical(AddPatient)
+* rest[0].resource[0].operation[6].name = "MergePatient"
+* rest[0].resource[0].operation[6].definition = Canonical(MergePatient)
 
 // definition of async is the same as the synchronous
-* rest[0].resource[0].operation[6].name = "AddPatient.Async"
-* rest[0].resource[0].operation[6].definition = Canonical(AddPatient)
-* rest[0].resource[0].operation[6].documentation = "
-Although this is an independent Operation the definition is the same as the [AddPatient](OperationDefinition-bc-patient-add.html)"
-* rest[0].resource[0].operation[7].name = "RevisePatient.Async"
-* rest[0].resource[0].operation[7].definition = Canonical(RevisePatient)
+* rest[0].resource[0].operation[7].name = "AddPatient.Async"
+* rest[0].resource[0].operation[7].definition = Canonical(AddPatient)
 * rest[0].resource[0].operation[7].documentation = "
+Although this is an independent Operation the definition is the same as the [AddPatient](OperationDefinition-bc-patient-add.html)"
+* rest[0].resource[0].operation[8].name = "RevisePatient.Async"
+* rest[0].resource[0].operation[8].definition = Canonical(RevisePatient)
+* rest[0].resource[0].operation[8].documentation = "
 Although this is an independent Operation the definition is the same as the [RevisePatient](OperationDefinition-bc-patient-revise.html)"
+* rest[0].resource[0].operation[9].name = "PartialRevisePatient.Async"
+* rest[0].resource[0].operation[9].definition = Canonical(PartialRevisePatient)
+* rest[0].resource[0].operation[9].documentation = "
+Although this is an independent Operation the definition is the same as the [PartialRevisePatient](OperationDefinition-bc-patient-partial-revise.html)"
 * rest[0].resource[0].operation[8].name = "MergePatient.Async"
 * rest[0].resource[0].operation[8].definition = Canonical(MergePatient)
 * rest[0].resource[0].operation[8].documentation = "

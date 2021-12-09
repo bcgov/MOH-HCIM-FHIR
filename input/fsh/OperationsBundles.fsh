@@ -102,3 +102,25 @@ Description:  "A Bundle that is used in the Client Registry response to Merge Pa
 * entry contains parameters 1..1 MS and operationOutcome 0..1 MS
 * entry[parameters].resource only BCMetadataParameters
 * entry[operationOutcome].resource only OperationOutcome
+
+Profile: BCPartialReviseResponseBundle
+Parent: Bundle
+Id: bc-partial-revise-response-bundle
+Description: "A Bundle that is used in the Client Registry response to Partial Revise Patient requests."
+* type 1..1 MS
+* type = #collection (exactly)
+* entry 3..*
+* entry.resource 1..1 MS
+* entry.fullUrl 1..1 MS
+* entry.search 0..1
+* entry.request 0..1 MS
+* entry.response 0..1
+* entry ^slicing.discriminator.type = #type
+* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.rules = #open
+* entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a partial revise request."
+* entry contains patient 0..1 MS and parameters 1..1 MS and operationOutcome 0..1 MS
+* entry[parameters].resource only BCMetadataParameters
+* entry[operationOutcome].resource only OperationOutcome
+* entry[patient].resource only BCPatient
+
