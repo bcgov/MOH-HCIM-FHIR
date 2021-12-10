@@ -6,14 +6,14 @@ Description: "Codes used to describe the merge status."
 * #cancelled "cancelled" "The merge cancels this Patient."
 
 ValueSet: BCMergeStatusVS
-Title: "BC Merge Status value set"
+Title: "BC Merge Status Value Set"
 Id: bc-merge-status-value-set
 Description: "BC Merge Status value set used to describe the merge status of a Patient."
 * codes from system BCMergeStatusCS
 
 CodeSystem: BCAddressValidationCS
 Id: bc-client-registry-address-validation-code-system
-Title: "BC Client Registry address validation status code"
+Title: "BC Client Registry Address Validation Status Code"
 Description: "Codes used to define the address validation status."
 * #valid   "valid"   "The address is valid, i.e. there is a reasonable good chance this address is known to Canada Post."
 * #invalid "invalid" "The address validation status is invalid and like not recognized by Canada Post."
@@ -26,7 +26,7 @@ Description: "BC Client Registry Operation Outcome details code system"
 
 
 ValueSet: BCAddressValidationVS
-Title: "BC Address Validation value set"
+Title: "BC Address Validation Value Set"
 Id: bc-address-validation-value-set
 Description: "BC Address Validation value set used to describe the validation status of an address"
 * codes from system BCAddressValidationCS
@@ -42,7 +42,7 @@ Id: bc-name-use-value-set
 * exclude http://hl7.org/fhir/name-use#maiden
 
 ValueSet: BCContactPointUseVS
-Title: "BC Contact Point Use value set."
+Title: "BC Contact Point Use Value Set"
 Description: "BC Contact Point Use value set, sliced to meet BC constraints."
 Id: bc-contact-point-use-value-set
 * include codes from valueset ContactPointUse
@@ -50,7 +50,7 @@ Id: bc-contact-point-use-value-set
 * exclude http://hl7.org/fhir/contact-point-use#temp
 
 ValueSet: BCContactPointSystemVS
-Title: "BC Contact Point System value set."
+Title: "BC Contact Point System Value Set"
 Description: "BC Contact Point System value set, sliced to meet BC constraints."
 Id: bc-contact-point-system-value-set
 * include codes from valueset ContactPointSystem
@@ -61,7 +61,7 @@ Id: bc-contact-point-system-value-set
 * exclude http://hl7.org/fhir/contact-point-system#other
 
 //ValueSet: BCAddressUse
-//Title: "BC Address Use value set."
+//Title: "BC Address Use Value Set"
 //Description: "BC Address Use value set, sliced to meet BC constraints."
 //Id: bc-address-use-value-set
 //* include codes from valueset AddressUse
@@ -71,7 +71,7 @@ Id: bc-contact-point-system-value-set
 //* exclude http://hl7.org/fhir/address-use#billing
 
 ValueSet: BCAddressTypeVS
-Title: "BC Address Type value set."
+Title: "BC Address Type Value Set"
 Description: "BC Address Type value set, sliced to meet BC constraints."
 Id: bc-address-type-value-set
 * include codes from valueset AddressType

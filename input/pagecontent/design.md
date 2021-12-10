@@ -1,7 +1,7 @@
 ><span style="color:red">Note</span><br>This specification is currently published as a Draft Standard on the ministry GitHub and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.
 
 ### Design Approach
-The approach to design a FHIR interface to the Client Registry was to keep the interactions as similar as possible to the current system.  However where necessary additions and improvements would be considered.
+The approach to design a FHIR interface to the Client Registry was to keep the interactions as similar as possible to the current system.  Any necessary additions and improvements were also considered for inclusion.
 Namely:
 - The design team will match current Client Registry interactions 1 to 1 with equivalent FHIR interactions for all the flavours of:
 	- Find Candidates
