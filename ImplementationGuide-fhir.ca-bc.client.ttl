@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "BCHealthClientIdentityManagement"];
   fhir:ImplementationGuide.title [ fhir:value "BC Client Registry FHIR Implementation Guide"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
-  fhir:ImplementationGuide.date [ fhir:value "2021-12-10T17:02:58+00:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2021-12-10T22:55:51+00:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "BC Ministry of Health"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -451,7 +451,7 @@
          fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birthdate-history-extension>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/bc-birthdate-history-extension" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Birth Date history" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Birth Date History" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This extension allows the Client Registry to include historical birth dates in a single Patient resource." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -465,7 +465,7 @@
          fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/bc-business-period-extension" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC business dates" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Business Dates" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "The effective dates for the parent element." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -479,8 +479,8 @@
          fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-extension>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/bc-death-date-extension" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Patient death date" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The Patients death date and time as recorded in the Client Registry." ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Patient Death Date" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The Patients death date and time as recorded in the Client Registry.  This also include death date history as requried." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 12;
@@ -490,11 +490,11 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-flag-business-period-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-death-date-flag-business-period-extension" ]
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-history-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-death-date-history-extension" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Patient Death Date flag business date" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The effective dates for the Patient's Death Date flag." ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Death Date History" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This extension allows the Client Registry to include historical death dates and flags in a single Patient resource." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 13;
@@ -504,11 +504,11 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-deathdate-flag-history-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-deathdate-flag-history-extension" ]
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-flag-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-death-flag-extension" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Death Date history" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This extension allows the Client Registry to include historical death dates and flags in a single Patient resource." ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Patient Death Date" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The Patients death date and time as recorded in the Client Registry." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 14;
@@ -518,10 +518,10 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-deathdate-history-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-deathdate-history-extension" ]
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-flag-history-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-death-flag-history-extension" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Death Date history" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Death Flag History" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This extension allows the Client Registry to include historical death dates and flags in a single Patient resource." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -535,7 +535,7 @@
          fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/bc-gender-history-extension" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC gender history" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Gender History" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This extension allows the Client Registry to include historical gender codes in a single Patient resource." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -549,7 +549,7 @@
          fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/bc-merge-status-extension" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Merge status code" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Merge Status Code" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "A code that represents the Merge status of the Patient." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -563,7 +563,7 @@
          fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-multiplebirth-history-extension>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/bc-multiplebirth-history-extension" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC multiple birth history" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC multiple Birth History" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This extension allows the Client Registry to include historical multiple birth values in a single Patient resource." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -577,7 +577,7 @@
          fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/bc-validation-status-extension" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Address validation status code" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Address Validation Status Code" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "A code that represents the validation status of the address" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -591,7 +591,7 @@
          fhir:link <http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-address-type-value-set>;
          fhir:Reference.reference [ fhir:value "ValueSet/bc-address-type-value-set" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Address Type value set." ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Address Type Value Set" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "BC Address Type value set, sliced to meet BC constraints." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -605,7 +605,7 @@
          fhir:link <http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-address-validation-value-set>;
          fhir:Reference.reference [ fhir:value "ValueSet/bc-address-validation-value-set" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Address Validation value set" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Address Validation Value Set" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "BC Address Validation value set used to describe the validation status of an address" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -619,7 +619,7 @@
          fhir:link <http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set>;
          fhir:Reference.reference [ fhir:value "ValueSet/bc-contact-point-system-value-set" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Contact Point System value set." ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Contact Point System Value Set" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "BC Contact Point System value set, sliced to meet BC constraints." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -633,7 +633,7 @@
          fhir:link <http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set>;
          fhir:Reference.reference [ fhir:value "ValueSet/bc-contact-point-use-value-set" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Contact Point Use value set." ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Contact Point Use Value Set" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "BC Contact Point Use value set, sliced to meet BC constraints." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -647,7 +647,7 @@
          fhir:link <http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-merge-status-value-set>;
          fhir:Reference.reference [ fhir:value "ValueSet/bc-merge-status-value-set" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Merge Status value set" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Merge Status Value Set" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "BC Merge Status value set used to describe the merge status of a Patient." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -675,7 +675,7 @@
          fhir:link <http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-address-validation-code-system>;
          fhir:Reference.reference [ fhir:value "CodeSystem/bc-client-registry-address-validation-code-system" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Client Registry address validation status code" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BC Client Registry Address Validation Status Code" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes used to define the address validation status." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [

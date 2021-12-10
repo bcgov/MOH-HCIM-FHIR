@@ -6,8 +6,29 @@
     <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient-GetDemographics-withHistory-Example" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">BCPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9983652763</p><p><b>name</b>: JILLIAN DAWN THIRD NAME COOK-ADAMS , TILLIAN DUSK THIRD NAME COOK-ADAMS </p><p><b>telecom</b>: ph: 6048883322(HOME), ph: 6048883322(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1972-10-16</p><p><b>deceased</b>: false</p><p><b>address</b>: </p><ul><li>321 SUNSHINE PL NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>421 SUNSHINE PL NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>521 CLOUDY RD NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>1824 CROSS RD LINE 2 LINE 3 VANCOUVER BC V9L 4H2 </li></ul><p><b>multipleBirth</b>: true</p></div>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient-GetDemographics-withHistory-Example" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">BCPatient</a></p></div><blockquote><p><b>BC Patient Death Date</b></p><p><b>value</b>: 2021-10-12T00:00:00-08:00</p><p><b>value</b>: 2021-10-12T00:00:00-08:00 --&gt; (ongoing)</p></blockquote><p><b>identifier</b>: Jurisdictional health number: 9983652763</p><p><b>name</b>: JILLIAN DAWN THIRD NAME COOK-ADAMS , TILLIAN DUSK THIRD NAME COOK-ADAMS </p><p><b>telecom</b>: ph: 6048883322(HOME), ph: 6048883322(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1972-10-16</p><p><b>deceased</b>: false</p><p><b>address</b>: </p><ul><li>321 SUNSHINE PL NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>421 SUNSHINE PL NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>521 CLOUDY RD NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>1824 CROSS RD LINE 2 LINE 3 VANCOUVER BC V9L 4H2 </li></ul><p><b>multipleBirth</b>: true</p></div>
   </text>
+  <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-extension">
+    <extension url="deathDate">
+      <valueDateTime value="2021-10-12T00:00:00-08:00"/>
+    </extension>
+    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+      <valuePeriod>
+        <start value="2021-10-12T00:00:00-08:00"/>
+      </valuePeriod>
+    </extension>
+    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-history-extension">
+      <extension url="businessDates">
+        <valuePeriod>
+          <start value="2020-10-11T00:00:00-08:00"/>
+          <end value="2021-10-12T00:00:00-08:00"/>
+        </valuePeriod>
+      </extension>
+      <extension url="deathDate">
+        <valueDateTime value="2020-10-11T00:00:00-08:00"/>
+      </extension>
+    </extension>
+  </extension>
   <identifier>
     <type>
       <coding>
@@ -92,39 +113,22 @@
     </extension>
   </birthDate>
   <deceasedBoolean value="false">
-    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
-      <valuePeriod>
-        <start value="2021-12-12"/>
-      </valuePeriod>
-    </extension>
-    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-extension">
-      <valueDateTime value="2021-12-11T00:00:00-08:00"/>
-    </extension>
-    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-flag-business-period-extension">
-      <valuePeriod>
-        <start value="2021-12-11"/>
-      </valuePeriod>
-    </extension>
-    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-deathdate-history-extension">
-      <extension url="deathDateBusinessDates">
+    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-flag-extension">
+      <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
         <valuePeriod>
-          <start value="2021-12-10T00:00:00-08:00"/>
-          <end value="2021-12-11T00:00:00-08:00"/>
+          <start value="2021-10-12T00:00:00-08:00"/>
         </valuePeriod>
       </extension>
-      <extension url="deathDate">
-        <valueDateTime value="2021-12-10T00:00:00-08:00"/>
-      </extension>
-    </extension>
-    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-deathdate-flag-history-extension">
-      <extension url="deathDateFlagBusinessDates">
-        <valuePeriod>
-          <start value="2021-12-10T00:00:00-08:00"/>
-          <end value="2021-12-11T00:00:00-08:00"/>
-        </valuePeriod>
-      </extension>
-      <extension url="deathDateFlag">
-        <valueBoolean value="true"/>
+      <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-flag-history-extension">
+        <extension url="deathFlag">
+          <valueBoolean value="true"/>
+        </extension>
+        <extension url="businessDates">
+          <valuePeriod>
+            <start value="2021-10-11T00:00:00-08:00"/>
+            <end value="2021-10-12T00:00:00-08:00"/>
+          </valuePeriod>
+        </extension>
       </extension>
     </extension>
   </deceasedBoolean>

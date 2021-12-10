@@ -10,7 +10,7 @@
   "name": "BCHealthClientIdentityManagement",
   "title": "BC Client Registry FHIR Implementation Guide",
   "status": "draft",
-  "date": "2021-12-10T17:02:58+00:00",
+  "date": "2021-12-10T22:55:51+00:00",
   "publisher": "BC Ministry of Health",
   "contact": [
     {
@@ -468,7 +468,7 @@
         "reference": {
           "reference": "StructureDefinition/bc-birthdate-history-extension"
         },
-        "name": "BC Birth Date history",
+        "name": "BC Birth Date History",
         "description": "This extension allows the Client Registry to include historical birth dates in a single Patient resource.",
         "exampleBoolean": false
       },
@@ -482,7 +482,7 @@
         "reference": {
           "reference": "StructureDefinition/bc-business-period-extension"
         },
-        "name": "BC business dates",
+        "name": "BC Business Dates",
         "description": "The effective dates for the parent element.",
         "exampleBoolean": false
       },
@@ -496,8 +496,8 @@
         "reference": {
           "reference": "StructureDefinition/bc-death-date-extension"
         },
-        "name": "BC Patient death date",
-        "description": "The Patients death date and time as recorded in the Client Registry.",
+        "name": "BC Patient Death Date",
+        "description": "The Patients death date and time as recorded in the Client Registry.  This also include death date history as requried.",
         "exampleBoolean": false
       },
       {
@@ -508,23 +508,9 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/bc-death-date-flag-business-period-extension"
+          "reference": "StructureDefinition/bc-death-date-history-extension"
         },
-        "name": "BC Patient Death Date flag business date",
-        "description": "The effective dates for the Patient's Death Date flag.",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:extension"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/bc-deathdate-flag-history-extension"
-        },
-        "name": "BC Death Date history",
+        "name": "BC Death Date History",
         "description": "This extension allows the Client Registry to include historical death dates and flags in a single Patient resource.",
         "exampleBoolean": false
       },
@@ -536,9 +522,23 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/bc-deathdate-history-extension"
+          "reference": "StructureDefinition/bc-death-flag-extension"
         },
-        "name": "BC Death Date history",
+        "name": "BC Patient Death Date",
+        "description": "The Patients death date and time as recorded in the Client Registry.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/bc-death-flag-history-extension"
+        },
+        "name": "BC Death Flag History",
         "description": "This extension allows the Client Registry to include historical death dates and flags in a single Patient resource.",
         "exampleBoolean": false
       },
@@ -552,7 +552,7 @@
         "reference": {
           "reference": "StructureDefinition/bc-gender-history-extension"
         },
-        "name": "BC gender history",
+        "name": "BC Gender History",
         "description": "This extension allows the Client Registry to include historical gender codes in a single Patient resource.",
         "exampleBoolean": false
       },
@@ -566,7 +566,7 @@
         "reference": {
           "reference": "StructureDefinition/bc-merge-status-extension"
         },
-        "name": "BC Merge status code",
+        "name": "BC Merge Status Code",
         "description": "A code that represents the Merge status of the Patient.",
         "exampleBoolean": false
       },
@@ -580,7 +580,7 @@
         "reference": {
           "reference": "StructureDefinition/bc-multiplebirth-history-extension"
         },
-        "name": "BC multiple birth history",
+        "name": "BC multiple Birth History",
         "description": "This extension allows the Client Registry to include historical multiple birth values in a single Patient resource.",
         "exampleBoolean": false
       },
@@ -594,7 +594,7 @@
         "reference": {
           "reference": "StructureDefinition/bc-validation-status-extension"
         },
-        "name": "BC Address validation status code",
+        "name": "BC Address Validation Status Code",
         "description": "A code that represents the validation status of the address",
         "exampleBoolean": false
       },
@@ -608,7 +608,7 @@
         "reference": {
           "reference": "ValueSet/bc-address-type-value-set"
         },
-        "name": "BC Address Type value set.",
+        "name": "BC Address Type Value Set",
         "description": "BC Address Type value set, sliced to meet BC constraints.",
         "exampleBoolean": false
       },
@@ -622,7 +622,7 @@
         "reference": {
           "reference": "ValueSet/bc-address-validation-value-set"
         },
-        "name": "BC Address Validation value set",
+        "name": "BC Address Validation Value Set",
         "description": "BC Address Validation value set used to describe the validation status of an address",
         "exampleBoolean": false
       },
@@ -636,7 +636,7 @@
         "reference": {
           "reference": "ValueSet/bc-contact-point-system-value-set"
         },
-        "name": "BC Contact Point System value set.",
+        "name": "BC Contact Point System Value Set",
         "description": "BC Contact Point System value set, sliced to meet BC constraints.",
         "exampleBoolean": false
       },
@@ -650,7 +650,7 @@
         "reference": {
           "reference": "ValueSet/bc-contact-point-use-value-set"
         },
-        "name": "BC Contact Point Use value set.",
+        "name": "BC Contact Point Use Value Set",
         "description": "BC Contact Point Use value set, sliced to meet BC constraints.",
         "exampleBoolean": false
       },
@@ -664,7 +664,7 @@
         "reference": {
           "reference": "ValueSet/bc-merge-status-value-set"
         },
-        "name": "BC Merge Status value set",
+        "name": "BC Merge Status Value Set",
         "description": "BC Merge Status value set used to describe the merge status of a Patient.",
         "exampleBoolean": false
       },
@@ -692,7 +692,7 @@
         "reference": {
           "reference": "CodeSystem/bc-client-registry-address-validation-code-system"
         },
-        "name": "BC Client Registry address validation status code",
+        "name": "BC Client Registry Address Validation Status Code",
         "description": "Codes used to define the address validation status.",
         "exampleBoolean": false
       },

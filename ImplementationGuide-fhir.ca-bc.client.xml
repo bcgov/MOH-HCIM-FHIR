@@ -11,7 +11,7 @@
   <name value="BCHealthClientIdentityManagement"/>
   <title value="BC Client Registry FHIR Implementation Guide"/>
   <status value="draft"/>
-  <date value="2021-12-10T17:02:58+00:00"/>
+  <date value="2021-12-10T22:55:51+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -323,7 +323,7 @@
       <reference>
         <reference value="StructureDefinition/bc-birthdate-history-extension"/>
       </reference>
-      <name value="BC Birth Date history"/>
+      <name value="BC Birth Date History"/>
       <description value="This extension allows the Client Registry to include historical birth dates in a single Patient resource."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -334,7 +334,7 @@
       <reference>
         <reference value="StructureDefinition/bc-business-period-extension"/>
       </reference>
-      <name value="BC business dates"/>
+      <name value="BC Business Dates"/>
       <description value="The effective dates for the parent element."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -345,8 +345,8 @@
       <reference>
         <reference value="StructureDefinition/bc-death-date-extension"/>
       </reference>
-      <name value="BC Patient death date"/>
-      <description value="The Patients death date and time as recorded in the Client Registry."/>
+      <name value="BC Patient Death Date"/>
+      <description value="The Patients death date and time as recorded in the Client Registry.  This also include death date history as requried."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -354,20 +354,9 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/bc-death-date-flag-business-period-extension"/>
+        <reference value="StructureDefinition/bc-death-date-history-extension"/>
       </reference>
-      <name value="BC Patient Death Date flag business date"/>
-      <description value="The effective dates for the Patient&#39;s Death Date flag."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/bc-deathdate-flag-history-extension"/>
-      </reference>
-      <name value="BC Death Date history"/>
+      <name value="BC Death Date History"/>
       <description value="This extension allows the Client Registry to include historical death dates and flags in a single Patient resource."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -376,9 +365,20 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/bc-deathdate-history-extension"/>
+        <reference value="StructureDefinition/bc-death-flag-extension"/>
       </reference>
-      <name value="BC Death Date history"/>
+      <name value="BC Patient Death Date"/>
+      <description value="The Patients death date and time as recorded in the Client Registry."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/bc-death-flag-history-extension"/>
+      </reference>
+      <name value="BC Death Flag History"/>
       <description value="This extension allows the Client Registry to include historical death dates and flags in a single Patient resource."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -389,7 +389,7 @@
       <reference>
         <reference value="StructureDefinition/bc-gender-history-extension"/>
       </reference>
-      <name value="BC gender history"/>
+      <name value="BC Gender History"/>
       <description value="This extension allows the Client Registry to include historical gender codes in a single Patient resource."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -400,7 +400,7 @@
       <reference>
         <reference value="StructureDefinition/bc-merge-status-extension"/>
       </reference>
-      <name value="BC Merge status code"/>
+      <name value="BC Merge Status Code"/>
       <description value="A code that represents the Merge status of the Patient."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -411,7 +411,7 @@
       <reference>
         <reference value="StructureDefinition/bc-multiplebirth-history-extension"/>
       </reference>
-      <name value="BC multiple birth history"/>
+      <name value="BC multiple Birth History"/>
       <description value="This extension allows the Client Registry to include historical multiple birth values in a single Patient resource."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -422,7 +422,7 @@
       <reference>
         <reference value="StructureDefinition/bc-validation-status-extension"/>
       </reference>
-      <name value="BC Address validation status code"/>
+      <name value="BC Address Validation Status Code"/>
       <description value="A code that represents the validation status of the address"/>
       <exampleBoolean value="false"/>
     </resource>
@@ -433,7 +433,7 @@
       <reference>
         <reference value="ValueSet/bc-address-type-value-set"/>
       </reference>
-      <name value="BC Address Type value set."/>
+      <name value="BC Address Type Value Set"/>
       <description value="BC Address Type value set, sliced to meet BC constraints."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -444,7 +444,7 @@
       <reference>
         <reference value="ValueSet/bc-address-validation-value-set"/>
       </reference>
-      <name value="BC Address Validation value set"/>
+      <name value="BC Address Validation Value Set"/>
       <description value="BC Address Validation value set used to describe the validation status of an address"/>
       <exampleBoolean value="false"/>
     </resource>
@@ -455,7 +455,7 @@
       <reference>
         <reference value="ValueSet/bc-contact-point-system-value-set"/>
       </reference>
-      <name value="BC Contact Point System value set."/>
+      <name value="BC Contact Point System Value Set"/>
       <description value="BC Contact Point System value set, sliced to meet BC constraints."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -466,7 +466,7 @@
       <reference>
         <reference value="ValueSet/bc-contact-point-use-value-set"/>
       </reference>
-      <name value="BC Contact Point Use value set."/>
+      <name value="BC Contact Point Use Value Set"/>
       <description value="BC Contact Point Use value set, sliced to meet BC constraints."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -477,7 +477,7 @@
       <reference>
         <reference value="ValueSet/bc-merge-status-value-set"/>
       </reference>
-      <name value="BC Merge Status value set"/>
+      <name value="BC Merge Status Value Set"/>
       <description value="BC Merge Status value set used to describe the merge status of a Patient."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -499,7 +499,7 @@
       <reference>
         <reference value="CodeSystem/bc-client-registry-address-validation-code-system"/>
       </reference>
-      <name value="BC Client Registry address validation status code"/>
+      <name value="BC Client Registry Address Validation Status Code"/>
       <description value="Codes used to define the address validation status."/>
       <exampleBoolean value="false"/>
     </resource>

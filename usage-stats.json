@@ -6,7 +6,7 @@
   "extensions": [
     {
       "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birthdate-history-extension",
-      "title": "BC Birth Date history",
+      "title": "BC Birth Date History",
       "types": [
         "Period",
         "date",
@@ -64,31 +64,16 @@
     },
     {
       "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
-      "title": "BC business dates",
+      "title": "BC Business Dates",
       "types": [
         "Period"
       ]
     },
     {
       "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-extension",
-      "title": "BC Patient death date",
+      "title": "BC Patient Death Date",
       "types": [
-        "dateTime"
-      ]
-    },
-    {
-      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-flag-business-period-extension",
-      "title": "BC Patient Death Date flag business date",
-      "types": [
-        "Period"
-      ]
-    },
-    {
-      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-deathdate-flag-history-extension",
-      "title": "BC Death Date history",
-      "types": [
-        "boolean",
-        "Period",
+        "dateTime",
         "base64Binary",
         "boolean",
         "canonical",
@@ -142,11 +127,125 @@
       ]
     },
     {
-      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-deathdate-history-extension",
-      "title": "BC Death Date history",
+      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-history-extension",
+      "title": "BC Death Date History",
       "types": [
         "Period",
         "dateTime",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-flag-extension",
+      "title": "BC Patient Death Date",
+      "types": [
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-flag-history-extension",
+      "title": "BC Death Flag History",
+      "types": [
+        "boolean",
+        "Period",
         "base64Binary",
         "boolean",
         "canonical",
@@ -201,7 +300,7 @@
     },
     {
       "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension",
-      "title": "BC gender history",
+      "title": "BC Gender History",
       "types": [
         "Period",
         "code",
@@ -260,7 +359,7 @@
     },
     {
       "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension",
-      "title": "BC Merge status code",
+      "title": "BC Merge Status Code",
       "types": [
         "code",
         "code"
@@ -268,7 +367,7 @@
     },
     {
       "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-multiplebirth-history-extension",
-      "title": "BC multiple birth history",
+      "title": "BC multiple Birth History",
       "types": [
         "Period",
         "base64Binary",
@@ -425,7 +524,7 @@
     },
     {
       "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
-      "title": "BC Address validation status code",
+      "title": "BC Address Validation Status Code",
       "types": [
         "code",
         "code"
@@ -509,34 +608,27 @@
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension": [
       "Bundle.entry.resource",
       "Bundle.entry.resource.birthDate",
-      "Bundle.entry.resource.deceasedBoolean",
       "Bundle.entry.resource.gender",
       "Bundle.entry.resource.multipleBirthBoolean",
+      "Extension",
       "Patient",
       "Patient.birthDate",
-      "Patient.deceasedBoolean",
-      "Patient.deceased[x]",
       "Patient.gender",
       "Patient.multipleBirthBoolean",
       "Patient.multipleBirth[x]"
     ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-extension": [
-      "Bundle.entry.resource.deceasedBoolean",
+      "Patient"
+    ],
+    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-history-extension": [
+      "Extension"
+    ],
+    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-flag-extension": [
       "Patient.deceasedBoolean",
       "Patient.deceased[x]"
     ],
-    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-flag-business-period-extension": [
-      "Bundle.entry.resource.deceasedBoolean",
-      "Patient.deceasedBoolean",
-      "Patient.deceased[x]"
-    ],
-    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-deathdate-flag-history-extension": [
-      "Patient.deceasedBoolean",
-      "Patient.deceased[x]"
-    ],
-    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-deathdate-history-extension": [
-      "Patient.deceasedBoolean",
-      "Patient.deceased[x]"
+    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-flag-history-extension": [
+      "Extension"
     ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension": [
       "Patient.gender"
