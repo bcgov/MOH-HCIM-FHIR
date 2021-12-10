@@ -6,11 +6,11 @@ InstanceOf: CapabilityStatement
 <p>This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when acting as a client.  I.e. when sending Patient change notifications.</p>
 
 <p>
-A Patient change notification is a RevisePatient FHIR Operation where the Client Registry sends a Patient/$RevisePatient request to a client.  After an onboarding process by the Client Registry operational support team and developing an endpoint, clients are prepared to receive these requests.
+A Patient change notification is a FHIR Operation where the Client Registry sends a Patient/$PatientNotification request to a client.  After an onboarding process by the Client Registry operational support team and developing an endpoint, clients are prepared to receive these requests.
 </p>
 
 <p>
-The following table describes the request and the three parameters; all are mandatory.  The Client Registry SHALL use the following IN parameters when sending a change notification.
+The following table describes the request and the four parameters; all are mandatory.  The Client Registry SHALL use the following IN parameters when sending a change notification.
 </p>
 <table class=\"grid\">
 	<tr>
@@ -63,6 +63,20 @@ The following table describes the request and the three parameters; all are mand
 	</tr>
 	<tr>
 		<td>IN</td>
+		<td>sender</td>
+		<td>1..1</td>
+		<td>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
+		</td>
+		<td></td>
+		<td>
+			<div>
+				<p>Message sender</p>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>IN</td>
 		<td>patient</td>
 		<td>1..1</td>
 		<td>
@@ -101,4 +115,4 @@ The Client Registry expects a 200 HTTP status code in return when the request is
 * rest[0].mode = #client
 * rest[0].resource[0].type = #Parameters
 * rest[0].resource[0].operation[0].name = "Distribution"
-* rest[0].resource[0].operation[0].definition = Canonical(RevisePatient)
+* rest[0].resource[0].operation[0].definition = Canonical(PatientNotification)

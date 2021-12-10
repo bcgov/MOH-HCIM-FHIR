@@ -110,6 +110,7 @@ https://..../$AddPatient |
 https://..../$AddPatient.Async |
 https://..../$MergePatient |
 https://..../$MergePatient.Async |
+https://..../$PatientNotification |
 
 The Async suffix informs the Client Registry FHIR server to perform the operation in an asynchronous manner.  The profiles and examples used in the Async versions of the Operations are identical to the synchronous Operations.
 
@@ -182,6 +183,12 @@ These business transactions will allow the user to:
 - resolve duplicate Patients.
 
 [Add, Revise and Merge page](reviseAndMerge.html)
+
+#### Distributions
+
+Distributions will use an endpoint called PatientNotification.  The FHIR structure of the interaction is the same as RevisePerson.
+
+[Patient Notifications](distributions.html)
 
 ##### Asynchronous Operations
 The asynchronous versions of Add, Revise and Merge Operations share the same request and response profile as the synchronous version.
