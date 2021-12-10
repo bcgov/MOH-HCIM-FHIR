@@ -11,7 +11,7 @@
   <name value="BCHealthClientIdentityManagement"/>
   <title value="BC Client Registry FHIR Implementation Guide"/>
   <status value="draft"/>
-  <date value="2021-12-09T21:10:46+00:00"/>
+  <date value="2021-12-10T17:02:58+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -1129,6 +1129,18 @@
       </reference>
       <name value="MergePatient"/>
       <description value="This operation is used to merge patients."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Operations"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="OperationDefinition/bc-patient-notification"/>
+      </reference>
+      <name value="PatientNotification"/>
+      <description value="This operation is used notify a user that a patient&#39;s record has chagned."/>
       <exampleBoolean value="false"/>
       <groupingId value="Operations"/>
     </resource>
