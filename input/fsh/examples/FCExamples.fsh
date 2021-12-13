@@ -93,9 +93,11 @@ Description: "Example of FindCandidates response Bundle.  Patient0 has PHN, alte
 
 * entry[parameters].resource = Parameters-FindCandidates-Response-Example
 * entry[parameters].fullUrl = "61061501-9953-4fba-87fe-6ae30e79da33"
+* entry[parameters].search.mode = #include
 
 * entry[operationOutcome].resource = OperationOutcome-Search-Example
 * entry[operationOutcome].fullUrl = "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"
+* entry[operationOutcome].search.mode = #outcome
 
 * entry[2].resource = Patient-0-Example
 * entry[2].search.score = 31
@@ -125,9 +127,11 @@ Description: "Example of FindCandidates with mother's PHN response Bundle."
 
 * entry[parameters].resource = Parameters-FindCandidates-Response-Example
 * entry[parameters].fullUrl = "61061501-9953-4fba-87fe-6ae30e79da33"
+* entry[parameters].search.mode = #include
 
 * entry[operationOutcome].resource = OperationOutcome-Search-Example
 * entry[operationOutcome].fullUrl = "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"
+* entry[operationOutcome].search.mode = #outcome
 
 // This response is complex .... the response to the Find Candidates
 // request must have child and mother with link->relatedPerson->child
@@ -166,6 +170,8 @@ Description: "Example of FindCandidates with mother's PHN response Bundle."
 
 * entry[5].resource = RelatedPerson-MotherOfBabyBoy-Example
 * entry[5].fullUrl = "urn:uuid:425b6c71-b198-4e75-b32c-1b3086935c6a"
+* entry[5].search.mode = #include
 
 * entry[6].resource = RelatedPerson-MotherOfBabyGirl-Example
 * entry[6].fullUrl = "urn:uuid:4a288971-8af6-4d77-a071-4ba3a10042e5"
+* entry[6].search.mode = #include

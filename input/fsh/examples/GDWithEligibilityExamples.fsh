@@ -49,15 +49,19 @@ Description: "Example of $GetDemographics.withEligibility operation response Bun
 
 * entry[parameters].resource = Parameters-GetDemographicsWithEligibility-Response-Example
 * entry[parameters].fullUrl = "urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33"
+* entry[parameters].search.mode = #include
 
 * entry[operationOutcome].resource = OperationOutcome-Search-Example
 * entry[operationOutcome].fullUrl = "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"
+* entry[operationOutcome].search.mode = #outcome
 
 * entry[2].resource = Patient-GetDemographics-Example
 * entry[2].fullUrl = "urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c"
+* entry[2].search.mode = #include
 
 * entry[3].resource = Coverage-Active-Example
 * entry[3].fullUrl = "urn:uuid:0e65065f-76a8-4578-a286-eb9c1ac3dbbc"
+* entry[3].search.mode = #include
 
 Instance: Coverage-Active-Example
 InstanceOf: Coverage
