@@ -12,7 +12,7 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * name 1..* MS
 * name.use 1..1
 * name.use from BCNameUseVS (required)
-* name.use ^short = "usual | official | nickanme"
+* name.use ^short = "usual | official | nickname"
 * telecom 0..* MS
 * telecom.use from BCContactPointUseVS (required)
 * telecom.use ^short = "home | work | mobile"

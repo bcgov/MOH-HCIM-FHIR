@@ -44,4 +44,4 @@ The request/responses are associated by the unique message id in the Parameters 
 
 ### Partial Revise Patient
 
-This is a special Operation that allows a user to selectively update a Patient record.  It has the same FHIR sturcture as Revise Patient except the Patient resource is replaced with a patch operation Parameters. The patchOperation describes how the Patient record should be changed.  This Operation should be used when the user doesn't have the full Patient record available.  See the [Partial Revise Operation](OperationDefinition-bc-patient-partial-revise.html).
+This is a special Operation that allows a user to selectively update a Patient record.  It has the same FHIR structure as Revise Patient except the Patient resource is replaced with a patch operation Parameters. The patchOperation describes how the Patient record should be changed.  This Operation should be used when the user doesn't have the full Patient record available.  See the [Partial Revise Operation](OperationDefinition-bc-patient-partial-revise.html).

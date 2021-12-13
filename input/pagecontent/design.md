@@ -186,7 +186,7 @@ These business transactions will allow the user to:
 
 #### Distributions
 
-Distributions will use an endpoint called PatientNotification.  The FHIR structure of the interaction is the same as RevisePerson.
+Distributions will use an endpoint called PatientNotification.  The FHIR structure of the interaction is the same as RevisePatient.
 
 [Patient Notifications](distributions.html)
 

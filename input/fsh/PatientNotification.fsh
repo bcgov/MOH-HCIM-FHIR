@@ -1,6 +1,6 @@
 Instance: PatientNotification
 InstanceOf: OperationDefinition
-Description: "This operation is used notify a user that a patient's record has chagned."
+Description: "This operation is used notify a user that a patient's record has changed."
 Usage: #definition
 * id = "bc-patient-notification"
 * url = "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-notification"
