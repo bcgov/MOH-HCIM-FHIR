@@ -58,8 +58,8 @@ Extension Name | Description |
 :--- | :--- |
 bc-business-period-extension | A Period extension for the business effective dates.
 bc-validation-status-extension | A code that represents the address validation status.  This will be part of every Patient.address
-bc-death-date-extension | An extension that indicates the date of death.  The Patient resource has a boolean flag for death, this is the date.
-bc-death-date-flag-business-period-extension | A Period extension for effective dates on the death date flag.
+bc-death-date-extension | An extension that indicates the date of death.  The Patient resource has a boolean flag for death; this is the date.
+bc-death-flag-business-period-extension | A Period extension for effective dates on the death flag.
 bc-*-history-extension | The set of history extensions are necessary to add historical records to the Patient resource such as gender.
 
 ##### Codes and Value Sets

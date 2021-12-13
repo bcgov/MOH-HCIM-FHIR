@@ -42,3 +42,6 @@ The asynchronous pattern for Revise and Merge Patient follow the same pattern as
 
 The request/responses are associated by the unique message id in the Parameters resource.  The client must create a FHIR Operation end point to receive the responses at a later time.  Specifically the response will be a Bundle, as documented in the [RevisePatient](OperationDefinition-bc-patient-revise.html) and [MergePatient](OperationDefinition-bc-patient-merge.html) operations.  The Parameter resource profile is [BCMetadataParameters](StructureDefinition-bc-metadata-parameters.html) and contains the IN parameters requestMessageId to link the messageId in the request to the asynchronous response.
 
+### Partial Revise Patient
+
+This is a special Operation that allows a user to selectively update a Patient record.  It has the same FHIR sturcture as Revise Patient except the Patient resource is replaced with a patch operation Parameters. The patchOperation describes how the Patient record should be changed.  This Operation should be used when the user doesn't have the full Patient record available.  See the [Partial Revise Operation](OperationDefinition-bc-patient-partial-revise.html).
