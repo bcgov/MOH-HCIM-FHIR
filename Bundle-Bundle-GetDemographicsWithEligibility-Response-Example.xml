@@ -40,6 +40,9 @@
         </parameter>
       </Parameters>
     </resource>
+    <search>
+      <mode value="include"/>
+    </search>
   </entry>
   <entry>
     <fullUrl value="urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"/>
@@ -47,13 +50,14 @@
       <OperationOutcome>
         <id value="OperationOutcome-Search-Example"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "OperationOutcome-Search-Example" </p></div><blockquote><p><b>issue</b></p><p><b>severity</b>: warning</p><p><b>code</b>: business-rule</p><p><b>details</b>: Warning: The Find Candidates Patient name has been modified to filter out invalid characters. <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#BCHCIM.GD.1.0017)</span></p></blockquote><blockquote><p><b>issue</b></p><p><b>severity</b>: error</p><p><b>code</b>: business-rule</p><p><b>details</b>: The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ... <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#BCHCIM.GD.1.0017)</span></p></blockquote></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "OperationOutcome-Search-Example" </p></div><blockquote><p><b>issue</b></p><p><b>severity</b>: warning</p><p><b>code</b>: business-rule</p><p><b>details</b>: Warning: The Find Candidates Patient name has been modified to filter out invalid characters. <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (bc-oo-codes#BCHCIM.GD.1.0017)</span></p></blockquote><blockquote><p><b>issue</b></p><p><b>severity</b>: error</p><p><b>code</b>: business-rule</p><p><b>details</b>: The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ... <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (bc-oo-codes#BCHCIM.GD.1.0017)</span></p></blockquote></div>
         </text>
         <issue>
           <severity value="warning"/>
           <code value="business-rule"/>
           <details>
             <coding>
+              <system value="http://hlth.gov.bc.ca/fhir/client/bc-oo-codes"/>
               <code value="BCHCIM.GD.1.0017"/>
             </coding>
             <text value="Warning: The Find Candidates Patient name has been modified to filter out invalid characters."/>
@@ -64,6 +68,7 @@
           <code value="business-rule"/>
           <details>
             <coding>
+              <system value="http://hlth.gov.bc.ca/fhir/client/bc-oo-codes"/>
               <code value="BCHCIM.GD.1.0017"/>
             </coding>
             <text value="The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ..."/>
@@ -71,6 +76,9 @@
         </issue>
       </OperationOutcome>
     </resource>
+    <search>
+      <mode value="outcome"/>
+    </search>
   </entry>
   <entry>
     <fullUrl value="urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c"/>
@@ -138,6 +146,9 @@
         </address>
       </Patient>
     </resource>
+    <search>
+      <mode value="include"/>
+    </search>
   </entry>
   <entry>
     <fullUrl value="urn:uuid:0e65065f-76a8-4578-a286-eb9c1ac3dbbc"/>
@@ -165,5 +176,8 @@
         </payor>
       </Coverage>
     </resource>
+    <search>
+      <mode value="include"/>
+    </search>
   </entry>
 </Bundle>

@@ -1,18 +1,18 @@
 ﻿BCHealthClientIdentityManagement : Validation Results
 =========================================
 
-err = 0, warn = 31, info = 8
+err = 0, warn = 3, info = 28
 IG Publisher Version: 1.1.90
-Generated Mon Dec 13 17:29:35 UTC 2021. FHIR version 4.0.1 for fhir.ca-bc.client#0.1.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
+Generated Mon Dec 13 18:06:26 UTC 2021. FHIR version 4.0.1 for fhir.ca-bc.client#0.1.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
  Build Errors : 1 / 0 / 0
- /github/workspace/fsh-generated/resources/Bundle-Bundle-AddPatient-Response-Example : 0 / 2 / 8
- /github/workspace/fsh-generated/resources/Bundle-Bundle-FindCandidates-Response-Example : 0 / 4 / 15
- /github/workspace/fsh-generated/resources/Bundle-Bundle-FindCandidates-Response-MomsPHN-Example : 0 / 6 / 19
- /github/workspace/fsh-generated/resources/Bundle-Bundle-GetDemographics-Response-Example : 0 / 4 / 8
- /github/workspace/fsh-generated/resources/Bundle-Bundle-GetDemographicsWithEligibility-Response-Example : 0 / 4 / 10
- /github/workspace/fsh-generated/resources/Bundle-Bundle-MergePatient-Response-Example : 0 / 2 / 5
- /github/workspace/fsh-generated/resources/Bundle-Bundle-PartialRevisePatient-Response-Example : 0 / 2 / 8
- /github/workspace/fsh-generated/resources/Bundle-Bundle-RevisePatient-Response-Example : 0 / 2 / 8
+ /github/workspace/fsh-generated/resources/Bundle-Bundle-AddPatient-Response-Example : 0 / 0 / 10
+ /github/workspace/fsh-generated/resources/Bundle-Bundle-FindCandidates-Response-Example : 0 / 0 / 17
+ /github/workspace/fsh-generated/resources/Bundle-Bundle-FindCandidates-Response-MomsPHN-Example : 0 / 0 / 21
+ /github/workspace/fsh-generated/resources/Bundle-Bundle-GetDemographics-Response-Example : 0 / 1 / 10
+ /github/workspace/fsh-generated/resources/Bundle-Bundle-GetDemographicsWithEligibility-Response-Example : 0 / 1 / 12
+ /github/workspace/fsh-generated/resources/Bundle-Bundle-MergePatient-Response-Example : 0 / 0 / 7
+ /github/workspace/fsh-generated/resources/Bundle-Bundle-PartialRevisePatient-Response-Example : 0 / 0 / 10
+ /github/workspace/fsh-generated/resources/Bundle-Bundle-RevisePatient-Response-Example : 0 / 0 / 10
  /github/workspace/fsh-generated/resources/CapabilityStatement-bc-hcim-capability-statement-client : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/CapabilityStatement-bc-hcim-capability-statement-server : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-bc-client-registry-address-validation-code-system : 0 / 0 / 2
@@ -29,8 +29,8 @@ Generated Mon Dec 13 17:29:35 UTC 2021. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-notification : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-partial-revise : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-revise : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/OperationOutcome-OperationOutcome-Example : 0 / 2 / 1
- /github/workspace/fsh-generated/resources/OperationOutcome-OperationOutcome-Search-Example : 0 / 2 / 1
+ /github/workspace/fsh-generated/resources/OperationOutcome-OperationOutcome-Example : 0 / 0 / 3
+ /github/workspace/fsh-generated/resources/OperationOutcome-OperationOutcome-Search-Example : 0 / 0 / 3
  /github/workspace/fsh-generated/resources/Parameters-Parameters-AddPatient-Example : 0 / 0 / 4
  /github/workspace/fsh-generated/resources/Parameters-Parameters-AddPatient-Newborn-Example : 0 / 0 / 6
  /github/workspace/fsh-generated/resources/Parameters-Parameters-AddPatient-Response-Example : 0 / 0 / 1
@@ -94,44 +94,36 @@ Generated Mon Dec 13 17:29:35 UTC 2021. FHIR version 4.0.1 for fhir.ca-bc.client
 == n/a ==
 ERROR: /github/workspace/output/OperationDefinition-bc-patient-merge.html#/html/body/div/div/div/div/div/div/p/a at Line 212, column 316: The link 'Parameters-MergePatient-TwoNonSurvivors.html' for "here" cannot be resolved
 == fsh-generated/resources/Bundle-Bundle-AddPatient-Response-Example.json ==
-WARNING: Bundle/Bundle-AddPatient-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/Bundle-AddPatient-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+INFORMATION: Bundle/Bundle-AddPatient-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[0].details.coding[0]: Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
+INFORMATION: Bundle/Bundle-AddPatient-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[1].details.coding[0]: Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
 == fsh-generated/resources/Bundle-Bundle-FindCandidates-Response-Example.json ==
-WARNING: Bundle/Bundle-FindCandidates-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/Bundle-FindCandidates-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+INFORMATION: Bundle/Bundle-FindCandidates-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[0].details.coding[0]: Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
+INFORMATION: Bundle/Bundle-FindCandidates-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[1].details.coding[0]: Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
 INFORMATION: Bundle/Bundle-FindCandidates-Response-Example: Bundle: No types could be determined from the search string, so the types can't be checked
-WARNING: Bundle/Bundle-FindCandidates-Response-Example: Bundle.entry[0]: SearchSet bundles should have search modes on the entries
-WARNING: Bundle/Bundle-FindCandidates-Response-Example: Bundle.entry[1]: SearchSet bundles should have search modes on the entries
 == fsh-generated/resources/Bundle-Bundle-FindCandidates-Response-MomsPHN-Example.json ==
 INFORMATION: Bundle/Bundle-FindCandidates-Response-MomsPHN-Example: Bundle.entry[5]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle
 INFORMATION: Bundle/Bundle-FindCandidates-Response-MomsPHN-Example: Bundle.entry[6]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle
-WARNING: Bundle/Bundle-FindCandidates-Response-MomsPHN-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/Bundle-FindCandidates-Response-MomsPHN-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+INFORMATION: Bundle/Bundle-FindCandidates-Response-MomsPHN-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[0].details.coding[0]: Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
+INFORMATION: Bundle/Bundle-FindCandidates-Response-MomsPHN-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[1].details.coding[0]: Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
 INFORMATION: Bundle/Bundle-FindCandidates-Response-MomsPHN-Example: Bundle: No types could be determined from the search string, so the types can't be checked
-WARNING: Bundle/Bundle-FindCandidates-Response-MomsPHN-Example: Bundle.entry[0]: SearchSet bundles should have search modes on the entries
-WARNING: Bundle/Bundle-FindCandidates-Response-MomsPHN-Example: Bundle.entry[1]: SearchSet bundles should have search modes on the entries
-WARNING: Bundle/Bundle-FindCandidates-Response-MomsPHN-Example: Bundle.entry[5]: SearchSet bundles should have search modes on the entries
-WARNING: Bundle/Bundle-FindCandidates-Response-MomsPHN-Example: Bundle.entry[6]: SearchSet bundles should have search modes on the entries
 == fsh-generated/resources/Bundle-Bundle-GetDemographics-Response-Example.json ==
-WARNING: Bundle/Bundle-GetDemographics-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/Bundle-GetDemographics-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+INFORMATION: Bundle/Bundle-GetDemographics-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[0].details.coding[0]: Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
+INFORMATION: Bundle/Bundle-GetDemographics-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[1].details.coding[0]: Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
 WARNING: Bundle/Bundle-GetDemographics-Response-Example: Bundle: SearchSet Bundles should have a self link that specifies what the search was
-WARNING: Bundle/Bundle-GetDemographics-Response-Example: Bundle: SearchSet bundles should have search modes on the entries
 == fsh-generated/resources/Bundle-Bundle-GetDemographicsWithEligibility-Response-Example.json ==
 INFORMATION: Bundle/Bundle-GetDemographicsWithEligibility-Response-Example: Bundle.entry[3]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle
-WARNING: Bundle/Bundle-GetDemographicsWithEligibility-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/Bundle-GetDemographicsWithEligibility-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+INFORMATION: Bundle/Bundle-GetDemographicsWithEligibility-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[0].details.coding[0]: Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
+INFORMATION: Bundle/Bundle-GetDemographicsWithEligibility-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[1].details.coding[0]: Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
 WARNING: Bundle/Bundle-GetDemographicsWithEligibility-Response-Example: Bundle: SearchSet Bundles should have a self link that specifies what the search was
-WARNING: Bundle/Bundle-GetDemographicsWithEligibility-Response-Example: Bundle: SearchSet bundles should have search modes on the entries
 == fsh-generated/resources/Bundle-Bundle-MergePatient-Response-Example.json ==
-WARNING: Bundle/Bundle-MergePatient-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/Bundle-MergePatient-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+INFORMATION: Bundle/Bundle-MergePatient-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[0].details.coding[0]: Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
+INFORMATION: Bundle/Bundle-MergePatient-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[1].details.coding[0]: Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
 == fsh-generated/resources/Bundle-Bundle-PartialRevisePatient-Response-Example.json ==
-WARNING: Bundle/Bundle-PartialRevisePatient-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/Bundle-PartialRevisePatient-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+INFORMATION: Bundle/Bundle-PartialRevisePatient-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[0].details.coding[0]: Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
+INFORMATION: Bundle/Bundle-PartialRevisePatient-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[1].details.coding[0]: Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
 == fsh-generated/resources/Bundle-Bundle-RevisePatient-Response-Example.json ==
-WARNING: Bundle/Bundle-RevisePatient-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/Bundle-RevisePatient-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+INFORMATION: Bundle/Bundle-RevisePatient-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[0].details.coding[0]: Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
+INFORMATION: Bundle/Bundle-RevisePatient-Response-Example: Bundle.entry[1].resource.ofType(OperationOutcome).issue[1].details.coding[0]: Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
 == fsh-generated/resources/CapabilityStatement-bc-hcim-capability-statement-client.json ==
 == fsh-generated/resources/CapabilityStatement-bc-hcim-capability-statement-server.json ==
 == fsh-generated/resources/CodeSystem-bc-client-registry-address-validation-code-system.json ==
@@ -152,11 +144,11 @@ INFORMATION: CodeSystem/bc-operation-outcome-details-code-system: CodeSystem: Co
 == fsh-generated/resources/OperationDefinition-bc-patient-partial-revise.json ==
 == fsh-generated/resources/OperationDefinition-bc-patient-revise.json ==
 == fsh-generated/resources/OperationOutcome-OperationOutcome-Example.json ==
-WARNING: OperationOutcome/OperationOutcome-Example: OperationOutcome.issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: OperationOutcome/OperationOutcome-Example: OperationOutcome.issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+INFORMATION: OperationOutcome/OperationOutcome-Example: OperationOutcome.issue[0].details.coding[0]: Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
+INFORMATION: OperationOutcome/OperationOutcome-Example: OperationOutcome.issue[1].details.coding[0]: Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
 == fsh-generated/resources/OperationOutcome-OperationOutcome-Search-Example.json ==
-WARNING: OperationOutcome/OperationOutcome-Search-Example: OperationOutcome.issue[0].details.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: OperationOutcome/OperationOutcome-Search-Example: OperationOutcome.issue[1].details.coding[0]: A code with no system has no defined meaning. A system should be provided
+INFORMATION: OperationOutcome/OperationOutcome-Search-Example: OperationOutcome.issue[0].details.coding[0]: Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
+INFORMATION: OperationOutcome/OperationOutcome-Search-Example: OperationOutcome.issue[1].details.coding[0]: Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
 == fsh-generated/resources/Parameters-Parameters-AddPatient-Example.json ==
 == fsh-generated/resources/Parameters-Parameters-AddPatient-Newborn-Example.json ==
 == fsh-generated/resources/Parameters-Parameters-AddPatient-Response-Example.json ==
