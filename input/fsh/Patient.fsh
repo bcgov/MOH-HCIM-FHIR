@@ -35,8 +35,9 @@ Description: "The effective dates for the parent element."
 Extension: DeathDateExtension
 Id: bc-death-date-extension
 Title: "BC Patient Death Date"
-Description: "The Patients death date and time as recorded in the Client Registry.  This also include death date history as requried."
+Description: "The Patients death date and time as recorded in the Client Registry.  This also include death date history as required."
 * extension contains deathDate 1..1 MS and BusinessPeriodExtension named businessDates 0..1 MS and DeathDateHistoryExtension named deathDateHistory 0..* MS 
+* extension[deathDate].value[x] 1..1 MS
 * extension[deathDate].value[x] only dateTime
 * extension[businessDates] only BusinessPeriodExtension
 * extension[businessDates] 0..1 MS
@@ -57,6 +58,7 @@ Extension: MergeStatusExtension
 Id: bc-merge-status-extension
 Title: "BC Merge Status Code"
 Description: "A code that represents the Merge status of the Patient."
+* value[x] 1..1 MS
 * value[x] only code
 * valueCode from BCMergeStatusVS (required)
 
@@ -64,6 +66,7 @@ Extension: ValidationStatusExtension
 Id: bc-validation-status-extension
 Title: "BC Address Validation Status Code"
 Description: "A code that represents the validation status of the address"
+* value[x] 1..1 MS
 * value[x] only code
 * valueCode from BCAddressValidationVS (required)
 
@@ -72,7 +75,9 @@ Id: bc-gender-history-extension
 Title: "BC Gender History"
 Description: "This extension allows the Client Registry to include historical gender codes in a single Patient resource."
 * extension contains businessDates 1..1 MS and gender 1..1 MS
+* extension[businessDates].value[x] 1..1 MS
 * extension[businessDates].value[x] only Period
+* extension[gender].value[x] 1..1 MS
 * extension[gender].value[x] only code
 * extension[gender].valueCode from AdministrativeGender (required)
 
@@ -81,7 +86,9 @@ Id: bc-birthdate-history-extension
 Title: "BC Birth Date History"
 Description: "This extension allows the Client Registry to include historical birth dates in a single Patient resource."
 * extension contains businessDates 1..1 MS and birthDate 1..1 MS
+* extension[businessDates].value[x] 1..1 MS
 * extension[businessDates].value[x] only Period
+* extension[birthDate].value[x] 1..1 MS
 * extension[birthDate].value[x] only date
 
 Extension: DeathDateHistoryExtension
@@ -89,7 +96,9 @@ Id: bc-death-date-history-extension
 Title: "BC Death Date History"
 Description: "This extension allows the Client Registry to include historical death dates and flags in a single Patient resource."
 * extension contains businessDates 1..1 MS and deathDate 1..1 MS
+* extension[businessDates].value[x] 1..1 MS
 * extension[businessDates].value[x] only Period
+* extension[deathDate].value[x] 1..1 MS
 * extension[deathDate].value[x] only dateTime
 
 Extension: DeathFlagHistoryExtension
@@ -97,13 +106,17 @@ Id: bc-death-flag-history-extension
 Title: "BC Death Flag History"
 Description: "This extension allows the Client Registry to include historical death dates and flags in a single Patient resource."
 * extension contains deathFlag 1..1 MS and businessDates 1..1 MS
+* extension[deathFlag].value[x] 1..1 MS
 * extension[deathFlag].value[x] only boolean
+* extension[businessDates].value[x] 1..1 MS
 * extension[businessDates].value[x] only Period
 
 Extension: MultipleBirthHistoryExtension
 Id: bc-multiplebirth-history-extension
-Title: "BC multiple Birth History"
+Title: "BC Multiple Birth History"
 Description: "This extension allows the Client Registry to include historical multiple birth values in a single Patient resource."
 * extension contains businessDates 1..1 MS and multipleBirth 1..1 MS
+* extension[businessDates].value[x] 1..1 MS
 * extension[businessDates].value[x] only Period
-* extension[multipleBirth].value[x]
+* extension[multipleBirth].value[x] 1..1 MS
+* extension[multipleBirth].value[x] only boolean or integer
