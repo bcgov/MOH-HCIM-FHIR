@@ -11,14 +11,14 @@ Namely:
 	- Distribute Patient
 - Asynchronous interactions will be supported as with the current system; supporting asynchronous for interactions that write data to the Client Registry.
 - New attributes can be included in FHIR that are not in V3 (such as more business dates)
-- HL7 V3 will be deprecated at some future time
+- HL7 V3 will remain supported, but no new features added
 - The Client Registry profiles should conform to the Canadian Baseline profiles
 
 ### Design Assumptions
 There are a number of assumptions that were made at the start of design:
 
 - FHIR is not expected to adversely affect performance, i.e. SLA is not changing for FHIR but will be extended to include FHIR
-- Existing interfaces, such as V3, will not immediately be deprecated 
+- Existing interfaces, such as V3, will be available
 - Users can use a combination of V3 and FHIR to meet their needs
 - The Client Registry FHIR design will become a Provincial standard
 - Asynchronous interactions will follow the same pattern as V3 (not the FHIR asynchronous pattern)
