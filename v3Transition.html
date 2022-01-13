@@ -181,16 +181,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h1 id="transition-from-v3-to-fhir">Transition from V3 to FHIR</h1>
 
-<p>In the future stakeholders can transition from V3 to FHIR.  The older specification will not be deprecated however FHIR interactions have several advantages:</p>
+<p>In the future stakeholders can transition from V3 to FHIR.  The older specification will be supported but not extended with new features. FHIR interactions have several advantages:</p>
 <ul>
   <li>FHIR will allow users to receive and send more information than is currently within the V3 specification.  Attributes such as Address Validation Status and comprehensive business dates on all Patient attributes will be available in FHIR, but not in V3.</li>
   <li>FHIR uses JSON which makes new implementations simpler than V3</li>
   <li>FHIR is being adopted throughout the health care landscape and switching to FHIR may help interoperability with other health organizations and systems</li>
 </ul>
-
-<h2 id="note-on-get-eligibility">Note on Get Eligibility</h2>
-
-<p>The Client Registry FHIR operations do not include a Get Eligibility operation.  The V3 implementation of Get Eligibility is composed of two interactions, a Get Demographics and then a Get Eligibility, which Client Registry does on behalf of the V3 message requester.  For FHIR, this will no longer be supported.  Users wishing to use Get Eligibility will need to use the FHIR Get Demographics operation and then send the Get Eligibility request to the RAPID system.</p>
 
 <h2 id="fhir-development">FHIR Development</h2>
 
@@ -201,7 +197,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>The Client Registry team will have test Client Registry FHIR servers available to test interactions and operation validity.</p>
 
 <h3 id="partial-implementations">Partial Implementations</h3>
-<p>As the V3 services will not be deprecated you may choose to develop some interactions with FHIR and still use other Client Registry services with V3.  This allows you to avoid a complete switch-over to FHIR all at once and instead roll out your new FHIR services as required or over a longer period.</p>
+<p>As the V3 services will remain you may choose to develop some interactions with FHIR and still use other Client Registry services with V3.  This allows you to avoid a complete switch-over to FHIR all at once and instead roll out your new FHIR services as required or over a longer period.</p>
 
 <h2 id="business-rules">Business Rules</h2>
 <p>The FHIR interface is subject to the same rules as V3.  Some examples regarding patient data:</p>
@@ -248,7 +244,7 @@ accessed; or</li>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 13, 2022 21:54+0000">2022-01-13</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 13, 2022 21:55+0000">2022-01-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
