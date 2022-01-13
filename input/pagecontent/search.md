@@ -21,9 +21,9 @@ The Find Candidates is a synchronous request-response transaction.
 
 This interaction is used to retrieve the most current demographic information (i.e., name, address, gender, date of birth, and date of death if applicable) from the Client Registry if the PHN is known. 
 
-If the patient has a PHN, a ‘get’ is performed against the Client Registry and the demographics returned and displayed to the user.
+If the patient has a PHN or other identifier, a ‘get’ is performed against the Client Registry and the demographics returned and displayed to the user.
 
-Using Get Demographics is referred to as performing a “deterministic search”. In a deterministic search, the outcome of the search can be predicted. Get Demographics will return only one client record because there is only one client record that corresponds to the provided PHN.
+Using Get Demographics is referred to as performing a “deterministic search”. In a deterministic search, the outcome of the search can be predicted. Get Demographics will return only one client record because there is only one client record that corresponds to the provided Identifier.
 
 The Get Demographics is a synchronous request-response transaction
 

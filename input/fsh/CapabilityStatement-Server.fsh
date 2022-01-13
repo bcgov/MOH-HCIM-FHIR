@@ -382,15 +382,15 @@ The GetDemographics FHIR Operation SHALL use the following name-value parameters
 	</tr>
 	<tr>
 		<td>IN</td>
-		<td>PHN</td>
+		<td>identifier</td>
 		<td>1..1</td>
 		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">string</a>
 		</td>
 		<td></td>
 		<td>
 			<div>
-				<p>Patient PHN.</p>
+				<p>Patient identifier.</p>
 			</div>
 		</td>
 	</tr>
@@ -508,15 +508,15 @@ The GetDemographics.withEligibility FHIR Operation SHALL use the following name-
 	</tr>
 	<tr>
 		<td>IN</td>
-		<td>PHN</td>
+		<td>identifer</td>
 		<td>1..1</td>
 		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">string</a>
 		</td>
 		<td></td>
 		<td>
 			<div>
-				<p>Patient PHN</p>
+				<p>Patient identifier</p>
 			</div>
 		</td>
 	</tr>

@@ -37,12 +37,12 @@ Usage: #definition
 * parameter[2].documentation = "Source of request"
 * parameter[2].type = #Identifier
 
-* parameter[3].name = #PHN
+* parameter[3].name = #identifier
 * parameter[3].use = #in
 * parameter[3].min = 1
 * parameter[3].max = "1"
-* parameter[3].documentation = "Patient PHN."
-* parameter[3].type = #string
+* parameter[3].documentation = "Patient identifier."
+* parameter[3].type = #Identifier
 
 * parameter[4].name = #enterer
 * parameter[4].use = #in                                                                    
