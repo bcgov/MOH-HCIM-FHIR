@@ -3,7 +3,7 @@
   "id": "bc-patient-get-demographics-withEligibility",
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GetDemographicswithEligibility</h2><p>QUERY: GetDemographicswithEligibility</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics-withEligibility</pre><p>URL: [base]/Patient/$GetDemographics.withEligibility</p><p>URL: [base]/Patient/[id]/$GetDemographics.withEligibility</p><p>Input parameters Profile: <a href=\"StructureDefinition-bc-metadata-parameters.html\">BCMetadataParameters</a></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Unique message ID.</p>\n</div></td></tr><tr><td>IN</td><td>messageDateTime</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a></td><td/><td><div><p>Message date and time.</p>\n</div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Source of request</p>\n</div></td></tr><tr><td>IN</td><td>PHN</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td/><td><div><p>Patient PHN.</p>\n</div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>UserId of sender.</p>\n</div></td></tr></table></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GetDemographicswithEligibility</h2><p>QUERY: GetDemographicswithEligibility</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics-withEligibility</pre><p>URL: [base]/Patient/$GetDemographics.withEligibility</p><p>URL: [base]/Patient/[id]/$GetDemographics.withEligibility</p><p>Input parameters Profile: <a href=\"StructureDefinition-bc-metadata-parameters.html\">BCMetadataParameters</a></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Unique message ID.</p>\n</div></td></tr><tr><td>IN</td><td>messageDateTime</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a></td><td/><td><div><p>Message date and time.</p>\n</div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Source of request</p>\n</div></td></tr><tr><td>IN</td><td>identifier</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Patient identifier.</p>\n</div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>UserId of sender.</p>\n</div></td></tr></table></div>"
   },
   "url": "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics-withEligibility",
   "version": "0.1.0",
@@ -11,7 +11,7 @@
   "title": "GetDemographics withEligibility",
   "status": "draft",
   "kind": "query",
-  "date": "2022-01-13T21:55:58+00:00",
+  "date": "2022-01-13T22:56:00+00:00",
   "publisher": "BC Ministry of Health",
   "contact": [
     {
@@ -70,12 +70,12 @@
       "type": "Identifier"
     },
     {
-      "name": "PHN",
+      "name": "identifier",
       "use": "in",
       "min": 1,
       "max": "1",
-      "documentation": "Patient PHN.",
-      "type": "string"
+      "documentation": "Patient identifier.",
+      "type": "Identifier"
     },
     {
       "name": "enterer",
