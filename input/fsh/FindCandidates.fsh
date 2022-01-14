@@ -12,7 +12,7 @@ Usage: #definition
 * resource[0] = #Patient
 * system = false
 * type = true
-* instance = true
+* instance = false
 * inputProfile = Canonical(BCMetadataParameters)
 
 * parameter[0].name = #messageId
