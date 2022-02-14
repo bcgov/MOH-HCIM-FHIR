@@ -38,9 +38,37 @@ user content","",0,*,"","Y","","Extension {[]} {[]}
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
-"Patient.identifier","","","",0,*,"","","Y","Identifier {[]} {[]}
+"Patient.identifier","","","",0,*,"Y","","Y","Identifier {[]} {[]}
 ","An identifier for this patient","An identifier for this patient.","","Patients are almost always assigned specific numerical identifiers.","","","","","","","",,,,,"",,,,"Patient.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","id",".id","FiveWs.identifier","PID-3"
+"Patient.identifier.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.identifier.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
+"Patient.identifier.extension","sourceID","","",0,1,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension]]} {[]}
+","BC SourceID and UserID","Identifiers for the source and user that modified the specific element that this extension is on.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Patient.identifier.use","","","",0,1,"","Y","Y","code {[]} {[]}
+","usual | official | temp | secondary | old (If known)","The purpose of this identifier.","Applications can assume that an identifier is permanent unless it explicitly says that it is temporary.","Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers.","","","","","","","",,"required","Identifies the purpose for this identifier, if known .","http://hl7.org/fhir/ValueSet/identifier-use|4.0.1","",,,,"Identifier.use",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Role.code or implied by context","N/A"
+"Patient.identifier.type","","","",0,1,"","","Y","CodeableConcept {[]} {[]}
+","Description of identifier","A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.","This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type.","Allows users to make use of identifiers when the identifier system is not known.","","","","","","","",,"extensible","A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.","http://hl7.org/fhir/ValueSet/identifier-type","",,,,"Identifier.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Role.code or implied by context","CX.5"
+"Patient.identifier.system","","","",0,1,"","","Y","uri {[]} {[]}
+","The namespace for the identifier value","Establishes the namespace for the value - that is, a URL that describes a set values that are unique.","Identifier.system is always case sensitive.","There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers.","","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://www.acme.com/identifiers/patient""/>","","",,,,,"",,,,"Identifier.system",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","II.root or Role.id.root","CX.4 / EI-2-4"
+"Patient.identifier.value","","","",0,1,"","","Y","string {[]} {[]}
+","The value that is unique","The portion of the identifier typically relevant to the user and which is unique within the context of the system.","If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/R4/extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""123456""/>","","",,,,,"",,,,"Identifier.value",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)","CX.1 / EI.1"
+"Patient.identifier.period","","","",0,1,"","","Y","Period {[]} {[]}
+","Time period when id is/was valid for use","Time period during which identifier is/was valid for use.","","","","","","","","","",,,,,"",,,,"Identifier.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Role.effectiveTime or implied by context","CX.7 + CX.8"
+"Patient.identifier.assigner","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+","Organization that issued id (may be just text)","Organization that issued/manages the identifier.","The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization.","","","","","","","","",,,,,"",,,,"Identifier.assigner",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper","CX.4 / (CX.4,CX.9,CX.10)"
 "Patient.active","","","",0,1,"","Y","Y","boolean {[]} {[]}
 ","Whether this patient's record is in active use","Whether this patient record is in active use. 
 Many systems use this property to mark as non-current patients, such as those that have not been seen for a period of time based on an organization's business rules.
@@ -59,6 +87,9 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
+"Patient.name.extension","sourceID","","",0,1,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension]]} {[]}
+","BC SourceID and UserID","Identifiers for the source and user that modified the specific element that this extension is on.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.name.use","","","",1,1,"","Y","Y","code {[]} {[]}
 ","usual | official | nickname","Identifies the purpose for this name.","Applications can assume that a name is current unless it explicitly says that it is temporary or old.","Allows the appropriate name for a particular context of use to be selected from among a set of names.","","","","","","","",,"required","","http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set","",,,,"HumanName.use",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","unique(./use)","XPN.7, but often indicated by which field contains the name"
@@ -92,6 +123,9 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
+"Patient.telecom.extension","sourceID","","",0,1,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension]]} {[]}
+","BC SourceID and UserID","Identifiers for the source and user that modified the specific element that this extension is on.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.telecom.system","","","",0,1,"","","Y","code {[]} {[]}
 ","phone | email","Telecommunications form for contact point - what communications system is required to make use of the contact.","","","","","","","","","",,"required","","http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set","",,,,"ContactPoint.system",0,1,"cpt-2
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -125,6 +159,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","BC Gender History","This extension allows the Client Registry to include historical gender codes in a single Patient resource.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Patient.gender.extension","sourceID","","",0,1,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension]]} {[]}
+","BC SourceID and UserID","Identifiers for the source and user that modified the specific element that this extension is on.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.gender.value","","","",0,1,"","","","string {[]} {[]}
 ","Primitive value for code","Primitive value for code","","","","","","","","","",,,,,"",,,,"string.value",0,1,"",""
 "Patient.birthDate","","","",1,1,"Y","","Y","date {[]} {[]}
@@ -144,6 +182,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","BC Birth Date History","This extension allows the Client Registry to include historical birth dates in a single Patient resource.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Patient.birthDate.extension","sourceID","","",0,1,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension]]} {[]}
+","BC SourceID and UserID","Identifiers for the source and user that modified the specific element that this extension is on.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.birthDate.value","","","",0,1,"","","","date {[]} {[]}
 ","Primitive value for date","The actual value","","","","","","","","","",,,,,"",,,,"date.value",0,1,"",""
 "Patient.deceased[x]","","","",0,1,"Y","Y","Y","boolean {[]} {[]}
@@ -159,6 +201,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","BC Patient Death Date","The Patients death date and time as recorded in the Client Registry.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Patient.deceased[x].extension","sourceID","","",0,1,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension]]} {[]}
+","BC SourceID and UserID","Identifiers for the source and user that modified the specific element that this extension is on.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.deceased[x].value","","","",0,1,"","","","boolean {[]} {[]}
 ","Primitive value for boolean","The actual value","","","","","","","","","",,,,,"",,,,"boolean.value",0,1,"",""
 "Patient.address","","","",0,*,"Y","","Y","Address {[]} {[]}
@@ -171,6 +217,9 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
+"Patient.address.extension","sourceID","","",0,1,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension]]} {[]}
+","BC SourceID and UserID","Identifiers for the source and user that modified the specific element that this extension is on.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.address.use","","","",0,1,"","Y","Y","code {[]} {[]}
 ","home | work | temp | old | billing - purpose of this address","The purpose of this address.","Applications can assume that an address is current unless it explicitly says that it is temporary or old.","Allows an appropriate address to be chosen from a list of many.","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""home""/>","","",,"required","The use of an address.","http://hl7.org/fhir/ValueSet/address-use|4.0.1","",,,,"Address.use",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","unique(./use)","XAD.7"
@@ -226,6 +275,9 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.multipleBirth[x].extension","multipleBirthEffectiveDates","","",0,1,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension]]} {[]}
 ","BC Business Dates","The effective dates for the parent element.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Patient.multipleBirth[x].extension","sourceID","","",0,1,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension]]} {[]}
+","BC SourceID and UserID","Identifiers for the source and user that modified the specific element that this extension is on.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.photo","","","",0,*,"","","","Attachment {[]} {[]}
 ","Image of the patient","Image of the patient.","Guidelines:
