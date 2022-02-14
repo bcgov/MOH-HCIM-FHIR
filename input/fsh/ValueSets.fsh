@@ -2,6 +2,7 @@ CodeSystem: BCMergeStatusCS
 Id: bc-client-registry-merge-status-code-system
 Title: "BC Client Registry merge status."
 Description: "Codes used to describe the merge status."
+* ^caseSensitive = true
 * #obsolete "obsolete" "The merge obsoletes this Patient."
 * #cancelled "cancelled" "The merge cancels this Patient."
 
@@ -15,6 +16,7 @@ CodeSystem: BCAddressValidationCS
 Id: bc-client-registry-address-validation-code-system
 Title: "BC Client Registry Address Validation Status Code"
 Description: "Codes used to define the address validation status."
+* ^caseSensitive = true
 * #valid   "valid"   "The address is valid, i.e. there is a reasonable good chance this address is known to Canada Post."
 * #invalid "invalid" "The address validation status is invalid and like not recognized by Canada Post."
 * #unknown "unknown" "The address validation status is unknown."
@@ -23,7 +25,7 @@ CodeSystem: BCOperationOutcomeDetailsCS
 Id: bc-operation-outcome-details-code-system
 Title: "BC Client Registry Operation Outcome details code system"
 Description: "BC Client Registry Operation Outcome details code system"
-
+* ^caseSensitive = true
 
 ValueSet: BCAddressValidationVS
 Title: "BC Address Validation Value Set"
