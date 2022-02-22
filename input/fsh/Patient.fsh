@@ -43,7 +43,7 @@ Title: "BC Patient Death Date"
 Description: "The Patients death date and time as recorded in the Client Registry.  This also include death date history as required."
 * extension contains deathDate 1..1 MS and SourceIDExtension named sourceID 0..1 MS and BusinessPeriodExtension named businessDates 0..1 MS and DeathDateHistoryExtension named deathDateHistory 0..* MS 
 * extension[deathDate].value[x] 1..1 MS
-* extension[deathDate].value[x] only dateTime
+* extension[deathDate].value[x] only date
 
 Extension: DeathFlagExtension
 Id: bc-death-flag-extension
@@ -96,7 +96,7 @@ Description: "This extension allows the Client Registry to include historical de
 * extension[businessDates].value[x] 1..1 MS
 * extension[businessDates].value[x] only Period
 * extension[deathDate].value[x] 1..1 MS
-* extension[deathDate].value[x] only dateTime
+* extension[deathDate].value[x] only date
 
 Extension: DeathFlagHistoryExtension
 Id: bc-death-flag-history-extension
