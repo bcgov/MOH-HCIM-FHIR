@@ -44,6 +44,8 @@ InstanceOf: BCSearchResponseBundle
 Description: "Example of $GetDemographics.withEligibility operation response Bundle"
 * type = #searchset
 * timestamp = "2011-09-07T12:18:23.000-07:00"
+* link.relation = "self"
+* link.url = "http://your.search.url"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:b3a12f0c-a332-4ec9-94b9-d8539a02df48"
 

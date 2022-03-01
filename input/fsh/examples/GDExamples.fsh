@@ -46,17 +46,16 @@ InstanceOf: BCSearchResponseBundle
 Description: "Example of $GetDemographics operation response Bundle"
 * type = #searchset
 * timestamp = "2011-09-07T12:18:23.000-07:00"
+* link.relation = "self"
+* link.url = "https://your.search.search.url"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:b3a12f0c-a332-4ec9-94b9-d8539a02df48"
-
 * entry[parameters].resource = Parameters-GetDemographics-Response-Example
 * entry[parameters].fullUrl = "urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33"
 * entry[parameters].search.mode = #include
-
 * entry[operationOutcome].resource = OperationOutcome-Search-Example
 * entry[operationOutcome].fullUrl = "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"
 * entry[operationOutcome].search.mode = #outcome
-
 * entry[2].resource = Patient-GetDemographics-Example
 * entry[2].fullUrl = "urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c"
 * entry[2].search.mode = #include

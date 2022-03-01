@@ -33,6 +33,20 @@ Id: bc-address-validation-value-set
 Description: "BC Address Validation value set used to describe the validation status of an address"
 * codes from system BCAddressValidationCS
 
+CodeSystem: BCIdentifierStatusCS
+Id: bc-identifier-status-code-system
+Title: "BC Client registry identifier status code system"
+Description: "BC Client registry identifier status code system."
+* ^caseSensitive = true
+* #merged "merged" "The identifier has been merged."
+* #active "active" "The identifier is active."
+
+ValueSet: BCIdentifierStatusVS
+Title: "BC Identifier Status Value Set"
+Id: bc-identifier-status-value-set
+Description: "BC Identifier Status value set used to describe the status of an identifier."
+* codes from system BCIdentifierStatusCS
+
 ValueSet: BCNameUseVS
 Title: "BC Name Use value set."
 Description: "BC Name Use value set, sliced to meet BC constraints."

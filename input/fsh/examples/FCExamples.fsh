@@ -88,8 +88,8 @@ Description: "Example of FindCandidates response Bundle.  Patient0 has PHN, alte
 * total = 3
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f7a3b"
-* link[0].relation = "self"
-* link[0].url = "urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1"
+* link.relation = "self"
+* link.url = "http://hlth.gov.bc.ca/fhir/client/Patient/$FindCandidates"
 
 * entry[parameters].resource = Parameters-FindCandidates-Response-Example
 * entry[parameters].fullUrl = "61061501-9953-4fba-87fe-6ae30e79da33"

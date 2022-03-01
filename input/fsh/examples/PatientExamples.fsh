@@ -164,11 +164,11 @@ Description: "Example of Patient for query response Bundle with 4 different kind
 * name.family = "BARNEY"
 * name.use = http://hl7.org/fhir/name-use#usual
 * gender = #male
-* gender.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* gender.extension.valuePeriod.start = "2017-04-05T16:16:16-08:00"
+* gender.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
+* gender.extension[0].valuePeriod.start = "2017-04-05T16:16:16-08:00"
 * birthDate = 1940-06-06
-* birthDate.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* birthDate.extension.valuePeriod.start = "2020-10-17T03:29:17-08:00"
+* birthDate.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
+* birthDate.extension[0].valuePeriod.start = "2020-10-17T03:29:17-08:00"
 * deceasedBoolean = false
 
 Instance: Patient-1-Example
@@ -190,11 +190,11 @@ Description: "Example of Patient for query response Bundle"
 * name.family = "PURPLE"
 * name.use = http://hl7.org/fhir/name-use#official
 * gender = #female
-* gender.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* gender.extension.valuePeriod.start = "2017-04-05T16:16:16-08:00"
+* gender.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
+* gender.extension[0].valuePeriod.start = "2017-04-05T16:16:16-08:00"
 * birthDate = 1973-05-18
-* birthDate.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* birthDate.extension.valuePeriod.start = "2018-10-17T03:29:17-08:00"
+* birthDate.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
+* birthDate.extension[0].valuePeriod.start = "2018-10-17T03:29:17-08:00"
 * deceasedBoolean = false
 
 Instance: Patient-2-Example
@@ -215,14 +215,14 @@ Description: "Example of Patient for query response Bundle"
 * name.family = "PURPLE"
 * name.use = http://hl7.org/fhir/name-use#usual
 * gender = #female
-* gender.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* gender.extension.valuePeriod.start = "2017-04-05T16:16:16-08:00"
+* gender.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
+* gender.extension[0].valuePeriod.start = "2017-04-05T16:16:16-08:00"
 * birthDate = 1985-12-14
-* birthDate.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* birthDate.extension.valuePeriod.start = "2019-10-17T03:29:17-08:00"
+* birthDate.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
+* birthDate.extension[0].valuePeriod.start = "2019-10-17T03:29:17-08:00"
 * multipleBirthBoolean = false
-* multipleBirthBoolean.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* multipleBirthBoolean.extension.valuePeriod.start = "2019-10-17T03:29:17-08:00"
+* multipleBirthBoolean.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
+* multipleBirthBoolean.extension[0].valuePeriod.start = "2019-10-17T03:29:17-08:00"
 
 Instance: Patient-GetDemographics-Example
 InstanceOf: BCPatient
@@ -247,14 +247,30 @@ Description: "Example of Patient for $GetDemographics operation response"
 * identifier.value = "9983652763"
 * identifier.type.coding.code = #JHN
 * identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
+* identifier.extension.valueCode = #merged
 * name.given = "JILLIAN"
 * name.given[1] = "DAWN"
 * name.given[2] = "THIRD NAME"
 * name.family = "COOK-ADAMS"
 * name.use = http://hl7.org/fhir/name-use#usual
 * gender = #female
-* gender.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* gender.extension.valuePeriod.start = "2017-04-05T16:16:16-08:00"
+* gender.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
+* gender.extension[0].valuePeriod.start = "2017-04-05T16:16:16-08:00"
+* gender.extension[1].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension"
+* gender.extension[1].extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
+* gender.extension[1].extension[0].valuePeriod.start = "2016-04-05"
+* gender.extension[1].extension[0].valuePeriod.end = "2017-04-05"
+* gender.extension[1].extension[1].url = "gender"
+* gender.extension[1].extension[1].valueCode = #other
+* gender.extension[2].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension"
+* gender.extension[2].extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
+* gender.extension[2].extension[0].valuePeriod.start = "2015-04-05"
+* gender.extension[2].extension[0].valuePeriod.end = "2016-04-05"
+* gender.extension[2].extension[1].url = "gender"
+* gender.extension[2].extension[1].valueCode = #unknown
+
+
 * birthDate = 1972-10-16
 * birthDate.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * birthDate.extension.valuePeriod.start = "2018-03-17T03:29:17-08:00"
@@ -442,7 +458,7 @@ Description: "Example of Patient for $GetDemographics operation response"
 * gender.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * gender.extension[0].valuePeriod.start = "2018-04-05T16:16:16-08:00"
 * gender.extension[1].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension"
-* gender.extension[1].extension[0].url = "businessDates"
+* gender.extension[1].extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * gender.extension[1].extension[0].valuePeriod.start = "2017-04-05T16:16:16-08:00"
 * gender.extension[1].extension[0].valuePeriod.end = "2018-04-05T16:16:16-08:00"
 * gender.extension[1].extension[1].url = "gender"
@@ -451,7 +467,7 @@ Description: "Example of Patient for $GetDemographics operation response"
 * birthDate.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * birthDate.extension[0].valuePeriod.start = "2020-03-17T00:00:00-08:00"
 * birthDate.extension[1].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birthdate-history-extension"
-* birthDate.extension[1].extension[0].url = "businessDates"
+* birthDate.extension[1].extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * birthDate.extension[1].extension[0].valuePeriod.start = "2018-03-17T00:00:00-08:00"
 * birthDate.extension[1].extension[1].url = "birthDate"
 * birthDate.extension[1].extension[1].valueDate = "1972-11-16"
@@ -459,13 +475,13 @@ Description: "Example of Patient for $GetDemographics operation response"
 * multipleBirthBoolean.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * multipleBirthBoolean.extension[0].valuePeriod.start = "2021-04-01T00:00:00-08:00"
 * multipleBirthBoolean.extension[1].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-multiplebirth-history-extension"
-* multipleBirthBoolean.extension[1].extension[0].url = "businessDates"
+* multipleBirthBoolean.extension[1].extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * multipleBirthBoolean.extension[1].extension[0].valuePeriod.start = "2018-03-17T03:29:17-08:00"
 * multipleBirthBoolean.extension[1].extension[0].valuePeriod.end = "2019-03-17T03:29:17-08:00"
 * multipleBirthBoolean.extension[1].extension[1].url = "multipleBirth"
 * multipleBirthBoolean.extension[1].extension[1].valueBoolean = true
 * multipleBirthBoolean.extension[2].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-multiplebirth-history-extension"
-* multipleBirthBoolean.extension[2].extension[0].url = "businessDates"
+* multipleBirthBoolean.extension[2].extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * multipleBirthBoolean.extension[2].extension[0].valuePeriod.start = "2019-03-17T03:29:17-08:00"
 * multipleBirthBoolean.extension[2].extension[0].valuePeriod.end = "2020-03-17T03:29:17-08:00"
 * multipleBirthBoolean.extension[2].extension[1].url = "multipleBirth"
@@ -478,7 +494,7 @@ Description: "Example of Patient for $GetDemographics operation response"
 * deceasedBoolean.extension[0].extension[1].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-flag-history-extension"
 * deceasedBoolean.extension[0].extension[1].extension[0].url = "deathFlag"
 * deceasedBoolean.extension[0].extension[1].extension[0].valueBoolean = true
-* deceasedBoolean.extension[0].extension[1].extension[1].url = "businessDates"
+* deceasedBoolean.extension[0].extension[1].extension[1].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * deceasedBoolean.extension[0].extension[1].extension[1].valuePeriod.start = "2021-10-11T00:00:00-08:00"
 * deceasedBoolean.extension[0].extension[1].extension[1].valuePeriod.end = "2021-10-12T00:00:00-08:00"
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-extension"
@@ -487,7 +503,7 @@ Description: "Example of Patient for $GetDemographics operation response"
 * extension.extension[1].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension.extension[1].valuePeriod.start = "2021-10-12T00:00:00-08:00"
 * extension.extension[2].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-history-extension"
-* extension.extension[2].extension[0].url = "businessDates"
+* extension.extension[2].extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension.extension[2].extension[0].valuePeriod.start = "2020-10-11T00:00:00-08:00"
 * extension.extension[2].extension[0].valuePeriod.end  = "2021-10-12T00:00:00-08:00"
 * extension.extension[2].extension[1].url = "deathDate"
