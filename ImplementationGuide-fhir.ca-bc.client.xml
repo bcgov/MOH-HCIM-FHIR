@@ -11,7 +11,7 @@
   <name value="BCHealthClientIdentityManagement"/>
   <title value="BC Client Registry FHIR Implementation Guide"/>
   <status value="draft"/>
-  <date value="2022-02-22T22:51:29+00:00"/>
+  <date value="2022-03-01T16:19:31+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -414,6 +414,17 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/bc-identifier-status-extension"/>
+      </reference>
+      <name value="Identifier status"/>
+      <description value="Identifier status."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/bc-merge-status-extension"/>
       </reference>
       <name value="BC Merge Status Code"/>
@@ -502,6 +513,17 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
+        <reference value="ValueSet/bc-identifier-status-value-set"/>
+      </reference>
+      <name value="BC Identifier Status Value Set"/>
+      <description value="BC Identifier Status value set used to describe the status of an identifier."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
         <reference value="ValueSet/bc-merge-status-value-set"/>
       </reference>
       <name value="BC Merge Status Value Set"/>
@@ -528,6 +550,17 @@
       </reference>
       <name value="BC Client Registry Address Validation Status Code"/>
       <description value="Codes used to define the address validation status."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/bc-identifier-status-code-system"/>
+      </reference>
+      <name value="BC Client registry identifier status code system"/>
+      <description value="BC Client registry identifier status code system."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

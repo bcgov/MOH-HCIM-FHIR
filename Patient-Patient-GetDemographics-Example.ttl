@@ -21,6 +21,11 @@
   ];
   fhir:Patient.identifier [
      fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "merged" ]
+     ];
      fhir:Identifier.type [
        fhir:CodeableConcept.coding [
          fhir:index 0;
@@ -60,6 +65,36 @@
        fhir:Extension.valuePeriod [
          fhir:Period.start [ fhir:value "2017-04-05T16:16:16-08:00"^^xsd:dateTime ]
        ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+         fhir:Extension.valuePeriod [
+           fhir:Period.start [ fhir:value "2016-04-05"^^xsd:date ];
+           fhir:Period.end [ fhir:value "2017-04-05"^^xsd:date ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "gender" ];
+         fhir:Extension.valueCode [ fhir:value "other" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension" ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+         fhir:Extension.valuePeriod [
+           fhir:Period.start [ fhir:value "2015-04-05"^^xsd:date ];
+           fhir:Period.end [ fhir:value "2016-04-05"^^xsd:date ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "gender" ];
+         fhir:Extension.valueCode [ fhir:value "unknown" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension" ]
      ]
   ];
   fhir:Patient.birthDate [

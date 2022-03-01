@@ -10,7 +10,7 @@
   "name": "BCHealthClientIdentityManagement",
   "title": "BC Client Registry FHIR Implementation Guide",
   "status": "draft",
-  "date": "2022-02-22T22:51:29+00:00",
+  "date": "2022-03-01T16:19:31+00:00",
   "publisher": "BC Ministry of Health",
   "contact": [
     {
@@ -590,6 +590,20 @@
           }
         ],
         "reference": {
+          "reference": "StructureDefinition/bc-identifier-status-extension"
+        },
+        "name": "Identifier status",
+        "description": "Identifier status.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
           "reference": "StructureDefinition/bc-merge-status-extension"
         },
         "name": "BC Merge Status Code",
@@ -702,6 +716,20 @@
           }
         ],
         "reference": {
+          "reference": "ValueSet/bc-identifier-status-value-set"
+        },
+        "name": "BC Identifier Status Value Set",
+        "description": "BC Identifier Status value set used to describe the status of an identifier.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
           "reference": "ValueSet/bc-merge-status-value-set"
         },
         "name": "BC Merge Status Value Set",
@@ -734,6 +762,20 @@
         },
         "name": "BC Client Registry Address Validation Status Code",
         "description": "Codes used to define the address validation status.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/bc-identifier-status-code-system"
+        },
+        "name": "BC Client registry identifier status code system",
+        "description": "BC Client registry identifier status code system.",
         "exampleBoolean": false
       },
       {

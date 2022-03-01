@@ -11,6 +11,10 @@
   </identifier>
   <type value="searchset"/>
   <timestamp value="2011-09-07T12:18:23.000-07:00"/>
+  <link>
+    <relation value="self"/>
+    <url value="http://your.search.url"/>
+  </link>
   <entry>
     <fullUrl value="urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33"/>
     <resource>
@@ -92,6 +96,9 @@
           <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient-GetDemographics-Example" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">BCPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9983652763</p><p><b>name</b>: JILLIAN DAWN THIRD NAME COOK-ADAMS </p><p><b>telecom</b>: ph: 6048883322(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1972-10-16</p><p><b>address</b>: </p><ul><li>321 SUNSHINE PL NEW LINE 2 NEW LINE 3 VANCOUVER BC </li><li>1824 CROSS RD LINE 2 LINE 3 VANCOUVER BC V9L 4H2 </li></ul></div>
         </text>
         <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="merged"/>
+          </extension>
           <type>
             <coding>
               <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
@@ -118,6 +125,28 @@
             <valuePeriod>
               <start value="2017-04-05T16:16:16-08:00"/>
             </valuePeriod>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension">
+            <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+              <valuePeriod>
+                <start value="2016-04-05"/>
+                <end value="2017-04-05"/>
+              </valuePeriod>
+            </extension>
+            <extension url="gender">
+              <valueCode value="other"/>
+            </extension>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension">
+            <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+              <valuePeriod>
+                <start value="2015-04-05"/>
+                <end value="2016-04-05"/>
+              </valuePeriod>
+            </extension>
+            <extension url="gender">
+              <valueCode value="unknown"/>
+            </extension>
           </extension>
         </gender>
         <birthDate value="1972-10-16">
@@ -156,7 +185,7 @@
       <Coverage>
         <id value="Coverage-Active-Example"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Coverage-Active-Example" </p></div><p><b>status</b>: active</p><p><b>type</b>: mandatory health program <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.0.0/CodeSystem-v3-ActCode.html">ActCode</a>#MANDPOL)</span></p><p><b>beneficiary</b>: <a href="#Patient_Patient-GetDemographics-Example">See above (urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c)</a></p><p><b>period</b>: 2021-01-17 --&gt; (ongoing)</p><p><b>payor</b>: <span>: Health Insurance BC</span></p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Coverage-Active-Example" </p></div><p><b>status</b>: active</p><p><b>type</b>: mandatory health program <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ActCode.html">ActCode</a>#MANDPOL)</span></p><p><b>beneficiary</b>: <a href="#Patient_Patient-GetDemographics-Example">See above (urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c)</a></p><p><b>period</b>: 2021-01-17 --&gt; (ongoing)</p><p><b>payor</b>: <span>: Health Insurance BC</span></p></div>
         </text>
         <status value="active"/>
         <type>

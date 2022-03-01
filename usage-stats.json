@@ -8,7 +8,6 @@
       "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birthdate-history-extension",
       "title": "BC Birth Date History",
       "types": [
-        "Period",
         "date",
         "base64Binary",
         "boolean",
@@ -130,7 +129,6 @@
       "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-history-extension",
       "title": "BC Death Date History",
       "types": [
-        "Period",
         "date",
         "base64Binary",
         "boolean",
@@ -245,7 +243,6 @@
       "title": "BC Death Flag History",
       "types": [
         "boolean",
-        "Period",
         "base64Binary",
         "boolean",
         "canonical",
@@ -302,7 +299,6 @@
       "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension",
       "title": "BC Gender History",
       "types": [
-        "Period",
         "code",
         "code",
         "base64Binary",
@@ -358,6 +354,14 @@
       ]
     },
     {
+      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+      "title": "Identifier status",
+      "types": [
+        "code",
+        "code"
+      ]
+    },
+    {
       "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension",
       "title": "BC Merge Status Code",
       "types": [
@@ -369,7 +373,6 @@
       "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-multiplebirth-history-extension",
       "title": "BC Multiple Birth History",
       "types": [
-        "Period",
         "boolean",
         "integer",
         "base64Binary",
@@ -591,7 +594,12 @@
       "Extension"
     ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension": [
+      "Bundle.entry.resource.gender",
       "Patient.gender"
+    ],
+    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension": [
+      "Bundle.entry.resource.identifier",
+      "Patient.identifier"
     ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension": [
       "Parameters.parameter.resource.link",
