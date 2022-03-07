@@ -197,37 +197,30 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>For example gender would be masked as follows.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "_gender" : {
-      "extension" : [
-        {
-          "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-          "valueCode" : "masked"
-        }
-      ]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"_gender" : {
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+      "valueCode" : "masked"
     }
+  ]
+}
 </code></pre></div></div>
 
 <p>Below is an example for name.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-            "valueCode" : "masked"
-          }
-        ],
-        "_use" : {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-              "valueCode" : "masked"
-            }
-          ]
-        }
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"name" : [
+  {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+        "valueCode": "masked"
       }
+    ],
+    "use": "temp"
+  }
+]
 </code></pre></div></div>
-
-<p>The <em>use</em> attribute is also masked as the cardinality is 1..1 and must be present when a name is present.</p>
 
 
 
@@ -254,7 +247,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 7, 2022 23:08+0000">2022-03-07</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 7, 2022 23:35+0000">2022-03-07</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

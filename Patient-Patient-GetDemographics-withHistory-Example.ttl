@@ -66,6 +66,14 @@
        fhir:Period.start [ fhir:value "2020-01-01T00:00:00-08:00"^^xsd:dateTime ];
        fhir:Period.end [ fhir:value "2021-01-01T00:00:00-08:00"^^xsd:dateTime ]
      ]
+  ], [
+     fhir:index 2;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/data-absent-reason" ];
+       fhir:Extension.valueCode [ fhir:value "masked" ]
+     ];
+     fhir:HumanName.use [ fhir:value "temp" ]
   ];
   fhir:Patient.telecom [
      fhir:index 0;
