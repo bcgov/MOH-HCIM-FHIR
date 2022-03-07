@@ -8,27 +8,6 @@
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>JILLIAN DAWN THIRD NAME COOK-ADAMS </b> (no stated gender) 1972-10-16 ( Jurisdictional health number: 9983652763)</p></div>
   </text>
-  <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-extension">
-    <extension url="deathDate">
-      <valueDateTime value="2021-10-12"/>
-    </extension>
-    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
-      <valuePeriod>
-        <start value="2021-10-12T00:00:00-08:00"/>
-      </valuePeriod>
-    </extension>
-    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-history-extension">
-      <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
-        <valuePeriod>
-          <start value="2020-10-11T00:00:00-08:00"/>
-          <end value="2021-10-12T00:00:00-08:00"/>
-        </valuePeriod>
-      </extension>
-      <extension url="deathDate">
-        <valueDateTime value="2020-10-11"/>
-      </extension>
-    </extension>
-  </extension>
   <identifier>
     <type>
       <coding>
@@ -112,26 +91,57 @@
       </extension>
     </extension>
   </birthDate>
-  <deceasedBoolean value="false">
-    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-flag-extension">
+  <deceasedDateTime value="2000-01-01">
+    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+      <valuePeriod>
+        <start value="1980-01-01"/>
+        <end value="2000-01-01"/>
+      </valuePeriod>
+    </extension>
+    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+      <extension url="sourceID">
+        <valueIdentifier>
+          <assigner>
+            <display value="SOURCE"/>
+          </assigner>
+        </valueIdentifier>
+      </extension>
+      <extension url="userID">
+        <valueIdentifier>
+          <assigner>
+            <display value="USERID"/>
+          </assigner>
+        </valueIdentifier>
+      </extension>
+    </extension>
+    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension">
+      <extension url="deathVerifiedFlag">
+        <valueBoolean value="true"/>
+      </extension>
       <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
         <valuePeriod>
-          <start value="2021-10-12T00:00:00-08:00"/>
+          <start value="1980-01-01"/>
+          <end value="2000-01-01"/>
         </valuePeriod>
       </extension>
-      <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-flag-history-extension">
-        <extension url="deathFlag">
-          <valueBoolean value="true"/>
+      <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+        <extension url="sourceID">
+          <valueIdentifier>
+            <assigner>
+              <display value="SOURCE"/>
+            </assigner>
+          </valueIdentifier>
         </extension>
-        <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
-          <valuePeriod>
-            <start value="2021-10-11T00:00:00-08:00"/>
-            <end value="2021-10-12T00:00:00-08:00"/>
-          </valuePeriod>
+        <extension url="userID">
+          <valueIdentifier>
+            <assigner>
+              <display value="USERID"/>
+            </assigner>
+          </valueIdentifier>
         </extension>
       </extension>
     </extension>
-  </deceasedBoolean>
+  </deceasedDateTime>
   <address>
     <type value="physical"/>
     <line value="321 SUNSHINE PL"/>

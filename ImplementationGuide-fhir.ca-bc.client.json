@@ -10,7 +10,7 @@
   "name": "BCHealthClientIdentityManagement",
   "title": "BC Client Registry FHIR Implementation Guide",
   "status": "draft",
-  "date": "2022-03-07T21:23:32+00:00",
+  "date": "2022-03-07T23:08:33+00:00",
   "publisher": "BC Ministry of Health",
   "contact": [
     {
@@ -520,20 +520,6 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/bc-death-date-extension"
-        },
-        "name": "BC Patient Death Date",
-        "description": "The Patients death date and time as recorded in the Client Registry.  This also include death date history as required.",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:extension"
-          }
-        ],
-        "reference": {
           "reference": "StructureDefinition/bc-death-date-history-extension"
         },
         "name": "BC Death Date History",
@@ -548,10 +534,10 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/bc-death-flag-extension"
+          "reference": "StructureDefinition/bc-death-verified-flag-extension"
         },
-        "name": "BC Patient Death Date",
-        "description": "The Patients death date and time as recorded in the Client Registry.",
+        "name": "BC Death Verified Flag",
+        "description": "The Patients death is verified and as recorded in the Client Registry as a flag.  This also includes death verified flag history as required.",
         "exampleBoolean": false
       },
       {
@@ -562,10 +548,10 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/bc-death-flag-history-extension"
+          "reference": "StructureDefinition/bc-death-verified-flag-history-extension"
         },
-        "name": "BC Death Flag History",
-        "description": "This extension allows the Client Registry to include historical death dates and flags in a single Patient resource.",
+        "name": "BC Death Verified Flag History",
+        "description": "This extension allows the Client Registry to include historical death flags in a single Patient resource.",
         "exampleBoolean": false
       },
       {

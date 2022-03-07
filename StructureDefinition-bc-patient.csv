@@ -28,10 +28,6 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","BC Business Dates","The effective dates for the parent element.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.extension","deathDate","","",0,1,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-extension]]} {[]}
-","BC Patient Death Date","The Patients death date and time as recorded in the Client Registry.  This also include death date history as required.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
@@ -154,7 +150,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.gender.extension","genderEffectiveDates","","",0,1,"","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension]]} {[]}
+"Patient.gender.extension","genderEffectiveDates","","",0,1,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension]]} {[]}
 ","BC Business Dates","The effective dates for the parent element.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
@@ -191,7 +187,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.birthDate.value","","","",0,1,"","","","date {[]} {[]}
 ","Primitive value for date","The actual value","","","","","","","","","",,,,,"",,,,"date.value",0,1,"",""
-"Patient.deceased[x]","","","",0,1,"Y","Y","Y","boolean {[]} {[]}
+"Patient.deceased[x]","","","",0,1,"Y","Y","Y","dateTime {[]} {[]}
 ","Indicates if the individual is deceased or not","Indicates if the individual is deceased or not.","If there's no value in the instance, it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.","The fact that a patient is deceased influences the clinical process. Also, in human communication and relation management it is necessary to know whether the person is alive.","","","","","","","",,,,,"",,,,"Patient.deceased[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedInd, player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedTime","n/a","PID-30  (bool) and PID-29 (datetime)"
 "Patient.deceased[x].id","","","",0,1,"","","","string {[]} {[]}
@@ -200,16 +196,24 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.deceased[x].extension","deathDateFlag","","",0,1,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-flag-extension]]} {[]}
-","BC Patient Death Date","The Patients death date and time as recorded in the Client Registry.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+"Patient.deceased[x].extension","deathDateEffectiveDates","","",0,1,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension]]} {[]}
+","BC Business Dates","The effective dates for the parent element.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.deceased[x].extension","sourceID","","",0,1,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension]]} {[]}
 ","BC SourceID and UserID","Identifiers for the source and user that modified the specific element that this extension is on.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.deceased[x].value","","","",0,1,"","","","boolean {[]} {[]}
-","Primitive value for boolean","The actual value","","","","","","","","","",,,,,"",,,,"boolean.value",0,1,"",""
+"Patient.deceased[x].extension","deathDateHistory","","",0,*,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-history-extension]]} {[]}
+","BC Death Date History","This extension allows the Client Registry to include historical death dates and flags in a single Patient resource.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Patient.deceased[x].extension","verifiedDeathFlag","","",0,1,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension]]} {[]}
+","BC Death Verified Flag","The Patients death is verified and as recorded in the Client Registry as a flag.  This also includes death verified flag history as required.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Patient.deceased[x].value","","","",0,1,"","","","dateTime {[]} {[]}
+","Primitive value for dateTime","The actual value","","","","","","","","","",,,,,"",,,,"dateTime.value",0,1,"",""
 "Patient.address","","","",0,*,"Y","","Y","Address {[]} {[]}
 ","An address for the individual","An address for the individual.","Patient may have multiple addresses with different uses or applicable periods.","May need to keep track of patient addresses for contacting, billing or reporting requirements and also to help with identification.","","","","","","","",,,,,"",,,,"Patient.address",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","addr",".addr","PID-11"

@@ -11,7 +11,7 @@
   <name value="BCHealthClientIdentityManagement"/>
   <title value="BC Client Registry FHIR Implementation Guide"/>
   <status value="draft"/>
-  <date value="2022-03-07T21:23:32+00:00"/>
+  <date value="2022-03-07T23:08:33+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -359,17 +359,6 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/bc-death-date-extension"/>
-      </reference>
-      <name value="BC Patient Death Date"/>
-      <description value="The Patients death date and time as recorded in the Client Registry.  This also include death date history as required."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
         <reference value="StructureDefinition/bc-death-date-history-extension"/>
       </reference>
       <name value="BC Death Date History"/>
@@ -381,10 +370,10 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/bc-death-flag-extension"/>
+        <reference value="StructureDefinition/bc-death-verified-flag-extension"/>
       </reference>
-      <name value="BC Patient Death Date"/>
-      <description value="The Patients death date and time as recorded in the Client Registry."/>
+      <name value="BC Death Verified Flag"/>
+      <description value="The Patients death is verified and as recorded in the Client Registry as a flag.  This also includes death verified flag history as required."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -392,10 +381,10 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/bc-death-flag-history-extension"/>
+        <reference value="StructureDefinition/bc-death-verified-flag-history-extension"/>
       </reference>
-      <name value="BC Death Flag History"/>
-      <description value="This extension allows the Client Registry to include historical death dates and flags in a single Patient resource."/>
+      <name value="BC Death Verified Flag History"/>
+      <description value="This extension allows the Client Registry to include historical death flags in a single Patient resource."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

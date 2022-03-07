@@ -69,63 +69,6 @@
       ]
     },
     {
-      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-extension",
-      "title": "BC Patient Death Date",
-      "types": [
-        "date",
-        "base64Binary",
-        "boolean",
-        "canonical",
-        "code",
-        "date",
-        "dateTime",
-        "decimal",
-        "id",
-        "instant",
-        "integer",
-        "markdown",
-        "oid",
-        "positiveInt",
-        "string",
-        "time",
-        "unsignedInt",
-        "uri",
-        "url",
-        "uuid",
-        "Address",
-        "Age",
-        "Annotation",
-        "Attachment",
-        "CodeableConcept",
-        "Coding",
-        "ContactPoint",
-        "Count",
-        "Distance",
-        "Duration",
-        "HumanName",
-        "Identifier",
-        "Money",
-        "Period",
-        "Quantity",
-        "Range",
-        "Ratio",
-        "Reference",
-        "SampledData",
-        "Signature",
-        "Timing",
-        "ContactDetail",
-        "Contributor",
-        "DataRequirement",
-        "Expression",
-        "ParameterDefinition",
-        "RelatedArtifact",
-        "TriggerDefinition",
-        "UsageContext",
-        "Dosage",
-        "Meta"
-      ]
-    },
-    {
       "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-history-extension",
       "title": "BC Death Date History",
       "types": [
@@ -183,9 +126,10 @@
       ]
     },
     {
-      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-flag-extension",
-      "title": "BC Patient Death Date",
+      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension",
+      "title": "BC Death Verified Flag",
       "types": [
+        "boolean",
         "base64Binary",
         "boolean",
         "canonical",
@@ -239,8 +183,8 @@
       ]
     },
     {
-      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-flag-history-extension",
-      "title": "BC Death Flag History",
+      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-history-extension",
+      "title": "BC Death Verified Flag History",
       "types": [
         "boolean",
         "base64Binary",
@@ -576,21 +520,20 @@
       "Extension",
       "Patient",
       "Patient.birthDate",
+      "Patient.deceasedDateTime",
+      "Patient.deceased[x]",
       "Patient.gender",
       "Patient.multipleBirthBoolean",
       "Patient.multipleBirth[x]"
     ],
-    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-extension": [
-      "Patient"
-    ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-history-extension": [
-      "Extension"
-    ],
-    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-flag-extension": [
-      "Patient.deceasedBoolean",
       "Patient.deceased[x]"
     ],
-    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-flag-history-extension": [
+    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension": [
+      "Patient.deceasedDateTime",
+      "Patient.deceased[x]"
+    ],
+    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-history-extension": [
       "Extension"
     ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension": [
@@ -613,6 +556,7 @@
       "Extension",
       "Patient.address",
       "Patient.birthDate",
+      "Patient.deceasedDateTime",
       "Patient.deceased[x]",
       "Patient.gender",
       "Patient.identifier",

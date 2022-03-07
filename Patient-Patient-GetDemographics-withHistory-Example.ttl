@@ -19,36 +19,6 @@
      fhir:Narrative.status [ fhir:value "generated" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>JILLIAN DAWN THIRD NAME COOK-ADAMS </b> (no stated gender) 1972-10-16 ( Jurisdictional health number: 9983652763)</p></div>"
   ];
-  fhir:DomainResource.extension [
-     fhir:index 0;
-     fhir:Element.extension [
-       fhir:index 0;
-       fhir:Extension.url [ fhir:value "deathDate" ];
-       fhir:Extension.valueDateTime [ fhir:value "2021-10-12"^^xsd:date ]
-     ], [
-       fhir:index 1;
-       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
-       fhir:Extension.valuePeriod [
-         fhir:Period.start [ fhir:value "2021-10-12T00:00:00-08:00"^^xsd:dateTime ]
-       ]
-     ], [
-       fhir:index 2;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
-         fhir:Extension.valuePeriod [
-           fhir:Period.start [ fhir:value "2020-10-11T00:00:00-08:00"^^xsd:dateTime ];
-           fhir:Period.end [ fhir:value "2021-10-12T00:00:00-08:00"^^xsd:dateTime ]
-         ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "deathDate" ];
-         fhir:Extension.valueDateTime [ fhir:value "2020-10-11"^^xsd:date ]
-       ];
-       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-history-extension" ]
-     ];
-     fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-extension" ]
-  ];
   fhir:Patient.identifier [
      fhir:index 0;
      fhir:Identifier.type [
@@ -164,33 +134,70 @@
        fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birthdate-history-extension" ]
      ]
   ];
-  fhir:Patient.deceasedBoolean [
-     fhir:value "false"^^xsd:boolean;
+  fhir:Patient.deceasedDateTime [
+     fhir:value "2000-01-01"^^xsd:date;
      fhir:Element.extension [
        fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+       fhir:Extension.valuePeriod [
+         fhir:Period.start [ fhir:value "1980-01-01"^^xsd:date ];
+         fhir:Period.end [ fhir:value "2000-01-01"^^xsd:date ]
+       ]
+     ], [
+       fhir:index 1;
        fhir:Element.extension [
          fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
-         fhir:Extension.valuePeriod [
-           fhir:Period.start [ fhir:value "2021-10-12T00:00:00-08:00"^^xsd:dateTime ]
+         fhir:Extension.url [ fhir:value "sourceID" ];
+         fhir:Extension.valueIdentifier [
+           fhir:Identifier.assigner [
+             fhir:Reference.display [ fhir:value "SOURCE" ]
+           ]
          ]
        ], [
          fhir:index 1;
+         fhir:Extension.url [ fhir:value "userID" ];
+         fhir:Extension.valueIdentifier [
+           fhir:Identifier.assigner [
+             fhir:Reference.display [ fhir:value "USERID" ]
+           ]
+         ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension" ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "deathVerifiedFlag" ];
+         fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+         fhir:Extension.valuePeriod [
+           fhir:Period.start [ fhir:value "1980-01-01"^^xsd:date ];
+           fhir:Period.end [ fhir:value "2000-01-01"^^xsd:date ]
+         ]
+       ], [
+         fhir:index 2;
          fhir:Element.extension [
            fhir:index 0;
-           fhir:Extension.url [ fhir:value "deathFlag" ];
-           fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+           fhir:Extension.url [ fhir:value "sourceID" ];
+           fhir:Extension.valueIdentifier [
+             fhir:Identifier.assigner [
+               fhir:Reference.display [ fhir:value "SOURCE" ]
+             ]
+           ]
          ], [
            fhir:index 1;
-           fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
-           fhir:Extension.valuePeriod [
-             fhir:Period.start [ fhir:value "2021-10-11T00:00:00-08:00"^^xsd:dateTime ];
-             fhir:Period.end [ fhir:value "2021-10-12T00:00:00-08:00"^^xsd:dateTime ]
+           fhir:Extension.url [ fhir:value "userID" ];
+           fhir:Extension.valueIdentifier [
+             fhir:Identifier.assigner [
+               fhir:Reference.display [ fhir:value "USERID" ]
+             ]
            ]
          ];
-         fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-flag-history-extension" ]
+         fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension" ]
        ];
-       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-flag-extension" ]
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension" ]
      ]
   ];
   fhir:Patient.address [
