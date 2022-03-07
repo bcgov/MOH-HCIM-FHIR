@@ -34,7 +34,6 @@ Description: "Patient example for a RevisePatient operation"
 * name.use = #official
 * gender = #male
 * birthDate = 1940-06-06
-* deceasedBoolean = false
 
 Instance: Patient-AddPatient-Example
 InstanceOf: BCPatient
@@ -56,7 +55,6 @@ Description: "The Patient is completely new to the Client Registry, no identifie
 * name.use = #usual
 * gender = #male
 * birthDate = 1940-06-06
-* deceasedBoolean = false
 
 Instance: Patient-AddPatient-Newborn-Example
 InstanceOf: BCPatient
@@ -77,7 +75,6 @@ Description: "The Patient is completely new to the Client Registry, no identifie
 * name.use = #usual
 * gender = #unknown
 * birthDate = 2021-11-02
-* deceasedBoolean = false
 
 Instance: Patient-MergePatient-Example
 InstanceOf: BCPatient
@@ -169,7 +166,6 @@ Description: "Example of Patient for query response Bundle with 4 different kind
 * birthDate = 1940-06-06
 * birthDate.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * birthDate.extension[0].valuePeriod.start = "2020-10-17T03:29:17-08:00"
-* deceasedBoolean = false
 
 Instance: Patient-1-Example
 InstanceOf: BCPatient
@@ -195,7 +191,6 @@ Description: "Example of Patient for query response Bundle"
 * birthDate = 1973-05-18
 * birthDate.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * birthDate.extension[0].valuePeriod.start = "2018-10-17T03:29:17-08:00"
-* deceasedBoolean = false
 
 Instance: Patient-2-Example
 InstanceOf: BCPatient
@@ -313,7 +308,6 @@ Description: "Example of Merge or Revise response Bundle with 4 different kinds 
 * birthDate = 1940-06-06
 * birthDate.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * birthDate.extension.valuePeriod.start = "2020-10-17T03:29:17-08:00"
-* deceasedBoolean = false
 
 
 Instance: Patient-BabyBoy-Example
@@ -486,25 +480,34 @@ Description: "Example of Patient for $GetDemographics operation response"
 * multipleBirthBoolean.extension[2].extension[0].valuePeriod.end = "2020-03-17T03:29:17-08:00"
 * multipleBirthBoolean.extension[2].extension[1].url = "multipleBirth"
 * multipleBirthBoolean.extension[2].extension[1].valueBoolean = false
-* deceasedBoolean = false
 
-* deceasedBoolean.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-flag-extension"
-* deceasedBoolean.extension[0].extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* deceasedBoolean.extension[0].extension[0].valuePeriod.start = "2021-10-12T00:00:00-08:00"
-* deceasedBoolean.extension[0].extension[1].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-flag-history-extension"
-* deceasedBoolean.extension[0].extension[1].extension[0].url = "deathFlag"
-* deceasedBoolean.extension[0].extension[1].extension[0].valueBoolean = true
-* deceasedBoolean.extension[0].extension[1].extension[1].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* deceasedBoolean.extension[0].extension[1].extension[1].valuePeriod.start = "2021-10-11T00:00:00-08:00"
-* deceasedBoolean.extension[0].extension[1].extension[1].valuePeriod.end = "2021-10-12T00:00:00-08:00"
-* extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-extension"
-* extension.extension[0].url = "deathDate"
-* extension.extension[0].valueDateTime = "2021-10-12"
-* extension.extension[1].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* extension.extension[1].valuePeriod.start = "2021-10-12T00:00:00-08:00"
-* extension.extension[2].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-history-extension"
-* extension.extension[2].extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* extension.extension[2].extension[0].valuePeriod.start = "2020-10-11T00:00:00-08:00"
-* extension.extension[2].extension[0].valuePeriod.end  = "2021-10-12T00:00:00-08:00"
-* extension.extension[2].extension[1].url = "deathDate"
-* extension.extension[2].extension[1].valueDateTime = "2020-10-11"
+* deceasedDateTime = "2000-01-01"
+
+// date period
+* deceasedDateTime.extension[deathDateEffectiveDates].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
+* deceasedDateTime.extension[deathDateEffectiveDates].valuePeriod.start = "1980-01-01"
+* deceasedDateTime.extension[deathDateEffectiveDates].valuePeriod.end = "2000-01-01"
+
+// date source
+* deceasedDateTime.extension[sourceID].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+* deceasedDateTime.extension[sourceID].extension[0].url = "sourceID"
+* deceasedDateTime.extension[sourceID].extension[0].valueIdentifier.assigner.display = "SOURCE"
+* deceasedDateTime.extension[sourceID].extension[1].url = "userID"
+* deceasedDateTime.extension[sourceID].extension[1].valueIdentifier.assigner.display = "USERID"
+
+// flag
+* deceasedDateTime.extension[verifiedDeathFlag].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension"
+* deceasedDateTime.extension[verifiedDeathFlag].extension[deathVerifiedFlag].url = "deathVerifiedFlag"
+* deceasedDateTime.extension[verifiedDeathFlag].extension[deathVerifiedFlag].valueBoolean = true
+
+// flag period
+* deceasedDateTime.extension[verifiedDeathFlag].extension[businessDates].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
+* deceasedDateTime.extension[verifiedDeathFlag].extension[businessDates].valuePeriod.start = "1980-01-01"
+* deceasedDateTime.extension[verifiedDeathFlag].extension[businessDates].valuePeriod.end = "2000-01-01"
+
+// flag source
+* deceasedDateTime.extension[verifiedDeathFlag].extension[sourceID].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+* deceasedDateTime.extension[verifiedDeathFlag].extension[sourceID].extension[0].url = "sourceID"
+* deceasedDateTime.extension[verifiedDeathFlag].extension[sourceID].extension[0].valueIdentifier.assigner.display = "SOURCE"
+* deceasedDateTime.extension[verifiedDeathFlag].extension[sourceID].extension[1].url = "userID"
+* deceasedDateTime.extension[verifiedDeathFlag].extension[sourceID].extension[1].valueIdentifier.assigner.display = "USERID"

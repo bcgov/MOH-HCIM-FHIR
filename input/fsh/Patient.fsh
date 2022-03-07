@@ -2,12 +2,12 @@ Profile: BCPatient
 Parent: Patient
 Id: bc-patient
 Description: "General constraints on the Patient resource for use in the BC Client Registry project."
-* extension contains BusinessPeriodExtension named effectiveDates 0..1 MS and DeathDateExtension named deathDate 0..1 MS
+* extension contains BusinessPeriodExtension named effectiveDates 0..1 MS
 * identifier 0..* MS
 * identifier.extension contains SourceIDExtension named sourceID 0..1 MS and IdentifierStatusExtension named idStatus 0..1 MS
 * deceased[x] 0..1 MS
-* deceased[x] only boolean 
-* deceased[x].extension contains DeathFlagExtension named deathDateFlag 0..1 MS and SourceIDExtension named sourceID 0..1 MS
+* deceased[x] only dateTime
+* deceased[x].extension contains BusinessPeriodExtension named deathDateEffectiveDates 0..1 MS and SourceIDExtension named sourceID 0..1 MS and DeathDateHistoryExtension named deathDateHistory 0..* MS and DeathVerifiedFlagExtension named verifiedDeathFlag 0..1 MS
 * address MS
 * address.type ^short = "postal | physical"
 * address.extension contains SourceIDExtension named sourceID 0..1 MS
@@ -24,7 +24,7 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * telecom.system ^short = "phone | email"
 * telecom.extension contains SourceIDExtension named sourceID 0..1 MS
 * gender 1..1 MS
-* gender.extension contains BusinessPeriodExtension named genderEffectiveDates 0..1  and SourceIDExtension named sourceID 0..1 MS and GenderHistoryExtension named history 0..* MS
+* gender.extension contains BusinessPeriodExtension named genderEffectiveDates 0..1 MS and SourceIDExtension named sourceID 0..1 MS and GenderHistoryExtension named history 0..* MS
 * birthDate 1..1 MS
 * birthDate.extension contains BusinessPeriodExtension named birthDateEffectiveDates 0..1 and SourceIDExtension named sourceID 0..1 MS and BirthDateHistoryExtension named history 0..* MS 
 * multipleBirth[x].extension contains BusinessPeriodExtension named multipleBirthEffectiveDates 0..1 MS and SourceIDExtension named sourceID 0..1 MS and MultipleBirthHistoryExtension named history 0..* MS 
@@ -35,19 +35,13 @@ Title: "BC Business Dates"
 Description: "The effective dates for the parent element."
 * value[x] only Period
 
-Extension: DeathDateExtension
-Id: bc-death-date-extension
-Title: "BC Patient Death Date"
-Description: "The Patients death date and time as recorded in the Client Registry.  This also include death date history as required."
-* extension contains deathDate 1..1 MS and BusinessPeriodExtension named businessDates 0..1 MS and SourceIDExtension named sourceID 0..1 MS and DeathDateHistoryExtension named deathDateHistory 0..* MS 
-* extension[deathDate].value[x] 1..1 MS
-* extension[deathDate].value[x] only date
-
-Extension: DeathFlagExtension
-Id: bc-death-flag-extension
-Title: "BC Patient Death Date"
-Description: "The Patients death date and time as recorded in the Client Registry."
-* extension contains BusinessPeriodExtension named businessDates 0..1 MS and SourceIDExtension named sourceID 0..1 MS and DeathFlagHistoryExtension named deathFlagHistory 0..* MS 
+Extension: DeathVerifiedFlagExtension
+Id: bc-death-verified-flag-extension
+Title: "BC Death Verified Flag"
+Description: "The Patients death is verified and as recorded in the Client Registry as a flag.  This also includes death verified flag history as required."
+* extension contains deathVerifiedFlag 1..1 MS and BusinessPeriodExtension named businessDates 0..1 MS and SourceIDExtension named sourceID 0..1 MS and DeathVerifiedFlagHistoryExtension named deathVerifiedFlagHistory 0..* MS 
+* extension[deathVerifiedFlag].value[x] 1..1 MS
+* extension[deathVerifiedFlag].value[x] only boolean
 
 Extension: MergeStatusExtension
 Id: bc-merge-status-extension
@@ -90,10 +84,10 @@ Description: "This extension allows the Client Registry to include historical de
 * extension[deathDate].value[x] 1..1 MS
 * extension[deathDate].value[x] only date
 
-Extension: DeathFlagHistoryExtension
-Id: bc-death-flag-history-extension
-Title: "BC Death Flag History"
-Description: "This extension allows the Client Registry to include historical death dates and flags in a single Patient resource."
+Extension: DeathVerifiedFlagHistoryExtension
+Id: bc-death-verified-flag-history-extension
+Title: "BC Death Verified Flag History"
+Description: "This extension allows the Client Registry to include historical death flags in a single Patient resource."
 * extension contains deathFlag 1..1 MS and BusinessPeriodExtension named businessDates 1..1 MS and SourceIDExtension named sourceID 0..1 MS
 * extension[deathFlag].value[x] 1..1 MS
 * extension[deathFlag].value[x] only boolean
