@@ -5,33 +5,25 @@ Data may be absent in notifications or any response.  This guide will not discus
 
 For example gender would be masked as follows.
 
-        "_gender" : {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-              "valueCode" : "masked"
-            }
-          ]
+    "_gender" : {
+      "extension" : [
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+          "valueCode" : "masked"
         }
+      ]
+    }
 
 Below is an example for name.
 
+    "name" : [
+      {
+        "extension": [
           {
-            "extension" : [
-              {
-                "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode" : "masked"
-              }
-            ],
-            "_use" : {
-              "extension" : [
-                {
-                  "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                  "valueCode" : "masked"
-                }
-              ]
-            }
+            "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+            "valueCode": "masked"
           }
-
-The _use_ attribute is also masked as the cardinality is 1..1 and must be present when a name is present.
-
+        ],
+        "use": "temp"
+      }
+    ]

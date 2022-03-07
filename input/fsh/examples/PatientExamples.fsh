@@ -448,6 +448,9 @@ Description: "Example of Patient for $GetDemographics operation response"
 * name[1].use = http://hl7.org/fhir/name-use#usual
 * name[1].period.start = "2020-01-01T00:00:00-08:00"
 * name[1].period.end = "2021-01-01T00:00:00-08:00"
+* name[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* name[2].extension[0].valueCode = #masked
+* name[2].use = http://hl7.org/fhir/name-use#temp
 * gender = #female
 * gender.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * gender.extension[0].valuePeriod.start = "2018-04-05T16:16:16-08:00"
