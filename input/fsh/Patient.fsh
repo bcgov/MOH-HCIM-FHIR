@@ -13,7 +13,7 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * address.extension contains SourceIDExtension named sourceID 0..1 MS
 * link 0..* MS
 * name 1..* MS
-* name.use 1..1
+* name.use 0..1
 * name.use from BCNameUseVS (required)
 * name.use ^short = "usual | official | nickname"
 * name.extension contains SourceIDExtension named sourceID 0..1 MS
