@@ -1,0 +1,73 @@
+{
+  "resourceType": "Parameters",
+  "id": "Parameters-FindCandidatesByExample-Example",
+  "meta": {
+    "profile": [
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "messageId",
+      "valueString": "98028b44-882a-4c72-8c92-b87d916147e1"
+    },
+    {
+      "name": "messageDateTime",
+      "valueDateTime": "2015-02-07T13:28:17-08:00"
+    },
+    {
+      "name": "sender",
+      "valueIdentifier": {
+        "system": "http://hlth.gov.bc.ca/fhir/client/bc-org",
+        "value": "VPP"
+      }
+    },
+    {
+      "name": "patient",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient-By-Example-Example",
+        "meta": {
+          "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example"
+          ]
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Janey",
+            "given": [
+              "Jill"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "2505554848",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1940-06-06",
+        "deceasedDateTime": "2019-07-07",
+        "address": [
+          {
+            "type": "physical",
+            "line": [
+              "636 Misty Way"
+            ],
+            "city": "PRINCE GEORGE",
+            "state": "BC",
+            "postalCode": "V8W 3P9",
+            "country": "CA"
+          }
+        ]
+      }
+    },
+    {
+      "name": "identifiersOnly",
+      "valueBoolean": false
+    }
+  ]
+}

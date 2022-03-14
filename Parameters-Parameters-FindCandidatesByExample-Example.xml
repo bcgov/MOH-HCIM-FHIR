@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Parameters xmlns="http://hl7.org/fhir">
+  <id value="Parameters-FindCandidatesByExample-Example"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
+  </meta>
+  <parameter>
+    <name value="messageId"/>
+    <valueString value="98028b44-882a-4c72-8c92-b87d916147e1"/>
+  </parameter>
+  <parameter>
+    <name value="messageDateTime"/>
+    <valueDateTime value="2015-02-07T13:28:17-08:00"/>
+  </parameter>
+  <parameter>
+    <name value="sender"/>
+    <valueIdentifier>
+      <system value="http://hlth.gov.bc.ca/fhir/client/bc-org"/>
+      <value value="VPP"/>
+    </valueIdentifier>
+  </parameter>
+  <parameter>
+    <name value="patient"/>
+    <resource>
+      <Patient>
+        <id value="Patient-By-Example-Example"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example"/>
+        </meta>
+        <name>
+          <use value="official"/>
+          <family value="Janey"/>
+          <given value="Jill"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="2505554848"/>
+          <use value="home"/>
+        </telecom>
+        <gender value="male"/>
+        <birthDate value="1940-06-06"/>
+        <deceasedDateTime value="2019-07-07"/>
+        <address>
+          <type value="physical"/>
+          <line value="636 Misty Way"/>
+          <city value="PRINCE GEORGE"/>
+          <state value="BC"/>
+          <postalCode value="V8W 3P9"/>
+          <country value="CA"/>
+        </address>
+      </Patient>
+    </resource>
+  </parameter>
+  <parameter>
+    <name value="identifiersOnly"/>
+    <valueBoolean value="false"/>
+  </parameter>
+</Parameters>

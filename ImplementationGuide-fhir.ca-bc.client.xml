@@ -11,7 +11,7 @@
   <name value="BCHealthClientIdentityManagement"/>
   <title value="BC Client Registry FHIR Implementation Guide"/>
   <status value="draft"/>
-  <date value="2022-03-07T23:35:33+00:00"/>
+  <date value="2022-03-14T20:50:06+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -295,6 +295,18 @@
       <description value="Parameters extended from BCMetadataParameters for a Patient resource"/>
       <exampleBoolean value="false"/>
       <groupingId value="SupportingProfiles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/bc-patient-by-example"/>
+      </reference>
+      <name value="BCPatientByExample"/>
+      <description value="General constraints on the Patient resource for use in the BC Client Registry project for queries."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="PatientProfile"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -606,7 +618,7 @@
         <reference value="Bundle/Bundle-FindCandidates-Response-MomsPHN-Example"/>
       </reference>
       <name value="Bundle-FindCandidates-Response-MomsPHN-Example"/>
-      <description value="Example of FindCandidates with mother&#39;s PHN response Bundle."/>
+      <description value="Example of FindCandidates with mother's PHN response Bundle."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
       <groupingId value="ResponseExamples"/>
     </resource>
@@ -791,7 +803,19 @@
         <reference value="Parameters/Parameters-FindCandidates-UsingMomsPHN-Example"/>
       </reference>
       <name value="Parameters-FindCandidates-UsingMomsPHN-Example"/>
-      <description value="Example of $FindCandidates operation with mother&#39;s PHN"/>
+      <description value="Example of $FindCandidates operation with mother's PHN"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
+      <groupingId value="RequestExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/Parameters-FindCandidatesByExample-Example"/>
+      </reference>
+      <name value="Parameters-FindCandidatesByExample-Example"/>
+      <description value="Example of $FindCandidates operation"/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
       <groupingId value="RequestExamples"/>
     </resource>
@@ -1014,6 +1038,17 @@
         <valueString value="Patient"/>
       </extension>
       <reference>
+        <reference value="Patient/Patient-By-Example-Example"/>
+      </reference>
+      <name value="Patient-By-Example-Example"/>
+      <description value="An example of a Patient used for Find Candidates query."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
         <reference value="Patient/Patient-GetDemographics-Example"/>
       </reference>
       <name value="Patient-GetDemographics-Example"/>
@@ -1072,7 +1107,7 @@
         <reference value="RelatedPerson/RelatedPerson-Mother-Example"/>
       </reference>
       <name value="RelatedPerson-Mother-Example"/>
-      <description value="Example of related person&#39;s PHN as Identifier"/>
+      <description value="Example of related person's PHN as Identifier"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1129,7 +1164,7 @@
         <reference value="OperationDefinition/bc-patient-add"/>
       </reference>
       <name value="AddPatient"/>
-      <description value="This operation is used for newborns or to &#39;force create&#39; a patient."/>
+      <description value="This operation is used for newborns or to 'force create' a patient."/>
       <exampleBoolean value="false"/>
       <groupingId value="Operations"/>
     </resource>
@@ -1141,6 +1176,18 @@
         <reference value="OperationDefinition/bc-patient-find-candidates"/>
       </reference>
       <name value="FindCandidates"/>
+      <description value="This operation is used to query for a patient.  The response can contain 0 or more Patients."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Operations"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="OperationDefinition/bc-patient-find-candidates-by-example"/>
+      </reference>
+      <name value="FindCandidatesByExample"/>
       <description value="This operation is used to query for a patient.  The response can contain 0 or more Patients."/>
       <exampleBoolean value="false"/>
       <groupingId value="Operations"/>
@@ -1189,7 +1236,7 @@
         <reference value="OperationDefinition/bc-patient-notification"/>
       </reference>
       <name value="PatientNotification"/>
-      <description value="This operation is used notify a user that a patient&#39;s record has changed."/>
+      <description value="This operation is used notify a user that a patient's record has changed."/>
       <exampleBoolean value="false"/>
       <groupingId value="Operations"/>
     </resource>
@@ -1201,7 +1248,7 @@
         <reference value="OperationDefinition/bc-patient-partial-revise"/>
       </reference>
       <name value="PartialRevisePatient"/>
-      <description value="This operation is used to revise a patient&#39;s demographics, applied to only specific Patient attributes."/>
+      <description value="This operation is used to revise a patient's demographics, applied to only specific Patient attributes."/>
       <exampleBoolean value="false"/>
       <groupingId value="Operations"/>
     </resource>
@@ -1213,7 +1260,7 @@
         <reference value="OperationDefinition/bc-patient-revise"/>
       </reference>
       <name value="RevisePatient"/>
-      <description value="This operation is used to revise a patient&#39;s demographics."/>
+      <description value="This operation is used to revise a patient's demographics."/>
       <exampleBoolean value="false"/>
       <groupingId value="Operations"/>
     </resource>

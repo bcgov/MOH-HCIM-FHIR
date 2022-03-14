@@ -10,7 +10,7 @@
   "name": "BCHealthClientIdentityManagement",
   "title": "BC Client Registry FHIR Implementation Guide",
   "status": "draft",
-  "date": "2022-03-07T23:35:33+00:00",
+  "date": "2022-03-14T20:50:06+00:00",
   "publisher": "BC Ministry of Health",
   "contact": [
     {
@@ -438,6 +438,21 @@
         "description": "Parameters extended from BCMetadataParameters for a Patient resource",
         "exampleBoolean": false,
         "groupingId": "SupportingProfiles"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/bc-patient-by-example"
+        },
+        "name": "BCPatientByExample",
+        "description": "General constraints on the Patient resource for use in the BC Client Registry project for queries.",
+        "exampleBoolean": false,
+        "groupingId": "PatientProfile"
       },
       {
         "extension": [
@@ -1078,6 +1093,21 @@
           }
         ],
         "reference": {
+          "reference": "Parameters/Parameters-FindCandidatesByExample-Example"
+        },
+        "name": "Parameters-FindCandidatesByExample-Example",
+        "description": "Example of $FindCandidates operation",
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters",
+        "groupingId": "RequestExamples"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Parameters"
+          }
+        ],
+        "reference": {
           "reference": "Parameters/Parameters-GetDemographics-Example"
         },
         "name": "Parameters-GetDemographics-Example",
@@ -1349,6 +1379,20 @@
           }
         ],
         "reference": {
+          "reference": "Patient/Patient-By-Example-Example"
+        },
+        "name": "Patient-By-Example-Example",
+        "description": "An example of a Patient used for Find Candidates query.",
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
           "reference": "Patient/Patient-GetDemographics-Example"
         },
         "name": "Patient-GetDemographics-Example",
@@ -1509,6 +1553,21 @@
           "reference": "OperationDefinition/bc-patient-find-candidates"
         },
         "name": "FindCandidates",
+        "description": "This operation is used to query for a patient.  The response can contain 0 or more Patients.",
+        "exampleBoolean": false,
+        "groupingId": "Operations"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "OperationDefinition"
+          }
+        ],
+        "reference": {
+          "reference": "OperationDefinition/bc-patient-find-candidates-by-example"
+        },
+        "name": "FindCandidatesByExample",
         "description": "This operation is used to query for a patient.  The response can contain 0 or more Patients.",
         "exampleBoolean": false,
         "groupingId": "Operations"
