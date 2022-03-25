@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="Patient-Identifier-Examples"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Jodi Jedi (OFFICIAL)</b> female, DoB: 1965-01-01 ( Jurisdictional health number: 123345654 (OFFICIAL))</p></div>
+  </text>
+  <identifier>
+    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+      <valueCode value="merged"/>
+    </extension>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="JHN"/>
+      </coding>
+    </type>
+    <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"/>
+    <value value="123345654"/>
+    <period>
+      <start value="2000-01-01T11:11:11+08:00"/>
+      <end value="2010-01-01T11:11:11+08:00"/>
+    </period>
+  </identifier>
+  <identifier>
+    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+      <valueCode value="active"/>
+    </extension>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="AN"/>
+      </coding>
+    </type>
+    <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+    <value value="123345654"/>
+    <period>
+      <start value="2000-01-01T11:11:11+08:00"/>
+      <end value="2010-01-01T11:11:11+08:00"/>
+    </period>
+  </identifier>
+  <identifier>
+    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+      <valueCode value="active"/>
+    </extension>
+    <use value="secondary"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="AN"/>
+      </coding>
+    </type>
+    <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+    <value value="123345654"/>
+    <period>
+      <start value="2000-01-01T11:11:11+08:00"/>
+      <end value="2010-01-01T11:11:11+08:00"/>
+    </period>
+  </identifier>
+  <identifier>
+    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+      <valueCode value="active"/>
+    </extension>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="JHN"/>
+      </coding>
+    </type>
+    <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/QC"/>
+    <value value="123345654"/>
+    <period>
+      <start value="2000-01-01T11:11:11+08:00"/>
+      <end value="2010-01-01T11:11:11+08:00"/>
+    </period>
+  </identifier>
+  <name>
+    <use value="official"/>
+    <family value="Jedi"/>
+    <given value="Jodi"/>
+  </name>
+  <gender value="female"/>
+  <birthDate value="1965-01-01"/>
+</Patient>

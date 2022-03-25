@@ -76,8 +76,21 @@
      ];
      fhir:Patient.link.other [
        fhir:Reference.identifier [
-         fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
-         fhir:Identifier.value [ fhir:value "203451T3" ]
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+           fhir:Extension.valueCode [ fhir:value "active" ]
+         ];
+         fhir:Identifier.use [ fhir:value "official" ];
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+             fhir:Coding.code [ fhir:value "AN" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
+         fhir:Identifier.value [ fhir:value "123345654" ]
        ]
      ];
      fhir:Patient.link.type [ fhir:value "replaces" ]
@@ -90,6 +103,12 @@
      ];
      fhir:Patient.link.other [
        fhir:Reference.identifier [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+           fhir:Extension.valueCode [ fhir:value "merged" ]
+         ];
+         fhir:Identifier.use [ fhir:value "official" ];
          fhir:Identifier.type [
            fhir:CodeableConcept.coding [
              fhir:index 0;
@@ -97,8 +116,8 @@
              fhir:Coding.code [ fhir:value "JHN" ]
            ]
          ];
-         fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
-         fhir:Identifier.value [ fhir:value "9876345146" ]
+         fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC" ];
+         fhir:Identifier.value [ fhir:value "123345654" ]
        ]
      ];
      fhir:Patient.link.type [ fhir:value "replaces" ]
@@ -111,8 +130,21 @@
      ];
      fhir:Patient.link.other [
        fhir:Reference.identifier [
-         fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
-         fhir:Identifier.value [ fhir:value "203451T3" ]
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+           fhir:Extension.valueCode [ fhir:value "active" ]
+         ];
+         fhir:Identifier.use [ fhir:value "secondary" ];
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+             fhir:Coding.code [ fhir:value "AN" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
+         fhir:Identifier.value [ fhir:value "123345654" ]
        ]
      ];
      fhir:Patient.link.type [ fhir:value "replaces" ]
@@ -125,6 +157,12 @@
      ];
      fhir:Patient.link.other [
        fhir:Reference.identifier [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+           fhir:Extension.valueCode [ fhir:value "merged" ]
+         ];
+         fhir:Identifier.use [ fhir:value "official" ];
          fhir:Identifier.type [
            fhir:CodeableConcept.coding [
              fhir:index 0;
@@ -132,8 +170,8 @@
              fhir:Coding.code [ fhir:value "JHN" ]
            ]
          ];
-         fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
-         fhir:Identifier.value [ fhir:value "9876345146" ]
+         fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC" ];
+         fhir:Identifier.value [ fhir:value "987654321" ]
        ]
      ];
      fhir:Patient.link.type [ fhir:value "replaces" ]

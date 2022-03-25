@@ -67,8 +67,23 @@
       ],
       "other": {
         "identifier": {
-          "system": "http://hlth.gov.bc.ca/fhir/client/bc-sri",
-          "value": "203451T3"
+          "extension": [
+            {
+              "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+              "valueCode": "active"
+            }
+          ],
+          "use": "official",
+          "type": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "code": "AN"
+              }
+            ]
+          },
+          "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+          "value": "123345654"
         }
       },
       "type": "replaces"
@@ -82,6 +97,13 @@
       ],
       "other": {
         "identifier": {
+          "extension": [
+            {
+              "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+              "valueCode": "merged"
+            }
+          ],
+          "use": "official",
           "type": {
             "coding": [
               {
@@ -90,8 +112,8 @@
               }
             ]
           },
-          "system": "http://hlth.gov.bc.ca/fhir/client/bc-sri",
-          "value": "9876345146"
+          "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
+          "value": "123345654"
         }
       },
       "type": "replaces"
@@ -105,8 +127,23 @@
       ],
       "other": {
         "identifier": {
-          "system": "http://hlth.gov.bc.ca/fhir/client/bc-sri",
-          "value": "203451T3"
+          "extension": [
+            {
+              "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+              "valueCode": "active"
+            }
+          ],
+          "use": "secondary",
+          "type": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "code": "AN"
+              }
+            ]
+          },
+          "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+          "value": "123345654"
         }
       },
       "type": "replaces"
@@ -120,6 +157,13 @@
       ],
       "other": {
         "identifier": {
+          "extension": [
+            {
+              "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+              "valueCode": "merged"
+            }
+          ],
+          "use": "official",
           "type": {
             "coding": [
               {
@@ -128,8 +172,8 @@
               }
             ]
           },
-          "system": "http://hlth.gov.bc.ca/fhir/client/bc-sri",
-          "value": "9876345146"
+          "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
+          "value": "987654321"
         }
       },
       "type": "replaces"

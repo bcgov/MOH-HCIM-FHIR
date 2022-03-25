@@ -33,7 +33,18 @@
   ], [
      fhir:index 3;
      fhir:Parameters.parameter.name [ fhir:value "mothersPHN" ];
-     fhir:Parameters.parameter.valueString [ fhir:value "9123123432" ]
+     fhir:Parameters.parameter.valueIdentifier [
+       fhir:Identifier.use [ fhir:value "official" ];
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+           fhir:Coding.code [ fhir:value "JHN" ]
+         ]
+       ];
+       fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC" ];
+       fhir:Identifier.value [ fhir:value "9123123432" ]
+     ]
   ] .
 
 # - ontology header ------------------------------------------------------------

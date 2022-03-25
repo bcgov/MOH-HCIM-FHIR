@@ -232,14 +232,14 @@
         
           Draft
           
-            as of 2022-03-18
+            as of 2022-03-25
           
         
       </td>
 
 
 
-      <td><i>Computable Name</i>: <span style="font-family: monospace;">FindCandidates</span></td>
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">FindCandidatesByExample</span></td>
     </tr>
 
 
@@ -275,19 +275,13 @@
   
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><h2>FindCandidates</h2><p>QUERY: FindCandidates</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-find-candidates</pre><p>URL: [base]/Patient/$FindCandidates</p><p>Input parameters Profile: <a href="StructureDefinition-bc-metadata-parameters.html">BCMetadataParameters</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Unique message ID.</p>
+  <div xmlns="http://www.w3.org/1999/xhtml"><h2>FindCandidatesByExample</h2><p>QUERY: FindCandidatesByExample</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-find-candidates</pre><p>URL: [base]/Patient/$FindCandidates</p><p>Input parameters Profile: <a href="StructureDefinition-bc-metadata-parameters.html">BCMetadataParameters</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Unique message ID.</p>
 </div></td></tr><tr><td>IN</td><td>messageDateTime</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></td><td/><td><div><p>Message date and time.</p>
 </div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>Message sender</p>
-</div></td></tr><tr><td>IN</td><td>address</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Address">Address</a></td><td/><td><div><p>Patient address.</p>
-</div></td></tr><tr><td>IN</td><td>gender</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td/><td><div><p>Patient gender.</p>
-</div></td></tr><tr><td>IN</td><td>birthDate</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#date">date</a></td><td/><td><div><p>Patient birth date.</p>
-</div></td></tr><tr><td>IN</td><td>deathDate</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#date">date</a></td><td/><td><div><p>Patient death date.</p>
-</div></td></tr><tr><td>IN</td><td>name</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#HumanName">HumanName</a></td><td/><td><div><p>Patient name.</p>
-</div></td></tr><tr><td>IN</td><td>telephone</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint">ContactPoint</a></td><td/><td><div><p>Patient telephone.</p>
-</div></td></tr><tr><td>IN</td><td>identifier</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>Patient identifier.</p>
-</div></td></tr><tr><td>IN</td><td>mothersPHN</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td/><td><div><p>Patient mother's PHN.</p>
-</div></td></tr><tr><td>IN</td><td>identifiersOnly</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td/><td><div><p>Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defaults to false.</p>
 </div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>UserId of sender.</p>
+</div></td></tr><tr><td>IN</td><td>patient</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td/><td><div><p>Patient resource.</p>
+</div></td></tr><tr><td>IN</td><td>mothersPHN</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>Patient mother's PHN.</p>
+</div></td></tr><tr><td>IN</td><td>identifiersOnly</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td/><td><div><p>Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defaults to false.</p>
 </div></td></tr></table></div>
 
   <!-- insert notes if present -->
@@ -339,7 +333,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 18, 2022 18:31+0000">2022-03-18</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 25, 2022 22:02+0000">2022-03-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

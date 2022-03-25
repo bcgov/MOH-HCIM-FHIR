@@ -11,7 +11,7 @@
   <name value="BCHealthClientIdentityManagement"/>
   <title value="BC Client Registry FHIR Implementation Guide"/>
   <status value="draft"/>
-  <date value="2022-03-18T18:31:40+00:00"/>
+  <date value="2022-03-25T22:02:43+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -304,7 +304,7 @@
         <reference value="StructureDefinition/bc-patient-by-example"/>
       </reference>
       <name value="BCPatientByExample"/>
-      <description value="General constraints on the Patient resource for use in the BC Client Registry project for queries."/>
+      <description value="General constraints on the Patient resource for use in the BC Client Registry project for Find Candidates queries."/>
       <exampleBoolean value="false"/>
       <groupingId value="PatientProfile"/>
     </resource>
@@ -417,7 +417,7 @@
       <reference>
         <reference value="StructureDefinition/bc-identifier-status-extension"/>
       </reference>
-      <name value="Identifier status"/>
+      <name value="BC Identifier Status"/>
       <description value="Identifier status."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -777,18 +777,6 @@
         <valueString value="Parameters"/>
       </extension>
       <reference>
-        <reference value="Parameters/Parameters-FindCandidates-Example"/>
-      </reference>
-      <name value="Parameters-FindCandidates-Example"/>
-      <description value="Example of $FindCandidates operation"/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
-      <groupingId value="RequestExamples"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Parameters"/>
-      </extension>
-      <reference>
         <reference value="Parameters/Parameters-FindCandidates-Response-Example"/>
       </reference>
       <name value="Parameters-FindCandidates-Response-Example"/>
@@ -1071,6 +1059,17 @@
         <valueString value="Patient"/>
       </extension>
       <reference>
+        <reference value="Patient/Patient-Identifier-Examples"/>
+      </reference>
+      <name value="Patient-Identifier-Examples"/>
+      <description value="An example of a Patient with descriptive Identifier."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
         <reference value="Patient/Patient-MergePatient-Example"/>
       </reference>
       <name value="Patient-MergePatient-Example"/>
@@ -1176,18 +1175,6 @@
         <reference value="OperationDefinition/bc-patient-find-candidates"/>
       </reference>
       <name value="FindCandidates"/>
-      <description value="This operation is used to query for a patient.  The response can contain 0 or more Patients."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Operations"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="OperationDefinition"/>
-      </extension>
-      <reference>
-        <reference value="OperationDefinition/bc-patient-find-candidates-by-example"/>
-      </reference>
-      <name value="FindCandidatesByExample"/>
       <description value="This operation is used to query for a patient.  The response can contain 0 or more Patients."/>
       <exampleBoolean value="false"/>
       <groupingId value="Operations"/>
