@@ -16,8 +16,10 @@ Description: "A Bundle that is used in the Client Registry response to Find Cand
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a search query."
 * entry contains patient 0..* MS and parameters 1..1 MS and operationOutcome 0..1 MS
 * entry[parameters].resource only BCMetadataParameters
+* entry[parameters] ^short = "Metadata parameters"
 * entry[operationOutcome].resource only OperationOutcome
 * entry[patient].resource only BCPatient
+* entry[patient] ^short = "Natching Patients."
 
 Profile: BCSearchWithEligibilityResponseBundle
 Parent: Bundle
@@ -37,8 +39,10 @@ Description: "A Bundle that is used in the Client Registry response to Get Demog
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a search query."
 * entry contains patient 0..* MS and parameters 1..1 MS and operationOutcome 0..1 MS and coverage 1..1 MS
 * entry[parameters].resource only BCMetadataParameters
+* entry[parameters] ^short = "Metadata parameters"
 * entry[operationOutcome].resource only OperationOutcome
 * entry[patient].resource only BCPatient
+* entry[patient] ^short = "Matching Patient."
 * entry[coverage].resource only Coverage
 
 Profile: BCReviseResponseBundle
@@ -59,8 +63,10 @@ Description:  "A Bundle that is used in the Client Registry response to Revise P
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a revise request."
 * entry contains patient 0..1 MS and parameters 1..1 MS and operationOutcome 0..1 MS
 * entry[parameters].resource only BCMetadataParameters
+* entry[parameters] ^short = "Metadata parameters"
 * entry[operationOutcome].resource only OperationOutcome
 * entry[patient].resource only BCPatient
+* entry[patient] ^short = "Updated Patient."
 
 Profile: BCAddResponseBundle
 Parent: Bundle
@@ -80,8 +86,10 @@ Description:  "A Bundle that is used in the Client Registry response to Add Pati
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a add request."
 * entry contains patient 0..1 MS and parameters 1..1 MS and operationOutcome 0..1 MS
 * entry[parameters].resource only BCMetadataParameters
+* entry[parameters] ^short = "Metadata parameters"
 * entry[operationOutcome].resource only OperationOutcome
 * entry[patient].resource only BCPatient
+* entry[patient] ^short = "Created Patient."
 
 Profile: BCMergeResponseBundle
 Parent: Bundle
@@ -101,6 +109,7 @@ Description:  "A Bundle that is used in the Client Registry response to Merge Pa
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a merge request."
 * entry contains parameters 1..1 MS and operationOutcome 0..1 MS
 * entry[parameters].resource only BCMetadataParameters
+* entry[parameters] ^short = "Metadata parameters"
 * entry[operationOutcome].resource only OperationOutcome
 
 Profile: BCPartialReviseResponseBundle
@@ -121,6 +130,8 @@ Description: "A Bundle that is used in the Client Registry response to Partial R
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a partial revise request."
 * entry contains patient 0..1 MS and parameters 1..1 MS and operationOutcome 0..1 MS
 * entry[parameters].resource only BCMetadataParameters
+* entry[parameters] ^short = "Metadata parameters"
 * entry[operationOutcome].resource only OperationOutcome
 * entry[patient].resource only BCPatient
+* entry[patient] ^short = "Updated Patient."
 

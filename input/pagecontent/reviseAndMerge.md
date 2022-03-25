@@ -40,7 +40,7 @@ The asynchronous pattern for Revise and Merge Patient follow the same pattern as
 </span>
 
 
-The request/responses are associated by the unique message id in the Parameters resource.  The client must create a FHIR Operation end point to receive the responses at a later time.  Specifically the response will be a Bundle, as documented in the [RevisePatient](OperationDefinition-bc-patient-revise.html) and [MergePatient](OperationDefinition-bc-patient-merge.html) operations.  The Parameter resource profile is [BCMetadataParameters](StructureDefinition-bc-metadata-parameters.html) and contains the IN parameters requestMessageId to link the messageId in the request to the asynchronous response.
+The request/responses are associated by the unique message id in the Parameters resource.  The client must create a FHIR Operation end point to receive the responses at a later time.  Specifically the response will be a Bundle, as documented in the [RevisePatient](OperationDefinition-bc-patient-revise.html) and [MergePatient](OperationDefinition-bc-patient-merge.html) operations.  The Parameter resource profile is [BCPatientBusinessParameters](StructureDefinition-bc-patient-business-parameters.html) and contains the IN parameters requestMessageId to link the messageId in the request to the asynchronous response.
 
 ### Partial Revise Patient
 

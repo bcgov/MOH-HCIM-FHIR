@@ -5,7 +5,7 @@
 This specification was written and built by:
 
 * BC Ministry of Health (Laura Kingcott)
-* CGI (Jonathan Wiebe, Patrick Weckermann)
+* CGI (Jonathan Wiebe, Patrick Weckermann, Byron Lundstrom)
 * Constable Consulting (Lorraine Constable)
 * Duteau Design (Jean Duteau)
 

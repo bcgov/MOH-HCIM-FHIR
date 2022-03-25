@@ -112,9 +112,10 @@ Description: "Identifiers for the source and user that modified the specific ele
 
 Extension: IdentifierStatusExtension
 Id: bc-identifier-status-extension
-Title: "Identifier status"
+Title: "BC Identifier Status"
 Description: "Identifier status."
 * value[x] 1..1 MS
 * value[x] only code
 * valueCode from BCIdentifierStatusVS (required)
+* value[x] ^short = "merged | active"
 

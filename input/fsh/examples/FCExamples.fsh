@@ -1,50 +1,3 @@
-Instance: Parameters-FindCandidates-Example
-InstanceOf: BCMetadataParameters
-Description: "Example of $FindCandidates operation"
-
-* parameter[messageId].name = "messageId"
-* parameter[messageId].valueString = "98028b44-882a-4c72-8c92-b87d916147e1"
-
-* parameter[messageDateTime].name = "messageDateTime"
-* parameter[messageDateTime].valueDateTime = "2015-02-07T13:28:17-08:00"
-
-* parameter[sender].name = "sender"
-* parameter[sender].valueIdentifier.value = "VPP"
-* parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
-
-* parameter[3].name = "address"
-* parameter[3].valueAddress.type = #postal
-* parameter[3].valueAddress.line[0] = "123 Any St"
-* parameter[3].valueAddress.line[1] = "line 2"
-* parameter[3].valueAddress.line[2] = "line 3"
-* parameter[3].valueAddress.line[3] = "line 4"
-* parameter[3].valueAddress.city = "Victoria"
-* parameter[3].valueAddress.state = "BC"
-* parameter[3].valueAddress.country = "CA"
-* parameter[3].valueAddress.postalCode = "V1V1V1"
-
-* parameter[4].name = "gender"
-* parameter[4].valueCode = #male
-
-* parameter[5].name = "birthDate"
-* parameter[5].valueDate = 1959-12-30
-
-* parameter[6].name = "deceased-date"
-* parameter[6].valueDateTime = 2005-05-05
-
-* parameter[7].name = "name"
-* parameter[7].valueHumanName.given = "Barney"
-* parameter[7].valueHumanName.family = "Purple"
-* parameter[7].valueHumanName.use = #official
-
-* parameter[8].name = "telecom"
-* parameter[8].valueContactPoint.system = #phone
-* parameter[8].valueContactPoint.value = "1234567890"
-* parameter[8].valueContactPoint.use = #home
-
-* parameter[9].name = "identifiersOnly"
-* parameter[9].valueBoolean = false
-
 Instance: Parameters-FindCandidates-UsingMomsPHN-Example
 InstanceOf: BCMetadataParameters
 Description: "Example of $FindCandidates operation with mother's PHN"
@@ -60,7 +13,11 @@ Description: "Example of $FindCandidates operation with mother's PHN"
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
 * parameter[3].name = "mothersPHN"
-* parameter[3].valueString = "9123123432"
+* parameter[3].valueIdentifier.value = "9123123432"
+* parameter[3].valueIdentifier.use = #official
+* parameter[3].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"
+* parameter[3].valueIdentifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* parameter[3].valueIdentifier.type.coding.code = #JHN
 
 Instance: Parameters-FindCandidates-Response-Example
 InstanceOf: BCMetadataParameters
@@ -76,7 +33,7 @@ Description: "Example of $FindCandidates response Metadata parameters"
 * parameter[requestMessageId].valueString = "98028b44-882a-4c72-8c92-b87d916147e1"
 
 * parameter[sender].name = "sender"
-* parameter[sender].valueIdentifier.value = "MOH_CRS"
+* parameter[sender].valueIdentifier.value = "123123345"
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
 

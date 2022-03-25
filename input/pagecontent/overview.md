@@ -25,5 +25,5 @@ For design information start [here](design.html), to view details about profiles
 
 Conformance verbs - SHALL, SHOULD, MAY - used in this guide's Capability Statement are defined in [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html#conflang).  The informative information outside the Capability Statement is intended to be descriptive and guide implementors through the profiles and examples without any formal requirements language.
 
-No form of data absent reason is supported; mandatory data must always be present.  There is a new Operations, PartialRevise, which allows for partial Patient record updates outside the standard Add, Revise and Merge Operations.
+Data absent reasons are supported, see [this page](absentData.html).
 

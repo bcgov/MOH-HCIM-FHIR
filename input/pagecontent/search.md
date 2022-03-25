@@ -17,6 +17,8 @@ The Mother's PHN can be used alone and will return the mother and children.  Oth
 
 The Find Candidates is a synchronous request-response transaction.
 
+Find Candidates uses a, search by example, p[attern.  I.e. the request will contain an example Patient with attributes like name, date of birth, etc populated.  HCIM will search for Patients similar to the Patient in the request.
+
 ### Get Demographics Search
 
 This interaction is used to retrieve the most current demographic information (i.e., name, address, gender, date of birth, and date of death if applicable) from the Client Registry if the PHN is known. 

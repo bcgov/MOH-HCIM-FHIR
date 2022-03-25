@@ -17,17 +17,20 @@ Description: "Patient example for a RevisePatient operation"
 * identifier.type.coding.code = #JHN
 * identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 
-* identifier[1].system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* identifier[1].value = "CER2234"
-* identifier[1].assigner.display = "VPP_CER"
+* identifier[1] = IdentifierExamplePHN
+//.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
+//* identifier[1].value = "CER2234"
+//* identifier[1].assigner.display = "VPP_CER"
 
-* identifier[2].system = "http://hlth.gov.bc.ca/fhir/client/bc-ssri"
-* identifier[2].value = "VCHA234"
-* identifier[2].assigner.display = "VPP_LION"
+* identifier[2] = IdentifierExampleSRI
+//.system = "http://hlth.gov.bc.ca/fhir/client/bc-ssri"
+//* identifier[2].value = "VCHA234"
+//* identifier[2].assigner.display = "VPP_LION"
 
-* identifier[3].system = "http://hlth.gov.bc.ca/fhir/client/bc-out-of-province-sri"
-* identifier[3].value = "90348733a"
-* identifier[3].assigner.display = "MB"
+* identifier[3] = IdentifierExampleQCPHN
+//.system = "http://hlth.gov.bc.ca/fhir/client/bc-out-of-province-sri"
+//* identifier[3].value = "90348733a"
+//* identifier[3].assigner.display = "MB"
 
 * name.given = "PURPLE"
 * name.family = "BARNEY"
@@ -101,30 +104,34 @@ Description: "Example of a merge patient Patient"
 * gender = #male
 * birthDate = 1966-10-01
 * link[0].type = #replaces
-* link[0].other.identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* link[0].other.identifier.value = "203451T3"
+* link[0].other.identifier = IdentifierExampleSRINoPeriod
+//.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
+//* link[0].other.identifier.value = "203451T3"
 * link[0].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"
 * link[0].extension.valueCode = #cancelled
 
 * link[1].type = #replaces
-* link[1].other.identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* link[1].other.identifier.value = "9876345146"
-* link[1].other.identifier.type.coding.code = #JHN
-* link[1].other.identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* link[1].other.identifier = IdentifierExamplePHNNoPeriod
+//* link[1].other.identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
+//* link[1].other.identifier.value = "9876345146"
+//* link[1].other.identifier.type.coding.code = #JHN
+//* link[1].other.identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * link[1].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"
 * link[1].extension.valueCode = #cancelled
 
 * link[2].type = #replaces
-* link[2].other.identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* link[2].other.identifier.value = "203451T3"
+* link[2].other.identifier = IdentifierExampleSSRINoPeriod
+//.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
+//* link[2].other.identifier.value = "203451T3"
 * link[2].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"
 * link[2].extension.valueCode = #obsolete
 
 * link[3].type = #replaces
-* link[3].other.identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* link[3].other.identifier.value = "9876345146"
-* link[3].other.identifier.type.coding.code = #JHN
-* link[3].other.identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* link[3].other.identifier = IdentifierExamplePHN2NoPeriod
+//.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
+//* link[3].other.identifier.value = "9876345146"
+//* link[3].other.identifier.type.coding.code = #JHN
+//* link[3].other.identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * link[3].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"
 * link[3].extension.valueCode = #obsolete
 

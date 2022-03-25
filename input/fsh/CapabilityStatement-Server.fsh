@@ -61,7 +61,7 @@ When adding a newborn or using 'force create' Client Registry users SHALL use Ad
 The Client Registry FHIR implementation only supports JSON format and the clients SHALL use JSON for all interactions.  The MIME-type of application/fhir+json is the only one supported by the Client Registry.
 </li>
 <li>
-All interactions with Patient resources SHALL use the BCPatient profile. E.g. /Patient/$RevisePatient
+All interactions with Patient resources SHALL use the BCPatient profile. E.g. /Patient/$RevisePatient.  The exception is the FindCandidates Operation which uses the BCPatientByExample instead of BCPatient.
 </li>
 <li>
 The Parameters profile for searches SHALL be BCMetadataParameters.
@@ -76,7 +76,12 @@ Only the 'resource type' FHIR Operation is supported by the Client Registry, e.g
 All of the Profiles include elements that are marked as Must Support. For the purposes of this guide, Must Support is intended to represent those fields that will be exchanged between client applications and the Client Registry server. Client applications who are receiving information SHALL be able to receive all fields marked as Must Support without raising an exception. When sending information to the Client Registry server, client applications SHOULD be able to send any fields marked as Must Support.
 </li>
 <li>
-The FHIR asynchronous pattern is not followed by this FHIR implementation.  The existing pattern the Client Registry uses today will be mimicked.  I.e.                                   1. User sends request                                                                        2. Client Registry responds with HTTP 202 Accepted                                           3. Client Registry sends request to user's end point                                         4. User system responds with 202 Accepted
+The FHIR asynchronous pattern is not followed by this FHIR implementation.  The existing pattern the Client Registry uses today will be mimicked.  I.e.           <ul>
+<li>User sends request</li>
+<li>Client Registry responds with HTTP 202 Accepted</li>
+<li>Client Registry sends request to user's end point</li>
+<li>User system responds with 202 Accepted</li>
+</ul>
 
 Users SHALL follow the above asynchronous pattern when invoking an asynchronous version of a Operation.
 </li>
@@ -187,99 +192,15 @@ The FindCandidates FHIR Operation search SHALL use the following name-value para
 	</tr>
 	<tr>
 		<td>IN</td>
-		<td>address</td>
+		<td>patient</td>
 		<td>0..1</td>
 		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Address\">Address</a>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Patient\">Patient</a>
 		</td>
 		<td></td>
 		<td>
 			<div>
-				<p>Patient address.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>gender</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Patient gender.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>birthDate</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Patient birth date.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>deathDate</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Patient death date.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>name</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#HumanName\">HumanName</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Patient name.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>telephone</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#ContactPoint\">ContactPoint</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Patient telephone.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>identifier</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Patient identifier.</p>
+				<p>Patient, an example for searching.</p>
 			</div>
 		</td>
 	</tr>
@@ -288,7 +209,7 @@ The FindCandidates FHIR Operation search SHALL use the following name-value para
 		<td>mothersPHN</td>
 		<td>0..1</td>
 		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
 		</td>
 		<td></td>
 		<td>
@@ -385,7 +306,7 @@ The GetDemographics FHIR Operation SHALL use the following name-value parameters
 		<td>identifier</td>
 		<td>1..1</td>
 		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">string</a>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
 		</td>
 		<td></td>
 		<td>
@@ -511,7 +432,7 @@ The GetDemographics.withEligibility FHIR Operation SHALL use the following name-
 		<td>identifer</td>
 		<td>1..1</td>
 		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">string</a>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
 		</td>
 		<td></td>
 		<td>
@@ -731,7 +652,7 @@ The PartialRevisePatient FHIR Operation SHALL use the following name-value param
 	</tr>
 </table>
 
-<h3>Merge Person</h3>
+<h3>Merge Patient</h3>
 <p>                                                                                          The Merge Patient FHIR Operation SHALL use the following name-value parameters pairs, mandatory or optional according to the cardinality rules below.
 The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 </p>
@@ -806,9 +727,23 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 			<a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a>
 		</td>
 		<td></td>
-		<td>
+`		<td>
 			<div>
 				<p>The Patient.</p>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>IN</td>
+		<td>enterer</td>
+		<td>0..1</td>
+		<td>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
+		</td>
+		<td></td>
+		<td>
+			<div>
+				<p>UserId of sender</p>
 			</div>
 		</td>
 	</tr>

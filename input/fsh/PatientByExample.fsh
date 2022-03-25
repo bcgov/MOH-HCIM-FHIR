@@ -1,7 +1,7 @@
 Profile: BCPatientByExample
 Parent: Patient
 Id: bc-patient-by-example
-Description: "General constraints on the Patient resource for use in the BC Client Registry project for queries."
+Description: "General constraints on the Patient resource for use in the BC Client Registry project for Find Candidates queries."
 * identifier 0..1 MS
 * address 0..1 MS
 * address.type ^short = "postal | physical"

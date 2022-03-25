@@ -29,11 +29,9 @@ The main outcomes from the design process were as follows:
 - The primary resource is Patient and Patient will be used to communicate client attributes
 - The JSON text format will be used to receive and transmit FHIR resources
 - FHIR Operations will be used for Client Registry interactions
-- The Parameters resource used in the FHIR Operations may include Patient resources as well as name value pair parameters such as search parameters or unique request identifiers and creation times, etc
+- The Parameters resource used in the FHIR Operations may include Patient resources as well as name value pair parameters
 - Some FHIR extensions are necessary, they are outlined below
 - There are several new interactions and features, these are described below
-
->Do we align with CA Baseline?
 
 #### New Interactions and Features
 
@@ -48,7 +46,7 @@ Get Eligibility interaction | This guide includes sections describing a Get Elig
 
 #### Patient Resource
 
-All interactions will primarily use the Patient resource.  The Patient resource is ideal to represent clients as the Patient resource has almost all of the necessary attributes and will require only a few extensions.  Patients also are recommended for enterprise master patient indices by the HL7 group and is in a Normative state, i.e. stable and ready for implementation.  See [FHIR standards evolution](http://hl7.org/fhir/versions.html#std-process) for a description of Normative. 
+All interactions will primarily use the Patient resource.  The Patient resource is ideal to represent clients as the Patient resource has many of the necessary attributes but will require some extensions.  Patients also are recommended for enterprise master patient indices by the HL7 group and is in a Normative state, i.e. stable and ready for implementation.  See [FHIR standards evolution](http://hl7.org/fhir/versions.html#std-process) for a description of Normative. 
 
 ##### Patient Extensions
 
@@ -58,8 +56,7 @@ Extension Name | Description |
 :--- | :--- |
 bc-business-period-extension | A Period extension for the business effective dates.
 bc-validation-status-extension | A code that represents the address validation status.  This will be part of every Patient.address
-bc-death-date-extension | An extension that indicates the date of death.  The Patient resource has a boolean flag for death; this is the date.
-bc-death-flag-business-period-extension | A Period extension for effective dates on the death flag.
+bc-death-verified-flag-extension | An extension that indicates a verified death.
 bc-*-history-extension | The set of history extensions are necessary to add historical records to the Patient resource such as gender.
 
 ##### Codes and Value Sets
@@ -149,7 +146,7 @@ sender|parameter.value[Identifier]|Message sender|both
 enterer|parameter.value[Identifier]|UserId for message|both
 
 #### Searches
-There are two searches available for Client Registry FHIR, Find Candidates and Get Demographics.  The operations are:
+There are three searches available for Client Registry FHIR, two flvours of Find Candidates and one Get Demographics.  The operations are:
 
 Search Operations | Description
 :--- |
