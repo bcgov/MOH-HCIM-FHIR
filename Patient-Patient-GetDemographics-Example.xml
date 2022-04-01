@@ -6,20 +6,25 @@
     <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>JILLIAN DAWN THIRD NAME COOK-ADAMS </b> female, DoB: 1972-10-16 ( Jurisdictional health number: 9983652763)</p></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>JILLIAN DAWN THIRD NAME COOK-ADAMS </b> female, DoB: 1972-10-16 ( Jurisdictional health number: 123345654 (OFFICIAL))</p></div>
   </text>
   <identifier>
     <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
       <valueCode value="merged"/>
     </extension>
+    <use value="official"/>
     <type>
       <coding>
         <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
         <code value="JHN"/>
       </coding>
     </type>
-    <system value="http://hlth.gov.bc.ca/fhir/client/bc-sri"/>
-    <value value="9983652763"/>
+    <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"/>
+    <value value="123345654"/>
+    <period>
+      <start value="2000-01-01T11:11:11+08:00"/>
+      <end value="2010-01-01T11:11:11+08:00"/>
+    </period>
   </identifier>
   <name>
     <use value="usual"/>
@@ -30,8 +35,11 @@
   </name>
   <telecom>
     <system value="phone"/>
-    <value value="6048883322"/>
+    <value value="2505554848"/>
     <use value="home"/>
+    <period>
+      <start value="2000-01-02T10:10:10-08:00"/>
+    </period>
   </telecom>
   <gender value="female">
     <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
@@ -71,19 +79,10 @@
   </birthDate>
   <address>
     <type value="physical"/>
-    <line value="321 SUNSHINE PL"/>
-    <line value="NEW LINE 2"/>
-    <line value="NEW LINE 3"/>
-    <city value="VANCOUVER"/>
+    <line value="721 FRONT ST"/>
+    <city value="VICTORIA"/>
     <state value="BC"/>
-  </address>
-  <address>
-    <type value="postal"/>
-    <line value="1824 CROSS RD"/>
-    <line value="LINE 2"/>
-    <line value="LINE 3"/>
-    <city value="VANCOUVER"/>
-    <state value="BC"/>
-    <postalCode value="V9L 4H2"/>
+    <postalCode value="V9A3Y3"/>
+    <country value="CA"/>
   </address>
 </Patient>

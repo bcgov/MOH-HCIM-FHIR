@@ -94,7 +94,7 @@
           <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
         </meta>
         <text>
-          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient-0-Example" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">BCPatient</a></p></div><p><b>BC Business Dates</b>: 2019-02-07 01:29:17-0800 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9999999999, id: CER2234, id: VCHA234, id: 90348733a</p><p><b>name</b>: PURPLE BARNEY </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-06-06</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>432 Douglas St Victoria BC V6N2R2 CA </li></ul></div>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient-0-Example" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">BCPatient</a></p></div><p><b>BC Business Dates</b>: 2019-02-07 01:29:17-0800 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 123345654 (OFFICIAL), Account number: 123345654 (OFFICIAL), Account number: 123345654 (SECONDARY), Jurisdictional health number: 123345654 (OFFICIAL)</p><p><b>name</b>: PURPLE BARNEY </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-06-06</p><p><b>address</b>: </p><ul><li>721 FRONT ST VICTORIA BC V9A3Y3 CA </li><li>721 FRONT AVE Victoria BC V9A3V3 CA </li></ul></div>
         </text>
         <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
           <valuePeriod>
@@ -102,35 +102,76 @@
           </valuePeriod>
         </extension>
         <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="merged"/>
+          </extension>
+          <use value="official"/>
           <type>
             <coding>
               <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
               <code value="JHN"/>
             </coding>
           </type>
-          <system value="http://hlth.gov.bc.ca/fhir/client/bc-sri"/>
-          <value value="9999999999"/>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"/>
+          <value value="123345654"/>
+          <period>
+            <start value="2000-01-01T11:11:11+08:00"/>
+            <end value="2010-01-01T11:11:11+08:00"/>
+          </period>
         </identifier>
         <identifier>
-          <system value="http://hlth.gov.bc.ca/fhir/client/bc-sri"/>
-          <value value="CER2234"/>
-          <assigner>
-            <display value="VPP_CER"/>
-          </assigner>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="AN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+          <value value="123345654"/>
+          <period>
+            <start value="2000-01-01T11:11:11+08:00"/>
+            <end value="2010-01-01T11:11:11+08:00"/>
+          </period>
         </identifier>
         <identifier>
-          <system value="http://hlth.gov.bc.ca/fhir/client/bc-ssri"/>
-          <value value="VCHA234"/>
-          <assigner>
-            <display value="VPP_LION"/>
-          </assigner>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="secondary"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="AN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+          <value value="123345654"/>
+          <period>
+            <start value="2000-01-01T11:11:11+08:00"/>
+            <end value="2010-01-01T11:11:11+08:00"/>
+          </period>
         </identifier>
         <identifier>
-          <system value="http://hlth.gov.bc.ca/fhir/client/bc-out-of-province-sri"/>
-          <value value="90348733a"/>
-          <assigner>
-            <display value="MB"/>
-          </assigner>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="JHN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/QC"/>
+          <value value="123345654"/>
+          <period>
+            <start value="2000-01-01T11:11:11+08:00"/>
+            <end value="2010-01-01T11:11:11+08:00"/>
+          </period>
         </identifier>
         <name>
           <use value="usual"/>
@@ -141,6 +182,9 @@
           <system value="phone"/>
           <value value="2505554848"/>
           <use value="home"/>
+          <period>
+            <start value="2000-01-02T10:10:10-08:00"/>
+          </period>
         </telecom>
         <gender value="male">
           <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
@@ -161,10 +205,10 @@
             <valueCode value="valid"/>
           </extension>
           <type value="physical"/>
-          <line value="123 FRONT ST"/>
+          <line value="721 FRONT ST"/>
           <city value="VICTORIA"/>
           <state value="BC"/>
-          <postalCode value="V6N2W2"/>
+          <postalCode value="V9A3Y3"/>
           <country value="CA"/>
         </address>
         <address>
@@ -172,10 +216,10 @@
             <valueCode value="invalid"/>
           </extension>
           <type value="postal"/>
-          <line value="432 Douglas St"/>
+          <line value="721 FRONT AVE"/>
           <city value="Victoria"/>
           <state value="BC"/>
-          <postalCode value="V6N2R2"/>
+          <postalCode value="V9A3V3"/>
           <country value="CA"/>
         </address>
       </Patient>
@@ -194,7 +238,7 @@
           <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
         </meta>
         <text>
-          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient-1-Example" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">BCPatient</a></p></div><p><b>BC Business Dates</b>: 2019-02-07 01:29:17-0800 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: SARAH LYNN PURPLE (OFFICIAL)</p><p><b>telecom</b>: ph: 2505557841(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1973-05-18</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>432 Douglas St Victoria BC V6N2R2 CA </li></ul></div>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient-1-Example" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">BCPatient</a></p></div><p><b>BC Business Dates</b>: 2019-02-07 01:29:17-0800 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 123345654 (OFFICIAL)</p><p><b>name</b>: SARAH LYNN PURPLE (OFFICIAL)</p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1973-05-18</p><p><b>address</b>: </p><ul><li>721 FRONT ST VICTORIA BC V9A3Y3 CA </li><li>721 FRONT AVE Victoria BC V9A3V3 CA </li></ul></div>
         </text>
         <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
           <valuePeriod>
@@ -202,14 +246,22 @@
           </valuePeriod>
         </extension>
         <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="merged"/>
+          </extension>
+          <use value="official"/>
           <type>
             <coding>
               <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
               <code value="JHN"/>
             </coding>
           </type>
-          <system value="http://hlth.gov.bc.ca/fhir/client/bc-sri"/>
-          <value value="9999999999"/>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"/>
+          <value value="123345654"/>
+          <period>
+            <start value="2000-01-01T11:11:11+08:00"/>
+            <end value="2010-01-01T11:11:11+08:00"/>
+          </period>
         </identifier>
         <name>
           <use value="official"/>
@@ -219,8 +271,11 @@
         </name>
         <telecom>
           <system value="phone"/>
-          <value value="2505557841"/>
+          <value value="2505554848"/>
           <use value="home"/>
+          <period>
+            <start value="2000-01-02T10:10:10-08:00"/>
+          </period>
         </telecom>
         <gender value="female">
           <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
@@ -241,10 +296,10 @@
             <valueCode value="valid"/>
           </extension>
           <type value="physical"/>
-          <line value="123 FRONT ST"/>
+          <line value="721 FRONT ST"/>
           <city value="VICTORIA"/>
           <state value="BC"/>
-          <postalCode value="V6N2W2"/>
+          <postalCode value="V9A3Y3"/>
           <country value="CA"/>
         </address>
         <address>
@@ -252,10 +307,10 @@
             <valueCode value="invalid"/>
           </extension>
           <type value="postal"/>
-          <line value="432 Douglas St"/>
+          <line value="721 FRONT AVE"/>
           <city value="Victoria"/>
           <state value="BC"/>
-          <postalCode value="V6N2R2"/>
+          <postalCode value="V9A3V3"/>
           <country value="CA"/>
         </address>
       </Patient>
@@ -274,7 +329,7 @@
           <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
         </meta>
         <text>
-          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient-2-Example" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">BCPatient</a></p></div><p><b>BC Business Dates</b>: 2019-02-07 01:29:17-0800 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9999999999</p><p><b>name</b>: BAILEY PURPLE </p><p><b>telecom</b>: ph: 2504283447(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1985-12-14</p><p><b>address</b>: </p><ul><li>123 FRONT ST VICTORIA BC V6N2W2 CA </li><li>432 Douglas St Victoria BC V6N2R2 CA </li></ul><p><b>multipleBirth</b>: false</p></div>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient-2-Example" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">BCPatient</a></p></div><p><b>BC Business Dates</b>: 2019-02-07 01:29:17-0800 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 123345654 (OFFICIAL)</p><p><b>name</b>: BAILEY PURPLE </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1985-12-14</p><p><b>address</b>: </p><ul><li>721 FRONT ST VICTORIA BC V9A3Y3 CA </li><li>721 FRONT AVE Victoria BC V9A3V3 CA </li></ul><p><b>multipleBirth</b>: false</p></div>
         </text>
         <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
           <valuePeriod>
@@ -282,14 +337,22 @@
           </valuePeriod>
         </extension>
         <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="merged"/>
+          </extension>
+          <use value="official"/>
           <type>
             <coding>
               <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
               <code value="JHN"/>
             </coding>
           </type>
-          <system value="http://hlth.gov.bc.ca/fhir/client/bc-sri"/>
-          <value value="9999999999"/>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"/>
+          <value value="123345654"/>
+          <period>
+            <start value="2000-01-01T11:11:11+08:00"/>
+            <end value="2010-01-01T11:11:11+08:00"/>
+          </period>
         </identifier>
         <name>
           <use value="usual"/>
@@ -298,8 +361,11 @@
         </name>
         <telecom>
           <system value="phone"/>
-          <value value="2504283447"/>
+          <value value="2505554848"/>
           <use value="home"/>
+          <period>
+            <start value="2000-01-02T10:10:10-08:00"/>
+          </period>
         </telecom>
         <gender value="female">
           <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
@@ -320,10 +386,10 @@
             <valueCode value="valid"/>
           </extension>
           <type value="physical"/>
-          <line value="123 FRONT ST"/>
+          <line value="721 FRONT ST"/>
           <city value="VICTORIA"/>
           <state value="BC"/>
-          <postalCode value="V6N2W2"/>
+          <postalCode value="V9A3Y3"/>
           <country value="CA"/>
         </address>
         <address>
@@ -331,10 +397,10 @@
             <valueCode value="invalid"/>
           </extension>
           <type value="postal"/>
-          <line value="432 Douglas St"/>
+          <line value="721 FRONT AVE"/>
           <city value="Victoria"/>
           <state value="BC"/>
-          <postalCode value="V6N2R2"/>
+          <postalCode value="V9A3V3"/>
           <country value="CA"/>
         </address>
         <multipleBirthBoolean value="false">

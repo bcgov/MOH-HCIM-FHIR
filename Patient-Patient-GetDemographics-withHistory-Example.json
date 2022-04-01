@@ -8,10 +8,17 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>JILLIAN DAWN THIRD NAME COOK-ADAMS </b> female, DoB: 1972-10-16 ( Jurisdictional health number: 9983652763)</p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>JILLIAN DAWN THIRD NAME COOK-ADAMS </b> female, DoB: 1972-10-16 ( Jurisdictional health number: 123345654 (OFFICIAL))</p></div>"
   },
   "identifier": [
     {
+      "extension": [
+        {
+          "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode": "merged"
+        }
+      ],
+      "use": "official",
       "type": {
         "coding": [
           {
@@ -20,8 +27,12 @@
           }
         ]
       },
-      "system": "http://hlth.gov.bc.ca/fhir/client/bc-sri",
-      "value": "9983652763"
+      "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
+      "value": "123345654",
+      "period": {
+        "start": "2000-01-01T11:11:11+08:00",
+        "end": "2010-01-01T11:11:11+08:00"
+      }
     }
   ],
   "name": [
@@ -63,19 +74,11 @@
   "telecom": [
     {
       "system": "phone",
-      "value": "6048883322",
+      "value": "2505554848",
       "use": "home",
       "period": {
-        "start": "2021-01-01T00:00:00-08:00"
-      }
-    },
-    {
-      "system": "phone",
-      "value": "6048883322",
-      "use": "home",
-      "period": {
-        "start": "2019-01-01T00:00:00-08:00",
-        "end": "2021-01-01T00:00:00-08:00"
+        "start": "1998-01-02T10:10:10-08:00",
+        "end": "2000-01-02T10:10:10-08:00"
       }
     }
   ],
@@ -204,57 +207,36 @@
   },
   "address": [
     {
+      "extension": [
+        {
+          "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+          "valueCode": "valid"
+        }
+      ],
       "type": "physical",
       "line": [
-        "321 SUNSHINE PL",
-        "NEW LINE 2",
-        "NEW LINE 3"
+        "721 FRONT ST"
       ],
-      "city": "VANCOUVER",
+      "city": "VICTORIA",
       "state": "BC",
-      "period": {
-        "start": "2017-04-05T00:00:00-08:00",
-        "end": "2018-04-05T00:00:00-08:00"
-      }
+      "postalCode": "V9A3Y3",
+      "country": "CA"
     },
     {
-      "type": "physical",
-      "line": [
-        "421 SUNSHINE PL",
-        "NEW LINE 2",
-        "NEW LINE 3"
+      "extension": [
+        {
+          "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+          "valueCode": "invalid"
+        }
       ],
-      "city": "VANCOUVER",
-      "state": "BC",
-      "period": {
-        "start": "2018-04-05T00:00:00-08:00",
-        "end": "2019-04-05T00:00:00-08:00"
-      }
-    },
-    {
-      "type": "physical",
-      "line": [
-        "521 CLOUDY RD",
-        "NEW LINE 2",
-        "NEW LINE 3"
-      ],
-      "city": "VANCOUVER",
-      "state": "BC",
-      "period": {
-        "start": "2019-04-05T00:00:00-08:00",
-        "end": "2022-04-05T00:00:00-08:00"
-      }
-    },
-    {
       "type": "postal",
       "line": [
-        "1824 CROSS RD",
-        "LINE 2",
-        "LINE 3"
+        "721 FRONT AVE"
       ],
-      "city": "VANCOUVER",
+      "city": "Victoria",
       "state": "BC",
-      "postalCode": "V9L 4H2"
+      "postalCode": "V9A3V3",
+      "country": "CA"
     }
   ],
   "multipleBirthBoolean": true,
