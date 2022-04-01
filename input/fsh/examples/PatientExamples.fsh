@@ -1,37 +1,9 @@
 Instance: Patient-RevisePatient-Example
 InstanceOf: BCPatient
 Description: "Patient example for a RevisePatient operation"
-// Patient business date
-* address.type = #physical
-* address.line = "636 YELLOW BRICK RD"
-* address.city = "PRINCE GEORGE"
-* address.state = "BC"
-* address.country = "CA"
-* address.postalCode = "V8W 3P9"
-* telecom.use = #home
-* telecom.system = #phone
-* telecom.value = "2505554848"
-
-* identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* identifier.value = "9999999999"
-* identifier.type.coding.code = #JHN
-* identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-
-* identifier[1] = IdentifierExamplePHN
-//.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-//* identifier[1].value = "CER2234"
-//* identifier[1].assigner.display = "VPP_CER"
-
-* identifier[2] = IdentifierExampleSRI
-//.system = "http://hlth.gov.bc.ca/fhir/client/bc-ssri"
-//* identifier[2].value = "VCHA234"
-//* identifier[2].assigner.display = "VPP_LION"
-
-* identifier[3] = IdentifierExampleQCPHN
-//.system = "http://hlth.gov.bc.ca/fhir/client/bc-out-of-province-sri"
-//* identifier[3].value = "90348733a"
-//* identifier[3].assigner.display = "MB"
-
+* address = Address-0-Example
+* telecom = ContactPoint-Example-Home-Phone
+* identifier = IdentifierExampleSRI
 * name.given = "PURPLE"
 * name.family = "BARNEY"
 * name.use = #official
@@ -41,18 +13,9 @@ Description: "Patient example for a RevisePatient operation"
 Instance: Patient-AddPatient-Example
 InstanceOf: BCPatient
 Description: "The Patient is completely new to the Client Registry, no identifiers."
-* address.type = #physical
-* address.line = "667 YELLOW BRICK RD"
-* address.city = "PRINCE GEORGE"
-* address.state = "BC"
-* address.country = "CA"
-* address.postalCode = "V8W 3P9"
-* telecom.use = #home
-* telecom.system = #phone
-* telecom.value = "2505554848"
-* telecom.use = #home
-* telecom.system = #email
-* telecom.value = "pbarney@thepark.com"
+* address = Address-0-Example-Valid
+* telecom[0] = ContactPoint-Example-Home-Phone
+* telecom[1] = ContactPoint-Example-Home-Email
 * name.given = "PURPLE"
 * name.family = "BARNEY"
 * name.use = #usual
@@ -62,17 +25,9 @@ Description: "The Patient is completely new to the Client Registry, no identifie
 Instance: Patient-AddPatient-Newborn-Example
 InstanceOf: BCPatient
 Description: "The Patient is completely new to the Client Registry, no identifiers."
-* identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* identifier.value = "IHA2234"
-* address.type = #physical
-* address.line = "222 First St"
-* address.city = "Victoria"
-* address.state = "BC"
-* address.country = "CA"
-* address.postalCode = "V8W 3P9"
-* telecom.use = #home
-* telecom.system = #phone
-* telecom.value = "2505554848"
+* identifier = IdentifierExampleSRI
+* address = Address-0-Example-Valid
+* telecom[0] = ContactPoint-Example-Home-Phone
 * name.given = "Baby Girl"
 * name.family = "Barness"
 * name.use = #usual
@@ -85,15 +40,8 @@ Description: "Example of a merge patient Patient"
 * active = true
 * identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
 * identifier.value = "876092N4"
-* address.type = #postal
-* address.line = "3216 Peach St"
-* address.city = "Victoria"
-* address.state = "BC"
-* address.country = "CA"
-* address.postalCode = "V8Z W3Y"
-* telecom.use = #home
-* telecom.system = #phone
-* telecom.value = "2505559288"
+* address[0] = Address-0-Example
+* telecom[0] = ContactPoint-Example-Home-Phone
 * name.given = "Darrel"
 * name.given[1] = "Dwayne"
 * name.use = #usual
@@ -105,33 +53,21 @@ Description: "Example of a merge patient Patient"
 * birthDate = 1966-10-01
 * link[0].type = #replaces
 * link[0].other.identifier = IdentifierExampleSRINoPeriod
-//.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-//* link[0].other.identifier.value = "203451T3"
 * link[0].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"
 * link[0].extension.valueCode = #cancelled
 
 * link[1].type = #replaces
 * link[1].other.identifier = IdentifierExamplePHNNoPeriod
-//* link[1].other.identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-//* link[1].other.identifier.value = "9876345146"
-//* link[1].other.identifier.type.coding.code = #JHN
-//* link[1].other.identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * link[1].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"
 * link[1].extension.valueCode = #cancelled
 
 * link[2].type = #replaces
 * link[2].other.identifier = IdentifierExampleSSRINoPeriod
-//.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-//* link[2].other.identifier.value = "203451T3"
 * link[2].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"
 * link[2].extension.valueCode = #obsolete
 
 * link[3].type = #replaces
 * link[3].other.identifier = IdentifierExamplePHN2NoPeriod
-//.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-//* link[3].other.identifier.value = "9876345146"
-//* link[3].other.identifier.type.coding.code = #JHN
-//* link[3].other.identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * link[3].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"
 * link[3].extension.valueCode = #obsolete
 
@@ -141,29 +77,13 @@ Description: "Example of Patient for query response Bundle with 4 different kind
 // Patient business date
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension.valuePeriod.start = "2019-02-07T13:29:17-08:00"
-* address[0] = Address-0-Example
-* address[1] = Address-1-Example
-* telecom.use = #home
-* telecom.system = #phone
-* telecom.value = "2505554848"
-
-* identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* identifier.value = "9999999999"
-* identifier.type.coding.code = #JHN
-* identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-
-* identifier[1].system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* identifier[1].value = "CER2234"
-* identifier[1].assigner.display = "VPP_CER"
-
-* identifier[2].system = "http://hlth.gov.bc.ca/fhir/client/bc-ssri"
-* identifier[2].value = "VCHA234"
-* identifier[2].assigner.display = "VPP_LION"
-
-* identifier[3].system = "http://hlth.gov.bc.ca/fhir/client/bc-out-of-province-sri"
-* identifier[3].value = "90348733a"
-* identifier[3].assigner.display = "MB"
-
+* address[0] = Address-0-Example-Valid
+* address[1] = Address-1-Example-Invalid
+* telecom[0] = ContactPoint-Example-Home-Phone
+* identifier[0] = IdentifierExamplePHN
+* identifier[1] = IdentifierExampleSRI
+* identifier[2] = IdentifierExampleSSRI
+* identifier[3] = IdentifierExampleQCPHN
 * name.given = "PURPLE"
 * name.family = "BARNEY"
 * name.use = http://hl7.org/fhir/name-use#usual
@@ -179,15 +99,10 @@ InstanceOf: BCPatient
 Description: "Example of Patient for query response Bundle"
 * extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension[0].valuePeriod.start = "2019-02-07T13:29:17-08:00"
-* address[0] = Address-0-Example
-* address[1] = Address-1-Example
-* telecom.use = #home
-* telecom.system = #phone
-* telecom.value = "2505557841"
-* identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* identifier.value = "9999999999"
-* identifier.type.coding.code = #JHN
-* identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* address[0] = Address-0-Example-Valid
+* address[1] = Address-1-Example-Invalid
+* telecom[0] = ContactPoint-Example-Home-Phone
+* identifier[0] = IdentifierExamplePHN
 * name.given = "SARAH"
 * name.given[1] = "LYNN"
 * name.family = "PURPLE"
@@ -204,15 +119,10 @@ InstanceOf: BCPatient
 Description: "Example of Patient for query response Bundle"
 * extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension[0].valuePeriod.start = "2019-02-07T13:29:17-08:00"
-* address[0] = Address-0-Example
-* address[1] = Address-1-Example
-* telecom.use = #home
-* telecom.system = #phone
-* telecom.value = "2504283447"
-* identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* identifier.value = "9999999999"
-* identifier.type.coding.code = #JHN
-* identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* address[0] = Address-0-Example-Valid
+* address[1] = Address-1-Example-Invalid
+* telecom[0] = ContactPoint-Example-Home-Phone
+* identifier[0] = IdentifierExamplePHN
 * name.given = "BAILEY"
 * name.family = "PURPLE"
 * name.use = http://hl7.org/fhir/name-use#usual
@@ -229,28 +139,9 @@ Description: "Example of Patient for query response Bundle"
 Instance: Patient-GetDemographics-Example
 InstanceOf: BCPatient
 Description: "Example of Patient for $GetDemographics operation response"
-* address.type = #physical
-* address.line = "321 SUNSHINE PL"
-* address.line[1] = "NEW LINE 2"
-* address.line[2] = "NEW LINE 3"
-* address.city = "VANCOUVER"
-* address.state = "BC"
-* address[1].type = #postal
-* address[1].line = "1824 CROSS RD"
-* address[1].line[1] = "LINE 2"
-* address[1].line[2] = "LINE 3"
-* address[1].city = "VANCOUVER"
-* address[1].state = "BC"
-* address[1].postalCode = "V9L 4H2"
-* telecom.use = #home
-* telecom.system = #phone
-* telecom.value = "6048883322"
-* identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* identifier.value = "9983652763"
-* identifier.type.coding.code = #JHN
-* identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
-* identifier.extension.valueCode = #merged
+* address[0] = Address-0-Example
+* telecom[0] = ContactPoint-Example-Home-Phone
+* identifier[0] = IdentifierExamplePHN
 * name.given = "JILLIAN"
 * name.given[1] = "DAWN"
 * name.given[2] = "THIRD NAME"
@@ -271,8 +162,6 @@ Description: "Example of Patient for $GetDemographics operation response"
 * gender.extension[2].extension[0].valuePeriod.end = "2016-04-05"
 * gender.extension[2].extension[1].url = "gender"
 * gender.extension[2].extension[1].valueCode = #unknown
-
-
 * birthDate = 1972-10-16
 * birthDate.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * birthDate.extension.valuePeriod.start = "2018-03-17T03:29:17-08:00"
@@ -283,29 +172,13 @@ Description: "Example of Merge or Revise response Bundle with 4 different kinds 
 // Patient business date
 * extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension[0].valuePeriod.start = "2019-02-07T13:29:17-08:00"
-* address[0] = Address-0-Example
-* address[1] = Address-1-Example
-* telecom.use = #home
-* telecom.system = #phone
-* telecom.value = "2505554848"
-
-* identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* identifier.value = "9999999999"
-* identifier.type.coding.code = #JHN
-* identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-
-* identifier[1].system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* identifier[1].value = "CER2234"
-* identifier[1].assigner.display = "VPP_CER"
-
-* identifier[2].system = "http://hlth.gov.bc.ca/fhir/client/bc-ssri"
-* identifier[2].value = "VCHA234"
-* identifier[2].assigner.display = "VPP_LION"
-
-* identifier[3].system = "http://hlth.gov.bc.ca/fhir/client/bc-out-of-province-sri"
-* identifier[3].value = "90348733a"
-* identifier[3].assigner.display = "MB"
-
+* address[0] = Address-0-Example-Valid
+* address[1] = Address-1-Example-Invalid
+* telecom[0] = ContactPoint-Example-Home-Phone
+* identifier[0] = IdentifierExamplePHN
+* identifier[1] = IdentifierExampleSRI
+* identifier[2] = IdentifierExampleSSRI
+* identifier[3] = IdentifierExampleQCPHN
 * name.given = "PURPLE"
 * name.family = "BARNEY"
 * name.use = #usual
@@ -322,15 +195,10 @@ InstanceOf: BCPatient
 Description: "Example of Patient newborn for query response Bundle"
 * extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension[0].valuePeriod.start = "2019-11-12T13:29:17-08:00"
-* address[0] = Address-0-Example
-* address[1] = Address-1-Example
-* telecom.use = #home
-* telecom.system = #phone
-* telecom.value = "2504283447"
-* identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* identifier.value = "9123123124"
-* identifier.type.coding.code = #JHN
-* identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* address[0] = Address-0-Example-Valid
+* address[1] = Address-1-Example-Invalid
+* telecom[0] = ContactPoint-Example-Home-Phone
+* identifier[0] = IdentifierExamplePHN
 * name.given = "Baby Boy"
 * name.family = "PURPLE"
 * name.use = http://hl7.org/fhir/name-use#usual
@@ -347,15 +215,10 @@ InstanceOf: BCPatient
 Description: "Example of Patient newborn for query response Bundle"
 * extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension[0].valuePeriod.start = "2019-11-12T13:21:13-08:00"
-* address[0] = Address-0-Example
-* address[1] = Address-1-Example
-* telecom.use = #home
-* telecom.system = #phone
-* telecom.value = "2504283447"
-* identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* identifier.value = "9123123123"
-* identifier.type.coding.code = #JHN
-* identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* address[0] = Address-0-Example-Valid
+* address[1] = Address-1-Example-Invalid
+* telecom[0] = ContactPoint-Example-Home-Phone
+* identifier[0] = IdentifierExamplePHN
 * name.given = "Baby Girl"
 * name.family = "PURPLE"
 * name.use = http://hl7.org/fhir/name-use#usual
@@ -372,15 +235,10 @@ InstanceOf: BCPatient
 Description: "Example of Patient for query response Bundle"
 * extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension[0].valuePeriod.start = "2019-02-07T13:29:17-08:00"
-* address[0] = Address-0-Example
-* address[1] = Address-1-Example
-* telecom.use = #home
-* telecom.system = #phone
-* telecom.value = "2504283447"
-* identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* identifier.value = "9999999999"
-* identifier.type.coding.code = #JHN
-* identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* address[0] = Address-0-Example-Valid
+* address[1] = Address-1-Example-Invalid
+* telecom[0] = ContactPoint-Example-Home-Phone
+* identifier[0] = IdentifierExamplePHN
 * name.given = "BAILEY"
 * name.family = "PURPLE"
 * name.use = http://hl7.org/fhir/name-use#usual
@@ -398,50 +256,11 @@ Description: "Example of Patient for query response Bundle"
 Instance: Patient-GetDemographics-withHistory-Example
 InstanceOf: BCPatient
 Description: "Example of Patient for $GetDemographics operation response"
-* address.type = #physical
-* address.line = "321 SUNSHINE PL"
-* address.line[1] = "NEW LINE 2"
-* address.line[2] = "NEW LINE 3"
-* address.city = "VANCOUVER"
-* address.state = "BC"
-* address.period.start = "2017-04-05T00:00:00-08:00"
-* address.period.end = "2018-04-05T00:00:00-08:00"
-* address[1].type = #physical
-* address[1].line = "421 SUNSHINE PL"
-* address[1].line[1] = "NEW LINE 2"
-* address[1].line[2] = "NEW LINE 3"
-* address[1].city = "VANCOUVER"
-* address[1].state = "BC"
-* address[1].period.start = "2018-04-05T00:00:00-08:00"
-* address[1].period.end = "2019-04-05T00:00:00-08:00"
-* address[2].type = #physical
-* address[2].line = "521 CLOUDY RD"
-* address[2].line[1] = "NEW LINE 2"
-* address[2].line[2] = "NEW LINE 3"
-* address[2].city = "VANCOUVER"
-* address[2].state = "BC"
-* address[2].period.start = "2019-04-05T00:00:00-08:00"
-* address[2].period.end = "2022-04-05T00:00:00-08:00"
-* address[3].type = #postal
-* address[3].line = "1824 CROSS RD"
-* address[3].line[1] = "LINE 2"
-* address[3].line[2] = "LINE 3"
-* address[3].city = "VANCOUVER"
-* address[3].state = "BC"
-* address[3].postalCode = "V9L 4H2"
-* telecom.use = #home
-* telecom.system = #phone
-* telecom.value = "6048883322"
-* telecom.period.start = "2021-01-01T00:00:00-08:00"
-* telecom[1].use = #home
-* telecom[1].system = #phone
-* telecom[1].value = "6048883322"
-* telecom[1].period.start = "2019-01-01T00:00:00-08:00"
-* telecom[1].period.end = "2021-01-01T00:00:00-08:00"
-* identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* identifier.value = "9983652763"
-* identifier.type.coding.code = #JHN
-* identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* address[0] = Address-0-Example-Valid
+* address[1] = Address-1-Example-Invalid
+* telecom[0] = ContactPoint-Example-Home-Phone
+* telecom[0] = ContactPoint-Example-Home-Phone-2
+* identifier[0] = IdentifierExamplePHN
 * name.given = "JILLIAN"
 * name.given[1] = "DAWN"
 * name.given[2] = "THIRD NAME"
