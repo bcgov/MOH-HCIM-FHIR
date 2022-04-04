@@ -4,9 +4,7 @@ Description: "Patient example for a RevisePatient operation"
 * address = Address-0-Example
 * telecom = ContactPoint-Example-Home-Phone
 * identifier = IdentifierExampleSRI
-* name.given = "PURPLE"
-* name.family = "BARNEY"
-* name.use = #official
+* name = Name-Example-JohnDoe
 * gender = #male
 * birthDate = 1940-06-06
 
@@ -16,9 +14,7 @@ Description: "The Patient is completely new to the Client Registry, no identifie
 * address = Address-0-Example-Valid
 * telecom[0] = ContactPoint-Example-Home-Phone
 * telecom[1] = ContactPoint-Example-Home-Email
-* name.given = "PURPLE"
-* name.family = "BARNEY"
-* name.use = #usual
+* name = Name-Example-JohnDoe
 * gender = #male
 * birthDate = 1940-06-06
 
@@ -28,9 +24,7 @@ Description: "The Patient is completely new to the Client Registry, no identifie
 * identifier = IdentifierExampleSRI
 * address = Address-0-Example-Valid
 * telecom[0] = ContactPoint-Example-Home-Phone
-* name.given = "Baby Girl"
-* name.family = "Barness"
-* name.use = #usual
+* name = Name-Example-JaneDoe
 * gender = #unknown
 * birthDate = 2021-11-02
 
@@ -42,13 +36,8 @@ Description: "Example of a merge patient Patient"
 * identifier.value = "876092N4"
 * address[0] = Address-0-Example
 * telecom[0] = ContactPoint-Example-Home-Phone
-* name.given = "Darrel"
-* name.given[1] = "Dwayne"
-* name.use = #usual
-* name.family = "Barker"
-* name.period.start = 2012-12-07T16:35:00.000-07:00
-* name[1].given = "Dan"
-* name[1].use = #official
+* name = Name-Example-DarDwayne
+* name = Name-Example-DarrelDwayne
 * gender = #male
 * birthDate = 1966-10-01
 * link[0].type = #replaces
@@ -84,9 +73,7 @@ Description: "Example of Patient for query response Bundle with 4 different kind
 * identifier[1] = IdentifierExampleSRI
 * identifier[2] = IdentifierExampleSSRI
 * identifier[3] = IdentifierExampleQCPHN
-* name.given = "PURPLE"
-* name.family = "BARNEY"
-* name.use = http://hl7.org/fhir/name-use#usual
+* name = Name-Example-JaneDoe
 * gender = #male
 * gender.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * gender.extension[0].valuePeriod.start = "2017-04-05T16:16:16-08:00"
@@ -103,10 +90,7 @@ Description: "Example of Patient for query response Bundle"
 * address[1] = Address-1-Example-Invalid
 * telecom[0] = ContactPoint-Example-Home-Phone
 * identifier[0] = IdentifierExamplePHN
-* name.given = "SARAH"
-* name.given[1] = "LYNN"
-* name.family = "PURPLE"
-* name.use = http://hl7.org/fhir/name-use#official
+* name = Name-Example-JaneDoe
 * gender = #female
 * gender.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * gender.extension[0].valuePeriod.start = "2017-04-05T16:16:16-08:00"
@@ -123,9 +107,7 @@ Description: "Example of Patient for query response Bundle"
 * address[1] = Address-1-Example-Invalid
 * telecom[0] = ContactPoint-Example-Home-Phone
 * identifier[0] = IdentifierExamplePHN
-* name.given = "BAILEY"
-* name.family = "PURPLE"
-* name.use = http://hl7.org/fhir/name-use#usual
+* name = Name-Example-JohnDoe
 * gender = #female
 * gender.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * gender.extension[0].valuePeriod.start = "2017-04-05T16:16:16-08:00"
@@ -142,11 +124,7 @@ Description: "Example of Patient for $GetDemographics operation response"
 * address[0] = Address-0-Example
 * telecom[0] = ContactPoint-Example-Home-Phone
 * identifier[0] = IdentifierExamplePHN
-* name.given = "JILLIAN"
-* name.given[1] = "DAWN"
-* name.given[2] = "THIRD NAME"
-* name.family = "COOK-ADAMS"
-* name.use = http://hl7.org/fhir/name-use#usual
+* name = Name-Example-JaneDoe-GD
 * gender = #female
 * gender.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * gender.extension[0].valuePeriod.start = "2017-04-05T16:16:16-08:00"
@@ -179,9 +157,7 @@ Description: "Example of Merge or Revise response Bundle with 4 different kinds 
 * identifier[1] = IdentifierExampleSRI
 * identifier[2] = IdentifierExampleSSRI
 * identifier[3] = IdentifierExampleQCPHN
-* name.given = "PURPLE"
-* name.family = "BARNEY"
-* name.use = #usual
+* name = Name-Example-JohnDoe
 * gender = #male
 * gender.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * gender.extension.valuePeriod.start = "2017-04-05T16:16:16-08:00"
@@ -199,9 +175,7 @@ Description: "Example of Patient newborn for query response Bundle"
 * address[1] = Address-1-Example-Invalid
 * telecom[0] = ContactPoint-Example-Home-Phone
 * identifier[0] = IdentifierExamplePHN
-* name.given = "Baby Boy"
-* name.family = "PURPLE"
-* name.use = http://hl7.org/fhir/name-use#usual
+* name = Name-Example-JohnDoe
 * gender = #male
 * gender.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * gender.extension.valuePeriod.start = "2017-04-05T16:16:16-08:00"
@@ -219,9 +193,7 @@ Description: "Example of Patient newborn for query response Bundle"
 * address[1] = Address-1-Example-Invalid
 * telecom[0] = ContactPoint-Example-Home-Phone
 * identifier[0] = IdentifierExamplePHN
-* name.given = "Baby Girl"
-* name.family = "PURPLE"
-* name.use = http://hl7.org/fhir/name-use#usual
+* name = Name-Example-JaneDoe
 * gender = #female
 * gender.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * gender.extension.valuePeriod.start = "2017-04-05T16:16:16-08:00"
@@ -239,9 +211,7 @@ Description: "Example of Patient for query response Bundle"
 * address[1] = Address-1-Example-Invalid
 * telecom[0] = ContactPoint-Example-Home-Phone
 * identifier[0] = IdentifierExamplePHN
-* name.given = "BAILEY"
-* name.family = "PURPLE"
-* name.use = http://hl7.org/fhir/name-use#usual
+* name = Name-Example-MotherDoe
 * gender = #female
 * gender.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * gender.extension.valuePeriod.start = "2017-04-05T16:16:16-08:00"
@@ -261,22 +231,9 @@ Description: "Example of Patient for $GetDemographics operation response"
 * telecom[0] = ContactPoint-Example-Home-Phone
 * telecom[0] = ContactPoint-Example-Home-Phone-2
 * identifier[0] = IdentifierExamplePHN
-* name.given = "JILLIAN"
-* name.given[1] = "DAWN"
-* name.given[2] = "THIRD NAME"
-* name.family = "COOK-ADAMS"
-* name.use = http://hl7.org/fhir/name-use#usual
-* name.period.start = "2021-01-01"
-* name[1].given = "TILLIAN"
-* name[1].given[1] = "DUSK"
-* name[1].given[2] = "THIRD NAME"
-* name[1].family = "COOK-ADAMS"
-* name[1].use = http://hl7.org/fhir/name-use#usual
-* name[1].period.start = "2020-01-01T00:00:00-08:00"
-* name[1].period.end = "2021-01-01T00:00:00-08:00"
-* name[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-* name[2].extension[0].valueCode = #masked
-* name[2].use = http://hl7.org/fhir/name-use#temp
+* name = Name-Example-JaneDoe
+* name = Name-Example-JaneDoe-History1
+* name = Name-Example-JaneDoe-History2
 * gender = #female
 * gender.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * gender.extension[0].valuePeriod.start = "2018-04-05T16:16:16-08:00"

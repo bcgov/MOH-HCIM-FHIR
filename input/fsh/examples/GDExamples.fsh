@@ -64,8 +64,5 @@ Instance: Parameters-GetDemographics-IN-Example
 InstanceOf: Parameters
 Description: "Example of $GetDemographics operation, IN parameters"
 * parameter[0].name = "identifier"
-* parameter[0].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* parameter[0].valueIdentifier.value = "9834902274"
-* parameter[0].valueIdentifier.type.coding.code = #JHN
-* parameter[0].valueIdentifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* parameter[0].valueIdentifier = IdentifierExamplePHN
 

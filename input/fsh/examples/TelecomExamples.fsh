@@ -23,5 +23,5 @@ Description: "ContactPoint example home email."
 Usage: #inline
 * use = #home
 * system = #email
-* value = "fred321@gmail.com"
+* value = "John321@gmail.com"
 * period.start = "2000-01-02T10:10:10-08:00"
