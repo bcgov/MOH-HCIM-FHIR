@@ -68,10 +68,13 @@
        fhir:Patient.name [
          fhir:index 0;
          fhir:HumanName.use [ fhir:value "official" ];
-         fhir:HumanName.family [ fhir:value "BARNEY" ];
+         fhir:HumanName.family [ fhir:value "Doe" ];
          fhir:HumanName.given [
-           fhir:value "PURPLE";
+           fhir:value "John";
            fhir:index 0
+         ];
+         fhir:HumanName.period [
+           fhir:Period.start [ fhir:value "2017-04-05"^^xsd:date ]
          ]
        ];
        fhir:Patient.telecom [

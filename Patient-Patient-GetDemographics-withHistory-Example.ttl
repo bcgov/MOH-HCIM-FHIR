@@ -17,7 +17,7 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>JILLIAN DAWN THIRD NAME COOK-ADAMS </b> female, DoB: 1972-10-16 ( Jurisdictional health number: 123345654 (OFFICIAL))</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Jane Doe </b> female, DoB: 1972-10-16 ( Jurisdictional health number: 123345654 (OFFICIAL))</p></div>"
   ];
   fhir:Patient.identifier [
      fhir:index 0;
@@ -44,46 +44,15 @@
   fhir:Patient.name [
      fhir:index 0;
      fhir:HumanName.use [ fhir:value "usual" ];
-     fhir:HumanName.family [ fhir:value "COOK-ADAMS" ];
+     fhir:HumanName.family [ fhir:value "Doe" ];
      fhir:HumanName.given [
-       fhir:value "JILLIAN";
+       fhir:value "Jane";
        fhir:index 0
-     ], [
-       fhir:value "DAWN";
-       fhir:index 1
-     ], [
-       fhir:value "THIRD NAME";
-       fhir:index 2
      ];
      fhir:HumanName.period [
-       fhir:Period.start [ fhir:value "2021-01-01"^^xsd:date ]
+       fhir:Period.start [ fhir:value "2016-04-05"^^xsd:date ];
+       fhir:Period.end [ fhir:value "2017-04-05"^^xsd:date ]
      ]
-  ], [
-     fhir:index 1;
-     fhir:HumanName.use [ fhir:value "usual" ];
-     fhir:HumanName.family [ fhir:value "COOK-ADAMS" ];
-     fhir:HumanName.given [
-       fhir:value "TILLIAN";
-       fhir:index 0
-     ], [
-       fhir:value "DUSK";
-       fhir:index 1
-     ], [
-       fhir:value "THIRD NAME";
-       fhir:index 2
-     ];
-     fhir:HumanName.period [
-       fhir:Period.start [ fhir:value "2020-01-01T00:00:00-08:00"^^xsd:dateTime ];
-       fhir:Period.end [ fhir:value "2021-01-01T00:00:00-08:00"^^xsd:dateTime ]
-     ]
-  ], [
-     fhir:index 2;
-     fhir:Element.extension [
-       fhir:index 0;
-       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/data-absent-reason" ];
-       fhir:Extension.valueCode [ fhir:value "masked" ]
-     ];
-     fhir:HumanName.use [ fhir:value "temp" ]
   ];
   fhir:Patient.telecom [
      fhir:index 0;

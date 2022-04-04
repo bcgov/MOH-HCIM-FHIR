@@ -5,6 +5,13 @@
     {
       "name": "identifier",
       "valueIdentifier": {
+        "extension": [
+          {
+            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+            "valueCode": "merged"
+          }
+        ],
+        "use": "official",
         "type": {
           "coding": [
             {
@@ -13,8 +20,12 @@
             }
           ]
         },
-        "system": "http://hlth.gov.bc.ca/fhir/client/bc-sri",
-        "value": "9834902274"
+        "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
+        "value": "123345654",
+        "period": {
+          "start": "2000-01-01T11:11:11+08:00",
+          "end": "2010-01-01T11:11:11+08:00"
+        }
       }
     }
   ]

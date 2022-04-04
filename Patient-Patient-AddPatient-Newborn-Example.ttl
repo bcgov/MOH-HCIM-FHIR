@@ -17,7 +17,7 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Baby Girl Barness </b> unknown, DoB: 2021-11-02 ( Account number: 123345654 (OFFICIAL))</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Jane Doe </b> unknown, DoB: 2021-11-02 ( Account number: 123345654 (OFFICIAL))</p></div>"
   ];
   fhir:Patient.identifier [
      fhir:index 0;
@@ -44,10 +44,13 @@
   fhir:Patient.name [
      fhir:index 0;
      fhir:HumanName.use [ fhir:value "usual" ];
-     fhir:HumanName.family [ fhir:value "Barness" ];
+     fhir:HumanName.family [ fhir:value "Doe" ];
      fhir:HumanName.given [
-       fhir:value "Baby Girl";
+       fhir:value "Jane";
        fhir:index 0
+     ];
+     fhir:HumanName.period [
+       fhir:Period.start [ fhir:value "2018-04-05"^^xsd:date ]
      ]
   ];
   fhir:Patient.telecom [

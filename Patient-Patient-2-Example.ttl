@@ -17,7 +17,7 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>BAILEY PURPLE </b> female, DoB: 1985-12-14 ( Jurisdictional health number: 123345654 (OFFICIAL))</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>John Doe (OFFICIAL)</b> female, DoB: 1985-12-14 ( Jurisdictional health number: 123345654 (OFFICIAL))</p></div>"
   ];
   fhir:DomainResource.extension [
      fhir:index 0;
@@ -50,11 +50,14 @@
   ];
   fhir:Patient.name [
      fhir:index 0;
-     fhir:HumanName.use [ fhir:value "usual" ];
-     fhir:HumanName.family [ fhir:value "PURPLE" ];
+     fhir:HumanName.use [ fhir:value "official" ];
+     fhir:HumanName.family [ fhir:value "Doe" ];
      fhir:HumanName.given [
-       fhir:value "BAILEY";
+       fhir:value "John";
        fhir:index 0
+     ];
+     fhir:HumanName.period [
+       fhir:Period.start [ fhir:value "2017-04-05"^^xsd:date ]
      ]
   ];
   fhir:Patient.telecom [

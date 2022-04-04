@@ -17,15 +17,18 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>PURPLE BARNEY </b> male, DoB: 1940-06-06</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>John Doe (OFFICIAL)</b> male, DoB: 1940-06-06</p></div>"
   ];
   fhir:Patient.name [
      fhir:index 0;
-     fhir:HumanName.use [ fhir:value "usual" ];
-     fhir:HumanName.family [ fhir:value "BARNEY" ];
+     fhir:HumanName.use [ fhir:value "official" ];
+     fhir:HumanName.family [ fhir:value "Doe" ];
      fhir:HumanName.given [
-       fhir:value "PURPLE";
+       fhir:value "John";
        fhir:index 0
+     ];
+     fhir:HumanName.period [
+       fhir:Period.start [ fhir:value "2017-04-05"^^xsd:date ]
      ]
   ];
   fhir:Patient.telecom [
@@ -39,7 +42,7 @@
   ], [
      fhir:index 1;
      fhir:ContactPoint.system [ fhir:value "email" ];
-     fhir:ContactPoint.value [ fhir:value "fred321@gmail.com" ];
+     fhir:ContactPoint.value [ fhir:value "John321@gmail.com" ];
      fhir:ContactPoint.use [ fhir:value "home" ];
      fhir:ContactPoint.period [
        fhir:Period.start [ fhir:value "2000-01-02T10:10:10-08:00"^^xsd:dateTime ]
