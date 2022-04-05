@@ -5,8 +5,9 @@
   <text>
     <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>AddPatient</h2><p>OPERATION: AddPatient</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-add</pre><p>URL: [base]/Patient/$AddPatient</p><p>Input parameters Profile: <a href="StructureDefinition-bc-patient-business-parameters.html">BCPatientBusinessParameters</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Unique message ID.</p>
 </div></td></tr><tr><td>IN</td><td>messageDate</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Message date and time.</p>
-</div></td></tr><tr><td>IN</td><td>patient</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td/><td><div><p>The Patient.</p>
+</div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>Requesting organization.</p>
 </div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>UserId of sender.</p>
+</div></td></tr><tr><td>IN</td><td>patient</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td/><td><div><p>The Patient.</p>
 </div></td></tr><tr><td>IN</td><td>mothersPHN</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a></td><td/><td><div><p>The newborn Patient mother's PHN in a RelatedPerson resource.</p>
 </div></td></tr></table></div>
   </text>
@@ -16,7 +17,7 @@
   <title value="AddPatient"/>
   <status value="draft"/>
   <kind value="operation"/>
-  <date value="2022-04-04T20:52:49+00:00"/>
+  <date value="2022-04-05T16:12:45+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -57,12 +58,12 @@
     <searchType value="string"/>
   </parameter>
   <parameter>
-    <name value="patient"/>
+    <name value="sender"/>
     <use value="in"/>
     <min value="1"/>
     <max value="1"/>
-    <documentation value="The Patient."/>
-    <type value="Patient"/>
+    <documentation value="Requesting organization."/>
+    <type value="Identifier"/>
   </parameter>
   <parameter>
     <name value="enterer"/>
@@ -71,6 +72,14 @@
     <max value="1"/>
     <documentation value="UserId of sender."/>
     <type value="Identifier"/>
+  </parameter>
+  <parameter>
+    <name value="patient"/>
+    <use value="in"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="The Patient."/>
+    <type value="Patient"/>
   </parameter>
   <parameter>
     <name value="mothersPHN"/>

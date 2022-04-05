@@ -10,7 +10,7 @@
   fhir:Resource.id [ fhir:value "bc-patient-partial-revise"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>PartialRevisePatient</h2><p>OPERATION: PartialRevisePatient</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-partial-revise</pre><p>URL: [base]/Patient/$PartialRevisePatient</p><p>Input parameters Profile: <a href=\"StructureDefinition-bc-metadata-parameters.html\">BCMetadataParameters</a></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Unique message ID.</p>\n</div></td></tr><tr><td>IN</td><td>messageDate</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Message date and time.</p>\n</div></td></tr><tr><td>IN</td><td>PHN</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td/><td><div><p>The Patient's PHN.</p>\n</div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>UserId of sender.</p>\n</div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Source of request</p>\n</div></td></tr><tr><td>IN</td><td>patchOperation</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/parameters.html\">Parameters</a></td><td/><td><div><p>Patch parameters</p>\n</div></td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>PartialRevisePatient</h2><p>OPERATION: PartialRevisePatient</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-partial-revise</pre><p>URL: [base]/Patient/$PartialRevisePatient</p><p>Input parameters Profile: <a href=\"StructureDefinition-bc-metadata-parameters.html\">BCMetadataParameters</a></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Unique message ID.</p>\n</div></td></tr><tr><td>IN</td><td>messageDate</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Message date and time.</p>\n</div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Requesting organization.</p>\n</div></td></tr><tr><td>IN</td><td>enterer</td><td>1..0</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>UserID of sender.</p>\n</div></td></tr><tr><td>IN</td><td>SRI</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>The Patient's SRI.</p>\n</div></td></tr><tr><td>IN</td><td>patchOperation</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/parameters.html\">Parameters</a></td><td/><td><div><p>Patch parameters</p>\n</div></td></tr></table></div>"
   ];
   fhir:OperationDefinition.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-partial-revise"];
   fhir:OperationDefinition.version [ fhir:value "0.1.0"];
@@ -18,7 +18,7 @@
   fhir:OperationDefinition.title [ fhir:value "Partial Revise Patient"];
   fhir:OperationDefinition.status [ fhir:value "draft"];
   fhir:OperationDefinition.kind [ fhir:value "operation"];
-  fhir:OperationDefinition.date [ fhir:value "2022-04-04T20:52:49+00:00"^^xsd:dateTime];
+  fhir:OperationDefinition.date [ fhir:value "2022-04-05T16:12:45+00:00"^^xsd:dateTime];
   fhir:OperationDefinition.publisher [ fhir:value "BC Ministry of Health"];
   fhir:OperationDefinition.contact [
      fhir:index 0;
@@ -70,27 +70,27 @@
      fhir:OperationDefinition.parameter.searchType [ fhir:value "string" ]
   ], [
      fhir:index 2;
-     fhir:OperationDefinition.parameter.name [ fhir:value "PHN" ];
-     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
-     fhir:OperationDefinition.parameter.min [ fhir:value "1"^^xsd:integer ];
-     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
-     fhir:OperationDefinition.parameter.documentation [ fhir:value "The Patient's PHN." ];
-     fhir:OperationDefinition.parameter.type [ fhir:value "string" ]
-  ], [
-     fhir:index 3;
-     fhir:OperationDefinition.parameter.name [ fhir:value "enterer" ];
-     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
-     fhir:OperationDefinition.parameter.min [ fhir:value "0"^^xsd:integer ];
-     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
-     fhir:OperationDefinition.parameter.documentation [ fhir:value "UserId of sender." ];
-     fhir:OperationDefinition.parameter.type [ fhir:value "Identifier" ]
-  ], [
-     fhir:index 4;
      fhir:OperationDefinition.parameter.name [ fhir:value "sender" ];
      fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
      fhir:OperationDefinition.parameter.min [ fhir:value "1"^^xsd:integer ];
      fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
-     fhir:OperationDefinition.parameter.documentation [ fhir:value "Source of request" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "Requesting organization." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "Identifier" ]
+  ], [
+     fhir:index 3;
+     fhir:OperationDefinition.parameter.name [ fhir:value "enterer" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "1"^^xsd:integer ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "0" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "UserID of sender." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "Identifier" ]
+  ], [
+     fhir:index 4;
+     fhir:OperationDefinition.parameter.name [ fhir:value "SRI" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "1"^^xsd:integer ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "The Patient's SRI." ];
      fhir:OperationDefinition.parameter.type [ fhir:value "Identifier" ]
   ], [
      fhir:index 5;

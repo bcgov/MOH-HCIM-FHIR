@@ -5,9 +5,9 @@
   <text>
     <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>PartialRevisePatient</h2><p>OPERATION: PartialRevisePatient</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-partial-revise</pre><p>URL: [base]/Patient/$PartialRevisePatient</p><p>Input parameters Profile: <a href="StructureDefinition-bc-metadata-parameters.html">BCMetadataParameters</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Unique message ID.</p>
 </div></td></tr><tr><td>IN</td><td>messageDate</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Message date and time.</p>
-</div></td></tr><tr><td>IN</td><td>PHN</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td/><td><div><p>The Patient's PHN.</p>
-</div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>UserId of sender.</p>
-</div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>Source of request</p>
+</div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>Requesting organization.</p>
+</div></td></tr><tr><td>IN</td><td>enterer</td><td>1..0</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>UserID of sender.</p>
+</div></td></tr><tr><td>IN</td><td>SRI</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>The Patient's SRI.</p>
 </div></td></tr><tr><td>IN</td><td>patchOperation</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></td><td/><td><div><p>Patch parameters</p>
 </div></td></tr></table></div>
   </text>
@@ -17,7 +17,7 @@
   <title value="Partial Revise Patient"/>
   <status value="draft"/>
   <kind value="operation"/>
-  <date value="2022-04-04T20:52:49+00:00"/>
+  <date value="2022-04-05T16:12:45+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -58,27 +58,27 @@
     <searchType value="string"/>
   </parameter>
   <parameter>
-    <name value="PHN"/>
-    <use value="in"/>
-    <min value="1"/>
-    <max value="1"/>
-    <documentation value="The Patient's PHN."/>
-    <type value="string"/>
-  </parameter>
-  <parameter>
-    <name value="enterer"/>
-    <use value="in"/>
-    <min value="0"/>
-    <max value="1"/>
-    <documentation value="UserId of sender."/>
-    <type value="Identifier"/>
-  </parameter>
-  <parameter>
     <name value="sender"/>
     <use value="in"/>
     <min value="1"/>
     <max value="1"/>
-    <documentation value="Source of request"/>
+    <documentation value="Requesting organization."/>
+    <type value="Identifier"/>
+  </parameter>
+  <parameter>
+    <name value="enterer"/>
+    <use value="in"/>
+    <min value="1"/>
+    <max value="0"/>
+    <documentation value="UserID of sender."/>
+    <type value="Identifier"/>
+  </parameter>
+  <parameter>
+    <name value="SRI"/>
+    <use value="in"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="The Patient's SRI."/>
     <type value="Identifier"/>
   </parameter>
   <parameter>

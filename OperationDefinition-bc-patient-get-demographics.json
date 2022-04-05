@@ -3,7 +3,7 @@
   "id": "bc-patient-get-demographics",
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GetDemographics</h2><p>QUERY: GetDemographics</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics</pre><p>URL: [base]/Patient/$GetDemographics</p><p>Input parameters Profile: <a href=\"StructureDefinition-bc-metadata-parameters.html\">BCMetadataParameters</a></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Unique message ID.</p>\n</div></td></tr><tr><td>IN</td><td>messageDateTime</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a></td><td/><td><div><p>Message date and time.</p>\n</div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Source of request</p>\n</div></td></tr><tr><td>IN</td><td>identifier</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Patient identifier.</p>\n</div></td></tr><tr><td>IN</td><td>withHistory</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a></td><td/><td><div><p>Boolean flag to return Patient's history.  If missing, defaults to false.</p>\n</div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>UserId of sender.</p>\n</div></td></tr></table></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GetDemographics</h2><p>QUERY: GetDemographics</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics</pre><p>URL: [base]/Patient/$GetDemographics</p><p>Input parameters Profile: <a href=\"StructureDefinition-bc-metadata-parameters.html\">BCMetadataParameters</a></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Unique message ID.</p>\n</div></td></tr><tr><td>IN</td><td>messageDateTime</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a></td><td/><td><div><p>Message date and time.</p>\n</div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Requesting organization.</p>\n</div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>UserId of sender.</p>\n</div></td></tr><tr><td>IN</td><td>identifier</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Patient identifier.</p>\n</div></td></tr><tr><td>IN</td><td>withHistory</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a></td><td/><td><div><p>Boolean flag to return Patient's history.  If missing, defaults to false.</p>\n</div></td></tr></table></div>"
   },
   "url": "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics",
   "version": "0.1.0",
@@ -11,7 +11,7 @@
   "title": "GetDemographics",
   "status": "draft",
   "kind": "query",
-  "date": "2022-04-04T20:52:49+00:00",
+  "date": "2022-04-05T16:12:45+00:00",
   "publisher": "BC Ministry of Health",
   "contact": [
     {
@@ -66,7 +66,15 @@
       "use": "in",
       "min": 1,
       "max": "1",
-      "documentation": "Source of request",
+      "documentation": "Requesting organization.",
+      "type": "Identifier"
+    },
+    {
+      "name": "enterer",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "UserId of sender.",
       "type": "Identifier"
     },
     {
@@ -84,14 +92,6 @@
       "max": "1",
       "documentation": "Boolean flag to return Patient's history.  If missing, defaults to false.",
       "type": "boolean"
-    },
-    {
-      "name": "enterer",
-      "use": "in",
-      "min": 0,
-      "max": "1",
-      "documentation": "UserId of sender.",
-      "type": "Identifier"
     }
   ]
 }
