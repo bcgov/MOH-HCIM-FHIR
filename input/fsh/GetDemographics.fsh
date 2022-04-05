@@ -34,26 +34,27 @@ Usage: #definition
 * parameter[2].use = #in
 * parameter[2].min = 1
 * parameter[2].max = "1"
-* parameter[2].documentation = "Source of request"
+* parameter[2].documentation = "Requesting organization."
 * parameter[2].type = #Identifier
 
-* parameter[3].name = #identifier
-* parameter[3].use = #in
-* parameter[3].min = 1
+* parameter[3].name = #enterer
+* parameter[3].use = #in      
+* parameter[3].min = 0
 * parameter[3].max = "1"
-* parameter[3].documentation = "Patient identifier."
+* parameter[3].documentation = "UserId of sender."
 * parameter[3].type = #Identifier
 
-* parameter[4].name = #withHistory
+* parameter[4].name = #identifier
 * parameter[4].use = #in
-* parameter[4].min = 0
+* parameter[4].min = 1
 * parameter[4].max = "1"
-* parameter[4].documentation = "Boolean flag to return Patient's history.  If missing, defaults to false."
-* parameter[4].type = #boolean
+* parameter[4].documentation = "Patient identifier."
+* parameter[4].type = #Identifier
 
-* parameter[5].name = #enterer
-* parameter[5].use = #in                                                                    
+* parameter[5].name = #withHistory
+* parameter[5].use = #in
 * parameter[5].min = 0
 * parameter[5].max = "1"
-* parameter[5].documentation = "UserId of sender."
-* parameter[5].type = #Identifier
+* parameter[5].documentation = "Boolean flag to return Patient's history.  If missing, defaults to false."
+* parameter[5].type = #boolean
+

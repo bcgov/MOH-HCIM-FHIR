@@ -172,7 +172,7 @@ The FindCandidates FHIR Operation search SHALL use the following name-value para
 		<td></td>
 		<td>
 			<div>
-				<p>Message sender</p>
+				<p>Requesting organization</p>
 			</div>
 		</td>
 	</tr>
@@ -297,7 +297,7 @@ The GetDemographics FHIR Operation SHALL use the following name-value parameters
 		<td></td>
 		<td>
 			<div>
-				<p>Source of request</p>
+				<p>Requesting organization</p>
 			</div>
 		</td>
 	</tr>
@@ -409,7 +409,7 @@ The GetDemographics.withEligibility FHIR Operation SHALL use the following name-
 		<td></td>
 		<td>
 			<div>
-				<p>Source of request</p>
+				<p>Requesting organization</p>
 			</div>
 		</td>
 	</tr>
@@ -521,7 +521,7 @@ The AddPatient and RevisePatient FHIR Operations SHALL use the following name-va
 		<td></td>
 		<td>
 			<div>
-				<p>Source of request</p>
+				<p>Requesting organization</p>
 			</div>
 		</td>
 	</tr>
@@ -618,7 +618,7 @@ The PartialRevisePatient FHIR Operation SHALL use the following name-value param
 		<td></td>
 		<td>
 			<div>
-				<p>Source of request</p>
+				<p>Requesting organization</p>
 			</div>
 		</td>
 	</tr>
@@ -715,7 +715,7 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 		<td></td>
 		<td>
 			<div>
-				<p>Source of request</p>
+				<p>Requesting organization</p>
 			</div>
 		</td>
 	</tr>

@@ -34,21 +34,22 @@ Usage: #definition
 * parameter[2].use = #in
 * parameter[2].min = 1
 * parameter[2].max = "1"
-* parameter[2].documentation = "Source of request"
+* parameter[2].documentation = "Requesting organization."
 * parameter[2].type = #Identifier
 
-* parameter[3].name = #identifier
-* parameter[3].use = #in
-* parameter[3].min = 1
+* parameter[3].name = #enterer
+* parameter[3].use = #in                                                        
+* parameter[3].min = 0
 * parameter[3].max = "1"
-* parameter[3].documentation = "Patient identifier."
+* parameter[3].documentation = "UserId of sender."
 * parameter[3].type = #Identifier
 
-* parameter[4].name = #enterer
-* parameter[4].use = #in                                                                    
-* parameter[4].min = 0
+* parameter[4].name = #identifier
+* parameter[4].use = #in
+* parameter[4].min = 1
 * parameter[4].max = "1"
-* parameter[4].documentation = "UserId of sender."
+* parameter[4].documentation = "Patient identifier."
 * parameter[4].type = #Identifier
+
 
 

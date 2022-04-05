@@ -22,7 +22,7 @@ Usage: #inline
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * extension.valueCode = #merged
 * period.start = "2000-01-01T11:11:11+08:00"
-* period.end = "2010-01-01T11:11:11+08:00"
+//* period.end = "2010-01-01T11:11:11+08:00"
 * use = #official
 
 Instance: IdentifierExamplePHNNoPeriod
@@ -60,7 +60,7 @@ Usage: #inline
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * extension.valueCode = #active
 * period.start = "2000-01-01T11:11:11+08:00"
-* period.end = "2010-01-01T11:11:11+08:00"
+//* period.end = "2010-01-01T11:11:11+08:00"
 * use = #official
 
 Instance: IdentifierExampleSRINoPeriod
@@ -86,7 +86,7 @@ Usage: #inline
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * extension.valueCode = #active
 * period.start = "2000-01-01T11:11:11+08:00"
-* period.end = "2010-01-01T11:11:11+08:00"
+//* period.end = "2010-01-01T11:11:11+08:00"
 * use = #secondary
 
 Instance: IdentifierExampleSSRINoPeriod
@@ -112,7 +112,7 @@ Usage: #inline
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * extension.valueCode = #active
 * period.start = "2000-01-01T11:11:11+08:00"
-* period.end = "2010-01-01T11:11:11+08:00"
+//* period.end = "2010-01-01T11:11:11+08:00"
 * use = #official
 
 Instance: IdentifierExampleQCPHNNoPeriod

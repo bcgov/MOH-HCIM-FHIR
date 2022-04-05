@@ -16,8 +16,11 @@ Description: "Example of $RevisePatient operation that updates an existing Patie
 * parameter[enterer].valueIdentifier.value = "klgodfre"
 * parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
 
-* parameter[4].name = "patchOperation"
-* parameter[4].resource = Parameters-DeletePatch-Example
+* parameter[4].name = "SRI"
+* parameter[4].valueIdentifier = IdentifierExampleSRINoPeriod
+
+* parameter[5].name = "patchOperation"
+* parameter[5].resource = Parameters-DeletePatch-Example
 
 Instance: Parameters-PartialRevisePatient-Response-Example
 InstanceOf: BCMetadataParameters
