@@ -62,6 +62,8 @@ Description: "A sample PartialRevisePatient Operation response."
 Instance: Parameters-DeletePatch-Example
 InstanceOf: Parameters
 Description: "An example of a delete patch, which is used for a partial update of a Patient resource.  This example deletes a physical address."
+* parameter[0].part[0].name = "type"
+* parameter[0].part[0].valueCode = #delete
 * parameter[0].name = "operation"
-* parameter[0].part[0].name = "path"
-* parameter[0].part[0].valueString = "Patient.address.where(type = 'physical')"
+* parameter[0].part[1].name = "path"
+* parameter[0].part[1].valueString = "Patient.address.where(type = 'physical')"
