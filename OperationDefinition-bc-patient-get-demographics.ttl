@@ -10,7 +10,7 @@
   fhir:Resource.id [ fhir:value "bc-patient-get-demographics"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GetDemographics</h2><p>QUERY: GetDemographics</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics</pre><p>URL: [base]/Patient/$GetDemographics</p><p>Input parameters Profile: <a href=\"StructureDefinition-bc-metadata-parameters.html\">BCMetadataParameters</a></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Unique message ID.</p>\n</div></td></tr><tr><td>IN</td><td>messageDateTime</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a></td><td/><td><div><p>Message date and time.</p>\n</div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Requesting organization.</p>\n</div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>UserId of sender.</p>\n</div></td></tr><tr><td>IN</td><td>identifier</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Patient identifier.</p>\n</div></td></tr><tr><td>IN</td><td>withHistory</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a></td><td/><td><div><p>Boolean flag to return Patient's history.  If missing, defaults to false.</p>\n</div></td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GetDemographics</h2><p>QUERY: GetDemographics</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics</pre><p>URL: [base]/Patient/$GetDemographics</p><p>Input parameters Profile: <a href=\"StructureDefinition-bc-metadata-parameters.html\">BCMetadataParameters</a></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Unique message ID.</p>\n</div></td></tr><tr><td>IN</td><td>messageDateTime</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a></td><td/><td><div><p>Message date and time.</p>\n</div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Requesting organization.</p>\n</div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>UserId of sender.</p>\n</div></td></tr><tr><td>IN</td><td>identifier</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Patient identifier.</p>\n</div></td></tr><tr><td>IN</td><td>withHistory</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a></td><td/><td><div><p>Boolean flag to return Patient's history.  If missing, defaults to false.</p>\n</div></td></tr><tr><td>IN</td><td>identifiersOnly</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a></td><td/><td><div><p>Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defaults to false.</p>\n</div></td></tr></table></div>"
   ];
   fhir:OperationDefinition.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics"];
   fhir:OperationDefinition.version [ fhir:value "0.1.0"];
@@ -18,7 +18,7 @@
   fhir:OperationDefinition.title [ fhir:value "GetDemographics"];
   fhir:OperationDefinition.status [ fhir:value "draft"];
   fhir:OperationDefinition.kind [ fhir:value "query"];
-  fhir:OperationDefinition.date [ fhir:value "2022-04-05T17:59:30+00:00"^^xsd:dateTime];
+  fhir:OperationDefinition.date [ fhir:value "2022-04-18T22:34:02+00:00"^^xsd:dateTime];
   fhir:OperationDefinition.publisher [ fhir:value "BC Ministry of Health"];
   fhir:OperationDefinition.contact [
      fhir:index 0;
@@ -98,6 +98,14 @@
      fhir:OperationDefinition.parameter.min [ fhir:value "0"^^xsd:integer ];
      fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
      fhir:OperationDefinition.parameter.documentation [ fhir:value "Boolean flag to return Patient's history.  If missing, defaults to false." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "boolean" ]
+  ], [
+     fhir:index 6;
+     fhir:OperationDefinition.parameter.name [ fhir:value "identifiersOnly" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "0"^^xsd:integer ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defaults to false." ];
      fhir:OperationDefinition.parameter.type [ fhir:value "boolean" ]
   ] .
 

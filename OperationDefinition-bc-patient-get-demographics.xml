@@ -9,6 +9,7 @@
 </div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>UserId of sender.</p>
 </div></td></tr><tr><td>IN</td><td>identifier</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>Patient identifier.</p>
 </div></td></tr><tr><td>IN</td><td>withHistory</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td/><td><div><p>Boolean flag to return Patient's history.  If missing, defaults to false.</p>
+</div></td></tr><tr><td>IN</td><td>identifiersOnly</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td/><td><div><p>Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defaults to false.</p>
 </div></td></tr></table></div>
   </text>
   <url value="http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics"/>
@@ -17,7 +18,7 @@
   <title value="GetDemographics"/>
   <status value="draft"/>
   <kind value="query"/>
-  <date value="2022-04-05T17:59:30+00:00"/>
+  <date value="2022-04-18T22:34:02+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -86,6 +87,14 @@
     <min value="0"/>
     <max value="1"/>
     <documentation value="Boolean flag to return Patient's history.  If missing, defaults to false."/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="identifiersOnly"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defaults to false."/>
     <type value="boolean"/>
   </parameter>
 </OperationDefinition>
