@@ -58,3 +58,10 @@ Usage: #definition
 * parameter[5].documentation = "Boolean flag to return Patient's history.  If missing, defaults to false."
 * parameter[5].type = #boolean
 
+* parameter[6].name = #identifiersOnly
+* parameter[6].use = #in
+* parameter[6].min = 0
+* parameter[6].max = "1"
+* parameter[6].documentation = "Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defaults to false."
+* parameter[6].type = #boolean
+

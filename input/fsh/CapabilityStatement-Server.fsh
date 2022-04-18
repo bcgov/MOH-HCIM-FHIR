@@ -303,6 +303,20 @@ The GetDemographics FHIR Operation SHALL use the following name-value parameters
 	</tr>
 	<tr>
 		<td>IN</td>
+		<td>enterer</td>
+		<td>0..1</td>
+		<td>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
+		</td>
+		<td></td>
+		<td>
+			<div>
+				<p>UserId of sender</p>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>IN</td>
 		<td>identifier</td>
 		<td>1..1</td>
 		<td>
@@ -331,15 +345,15 @@ The GetDemographics FHIR Operation SHALL use the following name-value parameters
 	</tr>
 	<tr>
 		<td>IN</td>
-		<td>enterer</td>
+		<td>identifiersOnly</td>
 		<td>0..1</td>
 		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a>
 		</td>
 		<td></td>
 		<td>
 			<div>
-				<p>UserId of sender</p>
+				<p>Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defaults to false.</p>
 			</div>
 		</td>
 	</tr>
@@ -443,15 +457,29 @@ The GetDemographics.withEligibility FHIR Operation SHALL use the following name-
 	</tr>
 	<tr>
 		<td>IN</td>
-		<td>eligibilityRequest</td>
-		<td>1..1</td>
+		<td>withHistory</td>
+		<td>0..1</td>
 		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#CoverageEligibilityRequest\">CoverageEligibilityRequest</a>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a>
 		</td>
 		<td></td>
 		<td>
 			<div>
-				<p>An eligibility request</p>
+				<p>Boolean flag to return Patient's history.  If missing, defaults to false.</p>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>IN</td>
+		<td>identifiersOnly</td>
+		<td>0..1</td>
+		<td>
+			<a href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a>
+		</td>
+		<td></td>
+		<td>
+			<div>
+				<p>Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defaults to false.</p>
 			</div>
 		</td>
 	</tr>
