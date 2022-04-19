@@ -36,24 +36,17 @@ Usage: #definition
 * parameter[2].documentation = "The Patient."
 * parameter[2].type = #Patient
 
-* parameter[3].name = #enterer                                                  
-* parameter[3].use = #in                                                        
-* parameter[3].min = 0
+* parameter[3].name = #sender
+* parameter[3].use = #in
+* parameter[3].min = 1
 * parameter[3].max = "1"
-* parameter[3].documentation = "UserId of sender."
+* parameter[3].documentation = "Requesting organization."
 * parameter[3].type = #Identifier
 
-* parameter[4].name = #sender
-* parameter[4].use = #in
-* parameter[4].min = 1
+* parameter[4].name = #enterer
+* parameter[4].use = #in                                                        
+* parameter[4].min = 0
 * parameter[4].max = "1"
-* parameter[4].documentation = "Requesting organization."
+* parameter[4].documentation = "UserId of sender."
 * parameter[4].type = #Identifier
-
-* parameter[5].name = #enterer
-* parameter[5].use = #in                                                        
-* parameter[5].min = 0
-* parameter[5].max = "1"
-* parameter[5].documentation = "UserId of sender."
-* parameter[5].type = #Identifier
 

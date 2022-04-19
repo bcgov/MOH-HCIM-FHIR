@@ -20,7 +20,7 @@ Description: "Example of $AddPatient operation where the Patient is new to the C
 
 Instance: Parameters-AddPatient-Newborn-Example
 InstanceOf: BCPatientBusinessParameters
-Description: "Example of $RevisePatient.Newborn operation where the Patient is a newborn.  Awwwwww so cute."
+Description: "Example of $RevisePatient.Newborn operation where the Patient is a newborn."
 
 * parameter[messageId].name = "messageId"
 * parameter[messageId].valueString = "98028b44-882a-4c72-8c92-b87d916147e1"
