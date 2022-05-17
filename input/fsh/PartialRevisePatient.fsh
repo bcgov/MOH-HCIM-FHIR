@@ -1,19 +1,19 @@
-Instance: PartialRevisePatient
+Instance: UpdatePatient
 InstanceOf: OperationDefinition
 Description: "This operation is used to revise a patient's demographics, applied to only specific Patient attributes."
 Usage: #definition
 * id = "bc-patient-partial-revise"
 * url = "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-partial-revise"
-* name = "PartialRevisePatient"
-* title = "Partial Revise Patient"
+* name = "UpdatePatient"
+* title = "Update Patient"
 * status = #draft
 * kind = #operation
-* code = #PartialRevisePatient
+* code = #UpdatePatient
 * resource[0] = #Patient
 * system = false
 * type = true
 * instance = false
-* inputProfile = Canonical(BCMetadataParameters)
+* inputProfile = Canonical(MetadataParameters)
 
 * parameter[0].name = #messageId
 * parameter[0].use = #in

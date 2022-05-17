@@ -1,5 +1,5 @@
-Instance: Parameters-PartialRevisePatient-Example
-InstanceOf: BCMetadataParameters
+Instance: Parameters-UpdatePatient-Example
+InstanceOf: MetadataParameters
 Description: "Example of $RevisePatient operation that updates an existing Patient"
 
 * parameter[messageId].name = "messageId"
@@ -22,9 +22,9 @@ Description: "Example of $RevisePatient operation that updates an existing Patie
 * parameter[5].name = "patchOperation"
 * parameter[5].resource = Parameters-DeletePatch-Example
 
-Instance: Parameters-PartialRevisePatient-Response-Example
-InstanceOf: BCMetadataParameters
-Description: "Example of PartialRevise response Metadata parameters"
+Instance: Parameters-UpdatePatient-Response-Example
+InstanceOf: MetadataParameters
+Description: "Example of Update response Metadata parameters"
 
 * parameter[messageId].name = "messageId"
 * parameter[messageId].valueString = "c087e71e-3e7e-4c22-a3ce-61523f600615"
@@ -39,9 +39,9 @@ Description: "Example of PartialRevise response Metadata parameters"
 * parameter[sender].valueIdentifier.value = "MOH_CRS"
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
-Instance: Bundle-PartialRevisePatient-Response-Example
-InstanceOf: BCPartialReviseResponseBundle
-Description: "A sample PartialRevisePatient Operation response."
+Instance: Bundle-UpdatePatient-Response-Example
+InstanceOf: ReviseResponseBundle
+Description: "A sample UpdatePatient Operation response."
 * type = #collection
 * timestamp = "2011-09-13T16:11:43.000-07:00"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -49,7 +49,7 @@ Description: "A sample PartialRevisePatient Operation response."
 * link[0].relation = "self"
 * link[0].url = "urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1"
 
-* entry[0].resource = Parameters-PartialRevisePatient-Response-Example
+* entry[0].resource = Parameters-UpdatePatient-Response-Example
 * entry[0].fullUrl = "urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33"
 
 * entry[1].resource = OperationOutcome-Example

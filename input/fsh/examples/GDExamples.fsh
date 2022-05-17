@@ -1,5 +1,20 @@
+Instance: Bundle-GetDemographics-Request-Example
+InstanceOf: GetDemographicsRequestBundle
+Description: "Example of $GetDemographics operation"
+* type = #collection
+* timestamp = "2011-09-13T16:11:43.000-07:00"
+* link.relation = "self"
+* link.url = "http://hlth.gov.bc.ca/fhir/client/Patient/$GetDemographics"
+
+* entry[parameters].resource = Parameters-GetDemographics-Example
+* entry[parameters].fullUrl = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f2222"
+
+* entry[patient].resource = Patient-By-Example-GD-Example
+* entry[patient].fullUrl = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f1111" 
+
+
 Instance: Parameters-GetDemographics-Example
-InstanceOf: BCMetadataParameters
+InstanceOf: MetadataParameters
 Description: "Example of $GetDemographics operation"
 * parameter[messageId].name = "messageId"
 * parameter[messageId].valueString = "98028b44-882a-4c72-8c92-b87d916147e1"
@@ -15,17 +30,11 @@ Description: "Example of $GetDemographics operation"
 * parameter[enterer].valueIdentifier.value = "bob@me.com"
 * parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-userid"
 
-* parameter[4].name = "identifier"
-* parameter[4].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* parameter[4].valueIdentifier.value = "912345892"
-* parameter[4].valueIdentifier.type.coding.code = #JHN
-* parameter[4].valueIdentifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-
-* parameter[5].name = "history"
-* parameter[5].valueBoolean = false
+* parameter[4].name = "history"
+* parameter[4].valueBoolean = false
 
 Instance: Parameters-GetDemographics-Response-Example
-InstanceOf: BCMetadataParameters
+InstanceOf: MetadataParameters
 Description: "Example of $GetDemographics response Metadata parameters"
 
 * parameter[messageId].name = "messageId"
@@ -42,7 +51,7 @@ Description: "Example of $GetDemographics response Metadata parameters"
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
 Instance: Bundle-GetDemographics-Response-Example
-InstanceOf: BCSearchResponseBundle
+InstanceOf: SearchResponseBundle
 Description: "Example of $GetDemographics operation response Bundle"
 * type = #searchset
 * timestamp = "2011-09-07T12:18:23.000-07:00"

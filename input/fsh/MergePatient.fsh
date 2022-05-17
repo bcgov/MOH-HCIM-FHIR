@@ -13,7 +13,7 @@ Usage: #definition
 * system = false
 * type = true
 * instance = false
-* inputProfile = Canonical(BCPatientBusinessParameters)
+* inputProfile = Canonical(MergeRequestBundle)
 
 * parameter[0].name = #messageId
 * parameter[0].use = #in
@@ -29,24 +29,24 @@ Usage: #definition
 * parameter[1].documentation = "Message date and time."
 * parameter[1].type = #string
 
-* parameter[2].name = #patient
+* parameter[2].name = #sender
 * parameter[2].use = #in
 * parameter[2].min = 1
 * parameter[2].max = "1"
-* parameter[2].documentation = "The Patient."
-* parameter[2].type = #Patient
+* parameter[2].documentation = "Requesting organization."
+* parameter[2].type = #Identifier
 
-* parameter[3].name = #sender
-* parameter[3].use = #in
-* parameter[3].min = 1
+* parameter[3].name = #enterer
+* parameter[3].use = #in                                                        
+* parameter[3].min = 0
 * parameter[3].max = "1"
-* parameter[3].documentation = "Requesting organization."
+* parameter[3].documentation = "UserId of sender."
 * parameter[3].type = #Identifier
 
-* parameter[4].name = #enterer
-* parameter[4].use = #in                                                        
-* parameter[4].min = 0
+* parameter[4].name = #patient
+* parameter[4].use = #in
+* parameter[4].min = 1
 * parameter[4].max = "1"
-* parameter[4].documentation = "UserId of sender."
-* parameter[4].type = #Identifier
+* parameter[4].documentation = "The Patient with merge information."
+* parameter[4].type = #Patient
 

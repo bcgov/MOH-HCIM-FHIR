@@ -1,5 +1,19 @@
+Instance: Bundle-RevisePatient-Request-Example
+InstanceOf: ReviseRequestBundle
+Description: "Example of $RevisePatient operation."
+* type = #collection
+* timestamp = "2011-09-13T16:11:43.000-07:00"
+* link.relation = "self"
+* link.url = "http://hlth.gov.bc.ca/fhir/client/Patient/$RevisePatient"
+
+* entry[parameters].resource = Parameters-RevisePatient-Example
+* entry[parameters].fullUrl = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f2222"
+
+* entry[patient].fullUrl = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f4444"
+* entry[patient].resource = Patient-RevisePatient-Example
+
 Instance: Parameters-RevisePatient-Example
-InstanceOf: BCPatientBusinessParameters
+InstanceOf: MetadataParameters
 Description: "Example of $RevisePatient operation that updates an existing Patient"
 
 * parameter[messageId].name = "messageId"
@@ -16,11 +30,8 @@ Description: "Example of $RevisePatient operation that updates an existing Patie
 * parameter[enterer].valueIdentifier.value = "klgodfre"
 * parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
 
-* parameter[patient].name = "patient"
-* parameter[patient].resource = Patient-RevisePatient-Example
-
 Instance: Parameters-RevisePatient-Response-Example
-InstanceOf: BCMetadataParameters
+InstanceOf: MetadataParameters
 Description: "Example of Revise response Metadata parameters"
 
 * parameter[messageId].name = "messageId"
@@ -37,7 +48,7 @@ Description: "Example of Revise response Metadata parameters"
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
 Instance: Bundle-RevisePatient-Response-Example
-InstanceOf: BCReviseResponseBundle
+InstanceOf: ReviseResponseBundle
 Description: "A sample RevisePatient Operation response."
 * type = #collection
 * timestamp = "2011-09-13T16:11:43.000-07:00"

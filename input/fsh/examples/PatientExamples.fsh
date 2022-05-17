@@ -1,5 +1,5 @@
 Instance: Patient-RevisePatient-Example
-InstanceOf: BCPatient
+InstanceOf: ClientRegistryPatient
 Description: "Patient example for a RevisePatient operation"
 * address = Address-0-Example
 * telecom = ContactPoint-Example-Home-Phone
@@ -9,7 +9,7 @@ Description: "Patient example for a RevisePatient operation"
 * birthDate = 1940-06-06
 
 Instance: Patient-AddPatient-Example
-InstanceOf: BCPatient
+InstanceOf: ClientRegistryPatient
 Description: "The Patient is completely new to the Client Registry, no identifiers."
 * address = Address-0-Example-Valid
 * telecom[0] = ContactPoint-Example-Home-Phone
@@ -19,7 +19,7 @@ Description: "The Patient is completely new to the Client Registry, no identifie
 * birthDate = 1940-06-06
 
 Instance: Patient-AddPatient-Newborn-Example
-InstanceOf: BCPatient
+InstanceOf: ClientRegistryPatient
 Description: "The Patient is completely new to the Client Registry, no identifiers."
 * identifier = IdentifierExampleSRI
 * address = Address-0-Example-Valid
@@ -29,7 +29,7 @@ Description: "The Patient is completely new to the Client Registry, no identifie
 * birthDate = 2021-11-02
 
 Instance: Patient-MergePatient-Example
-InstanceOf: BCPatient
+InstanceOf: ClientRegistryPatient
 Description: "Example of a merge patient Patient"
 * active = true
 * identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
@@ -61,7 +61,7 @@ Description: "Example of a merge patient Patient"
 * link[3].extension.valueCode = #obsolete
 
 Instance: Patient-0-Example
-InstanceOf: BCPatient
+InstanceOf: ClientRegistryPatient
 Description: "Example of Patient for query response Bundle with 4 different kinds of identifiers: SRI-PHN, SRI, SSRI and alternative."
 // Patient business date
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
@@ -82,7 +82,7 @@ Description: "Example of Patient for query response Bundle with 4 different kind
 * birthDate.extension[0].valuePeriod.start = "2020-10-17T03:29:17-08:00"
 
 Instance: Patient-1-Example
-InstanceOf: BCPatient
+InstanceOf: ClientRegistryPatient
 Description: "Example of Patient for query response Bundle"
 * extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension[0].valuePeriod.start = "2019-02-07T13:29:17-08:00"
@@ -99,7 +99,7 @@ Description: "Example of Patient for query response Bundle"
 * birthDate.extension[0].valuePeriod.start = "2018-10-17T03:29:17-08:00"
 
 Instance: Patient-2-Example
-InstanceOf: BCPatient
+InstanceOf: ClientRegistryPatient
 Description: "Example of Patient for query response Bundle"
 * extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension[0].valuePeriod.start = "2019-02-07T13:29:17-08:00"
@@ -119,7 +119,7 @@ Description: "Example of Patient for query response Bundle"
 * multipleBirthBoolean.extension[0].valuePeriod.start = "2019-10-17T03:29:17-08:00"
 
 Instance: Patient-GetDemographics-Example
-InstanceOf: BCPatient
+InstanceOf: ClientRegistryPatient
 Description: "Example of Patient for $GetDemographics operation response"
 * address[0] = Address-0-Example
 * telecom[0] = ContactPoint-Example-Home-Phone
@@ -145,7 +145,7 @@ Description: "Example of Patient for $GetDemographics operation response"
 * birthDate.extension.valuePeriod.start = "2018-03-17T03:29:17-08:00"
 
 Instance: Patient-AddReviseOrMergePatient-Response-Example
-InstanceOf: BCPatient
+InstanceOf: ClientRegistryPatient
 Description: "Example of Merge or Revise response Bundle with 4 different kinds of identifiers: SRI-PHN, SRI, SSRI and alternative."
 // Patient business date
 * extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
@@ -167,7 +167,7 @@ Description: "Example of Merge or Revise response Bundle with 4 different kinds 
 
 
 Instance: Patient-BabyBoy-Example
-InstanceOf: BCPatient
+InstanceOf: ClientRegistryPatient
 Description: "Example of Patient newborn for query response Bundle"
 * extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension[0].valuePeriod.start = "2019-11-12T13:29:17-08:00"
@@ -185,7 +185,7 @@ Description: "Example of Patient newborn for query response Bundle"
 
 
 Instance: Patient-BabyGirl-Example
-InstanceOf: BCPatient
+InstanceOf: ClientRegistryPatient
 Description: "Example of Patient newborn for query response Bundle"
 * extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension[0].valuePeriod.start = "2019-11-12T13:21:13-08:00"
@@ -203,7 +203,7 @@ Description: "Example of Patient newborn for query response Bundle"
 
 
 Instance: Patient-Mother-Example
-InstanceOf: BCPatient
+InstanceOf: ClientRegistryPatient
 Description: "Example of Patient for query response Bundle"
 * extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension[0].valuePeriod.start = "2019-02-07T13:29:17-08:00"
@@ -224,7 +224,7 @@ Description: "Example of Patient for query response Bundle"
 * link[1].type = #seealso
 
 Instance: Patient-GetDemographics-withHistory-Example
-InstanceOf: BCPatient
+InstanceOf: ClientRegistryPatient
 Description: "Example of Patient for $GetDemographics operation response"
 * address[0] = Address-0-Example-Valid
 * address[1] = Address-1-Example-Invalid

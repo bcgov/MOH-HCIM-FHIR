@@ -1,4 +1,4 @@
-Profile: BCPatient
+Profile: ClientRegistryPatient
 Parent: Patient
 Id: bc-patient
 Description: "General constraints on the Patient resource for use in the BC Client Registry project."
@@ -14,13 +14,13 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * link 0..* MS
 * name 1..* MS
 * name.use 0..1
-* name.use from BCNameUseVS (required)
+* name.use from NameUseVS (required)
 * name.use ^short = "usual | official | nickname"
 * name.extension contains SourceIDExtension named sourceID 0..1 MS
 * telecom 0..* MS
-* telecom.use from BCContactPointUseVS (required)
+* telecom.use from ContactPointUseVS (required)
 * telecom.use ^short = "home | work | mobile"
-* telecom.system from BCContactPointSystemVS (required)
+* telecom.system from ContactPointSystemVS (required)
 * telecom.system ^short = "phone | email"
 * telecom.extension contains SourceIDExtension named sourceID 0..1 MS
 * gender 1..1 MS
@@ -49,7 +49,7 @@ Title: "BC Merge Status Code"
 Description: "A code that represents the Merge status of the Patient."
 * value[x] 1..1 MS
 * value[x] only code
-* valueCode from BCMergeStatusVS (required)
+* valueCode from MergeStatusVS (required)
 
 Extension: ValidationStatusExtension
 Id: bc-validation-status-extension
@@ -57,7 +57,7 @@ Title: "BC Address Validation Status Code"
 Description: "A code that represents the validation status of the address"
 * value[x] 1..1 MS
 * value[x] only code
-* valueCode from BCAddressValidationVS (required)
+* valueCode from AddressValidationVS (required)
 
 Extension: GenderHistoryExtension
 Id: bc-gender-history-extension
@@ -116,6 +116,6 @@ Title: "BC Identifier Status"
 Description: "Identifier status."
 * value[x] 1..1 MS
 * value[x] only code
-* valueCode from BCIdentifierStatusVS (required)
+* valueCode from IdentifierStatusVS (required)
 * value[x] ^short = "merged | active"
 

@@ -1,5 +1,19 @@
+Instance: Bundle-MergePatient-Request-Example
+InstanceOf: MergeRequestBundle
+Description: "Example of $MergePatient operation."
+* type = #collection
+* timestamp = "2011-09-13T16:11:43.000-07:00"
+* link.relation = "self"
+* link.url = "http://hlth.gov.bc.ca/fhir/client/Patient/$MergePatient"
+
+* entry[parameters].resource = Parameters-MergePatient-TwoNonSurvivors-Example
+* entry[parameters].fullUrl = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f2222"
+
+* entry[patient].fullUrl = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f4444"
+* entry[patient].resource = Patient-MergePatient-Example
+
 Instance: Parameters-MergePatient-TwoNonSurvivors-Example
-InstanceOf: BCPatientBusinessParameters
+InstanceOf: MetadataParameters
 Description: "Example of $MergePatient operation."
 
 * parameter[messageId].name = "messageId"
@@ -16,11 +30,8 @@ Description: "Example of $MergePatient operation."
 * parameter[enterer].valueIdentifier.value = "nvida"
 * parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
 
-* parameter[patient].name = "patient"
-* parameter[patient].resource = Patient-MergePatient-Example
-
 Instance: Parameters-MergePatient-Response-Example
-InstanceOf: BCMetadataParameters
+InstanceOf: MetadataParameters
 Description: "Example of Merge response Metadata parameters"
 
 * parameter[messageId].name = "messageId"
@@ -37,7 +48,7 @@ Description: "Example of Merge response Metadata parameters"
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
 Instance: Bundle-MergePatient-Response-Example
-InstanceOf: BCMergeResponseBundle
+InstanceOf: MergeResponseBundle
 Description: "A sample MergePatient Operation response."
 * type = #collection
 * timestamp = "2011-09-13T16:11:43.000-07:00"

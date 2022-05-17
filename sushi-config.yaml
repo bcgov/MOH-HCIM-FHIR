@@ -68,24 +68,6 @@ groups:
       resources:
          - CapabilityStatement/bc-hcim-capability-statement-server
          - CapabilityStatement/bc-hcim-capability-statement-client
-   PatientProfile:
-      name: Patient Profile
-      description: The BC Patient profile
-      resources:
-         - StructureDefinition/bc-patient
-         - StructureDefinition/bc-patient-by-example
-   SupportingProfiles:
-      name: Supporting Profiles
-      description: Artifacts associated with resources that support Patient and Client Registry Operations
-      resources:
-         - StructureDefinition/bc-search-response-bundle
-         - StructureDefinition/bc-search-withEligibility-response-bundle
-         - StructureDefinition/bc-add-response-bundle 
-         - StructureDefinition/bc-revise-response-bundle 
-         - StructureDefinition/bc-partial-revise-response-bundle 
-         - StructureDefinition/bc-merge-response-bundle 
-         - StructureDefinition/bc-metadata-parameters
-         - StructureDefinition/bc-patient-business-parameters
    Operations:
       name: Operation Definitions
       description: The defined Operations
@@ -98,19 +80,38 @@ groups:
          - OperationDefinition/bc-patient-partial-revise
          - OperationDefinition/bc-patient-merge
          - OperationDefinition/bc-patient-notification
+   PatientProfile:
+      name: Patient Profile
+      description: The BC Patient profile
+      resources:
+         - StructureDefinition/bc-patient
+         - StructureDefinition/bc-patient-by-example
+   SupportingProfiles:
+      name: Supporting Profiles
+      description: Artifacts associated with resources that support Patient and Client Registry Operations
+      resources:
+         - StructureDefinition/bc-find-candidates-request-bundle
+         - StructureDefinition/bc-get-demographics-request-bundle
+         - StructureDefinition/bc-search-response-bundle
+         - StructureDefinition/bc-search-withEligibility-response-bundle
+         - StructureDefinition/bc-add-request-bundle 
+         - StructureDefinition/bc-add-response-bundle 
+         - StructureDefinition/bc-merge-request-bundle 
+         - StructureDefinition/bc-merge-response-bundle 
+         - StructureDefinition/bc-revise-request-bundle 
+         - StructureDefinition/bc-revise-response-bundle 
+         - StructureDefinition/bc-metadata-parameters
    RequestExamples:
       name: Request Examples
       description: A set of operation request examples
       resources:
-         - Parameters/Parameters-FindCandidatesByExample-Example
-         - Parameters/Parameters-FindCandidates-UsingMomsPHN-Example
-         - Parameters/Parameters-GetDemographics-Example
-         - Parameters/Parameters-GetDemographicsWithEligibility-Example
-         - Parameters/Parameters-RevisePatient-Example
-         - Parameters/Parameters-PartialRevisePatient-Example
-         - Parameters/Parameters-AddPatient-Example
-         - Parameters/Parameters-AddPatient-Newborn-Example
-         - Parameters/Parameters-MergePatient-TwoNonSurvivors-Example
+         - Bundle/Bundle-FindCandidatesByExample-Request-Example
+         - Bundle/Bundle-FindCandidates-UsingMomsPHN-Request-Example
+         - Bundle/Bundle-GetDemographics-Request-Example
+         - Bundle/Bundle-AddPatient-Request-Example
+         - Bundle/Bundle-MergePatient-Request-Example
+         - Bundle/Bundle-RevisePatient-Request-Example
+         - Bundle/Bundle-AddPatient-Newborn-Request-Example
    ResponseExamples:
       name: Response Examples
       description: A set of operation response examples
@@ -121,6 +122,6 @@ groups:
          - Bundle/Bundle-GetDemographicsWithEligibility-Response-Example
          - Bundle/Bundle-AddPatient-Response-Example
          - Bundle/Bundle-RevisePatient-Response-Example
-         - Bundle/Bundle-PartialRevisePatient-Response-Example
+         - Bundle/Bundle-UpdatePatient-Response-Example
          - Bundle/Bundle-MergePatient-Response-Example
 

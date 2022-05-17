@@ -40,13 +40,15 @@ These items are new to the Client Registry interface and subject to change as th
 Proposal | Description | 
 :--- | :--- |
 Add Patient interaction | Some of the features normally done through the Revise Patient interaction are now part of Add Patient.  Specifically, 'force create' and newborn interactions are now done with Add Patient. |
-Partial Revise interaction | A Partial Revise interaction allows users to logically delete, add or change part of the Patient resource.  This is useful when a stakeholder doesn't need (or persist) certain Patient attributes, but today, must query and then echo back these attributes in a Revise Patient interaction.  Knowledge of [FHIRPath](http://hl7.org/fhirpath/N1/) is required to use this interaction.  The exact patch operations allowed by the Client Registry is to be determined.|
+Update interaction | A Update interaction allows users to logically delete, add or change part of the Patient resource.  This is useful when a stakeholder doesn't need (or persist) certain Patient attributes, but today, must query and then echo back these attributes in a Revise Patient interaction.  Knowledge of [FHIRPath](http://hl7.org/fhirpath/N1/) is required to use this interaction.  The exact patch operations allowed by the Client Registry is to be determined.|
 Business dates feature | Attributes will have business dates that haven't been present in V3. | 
 Get Eligibility interaction | This guide includes sections describing a Get Eligibility interaction that is similar to V3.  However the Get Eligibility FHIR specification should be provided by Health Insurance BC (HIBC).  This guide speculates on how those requests and responses may be structured but the Client Registry _FHIR team still needs to consult with HIBC_.|
 
 #### Patient Resource
 
 All interactions will primarily use the Patient resource.  The Patient resource is ideal to represent clients as the Patient resource has many of the necessary attributes but will require some extensions.  Patients also are recommended for enterprise master patient indices by the HL7 group and is in a Normative state, i.e. stable and ready for implementation.  See [FHIR standards evolution](http://hl7.org/fhir/versions.html#std-process) for a description of Normative. 
+
+Two Patient profiles are used: the main profile [ClientRegistryPatient](StructureDefinition-bc-patient.html) and the search profile [PatientByExample](StructureDefinition-bc-patient-by-example.html).
 
 ##### Patient Extensions
 
@@ -70,6 +72,7 @@ Patient.telecom.use| Only _home_, _work_, _mobile_ from the ContactPointUse valu
 Patient.telecom.system| Only _phone_ or _email_ from the ContactPointSystem value set.
 Patient.address.type|Only _postal_ or _physical_ from the AddressType value set.
 Patient.identifier.system|See the section on [identifiers](identifiers.html)
+{:.grid}
 
 The following table maps the FHIR codes to Client Registry codes.
 
@@ -89,6 +92,7 @@ Gender | other | undifferentiated
 Gender | unknown | unknown
 Gender | male | male
 Gender | female | female
+{:.grid}
 
 #### FHIR Operations
 
@@ -96,18 +100,18 @@ Client Registry will use the FHIR Operations pattern to exchange information.  T
 
 Operations |
 :--- |
-https://..../$FindCandidates |
-https://..../$GetDemographics |
-https://..../$GetDemographics.withEligibility |
-https://..../$RevisePatient |
-https://..../$RevisePatient.Async |
-https://..../$PartialRevisePatient |
-https://..../$PartialRevisePatient.Async |
-https://..../$AddPatient |
-https://..../$AddPatient.Async |
-https://..../$MergePatient |
-https://..../$MergePatient.Async |
-https://..../$PatientNotification |
+https://..../Patient/$FindCandidates |
+https://..../Patient/$GetDemographics |
+https://..../Patient/$GetDemographics.withEligibility |
+https://..../Patient/$RevisePatient |
+https://..../Patient/$RevisePatient.Async |
+https://..../Patient/$UpdatePatient |
+https://..../Patient/$UpdatePatient.Async |
+https://..../Patient/$AddPatient |
+https://..../Patient/$AddPatient.Async |
+https://..../Patient/$MergePatient |
+https://..../Patient/$MergePatient.Async |
+https://..../Patient/$PatientNotification |
 
 The Async suffix informs the Client Registry FHIR server to perform the operation in an asynchronous manner.  The profiles and examples used in the Async versions of the Operations are identical to the synchronous Operations.
 
@@ -115,13 +119,25 @@ The Client Registry does not support any other interactions (Restful or otherwis
 
 ##### Requests
 
-The body of the request message will vary depending on the business context however all message bodies will consist of at least one Parameter.  The Parameter resource has two profiles defined in this guide.  See [Metadata Parameters](StructureDefinition-bc-metadata-parameters.html) and [Patient Business Parameters](StructureDefinition-bc-patient-business-parameters.html).  The Metadata Parameters profile is to store request/response metadata name-value pairs such as creation time and unique ID.  The Business Parameters profile includes the Metadata name-value pairs and in addition business values such as Patients and Operation flags.
+The body of the request message will vary depending on the business context however all message bodies will consist of a Bundle with at least a Parameters resource and may have Patient and RelatedPerson resources in other Bundle entries. 
 
-The diagram below shows how the Parameters resource is generalized to a Metadata Parameters and then further to a Business Parameters resource.  The children inherit from the parents.
+The Bundle profile for the request depends on the type of request.
 
-<span>
-	<img src="design_nestedParameters.png" height="350"/>
-</span>
+Operations | Request Profile | Response Profile |
+:---|:---|:---|
+$FindCandidates | [Find Candidates request profile](StructureDefinition-bc-find-candidates-request-bundle.html) | [Find Candidates response profile](StructureDefinition-bc-search-response-bundle.html) |
+$GetDemographics | [Get Demographics request profile](StructureDefinition-bc-get-demographics-request-bundle.html) | [Get Demographics response profile](StructureDefinition-bc-search-response-bundle.html) |
+$GetDemographics.withEligibility | [Get Demographics with Eligibility Bundle profile](StructureDefinition-bc-get-demographics-request-bundle.html) | [Get Demographics response profile](StructureDefinition-bc-search-response-bundle.html) |
+$RevisePatient | [Revise Patient request profile](StructureDefinition-bc-revise-request-bundle.html) | [Revise Patient response profile](StructureDefinition-bc-revise-response-bundle.html) |
+$RevisePatient.Async |  [Revise Patient request profile](StructureDefinition-bc-revise-request-bundle.html) | [Revise Patient response profile](StructureDefinition-bc-revise-response-bundle.html) |
+$UpdatePatient | [Update Patient operation](OperationDefinition-bc-patient-partial-revise.html) | [Update Patient response profile](StructureDefinition-bc-revise-response-bundle.html) (uses revise)|
+$UpdatePatient.Async |[Update Patient operation](OperationDefinition-bc-patient-partial-revise.html) | [Update Patient response profile](StructureDefinition-bc-revise-response-bundle.html) (uses revise)|
+$AddPatient | [Add Patient request profile](StructureDefinition-bc-add-request-bundle.html) | [Add Patient response profile](StructureDefinition-bc-add-response-bundle.html) |
+$AddPatient.Async | [Add Patient request profile](StructureDefinition-bc-add-request-bundle.html) | [Add Patient response profile](StructureDefinition-bc-add-response-bundle.html) |
+$MergePatient | [Merge Patient request profile](StructureDefinition-bc-merge-request-bundle.html) | [Merge Patient response profile](StructureDefinition-bc-merge-response-bundle.html) |
+$MergePatient.Async | [Merge Patient request profile](StructureDefinition-bc-merge-request-bundle.html) | [Merge Patient response profile](StructureDefinition-bc-merge-response-bundle.html) |
+$PatientNotification |  [Patient Notification request profile](StructureDefinition-bc-revise-request-bundle.html) |  N/A  |
+{:.grid}
 
 ##### Responses
 
@@ -144,6 +160,7 @@ create time|parameter.value[dateTime]|Creation date of message|both
 request message id|parameter.value[string]|Message (unique) id|OUT
 sender|parameter.value[Identifier]|Message sender|both
 enterer|parameter.value[Identifier]|UserId for message|both
+{:.grid}
 
 #### Searches
 There are three searches available for Client Registry FHIR, two flvours of Find Candidates and one Get Demographics.  The operations are:
@@ -153,6 +170,7 @@ Search Operations | Description
 https://…./$FindCandidates | Searching for Patients that match the search criteria
 https://…./$GetDemographics | Searching for a single Patient
 https://…./$GetDemographics.withEligibility | Searching for a single Patient and asking the Client Registry to also return the British Columbia medical insurance eligibility for this Patient
+{:.grid}
 
 Find Candidates may return zero or more candidates, while Get Demographics is designed to return zero or a single matching Patient.  These searches are expected to provide the required information to confirm a person's identify.
 
@@ -167,12 +185,13 @@ Add, Revise and Merge Operations | Description
 :--- | :---
 https://..../$RevisePatient | Updating a Patient
 https://..../$RevisePatient.Async | Updating a Patient asynchronously
-https://..../$PartialRevisePatient | Updating a specific Patient attribute
-https://..../$PartialRevisePatient.Async | Updating a specific Patient attribute asynchronously
+https://..../$UpdatePatient | Updating a specific Patient attribute
+https://..../$UpdatePatient.Async | Updating a specific Patient attribute asynchronously
 https://..../$AddPatient | For newborns or to 'force create' a Patient
 https://..../$AddPatient.Async | The asynchronous version of AddPatient
 https://..../$MergePatient | Resolving duplicate Patients records (same individual)
 https://..../$MergePatient.Async | Resolving duplicate Patients records (same individual) asynchronously
+{:.grid}
 
 These business transactions will allow the user to:
 - update demographic information, if the patient exists within the Client Registry; or

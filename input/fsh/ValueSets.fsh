@@ -1,4 +1,4 @@
-CodeSystem: BCMergeStatusCS
+CodeSystem: MergeStatusCS
 Id: bc-client-registry-merge-status-code-system
 Title: "BC Client Registry merge status."
 Description: "Codes used to describe the merge status."
@@ -6,13 +6,13 @@ Description: "Codes used to describe the merge status."
 * #obsolete "obsolete" "The merge obsoletes this Patient."
 * #cancelled "cancelled" "The merge cancels this Patient."
 
-ValueSet: BCMergeStatusVS
+ValueSet: MergeStatusVS
 Title: "BC Merge Status Value Set"
 Id: bc-merge-status-value-set
 Description: "BC Merge Status value set used to describe the merge status of a Patient."
-* codes from system BCMergeStatusCS
+* codes from system MergeStatusCS
 
-CodeSystem: BCAddressValidationCS
+CodeSystem: AddressValidationCS
 Id: bc-client-registry-address-validation-code-system
 Title: "BC Client Registry Address Validation Status Code"
 Description: "Codes used to define the address validation status."
@@ -21,19 +21,19 @@ Description: "Codes used to define the address validation status."
 * #invalid "invalid" "The address validation status is invalid and like not recognized by Canada Post."
 * #unknown "unknown" "The address validation status is unknown."
 
-CodeSystem: BCOperationOutcomeDetailsCS
+CodeSystem: OperationOutcomeDetailsCS
 Id: bc-operation-outcome-details-code-system
 Title: "BC Client Registry Operation Outcome details code system"
 Description: "BC Client Registry Operation Outcome details code system"
 * ^caseSensitive = true
 
-ValueSet: BCAddressValidationVS
+ValueSet: AddressValidationVS
 Title: "BC Address Validation Value Set"
 Id: bc-address-validation-value-set
 Description: "BC Address Validation value set used to describe the validation status of an address"
-* codes from system BCAddressValidationCS
+* codes from system AddressValidationCS
 
-CodeSystem: BCIdentifierStatusCS
+CodeSystem: IdentifierStatusCS
 Id: bc-identifier-status-code-system
 Title: "BC Client registry identifier status code system"
 Description: "BC Client registry identifier status code system."
@@ -41,13 +41,13 @@ Description: "BC Client registry identifier status code system."
 * #merged "merged" "The identifier has been merged."
 * #active "active" "The identifier is active."
 
-ValueSet: BCIdentifierStatusVS
+ValueSet: IdentifierStatusVS
 Title: "BC Identifier Status Value Set"
 Id: bc-identifier-status-value-set
 Description: "BC Identifier Status value set used to describe the status of an identifier."
-* codes from system BCIdentifierStatusCS
+* codes from system IdentifierStatusCS
 
-ValueSet: BCNameUseVS
+ValueSet: NameUseVS
 Title: "BC Name Use value set."
 Description: "BC Name Use value set, sliced to meet BC constraints."
 Id: bc-name-use-value-set
@@ -57,7 +57,7 @@ Id: bc-name-use-value-set
 * exclude http://hl7.org/fhir/name-use#old
 * exclude http://hl7.org/fhir/name-use#maiden
 
-ValueSet: BCContactPointUseVS
+ValueSet: ContactPointUseVS
 Title: "BC Contact Point Use Value Set"
 Description: "BC Contact Point Use value set, sliced to meet BC constraints."
 Id: bc-contact-point-use-value-set
@@ -65,7 +65,7 @@ Id: bc-contact-point-use-value-set
 * exclude http://hl7.org/fhir/contact-point-use#old
 * exclude http://hl7.org/fhir/contact-point-use#temp
 
-ValueSet: BCContactPointSystemVS
+ValueSet: ContactPointSystemVS
 Title: "BC Contact Point System Value Set"
 Description: "BC Contact Point System value set, sliced to meet BC constraints."
 Id: bc-contact-point-system-value-set
@@ -76,7 +76,7 @@ Id: bc-contact-point-system-value-set
 * exclude http://hl7.org/fhir/contact-point-system#sms
 * exclude http://hl7.org/fhir/contact-point-system#other
 
-//ValueSet: BCAddressUse
+//ValueSet: AddressUse
 //Title: "BC Address Use Value Set"
 //Description: "BC Address Use value set, sliced to meet BC constraints."
 //Id: bc-address-use-value-set
@@ -86,7 +86,7 @@ Id: bc-contact-point-system-value-set
 //* exclude http://hl7.org/fhir/address-use#old
 //* exclude http://hl7.org/fhir/address-use#billing
 
-ValueSet: BCAddressTypeVS
+ValueSet: AddressTypeVS
 Title: "BC Address Type Value Set"
 Description: "BC Address Type value set, sliced to meet BC constraints."
 Id: bc-address-type-value-set

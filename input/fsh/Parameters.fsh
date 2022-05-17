@@ -1,4 +1,4 @@
-Profile: BCMetadataParameters
+Profile: MetadataParameters
 Parent: Parameters
 Id: bc-metadata-parameters
 Description: "Parameters profile for BC meta data"
@@ -38,17 +38,17 @@ Description: "Parameters profile for BC meta data"
 * parameter[enterer].resource 0..0
 * parameter[enterer].part 0..0
 
-Profile: BCPatientBusinessParameters
-Parent: BCMetadataParameters
-Id: bc-patient-business-parameters
-Description: "Parameters extended from BCMetadataParameters for a Patient resource"
-* parameter ^slicing.discriminator.type = #value
-* parameter ^slicing.discriminator.path = "name"
-* parameter ^slicing.rules = #open
-* parameter ^slicing.description = "The specific parameters to specify BC Patient Business Parameters."
-* parameter contains patient 1..1 MS
-* parameter[patient].name MS
-* parameter[patient].name = "patient"
-* parameter[patient].value[x] 0..0
-* parameter[patient].resource 1..1 MS
-* parameter[patient].resource only BCPatient
+//Profile: PatientBusinessParameters
+//Parent: MetadataParameters
+//Id: bc-patient-business-parameters
+//Description: "Parameters extended from MetadataParameters for a Patient resource"
+//* parameter ^slicing.discriminator.type = #value
+//* parameter ^slicing.discriminator.path = "name"
+//* parameter ^slicing.rules = #open
+//* parameter ^slicing.description = "The specific parameters to specify BC Patient Business Parameters."
+//* parameter contains patient 1..1 MS
+//* parameter[patient].name MS
+//* parameter[patient].name = "patient"
+//* parameter[patient].value[x] 0..0
+//* parameter[patient].resource 1..1 MS
+//* parameter[patient].resource only ClientRegistryPatient

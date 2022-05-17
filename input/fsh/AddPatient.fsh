@@ -13,7 +13,7 @@ Usage: #definition
 * system = false
 * type = true
 * instance = false
-* inputProfile = Canonical(BCPatientBusinessParameters)
+* inputProfile = Canonical(AddRequestBundle)
 
 * parameter[0].name = #messageId
 * parameter[0].use = #in

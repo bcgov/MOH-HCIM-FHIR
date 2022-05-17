@@ -2,4 +2,10 @@
 
 ><span style="color:red">Note</span><br>Get Eligibility is a service provided by Health Insurance British Columbia.  The Client Registry, when receiving a Get Demographics with Eligibility (aka Batch) request, forwards the eligibility component on to a HIBC webservice and forwards the response back along with the Get Demographics results.  At this time the FHIR design for this operation is speculative and the Client Registry needs to work with HIBC in the future to come to an agreement on the final design.  At this time it is also speculation as to whether HIBC will even adopt FHIR.  The V3 Batch can continue to be used in the interim.
 
-The Get Demographics with Eligibility query is an Operation.  As such the request is a BCMetadataParameters resource where the request meta data and the search parameters are placed.  This a special case of Get Demographics that returns the British Columbia insurance eligibility of the Patient in addition to the Patient record using the Coverage resource.
+The Get Demographics with Eligibility query is an Operation.  
+
+This a special case of Get Demographics that returns the British Columbia insurance eligibility of the Patient in addition to the Patient record using the Coverage resource.
+
+The request is a Bundle with Resources for search parameters (MetadataParameters), a Patient to match against.
+
+The Patient Bundle entry is a [Patient by Example](StructureDefinition-bc-patient-by-example.html). The patient is a constrained Patient resource limited to the availabe search criteria. See the Get Demographics [search design](search.html#get-demographics-search) for more details on the critera.

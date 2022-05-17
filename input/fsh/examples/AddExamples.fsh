@@ -1,6 +1,20 @@
+Instance: Bundle-AddPatient-Request-Example
+InstanceOf: AddRequestBundle
+Description: "Example of $AddPatient operation."
+* type = #collection
+* timestamp = "2011-09-13T16:11:43.000-07:00"
+* link.relation = "self"
+* link.url = "http://hlth.gov.bc.ca/fhir/client/Patient/$AddPatient"
+
+* entry[parameters].resource = Parameters-AddPatient-Example
+* entry[parameters].fullUrl = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f2222"
+
+* entry[patient].fullUrl = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f4444"
+* entry[patient].resource = Patient-AddPatient-Example
+
 Instance: Parameters-AddPatient-Example
-InstanceOf: BCPatientBusinessParameters
-Description: "Example of $AddPatient operation where the Patient is new to the Client Registry."
+InstanceOf: MetadataParameters
+Description: "Example of $AddPatient parameters."
 
 * parameter[messageId].name = "messageId"
 * parameter[messageId].valueString = "98028b44-882a-4c72-8c92-b87d916147e1"
@@ -15,11 +29,27 @@ Description: "Example of $AddPatient operation where the Patient is new to the C
 * parameter[enterer].name = "enterer"
 * parameter[enterer].valueIdentifier.value = "klgodfre"
 * parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
-* parameter[patient].name = "patient"
-* parameter[patient].resource = Patient-AddPatient-Example
+
+Instance: Bundle-AddPatient-Newborn-Request-Example
+InstanceOf: AddRequestBundle
+Description: "Example of $AddPatient operation for a newborn."
+* type = #collection
+* timestamp = "2011-09-13T16:11:43.000-07:00"
+* link.relation = "self"
+* link.url = "http://hlth.gov.bc.ca/fhir/client/Patient/$AddPatient"
+
+* entry[parameters].resource = Parameters-AddPatient-Example
+* entry[parameters].fullUrl = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f2222"
+
+* entry[patient].fullUrl = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f4444"
+* entry[patient].resource = Patient-AddPatient-Newborn-Example
+
+//* entry[mothersPHN].fullUrl = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f5555"
+//* entry[mothersPHN].resource = RelatedPerson-Mother-Example
+
 
 Instance: Parameters-AddPatient-Newborn-Example
-InstanceOf: BCPatientBusinessParameters
+InstanceOf: MetadataParameters
 Description: "Example of $RevisePatient.Newborn operation where the Patient is a newborn."
 
 * parameter[messageId].name = "messageId"
@@ -36,14 +66,9 @@ Description: "Example of $RevisePatient.Newborn operation where the Patient is a
 * parameter[enterer].valueIdentifier.value = "klgodfre"
 * parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
 
-* parameter[patient].name = "patient"
-* parameter[patient].resource = Patient-AddPatient-Newborn-Example
-
-* parameter[5].name = "mothersPHN"
-* parameter[5].resource = RelatedPerson-Mother-Example
 
 Instance: Parameters-AddPatient-Response-Example
-InstanceOf: BCMetadataParameters
+InstanceOf: MetadataParameters
 Description: "Example of Add response Metadata parameters"
 
 * parameter[messageId].name = "messageId"
@@ -60,7 +85,7 @@ Description: "Example of Add response Metadata parameters"
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
 Instance: Bundle-AddPatient-Response-Example
-InstanceOf: BCAddResponseBundle
+InstanceOf: AddResponseBundle
 Description: "A sample AddPatient Operation response."
 * type = #collection
 * timestamp = "2011-09-13T16:11:43.000-07:00"

@@ -1,4 +1,4 @@
-Instance: BCHCIMCapabilityStatementClient
+Instance: HCIMCapabilityStatementClient
 InstanceOf: CapabilityStatement
 * text.status = #generated
 * text.div = "<div>
@@ -10,7 +10,7 @@ A Patient change notification is a FHIR Operation where the Client Registry send
 </p>
 
 <p>
-The following table describes the request and the four parameters; all are mandatory.  The Client Registry SHALL use the following IN parameters when sending a change notification.
+Each request is a RevisePatientBundle. The Bundle has two entries:  One with MetadataParamters for messageId, messageDate and sender, one for a ClientRegistryPatient profile.  The following table describes the request and the four parameters; all are mandatory.  The Client Registry SHALL use the following IN parameters when sending a change notification.
 </p>
 <table class=\"grid\">
 	<tr>
@@ -85,7 +85,7 @@ The following table describes the request and the four parameters; all are manda
 		<td></td>
 		<td>
 			<div>
-				<p>The Patient.</p>
+				<p>The Patient as ClientRegistryPatient.</p>
 			</div>
 		</td>
 	</tr>
@@ -100,7 +100,7 @@ The Client Registry expects a 200 HTTP status code in return when the request is
 
 * id = "bc-hcim-capability-statement-client"
 * version = "1.0"
-* name = "BCHCIMCapabilityStatement"
+* name = "HCIMCapabilityStatement"
 * title = "BC HCIM Capability Statement"
 * status = #draft
 * date = "2021-11-18"

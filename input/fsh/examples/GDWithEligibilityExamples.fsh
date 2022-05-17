@@ -1,5 +1,5 @@
 Instance: Parameters-GetDemographicsWithEligibility-Example
-InstanceOf: BCMetadataParameters
+InstanceOf: MetadataParameters
 Description: "Example of $GetDemographics.withEligibility operation"
 * parameter[messageId].name = "messageId"
 * parameter[messageId].valueString = "98028b44-882a-4c72-8c92-b87d916147e1"
@@ -23,7 +23,7 @@ Description: "Example of $GetDemographics.withEligibility operation"
 
 
 Instance: Parameters-GetDemographicsWithEligibility-Response-Example
-InstanceOf: BCMetadataParameters
+InstanceOf: MetadataParameters
 Description: "Example of $GetDemographics.withEligibility response Metadata parameters"
 
 * parameter[messageId].name = "messageId"
@@ -40,7 +40,7 @@ Description: "Example of $GetDemographics.withEligibility response Metadata para
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
 Instance: Bundle-GetDemographicsWithEligibility-Response-Example
-InstanceOf: BCSearchResponseBundle
+InstanceOf: SearchResponseBundle
 Description: "Example of $GetDemographics.withEligibility operation response Bundle"
 * type = #searchset
 * timestamp = "2011-09-07T12:18:23.000-07:00"

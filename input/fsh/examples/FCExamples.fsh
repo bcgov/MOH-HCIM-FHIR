@@ -1,26 +1,27 @@
-Instance: Parameters-FindCandidates-UsingMomsPHN-Example
-InstanceOf: BCMetadataParameters
-Description: "Example of $FindCandidates operation with mother's PHN"
+Instance: Bundle-FindCandidates-UsingMomsPHN-Request-Example
+InstanceOf: FindCandidatesRequestBundle
+Description: "Example of $FindCandidates operation with Mother's PHN."
+* type = #collection
+* timestamp = "2011-09-13T16:11:43.000-07:00"
+* link.relation = "self"
+* link.url = "http://hlth.gov.bc.ca/fhir/client/Patient/$FindCandidates"
 
-* parameter[messageId].name = "messageId"
-* parameter[messageId].valueString = "98028b44-882a-4c72-8c92-b87d916147e1"
+* entry[parameters].resource = Parameters-FindCandidates-Example
+* entry[parameters].fullUrl = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f2222"
 
-* parameter[messageDateTime].name = "messageDateTime"
-* parameter[messageDateTime].valueDateTime = "2015-02-07T13:28:17-08:00"
+* entry[relatedPerson].resource = MothersPHN-RelatedPerson-ForFC
+* entry[relatedPerson].fullUrl = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f1111" 
+Instance: MothersPHN-RelatedPerson-ForFC
+InstanceOf: RelatedPerson
+Description: "RelatedPerson, representing Mother, for Find Candidate Operation by mother's PHN"
+* identifier = IdentifierExampleMothersPHN
+* relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#NMTH
+* patient.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* patient.extension.valueCode = #unknown
 
-* parameter[sender].name = "sender"
-* parameter[sender].valueIdentifier.value = "VPP"
-* parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
-
-* parameter[3].name = "mothersPHN"
-* parameter[3].valueIdentifier.value = "9123123432"
-* parameter[3].valueIdentifier.use = #official
-* parameter[3].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"
-* parameter[3].valueIdentifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* parameter[3].valueIdentifier.type.coding.code = #JHN
 
 Instance: Parameters-FindCandidates-Response-Example
-InstanceOf: BCMetadataParameters
+InstanceOf: MetadataParameters
 Description: "Example of $FindCandidates response Metadata parameters"
 
 * parameter[messageId].name = "messageId"
@@ -38,7 +39,7 @@ Description: "Example of $FindCandidates response Metadata parameters"
 
 
 Instance: Bundle-FindCandidates-Response-Example
-InstanceOf: BCSearchResponseBundle
+InstanceOf: SearchResponseBundle
 Description: "Example of FindCandidates response Bundle.  Patient0 has PHN, alternate, SRI and SSRI identifier examples."
 * type = #searchset
 * timestamp = "2011-09-13T16:11:43.000-07:00"
@@ -49,7 +50,7 @@ Description: "Example of FindCandidates response Bundle.  Patient0 has PHN, alte
 * link.url = "http://hlth.gov.bc.ca/fhir/client/Patient/$FindCandidates"
 
 * entry[parameters].resource = Parameters-FindCandidates-Response-Example
-* entry[parameters].fullUrl = "61061501-9953-4fba-87fe-6ae30e79da33"
+* entry[parameters].fullUrl = "urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33"
 * entry[parameters].search.mode = #include
 
 * entry[operationOutcome].resource = OperationOutcome-Search-Example
@@ -72,7 +73,7 @@ Description: "Example of FindCandidates response Bundle.  Patient0 has PHN, alte
 * entry[4].fullUrl = "urn:uuid:072f48b7-43c5-4bec-8798-026cc432adcf"
 
 Instance: Bundle-FindCandidates-Response-MomsPHN-Example
-InstanceOf: BCSearchResponseBundle
+InstanceOf: SearchResponseBundle
 Description: "Example of FindCandidates with mother's PHN response Bundle."
 * type = #searchset
 * timestamp = "2011-09-13T16:11:43.000-07:00"
@@ -98,7 +99,6 @@ Description: "Example of FindCandidates with mother's PHN response Bundle."
 // and the related persons reference the boy and girl with a NCHILD code.
 //
 // bundle
-//	- mother patient
 //	- boy patient
 //	- girl patient
 //	- mother related person to boy
@@ -119,16 +119,10 @@ Description: "Example of FindCandidates with mother's PHN response Bundle."
 * entry[3].search.mode = #match
 * entry[3].fullUrl = "urn:uuid:90bf49dc-4590-4302-8e28-f02bb4deb353"
 
-// mother
-* entry[4].resource = Patient-Mother-Example
-* entry[4].search.score = 100
-* entry[4].search.mode = #match
-* entry[4].fullUrl = "urn:uuid:072f48b7-43c5-4bec-8798-026cc432adcf"
+* entry[4].resource = RelatedPerson-MotherOfBabyBoy-Example
+* entry[4].fullUrl = "urn:uuid:425b6c71-b198-4e75-b32c-1b3086935c6a"
+* entry[4].search.mode = #include
 
-* entry[5].resource = RelatedPerson-MotherOfBabyBoy-Example
-* entry[5].fullUrl = "urn:uuid:425b6c71-b198-4e75-b32c-1b3086935c6a"
+* entry[5].resource = RelatedPerson-MotherOfBabyGirl-Example
+* entry[5].fullUrl = "urn:uuid:4a288971-8af6-4d77-a071-4ba3a10042e5"
 * entry[5].search.mode = #include
-
-* entry[6].resource = RelatedPerson-MotherOfBabyGirl-Example
-* entry[6].fullUrl = "urn:uuid:4a288971-8af6-4d77-a071-4ba3a10042e5"
-* entry[6].search.mode = #include

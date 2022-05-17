@@ -13,7 +13,7 @@ Usage: #definition
 * system = false
 * type = true
 * instance = false
-* inputProfile = Canonical(BCPatientBusinessParameters)
+* inputProfile = Canonical(ReviseRequestBundle)
 
 * parameter[0].name = #messageId
 * parameter[0].use = #in
@@ -49,7 +49,7 @@ Usage: #definition
 * parameter[4].use = #in
 * parameter[4].min = 1
 * parameter[4].max = "1"
-* parameter[4].documentation = "The Patient."
+* parameter[4].documentation = "The Patient being revised."
 * parameter[4].type = #Patient
 
 

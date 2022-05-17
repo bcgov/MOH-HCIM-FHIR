@@ -17,7 +17,7 @@ The Mother's PHN can be used alone and will return the mother and children.  Oth
 
 The Find Candidates is a synchronous request-response transaction.
 
-Find Candidates uses a, search by example, p[attern.  I.e. the request will contain an example Patient with attributes like name, date of birth, etc populated.  HCIM will search for Patients similar to the Patient in the request.
+Find Candidates uses a, search by example, pattern.  I.e. the request will contain an example Patient with attributes like name, date of birth, etc populated.  HCIM will search for Patients similar to the Patient in the request.  If the desired the user can omit the Patient and use a RelatedPerson resource that represents the Mother and contains (in the identifier) the Mother's PHN.  More details are in the [request Bundle](StructureDefinition-bc-find-candidates-request-bundle.html) and [response Bundle](StructureDefinition-bc-search-response-bundle.html) definitions.
 
 ### Get Demographics Search
 
@@ -27,7 +27,10 @@ If the patient has a PHN or other identifier, a ‘get’ is performed against t
 
 Using Get Demographics is referred to as performing a “deterministic search”. In a deterministic search, the outcome of the search can be predicted. Get Demographics will return only one client record because there is only one client record that corresponds to the provided Identifier.
 
-The Get Demographics is a synchronous request-response transaction
+The Get Demographics is a synchronous request-response transaction.
+
+More details can be found in the [request Bundle](StructureDefinition-bc-get-demographics-request-bundle.html) and [response Bundle](StructureDefinition-bc-search-response-bundle.html) definitions.
+
 
 #### Get Demographics Search with Eligibility
 
@@ -35,10 +38,10 @@ There is a special operation when the user is requesting a GetDemographics searc
 
 ### FHIR Structure for Searches
 
-Below is a figure that shows the FHIR structure for the two searches.  The request is a Parameter resource and the response is a searchset Bundle with 0 or more Patients and one OperationOutcome.  The OperationOutcome is where you'll find warnings and errors regarding the search.
+Below is a figure that shows the FHIR structure for the two searches.  The request is a collection Bundle resource and the response is a searchset Bundle with 0 or more Patients and one OperationOutcome.  The OperationOutcome is where you'll find warnings and errors regarding the search.
 
 <span>
-	<img src="searches_fhir.png" height="275"/>
+	<img src="searches_fhir.png" height="300"/>
 </span>
 
 

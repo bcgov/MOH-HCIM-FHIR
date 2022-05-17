@@ -1,5 +1,5 @@
 Instance: Patient-By-Example-Example
-InstanceOf: BCPatientByExample
+InstanceOf: PatientByExample
 Description: "An example of a Patient used for Find Candidates query."
 * name.given = "Jill"
 * name.family = "Janey"
@@ -16,5 +16,10 @@ Description: "An example of a Patient used for Find Candidates query."
 * address.state = "BC"
 * address.country = "CA"
 * address.postalCode = "V8W 3P9"
+
+Instance: Patient-By-Example-GD-Example
+InstanceOf: PatientByExample
+Description: "An example of a Patient used for Get Demographics query."
+* identifier = IdentifierExampleMothersPHN
 
 
