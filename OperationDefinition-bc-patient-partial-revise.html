@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>FHIR.CA-BC.CLIENT\PartialRevisePatient - FHIR v4.0.1</title>
+    <title>FHIR.CA-BC.CLIENT\UpdatePatient - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -41,8 +41,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"15.19"}
-    h3,h4,h5,h6{--heading-prefix:"15.19"}</style>
+    <style type="text/css">h2{--heading-prefix:"15.9"}
+    h3,h4,h5,h6{--heading-prefix:"15.9"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Left logo - typically the publisher's logo - project or affiliate -->
@@ -152,7 +152,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>PartialRevisePatient</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>UpdatePatient</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -208,7 +208,7 @@
 
   <a name="root"> </a>
 
-  <h2 id="root">OperationDefinition: PartialRevisePatient
+  <h2 id="root">OperationDefinition: UpdatePatient
 
   </h2>
 
@@ -234,14 +234,14 @@
         
           Draft
           
-            as of 2022-04-20
+            as of 2022-05-17
           
         
       </td>
 
 
 
-      <td><i>Computable Name</i>: <span style="font-family: monospace;">PartialRevisePatient</span></td>
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">UpdatePatient</span></td>
     </tr>
 
 
@@ -262,7 +262,7 @@
   <p><span style="color:red">Note</span><br />This specification is currently published as a Draft Standard on the ministry GitHub and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.</p>
 </blockquote>
 
-<p>The Partial Revise Operation can be used to partially update a Patient record.  The standard IN parameters are required, see below, including a SRI.  The parameter that is used for the partial update is patchOperation which is a Parameters resource.  These Parameters should be populated following the <a href="https://www.hl7.org/fhir/http.html#patch">RESTful Patch description</a>.</p>
+<p>The Update Operation can be used to partially update a Patient record.  The standard IN parameters are required, see below, including a SRI.  The parameter that is used for the partial update is patchOperation which is a Parameters resource.  These Parameters should be populated following the <a href="https://www.hl7.org/fhir/http.html#patch">RESTful Patch description</a>.</p>
 
 
 </div>
@@ -277,7 +277,7 @@
   
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><h2>PartialRevisePatient</h2><p>OPERATION: PartialRevisePatient</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-partial-revise</pre><p>URL: [base]/Patient/$PartialRevisePatient</p><p>Input parameters Profile: <a href="StructureDefinition-bc-metadata-parameters.html">BCMetadataParameters</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Unique message ID.</p>
+  <div xmlns="http://www.w3.org/1999/xhtml"><h2>UpdatePatient</h2><p>OPERATION: UpdatePatient</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-partial-revise</pre><p>URL: [base]/Patient/$UpdatePatient</p><p>Input parameters Profile: <a href="StructureDefinition-bc-metadata-parameters.html">MetadataParameters</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Unique message ID.</p>
 </div></td></tr><tr><td>IN</td><td>messageDate</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Message date and time.</p>
 </div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>Requesting organization.</p>
 </div></td></tr><tr><td>IN</td><td>enterer</td><td>1..0</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>UserID of sender.</p>
@@ -314,7 +314,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 20, 2022 20:38+0000">2022-04-20</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 17, 2022 18:05+0000">2022-05-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

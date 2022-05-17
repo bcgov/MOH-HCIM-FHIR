@@ -11,7 +11,7 @@
   <name value="BCHealthClientIdentityManagement"/>
   <title value="BC Client Registry FHIR Implementation Guide"/>
   <status value="draft"/>
-  <date value="2022-04-20T20:38:51+00:00"/>
+  <date value="2022-05-17T18:05:03+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -31,6 +31,11 @@
   <packageId value="fhir.ca-bc.client"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
+  <dependsOn id="hl7tx">
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r4"/>
+    <version value="3.1.0"/>
+  </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
@@ -212,6 +217,10 @@
       <name value="Capability Statement"/>
       <description value="The Capability Statement for Client Registry"/>
     </grouping>
+    <grouping id="Operations">
+      <name value="Operation Definitions"/>
+      <description value="The defined Operations"/>
+    </grouping>
     <grouping id="PatientProfile">
       <name value="Patient Profile"/>
       <description value="The BC Patient profile"/>
@@ -219,10 +228,6 @@
     <grouping id="SupportingProfiles">
       <name value="Supporting Profiles"/>
       <description value="Artifacts associated with resources that support Patient and Client Registry Operations"/>
-    </grouping>
-    <grouping id="Operations">
-      <name value="Operation Definitions"/>
-      <description value="The defined Operations"/>
     </grouping>
     <grouping id="RequestExamples">
       <name value="Request Examples"/>
@@ -237,10 +242,70 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/bc-add-request-bundle"/>
+      </reference>
+      <name value="AddRequestBundle"/>
+      <description value="A Bundle that is used in the Client Registry for Add Patient requests."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="SupportingProfiles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/bc-add-response-bundle"/>
       </reference>
-      <name value="BCAddResponseBundle"/>
+      <name value="AddResponseBundle"/>
       <description value="A Bundle that is used in the Client Registry response to Add Patient requests."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="SupportingProfiles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/bc-patient"/>
+      </reference>
+      <name value="ClientRegistryPatient"/>
+      <description value="General constraints on the Patient resource for use in the BC Client Registry project."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="PatientProfile"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/bc-find-candidates-request-bundle"/>
+      </reference>
+      <name value="FindCandidatesRequestBundle"/>
+      <description value="A Bundle that is used in the Find Candidates Operation request."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="SupportingProfiles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/bc-get-demographics-request-bundle"/>
+      </reference>
+      <name value="GetDemographicsRequestBundle"/>
+      <description value="A Bundle that is used in the Get Demographics Operation request."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="SupportingProfiles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/bc-merge-request-bundle"/>
+      </reference>
+      <name value="MergeRequestBundle"/>
+      <description value="A Bundle that is used in the Client Registry for Add Patient requests."/>
       <exampleBoolean value="false"/>
       <groupingId value="SupportingProfiles"/>
     </resource>
@@ -251,7 +316,7 @@
       <reference>
         <reference value="StructureDefinition/bc-merge-response-bundle"/>
       </reference>
-      <name value="BCMergeResponseBundle"/>
+      <name value="MergeResponseBundle"/>
       <description value="A Bundle that is used in the Client Registry response to Merge Patient requests."/>
       <exampleBoolean value="false"/>
       <groupingId value="SupportingProfiles"/>
@@ -263,44 +328,8 @@
       <reference>
         <reference value="StructureDefinition/bc-metadata-parameters"/>
       </reference>
-      <name value="BCMetadataParameters"/>
+      <name value="MetadataParameters"/>
       <description value="Parameters profile for BC meta data"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="SupportingProfiles"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/bc-partial-revise-response-bundle"/>
-      </reference>
-      <name value="BCPartialReviseResponseBundle"/>
-      <description value="A Bundle that is used in the Client Registry response to Partial Revise Patient requests."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="SupportingProfiles"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/bc-patient"/>
-      </reference>
-      <name value="BCPatient"/>
-      <description value="General constraints on the Patient resource for use in the BC Client Registry project."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="PatientProfile"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/bc-patient-business-parameters"/>
-      </reference>
-      <name value="BCPatientBusinessParameters"/>
-      <description value="Parameters extended from BCMetadataParameters for a Patient resource"/>
       <exampleBoolean value="false"/>
       <groupingId value="SupportingProfiles"/>
     </resource>
@@ -311,8 +340,8 @@
       <reference>
         <reference value="StructureDefinition/bc-patient-by-example"/>
       </reference>
-      <name value="BCPatientByExample"/>
-      <description value="General constraints on the Patient resource for use in the BC Client Registry project for Find Candidates queries."/>
+      <name value="PatientByExample"/>
+      <description value="General constraints on the Patient resource for use in the BC Client Registry project for queries."/>
       <exampleBoolean value="false"/>
       <groupingId value="PatientProfile"/>
     </resource>
@@ -321,9 +350,21 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/bc-revise-request-bundle"/>
+      </reference>
+      <name value="ReviseRequestBundle"/>
+      <description value="A Bundle that is used in the Client Registry for Revise Patient requests.  This is also used by Patient Notitifications."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="SupportingProfiles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/bc-revise-response-bundle"/>
       </reference>
-      <name value="BCReviseResponseBundle"/>
+      <name value="ReviseResponseBundle"/>
       <description value="A Bundle that is used in the Client Registry response to Revise Patient requests."/>
       <exampleBoolean value="false"/>
       <groupingId value="SupportingProfiles"/>
@@ -335,7 +376,7 @@
       <reference>
         <reference value="StructureDefinition/bc-search-response-bundle"/>
       </reference>
-      <name value="BCSearchResponseBundle"/>
+      <name value="SearchResponseBundle"/>
       <description value="A Bundle that is used in the Client Registry response to Find Candidates and Get Demographics queries."/>
       <exampleBoolean value="false"/>
       <groupingId value="SupportingProfiles"/>
@@ -347,7 +388,7 @@
       <reference>
         <reference value="StructureDefinition/bc-search-withEligibility-response-bundle"/>
       </reference>
-      <name value="BCSearchWithEligibilityResponseBundle"/>
+      <name value="SearchWithEligibilityResponseBundle"/>
       <description value="A Bundle that is used in the Client Registry response to Get Demographics with Eligibility queries."/>
       <exampleBoolean value="false"/>
       <groupingId value="SupportingProfiles"/>
@@ -599,6 +640,30 @@
         <valueString value="Bundle"/>
       </extension>
       <reference>
+        <reference value="Bundle/Bundle-AddPatient-Newborn-Request-Example"/>
+      </reference>
+      <name value="Bundle-AddPatient-Newborn-Request-Example"/>
+      <description value="Example of $AddPatient operation for a newborn."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle"/>
+      <groupingId value="RequestExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Bundle-AddPatient-Request-Example"/>
+      </reference>
+      <name value="Bundle-AddPatient-Request-Example"/>
+      <description value="Example of $AddPatient operation."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle"/>
+      <groupingId value="RequestExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
         <reference value="Bundle/Bundle-AddPatient-Response-Example"/>
       </reference>
       <name value="Bundle-AddPatient-Response-Example"/>
@@ -635,6 +700,42 @@
         <valueString value="Bundle"/>
       </extension>
       <reference>
+        <reference value="Bundle/Bundle-FindCandidates-UsingMomsPHN-Request-Example"/>
+      </reference>
+      <name value="Bundle-FindCandidates-UsingMomsPHN-Request-Example"/>
+      <description value="Example of $FindCandidates operation with Mother's PHN."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle"/>
+      <groupingId value="RequestExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Bundle-FindCandidatesByExample-Request-Example"/>
+      </reference>
+      <name value="Bundle-FindCandidatesByExample-Request-Example"/>
+      <description value="Example of $FindCandidates operation"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle"/>
+      <groupingId value="RequestExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Bundle-GetDemographics-Request-Example"/>
+      </reference>
+      <name value="Bundle-GetDemographics-Request-Example"/>
+      <description value="Example of $GetDemographics operation"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle"/>
+      <groupingId value="RequestExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
         <reference value="Bundle/Bundle-GetDemographics-Response-Example"/>
       </reference>
       <name value="Bundle-GetDemographics-Response-Example"/>
@@ -659,6 +760,18 @@
         <valueString value="Bundle"/>
       </extension>
       <reference>
+        <reference value="Bundle/Bundle-MergePatient-Request-Example"/>
+      </reference>
+      <name value="Bundle-MergePatient-Request-Example"/>
+      <description value="Example of $MergePatient operation."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle"/>
+      <groupingId value="RequestExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
         <reference value="Bundle/Bundle-MergePatient-Response-Example"/>
       </reference>
       <name value="Bundle-MergePatient-Response-Example"/>
@@ -671,12 +784,12 @@
         <valueString value="Bundle"/>
       </extension>
       <reference>
-        <reference value="Bundle/Bundle-PartialRevisePatient-Response-Example"/>
+        <reference value="Bundle/Bundle-RevisePatient-Request-Example"/>
       </reference>
-      <name value="Bundle-PartialRevisePatient-Response-Example"/>
-      <description value="A sample PartialRevisePatient Operation response."/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-partial-revise-response-bundle"/>
-      <groupingId value="ResponseExamples"/>
+      <name value="Bundle-RevisePatient-Request-Example"/>
+      <description value="Example of $RevisePatient operation."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle"/>
+      <groupingId value="RequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -687,6 +800,18 @@
       </reference>
       <name value="Bundle-RevisePatient-Response-Example"/>
       <description value="A sample RevisePatient Operation response."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle"/>
+      <groupingId value="ResponseExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Bundle-UpdatePatient-Response-Example"/>
+      </reference>
+      <name value="Bundle-UpdatePatient-Response-Example"/>
+      <description value="A sample UpdatePatient Operation response."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle"/>
       <groupingId value="ResponseExamples"/>
     </resource>
@@ -710,6 +835,17 @@
       </reference>
       <name value="Coverage-InActive-Example"/>
       <description value="Example of Get Eligibility response, the patient is not eligible."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="RelatedPerson"/>
+      </extension>
+      <reference>
+        <reference value="RelatedPerson/MothersPHN-RelatedPerson-ForFC"/>
+      </reference>
+      <name value="MothersPHN-RelatedPerson-ForFC"/>
+      <description value="RelatedPerson, representing Mother, for Find Candidate Operation by mother's PHN"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -742,9 +878,8 @@
         <reference value="Parameters/Parameters-AddPatient-Example"/>
       </reference>
       <name value="Parameters-AddPatient-Example"/>
-      <description value="Example of $AddPatient operation where the Patient is new to the Client Registry."/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters"/>
-      <groupingId value="RequestExamples"/>
+      <description value="Example of $AddPatient parameters."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -755,8 +890,7 @@
       </reference>
       <name value="Parameters-AddPatient-Newborn-Example"/>
       <description value="Example of $RevisePatient.Newborn operation where the Patient is a newborn."/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters"/>
-      <groupingId value="RequestExamples"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -785,6 +919,17 @@
         <valueString value="Parameters"/>
       </extension>
       <reference>
+        <reference value="Parameters/Parameters-FindCandidates-Example"/>
+      </reference>
+      <name value="Parameters-FindCandidates-Example"/>
+      <description value="Example of $FindCandidates search parameters."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
         <reference value="Parameters/Parameters-FindCandidates-Response-Example"/>
       </reference>
       <name value="Parameters-FindCandidates-Response-Example"/>
@@ -796,36 +941,11 @@
         <valueString value="Parameters"/>
       </extension>
       <reference>
-        <reference value="Parameters/Parameters-FindCandidates-UsingMomsPHN-Example"/>
-      </reference>
-      <name value="Parameters-FindCandidates-UsingMomsPHN-Example"/>
-      <description value="Example of $FindCandidates operation with mother's PHN"/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
-      <groupingId value="RequestExamples"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Parameters"/>
-      </extension>
-      <reference>
-        <reference value="Parameters/Parameters-FindCandidatesByExample-Example"/>
-      </reference>
-      <name value="Parameters-FindCandidatesByExample-Example"/>
-      <description value="Example of $FindCandidates operation"/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
-      <groupingId value="RequestExamples"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Parameters"/>
-      </extension>
-      <reference>
         <reference value="Parameters/Parameters-GetDemographics-Example"/>
       </reference>
       <name value="Parameters-GetDemographics-Example"/>
       <description value="Example of $GetDemographics operation"/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
-      <groupingId value="RequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -859,7 +979,6 @@
       <name value="Parameters-GetDemographicsWithEligibility-Example"/>
       <description value="Example of $GetDemographics.withEligibility operation"/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
-      <groupingId value="RequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -892,30 +1011,6 @@
       </reference>
       <name value="Parameters-MergePatient-TwoNonSurvivors-Example"/>
       <description value="Example of $MergePatient operation."/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters"/>
-      <groupingId value="RequestExamples"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Parameters"/>
-      </extension>
-      <reference>
-        <reference value="Parameters/Parameters-PartialRevisePatient-Example"/>
-      </reference>
-      <name value="Parameters-PartialRevisePatient-Example"/>
-      <description value="Example of $RevisePatient operation that updates an existing Patient"/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
-      <groupingId value="RequestExamples"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Parameters"/>
-      </extension>
-      <reference>
-        <reference value="Parameters/Parameters-PartialRevisePatient-Response-Example"/>
-      </reference>
-      <name value="Parameters-PartialRevisePatient-Response-Example"/>
-      <description value="Example of PartialRevise response Metadata parameters"/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
     </resource>
     <resource>
@@ -927,8 +1022,7 @@
       </reference>
       <name value="Parameters-RevisePatient-Example"/>
       <description value="Example of $RevisePatient operation that updates an existing Patient"/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters"/>
-      <groupingId value="RequestExamples"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -939,6 +1033,28 @@
       </reference>
       <name value="Parameters-RevisePatient-Response-Example"/>
       <description value="Example of Revise response Metadata parameters"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/Parameters-UpdatePatient-Example"/>
+      </reference>
+      <name value="Parameters-UpdatePatient-Example"/>
+      <description value="Example of $RevisePatient operation that updates an existing Patient"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/Parameters-UpdatePatient-Response-Example"/>
+      </reference>
+      <name value="Parameters-UpdatePatient-Response-Example"/>
+      <description value="Example of Update response Metadata parameters"/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
     </resource>
     <resource>
@@ -1045,6 +1161,17 @@
         <valueString value="Patient"/>
       </extension>
       <reference>
+        <reference value="Patient/Patient-By-Example-GD-Example"/>
+      </reference>
+      <name value="Patient-By-Example-GD-Example"/>
+      <description value="An example of a Patient used for Get Demographics query."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
         <reference value="Patient/Patient-GetDemographics-Example"/>
       </reference>
       <name value="Patient-GetDemographics-Example"/>
@@ -1071,7 +1198,7 @@
       </reference>
       <name value="Patient-Identifier-Examples"/>
       <description value="An example of a Patient with descriptive Identifier."/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1146,7 +1273,7 @@
       <reference>
         <reference value="CapabilityStatement/bc-hcim-capability-statement-client"/>
       </reference>
-      <name value="BCHCIMCapabilityStatementClient"/>
+      <name value="HCIMCapabilityStatementClient"/>
       <description value="This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a client. I.e. sending notifications."/>
       <exampleBoolean value="true"/>
       <groupingId value="CapabilityStatement"/>
@@ -1158,7 +1285,7 @@
       <reference>
         <reference value="CapabilityStatement/bc-hcim-capability-statement-server"/>
       </reference>
-      <name value="BCHCIMCapabilityStatementServer"/>
+      <name value="HCIMCapabilityStatementServer"/>
       <description value="This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a server."/>
       <exampleBoolean value="true"/>
       <groupingId value="CapabilityStatement"/>
@@ -1242,7 +1369,7 @@
       <reference>
         <reference value="OperationDefinition/bc-patient-partial-revise"/>
       </reference>
-      <name value="PartialRevisePatient"/>
+      <name value="UpdatePatient"/>
       <description value="This operation is used to revise a patient's demographics, applied to only specific Patient attributes."/>
       <exampleBoolean value="false"/>
       <groupingId value="Operations"/>

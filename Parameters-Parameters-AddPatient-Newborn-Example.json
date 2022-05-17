@@ -3,7 +3,7 @@
   "id": "Parameters-AddPatient-Newborn-Example",
   "meta": {
     "profile": [
-      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters"
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"
     ]
   },
   "parameter": [
@@ -23,117 +23,10 @@
       }
     },
     {
-      "name": "patient",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "Patient-AddPatient-Newborn-Example",
-        "meta": {
-          "profile": [
-            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
-          ]
-        },
-        "identifier": [
-          {
-            "extension": [
-              {
-                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
-                "valueCode": "active"
-              }
-            ],
-            "use": "official",
-            "type": {
-              "coding": [
-                {
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                  "code": "AN"
-                }
-              ]
-            },
-            "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
-            "value": "123345654",
-            "period": {
-              "start": "2000-01-01T11:11:11+08:00"
-            }
-          }
-        ],
-        "name": [
-          {
-            "use": "usual",
-            "family": "Doe",
-            "given": [
-              "Jane"
-            ],
-            "period": {
-              "start": "2018-04-05"
-            }
-          }
-        ],
-        "telecom": [
-          {
-            "system": "phone",
-            "value": "2505554848",
-            "use": "home",
-            "period": {
-              "start": "2000-01-02T10:10:10-08:00"
-            }
-          }
-        ],
-        "gender": "unknown",
-        "birthDate": "2021-11-02",
-        "address": [
-          {
-            "extension": [
-              {
-                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
-                "valueCode": "valid"
-              }
-            ],
-            "type": "physical",
-            "line": [
-              "721 FRONT ST"
-            ],
-            "city": "VICTORIA",
-            "state": "BC",
-            "postalCode": "V9A3Y3",
-            "country": "CA"
-          }
-        ]
-      }
-    },
-    {
       "name": "enterer",
       "valueIdentifier": {
         "system": "http://hlth.gov.bc.ca/fhir/client/bc-user",
         "value": "klgodfre"
-      }
-    },
-    {
-      "name": "mothersPHN",
-      "resource": {
-        "resourceType": "RelatedPerson",
-        "id": "RelatedPerson-Mother-Example",
-        "identifier": [
-          {
-            "system": "http://hlth.gov.bc.ca/fhir/client/bc-sri",
-            "value": "9736546293"
-          }
-        ],
-        "patient": {
-          "identifier": {
-            "system": "http://hlth.gov.bc.ca/fhir/client/bc-sri",
-            "value": "IHA2234"
-          }
-        },
-        "relationship": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-                "code": "MTH"
-              }
-            ]
-          }
-        ]
       }
     }
   ]

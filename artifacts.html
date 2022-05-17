@@ -187,13 +187,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#1">Capability Statement</a>
       </li>
       <li>
-         <a href="#2">Patient Profile</a>
+         <a href="#2">Operation Definitions</a>
       </li>
       <li>
-         <a href="#3">Supporting Profiles</a>
+         <a href="#3">Patient Profile</a>
       </li>
       <li>
-         <a href="#4">Operation Definitions</a>
+         <a href="#4">Supporting Profiles</a>
       </li>
       <li>
          <a href="#5">Request Examples</a>
@@ -231,7 +231,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
                <td style="column-width:30%">
                   <a href="CapabilityStatement-bc-hcim-capability-statement-client.html"
-                     title="CapabilityStatement/bc-hcim-capability-statement-client">BCHCIMCapabilityStatementClient</a>
+                     title="CapabilityStatement/bc-hcim-capability-statement-client">HCIMCapabilityStatementClient</a>
                </td>
                <td>
 <p>This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a client. I.e. sending notifications.</p>
@@ -240,7 +240,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
                <td style="column-width:30%">
                   <a href="CapabilityStatement-bc-hcim-capability-statement-server.html"
-                     title="CapabilityStatement/bc-hcim-capability-statement-server">BCHCIMCapabilityStatementServer</a>
+                     title="CapabilityStatement/bc-hcim-capability-statement-server">HCIMCapabilityStatementServer</a>
                </td>
                <td>
 <p>This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a server.</p>
@@ -250,120 +250,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </table>
    </p>
    <a name="2"> </a>
-   <h3>Patient Profile </h3>
-   <p>
-    <p>The BC Patient profile</p>
-</p>
-   <p>
-      <table class="grid">
-         <col style="width:20%"/>
-         <tbody>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-patient.html"
-                     title="StructureDefinition/bc-patient">BCPatient</a>
-               </td>
-               <td>
-<p>General constraints on the Patient resource for use in the BC Client Registry project.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-patient-by-example.html"
-                     title="StructureDefinition/bc-patient-by-example">BCPatientByExample</a>
-               </td>
-               <td>
-<p>General constraints on the Patient resource for use in the BC Client Registry project for Find Candidates queries.</p>
-</td>
-            </tr>
-         </tbody>
-      </table>
-   </p>
-   <a name="3"> </a>
-   <h3>Supporting Profiles </h3>
-   <p>
-    <p>Artifacts associated with resources that support Patient and Client Registry Operations</p>
-</p>
-   <p>
-      <table class="grid">
-         <col style="width:20%"/>
-         <tbody>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-add-response-bundle.html"
-                     title="StructureDefinition/bc-add-response-bundle">BCAddResponseBundle</a>
-               </td>
-               <td>
-<p>A Bundle that is used in the Client Registry response to Add Patient requests.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-merge-response-bundle.html"
-                     title="StructureDefinition/bc-merge-response-bundle">BCMergeResponseBundle</a>
-               </td>
-               <td>
-<p>A Bundle that is used in the Client Registry response to Merge Patient requests.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-metadata-parameters.html"
-                     title="StructureDefinition/bc-metadata-parameters">BCMetadataParameters</a>
-               </td>
-               <td>
-<p>Parameters profile for BC meta data</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-partial-revise-response-bundle.html"
-                     title="StructureDefinition/bc-partial-revise-response-bundle">BCPartialReviseResponseBundle</a>
-               </td>
-               <td>
-<p>A Bundle that is used in the Client Registry response to Partial Revise Patient requests.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-patient-business-parameters.html"
-                     title="StructureDefinition/bc-patient-business-parameters">BCPatientBusinessParameters</a>
-               </td>
-               <td>
-<p>Parameters extended from BCMetadataParameters for a Patient resource</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-revise-response-bundle.html"
-                     title="StructureDefinition/bc-revise-response-bundle">BCReviseResponseBundle</a>
-               </td>
-               <td>
-<p>A Bundle that is used in the Client Registry response to Revise Patient requests.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-search-response-bundle.html"
-                     title="StructureDefinition/bc-search-response-bundle">BCSearchResponseBundle</a>
-               </td>
-               <td>
-<p>A Bundle that is used in the Client Registry response to Find Candidates and Get Demographics queries.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-search-withEligibility-response-bundle.html"
-                     title="StructureDefinition/bc-search-withEligibility-response-bundle">BCSearchWithEligibilityResponseBundle</a>
-               </td>
-               <td>
-<p>A Bundle that is used in the Client Registry response to Get Demographics with Eligibility queries.</p>
-</td>
-            </tr>
-         </tbody>
-      </table>
-   </p>
-   <a name="4"> </a>
    <h3>Operation Definitions </h3>
    <p>
     <p>The defined Operations</p>
@@ -429,7 +315,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
                <td style="column-width:30%">
                   <a href="OperationDefinition-bc-patient-partial-revise.html"
-                     title="OperationDefinition/bc-patient-partial-revise">PartialRevisePatient</a>
+                     title="OperationDefinition/bc-patient-partial-revise">UpdatePatient</a>
                </td>
                <td>
 <p>This operation is used to revise a patient’s demographics, applied to only specific Patient attributes.</p>
@@ -447,6 +333,147 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tbody>
       </table>
    </p>
+   <a name="3"> </a>
+   <h3>Patient Profile </h3>
+   <p>
+    <p>The BC Patient profile</p>
+</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-patient.html"
+                     title="StructureDefinition/bc-patient">ClientRegistryPatient</a>
+               </td>
+               <td>
+<p>General constraints on the Patient resource for use in the BC Client Registry project.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-patient-by-example.html"
+                     title="StructureDefinition/bc-patient-by-example">PatientByExample</a>
+               </td>
+               <td>
+<p>General constraints on the Patient resource for use in the BC Client Registry project for queries.</p>
+</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+   <a name="4"> </a>
+   <h3>Supporting Profiles </h3>
+   <p>
+    <p>Artifacts associated with resources that support Patient and Client Registry Operations</p>
+</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-add-request-bundle.html"
+                     title="StructureDefinition/bc-add-request-bundle">AddRequestBundle</a>
+               </td>
+               <td>
+<p>A Bundle that is used in the Client Registry for Add Patient requests.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-add-response-bundle.html"
+                     title="StructureDefinition/bc-add-response-bundle">AddResponseBundle</a>
+               </td>
+               <td>
+<p>A Bundle that is used in the Client Registry response to Add Patient requests.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-find-candidates-request-bundle.html"
+                     title="StructureDefinition/bc-find-candidates-request-bundle">FindCandidatesRequestBundle</a>
+               </td>
+               <td>
+<p>A Bundle that is used in the Find Candidates Operation request.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-get-demographics-request-bundle.html"
+                     title="StructureDefinition/bc-get-demographics-request-bundle">GetDemographicsRequestBundle</a>
+               </td>
+               <td>
+<p>A Bundle that is used in the Get Demographics Operation request.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-merge-request-bundle.html"
+                     title="StructureDefinition/bc-merge-request-bundle">MergeRequestBundle</a>
+               </td>
+               <td>
+<p>A Bundle that is used in the Client Registry for Add Patient requests.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-merge-response-bundle.html"
+                     title="StructureDefinition/bc-merge-response-bundle">MergeResponseBundle</a>
+               </td>
+               <td>
+<p>A Bundle that is used in the Client Registry response to Merge Patient requests.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-metadata-parameters.html"
+                     title="StructureDefinition/bc-metadata-parameters">MetadataParameters</a>
+               </td>
+               <td>
+<p>Parameters profile for BC meta data</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-revise-request-bundle.html"
+                     title="StructureDefinition/bc-revise-request-bundle">ReviseRequestBundle</a>
+               </td>
+               <td>
+<p>A Bundle that is used in the Client Registry for Revise Patient requests.  This is also used by Patient Notitifications.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-revise-response-bundle.html"
+                     title="StructureDefinition/bc-revise-response-bundle">ReviseResponseBundle</a>
+               </td>
+               <td>
+<p>A Bundle that is used in the Client Registry response to Revise Patient requests.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-search-response-bundle.html"
+                     title="StructureDefinition/bc-search-response-bundle">SearchResponseBundle</a>
+               </td>
+               <td>
+<p>A Bundle that is used in the Client Registry response to Find Candidates and Get Demographics queries.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-search-withEligibility-response-bundle.html"
+                     title="StructureDefinition/bc-search-withEligibility-response-bundle">SearchWithEligibilityResponseBundle</a>
+               </td>
+               <td>
+<p>A Bundle that is used in the Client Registry response to Get Demographics with Eligibility queries.</p>
+</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
    <a name="5"> </a>
    <h3>Request Examples </h3>
    <p>
@@ -458,35 +485,35 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tbody>
             <tr>
                <td style="column-width:30%">
-                  <a href="Parameters-Parameters-AddPatient-Example.html"
-                     title="Parameters/Parameters-AddPatient-Example">Parameters-AddPatient-Example</a>
+                  <a href="Bundle-Bundle-AddPatient-Newborn-Request-Example.html"
+                     title="Bundle/Bundle-AddPatient-Newborn-Request-Example">Bundle-AddPatient-Newborn-Request-Example</a>
                </td>
                <td>
-<p>Example of $AddPatient operation where the Patient is new to the Client Registry.</p>
+<p>Example of $AddPatient operation for a newborn.</p>
 </td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Parameters-Parameters-AddPatient-Newborn-Example.html"
-                     title="Parameters/Parameters-AddPatient-Newborn-Example">Parameters-AddPatient-Newborn-Example</a>
+                  <a href="Bundle-Bundle-AddPatient-Request-Example.html"
+                     title="Bundle/Bundle-AddPatient-Request-Example">Bundle-AddPatient-Request-Example</a>
                </td>
                <td>
-<p>Example of $RevisePatient.Newborn operation where the Patient is a newborn.</p>
+<p>Example of $AddPatient operation.</p>
 </td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Parameters-Parameters-FindCandidates-UsingMomsPHN-Example.html"
-                     title="Parameters/Parameters-FindCandidates-UsingMomsPHN-Example">Parameters-FindCandidates-UsingMomsPHN-Example</a>
+                  <a href="Bundle-Bundle-FindCandidates-UsingMomsPHN-Request-Example.html"
+                     title="Bundle/Bundle-FindCandidates-UsingMomsPHN-Request-Example">Bundle-FindCandidates-UsingMomsPHN-Request-Example</a>
                </td>
                <td>
-<p>Example of $FindCandidates operation with mother’s PHN</p>
+<p>Example of $FindCandidates operation with Mother’s PHN.</p>
 </td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Parameters-Parameters-FindCandidatesByExample-Example.html"
-                     title="Parameters/Parameters-FindCandidatesByExample-Example">Parameters-FindCandidatesByExample-Example</a>
+                  <a href="Bundle-Bundle-FindCandidatesByExample-Request-Example.html"
+                     title="Bundle/Bundle-FindCandidatesByExample-Request-Example">Bundle-FindCandidatesByExample-Request-Example</a>
                </td>
                <td>
 <p>Example of $FindCandidates operation</p>
@@ -494,8 +521,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Parameters-Parameters-GetDemographics-Example.html"
-                     title="Parameters/Parameters-GetDemographics-Example">Parameters-GetDemographics-Example</a>
+                  <a href="Bundle-Bundle-GetDemographics-Request-Example.html"
+                     title="Bundle/Bundle-GetDemographics-Request-Example">Bundle-GetDemographics-Request-Example</a>
                </td>
                <td>
 <p>Example of $GetDemographics operation</p>
@@ -503,17 +530,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Parameters-Parameters-GetDemographicsWithEligibility-Example.html"
-                     title="Parameters/Parameters-GetDemographicsWithEligibility-Example">Parameters-GetDemographicsWithEligibility-Example</a>
-               </td>
-               <td>
-<p>Example of $GetDemographics.withEligibility operation</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Parameters-Parameters-MergePatient-TwoNonSurvivors-Example.html"
-                     title="Parameters/Parameters-MergePatient-TwoNonSurvivors-Example">Parameters-MergePatient-TwoNonSurvivors-Example</a>
+                  <a href="Bundle-Bundle-MergePatient-Request-Example.html"
+                     title="Bundle/Bundle-MergePatient-Request-Example">Bundle-MergePatient-Request-Example</a>
                </td>
                <td>
 <p>Example of $MergePatient operation.</p>
@@ -521,20 +539,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Parameters-Parameters-PartialRevisePatient-Example.html"
-                     title="Parameters/Parameters-PartialRevisePatient-Example">Parameters-PartialRevisePatient-Example</a>
+                  <a href="Bundle-Bundle-RevisePatient-Request-Example.html"
+                     title="Bundle/Bundle-RevisePatient-Request-Example">Bundle-RevisePatient-Request-Example</a>
                </td>
                <td>
-<p>Example of $RevisePatient operation that updates an existing Patient</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Parameters-Parameters-RevisePatient-Example.html"
-                     title="Parameters/Parameters-RevisePatient-Example">Parameters-RevisePatient-Example</a>
-               </td>
-               <td>
-<p>Example of $RevisePatient operation that updates an existing Patient</p>
+<p>Example of $RevisePatient operation.</p>
 </td>
             </tr>
          </tbody>
@@ -605,20 +614,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Bundle-Bundle-PartialRevisePatient-Response-Example.html"
-                     title="Bundle/Bundle-PartialRevisePatient-Response-Example">Bundle-PartialRevisePatient-Response-Example</a>
-               </td>
-               <td>
-<p>A sample PartialRevisePatient Operation response.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
                   <a href="Bundle-Bundle-RevisePatient-Response-Example.html"
                      title="Bundle/Bundle-RevisePatient-Response-Example">Bundle-RevisePatient-Response-Example</a>
                </td>
                <td>
 <p>A sample RevisePatient Operation response.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Bundle-Bundle-UpdatePatient-Response-Example.html"
+                     title="Bundle/Bundle-UpdatePatient-Response-Example">Bundle-UpdatePatient-Response-Example</a>
+               </td>
+               <td>
+<p>A sample UpdatePatient Operation response.</p>
 </td>
             </tr>
          </tbody>
@@ -887,6 +896,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="RelatedPerson-MothersPHN-RelatedPerson-ForFC.html"
+                     title="RelatedPerson/MothersPHN-RelatedPerson-ForFC">MothersPHN-RelatedPerson-ForFC</a>
+               </td>
+               <td>
+<p>RelatedPerson, representing Mother, for Find Candidate Operation by mother’s PHN</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="OperationOutcome-OperationOutcome-Example.html"
                      title="OperationOutcome/OperationOutcome-Example">OperationOutcome-Example</a>
                </td>
@@ -901,6 +919,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </td>
                <td>
 <p>Example OperationOutcome for a Client Registry Search</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Parameters-Parameters-AddPatient-Example.html"
+                     title="Parameters/Parameters-AddPatient-Example">Parameters-AddPatient-Example</a>
+               </td>
+               <td>
+<p>Example of $AddPatient parameters.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Parameters-Parameters-AddPatient-Newborn-Example.html"
+                     title="Parameters/Parameters-AddPatient-Newborn-Example">Parameters-AddPatient-Newborn-Example</a>
+               </td>
+               <td>
+<p>Example of $RevisePatient.Newborn operation where the Patient is a newborn.</p>
 </td>
             </tr>
             <tr>
@@ -923,11 +959,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="Parameters-Parameters-FindCandidates-Example.html"
+                     title="Parameters/Parameters-FindCandidates-Example">Parameters-FindCandidates-Example</a>
+               </td>
+               <td>
+<p>Example of $FindCandidates search parameters.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="Parameters-Parameters-FindCandidates-Response-Example.html"
                      title="Parameters/Parameters-FindCandidates-Response-Example">Parameters-FindCandidates-Response-Example</a>
                </td>
                <td>
 <p>Example of $FindCandidates response Metadata parameters</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Parameters-Parameters-GetDemographics-Example.html"
+                     title="Parameters/Parameters-GetDemographics-Example">Parameters-GetDemographics-Example</a>
+               </td>
+               <td>
+<p>Example of $GetDemographics operation</p>
 </td>
             </tr>
             <tr>
@@ -950,6 +1004,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="Parameters-Parameters-GetDemographicsWithEligibility-Example.html"
+                     title="Parameters/Parameters-GetDemographicsWithEligibility-Example">Parameters-GetDemographicsWithEligibility-Example</a>
+               </td>
+               <td>
+<p>Example of $GetDemographics.withEligibility operation</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="Parameters-Parameters-GetDemographicsWithEligibility-Response-Example.html"
                      title="Parameters/Parameters-GetDemographicsWithEligibility-Response-Example">Parameters-GetDemographicsWithEligibility-Response-Example</a>
                </td>
@@ -968,11 +1031,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Parameters-Parameters-PartialRevisePatient-Response-Example.html"
-                     title="Parameters/Parameters-PartialRevisePatient-Response-Example">Parameters-PartialRevisePatient-Response-Example</a>
+                  <a href="Parameters-Parameters-MergePatient-TwoNonSurvivors-Example.html"
+                     title="Parameters/Parameters-MergePatient-TwoNonSurvivors-Example">Parameters-MergePatient-TwoNonSurvivors-Example</a>
                </td>
                <td>
-<p>Example of PartialRevise response Metadata parameters</p>
+<p>Example of $MergePatient operation.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Parameters-Parameters-RevisePatient-Example.html"
+                     title="Parameters/Parameters-RevisePatient-Example">Parameters-RevisePatient-Example</a>
+               </td>
+               <td>
+<p>Example of $RevisePatient operation that updates an existing Patient</p>
 </td>
             </tr>
             <tr>
@@ -982,6 +1054,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </td>
                <td>
 <p>Example of Revise response Metadata parameters</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Parameters-Parameters-UpdatePatient-Example.html"
+                     title="Parameters/Parameters-UpdatePatient-Example">Parameters-UpdatePatient-Example</a>
+               </td>
+               <td>
+<p>Example of $RevisePatient operation that updates an existing Patient</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Parameters-Parameters-UpdatePatient-Response-Example.html"
+                     title="Parameters/Parameters-UpdatePatient-Response-Example">Parameters-UpdatePatient-Response-Example</a>
+               </td>
+               <td>
+<p>Example of Update response Metadata parameters</p>
 </td>
             </tr>
             <tr>
@@ -1060,6 +1150,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </td>
                <td>
 <p>An example of a Patient used for Find Candidates query.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Patient-Patient-By-Example-GD-Example.html"
+                     title="Patient/Patient-By-Example-GD-Example">Patient-By-Example-GD-Example</a>
+               </td>
+               <td>
+<p>An example of a Patient used for Get Demographics query.</p>
 </td>
             </tr>
             <tr>
@@ -1170,7 +1269,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 20, 2022 20:38+0000">2022-04-20</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 17, 2022 18:05+0000">2022-05-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

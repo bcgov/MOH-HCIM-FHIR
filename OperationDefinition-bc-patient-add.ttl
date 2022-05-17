@@ -10,7 +10,7 @@
   fhir:Resource.id [ fhir:value "bc-patient-add"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>AddPatient</h2><p>OPERATION: AddPatient</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-add</pre><p>URL: [base]/Patient/$AddPatient</p><p>Input parameters Profile: <a href=\"StructureDefinition-bc-patient-business-parameters.html\">BCPatientBusinessParameters</a></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Unique message ID.</p>\n</div></td></tr><tr><td>IN</td><td>messageDate</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Message date and time.</p>\n</div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Requesting organization.</p>\n</div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>UserId of sender.</p>\n</div></td></tr><tr><td>IN</td><td>patient</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a></td><td/><td><div><p>The Patient.</p>\n</div></td></tr><tr><td>IN</td><td>mothersPHN</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/relatedperson.html\">RelatedPerson</a></td><td/><td><div><p>The newborn Patient mother's PHN in a RelatedPerson resource.</p>\n</div></td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>AddPatient</h2><p>OPERATION: AddPatient</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-add</pre><p>URL: [base]/Patient/$AddPatient</p><p>Input parameters Profile: <a href=\"StructureDefinition-bc-add-request-bundle.html\">AddRequestBundle</a></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Unique message ID.</p>\n</div></td></tr><tr><td>IN</td><td>messageDate</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Message date and time.</p>\n</div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Requesting organization.</p>\n</div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>UserId of sender.</p>\n</div></td></tr><tr><td>IN</td><td>patient</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a></td><td/><td><div><p>The Patient.</p>\n</div></td></tr><tr><td>IN</td><td>mothersPHN</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/relatedperson.html\">RelatedPerson</a></td><td/><td><div><p>The newborn Patient mother's PHN in a RelatedPerson resource.</p>\n</div></td></tr></table></div>"
   ];
   fhir:OperationDefinition.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-add"];
   fhir:OperationDefinition.version [ fhir:value "0.1.0"];
@@ -18,7 +18,7 @@
   fhir:OperationDefinition.title [ fhir:value "AddPatient"];
   fhir:OperationDefinition.status [ fhir:value "draft"];
   fhir:OperationDefinition.kind [ fhir:value "operation"];
-  fhir:OperationDefinition.date [ fhir:value "2022-04-20T20:38:51+00:00"^^xsd:dateTime];
+  fhir:OperationDefinition.date [ fhir:value "2022-05-17T18:05:03+00:00"^^xsd:dateTime];
   fhir:OperationDefinition.publisher [ fhir:value "BC Ministry of Health"];
   fhir:OperationDefinition.contact [
      fhir:index 0;
@@ -47,8 +47,8 @@
   fhir:OperationDefinition.type [ fhir:value "true"^^xsd:boolean];
   fhir:OperationDefinition.instance [ fhir:value "false"^^xsd:boolean];
   fhir:OperationDefinition.inputProfile [
-     fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters";
-     fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters>
+     fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle";
+     fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle>
   ];
   fhir:OperationDefinition.parameter [
      fhir:index 0;

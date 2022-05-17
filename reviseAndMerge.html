@@ -195,7 +195,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#merge-patient" id="markdown-toc-merge-patient">Merge Patient</a></li>
   <li><a href="#fhir-structure-for-add-revise-merge-and-distributions" id="markdown-toc-fhir-structure-for-add-revise-merge-and-distributions">FHIR Structure for Add, Revise, Merge and Distributions</a></li>
   <li><a href="#asynchronous-operations" id="markdown-toc-asynchronous-operations">Asynchronous Operations</a></li>
-  <li><a href="#partial-revise-patient" id="markdown-toc-partial-revise-patient">Partial Revise Patient</a></li>
+  <li><a href="#update-patient" id="markdown-toc-update-patient">Update Patient</a></li>
 </ul>
 
 </div>
@@ -209,7 +209,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="revise-patient">Revise Patient</h3>
 
-<p>An update is defined as an event where at least the minimum Client Registry data elements of an existing client with a PHN are verified using trusted identification provided by the client and updated.</p>
+<p>A revise is defined as an event where at least the minimum Client Registry data elements of an existing client with a PHN are verified using trusted identification provided by the client and updated.</p>
 
 <p>The Client Registry treats the incoming Revise Patient as a complete snapshot of the source record. If the POS application sends a blank attribute to the Client Registry, that attribute in the source’s record in the Client Registry will be terminated.</p>
 
@@ -227,10 +227,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="fhir-structure-for-add-revise-merge-and-distributions">FHIR Structure for Add, Revise, Merge and Distributions</h3>
 
-<p>The FHIR structure is the same for Add, Merge, Revise and Distributions.  Responses (if required) are wrapped in collection Bundles and include OperationOutcome, Operation Parameters and Patient resources.</p>
+<p>The FHIR structure is roughly the same for Add, Merge, Revise and Distributions.  RelatedPerson is only required to AddPatient newborns.  Responses (if required) are wrapped in collection Bundles and include OperationOutcome, Operation Parameters, possible RelatedPerson resources and Patient resources.</p>
 
 <p><span>
-	<img src="revise_merge_fhir.png" height="450" />
+	<img src="revise_merge_fhir.png" height="300" />
 </span></p>
 
 <h3 id="asynchronous-operations">Asynchronous Operations</h3>
@@ -238,14 +238,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>The asynchronous pattern for Revise and Merge Patient follow the same pattern as V3.  The figure below show the client requesting an operation from the Client Registry and the Client Registry responding, later, with the response.</p>
 
 <p><span>
-	<img src="asyncSequence.png" height="350" />
+	<img src="asyncSequence.png" height="300" />
 </span></p>
 
-<p>The request/responses are associated by the unique message id in the Parameters resource.  The client must create a FHIR Operation end point to receive the responses at a later time.  Specifically the response will be a Bundle, as documented in the <a href="OperationDefinition-bc-patient-revise.html">RevisePatient</a> and <a href="OperationDefinition-bc-patient-merge.html">MergePatient</a> operations.  The Parameter resource profile is <a href="StructureDefinition-bc-patient-business-parameters.html">BCPatientBusinessParameters</a> and contains the IN parameters requestMessageId to link the messageId in the request to the asynchronous response.</p>
+<p>The request/responses are associated by the unique message id in the Parameters resource.  The client must create a FHIR Operation end point to receive the responses at a later time.  Specifically the response will be a Bundle, as documented in the <a href="OperationDefinition-bc-patient-revise.html">RevisePatient</a> and <a href="OperationDefinition-bc-patient-merge.html">MergePatient</a> operations.  The response contains the IN parameters requestMessageId to link the messageId in the request to the asynchronous response.</p>
 
-<h3 id="partial-revise-patient">Partial Revise Patient</h3>
+<h3 id="update-patient">Update Patient</h3>
 
-<p>This is a special Operation that allows a user to selectively update a Patient record.  It has the same FHIR structure as Revise Patient except the Patient resource is replaced with a patch operation Parameters. The patchOperation describes how the Patient record should be changed.  This Operation should be used when the user doesn’t have the full Patient record available.  See the <a href="OperationDefinition-bc-patient-partial-revise.html">Partial Revise Operation</a>.</p>
+<p>This is a special Operation that allows a user to selectively update a Patient record.  It has the same FHIR structure as Revise Patient except the Patient resource is replaced with a patch operation Parameters. The patchOperation describes how the Patient record should be changed.  This Operation should be used when the user doesn’t have the full Patient record available.  See the <a href="OperationDefinition-bc-patient-partial-revise.html">Update Operation</a>.</p>
 
 
 
@@ -272,7 +272,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 20, 2022 20:38+0000">2022-04-20</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 17, 2022 18:05+0000">2022-05-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

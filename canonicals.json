@@ -46,7 +46,7 @@
     "type": "OperationDefinition",
     "url": "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-partial-revise",
     "version": "0.1.0",
-    "name": "PartialRevisePatient"
+    "name": "UpdatePatient"
   },
   {
     "id": "bc-patient-revise",
@@ -60,42 +60,42 @@
     "type": "CapabilityStatement",
     "url": "http://hlth.gov.bc.ca/fhir/client/CapabilityStatement/bc-hcim-capability-statement-client",
     "version": "0.1.0",
-    "name": "BCHCIMCapabilityStatement"
+    "name": "HCIMCapabilityStatement"
   },
   {
     "id": "bc-hcim-capability-statement-server",
     "type": "CapabilityStatement",
     "url": "http://hlth.gov.bc.ca/fhir/client/CapabilityStatement/bc-hcim-capability-statement-server",
     "version": "0.1.0",
-    "name": "BCHCIMCapabilityStatement"
+    "name": "HCIMCapabilityStatement"
   },
   {
     "id": "bc-client-registry-address-validation-code-system",
     "type": "CodeSystem",
     "url": "http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-address-validation-code-system",
     "version": "0.1.0",
-    "name": "BCAddressValidationCS"
+    "name": "AddressValidationCS"
   },
   {
     "id": "bc-client-registry-merge-status-code-system",
     "type": "CodeSystem",
     "url": "http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-merge-status-code-system",
     "version": "0.1.0",
-    "name": "BCMergeStatusCS"
+    "name": "MergeStatusCS"
   },
   {
     "id": "bc-identifier-status-code-system",
     "type": "CodeSystem",
     "url": "http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-identifier-status-code-system",
     "version": "0.1.0",
-    "name": "BCIdentifierStatusCS"
+    "name": "IdentifierStatusCS"
   },
   {
     "id": "bc-operation-outcome-details-code-system",
     "type": "CodeSystem",
     "url": "http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-operation-outcome-details-code-system",
     "version": "0.1.0",
-    "name": "BCOperationOutcomeDetailsCS"
+    "name": "OperationOutcomeDetailsCS"
   },
   {
     "id": "fhir.ca-bc.client",
@@ -105,11 +105,18 @@
     "name": "BCHealthClientIdentityManagement"
   },
   {
+    "id": "bc-add-request-bundle",
+    "type": "StructureDefinition",
+    "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle",
+    "version": "0.1.0",
+    "name": "AddRequestBundle"
+  },
+  {
     "id": "bc-add-response-bundle",
     "type": "StructureDefinition",
     "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-response-bundle",
     "version": "0.1.0",
-    "name": "BCAddResponseBundle"
+    "name": "AddResponseBundle"
   },
   {
     "id": "bc-birthdate-history-extension",
@@ -147,11 +154,25 @@
     "name": "DeathVerifiedFlagHistoryExtension"
   },
   {
+    "id": "bc-find-candidates-request-bundle",
+    "type": "StructureDefinition",
+    "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle",
+    "version": "0.1.0",
+    "name": "FindCandidatesRequestBundle"
+  },
+  {
     "id": "bc-gender-history-extension",
     "type": "StructureDefinition",
     "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension",
     "version": "0.1.0",
     "name": "GenderHistoryExtension"
+  },
+  {
+    "id": "bc-get-demographics-request-bundle",
+    "type": "StructureDefinition",
+    "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle",
+    "version": "0.1.0",
+    "name": "GetDemographicsRequestBundle"
   },
   {
     "id": "bc-identifier-status-extension",
@@ -161,11 +182,18 @@
     "name": "IdentifierStatusExtension"
   },
   {
+    "id": "bc-merge-request-bundle",
+    "type": "StructureDefinition",
+    "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle",
+    "version": "0.1.0",
+    "name": "MergeRequestBundle"
+  },
+  {
     "id": "bc-merge-response-bundle",
     "type": "StructureDefinition",
     "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle",
     "version": "0.1.0",
-    "name": "BCMergeResponseBundle"
+    "name": "MergeResponseBundle"
   },
   {
     "id": "bc-merge-status-extension",
@@ -179,7 +207,7 @@
     "type": "StructureDefinition",
     "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters",
     "version": "0.1.0",
-    "name": "BCMetadataParameters"
+    "name": "MetadataParameters"
   },
   {
     "id": "bc-multiplebirth-history-extension",
@@ -189,53 +217,46 @@
     "name": "MultipleBirthHistoryExtension"
   },
   {
-    "id": "bc-partial-revise-response-bundle",
-    "type": "StructureDefinition",
-    "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-partial-revise-response-bundle",
-    "version": "0.1.0",
-    "name": "BCPartialReviseResponseBundle"
-  },
-  {
     "id": "bc-patient",
     "type": "StructureDefinition",
     "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient",
     "version": "0.1.0",
-    "name": "BCPatient"
-  },
-  {
-    "id": "bc-patient-business-parameters",
-    "type": "StructureDefinition",
-    "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters",
-    "version": "0.1.0",
-    "name": "BCPatientBusinessParameters"
+    "name": "ClientRegistryPatient"
   },
   {
     "id": "bc-patient-by-example",
     "type": "StructureDefinition",
     "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example",
     "version": "0.1.0",
-    "name": "BCPatientByExample"
+    "name": "PatientByExample"
+  },
+  {
+    "id": "bc-revise-request-bundle",
+    "type": "StructureDefinition",
+    "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle",
+    "version": "0.1.0",
+    "name": "ReviseRequestBundle"
   },
   {
     "id": "bc-revise-response-bundle",
     "type": "StructureDefinition",
     "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle",
     "version": "0.1.0",
-    "name": "BCReviseResponseBundle"
+    "name": "ReviseResponseBundle"
   },
   {
     "id": "bc-search-response-bundle",
     "type": "StructureDefinition",
     "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
     "version": "0.1.0",
-    "name": "BCSearchResponseBundle"
+    "name": "SearchResponseBundle"
   },
   {
     "id": "bc-search-withEligibility-response-bundle",
     "type": "StructureDefinition",
     "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-withEligibility-response-bundle",
     "version": "0.1.0",
-    "name": "BCSearchWithEligibilityResponseBundle"
+    "name": "SearchWithEligibilityResponseBundle"
   },
   {
     "id": "bc-sourceId-extension",
@@ -256,48 +277,48 @@
     "type": "ValueSet",
     "url": "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-address-type-value-set",
     "version": "0.1.0",
-    "name": "BCAddressTypeVS"
+    "name": "AddressTypeVS"
   },
   {
     "id": "bc-address-validation-value-set",
     "type": "ValueSet",
     "url": "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-address-validation-value-set",
     "version": "0.1.0",
-    "name": "BCAddressValidationVS"
+    "name": "AddressValidationVS"
   },
   {
     "id": "bc-contact-point-system-value-set",
     "type": "ValueSet",
     "url": "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set",
     "version": "0.1.0",
-    "name": "BCContactPointSystemVS"
+    "name": "ContactPointSystemVS"
   },
   {
     "id": "bc-contact-point-use-value-set",
     "type": "ValueSet",
     "url": "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set",
     "version": "0.1.0",
-    "name": "BCContactPointUseVS"
+    "name": "ContactPointUseVS"
   },
   {
     "id": "bc-identifier-status-value-set",
     "type": "ValueSet",
     "url": "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-identifier-status-value-set",
     "version": "0.1.0",
-    "name": "BCIdentifierStatusVS"
+    "name": "IdentifierStatusVS"
   },
   {
     "id": "bc-merge-status-value-set",
     "type": "ValueSet",
     "url": "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-merge-status-value-set",
     "version": "0.1.0",
-    "name": "BCMergeStatusVS"
+    "name": "MergeStatusVS"
   },
   {
     "id": "bc-name-use-value-set",
     "type": "ValueSet",
     "url": "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set",
     "version": "0.1.0",
-    "name": "BCNameUseVS"
+    "name": "NameUseVS"
   }
 ]

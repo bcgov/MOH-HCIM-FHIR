@@ -3,7 +3,7 @@
 <Parameters xmlns="http://hl7.org/fhir">
   <id value="Parameters-AddPatient-Newborn-Example"/>
   <meta>
-    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters"/>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
   </meta>
   <parameter>
     <name value="messageId"/>
@@ -21,91 +21,10 @@
     </valueIdentifier>
   </parameter>
   <parameter>
-    <name value="patient"/>
-    <resource>
-      <Patient>
-        <id value="Patient-AddPatient-Newborn-Example"/>
-        <meta>
-          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
-        </meta>
-        <identifier>
-          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
-            <valueCode value="active"/>
-          </extension>
-          <use value="official"/>
-          <type>
-            <coding>
-              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-              <code value="AN"/>
-            </coding>
-          </type>
-          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
-          <value value="123345654"/>
-          <period>
-            <start value="2000-01-01T11:11:11+08:00"/>
-          </period>
-        </identifier>
-        <name>
-          <use value="usual"/>
-          <family value="Doe"/>
-          <given value="Jane"/>
-          <period>
-            <start value="2018-04-05"/>
-          </period>
-        </name>
-        <telecom>
-          <system value="phone"/>
-          <value value="2505554848"/>
-          <use value="home"/>
-          <period>
-            <start value="2000-01-02T10:10:10-08:00"/>
-          </period>
-        </telecom>
-        <gender value="unknown"/>
-        <birthDate value="2021-11-02"/>
-        <address>
-          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
-            <valueCode value="valid"/>
-          </extension>
-          <type value="physical"/>
-          <line value="721 FRONT ST"/>
-          <city value="VICTORIA"/>
-          <state value="BC"/>
-          <postalCode value="V9A3Y3"/>
-          <country value="CA"/>
-        </address>
-      </Patient>
-    </resource>
-  </parameter>
-  <parameter>
     <name value="enterer"/>
     <valueIdentifier>
       <system value="http://hlth.gov.bc.ca/fhir/client/bc-user"/>
       <value value="klgodfre"/>
     </valueIdentifier>
-  </parameter>
-  <parameter>
-    <name value="mothersPHN"/>
-    <resource>
-      <RelatedPerson>
-        <id value="RelatedPerson-Mother-Example"/>
-        <identifier>
-          <system value="http://hlth.gov.bc.ca/fhir/client/bc-sri"/>
-          <value value="9736546293"/>
-        </identifier>
-        <patient>
-          <identifier>
-            <system value="http://hlth.gov.bc.ca/fhir/client/bc-sri"/>
-            <value value="IHA2234"/>
-          </identifier>
-        </patient>
-        <relationship>
-          <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
-            <code value="MTH"/>
-          </coding>
-        </relationship>
-      </RelatedPerson>
-    </resource>
   </parameter>
 </Parameters>

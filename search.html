@@ -219,7 +219,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>The Find Candidates is a synchronous request-response transaction.</p>
 
-<p>Find Candidates uses a, search by example, p[attern.  I.e. the request will contain an example Patient with attributes like name, date of birth, etc populated.  HCIM will search for Patients similar to the Patient in the request.</p>
+<p>Find Candidates uses a, search by example, pattern.  I.e. the request will contain an example Patient with attributes like name, date of birth, etc populated.  HCIM will search for Patients similar to the Patient in the request.  If the desired the user can omit the Patient and use a RelatedPerson resource that represents the Mother and contains (in the identifier) the Mother’s PHN.  More details are in the <a href="StructureDefinition-bc-find-candidates-request-bundle.html">request Bundle</a> and <a href="StructureDefinition-bc-search-response-bundle.html">response Bundle</a> definitions.</p>
 
 <h3 id="get-demographics-search">Get Demographics Search</h3>
 
@@ -229,7 +229,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Using Get Demographics is referred to as performing a “deterministic search”. In a deterministic search, the outcome of the search can be predicted. Get Demographics will return only one client record because there is only one client record that corresponds to the provided Identifier.</p>
 
-<p>The Get Demographics is a synchronous request-response transaction</p>
+<p>The Get Demographics is a synchronous request-response transaction.</p>
+
+<p>More details can be found in the <a href="StructureDefinition-bc-get-demographics-request-bundle.html">request Bundle</a> and <a href="StructureDefinition-bc-search-response-bundle.html">response Bundle</a> definitions.</p>
 
 <h4 id="get-demographics-search-with-eligibility">Get Demographics Search with Eligibility</h4>
 
@@ -237,10 +239,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="fhir-structure-for-searches">FHIR Structure for Searches</h3>
 
-<p>Below is a figure that shows the FHIR structure for the two searches.  The request is a Parameter resource and the response is a searchset Bundle with 0 or more Patients and one OperationOutcome.  The OperationOutcome is where you’ll find warnings and errors regarding the search.</p>
+<p>Below is a figure that shows the FHIR structure for the two searches.  The request is a collection Bundle resource and the response is a searchset Bundle with 0 or more Patients and one OperationOutcome.  The OperationOutcome is where you’ll find warnings and errors regarding the search.</p>
 
 <p><span>
-	<img src="searches_fhir.png" height="275" />
+	<img src="searches_fhir.png" height="300" />
 </span></p>
 
 <h4 id="get-demographics-parameters">Get Demographics Parameters</h4>
@@ -280,7 +282,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 20, 2022 20:38+0000">2022-04-20</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 17, 2022 18:05+0000">2022-05-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

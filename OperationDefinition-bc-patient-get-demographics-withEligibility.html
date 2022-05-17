@@ -41,8 +41,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"15.16"}
-    h3,h4,h5,h6{--heading-prefix:"15.16"}</style>
+    <style type="text/css">h2{--heading-prefix:"15.6"}
+    h3,h4,h5,h6{--heading-prefix:"15.6"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Left logo - typically the publisher's logo - project or affiliate -->
@@ -234,7 +234,7 @@
         
           Draft
           
-            as of 2022-04-20
+            as of 2022-05-17
           
         
       </td>
@@ -266,7 +266,13 @@
   <p><span style="color:red">Note</span><br />Get Eligibility is a service provided by Health Insurance British Columbia.  The Client Registry, when receiving a Get Demographics with Eligibility (aka Batch) request, forwards the eligibility component on to a HIBC webservice and forwards the response back along with the Get Demographics results.  At this time the FHIR design for this operation is speculative and the Client Registry needs to work with HIBC in the future to come to an agreement on the final design.  At this time it is also speculation as to whether HIBC will even adopt FHIR.  The V3 Batch can continue to be used in the interim.</p>
 </blockquote>
 
-<p>The Get Demographics with Eligibility query is an Operation.  As such the request is a BCMetadataParameters resource where the request meta data and the search parameters are placed.  This a special case of Get Demographics that returns the British Columbia insurance eligibility of the Patient in addition to the Patient record using the Coverage resource.</p>
+<p>The Get Demographics with Eligibility query is an Operation.</p>
+
+<p>This a special case of Get Demographics that returns the British Columbia insurance eligibility of the Patient in addition to the Patient record using the Coverage resource.</p>
+
+<p>The request is a Bundle with Resources for search parameters (MetadataParameters), a Patient to match against.</p>
+
+<p>The Patient Bundle entry is a <a href="StructureDefinition-bc-patient-by-example.html">Patient by Example</a>. The patient is a constrained Patient resource limited to the availabe search criteria. See the Get Demographics <a href="search.html#get-demographics-search">search design</a> for more details on the critera.</p>
 
 
 </div>
@@ -281,13 +287,13 @@
   
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><h2>GetDemographicswithEligibility</h2><p>QUERY: GetDemographicswithEligibility</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics-withEligibility</pre><p>URL: [base]/Patient/$GetDemographics.withEligibility</p><p>Input parameters Profile: <a href="StructureDefinition-bc-metadata-parameters.html">BCMetadataParameters</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Unique message ID.</p>
+  <div xmlns="http://www.w3.org/1999/xhtml"><h2>GetDemographicswithEligibility</h2><p>QUERY: GetDemographicswithEligibility</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics-withEligibility</pre><p>URL: [base]/Patient/$GetDemographics.withEligibility</p><p>Input parameters Profile: <a href="StructureDefinition-bc-metadata-parameters.html">MetadataParameters</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Unique message ID.</p>
 </div></td></tr><tr><td>IN</td><td>messageDateTime</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></td><td/><td><div><p>Message date and time.</p>
 </div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>Requesting organization.</p>
 </div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>UserId of sender.</p>
-</div></td></tr><tr><td>IN</td><td>identifier</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>Patient identifier.</p>
 </div></td></tr><tr><td>IN</td><td>withHistory</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td/><td><div><p>Boolean flag to return Patient's history.  If missing, defaults to false.</p>
 </div></td></tr><tr><td>IN</td><td>identifiersOnly</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td/><td><div><p>Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defaults to false.</p>
+</div></td></tr><tr><td>IN</td><td>identifier</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td/><td><div><p>Identifier in Patient by example.</p>
 </div></td></tr></table></div>
 
   <!-- insert notes if present -->
@@ -340,7 +346,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 20, 2022 20:38+0000">2022-04-20</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 17, 2022 18:05+0000">2022-05-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

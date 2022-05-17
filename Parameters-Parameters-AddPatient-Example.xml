@@ -3,7 +3,7 @@
 <Parameters xmlns="http://hl7.org/fhir">
   <id value="Parameters-AddPatient-Example"/>
   <meta>
-    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters"/>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
   </meta>
   <parameter>
     <name value="messageId"/>
@@ -19,54 +19,6 @@
       <system value="http://hlth.gov.bc.ca/fhir/client/bc-org"/>
       <value value="PHARM"/>
     </valueIdentifier>
-  </parameter>
-  <parameter>
-    <name value="patient"/>
-    <resource>
-      <Patient>
-        <id value="Patient-AddPatient-Example"/>
-        <meta>
-          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
-        </meta>
-        <name>
-          <use value="official"/>
-          <family value="Doe"/>
-          <given value="John"/>
-          <period>
-            <start value="2017-04-05"/>
-          </period>
-        </name>
-        <telecom>
-          <system value="phone"/>
-          <value value="2505554848"/>
-          <use value="home"/>
-          <period>
-            <start value="2000-01-02T10:10:10-08:00"/>
-          </period>
-        </telecom>
-        <telecom>
-          <system value="email"/>
-          <value value="John321@gmail.com"/>
-          <use value="home"/>
-          <period>
-            <start value="2000-01-02T10:10:10-08:00"/>
-          </period>
-        </telecom>
-        <gender value="male"/>
-        <birthDate value="1940-06-06"/>
-        <address>
-          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
-            <valueCode value="valid"/>
-          </extension>
-          <type value="physical"/>
-          <line value="721 FRONT ST"/>
-          <city value="VICTORIA"/>
-          <state value="BC"/>
-          <postalCode value="V9A3Y3"/>
-          <country value="CA"/>
-        </address>
-      </Patient>
-    </resource>
   </parameter>
   <parameter>
     <name value="enterer"/>

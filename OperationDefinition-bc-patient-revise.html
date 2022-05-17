@@ -41,8 +41,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"15.20"}
-    h3,h4,h5,h6{--heading-prefix:"15.20"}</style>
+    <style type="text/css">h2{--heading-prefix:"15.10"}
+    h3,h4,h5,h6{--heading-prefix:"15.10"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Left logo - typically the publisher's logo - project or affiliate -->
@@ -234,7 +234,7 @@
         
           Draft
           
-            as of 2022-04-20
+            as of 2022-05-17
           
         
       </td>
@@ -258,9 +258,13 @@
 
 <div style="display:inline-block" markdown="1">
 
-<p>This is the Revise Patient operation.</p>
+<blockquote>
+  <p><span style="color:red">Note</span><br />This specification is currently published as a Draft Standard on the ministry GitHub and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.</p>
+</blockquote>
 
-<p>A Patient resource is required to update or add a patient.  If updating, the empty attributes in the Patient resource will be deleted from the Client Registry.</p>
+<p>This is the Revise Patient operation.  The request is a Bundle and is used for incoming updates and also used for Patient notifications (outbound messages, from the Client Registry to a connected partner.”</p>
+
+<p>A Patient resource is required to update or add a patient.  If updating, the empty attributes in the Patient resource will be deleted by the Client Registry.</p>
 
 
 </div>
@@ -275,11 +279,11 @@
   
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><h2>RevisePatient</h2><p>OPERATION: RevisePatient</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-revise</pre><p>URL: [base]/Patient/$RevisePatient</p><p>Input parameters Profile: <a href="StructureDefinition-bc-patient-business-parameters.html">BCPatientBusinessParameters</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Unique message ID.</p>
+  <div xmlns="http://www.w3.org/1999/xhtml"><h2>RevisePatient</h2><p>OPERATION: RevisePatient</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-revise</pre><p>URL: [base]/Patient/$RevisePatient</p><p>Input parameters Profile: <a href="StructureDefinition-bc-revise-request-bundle.html">ReviseRequestBundle</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Unique message ID.</p>
 </div></td></tr><tr><td>IN</td><td>messageDate</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Message date and time.</p>
 </div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>Requesting organization.</p>
 </div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>UserId of sender.</p>
-</div></td></tr><tr><td>IN</td><td>patient</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td/><td><div><p>The Patient.</p>
+</div></td></tr><tr><td>IN</td><td>patient</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td/><td><div><p>The Patient being revised.</p>
 </div></td></tr></table></div>
 
   <!-- insert notes if present -->
@@ -294,10 +298,10 @@
 <ul>
   <li>a Patient resource when the interaction was successful</li>
   <li>a OperationOutcome resource where errors and warnings are returned</li>
-  <li>a Parameters resource (specifically <a href="StructureDefinition-bc-metadata-parameters.html">BCMetadataParameters</a>)</li>
+  <li>a Parameters resource (specifically <a href="StructureDefinition-bc-metadata-parameters.html">MetadataParameters</a>)</li>
 </ul>
 
-<p>If this is an asynchronous revise then the BCMetadataParameters must contain the request MessageID in the requestMessageId field.</p>
+<p>If this is an asynchronous revise then the MetadataParameters must contain the request MessageID in the requestMessageId field.</p>
 
 <p>See <a href="StructureDefinition-bc-revise-response-bundle.html">Revise Patient response</a></p>
 
@@ -331,7 +335,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 20, 2022 20:38+0000">2022-04-20</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 17, 2022 18:05+0000">2022-05-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

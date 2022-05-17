@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="Bundle-GetDemographics-Request-Example"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle"/>
+  </meta>
+  <type value="collection"/>
+  <timestamp value="2011-09-13T16:11:43.000-07:00"/>
+  <link>
+    <relation value="self"/>
+    <url value="http://hlth.gov.bc.ca/fhir/client/Patient/$GetDemographics"/>
+  </link>
+  <entry>
+    <fullUrl value="urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f2222"/>
+    <resource>
+      <Parameters>
+        <id value="Parameters-GetDemographics-Example"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
+        </meta>
+        <parameter>
+          <name value="messageId"/>
+          <valueString value="98028b44-882a-4c72-8c92-b87d916147e1"/>
+        </parameter>
+        <parameter>
+          <name value="messageDateTime"/>
+          <valueDateTime value="2015-02-07T13:28:17-08:00"/>
+        </parameter>
+        <parameter>
+          <name value="sender"/>
+          <valueIdentifier>
+            <system value="http://hlth.gov.bc.ca/fhir/client/bc-org"/>
+            <value value="VPP"/>
+          </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="enterer"/>
+          <valueIdentifier>
+            <system value="http://hlth.gov.bc.ca/fhir/client/bc-userid"/>
+            <value value="bob@me.com"/>
+          </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="history"/>
+          <valueBoolean value="false"/>
+        </parameter>
+      </Parameters>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f1111"/>
+    <resource>
+      <Patient>
+        <id value="Patient-By-Example-GD-Example"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient-By-Example-GD-Example" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient-by-example.html">PatientByExample</a></p></div><p><b>identifier</b>: Jurisdictional health number: 123345654 (OFFICIAL)</p></div>
+        </text>
+        <identifier>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="JHN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"/>
+          <value value="123345654"/>
+        </identifier>
+      </Patient>
+    </resource>
+  </entry>
+</Bundle>

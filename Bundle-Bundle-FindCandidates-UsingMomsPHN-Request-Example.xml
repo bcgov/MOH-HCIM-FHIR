@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="Bundle-FindCandidates-UsingMomsPHN-Request-Example"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle"/>
+  </meta>
+  <type value="collection"/>
+  <timestamp value="2011-09-13T16:11:43.000-07:00"/>
+  <link>
+    <relation value="self"/>
+    <url value="http://hlth.gov.bc.ca/fhir/client/Patient/$FindCandidates"/>
+  </link>
+  <entry>
+    <fullUrl value="urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f2222"/>
+    <resource>
+      <Parameters>
+        <id value="Parameters-FindCandidates-Example"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
+        </meta>
+        <parameter>
+          <name value="messageId"/>
+          <valueString value="98028b44-882a-4c72-8c92-b87d916147e1"/>
+        </parameter>
+        <parameter>
+          <name value="messageDateTime"/>
+          <valueDateTime value="2015-02-07T13:28:17-08:00"/>
+        </parameter>
+        <parameter>
+          <name value="sender"/>
+          <valueIdentifier>
+            <system value="http://hlth.gov.bc.ca/fhir/client/bc-org"/>
+            <value value="VPP"/>
+          </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="identifiersOnly"/>
+          <valueBoolean value="false"/>
+        </parameter>
+      </Parameters>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f1111"/>
+    <resource>
+      <RelatedPerson>
+        <id value="MothersPHN-RelatedPerson-ForFC"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "MothersPHN-RelatedPerson-ForFC" </p></div><p><b>identifier</b>: Jurisdictional health number: 123345654 (OFFICIAL)</p><p><b>patient</b>: <span></span></p><p><b>relationship</b>: natural mother <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-RoleCode.html">RoleCode</a>#NMTH)</span></p></div>
+        </text>
+        <identifier>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="JHN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"/>
+          <value value="123345654"/>
+        </identifier>
+        <patient>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </patient>
+        <relationship>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="NMTH"/>
+          </coding>
+        </relationship>
+      </RelatedPerson>
+    </resource>
+  </entry>
+</Bundle>

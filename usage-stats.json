@@ -441,32 +441,44 @@
   "profiles": {
     "Bundle": [
       {
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle",
+        "title": "ReviseRequestBundle"
+      },
+      {
         "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle",
-        "title": "BCReviseResponseBundle"
+        "title": "ReviseResponseBundle"
       },
       {
         "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
-        "title": "BCSearchResponseBundle"
+        "title": "SearchResponseBundle"
       },
       {
         "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-withEligibility-response-bundle",
-        "title": "BCSearchWithEligibilityResponseBundle"
+        "title": "SearchWithEligibilityResponseBundle"
       }
     ],
     "Parameters": [
       {
-        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters",
-        "title": "BCPatientBusinessParameters"
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters",
+        "title": "MetadataParameters"
       }
     ],
     "Patient": [
       {
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient",
+        "title": "ClientRegistryPatient"
+      },
+      {
         "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example",
-        "title": "BCPatientByExample"
+        "title": "PatientByExample"
       }
     ]
   },
   "usage": {
+    "http://hl7.org/fhir/StructureDefinition/data-absent-reason": [
+      "Bundle.entry.resource.patient",
+      "RelatedPerson.patient"
+    ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
       "StructureDefinition.snapshot.element.constraint"
     ],
@@ -542,14 +554,13 @@
     ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension": [
       "Bundle.entry.resource.identifier",
-      "Parameters.parameter.resource.identifier",
-      "Parameters.parameter.resource.link.other.identifier",
+      "Bundle.entry.resource.link.other.identifier",
       "Parameters.parameter.valueIdentifier",
       "Patient.identifier",
       "Patient.link.other.identifier"
     ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension": [
-      "Parameters.parameter.resource.link",
+      "Bundle.entry.resource.link",
       "Patient.link"
     ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-multiplebirth-history-extension": [
@@ -570,7 +581,6 @@
     ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension": [
       "Bundle.entry.resource.address",
-      "Parameters.parameter.resource.address",
       "Patient.address"
     ]
   }

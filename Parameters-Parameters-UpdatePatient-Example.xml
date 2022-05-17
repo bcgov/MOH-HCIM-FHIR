@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Parameters xmlns="http://hl7.org/fhir">
+  <id value="Parameters-UpdatePatient-Example"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters"/>
+  </meta>
+  <parameter>
+    <name value="messageId"/>
+    <valueString value="98028b44-882a-4c72-8c92-b87d916147e1"/>
+  </parameter>
+  <parameter>
+    <name value="messageDateTime"/>
+    <valueDateTime value="2021-11-02T13:28:17-08:00"/>
+  </parameter>
+  <parameter>
+    <name value="sender"/>
+    <valueIdentifier>
+      <system value="http://hlth.gov.bc.ca/fhir/client/bc-org"/>
+      <value value="PHARM"/>
+    </valueIdentifier>
+  </parameter>
+  <parameter>
+    <name value="enterer"/>
+    <valueIdentifier>
+      <system value="http://hlth.gov.bc.ca/fhir/client/bc-user"/>
+      <value value="klgodfre"/>
+    </valueIdentifier>
+  </parameter>
+  <parameter>
+    <name value="SRI"/>
+    <valueIdentifier>
+      <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+        <valueCode value="active"/>
+      </extension>
+      <use value="official"/>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+          <code value="AN"/>
+        </coding>
+      </type>
+      <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+      <value value="123345654"/>
+    </valueIdentifier>
+  </parameter>
+  <parameter>
+    <name value="patchOperation"/>
+    <resource>
+      <Parameters>
+        <id value="Parameters-DeletePatch-Example"/>
+        <parameter>
+          <name value="operation"/>
+          <part>
+            <name value="type"/>
+            <valueCode value="delete"/>
+          </part>
+          <part>
+            <name value="path"/>
+            <valueString value="Patient.address.where(type = 'physical')"/>
+          </part>
+        </parameter>
+      </Parameters>
+    </resource>
+  </parameter>
+</Parameters>
