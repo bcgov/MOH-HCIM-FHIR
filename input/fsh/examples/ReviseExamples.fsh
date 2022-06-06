@@ -13,7 +13,7 @@ Description: "Example of $RevisePatient operation."
 * entry[patient].resource = Patient-RevisePatient-Example
 
 Instance: Parameters-RevisePatient-Example
-InstanceOf: MetadataParameters
+InstanceOf: MetadataParametersIn
 Description: "Example of $RevisePatient operation that updates an existing Patient"
 
 * parameter[messageId].name = "messageId"
@@ -22,16 +22,8 @@ Description: "Example of $RevisePatient operation that updates an existing Patie
 * parameter[messageDateTime].name = "messageDateTime"
 * parameter[messageDateTime].valueDateTime = "2021-11-02T13:28:17-08:00"
 
-* parameter[sender].name = "sender"
-* parameter[sender].valueIdentifier.value = "PHARM"
-* parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
-
-* parameter[enterer].name = "enterer"
-* parameter[enterer].valueIdentifier.value = "klgodfre"
-* parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
-
 Instance: Parameters-RevisePatient-Response-Example
-InstanceOf: MetadataParameters
+InstanceOf: MetadataParametersOut
 Description: "Example of Revise response Metadata parameters"
 
 * parameter[messageId].name = "messageId"

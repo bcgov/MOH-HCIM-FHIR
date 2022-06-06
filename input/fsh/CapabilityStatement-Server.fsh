@@ -64,7 +64,7 @@ The Client Registry FHIR implementation only supports JSON format and the client
 All interactions with Patient resources SHALL use the ClientRegistryPatient profile. The exception is the FindCandidates and GetDemographics Operations which use the PatientByExample instead of ClientRegistryPatient in the request.
 </li>
 <li>
-Any Parameters profile SHALL be MetadataParameters.
+Any Parameters profile SHALL be MetadataParametersIn or MetadataParametersOut.
 </li>  
 <li>
 Only the 'resource type' FHIR Operation is supported by the Client Registry, e.g. /Patient/$[Operation Name]; not system /$[Operation Name] and not resource instance /Patient/[id]/$[Operation Name].  Requesting users SHALL use only the resource type of FHIR Operation.
@@ -86,24 +86,26 @@ Users SHALL follow the above asynchronous pattern when invoking an asynchronous 
 
 <h3>General Rules OUT</h3>
 <p>
-Each Operation returns a Bundle.  The Bundles may be of type searchset or collection.  The two searches, GetDemographics and FindCandidates both return searchset bundles.  The Add, Revise and Merge return collection Bundle resources.  Each Bundle will have a Parameters entry (profile MetadataParameters) that has the response metadata, including echoing back the request unique id, and the Bundle will also have zero or more Patient entries that either meet the search criteria or are the result of a Revise or Merge Operation.  In addition each Bundle has an OperationOutcome resource with warnings and errors relevant to the FHIR Operation request.  And finally, the searchset Bundle will also have the search criteria echoed back in an additional Parameters resource.
+Each Operation returns a Bundle.  The Bundles may be of type searchset or collection.  The two searches, GetDemographics and FindCandidates both return searchset bundles.  The Add, Revise and Merge return collection Bundle resources.  
 
-Each operations uses a unique Bundle profile in the response to enforce cardinalality rules..
+Each operation uses a unique Bundle profile in the response to enforce cardinalality rules.
 </p>
 <p>
 In summary the response Bundles for every Operation will be structured as follows:
 </p>
 <ul>
-<li>Entry of MetadataParameters</li>
-<li>Zero or more entries of Patient</li>
+<li>Entry of MetadataParametersOut</li>
+	<ul>
+	<li>If a search, the request Parameters are echoed back in a MetadataParametersIn resource</li>
+	</ul>
 <li>Entry with OperationOutcome</li>
-<li>If a search, the request Parameters are echoed back in a Parameters resource</li>
+<li>Zero or more entries of ClientRegistryPatient</li>
 <li>Zero or more entries of RelatedPerson</li>
 </ul>
 
 <h3>Error Handling</h3>
 <p>
-The Client Registry users SHALL monitor the HTTP response codes returned in a response.  If the code is not 2xx the user will find the errors in the OperationOutcome resource in the response Bundle.
+The Client Registry users SHALL monitor the HTTP response codes returned with a response.  If the code is not 2xx the user will find  errors in the OperationOutcome resource in the response Bundle.
 </p>
 
 <h3>Search</h3>
@@ -932,7 +934,7 @@ Although this is an independent Operation the definition is the same as the [Rev
 * rest[0].resource[0].operation[9].name = "UpdatePatient.Async"
 * rest[0].resource[0].operation[9].definition = Canonical(UpdatePatient)
 * rest[0].resource[0].operation[9].documentation = "
-Although this is an independent Operation the definition is the same as the [UpdatePatient](OperationDefinition-bc-patient-partial-revise.html)"
+Although this is an independent Operation the definition is the same as the [UpdatePatient](OperationDefinition-bc-patient-update.html)"
 * rest[0].resource[0].operation[8].name = "MergePatient.Async"
 * rest[0].resource[0].operation[8].definition = Canonical(MergePatient)
 * rest[0].resource[0].operation[8].documentation = "

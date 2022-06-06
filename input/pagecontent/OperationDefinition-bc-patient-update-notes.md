@@ -3,7 +3,7 @@
 Cardinality | Resource Type | Comment
 :---|:---|:---
 1..1 | MetadataParametersIn | See [profile](StructureDefinition-bc-metadata-parameters-in.html).
-1..1 | ClientRegistryPatient | See [profile](StructureDefinition-bc-patient.html).
+1..1 | Parameters | A FHIRPath operation, limited to updates.
 {:.grid}
 
 #### Out Bundle Entries
@@ -17,14 +17,14 @@ Cardinality | Resource Type | Comment
 
 #### Metadata In Parameters
 
-Besides the two mandatory name-value pairs, see [parameters in](StructureDefinition-bc-metadata-parameters-in.html), Revise Patient has no additional paramters.
+Besides the two mandatory name-value pairs, see [here](StructureDefinition-bc-metadata-parameters-in.html) there are no additiontal In parameters required.
 
 #### Metadata Out Parameters
 
-Besides the mandatory parameters, Revise Patient has no additional out parameters.  See [parameters out](StructureDefinition-bc-metadata-parameters-out.html)
+Besides the mandatory parameters, there additional Out parameters required.
 
 #### Examples
 
-See [Revise Patient request](Bundle-Bundle-RevisePatient-Request-Example.html) example.  
-See [Revise Patient response](Bundle-Bundle-RevisePatient-Response-Example.html) example.  
-
+See [Update Patient request](Bundle-Bundle-UpdatePatient-Request-Example.html) example.
+See [Update Patient response](Bundle-Bundle-UpdatePatient-Response-Example.html)
+example.  THe update response is identifical to the example Revise Patient response.

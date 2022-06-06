@@ -15,30 +15,10 @@ Usage: #definition
 * instance = false
 * inputProfile = Canonical(ReviseRequestBundle)
 
-* parameter[0].name = #messageId
+* parameter[0].name = #ReviseRequestBundle
 * parameter[0].use = #in
 * parameter[0].min = 1
 * parameter[0].max = "1"
-* parameter[0].documentation = "Unique message ID."
-* parameter[0].type = #string
-* parameter[0].searchType = #string
-* parameter[1].name = #messageDate
-* parameter[1].use = #in
-* parameter[1].min = 1
-* parameter[1].max = "1"
-* parameter[1].documentation = "Message date and time."
-* parameter[1].type = #string
-* parameter[1].searchType = #string
-* parameter[2].name = #sender
-* parameter[2].use = #in
-* parameter[2].min = 1
-* parameter[2].max = "1"
-* parameter[2].documentation = "Source of request"
-* parameter[2].type = #Identifier
-* parameter[3].name = #patient
-* parameter[3].use = #in
-* parameter[3].min = 1
-* parameter[3].max = "1"
-* parameter[3].documentation = "The Patient."
-* parameter[3].type = #Patient
+* parameter[0].documentation = "The request bundle."
+* parameter[0].type = #Bundle
 

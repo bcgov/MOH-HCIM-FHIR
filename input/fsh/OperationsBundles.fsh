@@ -19,8 +19,8 @@ Description: "A Bundle that is used in the Get Demographics Operation request."
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "The specific bundle entries that are needed when sending the Client Registry a Find Candidates query."
 * entry contains patient 1..1 MS and parameters 1..1 MS
-* entry[parameters].resource only MetadataParameters
-* entry[parameters] ^short = "Metadata parameters."
+* entry[parameters].resource only MetadataParametersIn
+* entry[parameters] ^short = "Metadata in parameters."
 * entry[patient].resource only PatientByExample
 * entry[patient] ^short = "An example Patient with Identifier that the Client Registry will use to fufill the search request."
 
@@ -41,8 +41,8 @@ Description: "A Bundle that is used in the Client Registry response to Find Cand
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a search query."
 * entry contains patient 0..* MS and parameters 1..1 MS and operationOutcome 1..1 MS and relatedPerson 0..* MS
-* entry[parameters].resource only MetadataParameters
-* entry[parameters] ^short = "Metadata parameters."
+* entry[parameters].resource only MetadataParametersOut
+* entry[parameters] ^short = "Metadata out parameters."
 * entry[operationOutcome].resource only OperationOutcome
 * entry[operationOutcome] ^short = "Messages and codes returned by HCIM."
 * entry[patient].resource only ClientRegistryPatient
@@ -67,11 +67,11 @@ Description: "A Bundle that is used in the Client Registry response to Get Demog
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a search query."
 * entry contains patient 0..1 MS and parameters 1..1 MS and operationOutcome 1..1 MS and coverage 0..1 MS
-* entry[parameters].resource only MetadataParameters
-* entry[parameters] ^short = "Metadata parameters"
+* entry[parameters].resource only MetadataParametersOut
+* entry[parameters] ^short = "Metadata out parameters"
 * entry[operationOutcome].resource only OperationOutcome
 * entry[operationOutcome] ^short = "Messages and codes returned by HCIM."
-* entry[patient].resource only PatientByExample
+* entry[patient].resource only ClientRegistryPatient
 * entry[patient] ^short = "Matching Patient."
 * entry[coverage].resource only Coverage
 
@@ -83,9 +83,10 @@ Profile: FindCandidatesRequestBundle
 Parent: Bundle
 Id: bc-find-candidates-request-bundle
 Description: "A Bundle that is used in the Find Candidates Operation request."
+* obeys invariant-fc-1
 * type 1..1 MS
 * type = #collection (exactly)
-* entry 1..*
+* entry 2..*
 * entry.resource 1..1 MS
 * entry.fullUrl 1..1 MS
 * entry.search 0..1
@@ -95,9 +96,9 @@ Description: "A Bundle that is used in the Find Candidates Operation request."
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "The specific bundle entries that are needed when sending the Client Registry a Find Candidates query."
-* entry contains patient 0..1 MS and parameters 1..1 MS and relatedPerson 0..* MS
-* entry[parameters].resource only MetadataParameters
-* entry[parameters] ^short = "Metadata parameters."
+* entry contains patient 0..1 MS and parameters 1..1 MS and relatedPerson 0..1 MS
+* entry[parameters].resource only MetadataParametersIn
+* entry[parameters] ^short = "Metadata in parameters."
 * entry[patient].resource only PatientByExample
 * entry[patient] ^short = "An example Patient that the Client Registry will use to find matching Patients."
 * entry[relatedPerson].resource only RelatedPerson
@@ -124,8 +125,8 @@ Description:  "A Bundle that is used in the Client Registry for Add Patient requ
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a add request."
 * entry contains patient 1..1 MS and parameters 1..1 MS and mothersPHN 0..1 MS
-* entry[parameters].resource only MetadataParameters
-* entry[parameters] ^short = "Metadata parameters"
+* entry[parameters].resource only MetadataParametersIn
+* entry[parameters] ^short = "Metadata in parameters"
 * entry[patient].resource only ClientRegistryPatient
 * entry[patient] ^short = "Created Patient."
 * entry[mothersPHN].resource only RelatedPerson
@@ -148,8 +149,8 @@ Description:  "A Bundle that is used in the Client Registry response to Add Pati
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a add request."
 * entry contains patient 0..1 MS and parameters 1..1 MS and operationOutcome 1..1 MS
-* entry[parameters].resource only MetadataParameters
-* entry[parameters] ^short = "Metadata parameters"
+* entry[parameters].resource only MetadataParametersOut
+* entry[parameters] ^short = "Metadata out parameters"
 * entry[operationOutcome].resource only OperationOutcome
 * entry[operationOutcome] ^short = "Messages and codes returned by HCIM."
 * entry[patient].resource only ClientRegistryPatient
@@ -176,8 +177,8 @@ Description:  "A Bundle that is used in the Client Registry for Revise Patient r
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a add request."
 * entry contains patient 1..1 MS and parameters 1..1 MS
-* entry[parameters].resource only MetadataParameters
-* entry[parameters] ^short = "Metadata parameters"
+* entry[parameters].resource only MetadataParametersIn
+* entry[parameters] ^short = "Metadata in parameters"
 * entry[patient].resource only ClientRegistryPatient
 * entry[patient] ^short = "Patient resource with revised information."
 
@@ -198,12 +199,40 @@ Description:  "A Bundle that is used in the Client Registry response to Revise P
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a revise request."
 * entry contains patient 0..1 MS and parameters 1..1 MS and operationOutcome 1..1 MS
-* entry[parameters].resource only MetadataParameters
-* entry[parameters] ^short = "Metadata parameters"
+* entry[parameters].resource only MetadataParametersOut
+* entry[parameters] ^short = "Metadata out parameters"
 * entry[operationOutcome].resource only OperationOutcome
 * entry[operationOutcome] ^short = "Messages and codes returned by HCIM."
 * entry[patient].resource only ClientRegistryPatient
 * entry[patient] ^short = "Updated Patient."
+
+////////////////////////////////////
+// UPDATE
+////////////////////////////////////
+
+Profile: UpdateRequestBundle
+Parent: Bundle
+Id: bc-update-request-bundle
+Description:  "A Bundle that is used in the Client Registry for Patient update requests."
+* type 1..1 MS
+* type = #collection (exactly)
+* entry 2..*
+* entry.resource 1..1 MS
+* entry.fullUrl 1..1 MS
+* entry.search 0..1
+* entry.request 0..1 MS
+* entry.response 0..1
+* entry ^slicing.discriminator.type = #type
+* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.rules = #open
+* entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a add request."
+* entry contains operation 1..1 MS and parameters 1..1 MS
+* entry[parameters].resource only MetadataParametersIn
+* entry[parameters] ^short = "Metadata in parameters"
+* entry[operation].resource only Parameters
+* entry[operation] ^short = "Parameters resource with update instructions."
+
+
 
 ////////////////////////////////////
 // MERGE
@@ -226,8 +255,8 @@ Description:  "A Bundle that is used in the Client Registry for Add Patient requ
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a add request."
 * entry contains patient 1..1 MS and parameters 1..1 MS
-* entry[parameters].resource only MetadataParameters
-* entry[parameters] ^short = "Metadata parameters"
+* entry[parameters].resource only MetadataParametersIn
+* entry[parameters] ^short = "Metadata in parameters"
 * entry[patient].resource only ClientRegistryPatient
 * entry[patient] ^short = "Patient resource with merge information."
 
@@ -248,7 +277,7 @@ Description:  "A Bundle that is used in the Client Registry response to Merge Pa
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a merge request."
 * entry contains parameters 1..1 MS and operationOutcome 1..1 MS
-* entry[parameters].resource only MetadataParameters
-* entry[parameters] ^short = "Metadata parameters"
+* entry[parameters].resource only MetadataParametersOut
+* entry[parameters] ^short = "Metadata out parameters"
 * entry[operationOutcome].resource only OperationOutcome
 * entry[operationOutcome] ^short = "Messages and codes returned by HCIM."

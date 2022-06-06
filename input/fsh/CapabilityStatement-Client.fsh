@@ -10,7 +10,7 @@ A Patient change notification is a FHIR Operation where the Client Registry send
 </p>
 
 <p>
-Each request is a RevisePatientBundle. The Bundle has two entries:  One with MetadataParamters for messageId, messageDate and sender, one for a ClientRegistryPatient profile.  The following table describes the request and the four parameters; all are mandatory.  The Client Registry SHALL use the following IN parameters when sending a change notification.
+Each request is a RevisePatientBundle. The Bundle has two entries:  One with MetadataParamtersIn for messageId, messageDate and sender, one for a ClientRegistryPatient (profile of Patient).  The following table describes the request and the four parameters; all are mandatory.  The Client Registry SHALL use the following IN parameters when sending a change notification.
 </p>
 <table class=\"grid\">
 	<tr>
@@ -35,66 +35,29 @@ Each request is a RevisePatientBundle. The Bundle has two entries:  One with Met
 	</tr>
 	<tr>
 		<td>IN</td>
-		<td>messageId</td>
+		<td>ReviseRequestBundle</td>
 		<td>1..1</td>
 		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
+			<a href=\"StructureDefinition-bc-revise-request-bundle.html\">ReviseRequestBundle</a>
                 </td>
 		<td></td>
 		<td>
 			<div>
-				<p>Unique message ID.</p>
+				<p>A Bundle with the Patient change.</p>
 			</div>
 		</td>
 	</tr>
 	<tr>
-		<td>IN</td>
-		<td>messageDate</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
-                </td>
+		<td>OUT</td>
 		<td></td>
-		<td>
-			<div>
-				<p>Message date and time.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>sender</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
-		</td>
 		<td></td>
-		<td>
-			<div>
-				<p>Message sender</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>patient</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a>
-		</td>
 		<td></td>
-		<td>
-			<div>
-				<p>The Patient as ClientRegistryPatient.</p>
-			</div>
+		<td></td>
+		<td>Out is a 200 HTTP response code indicating the notificate was recieved.
 		</td>
 	</tr>
 </table>
 
-
-<p>
-The Client Registry expects a 200 HTTP status code in return when the request is received.
-</p>
 
 </div>"
 
@@ -113,6 +76,6 @@ The Client Registry expects a 200 HTTP status code in return when the request is
 * format[0] = #json
 
 * rest[0].mode = #client
-* rest[0].resource[0].type = #Parameters
-* rest[0].resource[0].operation[0].name = "Distribution"
+* rest[0].resource[0].type = #Bundle
+* rest[0].resource[0].operation[0].name = "PatientNotification"
 * rest[0].resource[0].operation[0].definition = Canonical(PatientNotification)

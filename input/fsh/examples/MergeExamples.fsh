@@ -13,7 +13,7 @@ Description: "Example of $MergePatient operation."
 * entry[patient].resource = Patient-MergePatient-Example
 
 Instance: Parameters-MergePatient-TwoNonSurvivors-Example
-InstanceOf: MetadataParameters
+InstanceOf: MetadataParametersIn
 Description: "Example of $MergePatient operation."
 
 * parameter[messageId].name = "messageId"
@@ -22,16 +22,8 @@ Description: "Example of $MergePatient operation."
 * parameter[messageDateTime].name = "messageDateTime"
 * parameter[messageDateTime].valueDateTime = "2021-11-02T13:28:17-08:00"
 
-* parameter[sender].name = "sender"
-* parameter[sender].valueIdentifier.value = "NHA"
-* parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
-
-* parameter[enterer].name = "enterer"
-* parameter[enterer].valueIdentifier.value = "nvida"
-* parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
-
 Instance: Parameters-MergePatient-Response-Example
-InstanceOf: MetadataParameters
+InstanceOf: MetadataParametersOut
 Description: "Example of Merge response Metadata parameters"
 
 * parameter[messageId].name = "messageId"

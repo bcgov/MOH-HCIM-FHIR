@@ -1,8 +1,30 @@
-The response to a MergePatient Operation is a Bundle of type collection.  The Bundle includes 
-* a Patient resource when the interaction was successful for the surviving Patient
-* a OperationOutcome resource where errors and warnings are returned
-* a Parameters resource (specifically [MetadataParameters](StructureDefinition-bc-metadata-parameters.html))
 
-If this is an asynchronous merge then the MetadataParameters must contain the request MessageID in the requestMessageId field.
 
-See [Merge Patient response](StructureDefinition-bc-merge-response-bundle.html)
+#### In Bundle Entries
+
+Cardinality | Resource Type | Comment
+:---|:---|:---
+1..1 | MetadataParametersIn | See [profile](StructureDefinition-bc-metadata-parameters-in.html).
+0..1 | ClientRegistryPatient | See [profile](StructureDefinition-bc-patient.html).
+{:.grid}
+
+#### Out Bundle Entries
+
+Cardinality | Resource Type | Comment
+:---|:---|:---
+1..1 | MetadataParametersOut | See [profile](StructureDefinition-bc-metadata-parameters-out.html).
+1,,1 | OperationOutcome | An OperationOutcome resource that has warnings and errors regarding the operation requested.
+{:.grid}
+
+#### Metadata In Parameters
+
+Besides the two mandatory name-value pairs, none.
+
+#### Metadata Out Parameters
+
+Besides the mandatory parameters, none.
+
+#### Examples
+
+See [Merge Patient request](Bundle-Bundle-MergePatient-Request-Example.html) example.  
+See [Merge Patient response](Bundle-Bundle-MergePatient-Response-Example.html) example.  

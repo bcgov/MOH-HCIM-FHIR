@@ -6,6 +6,6 @@ The Get Demographics with Eligibility query is an Operation.
 
 This a special case of Get Demographics that returns the British Columbia insurance eligibility of the Patient in addition to the Patient record using the Coverage resource.
 
-The request is a Bundle with Resources for search parameters (MetadataParameters), a Patient to match against.
+The request is a Bundle with Resources for search parameters (MetadataParametersIn), a Patient to match against.
 
 The Patient Bundle entry is a [Patient by Example](StructureDefinition-bc-patient-by-example.html). The patient is a constrained Patient resource limited to the availabe search criteria. See the Get Demographics [search design](search.html#get-demographics-search) for more details on the critera.

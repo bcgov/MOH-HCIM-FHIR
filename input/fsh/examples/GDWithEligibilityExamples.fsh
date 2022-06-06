@@ -1,5 +1,5 @@
 Instance: Parameters-GetDemographicsWithEligibility-Example
-InstanceOf: MetadataParameters
+InstanceOf: MetadataParametersIn
 Description: "Example of $GetDemographics.withEligibility operation"
 * parameter[messageId].name = "messageId"
 * parameter[messageId].valueString = "98028b44-882a-4c72-8c92-b87d916147e1"
@@ -7,23 +7,15 @@ Description: "Example of $GetDemographics.withEligibility operation"
 * parameter[messageDateTime].name = "messageDateTime"
 * parameter[messageDateTime].valueDateTime = "2015-02-07T13:28:17-08:00"
 
-* parameter[sender].name = "sender"
-* parameter[sender].valueIdentifier.value = "VPP"
-* parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
-
-* parameter[enterer].name = "enterer"
-* parameter[enterer].valueIdentifier.value = "bob@me.com"
-* parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-userid"
-
-* parameter[4].name = "identifier"
-* parameter[4].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* parameter[4].valueIdentifier.value = "912345892"
-* parameter[4].valueIdentifier.type.coding.code = #JHN
-* parameter[4].valueIdentifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* parameter[2].name = "identifier"
+* parameter[2].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
+* parameter[2].valueIdentifier.value = "912345892"
+* parameter[2].valueIdentifier.type.coding.code = #JHN
+* parameter[2].valueIdentifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 
 
 Instance: Parameters-GetDemographicsWithEligibility-Response-Example
-InstanceOf: MetadataParameters
+InstanceOf: MetadataParametersOut
 Description: "Example of $GetDemographics.withEligibility response Metadata parameters"
 
 * parameter[messageId].name = "messageId"

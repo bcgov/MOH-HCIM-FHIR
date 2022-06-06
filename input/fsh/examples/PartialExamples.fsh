@@ -1,5 +1,5 @@
 Instance: Parameters-UpdatePatient-Example
-InstanceOf: MetadataParameters
+InstanceOf: MetadataParametersIn
 Description: "Example of $RevisePatient operation that updates an existing Patient"
 
 * parameter[messageId].name = "messageId"
@@ -8,22 +8,14 @@ Description: "Example of $RevisePatient operation that updates an existing Patie
 * parameter[messageDateTime].name = "messageDateTime"
 * parameter[messageDateTime].valueDateTime = "2021-11-02T13:28:17-08:00"
 
-* parameter[sender].name = "sender"
-* parameter[sender].valueIdentifier.value = "PHARM"
-* parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
+* parameter[2].name = "SRI"
+* parameter[2].valueIdentifier = IdentifierExampleSRINoPeriod
 
-* parameter[enterer].name = "enterer"
-* parameter[enterer].valueIdentifier.value = "klgodfre"
-* parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
-
-* parameter[4].name = "SRI"
-* parameter[4].valueIdentifier = IdentifierExampleSRINoPeriod
-
-* parameter[5].name = "patchOperation"
-* parameter[5].resource = Parameters-DeletePatch-Example
+* parameter[3].name = "patchOperation"
+* parameter[3].resource = Parameters-DeletePatch-Example
 
 Instance: Parameters-UpdatePatient-Response-Example
-InstanceOf: MetadataParameters
+InstanceOf: MetadataParametersOut
 Description: "Example of Update response Metadata parameters"
 
 * parameter[messageId].name = "messageId"

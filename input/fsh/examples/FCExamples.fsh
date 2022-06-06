@@ -21,7 +21,7 @@ Description: "RelatedPerson, representing Mother, for Find Candidate Operation b
 
 
 Instance: Parameters-FindCandidates-Response-Example
-InstanceOf: MetadataParameters
+InstanceOf: MetadataParametersOut
 Description: "Example of $FindCandidates response Metadata parameters"
 
 * parameter[messageId].name = "messageId"
@@ -37,6 +37,8 @@ Description: "Example of $FindCandidates response Metadata parameters"
 * parameter[sender].valueIdentifier.value = "123123345"
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 
+* parameter[requestParameters].name = "requestParameters"
+* parameter[requestParameters].resource = Parameters-FindCandidates-Example
 
 Instance: Bundle-FindCandidates-Response-Example
 InstanceOf: SearchResponseBundle

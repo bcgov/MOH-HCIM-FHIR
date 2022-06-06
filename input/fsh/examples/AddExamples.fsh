@@ -13,7 +13,7 @@ Description: "Example of $AddPatient operation."
 * entry[patient].resource = Patient-AddPatient-Example
 
 Instance: Parameters-AddPatient-Example
-InstanceOf: MetadataParameters
+InstanceOf: MetadataParametersIn
 Description: "Example of $AddPatient parameters."
 
 * parameter[messageId].name = "messageId"
@@ -21,14 +21,6 @@ Description: "Example of $AddPatient parameters."
 
 * parameter[messageDateTime].name = "messageDateTime"
 * parameter[messageDateTime].valueDateTime = "2021-11-02T13:28:17-08:00"
-
-* parameter[sender].name = "sender"
-* parameter[sender].valueIdentifier.value = "PHARM"
-* parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
-
-* parameter[enterer].name = "enterer"
-* parameter[enterer].valueIdentifier.value = "klgodfre"
-* parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
 
 Instance: Bundle-AddPatient-Newborn-Request-Example
 InstanceOf: AddRequestBundle
@@ -49,7 +41,7 @@ Description: "Example of $AddPatient operation for a newborn."
 
 
 Instance: Parameters-AddPatient-Newborn-Example
-InstanceOf: MetadataParameters
+InstanceOf: MetadataParametersIn
 Description: "Example of $RevisePatient.Newborn operation where the Patient is a newborn."
 
 * parameter[messageId].name = "messageId"
@@ -58,17 +50,8 @@ Description: "Example of $RevisePatient.Newborn operation where the Patient is a
 * parameter[messageDateTime].name = "messageDateTime"
 * parameter[messageDateTime].valueDateTime = "2021-11-02T13:28:17-08:00"
 
-* parameter[sender].name = "sender"
-* parameter[sender].valueIdentifier.value = "IHA"
-* parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
-
-* parameter[enterer].name = "enterer"
-* parameter[enterer].valueIdentifier.value = "klgodfre"
-* parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-user"
-
-
 Instance: Parameters-AddPatient-Response-Example
-InstanceOf: MetadataParameters
+InstanceOf: MetadataParametersOut
 Description: "Example of Add response Metadata parameters"
 
 * parameter[messageId].name = "messageId"

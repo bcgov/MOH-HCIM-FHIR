@@ -130,8 +130,8 @@ $GetDemographics | [Get Demographics request profile](StructureDefinition-bc-get
 $GetDemographics.withEligibility | [Get Demographics with Eligibility Bundle profile](StructureDefinition-bc-get-demographics-request-bundle.html) | [Get Demographics response profile](StructureDefinition-bc-search-response-bundle.html) |
 $RevisePatient | [Revise Patient request profile](StructureDefinition-bc-revise-request-bundle.html) | [Revise Patient response profile](StructureDefinition-bc-revise-response-bundle.html) |
 $RevisePatient.Async |  [Revise Patient request profile](StructureDefinition-bc-revise-request-bundle.html) | [Revise Patient response profile](StructureDefinition-bc-revise-response-bundle.html) |
-$UpdatePatient | [Update Patient operation](OperationDefinition-bc-patient-partial-revise.html) | [Update Patient response profile](StructureDefinition-bc-revise-response-bundle.html) (uses revise)|
-$UpdatePatient.Async |[Update Patient operation](OperationDefinition-bc-patient-partial-revise.html) | [Update Patient response profile](StructureDefinition-bc-revise-response-bundle.html) (uses revise)|
+$UpdatePatient | [Update Patient operation](OperationDefinition-bc-patient-update.html) | [Update Patient response profile](StructureDefinition-bc-revise-response-bundle.html) (uses revise)|
+$UpdatePatient.Async |[Update Patient operation](OperationDefinition-bc-patient-update.html) | [Update Patient response profile](StructureDefinition-bc-revise-response-bundle.html) (uses revise)|
 $AddPatient | [Add Patient request profile](StructureDefinition-bc-add-request-bundle.html) | [Add Patient response profile](StructureDefinition-bc-add-response-bundle.html) |
 $AddPatient.Async | [Add Patient request profile](StructureDefinition-bc-add-request-bundle.html) | [Add Patient response profile](StructureDefinition-bc-add-response-bundle.html) |
 $MergePatient | [Merge Patient request profile](StructureDefinition-bc-merge-request-bundle.html) | [Merge Patient response profile](StructureDefinition-bc-merge-response-bundle.html) |

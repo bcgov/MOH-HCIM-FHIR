@@ -5,3 +5,4 @@ This is the Revise Patient operation.  The request is a Bundle and is used for i
 A Patient resource is required to update or add a patient.  If updating, the empty attributes in the Patient resource will be deleted by the Client Registry.
 
 
+
