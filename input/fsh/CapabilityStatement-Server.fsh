@@ -64,7 +64,7 @@ The Client Registry FHIR implementation only supports JSON format and the client
 All interactions with Patient resources SHALL use the ClientRegistryPatient profile. The exception is the FindCandidates and GetDemographics Operations which use the PatientByExample instead of ClientRegistryPatient in the request.
 </li>
 <li>
-Any Parameters profile SHALL be MetadataParametersIn or MetadataParametersOut.
+Any Parameters' profiles used SHALL be MetadataParametersIn or MetadataParametersOut.
 </li>  
 <li>
 Only the 'resource type' FHIR Operation is supported by the Client Registry, e.g. /Patient/$[Operation Name]; not system /$[Operation Name] and not resource instance /Patient/[id]/$[Operation Name].  Requesting users SHALL use only the resource type of FHIR Operation.
@@ -111,7 +111,7 @@ The Client Registry users SHALL monitor the HTTP response codes returned with a 
 <h3>Search</h3>
 <h4>Find Candidates</h4>
 <p>
-The FindCandidates FHIR Operation search SHALL use the following parameters, mandatory or optional according to the cardinality rules below.  This search may return zero or more Patients using the ClientRegistryPatient profile.  Wildcards are not permitted.
+The FindCandidates FHIR Operation search SHALL use the following Bundles.  This search MAY return zero or more Patients using the ClientRegistryPatient profile.  Wildcards are not permitted.
 </p>
 
 
@@ -138,99 +138,28 @@ The FindCandidates FHIR Operation search SHALL use the following parameters, man
 	</tr>
 	<tr>
 		<td>IN</td>
-		<td>messageId</td>
+		<td>Find Candidates Request Bundle</td>
 		<td>1..1</td>
 		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
-			(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td>
+			<a href=\"StructureDefinition-bc-find-candidates-request-bundle.html\">FindCandidatesRequestBundle</a></td>
 		<td></td>
 		<td>
 			<div>
-				<p>Unique message ID.</p>
+				<p>Request bundle.</p>
 			</div>
 		</td>
 	</tr>
 	<tr>
-		<td>IN</td>
-		<td>messageDateTime</td>
+		<td>OUT</td>
+		<td>Find Candidates Response Bundle</td>
 		<td>1..1</td>
 		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a>
+			<a href=\"StructureDefinition-bc-search-response-bundle.html\">SearchResponseBundle</a>
 		</td>
 		<td></td>
 		<td>
 			<div>
-				<p>Message date and time.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>sender</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Requesting organization</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>enterer</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>UserId of sender</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>identifiersOnly</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Instruct the Client Registry to return only Patient Identifiers when true.  If not present, defaults to false.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>patient</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Patient\">Patient</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Patient, an example for searching.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>mothersPHN</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">RelatedPerson</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Patient mother's PHN.</p>
+				<p>Response bundle.</p>
 			</div>
 		</td>
 	</tr>
@@ -238,7 +167,7 @@ The FindCandidates FHIR Operation search SHALL use the following parameters, man
 
 <h4>Get Demographics</h4>
 <p>
-The GetDemographics FHIR Operation SHALL use the following parameters pairs, mandatory or optional according to the cardinality rules below.  This search may return zero or one Patient using the Patient profile.
+The GetDemographics FHIR Operation SHALL use the following Bundles.  This search may return zero or one Patient using the Patient profile.
 </p>
 <table class=\"grid\">
 	<tr>
@@ -263,99 +192,28 @@ The GetDemographics FHIR Operation SHALL use the following parameters pairs, man
 	</tr>
 	<tr>
 		<td>IN</td>
-		<td>messageId</td>
+		<td>Get Demographics Request Bundle</td>
 		<td>1..1</td>
 		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
-		</td>
+			<a href=\"StructureDefinition-bc-get-demographics-request-bundle.html\">GetDemographicsRequestBundle</a></td>
 		<td></td>
 		<td>
 			<div>
-				<p>Unique message ID.</p>
+				<p>Request bundle.</p>
 			</div>
 		</td>
 	</tr>
 	<tr>
-		<td>IN</td>
-		<td>messageDateTime</td>
+		<td>OUT</td>
+		<td>Get Demographics Response Bundle</td>
 		<td>1..1</td>
 		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a>
+			<a href=\"StructureDefinition-bc-search-response-bundle.html\">SearchResponseBundle</a>
 		</td>
 		<td></td>
 		<td>
 			<div>
-				<p>Message date and time.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>sender</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Requesting organization</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>enterer</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>UserId of sender</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>identifiersOnly</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Instruct the Client Registry to return only Patient Identifiers when true.  If not present, defaults to false.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>withHistory</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Boolean flag to return Patient's history.  If missing, defaults to false.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>patient</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Patient\">Patient</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Patient by example with identifier.</p>
+				<p>Response bundle.</p>
 			</div>
 		</td>
 	</tr>
@@ -364,7 +222,7 @@ The GetDemographics FHIR Operation SHALL use the following parameters pairs, man
 
 <h4>Get Demographics with Eligibility</h4>
 <p>
-The GetDemographics.withEligibility FHIR Operation SHALL use the following name-value parameters pairs, mandatory or optional according to the cardinality rules below.  This search may return zero or one Patient using the Patient profile.
+The GetDemographics.withEligibility FHIR Operation SHALL use the following Bundles.  This search may return zero or one Patient using the Patient profile.
 </p>
 <table class=\"grid\">
 	<tr>
@@ -387,110 +245,39 @@ The GetDemographics.withEligibility FHIR Operation SHALL use the following name-
 			<b>Documentation</b>
 		</td>
 	</tr>
-	<tr>
-		<td>IN</td>
-		<td>messageId</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Unique message ID</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>messageDateTime</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Message date and time</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>sender</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Requesting organization</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>enterer</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>UserId of sender</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>withHistory</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Boolean flag to return Patient's history.  If missing, defaults to false.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>identifiersOnly</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defaults to false.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>patient</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Patient\">Patient</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>The Patient, by example.</p>
-			</div>
-		</td>
-	</tr>
+        <tr>
+                <td>IN</td>
+                <td>Get Demographics with Eligibility Request Bundle</td>
+                <td>1..1</td>
+                <td>
+                        <a href=\"StructureDefinition-bc-get-demographics-request-bundle.html\">GetDemographicsRequestBundle</a></td>
+                <td></td>
+                <td>
+                        <div>
+                                <p>Request bundle.</p>
+                        </div>
+                </td>
+        </tr>
+        <tr>
+                <td>OUT</td>
+                <td>Get Demographics with Eligibility Response Bundle</td>
+                <td>1..1</td>
+                <td>
+                        <a href=\"StructureDefinition-bc-search-withEligibility-response-bundle.html\">SearchWithEligibilityResponseBundle</a>
+                </td>
+                <td></td>
+                <td>
+                        <div>
+                                <p>Response bundle.</p>
+                        </div>
+                </td>
+        </tr>
 </table>
 
 
 <h3>Revise Patient</h3>
 <p>
-The RevisePatient FHIR Operation SHALL use the following name-value parameters pairs, mandatory or optional according to the cardinality rules below.
+The RevisePatient FHIR Operation SHALL use the following Bundles.
 </p>
 <table class=\"grid\">
 	<tr>
@@ -513,81 +300,39 @@ The RevisePatient FHIR Operation SHALL use the following name-value parameters p
 			<b>Documentation</b>
 		</td>
 	</tr>
-	<tr>
-		<td>IN</td>
-		<td>messageId</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
+
+        <tr>
+                <td>IN</td>
+                <td>Revise Request Bundle</td>
+                <td>1..1</td>
+                <td>
+                        <a href=\"StructureDefinition-bc-revise-request-bundle.html\">ReviseRequestBundle</a></td>
+                <td></td>
+                <td>
+                        <div>
+                                <p>Request bundle.</p>
+                        </div>
                 </td>
-		<td></td>
-		<td>
-			<div>
-				<p>Unique message ID.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>messageDate</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
+        </tr>
+        <tr>
+                <td>OUT</td>
+                <td>Revise Response Bundle</td>
+                <td>1..1</td>
+                <td>
+                        <a href=\"StructureDefinition-bc-revise-response-bundle.html\">ReviseResponseBundle</a>
                 </td>
-		<td></td>
-		<td>
-			<div>
-				<p>Message date and time.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>sender</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Requesting organization</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>enterer</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>UserId of sender</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>patient</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>The Patient.</p>
-			</div>
-		</td>
-	</tr>
+                <td></td>
+                <td>
+                        <div>
+                                <p>Response bundle.</p>
+                        </div>
+                </td>
+        </tr>
 </table>
 
 <h3>Add Patient</h3>
 <p>
-The AddPatient FHIR Operation SHALL use the following name-value parameters pairs, mandatory or optional according to the cardinality rules below.
+The AddPatient FHIR Operation SHALL use the following Bundles.
 </p>
 <table class=\"grid\">
 	<tr>
@@ -610,95 +355,40 @@ The AddPatient FHIR Operation SHALL use the following name-value parameters pair
 			<b>Documentation</b>
 		</td>
 	</tr>
-	<tr>
-		<td>IN</td>
-		<td>messageId</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
+
+        <tr>
+                <td>IN</td>
+                <td>Add Request Bundle</td>
+                <td>1..1</td>
+                <td>
+                        <a href=\"StructureDefinition-bc-add-request-bundle.html\">AddRequestBundle</a></td>
+                <td></td>
+                <td>
+                        <div>
+                                <p>Request bundle.</p>
+                        </div>
                 </td>
-		<td></td>
-		<td>
-			<div>
-				<p>Unique message ID.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>messageDate</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
+        </tr>
+        <tr>
+                <td>OUT</td>
+                <td>Add Response Bundle</td>
+                <td>1..1</td>
+                <td>
+                        <a href=\"StructureDefinition-bc-add-response-bundle.html\">AddResponseBundle</a>
                 </td>
-		<td></td>
-		<td>
-			<div>
-				<p>Message date and time.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>sender</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Requesting organization</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>enterer</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>UserId of sender</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>patient</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>The Patient.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>mothersPHN</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">RelatedPerson</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Patient mother's PHN.</p>
-			</div>
-		</td>
-	</tr>
+                <td></td>
+                <td>
+                        <div>
+                                <p>Response bundle.</p>
+                        </div>
+                </td>
+        </tr>
+
 </table>
 
 <h3>Update Patient</h3>
 <p>
-The UpdatePatient FHIR Operation SHALL use the following name-value parameters pairs, mandatory or optional according to the cardinality rules below.
+The UpdatePatient FHIR Operation SHALL use the following Bundles.
 </p>
 <table class=\"grid\">
 	<tr>
@@ -721,81 +411,42 @@ The UpdatePatient FHIR Operation SHALL use the following name-value parameters p
 			<b>Documentation</b>
 		</td>
 	</tr>
-	<tr>
-		<td>IN</td>
-		<td>messageId</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
+
+
+
+        <tr>
+                <td>IN</td>
+                <td>Update Request Bundle</td>
+                <td>1..1</td>
+                <td>
+                        <a href=\"StructureDefinition-bc-update-request-bundle.html\">UpdateRequestBundle</a></td>
+                <td></td>
+                <td>
+                        <div>
+                                <p>Request bundle.</p>
+                        </div>
                 </td>
-		<td></td>
-		<td>
-			<div>
-				<p>Unique message ID.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>messageDate</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
+        </tr>
+        <tr>
+                <td>OUT</td>
+                <td>Update Response Bundle</td>
+                <td>1..1</td>
+                <td>
+                        <a href=\"StructureDefinition-bc-revise-response-bundle.html\">ReviseResponseBundle</a>
                 </td>
-		<td></td>
-		<td>
-			<div>
-				<p>Message date and time.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>sender</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Requesting organization</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>enterer</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>UserId of sender</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>patchOperation</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/parameters.html\">Parameters</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>The path operation parameters.</p>
-			</div>
-		</td>
-	</tr>
+                <td></td>
+                <td>
+                        <div>
+                                <p>Response bundle is a Revise Response Bundle.</p>
+                        </div>
+                </td>
+        </tr>
 </table>
 
 <h3>Merge Patient</h3>
 <p>
-The MergePatient FHIR Operation SHALL use the following name-value parameters pairs, mandatory or optional according to the cardinality rules below.
+The MergePatient FHIR Operation SHALL use the following Bundles.</p>
+<p>   
 The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 </p>
 <table class=\"grid\">
@@ -819,76 +470,37 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 			<b>Documentation</b>
 		</td>
 	</tr>
-	<tr>
-		<td>IN</td>
-		<td>messageId</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Unique message ID.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>messageDate</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Message date and time.</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>sender</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>Requesting organization</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>enterer</td>
-		<td>0..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a>
-		</td>
-		<td></td>
-		<td>
-			<div>
-				<p>UserId of sender</p>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>IN</td>
-		<td>patient</td>
-		<td>1..1</td>
-		<td>
-			<a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a>
-		</td>
-		<td></td>
-`		<td>
-			<div>
-				<p>The Patient.</p>
-			</div>
-		</td>
-	</tr>
+
+
+
+
+        <tr>
+                <td>IN</td>
+                <td>Merge Request Bundle</td>
+                <td>1..1</td>
+                <td>
+                        <a href=\"StructureDefinition-bc-merge-request-bundle.html\">MergeRequestBundle</a></td>
+                <td></td>
+                <td>
+                        <div>
+                                <p>Request bundle.</p>
+                        </div>
+                </td>
+        </tr>
+        <tr>
+                <td>OUT</td>
+                <td>Merge Response Bundle</td>
+                <td>1..1</td>
+                <td>
+                        <a href=\"StructureDefinition-bc-merge-response-bundle.html\">MergeResponseBundle</a>
+                </td>
+                <td></td>
+                <td>
+                        <div>
+                                <p>Response bundle.</p>
+                        </div>
+                </td>
+        </tr>
 </table>
 </div>"
 
