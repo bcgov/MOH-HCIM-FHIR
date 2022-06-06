@@ -67,7 +67,7 @@ All interactions with Patient resources SHALL use the ClientRegistryPatient prof
 Any Parameters' profiles used SHALL be MetadataParametersIn or MetadataParametersOut.
 </li>  
 <li>
-Only the 'resource type' FHIR Operation is supported by the Client Registry, e.g. /Patient/$[Operation Name]; not system /$[Operation Name] and not resource instance /Patient/[id]/$[Operation Name].  Requesting users SHALL use only the resource type of FHIR Operation.
+Only the 'resource type' FHIR Operation is supported by the Client Registry, e.g. \"/Patient/$[Operation Name]\"; not system \"/$[Operation Name]\" and not resource instance \"/Patient/[id]/$[Operation Name]\".  Requesting users SHALL use only the resource type of FHIR Operation.
 </li>
 <li>
 All of the profiles include elements that are marked as Must Support. For the purposes of this guide, Must Support is intended to represent those fields that will be exchanged between client applications and the Client Registry server. Client applications who are receiving information SHALL be able to receive all fields marked as Must Support without raising an exception. When sending information to the Client Registry server, client applications SHOULD be able to send any fields marked as Must Support.
@@ -86,26 +86,31 @@ Users SHALL follow the above asynchronous pattern when invoking an asynchronous 
 
 <h3>General Rules OUT</h3>
 <p>
-Each Operation returns a Bundle.  The Bundles may be of type searchset or collection.  The two searches, GetDemographics and FindCandidates both return searchset bundles.  The Add, Revise and Merge return collection Bundle resources.  
+Each Operation SHALL return a Bundle.  The Bundles MAY be of type searchset or collection.  The two searches, GetDemographics and FindCandidates SHALL return searchset bundles.  The Add, Revise and Merge SHALL return collection Bundle resources.  
 
-Each operation uses a unique Bundle profile in the response to enforce cardinalality rules.
+Each operation MAY use a unique Bundle profile in the response to enforce cardinalality rules.
 </p>
 <p>
-In summary the response Bundles for every Operation will be structured as follows:
+In summary the response Bundles for every Operation SHALL be structured as follows:
 </p>
 <ul>
 <li>Entry of MetadataParametersOut</li>
 	<ul>
-	<li>If a search, the request Parameters are echoed back in a MetadataParametersIn resource</li>
+	<li>If a search, the request Parameters are be echoed back in a MetadataParametersIn resource within the MetadataParametersOut resource</li>
 	</ul>
-<li>Entry with OperationOutcome</li>
+<li>One entry with OperationOutcome</li>
 <li>Zero or more entries of ClientRegistryPatient</li>
 <li>Zero or more entries of RelatedPerson</li>
 </ul>
 
+<h4>Data Absent Reason</h4>
+<p>
+If the Data Absent extension is present in an attribute History, for that attribute, SHALL not be returned.  If data is absent it is primarly because the record is restricted and therefore returning History isn't permitted.
+</p>
+
 <h3>Error Handling</h3>
 <p>
-The Client Registry users SHALL monitor the HTTP response codes returned with a response.  If the code is not 2xx the user will find  errors in the OperationOutcome resource in the response Bundle.
+The Client Registry users SHALL monitor the HTTP response codes returned with a response.  If the code is not 2xx the user SHALL examine the  errors in the OperationOutcome resource in the response Bundle.
 </p>
 
 <h3>Search</h3>

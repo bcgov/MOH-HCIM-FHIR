@@ -29,7 +29,7 @@ The main outcomes from the design process were as follows:
 - The primary resource is Patient and Patient will be used to communicate client attributes
 - The JSON text format will be used to receive and transmit FHIR resources
 - FHIR Operations will be used for Client Registry interactions
-- The Parameters resource used in the FHIR Operations may include Patient resources as well as name value pair parameters
+- The Bundle resource used in the FHIR Operations
 - Some FHIR extensions are necessary, they are outlined below
 - There are several new interactions and features, these are described below
 
@@ -96,7 +96,7 @@ Gender | female | female
 
 #### FHIR Operations
 
-Client Registry will use the FHIR Operations pattern to exchange information.  These are the Operations that Client Registry FHIR will support:
+The Client Registry will use the FHIR Operations pattern to exchange information.  These are the Operations that Client Registry FHIR will support:
 
 Operations |
 :--- |
@@ -141,7 +141,7 @@ $PatientNotification |  [Patient Notification request profile](StructureDefiniti
 
 ##### Responses
 
-Response resources are wrapped in Bundles that contain Patients and an OperationOutcome.  A search operation like Get Demographics or Find Candidates will be a searchset Bundle that echoes back the search parameters by including an extra Parameters resource in the Bundle.
+Response resources are wrapped in Bundles.  A search operation like Get Demographics or Find Candidates will be a searchset Bundle that echoes back the search parameters by including an extra Parameters resource in the Bundle.
 
 ### Design Outcomes - Details
 
@@ -149,17 +149,18 @@ This guide touches on some of the business and conformance rules regarding use o
 
 #### Operational Parameter Resource
 
-Each interaction is a FHIR Operation and as such has a set of possible parameters.  The table below outlines the parameters and whether they are IN, OUT or could apply to both requests and responses.
+Each interaction is a FHIR Operation using a Bundle.  The BUndle entries will consists of parameters, patients, etc.
 
-The table is only showing the standard interaction parameters, each Operation may have more parameters such as Patient, OperationOutcome, etc.  More detailed information regarding each Operation can be found in the [Operation definitions](artifacts.html#operation-definitions).
+The table below is only showing the standard parameters included in each Bundle; each Operation may have more parameters such as withHistory or mother's PHN.  More detailed information regarding each Operation can be found in the [Operation definitions](artifacts.html#operation-definitions).
 
 Parameter Name|Parameter Value|Comments|IN, OUT, both
 :---|:---|:---|:---
 message id|parameter.value[string]|Message (unique) id|both
 create time|parameter.value[dateTime]|Creation date of message|both
 request message id|parameter.value[string]|Message (unique) id|OUT
-sender|parameter.value[Identifier]|Message sender|both
-enterer|parameter.value[Identifier]|UserId for message|both
+sender|parameter.value[Identifier]|Message sender|OUT
+enterer|parameter.value[Identifier]|UserId for message|OUT
+requestParameters|parameter.value[MetadataParametersIn]|For searches this is included in the response and echoes back the search IN parameters.
 {:.grid}
 
 #### Searches
@@ -174,7 +175,7 @@ https://…./$GetDemographics.withEligibility | Searching for a single Patient a
 
 Find Candidates may return zero or more candidates, while Get Demographics is designed to return zero or a single matching Patient.  These searches are expected to provide the required information to confirm a person's identify.
 
-[Search page](search.html "Find Candidates and Get Demographics")
+More details can be found here, [Search page](search.html "Find Candidates and Get Demographics").
 
 #### Add, Revise and/or Merge Patient
 
@@ -198,13 +199,13 @@ These business transactions will allow the user to:
 - generate a PHN for a new client; or
 - resolve duplicate Patients.
 
-[Add, Revise and Merge page](reviseAndMerge.html)
+More details can be found here, [Add, Revise and Merge page](reviseAndMerge.html).
 
 #### Distributions
 
 Distributions will use an endpoint called PatientNotification.  The FHIR structure of the interaction is the same as RevisePatient.
 
-[Patient Notifications](distributions.html)
+See [Patient Notifications](distributions.html) for more details.
 
 ##### Asynchronous Operations
 The asynchronous versions of Add, Revise and Merge Operations share the same request and response profile as the synchronous version.
@@ -212,7 +213,7 @@ The asynchronous versions of Add, Revise and Merge Operations share the same req
 The FHIR asynchronous pattern is not followed by this FHIR implementation.  The existing pattern the Client Registry uses today will be mimicked.  I.e.
 1. User sends request
 1. Client Registry responds with HTTP 202 Accepted
-1. Client Registry sends request to user's end point
+1. And later, Client Registry sends request to user's end point
 1. User system responds with 202 Accepted
 
 ### Error Handling
