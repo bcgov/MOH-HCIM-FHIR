@@ -234,7 +234,7 @@
         
           Draft
           
-            as of 2022-05-17
+            as of 2022-06-06
           
         
       </td>
@@ -256,6 +256,22 @@
 
 
 
+<div style="display:inline-block" markdown="1">
+
+<blockquote>
+  <p><span style="color:red">Note</span><br />This specification is currently published as a Draft Standard on the ministry GitHub and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.</p>
+</blockquote>
+
+<p>This is the Patient Notification operation, aka Distribution.</p>
+
+<p>A Patient resource is required to notify that a patient record has changed.  This interaction is similar to RevisePatient, but the Client Registry is acting as the client.</p>
+
+
+</div>
+
+
+
+
 <!--  <p>
   Formats: <a href="OperationDefinition-bc-patient-notification.xml.html">XML</a>, <a href="OperationDefinition-bc-patient-notification.json.html">JSON</a>, <a href="OperationDefinition-bc-patient-notification.ttl.html">Turtle</a>
   </p>-->
@@ -263,14 +279,62 @@
   
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><h2>PatientNotification</h2><p>OPERATION: PatientNotification</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-notification</pre><p>URL: [base]/Patient/$PatientNotification</p><p>Input parameters Profile: <a href="StructureDefinition-bc-revise-request-bundle.html">ReviseRequestBundle</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Unique message ID.</p>
-</div></td></tr><tr><td>IN</td><td>messageDate</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Message date and time.</p>
-</div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>Source of request</p>
-</div></td></tr><tr><td>IN</td><td>patient</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td/><td><div><p>The Patient.</p>
+  <div xmlns="http://www.w3.org/1999/xhtml"><h2>PatientNotification</h2><p>OPERATION: PatientNotification</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-notification</pre><p>URL: [base]/Patient/$PatientNotification</p><p>Input parameters Profile: <a href="StructureDefinition-bc-revise-request-bundle.html">ReviseRequestBundle</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>ReviseRequestBundle</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td><td/><td><div><p>The request bundle.</p>
 </div></td></tr></table></div>
 
   <!-- insert notes if present -->
   
+
+<h3>Notes:</h3>
+
+
+<div style="display:inline-block" markdown="1">
+
+<p>The response to a Patient Notification Operation is a HTTP status code 200 on success without a body..</p>
+
+<h4 id="in-bundle-entries">In Bundle Entries</h4>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th style="text-align: left">Cardinality</th>
+      <th style="text-align: left">Resource Type</th>
+      <th style="text-align: left">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">1..1</td>
+      <td style="text-align: left">MetadataParametersIn</td>
+      <td style="text-align: left">See <a href="StructureDefinition-bc-metadata-parameters-in.html">profile</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">1..1</td>
+      <td style="text-align: left">ClientRegistryPatient</td>
+      <td style="text-align: left">See <a href="StructureDefinition-bc-patient-by-example.html">profile</a>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="out-bundle-entries">Out Bundle Entries</h4>
+
+<p>N/A</p>
+
+<h4 id="metadata-in-parameters">Metadata In Parameters</h4>
+
+<p>Besides the two mandatory name-value pairs, none.</p>
+
+<h4 id="metadata-out-parameters">Metadata Out Parameters</h4>
+
+<p>N/A</p>
+
+<h4 id="examples">Examples</h4>
+
+<p>See <a href="Bundle-Bundle-RevisePatient-Request-Example.html">Patient Notification request</a> example.  This the revise patient example as it is identical to the notification request.</p>
+
+
+</div>
+
 
 
 
@@ -298,7 +362,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 17, 2022 18:05+0000">2022-05-17</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jun 6, 2022 16:35+0000">2022-06-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

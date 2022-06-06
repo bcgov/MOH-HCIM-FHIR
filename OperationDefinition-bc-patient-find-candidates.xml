@@ -3,13 +3,8 @@
 <OperationDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-patient-find-candidates"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>FindCandidatesByExample</h2><p>QUERY: FindCandidatesByExample</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-find-candidates</pre><p>URL: [base]/Patient/$FindCandidates</p><p>Input parameters Profile: <a href="StructureDefinition-bc-find-candidates-request-bundle.html">FindCandidatesRequestBundle</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Unique message ID in Parameters entry of the Bundle.</p>
-</div></td></tr><tr><td>IN</td><td>messageDateTime</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></td><td/><td><div><p>Message date and time in Parameters entry of the Bundle.</p>
-</div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>Message sender in Parameters entry of the Bundle.</p>
-</div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>UserId of enterer in Parameters entry of the Bundle.</p>
-</div></td></tr><tr><td>IN</td><td>identifiersOnly</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td/><td><div><p>Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defaults to false.  This is located in the Parameters entry of the Bundle.</p>
-</div></td></tr><tr><td>IN</td><td>patient</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td/><td><div><p>Patient resource as Bundle entry.</p>
-</div></td></tr><tr><td>IN</td><td>mothersPHN</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a></td><td/><td><div><p>Patient mother's PHN as RelatedPerson.Identifier in Bundle.</p>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>FindCandidatesByExample</h2><p>QUERY: FindCandidatesByExample</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-find-candidates</pre><p>URL: [base]/Patient/$FindCandidates</p><p>Input parameters Profile: <a href="StructureDefinition-bc-find-candidates-request-bundle.html">FindCandidatesRequestBundle</a></p><p>Output parameters Profile: <a href="StructureDefinition-bc-search-response-bundle.html">SearchResponseBundle</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>FindCandidatesRequestBundle</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td><td/><td><div><p>The FindCandidates operation request Bundle.</p>
+</div></td></tr><tr><td>OUT</td><td>SearchResponseBundle</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td><td/><td><div><p>The FindCandidates operation response Bundle.</p>
 </div></td></tr></table></div>
   </text>
   <url value="http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-find-candidates"/>
@@ -18,7 +13,7 @@
   <title value="Find Candidates By Example"/>
   <status value="draft"/>
   <kind value="query"/>
-  <date value="2022-05-17T18:05:03+00:00"/>
+  <date value="2022-06-06T16:35:02+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -40,61 +35,21 @@
   <type value="true"/>
   <instance value="false"/>
   <inputProfile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle"/>
+  <outputProfile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
   <parameter>
-    <name value="messageId"/>
+    <name value="FindCandidatesRequestBundle"/>
     <use value="in"/>
     <min value="1"/>
     <max value="1"/>
-    <documentation value="Unique message ID in Parameters entry of the Bundle."/>
-    <type value="string"/>
-    <searchType value="string"/>
+    <documentation value="The FindCandidates operation request Bundle."/>
+    <type value="Bundle"/>
   </parameter>
   <parameter>
-    <name value="messageDateTime"/>
-    <use value="in"/>
+    <name value="SearchResponseBundle"/>
+    <use value="out"/>
     <min value="1"/>
     <max value="1"/>
-    <documentation value="Message date and time in Parameters entry of the Bundle."/>
-    <type value="dateTime"/>
-  </parameter>
-  <parameter>
-    <name value="sender"/>
-    <use value="in"/>
-    <min value="1"/>
-    <max value="1"/>
-    <documentation value="Message sender in Parameters entry of the Bundle."/>
-    <type value="Identifier"/>
-  </parameter>
-  <parameter>
-    <name value="enterer"/>
-    <use value="in"/>
-    <min value="0"/>
-    <max value="1"/>
-    <documentation value="UserId of enterer in Parameters entry of the Bundle."/>
-    <type value="Identifier"/>
-  </parameter>
-  <parameter>
-    <name value="identifiersOnly"/>
-    <use value="in"/>
-    <min value="0"/>
-    <max value="1"/>
-    <documentation value="Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defaults to false.  This is located in the Parameters entry of the Bundle."/>
-    <type value="boolean"/>
-  </parameter>
-  <parameter>
-    <name value="patient"/>
-    <use value="in"/>
-    <min value="0"/>
-    <max value="1"/>
-    <documentation value="Patient resource as Bundle entry."/>
-    <type value="Patient"/>
-  </parameter>
-  <parameter>
-    <name value="mothersPHN"/>
-    <use value="in"/>
-    <min value="0"/>
-    <max value="1"/>
-    <documentation value="Patient mother's PHN as RelatedPerson.Identifier in Bundle."/>
-    <type value="RelatedPerson"/>
+    <documentation value="The FindCandidates operation response Bundle."/>
+    <type value="Bundle"/>
   </parameter>
 </OperationDefinition>

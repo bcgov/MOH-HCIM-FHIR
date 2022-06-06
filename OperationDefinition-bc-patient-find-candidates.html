@@ -234,7 +234,7 @@
         
           Draft
           
-            as of 2022-05-17
+            as of 2022-06-06
           
         
       </td>
@@ -264,9 +264,7 @@
 
 <p>The Find Candidates query is a FHIR Operation.</p>
 
-<p>The request is a Bundle with Resources for search parameters (MetadataParameters), a Patient to match against and possibly a RelatedPerson representing the Mother with a PHN Identifier.</p>
-
-<p>The Patient Bundle entry is a <a href="StructureDefinition-bc-patient-by-example.html">Patient by Example</a>.  The patient is a constrained Patient resouce limited to the availabe search criteria.  See the Find Candiates <a href="search.html#find-candidates-search">search design</a> for more details on the critera.</p>
+<p>The request is a Bundle with Resources for message meta data, a Patient to match against and possibly a RelatedPerson representing the Mother with a PHN Identifier.  The response is a Bundle with Resources for Patient’s that matched, response meta data, operation outcome resources and if using mother’s PHN RelatedPerson resources.</p>
 
 
 </div>
@@ -281,13 +279,8 @@
   
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><h2>FindCandidatesByExample</h2><p>QUERY: FindCandidatesByExample</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-find-candidates</pre><p>URL: [base]/Patient/$FindCandidates</p><p>Input parameters Profile: <a href="StructureDefinition-bc-find-candidates-request-bundle.html">FindCandidatesRequestBundle</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Unique message ID in Parameters entry of the Bundle.</p>
-</div></td></tr><tr><td>IN</td><td>messageDateTime</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></td><td/><td><div><p>Message date and time in Parameters entry of the Bundle.</p>
-</div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>Message sender in Parameters entry of the Bundle.</p>
-</div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>UserId of enterer in Parameters entry of the Bundle.</p>
-</div></td></tr><tr><td>IN</td><td>identifiersOnly</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td/><td><div><p>Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defaults to false.  This is located in the Parameters entry of the Bundle.</p>
-</div></td></tr><tr><td>IN</td><td>patient</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td/><td><div><p>Patient resource as Bundle entry.</p>
-</div></td></tr><tr><td>IN</td><td>mothersPHN</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a></td><td/><td><div><p>Patient mother's PHN as RelatedPerson.Identifier in Bundle.</p>
+  <div xmlns="http://www.w3.org/1999/xhtml"><h2>FindCandidatesByExample</h2><p>QUERY: FindCandidatesByExample</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-find-candidates</pre><p>URL: [base]/Patient/$FindCandidates</p><p>Input parameters Profile: <a href="StructureDefinition-bc-find-candidates-request-bundle.html">FindCandidatesRequestBundle</a></p><p>Output parameters Profile: <a href="StructureDefinition-bc-search-response-bundle.html">SearchResponseBundle</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>FindCandidatesRequestBundle</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td><td/><td><div><p>The FindCandidates operation request Bundle.</p>
+</div></td></tr><tr><td>OUT</td><td>SearchResponseBundle</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td><td/><td><div><p>The FindCandidates operation response Bundle.</p>
 </div></td></tr></table></div>
 
   <!-- insert notes if present -->
@@ -298,17 +291,131 @@
 
 <div style="display:inline-block" markdown="1">
 
-<p>The response is a Bundle and the entries hold the:</p>
-<ul>
-  <li>input parameters echoed back in a Parameters resource,</li>
-  <li>the matched patients in a Patients resource,</li>
-  <li>if the search was using a Mother’s PHN there will be RelatedPerson resources in the response that contain the Mother’s PHN and indicate a relationship to one of the returned Patients and</li>
-  <li>an OperationOutcome resource with any errors or warnings.</li>
-</ul>
-
 <p>The response may not include any Patients if none matched the criteria.  If there are patients returned, the Bundle.entry.search.score (i.e. entry for the Patient resource) will contain the Client Registry score.</p>
 
-<p>See <a href="StructureDefinition-bc-search-response-bundle.html">Find Candidates response</a></p>
+<p>If multiple Patients match they will all be returned.</p>
+
+<p>If the search used mother’s PHN then RelatedPerson resources are returned which include (a) the mother’s identifier and (b) a reference to the related Patient in the response Bundle.  There may be multiple Patients returned, and therefore also multiple RelatedPersons, one per Patient (e.g. twins).  See an example <a href="Bundle-Bundle-FindCandidates-Response-MomsPHN-Example.html">here</a>.</p>
+
+<h4 id="in-bundle-entries">In Bundle Entries</h4>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th style="text-align: left">Cardinality</th>
+      <th style="text-align: left">Resource Type</th>
+      <th style="text-align: left">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">1..1</td>
+      <td style="text-align: left">MetadataParametersIn</td>
+      <td style="text-align: left">See <a href="StructureDefinition-bc-metadata-parameters-in.html">profile</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">0..1</td>
+      <td style="text-align: left">PatientByExample</td>
+      <td style="text-align: left">See <a href="StructureDefinition-bc-patient-by-example.html">profile</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">0..1</td>
+      <td style="text-align: left">RelatedPerson</td>
+      <td style="text-align: left">This a standard FHIR resource, not profiled by the Client Registry.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="out-bundle-entries">Out Bundle Entries</h4>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th style="text-align: left">Cardinality</th>
+      <th style="text-align: left">Resource Type</th>
+      <th style="text-align: left">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">1..1</td>
+      <td style="text-align: left">MetadataParametersOut</td>
+      <td style="text-align: left">See <a href="StructureDefinition-bc-metadata-parameters-out.html">profile</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">1,,1</td>
+      <td style="text-align: left">OperationOutcome</td>
+      <td style="text-align: left">An OperationOutcome resource that has warnings and errors regarding the operation requested.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">0..*</td>
+      <td style="text-align: left">ClientRegistryPatient</td>
+      <td style="text-align: left">See <a href="StructureDefinition-bc-patient.html">profile</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">0..*</td>
+      <td style="text-align: left">RelatedPerson</td>
+      <td style="text-align: left">This a standard FHIR resource, not profiled by the Client Registry.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="metadata-in-parameters">Metadata In Parameters</h4>
+
+<p>Besides the two mandatory name-value pairs, see <a href="StructureDefinition-bc-metadata-parameters-in.html">here</a>, Find Candidates has one more, see below.</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Type</th>
+      <th>Cardinality</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">identifiersOnly</td>
+      <td style="text-align: left">boolean</td>
+      <td>0..1</td>
+      <td>Instruct the Client Registry to return Patient Identifiers only when true. If not present, defaults to false. This is located in the Parameters entry of the Bundle.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="metadata-out-parameters">Metadata Out Parameters</h4>
+
+<p>Besides the mandatory parameters, the request search parameters are echoed back in the MetadataParametersOut resource with a parameter named requestParameters (which is a MetadataParametersIn resource).</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Type</th>
+      <th>Cardinality</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">requestParameters</td>
+      <td style="text-align: left">MetadataParametersIn</td>
+      <td>1..1</td>
+      <td>The request parameters are echoed back..</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="mothers-phn">Mother’s PHN</h4>
+
+<p>If the request is to return a Patient based on the mother’s PHN, then the request Bundle must have a RelatedPerson resource with the mother’s PHN as an Identifier.  No Patient is required in this case.  There is an example request <a href="Bundle-Bundle-FindCandidates-UsingMomsPHN-Request-Example.html">here</a>.</p>
+
+<h4 id="examples">Examples</h4>
+
+<p>See <a href="Bundle-Bundle-FindCandidatesByExample-Request-Example.html">Find Candidates request</a> example.<br />
+See <a href="Bundle-Bundle-FindCandidates-UsingMomsPHN-Request-Example.html">Find Candidates mother’s PHN request</a> example.<br />
+See <a href="Bundle-Bundle-FindCandidates-Response-Example.html">Find Candidates response</a> example.<br />
+See <a href="Bundle-Bundle-FindCandidates-Response-MomsPHN-Example.html">Find Candidates mother’s PHN response</a> example.</p>
 
 
 </div>
@@ -340,7 +447,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 17, 2022 18:05+0000">2022-05-17</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jun 6, 2022 16:35+0000">2022-06-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -3,7 +3,7 @@
 <CapabilityStatement xmlns="http://hl7.org/fhir">
   <id value="bc-hcim-capability-statement-client"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when acting as a client. I.e. when sending Patient change notifications.</p><p>A Patient change notification is a FHIR Operation where the Client Registry sends a Patient/$PatientNotification request to a client. After an onboarding process by the Client Registry operational support team and developing an endpoint, clients are prepared to receive these requests.</p><p>Each request is a RevisePatientBundle. The Bundle has two entries: One with MetadataParamters for messageId, messageDate and sender, one for a ClientRegistryPatient profile. The following table describes the request and the four parameters; all are mandatory. The Client Registry SHALL use the following IN parameters when sending a change notification.</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td/><td><div><p>Unique message ID.</p></div></td></tr><tr><td>IN</td><td>messageDate</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td/><td><div><p>Message date and time.</p></div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>Message sender</p></div></td></tr><tr><td>IN</td><td>patient</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td/><td><div><p>The Patient as ClientRegistryPatient.</p></div></td></tr></table><p>The Client Registry expects a 200 HTTP status code in return when the request is received.</p></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when acting as a client. I.e. when sending Patient change notifications.</p><p>A Patient change notification is a FHIR Operation where the Client Registry sends a Patient/$PatientNotification request to a client. After an onboarding process by the Client Registry operational support team and developing an endpoint, clients are prepared to receive these requests.</p><p>Each request is a RevisePatientBundle. The Bundle has two entries: One with MetadataParamtersIn for messageId, messageDate and sender, one for a ClientRegistryPatient (profile of Patient). The following table describes the request and the four parameters; all are mandatory. The Client Registry SHALL use the following IN parameters when sending a change notification.</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>ReviseRequestBundle</td><td>1..1</td><td><a href="StructureDefinition-bc-revise-request-bundle.html">ReviseRequestBundle</a></td><td/><td><div><p>A Bundle with the Patient change.</p></div></td></tr><tr><td>OUT</td><td/><td/><td/><td/><td>Out is a 200 HTTP response code indicating the notificate was recieved.</td></tr></table></div>
   </text>
   <url value="http://hlth.gov.bc.ca/fhir/client/CapabilityStatement/bc-hcim-capability-statement-client"/>
   <version value="0.1.0"/>
@@ -36,9 +36,9 @@
   <rest>
     <mode value="client"/>
     <resource>
-      <type value="Parameters"/>
+      <type value="Bundle"/>
       <operation>
-        <name value="Distribution"/>
+        <name value="PatientNotification"/>
         <definition value="http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-notification"/>
       </operation>
     </resource>

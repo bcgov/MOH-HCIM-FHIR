@@ -10,7 +10,7 @@
   fhir:Resource.id [ fhir:value "bc-patient-merge"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>MergePatient</h2><p>OPERATION: MergePatient</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-merge</pre><p>URL: [base]/Patient/$MergePatient</p><p>Input parameters Profile: <a href=\"StructureDefinition-bc-merge-request-bundle.html\">MergeRequestBundle</a></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td/><td><div><p>Unique message ID.</p>\n</div></td></tr><tr><td>IN</td><td>messageDate</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td/><td><div><p>Message date and time.</p>\n</div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Requesting organization.</p>\n</div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>UserId of sender.</p>\n</div></td></tr><tr><td>IN</td><td>patient</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a></td><td/><td><div><p>The Patient with merge information.</p>\n</div></td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>MergePatient</h2><p>OPERATION: MergePatient</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-merge</pre><p>URL: [base]/Patient/$MergePatient</p><p>Input parameters Profile: <a href=\"StructureDefinition-bc-merge-request-bundle.html\">MergeRequestBundle</a></p><p>Output parameters Profile: <a href=\"StructureDefinition-bc-merge-response-bundle.html\">MergeResponseBundle</a></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>MergeRequestBundle</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The merge request Bundle.</p>\n</div></td></tr><tr><td>IN</td><td>MergeResponseBundle</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The merge response Bundle.</p>\n</div></td></tr></table></div>"
   ];
   fhir:OperationDefinition.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-merge"];
   fhir:OperationDefinition.version [ fhir:value "0.1.0"];
@@ -18,7 +18,7 @@
   fhir:OperationDefinition.title [ fhir:value "Merge Patient"];
   fhir:OperationDefinition.status [ fhir:value "draft"];
   fhir:OperationDefinition.kind [ fhir:value "operation"];
-  fhir:OperationDefinition.date [ fhir:value "2022-05-17T18:05:03+00:00"^^xsd:dateTime];
+  fhir:OperationDefinition.date [ fhir:value "2022-06-06T16:35:02+00:00"^^xsd:dateTime];
   fhir:OperationDefinition.publisher [ fhir:value "BC Ministry of Health"];
   fhir:OperationDefinition.contact [
      fhir:index 0;
@@ -50,46 +50,26 @@
      fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle";
      fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle>
   ];
+  fhir:OperationDefinition.outputProfile [
+     fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle";
+     fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle>
+  ];
   fhir:OperationDefinition.parameter [
      fhir:index 0;
-     fhir:OperationDefinition.parameter.name [ fhir:value "messageId" ];
+     fhir:OperationDefinition.parameter.name [ fhir:value "MergeRequestBundle" ];
      fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
      fhir:OperationDefinition.parameter.min [ fhir:value "1"^^xsd:integer ];
      fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
-     fhir:OperationDefinition.parameter.documentation [ fhir:value "Unique message ID." ];
-     fhir:OperationDefinition.parameter.type [ fhir:value "string" ]
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "The merge request Bundle." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "Bundle" ]
   ], [
      fhir:index 1;
-     fhir:OperationDefinition.parameter.name [ fhir:value "messageDate" ];
+     fhir:OperationDefinition.parameter.name [ fhir:value "MergeResponseBundle" ];
      fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
      fhir:OperationDefinition.parameter.min [ fhir:value "1"^^xsd:integer ];
      fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
-     fhir:OperationDefinition.parameter.documentation [ fhir:value "Message date and time." ];
-     fhir:OperationDefinition.parameter.type [ fhir:value "string" ]
-  ], [
-     fhir:index 2;
-     fhir:OperationDefinition.parameter.name [ fhir:value "sender" ];
-     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
-     fhir:OperationDefinition.parameter.min [ fhir:value "1"^^xsd:integer ];
-     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
-     fhir:OperationDefinition.parameter.documentation [ fhir:value "Requesting organization." ];
-     fhir:OperationDefinition.parameter.type [ fhir:value "Identifier" ]
-  ], [
-     fhir:index 3;
-     fhir:OperationDefinition.parameter.name [ fhir:value "enterer" ];
-     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
-     fhir:OperationDefinition.parameter.min [ fhir:value "0"^^xsd:integer ];
-     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
-     fhir:OperationDefinition.parameter.documentation [ fhir:value "UserId of sender." ];
-     fhir:OperationDefinition.parameter.type [ fhir:value "Identifier" ]
-  ], [
-     fhir:index 4;
-     fhir:OperationDefinition.parameter.name [ fhir:value "patient" ];
-     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
-     fhir:OperationDefinition.parameter.min [ fhir:value "1"^^xsd:integer ];
-     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
-     fhir:OperationDefinition.parameter.documentation [ fhir:value "The Patient with merge information." ];
-     fhir:OperationDefinition.parameter.type [ fhir:value "Patient" ]
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "The merge response Bundle." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "Bundle" ]
   ] .
 
 # - ontology header ------------------------------------------------------------

@@ -3,7 +3,7 @@
   "id": "bc-patient-find-candidates",
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>FindCandidatesByExample</h2><p>QUERY: FindCandidatesByExample</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-find-candidates</pre><p>URL: [base]/Patient/$FindCandidates</p><p>Input parameters Profile: <a href=\"StructureDefinition-bc-find-candidates-request-bundle.html\">FindCandidatesRequestBundle</a></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#string\">string</a>)</td><td/><td><div><p>Unique message ID in Parameters entry of the Bundle.</p>\n</div></td></tr><tr><td>IN</td><td>messageDateTime</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a></td><td/><td><div><p>Message date and time in Parameters entry of the Bundle.</p>\n</div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Message sender in Parameters entry of the Bundle.</p>\n</div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>UserId of enterer in Parameters entry of the Bundle.</p>\n</div></td></tr><tr><td>IN</td><td>identifiersOnly</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a></td><td/><td><div><p>Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defaults to false.  This is located in the Parameters entry of the Bundle.</p>\n</div></td></tr><tr><td>IN</td><td>patient</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a></td><td/><td><div><p>Patient resource as Bundle entry.</p>\n</div></td></tr><tr><td>IN</td><td>mothersPHN</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/relatedperson.html\">RelatedPerson</a></td><td/><td><div><p>Patient mother's PHN as RelatedPerson.Identifier in Bundle.</p>\n</div></td></tr></table></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>FindCandidatesByExample</h2><p>QUERY: FindCandidatesByExample</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-find-candidates</pre><p>URL: [base]/Patient/$FindCandidates</p><p>Input parameters Profile: <a href=\"StructureDefinition-bc-find-candidates-request-bundle.html\">FindCandidatesRequestBundle</a></p><p>Output parameters Profile: <a href=\"StructureDefinition-bc-search-response-bundle.html\">SearchResponseBundle</a></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>FindCandidatesRequestBundle</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The FindCandidates operation request Bundle.</p>\n</div></td></tr><tr><td>OUT</td><td>SearchResponseBundle</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The FindCandidates operation response Bundle.</p>\n</div></td></tr></table></div>"
   },
   "url": "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-find-candidates",
   "version": "0.1.0",
@@ -11,7 +11,7 @@
   "title": "Find Candidates By Example",
   "status": "draft",
   "kind": "query",
-  "date": "2022-05-17T18:05:03+00:00",
+  "date": "2022-06-06T16:35:02+00:00",
   "publisher": "BC Ministry of Health",
   "contact": [
     {
@@ -43,63 +43,23 @@
   "type": true,
   "instance": false,
   "inputProfile": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle",
+  "outputProfile": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
   "parameter": [
     {
-      "name": "messageId",
+      "name": "FindCandidatesRequestBundle",
       "use": "in",
       "min": 1,
       "max": "1",
-      "documentation": "Unique message ID in Parameters entry of the Bundle.",
-      "type": "string",
-      "searchType": "string"
+      "documentation": "The FindCandidates operation request Bundle.",
+      "type": "Bundle"
     },
     {
-      "name": "messageDateTime",
-      "use": "in",
+      "name": "SearchResponseBundle",
+      "use": "out",
       "min": 1,
       "max": "1",
-      "documentation": "Message date and time in Parameters entry of the Bundle.",
-      "type": "dateTime"
-    },
-    {
-      "name": "sender",
-      "use": "in",
-      "min": 1,
-      "max": "1",
-      "documentation": "Message sender in Parameters entry of the Bundle.",
-      "type": "Identifier"
-    },
-    {
-      "name": "enterer",
-      "use": "in",
-      "min": 0,
-      "max": "1",
-      "documentation": "UserId of enterer in Parameters entry of the Bundle.",
-      "type": "Identifier"
-    },
-    {
-      "name": "identifiersOnly",
-      "use": "in",
-      "min": 0,
-      "max": "1",
-      "documentation": "Instruct the Client Registry to return Patient Identifiers only when true.  If not present, defaults to false.  This is located in the Parameters entry of the Bundle.",
-      "type": "boolean"
-    },
-    {
-      "name": "patient",
-      "use": "in",
-      "min": 0,
-      "max": "1",
-      "documentation": "Patient resource as Bundle entry.",
-      "type": "Patient"
-    },
-    {
-      "name": "mothersPHN",
-      "use": "in",
-      "min": 0,
-      "max": "1",
-      "documentation": "Patient mother's PHN as RelatedPerson.Identifier in Bundle.",
-      "type": "RelatedPerson"
+      "documentation": "The FindCandidates operation response Bundle.",
+      "type": "Bundle"
     }
   ]
 }

@@ -3,12 +3,8 @@
 <OperationDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-patient-add"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>AddPatient</h2><p>OPERATION: AddPatient</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-add</pre><p>URL: [base]/Patient/$AddPatient</p><p>Input parameters Profile: <a href="StructureDefinition-bc-add-request-bundle.html">AddRequestBundle</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>messageId</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Unique message ID.</p>
-</div></td></tr><tr><td>IN</td><td>messageDate</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#string">string</a>)</td><td/><td><div><p>Message date and time.</p>
-</div></td></tr><tr><td>IN</td><td>sender</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>Requesting organization.</p>
-</div></td></tr><tr><td>IN</td><td>enterer</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>UserId of sender.</p>
-</div></td></tr><tr><td>IN</td><td>patient</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td/><td><div><p>The Patient.</p>
-</div></td></tr><tr><td>IN</td><td>mothersPHN</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a></td><td/><td><div><p>The newborn Patient mother's PHN in a RelatedPerson resource.</p>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>AddPatient</h2><p>OPERATION: AddPatient</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-add</pre><p>URL: [base]/Patient/$AddPatient</p><p>Input parameters Profile: <a href="StructureDefinition-bc-add-request-bundle.html">AddRequestBundle</a></p><p>Output parameters Profile: <a href="StructureDefinition-bc-add-response-bundle.html">AddResponseBundle</a></p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>AddRequestBundle</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td><td/><td><div><p>The AddPatient operation request Bundle.</p>
+</div></td></tr><tr><td>OUT</td><td>AddResponseBundle</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td><td/><td><div><p>The AddPatient operation response Bundle.</p>
 </div></td></tr></table></div>
   </text>
   <url value="http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-add"/>
@@ -17,7 +13,7 @@
   <title value="AddPatient"/>
   <status value="draft"/>
   <kind value="operation"/>
-  <date value="2022-05-17T18:05:03+00:00"/>
+  <date value="2022-06-06T16:35:02+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -39,54 +35,21 @@
   <type value="true"/>
   <instance value="false"/>
   <inputProfile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle"/>
+  <outputProfile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-response-bundle"/>
   <parameter>
-    <name value="messageId"/>
+    <name value="AddRequestBundle"/>
     <use value="in"/>
     <min value="1"/>
     <max value="1"/>
-    <documentation value="Unique message ID."/>
-    <type value="string"/>
-    <searchType value="string"/>
+    <documentation value="The AddPatient operation request Bundle."/>
+    <type value="Bundle"/>
   </parameter>
   <parameter>
-    <name value="messageDate"/>
-    <use value="in"/>
+    <name value="AddResponseBundle"/>
+    <use value="out"/>
     <min value="1"/>
     <max value="1"/>
-    <documentation value="Message date and time."/>
-    <type value="string"/>
-    <searchType value="string"/>
-  </parameter>
-  <parameter>
-    <name value="sender"/>
-    <use value="in"/>
-    <min value="1"/>
-    <max value="1"/>
-    <documentation value="Requesting organization."/>
-    <type value="Identifier"/>
-  </parameter>
-  <parameter>
-    <name value="enterer"/>
-    <use value="in"/>
-    <min value="0"/>
-    <max value="1"/>
-    <documentation value="UserId of sender."/>
-    <type value="Identifier"/>
-  </parameter>
-  <parameter>
-    <name value="patient"/>
-    <use value="in"/>
-    <min value="1"/>
-    <max value="1"/>
-    <documentation value="The Patient."/>
-    <type value="Patient"/>
-  </parameter>
-  <parameter>
-    <name value="mothersPHN"/>
-    <use value="in"/>
-    <min value="0"/>
-    <max value="1"/>
-    <documentation value="The newborn Patient mother's PHN in a RelatedPerson resource."/>
-    <type value="RelatedPerson"/>
+    <documentation value="The AddPatient operation response Bundle."/>
+    <type value="Bundle"/>
   </parameter>
 </OperationDefinition>

@@ -296,7 +296,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 
 This outcome is not used for error responses in batch/transaction, only for hints and warnings. In a batch operation, the error will be in Bundle.entry.response, and for transaction, there will be a single OperationOutcome instead of a bundle in the case of an error.","","","","","","","","",,,,,"",,,,"Bundle.entry.response.outcome",0,1,"",""
 "Bundle.entry:parameters","Bundle.entry","parameters","","",1,1,"Y","","Y","BackboneElement {[]} {[]}
-","Metadata parameters","An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only).","","","","","","","","","",,,,,"",,,,"Bundle.entry",0,*,"","bdl-5:must be a resource unless there's a request or response {resource.exists() or request.exists() or response.exists()}
+","Metadata in parameters","An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only).","","","","","","","","","",,,,,"",,,,"Bundle.entry",0,*,"","bdl-5:must be a resource unless there's a request or response {resource.exists() or request.exists() or response.exists()}
 bdl-8:fullUrl cannot be a version specific reference {fullUrl.contains('/_history/').not()}ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}"
 "Bundle.entry:parameters.id","Bundle.entry.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
@@ -319,7 +319,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 
 Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).","","","","","","","","",,,,,"",,,,"Bundle.entry.fullUrl",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Bundle.entry:parameters.resource","Bundle.entry.resource","","","",0,1,"","","","Parameters {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters]]} {[]}
+"Bundle.entry:parameters.resource","Bundle.entry.resource","","","",0,1,"","","","Parameters {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in]]} {[]}
 ","Operation Request or Response","This resource is a non-persisted resource used to pass information into and back from an [operation](http://hl7.org/fhir/R4/operations.html). It has no other use, and there is no RESTful endpoint associated with it.","The parameters that may be used are defined by the OperationDefinition resource.","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"","","n/a","Entity. Role, or Act","n/a"
 "Bundle.entry:parameters.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"bdl-2
