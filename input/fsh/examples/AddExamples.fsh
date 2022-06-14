@@ -33,11 +33,11 @@ Description: "Example of $AddPatient operation for a newborn."
 * entry[parameters].resource = Parameters-AddPatient-Example
 * entry[parameters].fullUrl = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f2222"
 
-* entry[patient].fullUrl = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f4444"
+* entry[patient].fullUrl = "urn:uuid:9a686737-1d82-44e6-a179-cb8edd241321"
 * entry[patient].resource = Patient-AddPatient-Newborn-Example
 
-//* entry[mothersPHN].fullUrl = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f5555"
-//* entry[mothersPHN].resource = RelatedPerson-Mother-Example
+* entry[mothersPHN].fullUrl = "urn:uuid:720cef13-60fe-474b-814c-282a75bc7501"
+* entry[mothersPHN].resource = RelatedPerson-Mother-Example
 
 
 Instance: Parameters-AddPatient-Newborn-Example
@@ -66,6 +66,9 @@ Description: "Example of Add response Metadata parameters"
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.value = "MOH_CRS"
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
+
+* parameter[requestParameters].name = "requestParameters"
+* parameter[requestParameters].resource = Parameters-AddPatient-Example
 
 Instance: Bundle-AddPatient-Response-Example
 InstanceOf: AddResponseBundle
