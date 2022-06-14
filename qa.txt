@@ -1,13 +1,13 @@
 ﻿BCHealthClientIdentityManagement : Validation Results
 =========================================
 
-err = 87, warn = 6, info = 18
+err = 87, warn = 6, info = 19
 IG Publisher Version: 1.1.121
-Generated Mon Jun 06 20:46:01 UTC 2022. FHIR version 4.0.1 for fhir.ca-bc.client#0.1.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
+Generated Tue Jun 14 16:30:31 UTC 2022. FHIR version 4.0.1 for fhir.ca-bc.client#0.1.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
  Build Errors : 1 / 0 / 0
- /github/workspace/fsh-generated/resources/Bundle-Bundle-AddPatient-Newborn-Request-Example : 3 / 0 / 8
+ /github/workspace/fsh-generated/resources/Bundle-Bundle-AddPatient-Newborn-Request-Example : 3 / 0 / 10
  /github/workspace/fsh-generated/resources/Bundle-Bundle-AddPatient-Request-Example : 5 / 0 / 8
- /github/workspace/fsh-generated/resources/Bundle-Bundle-AddPatient-Response-Example : 3 / 0 / 12
+ /github/workspace/fsh-generated/resources/Bundle-Bundle-AddPatient-Response-Example : 3 / 0 / 14
  /github/workspace/fsh-generated/resources/Bundle-Bundle-FindCandidates-Response-Example : 9 / 0 / 26
  /github/workspace/fsh-generated/resources/Bundle-Bundle-FindCandidates-Response-MomsPHN-Example : 6 / 0 / 25
  /github/workspace/fsh-generated/resources/Bundle-Bundle-FindCandidates-UsingMomsPHN-Request-Example : 0 / 1 / 6
@@ -41,7 +41,7 @@ Generated Mon Jun 06 20:46:01 UTC 2022. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/OperationOutcome-OperationOutcome-Search-Example : 0 / 0 / 3
  /github/workspace/fsh-generated/resources/Parameters-Parameters-AddPatient-Example : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Parameters-Parameters-AddPatient-Newborn-Example : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Parameters-Parameters-AddPatient-Response-Example : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Parameters-Parameters-AddPatient-Response-Example : 0 / 0 / 3
  /github/workspace/fsh-generated/resources/Parameters-Parameters-DeletePatch-Example : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Parameters-Parameters-FindCandidates-Example : 0 / 0 / 2
  /github/workspace/fsh-generated/resources/Parameters-Parameters-FindCandidates-Response-Example : 0 / 0 / 4
@@ -116,6 +116,7 @@ ERROR: /github/workspace/output/OperationDefinition-bc-patient-update.html#/html
 ERROR: Bundle/Bundle-AddPatient-Newborn-Request-Example: Bundle.entry[1].resource.ofType(Patient).name[0].use: The value provided ('usual') is not in the value set 'BC Name Use value set.' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set ([]))
 ERROR: Bundle/Bundle-AddPatient-Newborn-Request-Example: Bundle.entry[1].resource.ofType(Patient).telecom[0].system: The value provided ('phone') is not in the value set 'BC Contact Point System Value Set' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set ([]))
 ERROR: Bundle/Bundle-AddPatient-Newborn-Request-Example: Bundle.entry[1].resource.ofType(Patient).telecom[0].use: The value provided ('home') is not in the value set 'BC Contact Point Use Value Set' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set ([]))
+INFORMATION: Bundle/Bundle-AddPatient-Newborn-Request-Example: Bundle.entry[2].resource.ofType(RelatedPerson).patient: Details for urn:uuid:9a686737-1d82-44e6-a179-cb8edd241321 matching against Profile http://hl7.org/fhir/StructureDefinition/Patient
 == fsh-generated/resources/Bundle-Bundle-AddPatient-Request-Example.json ==
 ERROR: Bundle/Bundle-AddPatient-Request-Example: Bundle.entry[1].resource.ofType(Patient).name[0].use: The value provided ('official') is not in the value set 'BC Name Use value set.' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set ([]))
 ERROR: Bundle/Bundle-AddPatient-Request-Example: Bundle.entry[1].resource.ofType(Patient).telecom[0].system: The value provided ('phone') is not in the value set 'BC Contact Point System Value Set' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set ([]))

@@ -31,7 +31,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f4444"/>
+    <fullUrl value="urn:uuid:9a686737-1d82-44e6-a179-cb8edd241321"/>
     <resource>
       <Patient>
         <id value="Patient-AddPatient-Newborn-Example"/>
@@ -88,6 +88,37 @@
           <country value="CA"/>
         </address>
       </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:720cef13-60fe-474b-814c-282a75bc7501"/>
+    <resource>
+      <RelatedPerson>
+        <id value="RelatedPerson-Mother-Example"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "RelatedPerson-Mother-Example" </p></div><p><b>identifier</b>: Jurisdictional health number: 123345654 (OFFICIAL)</p><p><b>patient</b>: <a href="#Patient_Patient-AddPatient-Newborn-Example">See above (urn:uuid:9a686737-1d82-44e6-a179-cb8edd241321)</a></p><p><b>relationship</b>: natural mother <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-RoleCode.html">RoleCode</a>#NMTH)</span></p></div>
+        </text>
+        <identifier>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="JHN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"/>
+          <value value="123345654"/>
+        </identifier>
+        <patient>
+          <reference value="urn:uuid:9a686737-1d82-44e6-a179-cb8edd241321"/>
+        </patient>
+        <relationship>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="NMTH"/>
+          </coding>
+        </relationship>
+      </RelatedPerson>
     </resource>
   </entry>
 </Bundle>

@@ -34,6 +34,29 @@
      fhir:index 3;
      fhir:Parameters.parameter.name [ fhir:value "requestMessageId" ];
      fhir:Parameters.parameter.valueString [ fhir:value "98028b44-882a-4c72-8c92-b87d916147e1" ]
+  ], [
+     fhir:index 4;
+     fhir:Parameters.parameter.name [ fhir:value "requestParameters" ];
+     fhir:Parameters.parameter.resource [
+       a fhir:Parameters;
+       fhir:Resource.id [ fhir:value "Parameters-AddPatient-Example" ];
+       fhir:Resource.meta [
+         fhir:Meta.profile [
+           fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in";
+           fhir:index 0;
+           fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in>
+         ]
+       ];
+       fhir:Parameters.parameter [
+         fhir:index 0;
+         fhir:Parameters.parameter.name [ fhir:value "messageId" ];
+         fhir:Parameters.parameter.valueString [ fhir:value "98028b44-882a-4c72-8c92-b87d916147e1" ]
+       ], [
+         fhir:index 1;
+         fhir:Parameters.parameter.name [ fhir:value "messageDateTime" ];
+         fhir:Parameters.parameter.valueDateTime [ fhir:value "2021-11-02T13:28:17-08:00"^^xsd:dateTime ]
+       ]
+     ]
   ] .
 
 # - ontology header ------------------------------------------------------------
