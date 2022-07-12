@@ -16,8 +16,12 @@ InstanceOf: RelatedPerson
 Description: "RelatedPerson, representing Mother, for Find Candidate Operation by mother's PHN"
 * identifier = IdentifierExampleMothersPHN
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#NMTH
-* patient.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-* patient.extension.valueCode = #unknown
+
+// The patient in this FC request is the mother.
+// Data absent reason was not passing validation and can't use uuid as 
+// uuid is an internal reference (fullUrl in Bunlde must be found matching
+// the uuid).  Instead we use the simple text display.
+* patient.display = "The newborn."
 
 
 Instance: Parameters-FindCandidates-Response-Example
