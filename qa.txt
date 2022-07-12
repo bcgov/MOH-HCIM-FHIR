@@ -1,16 +1,16 @@
 ﻿BCHealthClientIdentityManagement : Validation Results
 =========================================
 
-err = 87, warn = 6, info = 19
-IG Publisher Version: 1.1.121
-Generated Tue Jun 14 16:30:31 UTC 2022. FHIR version 4.0.1 for fhir.ca-bc.client#0.1.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
+err = 87, warn = 4, info = 19
+IG Publisher Version: 1.1.125
+Generated Tue Jul 12 18:24:59 UTC 2022. FHIR version 4.0.1 for fhir.ca-bc.client#0.1.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
  Build Errors : 1 / 0 / 0
  /github/workspace/fsh-generated/resources/Bundle-Bundle-AddPatient-Newborn-Request-Example : 3 / 0 / 10
  /github/workspace/fsh-generated/resources/Bundle-Bundle-AddPatient-Request-Example : 5 / 0 / 8
  /github/workspace/fsh-generated/resources/Bundle-Bundle-AddPatient-Response-Example : 3 / 0 / 14
  /github/workspace/fsh-generated/resources/Bundle-Bundle-FindCandidates-Response-Example : 9 / 0 / 26
  /github/workspace/fsh-generated/resources/Bundle-Bundle-FindCandidates-Response-MomsPHN-Example : 6 / 0 / 25
- /github/workspace/fsh-generated/resources/Bundle-Bundle-FindCandidates-UsingMomsPHN-Request-Example : 0 / 1 / 6
+ /github/workspace/fsh-generated/resources/Bundle-Bundle-FindCandidates-UsingMomsPHN-Request-Example : 0 / 0 / 6
  /github/workspace/fsh-generated/resources/Bundle-Bundle-FindCandidatesByExample-Request-Example : 1 / 0 / 8
  /github/workspace/fsh-generated/resources/Bundle-Bundle-GetDemographics-Request-Example : 0 / 0 / 8
  /github/workspace/fsh-generated/resources/Bundle-Bundle-GetDemographics-Response-Example : 3 / 0 / 11
@@ -72,7 +72,7 @@ Generated Tue Jun 14 16:30:31 UTC 2022. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/Patient-Patient-MergePatient-Example : 3 / 0 / 1
  /github/workspace/fsh-generated/resources/Patient-Patient-Mother-Example : 3 / 0 / 3
  /github/workspace/fsh-generated/resources/Patient-Patient-RevisePatient-Example : 3 / 0 / 1
- /github/workspace/fsh-generated/resources/RelatedPerson-MothersPHN-RelatedPerson-ForFC : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/RelatedPerson-MothersPHN-RelatedPerson-ForFC : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/RelatedPerson-RelatedPerson-Mother-Example : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/RelatedPerson-RelatedPerson-MotherOfBabyBoy-Example : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/RelatedPerson-RelatedPerson-MotherOfBabyGirl-Example : 0 / 0 / 1
@@ -152,7 +152,6 @@ INFORMATION: Bundle/Bundle-FindCandidates-Response-MomsPHN-Example: Bundle.entry
 INFORMATION: Bundle/Bundle-FindCandidates-Response-MomsPHN-Example: Bundle: No types could be determined from the search string, so the types can't be checked
 == fsh-generated/resources/Bundle-Bundle-FindCandidates-UsingMomsPHN-Request-Example.json ==
 INFORMATION: Bundle/Bundle-FindCandidates-UsingMomsPHN-Request-Example: Bundle.entry[0].resource.ofType(Parameters).parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in
-WARNING: Bundle/Bundle-FindCandidates-UsingMomsPHN-Request-Example: Bundle.entry[1].resource.ofType(RelatedPerson).patient: A Reference without an actual reference or identifier should have a display
 == fsh-generated/resources/Bundle-Bundle-FindCandidatesByExample-Request-Example.json ==
 INFORMATION: Bundle/Bundle-FindCandidatesByExample-Request-Example: Bundle.entry[0].resource.ofType(Parameters).parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in
 ERROR: Bundle/Bundle-FindCandidatesByExample-Request-Example: Bundle.entry[1].resource.ofType(Patient).name[0].use: The value provided ('official') is not in the value set 'BC Name Use value set.' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set ([]))
@@ -287,7 +286,6 @@ ERROR: Patient/Patient-RevisePatient-Example: Patient.name[0].use: The value pro
 ERROR: Patient/Patient-RevisePatient-Example: Patient.telecom[0].system: The value provided ('phone') is not in the value set 'BC Contact Point System Value Set' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set ([]))
 ERROR: Patient/Patient-RevisePatient-Example: Patient.telecom[0].use: The value provided ('home') is not in the value set 'BC Contact Point Use Value Set' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set ([]))
 == fsh-generated/resources/RelatedPerson-MothersPHN-RelatedPerson-ForFC.json ==
-WARNING: RelatedPerson/MothersPHN-RelatedPerson-ForFC: RelatedPerson.patient: A Reference without an actual reference or identifier should have a display
 == fsh-generated/resources/RelatedPerson-RelatedPerson-Mother-Example.json ==
 == fsh-generated/resources/RelatedPerson-RelatedPerson-MotherOfBabyBoy-Example.json ==
 == fsh-generated/resources/RelatedPerson-RelatedPerson-MotherOfBabyGirl-Example.json ==
