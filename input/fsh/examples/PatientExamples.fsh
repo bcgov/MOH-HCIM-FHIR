@@ -11,21 +11,23 @@ Description: "Patient example for a RevisePatient operation"
 Instance: Patient-AddPatient-Example
 InstanceOf: ClientRegistryPatient
 Description: "The Patient is completely new to the Client Registry, no identifiers."
-* address = Address-0-Example-Valid
-* telecom[0] = ContactPoint-Example-Home-Phone
-* telecom[1] = ContactPoint-Example-Home-Email
-* name = Name-Example-JohnDoe
+* address = Address-0-Example-NoPeriod-NoStatus
+* telecom[+] = ContactPoint-Example-Work-Phone-NoPeriod
+* telecom[+] = ContactPoint-Example-Mobile-Phone-NoPeriod
+* telecom[+] = ContactPoint-Example-Home-Email-NoPeriod
+* telecom[+] = ContactPoint-Example-Work-Email-NoPeriod
+* name = Name-Example-JohnDoe-NoPeriod
 * gender = #male
 * birthDate = 1940-06-06
 
 Instance: Patient-AddPatient-Newborn-Example
 InstanceOf: ClientRegistryPatient
 Description: "The Patient is completely new to the Client Registry, no identifiers."
-* identifier = IdentifierExampleSRI
-* address = Address-0-Example-Valid
-* telecom[0] = ContactPoint-Example-Home-Phone
-* name = Name-Example-JaneDoe
-* gender = #unknown
+* identifier = IdentifierExampleSSRINoPeriod
+* address = Address-0-Example-NoPeriod-NoStatus
+* telecom[0] = ContactPoint-Example-Home-Phone-NoPeriod
+* name.given = "Baby girl"
+* gender = #female
 * birthDate = 2021-11-02
 
 Instance: Patient-MergePatient-Example

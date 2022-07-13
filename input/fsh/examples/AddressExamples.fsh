@@ -1,3 +1,27 @@
+Instance: Address-0-Example-Valid-NoPeriod
+InstanceOf: Address
+Description: "Address example physical, validation status valid"
+Usage: #inline
+* type = #physical
+* line = "721 FRONT ST"
+* city = "VICTORIA"
+* state = "BC"
+* country = "CA"
+* postalCode = "V9A3Y3"
+* extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"
+* extension.valueCode = #valid
+
+Instance: Address-0-Example-NoPeriod-NoStatus
+InstanceOf: Address
+Description: "Address example physical, validation status valid"
+Usage: #inline
+* type = #physical
+* line = "721 FRONT ST"
+* city = "VICTORIA"
+* state = "BC"
+* country = "CA"
+* postalCode = "V9A3Y3"
+
 Instance: Address-0-Example-Valid
 InstanceOf: Address
 Description: "Address example physical, validation status valid"
@@ -48,4 +72,3 @@ Usage: #inline
 * state = "BC"
 * country = "CA"
 * postalCode = "V9A3V3"
-

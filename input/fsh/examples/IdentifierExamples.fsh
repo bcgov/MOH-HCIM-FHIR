@@ -16,7 +16,7 @@ InstanceOf: Identifier
 Description: "An example of a PHN Identifier."
 Usage: #inline
 * system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"
-* value = "123345654"
+* value = "9123456789"
 * type.coding.code = #JHN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
@@ -30,7 +30,7 @@ InstanceOf: Identifier
 Description: "An example of a PHN Identifier."
 Usage: #inline
 * system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"
-* value = "123345654"
+* value = "9123456788"
 * type.coding.code = #JHN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * use = #official
@@ -40,7 +40,7 @@ InstanceOf: Identifier
 Description: "An example of a PHN Identifier."
 Usage: #inline
 * system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"
-* value = "123345654"
+* value = "9123456778"
 * type.coding.code = #JHN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
@@ -52,7 +52,7 @@ InstanceOf: Identifier
 Description: "An example of a PHN Identifier."
 Usage: #inline
 * system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"
-* value = "987654321"
+* value = "9876543210"
 * type.coding.code = #JHN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
@@ -116,7 +116,7 @@ InstanceOf: Identifier
 Description: "An example of a Quebec PHN Identifier."
 Usage: #inline
 * system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/QC"
-* value = "123345654"
+* value = "9123345654"
 * type.coding.code = #JHN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
@@ -130,7 +130,7 @@ InstanceOf: Identifier
 Description: "An example of a Quebec PHN Identifier."
 Usage: #inline
 * system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/QC"
-* value = "123345654"
+* value = "9113344654"
 * type.coding.code = #JHN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"

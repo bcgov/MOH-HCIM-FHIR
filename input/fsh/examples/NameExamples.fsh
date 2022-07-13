@@ -4,16 +4,24 @@ Description: "An example of a HumanName."
 Usage: #inline
 * given = "John"
 * family = "Doe"
-* use = #official
+* use = #usual
 * period.start = "2017-04-05"
 
-Instance: Name-Example-MotherDoe
+Instance: Name-Example-JohnDoe-NoPeriod
 InstanceOf: HumanName
 Description: "An example of a HumanName."
 Usage: #inline
-* given = "April"
+* given = "John"
 * family = "Doe"
-* use = #official
+* use = #usual
+
+Instance: Name-Example-MotherDoe 
+InstanceOf: HumanName 
+Description: "An example of a HumanName." 
+Usage: #inline 
+* given = "April" 
+* family = "Doe" 
+* use = #official 
 * period.start = "2017-04-05"
 
 Instance: Name-Example-JaneDoe
@@ -24,6 +32,14 @@ Usage: #inline
 * family = "Doe"
 * use = #usual
 * period.start = "2018-04-05"
+
+Instance: Name-Example-JaneDoe-NoPeriod
+InstanceOf: HumanName
+Description: "An example of a HumanName."
+Usage: #inline
+* given = "Jane"
+* family = "Doe"
+* use = #usual
 
 Instance: Name-Example-JaneDoe-History1
 InstanceOf: HumanName
