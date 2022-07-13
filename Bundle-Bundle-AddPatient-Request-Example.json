@@ -49,48 +49,43 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Patient-AddPatient-Example\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>name</b>: John Doe (OFFICIAL)</p><p><b>telecom</b>: ph: 2505554848(HOME), <a href=\"mailto:John321@gmail.com\">John321@gmail.com</a></p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-06-06</p><p><b>address</b>: 721 FRONT ST VICTORIA BC V9A3Y3 CA </p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Patient-AddPatient-Example\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>name</b>: John Doe </p><p><b>telecom</b>: ph: 2507773448(WORK), ph: 2504445656(MOBILE), <a href=\"mailto:John321@junk.com\">John321@junk.com</a>, <a href=\"mailto:JohnWestyUop@junk.com\">JohnWestyUop@junk.com</a></p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-06-06</p><p><b>address</b>: 721 FRONT ST VICTORIA BC V9A3Y3 CA </p></div>"
         },
         "name": [
           {
-            "use": "official",
+            "use": "usual",
             "family": "Doe",
             "given": [
               "John"
-            ],
-            "period": {
-              "start": "2017-04-05"
-            }
+            ]
           }
         ],
         "telecom": [
           {
             "system": "phone",
-            "value": "2505554848",
-            "use": "home",
-            "period": {
-              "start": "2000-01-02T10:10:10-08:00"
-            }
+            "value": "2507773448",
+            "use": "work"
+          },
+          {
+            "system": "phone",
+            "value": "2504445656",
+            "use": "mobile"
           },
           {
             "system": "email",
-            "value": "John321@gmail.com",
-            "use": "home",
-            "period": {
-              "start": "2000-01-02T10:10:10-08:00"
-            }
+            "value": "John321@junk.com",
+            "use": "home"
+          },
+          {
+            "system": "email",
+            "value": "JohnWestyUop@junk.com",
+            "use": "work"
           }
         ],
         "gender": "male",
         "birthDate": "1940-06-06",
         "address": [
           {
-            "extension": [
-              {
-                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
-                "valueCode": "valid"
-              }
-            ],
             "type": "physical",
             "line": [
               "721 FRONT ST"
