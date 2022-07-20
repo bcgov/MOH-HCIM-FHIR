@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = errors = 93, warn = 4, info = 19, 1 -->
+<!-- broken links = errors = 93, warn = 5, info = 22, 1 -->
 <head>
   <title>BCHealthClientIdentityManagement : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for BCHealthClientIdentityManagement</h1>
- <p>Generated Wed Jul 20 21:36:53 UTC 2022, FHIR version 4.0.1 for fhir.ca-bc.client#0.1.0 (canonical = <a href="http://hlth.gov.bc.ca/fhir/client">http://hlth.gov.bc.ca/fhir/client</a> (<a href="http://hlth.gov.bc.ca/fhir/client/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
+ <p>Generated Wed Jul 20 21:56:29 UTC 2022, FHIR version 4.0.1 for fhir.ca-bc.client#0.1.0 (canonical = <a href="http://hlth.gov.bc.ca/fhir/client">http://hlth.gov.bc.ca/fhir/client</a> (<a href="http://hlth.gov.bc.ca/fhir/client/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.125</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = fhir.ca-bc.client, Canonical = http://hlth.gov.bc.ca/fhir/client</td></tr>
@@ -54,7 +54,7 @@
  <tr><td>R5 Dependencies:</td><td><span style="color: grey">(none)</span></td></tr>
  <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://hlth.gov.bc.ca/fhir/client (Problem #1 with package-list.json at http://hlth.gov.bc.ca/fhir/client: hlth.gov.bc.ca)</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
- <tr><td>Summary:</td><td> errors = 93, warn = 4, info = 19, broken links = 1</td></tr>
+ <tr><td>Summary:</td><td> errors = 93, warn = 5, info = 22, broken links = 1</td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -82,7 +82,7 @@
      <td><a href="#_github_workspace_fsh-generated_resources_Bundle-Bundle-FindCandidatesByExample-Request-Example"><b>/github/workspace/fsh-generated/resources/Bundle-Bundle-FindCandidatesByExample-Request-Example</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>1</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#_github_workspace_fsh-generated_resources_Bundle-Bundle-GetDemographics-Response-Example"><b>/github/workspace/fsh-generated/resources/Bundle-Bundle-GetDemographics-Response-Example</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>1</b></td>
+     <td><a href="#_github_workspace_fsh-generated_resources_Bundle-Bundle-GetDemographics-Response-Example"><b>/github/workspace/fsh-generated/resources/Bundle-Bundle-GetDemographics-Response-Example</b></a></td><td><b>3</b></td><td><b>1</b></td><td><b>4</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_github_workspace_fsh-generated_resources_Bundle-Bundle-GetDemographicsWithEligibility-Response-Example"><b>/github/workspace/fsh-generated/resources/Bundle-Bundle-GetDemographicsWithEligibility-Response-Example</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>2</b></td>
@@ -347,16 +347,28 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[2].resource.ofType(Patient).name[0].use (l158/c12)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('usual') is not in the value set 'BC Name Use value set.' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set ([]))</b></td>
+     <td><b>Bundle.entry[2].resource.ofType(Patient).name[0].use (l152/c12)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('usual') is not in the value set 'BC Name Use value set.' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set ([]))</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[2].resource.ofType(Patient).telecom[0].system (l120/c31)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('phone') is not in the value set 'BC Contact Point System Value Set' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set ([]))</b></td>
+     <td><b>Bundle.entry[2].resource.ofType(Patient).telecom[0].system (l114/c31)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('phone') is not in the value set 'BC Contact Point System Value Set' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set ([]))</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[2].resource.ofType(Patient).telecom[0].use (l119/c27)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('home') is not in the value set 'BC Contact Point Use Value Set' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set ([]))</b></td>
+     <td><b>Bundle.entry[2].resource.ofType(Patient).telecom[0].use (l113/c27)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('home') is not in the value set 'BC Contact Point Use Value Set' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set ([]))</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Bundle (l1/c2)</b></td><td><b>information</b></td><td title="BUNDLE_SEARCH_SELF_NOT_UNDERSTOOD"><b>No types could be determined from the search string, so the types can't be checked</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Bundle.entry[0].resource (l1/c2)</b></td><td><b>information</b></td><td title="BUNDLE_SEARCH_ENTRY_TYPE_NOT_SURE"><b>Unable to determine if this resource is a valid resource type for this search </b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Bundle.entry[1].resource (l1/c2)</b></td><td><b>information</b></td><td title="BUNDLE_SEARCH_ENTRY_TYPE_NOT_SURE"><b>Unable to determine if this resource is a valid resource type for this search </b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Bundle.entry[2].resource (l1/c2)</b></td><td><b>information</b></td><td title="BUNDLE_SEARCH_ENTRY_TYPE_NOT_SURE"><b>Unable to determine if this resource is a valid resource type for this search </b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle (l1/c2)</b></td><td><b>warning</b></td><td title="BUNDLE_SEARCH_NO_MODE"><b>SearchSet bundles should have search modes on the entries</b></td>
    </tr>
 </table>
 <hr/>
@@ -378,7 +390,7 @@
      <td><b>Bundle.entry[2].resource.ofType(Patient).telecom[0].use (l119/c27)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('home') is not in the value set 'BC Contact Point Use Value Set' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set ([]))</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Bundle.entry[3].resource.ofType(Coverage).beneficiary (l238/c10)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c matching against Profile http://hl7.org/fhir/StructureDefinition/Patient</b> <span id="sl46" class="flip" onclick="flip('l46')">Show Reasoning</span><div id="l46" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[2].resource.ofType(Patient).name[0].use: The value provided ('usual') is not in the value set 'BC Name Use value set.' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set ([]))</li>, <li>Bundle.entry[2].resource.ofType(Patient).telecom[0].system: The value provided ('phone') is not in the value set 'BC Contact Point System Value Set' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set ([]))</li>, <li>Bundle.entry[2].resource.ofType(Patient).telecom[0].use: The value provided ('home') is not in the value set 'BC Contact Point Use Value Set' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set ([]))</li></ul></div></td>
+     <td><b><a href="">Bundle.entry[3].resource.ofType(Coverage).beneficiary (l238/c10)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c matching against Profile http://hl7.org/fhir/StructureDefinition/Patient</b> <span id="sl50" class="flip" onclick="flip('l50')">Show Reasoning</span><div id="l50" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[2].resource.ofType(Patient).name[0].use: The value provided ('usual') is not in the value set 'BC Name Use value set.' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set ([]))</li>, <li>Bundle.entry[2].resource.ofType(Patient).telecom[0].system: The value provided ('phone') is not in the value set 'BC Contact Point System Value Set' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set ([]))</li>, <li>Bundle.entry[2].resource.ofType(Patient).telecom[0].use: The value provided ('home') is not in the value set 'BC Contact Point Use Value Set' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set ([]))</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Bundle (l1/c2)</b></td><td><b>information</b></td><td title="BUNDLE_SEARCH_SELF_NOT_UNDERSTOOD"><b>No types could be determined from the search string, so the types can't be checked</b></td>
@@ -802,6 +814,28 @@
 </ul>
 <a name="sorted"> </a>
 <p><b>Errors sorted by type</b></p>
+<hr/>
+<a name="BUNDLE_SEARCH_ENTRY_TYPE_NOT_SURE"> </a>
+<h2>BUNDLE_SEARCH_ENTRY_TYPE_NOT_SURE</h2>
+ <table class="grid">
+   <tr style="background-color: #fffff2">
+     <td><a href="Bundle-Bundle-GetDemographics-Response-Example.html">fsh-generated/resources/Bundle-Bundle-GetDemographics-Response-Example.json</a></td><td><b>Unable to determine if this resource is a valid resource type for this search </b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="Bundle-Bundle-GetDemographics-Response-Example.html">fsh-generated/resources/Bundle-Bundle-GetDemographics-Response-Example.json</a></td><td><b>Unable to determine if this resource is a valid resource type for this search </b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="Bundle-Bundle-GetDemographics-Response-Example.html">fsh-generated/resources/Bundle-Bundle-GetDemographics-Response-Example.json</a></td><td><b>Unable to determine if this resource is a valid resource type for this search </b></td>
+   </tr>
+</table>
+<hr/>
+<a name="BUNDLE_SEARCH_NO_MODE"> </a>
+<h2>BUNDLE_SEARCH_NO_MODE</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="Bundle-Bundle-GetDemographics-Response-Example.html">fsh-generated/resources/Bundle-Bundle-GetDemographics-Response-Example.json</a></td><td><b>SearchSet bundles should have search modes on the entries</b></td>
+   </tr>
+</table>
 <hr/>
 <a name="BUNDLE_SEARCH_SELF_NOT_UNDERSTOOD"> </a>
 <h2>BUNDLE_SEARCH_SELF_NOT_UNDERSTOOD</h2>

@@ -1,9 +1,9 @@
 ﻿BCHealthClientIdentityManagement : Validation Results
 =========================================
 
-err = 93, warn = 4, info = 19
+err = 93, warn = 5, info = 22
 IG Publisher Version: 1.1.125
-Generated Wed Jul 20 21:36:54 UTC 2022. FHIR version 4.0.1 for fhir.ca-bc.client#0.1.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
+Generated Wed Jul 20 21:56:30 UTC 2022. FHIR version 4.0.1 for fhir.ca-bc.client#0.1.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
  Build Errors : 1 / 0 / 0
  /github/workspace/fsh-generated/resources/Bundle-Bundle-AddPatient-Newborn-Request-Example : 2 / 0 / 9
  /github/workspace/fsh-generated/resources/Bundle-Bundle-AddPatient-Request-Example : 9 / 0 / 7
@@ -13,7 +13,7 @@ Generated Wed Jul 20 21:36:54 UTC 2022. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/Bundle-Bundle-FindCandidates-UsingMomsPHN-Request-Example : 0 / 0 / 6
  /github/workspace/fsh-generated/resources/Bundle-Bundle-FindCandidatesByExample-Request-Example : 1 / 0 / 8
  /github/workspace/fsh-generated/resources/Bundle-Bundle-GetDemographics-Request-Example : 0 / 0 / 8
- /github/workspace/fsh-generated/resources/Bundle-Bundle-GetDemographics-Response-Example : 3 / 0 / 11
+ /github/workspace/fsh-generated/resources/Bundle-Bundle-GetDemographics-Response-Example : 3 / 1 / 14
  /github/workspace/fsh-generated/resources/Bundle-Bundle-GetDemographicsWithEligibility-Response-Example : 3 / 0 / 14
  /github/workspace/fsh-generated/resources/Bundle-Bundle-MergePatient-Request-Example : 3 / 0 / 7
  /github/workspace/fsh-generated/resources/Bundle-Bundle-MergePatient-Response-Example : 0 / 0 / 7
@@ -165,6 +165,10 @@ ERROR: Bundle/Bundle-GetDemographics-Response-Example: Bundle.entry[2].resource.
 ERROR: Bundle/Bundle-GetDemographics-Response-Example: Bundle.entry[2].resource.ofType(Patient).telecom[0].system: The value provided ('phone') is not in the value set 'BC Contact Point System Value Set' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set ([]))
 ERROR: Bundle/Bundle-GetDemographics-Response-Example: Bundle.entry[2].resource.ofType(Patient).telecom[0].use: The value provided ('home') is not in the value set 'BC Contact Point Use Value Set' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set ([]))
 INFORMATION: Bundle/Bundle-GetDemographics-Response-Example: Bundle: No types could be determined from the search string, so the types can't be checked
+INFORMATION: Bundle/Bundle-GetDemographics-Response-Example: Bundle.entry[0].resource: Unable to determine if this resource is a valid resource type for this search 
+INFORMATION: Bundle/Bundle-GetDemographics-Response-Example: Bundle.entry[1].resource: Unable to determine if this resource is a valid resource type for this search 
+INFORMATION: Bundle/Bundle-GetDemographics-Response-Example: Bundle.entry[2].resource: Unable to determine if this resource is a valid resource type for this search 
+WARNING: Bundle/Bundle-GetDemographics-Response-Example: Bundle: SearchSet bundles should have search modes on the entries
 == fsh-generated/resources/Bundle-Bundle-GetDemographicsWithEligibility-Response-Example.json ==
 ERROR: Bundle/Bundle-GetDemographicsWithEligibility-Response-Example: Bundle.entry[2].resource.ofType(Patient).name[0].use: The value provided ('usual') is not in the value set 'BC Name Use value set.' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set ([]))
 ERROR: Bundle/Bundle-GetDemographicsWithEligibility-Response-Example: Bundle.entry[2].resource.ofType(Patient).telecom[0].system: The value provided ('phone') is not in the value set 'BC Contact Point System Value Set' (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set), and a code is required from this value set) (error message = Not in value set http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set ([]))
