@@ -59,7 +59,7 @@
         "id": "OperationOutcome-Search-Example",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"OperationOutcome-Search-Example\" </p></div><blockquote><p><b>issue</b></p><p><b>severity</b>: warning</p><p><b>code</b>: business-rule</p><p><b>details</b>: Warning: The Find Candidates Patient name has been modified to filter out invalid characters. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#HCIM.GD.1.0017)</span></p></blockquote><blockquote><p><b>issue</b></p><p><b>severity</b>: error</p><p><b>code</b>: business-rule</p><p><b>details</b>: The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ... <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#HCIM.GD.1.0017)</span></p></blockquote></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"OperationOutcome-Search-Example\" </p></div><h3>Issues</h3><table class=\"grid\"><tr><td>-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td>*</td><td>warning</td><td>business-rule</td><td>Warning: The identifier you used in the query has been merged. The surviving identifier was returned. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#BCHCIM.GD.0.0015)</span></td></tr></table></div>"
         },
         "issue": [
           {
@@ -69,23 +69,10 @@
               "coding": [
                 {
                   "system": "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes",
-                  "code": "HCIM.GD.1.0017"
+                  "code": "BCHCIM.GD.0.0015"
                 }
               ],
-              "text": "Warning: The Find Candidates Patient name has been modified to filter out invalid characters."
-            }
-          },
-          {
-            "severity": "error",
-            "code": "business-rule",
-            "details": {
-              "coding": [
-                {
-                  "system": "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes",
-                  "code": "HCIM.GD.1.0017"
-                }
-              ],
-              "text": "The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ..."
+              "text": "Warning: The identifier you used in the query has been merged. The surviving identifier was returned."
             }
           }
         ]
