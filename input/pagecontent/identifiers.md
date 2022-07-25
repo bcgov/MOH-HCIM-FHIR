@@ -116,7 +116,7 @@ MemHead (CRS)|BCPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/BC|official|
 MemHead (Not CRS)|SRI|AN|http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode|official|Uses the HCIM Source Code 
 SSRI|SSRI|AN|http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode|secondary|Uses the HCIM Source Code.
 ALTID|PEPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/PE|official|
-ALTID|QCPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/QC|official|
+ALTID|QCPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/QC|official|Quebec health number.
 ALTID|SKPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/SK|official|
 ALTID|YTPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/YT|official|
 ALTID|AHULI|U|http://hlth.gov.bc.ca/fhir/client/id-issuer/AHULI|official|
