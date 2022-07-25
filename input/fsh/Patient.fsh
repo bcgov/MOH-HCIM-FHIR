@@ -104,10 +104,11 @@ Extension: SourceIDExtension
 Id: bc-sourceId-extension
 Title: "BC SourceID and UserID"
 Description: "Identifiers for the source and user that modified the specific element that this extension is on."
-* extension contains sourceID 1..1 MS and userID 1..1 MS
-* extension[sourceID].value[x] 1..1 MS
+* obeys invariant-sourceid-1
+* extension contains sourceID 0..1 MS and userID 0..1 MS
+* extension[sourceID].value[x] 0..1 MS
 * extension[sourceID].value[x] only Identifier
-* extension[userID].value[x] 1..1 MS
+* extension[userID].value[x] 0..1 MS
 * extension[userID].value[x] only Identifier
 
 Extension: IdentifierStatusExtension

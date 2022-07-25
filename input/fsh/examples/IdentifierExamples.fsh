@@ -64,14 +64,16 @@ InstanceOf: Identifier
 Description: "An example of a SRI Identifier."
 Usage: #inline
 * system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
-* value = "123345654"
+* value = "abc123345654"
 * type.coding.code = #AN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
-* extension.valueCode = #active
 * period.start = "2000-01-01T11:11:11+08:00"
-//* period.end = "2010-01-01T11:11:11+08:00"
 * use = #official
+* extension[+].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
+* extension[=].valueCode = #active
+* extension[+].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+* extension[=].extension[+].url = "sourceID"
+* extension[=].extension[=].valueIdentifier.assigner.display = "ORG_SRC"
 
 Instance: IdentifierExampleSRINoPeriod
 InstanceOf: Identifier
@@ -90,14 +92,17 @@ InstanceOf: Identifier
 Description: "An example of a SSRI Identifier."
 Usage: #inline
 * system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
-* value = "123345654"
+* value = "def123345654"
 * type.coding.code = #AN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
-* extension.valueCode = #active
+* extension[+].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
+* extension[=].valueCode = #active
 * period.start = "2000-01-01T11:11:11+08:00"
 //* period.end = "2010-01-01T11:11:11+08:00"
 * use = #secondary
+* extension[+].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+* extension[=].extension[+].url = "sourceID"
+* extension[=].extension[=].valueIdentifier.assigner.display = "ORG_SUBSRC e.g. FHA_CAC or VPP_CW"
 
 Instance: IdentifierExampleSSRINoPeriod
 InstanceOf: Identifier

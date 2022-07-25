@@ -45,6 +45,7 @@ Description: "Example of $GetDemographics response Metadata parameters"
 Instance: Bundle-GetDemographics-Response-Example
 InstanceOf: SearchResponseBundle
 Description: "Example of $GetDemographics operation response Bundle"
+* total = 1
 * type = #searchset
 * timestamp = "2011-09-07T12:18:23.000-07:00"
 * link.relation = "self"

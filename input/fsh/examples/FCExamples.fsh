@@ -83,7 +83,7 @@ InstanceOf: SearchResponseBundle
 Description: "Example of FindCandidates with mother's PHN response Bundle."
 * type = #searchset
 * timestamp = "2011-09-13T16:11:43.000-07:00"
-* total = 3
+* total = 2
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f7a3b"
 * link[0].relation = "self"
