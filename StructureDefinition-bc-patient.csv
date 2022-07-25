@@ -157,7 +157,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Patient.gender.extension:sourceID","Patient.gender.extension","sourceID","","",0,1,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension]]} {[]}
 ","BC SourceID and UserID","Identifiers for the source and user that modified the specific element that this extension is on.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}invariant-sourceid-1:When using the bc-sourceid-extension one of sourceId or userId must be populated. {extension.count()=1 or extension.count()=2}"
 "Patient.gender.extension:history","Patient.gender.extension","history","","",0,*,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension]]} {[]}
 ","BC Gender History","This extension allows the Client Registry to include historical gender codes in a single Patient resource.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -180,7 +180,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Patient.birthDate.extension:sourceID","Patient.birthDate.extension","sourceID","","",0,1,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension]]} {[]}
 ","BC SourceID and UserID","Identifiers for the source and user that modified the specific element that this extension is on.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}invariant-sourceid-1:When using the bc-sourceid-extension one of sourceId or userId must be populated. {extension.count()=1 or extension.count()=2}"
 "Patient.birthDate.extension:history","Patient.birthDate.extension","history","","",0,*,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birthdate-history-extension]]} {[]}
 ","BC Birth Date History","This extension allows the Client Registry to include historical birth dates in a single Patient resource.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -203,7 +203,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Patient.deceased[x].extension:sourceID","Patient.deceased[x].extension","sourceID","","",0,1,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension]]} {[]}
 ","BC SourceID and UserID","Identifiers for the source and user that modified the specific element that this extension is on.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}invariant-sourceid-1:When using the bc-sourceid-extension one of sourceId or userId must be populated. {extension.count()=1 or extension.count()=2}"
 "Patient.deceased[x].extension:deathDateHistory","Patient.deceased[x].extension","deathDateHistory","","",0,*,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-history-extension]]} {[]}
 ","BC Death Date History","This extension allows the Client Registry to include historical death dates and flags in a single Patient resource.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}

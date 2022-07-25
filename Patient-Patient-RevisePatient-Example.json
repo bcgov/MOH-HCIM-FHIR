@@ -8,7 +8,7 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>John Doe </b> male, DoB: 1940-06-06 ( Account number: 123345654 (OFFICIAL))</p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>John Doe </b> male, DoB: 1940-06-06 ( Account number: abc123345654 (OFFICIAL))</p></div>"
   },
   "identifier": [
     {
@@ -16,6 +16,19 @@
         {
           "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
           "valueCode": "active"
+        },
+        {
+          "extension": [
+            {
+              "url": "sourceID",
+              "valueIdentifier": {
+                "assigner": {
+                  "display": "ORG_SRC"
+                }
+              }
+            }
+          ],
+          "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
         }
       ],
       "use": "official",
@@ -28,7 +41,7 @@
         ]
       },
       "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
-      "value": "123345654",
+      "value": "abc123345654",
       "period": {
         "start": "2000-01-01T11:11:11+08:00"
       }
