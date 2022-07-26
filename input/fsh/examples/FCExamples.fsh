@@ -11,6 +11,7 @@ Description: "Example of $FindCandidates operation with Mother's PHN."
 
 * entry[relatedPerson].resource = MothersPHN-RelatedPerson-ForFC
 * entry[relatedPerson].fullUrl = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f1111" 
+
 Instance: MothersPHN-RelatedPerson-ForFC
 InstanceOf: RelatedPerson
 Description: "RelatedPerson, representing Mother, for Find Candidate Operation by mother's PHN"
@@ -50,8 +51,6 @@ Description: "Example of FindCandidates response Bundle.  Patient0 has PHN, alte
 * type = #searchset
 * timestamp = "2011-09-13T16:11:43.000-07:00"
 * total = 3
-* identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f7a3b"
 * link.relation = "self"
 * link.url = "http://hlth.gov.bc.ca/fhir/client/Patient/$FindCandidates"
 
@@ -84,8 +83,6 @@ Description: "Example of FindCandidates with mother's PHN response Bundle."
 * type = #searchset
 * timestamp = "2011-09-13T16:11:43.000-07:00"
 * total = 2
-* identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f7a3b"
 * link[0].relation = "self"
 * link[0].url = "urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1"
 
