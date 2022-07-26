@@ -83,7 +83,10 @@
            ]
          ];
          fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
-         fhir:Identifier.value [ fhir:value "123345654" ]
+         fhir:Identifier.value [ fhir:value "123345654" ];
+         fhir:Identifier.assigner [
+           fhir:Reference.display [ fhir:value "ORG_SRC e.g. VPP_CER, IHA_IHA" ]
+         ]
        ]
      ];
      fhir:Patient.link.type [ fhir:value "replaces" ]
@@ -96,11 +99,6 @@
      ];
      fhir:Patient.link.other [
        fhir:Reference.identifier [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
-           fhir:Extension.valueCode [ fhir:value "merged" ]
-         ];
          fhir:Identifier.use [ fhir:value "official" ];
          fhir:Identifier.type [
            fhir:CodeableConcept.coding [
@@ -137,7 +135,10 @@
            ]
          ];
          fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
-         fhir:Identifier.value [ fhir:value "123345654" ]
+         fhir:Identifier.value [ fhir:value "123345654" ];
+         fhir:Identifier.assigner [
+           fhir:Reference.display [ fhir:value "ORG_SUBSRC e.g. FHA_CAC or VPP_CW" ]
+         ]
        ]
      ];
      fhir:Patient.link.type [ fhir:value "replaces" ]
@@ -150,11 +151,6 @@
      ];
      fhir:Patient.link.other [
        fhir:Reference.identifier [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
-           fhir:Extension.valueCode [ fhir:value "merged" ]
-         ];
          fhir:Identifier.use [ fhir:value "official" ];
          fhir:Identifier.type [
            fhir:CodeableConcept.coding [

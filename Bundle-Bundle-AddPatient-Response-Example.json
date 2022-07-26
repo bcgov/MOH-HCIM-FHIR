@@ -157,19 +157,6 @@
               {
                 "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
                 "valueCode": "active"
-              },
-              {
-                "extension": [
-                  {
-                    "url": "sourceID",
-                    "valueIdentifier": {
-                      "assigner": {
-                        "display": "ORG_SRC"
-                      }
-                    }
-                  }
-                ],
-                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
               }
             ],
             "use": "official",
@@ -185,6 +172,9 @@
             "value": "abc123345654",
             "period": {
               "start": "2000-01-01T11:11:11+08:00"
+            },
+            "assigner": {
+              "display": "ORG_SRC e.g. VPP_CER, IHA_IHA"
             }
           },
           {
@@ -192,19 +182,6 @@
               {
                 "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
                 "valueCode": "active"
-              },
-              {
-                "extension": [
-                  {
-                    "url": "sourceID",
-                    "valueIdentifier": {
-                      "assigner": {
-                        "display": "ORG_SUBSRC e.g. FHA_CAC or VPP_CW"
-                      }
-                    }
-                  }
-                ],
-                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
               }
             ],
             "use": "secondary",
@@ -220,6 +197,9 @@
             "value": "def123345654",
             "period": {
               "start": "2000-01-01T11:11:11+08:00"
+            },
+            "assigner": {
+              "display": "ORG_SUBSRC e.g. FHA_CAC or VPP_CW"
             }
           },
           {

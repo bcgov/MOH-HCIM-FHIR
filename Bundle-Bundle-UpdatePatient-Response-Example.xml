@@ -112,15 +112,6 @@
           <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
             <valueCode value="active"/>
           </extension>
-          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
-            <extension url="sourceID">
-              <valueIdentifier>
-                <assigner>
-                  <display value="ORG_SRC"/>
-                </assigner>
-              </valueIdentifier>
-            </extension>
-          </extension>
           <use value="official"/>
           <type>
             <coding>
@@ -133,19 +124,13 @@
           <period>
             <start value="2000-01-01T11:11:11+08:00"/>
           </period>
+          <assigner>
+            <display value="ORG_SRC e.g. VPP_CER, IHA_IHA"/>
+          </assigner>
         </identifier>
         <identifier>
           <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
             <valueCode value="active"/>
-          </extension>
-          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
-            <extension url="sourceID">
-              <valueIdentifier>
-                <assigner>
-                  <display value="ORG_SUBSRC e.g. FHA_CAC or VPP_CW"/>
-                </assigner>
-              </valueIdentifier>
-            </extension>
           </extension>
           <use value="secondary"/>
           <type>
@@ -159,6 +144,9 @@
           <period>
             <start value="2000-01-01T11:11:11+08:00"/>
           </period>
+          <assigner>
+            <display value="ORG_SUBSRC e.g. FHA_CAC or VPP_CW"/>
+          </assigner>
         </identifier>
         <identifier>
           <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">

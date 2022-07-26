@@ -33,18 +33,6 @@
        fhir:index 0;
        fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
        fhir:Extension.valueCode [ fhir:value "active" ]
-     ], [
-       fhir:index 1;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "sourceID" ];
-         fhir:Extension.valueIdentifier [
-           fhir:Identifier.assigner [
-             fhir:Reference.display [ fhir:value "ORG_SRC" ]
-           ]
-         ]
-       ];
-       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension" ]
      ];
      fhir:Identifier.use [ fhir:value "official" ];
      fhir:Identifier.type [
@@ -58,6 +46,9 @@
      fhir:Identifier.value [ fhir:value "abc123345654" ];
      fhir:Identifier.period [
        fhir:Period.start [ fhir:value "2000-01-01T11:11:11+08:00"^^xsd:dateTime ]
+     ];
+     fhir:Identifier.assigner [
+       fhir:Reference.display [ fhir:value "ORG_SRC e.g. VPP_CER, IHA_IHA" ]
      ]
   ], [
      fhir:index 2;
@@ -65,18 +56,6 @@
        fhir:index 0;
        fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
        fhir:Extension.valueCode [ fhir:value "active" ]
-     ], [
-       fhir:index 1;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "sourceID" ];
-         fhir:Extension.valueIdentifier [
-           fhir:Identifier.assigner [
-             fhir:Reference.display [ fhir:value "ORG_SUBSRC e.g. FHA_CAC or VPP_CW" ]
-           ]
-         ]
-       ];
-       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension" ]
      ];
      fhir:Identifier.use [ fhir:value "secondary" ];
      fhir:Identifier.type [
@@ -90,6 +69,9 @@
      fhir:Identifier.value [ fhir:value "def123345654" ];
      fhir:Identifier.period [
        fhir:Period.start [ fhir:value "2000-01-01T11:11:11+08:00"^^xsd:dateTime ]
+     ];
+     fhir:Identifier.assigner [
+       fhir:Reference.display [ fhir:value "ORG_SUBSRC e.g. FHA_CAC or VPP_CW" ]
      ]
   ], [
      fhir:index 3;
