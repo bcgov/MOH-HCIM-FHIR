@@ -17,7 +17,7 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>John Doe </b> male, DoB: 1940-06-06 ( Account number: abc123345654 (OFFICIAL))</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>John Johnny Doe </b> male, DoB: 1940-06-06 ( Account number: abc123345654 (OFFICIAL))</p></div>"
   ];
   fhir:Patient.identifier [
      fhir:index 0;
@@ -50,6 +50,9 @@
      fhir:HumanName.given [
        fhir:value "John";
        fhir:index 0
+     ], [
+       fhir:value "Johnny";
+       fhir:index 1
      ];
      fhir:HumanName.period [
        fhir:Period.start [ fhir:value "2017-04-05"^^xsd:date ]
