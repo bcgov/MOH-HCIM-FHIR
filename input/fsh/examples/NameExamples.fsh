@@ -2,7 +2,8 @@ Instance: Name-Example-JohnDoe
 InstanceOf: HumanName
 Description: "An example of a HumanName."
 Usage: #inline
-* given = "John"
+* given[+] = "John"
+* given[+] = "Johnny"
 * family = "Doe"
 * use = #usual
 * period.start = "2017-04-05"
