@@ -150,16 +150,17 @@ Instance: Patient-AddReviseOrMergePatient-Response-Example
 InstanceOf: ClientRegistryPatient
 Description: "Example of Merge or Revise response Bundle with 4 different kinds of identifiers: SRI-PHN, SRI, SSRI and alternative."
 // Patient business date
-* extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* extension[0].valuePeriod.start = "2019-02-07T13:29:17-08:00"
+* extension[+].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
+* extension[=].valuePeriod.start = "2019-02-07T13:29:17-08:00"
 * address[0] = Address-0-Example-Valid
 * address[1] = Address-1-Example-Invalid
 * telecom[0] = ContactPoint-Example-Home-Phone
-* identifier[0] = IdentifierExamplePHN
-* identifier[1] = IdentifierExampleSRI
-* identifier[2] = IdentifierExampleSSRI
-* identifier[3] = IdentifierExampleQCPHN
-* name = Name-Example-JohnDoe
+* identifier[+] = IdentifierExamplePHN
+* identifier[+] = IdentifierExampleSRI
+* identifier[+] = IdentifierExampleSSRI
+* identifier[+] = IdentifierExampleQCPHN
+* name[+] = Name-Example-JohnDoe
+* name[+] = Name-Example-Nickname
 * gender = #male
 * gender.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * gender.extension.valuePeriod.start = "2017-04-05T16:16:16-08:00"
