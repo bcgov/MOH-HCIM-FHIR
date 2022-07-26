@@ -35,6 +35,19 @@ Non PHN, SRI example;
         {
           "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
           "valueCode" : "active"
+        },
+        {
+          "extension" : [
+            {
+              "url" : "sourceID",
+              "valueIdentifier" : {
+                "assigner" : {
+                  "display" : "ORG_SRC"
+                }
+              }
+            }
+          ],
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
         }
       ],
       "use" : "official",
@@ -47,13 +60,11 @@ Non PHN, SRI example;
         ]
       },
       "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
-      "value" : "123345654",
+      "value" : "abc123345654",
       "period" : {
-        "start" : "2000-01-01T11:11:11+08:00",
-        "end" : "2010-01-01T11:11:11+08:00"
+        "start" : "2000-01-01T11:11:11+08:00"
       }
     }
-
 
 This represents a SSRI identifier; notice the use is secondary (as opposed to official like above SRI example)..
 
@@ -62,6 +73,19 @@ This represents a SSRI identifier; notice the use is secondary (as opposed to of
         {
           "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
           "valueCode" : "active"
+        },
+        {
+          "extension" : [
+            {
+              "url" : "sourceID",
+              "valueIdentifier" : {
+                "assigner" : {
+                  "display" : "ORG_SUBSRC e.g. FHA_CAC or VPP_CW"
+                }
+              }
+            }
+          ],
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
         }
       ],
       "use" : "secondary",
@@ -74,10 +98,9 @@ This represents a SSRI identifier; notice the use is secondary (as opposed to of
         ]
       },
       "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
-      "value" : "123345654",
+      "value" : "def123345654",
       "period" : {
-        "start" : "2000-01-01T11:11:11+08:00",
-        "end" : "2010-01-01T11:11:11+08:00"
+        "start" : "2000-01-01T11:11:11+08:00"
       }
     }
 
