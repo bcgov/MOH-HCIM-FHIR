@@ -1,6 +1,6 @@
 ### Identifiers
 
-The Client Registry makes use of several kinds of identifiers, each requiring different attributes and codes.  This page explains, in more detail, the different kinds and how in FHIR they should be represented.
+The Client Registry makes use of several kinds of identifiers, each requiring different attributes and codes.  This page explains, in more detail, the different kinds and how in FHIR they should be represented.  This page has PHN, SRI, SSRI and alternate identifier examples below.
 
 PHN example:
 
