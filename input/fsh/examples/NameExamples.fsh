@@ -7,6 +7,14 @@ Usage: #inline
 * use = #usual
 * period.start = "2017-04-05"
 
+Instance: Name-Example-Nickname
+InstanceOf: HumanName
+Description: "An example of a HumanName."
+Usage: #inline
+* given = "Nick"
+* use = #nickname
+* period.start = "2018-05-06"
+
 Instance: Name-Example-JohnDoe-NoPeriod
 InstanceOf: HumanName
 Description: "An example of a HumanName."
