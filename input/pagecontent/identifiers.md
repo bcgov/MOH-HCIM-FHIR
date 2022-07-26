@@ -5,12 +5,6 @@ The Client Registry makes use of several kinds of identifiers, each requiring di
 PHN example:
 
     {
-      "extension" : [
-        {
-          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
-          "valueCode" : "merged"
-        }
-      ],
       "use" : "official",
       "type" : {
         "coding" : [
@@ -31,25 +25,6 @@ PHN example:
 Non PHN, SRI example;
 
     {
-      "extension" : [
-        {
-          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
-          "valueCode" : "active"
-        },
-        {
-          "extension" : [
-            {
-              "url" : "sourceID",
-              "valueIdentifier" : {
-                "assigner" : {
-                  "display" : "ORG_SRC"
-                }
-              }
-            }
-          ],
-          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
-        }
-      ],
       "use" : "official",
       "type" : {
         "coding" : [
@@ -61,6 +36,9 @@ Non PHN, SRI example;
       },
       "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
       "value" : "abc123345654",
+      "assigner" : {
+        "display" : "ORG_SRC e.g. VPP_CER, IHA_IHA"
+      },
       "period" : {
         "start" : "2000-01-01T11:11:11+08:00"
       }
@@ -69,25 +47,6 @@ Non PHN, SRI example;
 This represents a SSRI identifier; notice the use is secondary (as opposed to official like above SRI example)..
 
     {
-      "extension" : [
-        {
-          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
-          "valueCode" : "active"
-        },
-        {
-          "extension" : [
-            {
-              "url" : "sourceID",
-              "valueIdentifier" : {
-                "assigner" : {
-                  "display" : "ORG_SUBSRC e.g. FHA_CAC or VPP_CW"
-                }
-              }
-            }
-          ],
-          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
-        }
-      ],
       "use" : "secondary",
       "type" : {
         "coding" : [
@@ -99,6 +58,9 @@ This represents a SSRI identifier; notice the use is secondary (as opposed to of
       },
       "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
       "value" : "def123345654",
+      "assigner" : {
+        "display" : "ORG_SUBSRC e.g. FHA_CAC or VPP_CW"
+      },
       "period" : {
         "start" : "2000-01-01T11:11:11+08:00"
       }
@@ -108,12 +70,6 @@ This represents a SSRI identifier; notice the use is secondary (as opposed to of
 This represents alternate identifiers.  In the example below the identifier is from Quebec, and the system represents this with 'QC' at the end.
 
     {
-      "extension" : [
-        {
-          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
-          "valueCode" : "active"
-        }
-      ],
       "use" : "official",
       "type" : {
         "coding" : [
