@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="bc-contact-point-use-value-set"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href="http://hl7.org/fhir/R4/valueset-contact-point-use.html">http://hl7.org/fhir/ValueSet/contact-point-use</a></li></ul><p>This value set excludes codes based on the following rules:</p><ul><li>Exclude these codes as defined in <a href="http://hl7.org/fhir/R4/codesystem-contact-point-use.html"><code>http://hl7.org/fhir/contact-point-use</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-contact-point-use.html#contact-point-use-old">old</a></td><td>Old</td><td>This contact point is no longer in use (or was never correct, but retained for records).</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-contact-point-use.html#contact-point-use-temp">temp</a></td><td>Temp</td><td>A temporary contact point. The period can provide more detailed information.</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set"/>
+  <version value="0.1.0"/>
+  <name value="ContactPointUseVS"/>
+  <title value="BC Contact Point Use Value Set"/>
+  <status value="active"/>
+  <date value="2022-07-26T13:19:23+00:00"/>
+  <publisher value="BC Ministry of Health"/>
+  <contact>
+    <name value="BC Ministry of Health"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"/>
+    </telecom>
+  </contact>
+  <description value="BC Contact Point Use value set, sliced to meet BC constraints."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="CA"/>
+      <display value="Canada"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <valueSet value="http://hl7.org/fhir/ValueSet/contact-point-use"/>
+    </include>
+    <exclude>
+      <system value="http://hl7.org/fhir/contact-point-use"/>
+      <concept>
+        <code value="old"/>
+      </concept>
+      <concept>
+        <code value="temp"/>
+      </concept>
+    </exclude>
+  </compose>
+</ValueSet>

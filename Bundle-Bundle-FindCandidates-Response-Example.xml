@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="Bundle-FindCandidates-Response-Example"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
+  </meta>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f7a3b"/>
+  </identifier>
+  <type value="searchset"/>
+  <timestamp value="2011-09-13T16:11:43.000-07:00"/>
+  <total value="3"/>
+  <link>
+    <relation value="self"/>
+    <url value="http://hlth.gov.bc.ca/fhir/client/Patient/$FindCandidates"/>
+  </link>
+  <entry>
+    <fullUrl value="urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33"/>
+    <resource>
+      <Parameters>
+        <id value="Parameters-FindCandidates-Response-Example"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"/>
+        </meta>
+        <parameter>
+          <name value="messageId"/>
+          <valueString value="c087e71e-3e7e-4c22-a3ce-61523f600615"/>
+        </parameter>
+        <parameter>
+          <name value="messageDateTime"/>
+          <valueDateTime value="2015-02-07T13:29:17-08:00"/>
+        </parameter>
+        <parameter>
+          <name value="sender"/>
+          <valueIdentifier>
+            <system value="http://hlth.gov.bc.ca/fhir/client/bc-org"/>
+            <value value="123123345"/>
+          </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="requestMessageId"/>
+          <valueString value="98028b44-882a-4c72-8c92-b87d916147e1"/>
+        </parameter>
+        <parameter>
+          <name value="requestParameters"/>
+          <resource>
+            <Parameters>
+              <id value="Parameters-FindCandidates-Example"/>
+              <meta>
+                <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"/>
+              </meta>
+              <parameter>
+                <name value="messageId"/>
+                <valueString value="98028b44-882a-4c72-8c92-b87d916147e1"/>
+              </parameter>
+              <parameter>
+                <name value="messageDateTime"/>
+                <valueDateTime value="2015-02-07T13:28:17-08:00"/>
+              </parameter>
+              <parameter>
+                <name value="identifiersOnly"/>
+                <valueBoolean value="false"/>
+              </parameter>
+            </Parameters>
+          </resource>
+        </parameter>
+      </Parameters>
+    </resource>
+    <search>
+      <mode value="include"/>
+    </search>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"/>
+    <resource>
+      <OperationOutcome>
+        <id value="OperationOutcome-Search-Example"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "OperationOutcome-Search-Example" </p></div><h3>Issues</h3><table class="grid"><tr><td>-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td>*</td><td>warning</td><td>business-rule</td><td>Warning: The identifier you used in the query has been merged. The surviving identifier was returned. <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (bc-oo-codes#BCHCIM.GD.0.0015)</span></td></tr></table></div>
+        </text>
+        <issue>
+          <severity value="warning"/>
+          <code value="business-rule"/>
+          <details>
+            <coding>
+              <system value="http://hlth.gov.bc.ca/fhir/client/bc-oo-codes"/>
+              <code value="BCHCIM.GD.0.0015"/>
+            </coding>
+            <text value="Warning: The identifier you used in the query has been merged. The surviving identifier was returned."/>
+          </details>
+        </issue>
+      </OperationOutcome>
+    </resource>
+    <search>
+      <mode value="outcome"/>
+    </search>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"/>
+    <resource>
+      <Patient>
+        <id value="Patient-0-Example"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient-0-Example" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">ClientRegistryPatient</a></p></div><p><b>BC Business Dates</b>: 2019-02-07 01:29:17-0800 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9123456789 (OFFICIAL), Account number: abc123345654 (OFFICIAL), Account number: def123345654 (SECONDARY), Jurisdictional health number: 9123345654 (OFFICIAL)</p><p><b>name</b>: Jane Doe </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-06-06</p><p><b>address</b>: </p><ul><li>721 FRONT ST VICTORIA BC V9A3Y3 CA </li><li>721 FRONT AVE Victoria BC V9A3V3 CA </li></ul></div>
+        </text>
+        <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+          <valuePeriod>
+            <start value="2019-02-07T13:29:17-08:00"/>
+          </valuePeriod>
+        </extension>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="merged"/>
+          </extension>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="JHN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"/>
+          <value value="9123456789"/>
+          <period>
+            <start value="2000-01-01T11:11:11+08:00"/>
+          </period>
+        </identifier>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueIdentifier>
+                <assigner>
+                  <display value="ORG_SRC"/>
+                </assigner>
+              </valueIdentifier>
+            </extension>
+          </extension>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="AN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+          <value value="abc123345654"/>
+          <period>
+            <start value="2000-01-01T11:11:11+08:00"/>
+          </period>
+        </identifier>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueIdentifier>
+                <assigner>
+                  <display value="ORG_SUBSRC e.g. FHA_CAC or VPP_CW"/>
+                </assigner>
+              </valueIdentifier>
+            </extension>
+          </extension>
+          <use value="secondary"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="AN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+          <value value="def123345654"/>
+          <period>
+            <start value="2000-01-01T11:11:11+08:00"/>
+          </period>
+        </identifier>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="JHN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/QC"/>
+          <value value="9123345654"/>
+          <period>
+            <start value="2000-01-01T11:11:11+08:00"/>
+          </period>
+        </identifier>
+        <name>
+          <use value="usual"/>
+          <family value="Doe"/>
+          <given value="Jane"/>
+          <period>
+            <start value="2018-04-05"/>
+          </period>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="2505554848"/>
+          <use value="home"/>
+          <period>
+            <start value="2000-01-02T10:10:10-08:00"/>
+          </period>
+        </telecom>
+        <gender value="male">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2017-04-05T16:16:16-08:00"/>
+            </valuePeriod>
+          </extension>
+        </gender>
+        <birthDate value="1940-06-06">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2020-10-17T03:29:17-08:00"/>
+            </valuePeriod>
+          </extension>
+        </birthDate>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="valid"/>
+          </extension>
+          <type value="physical"/>
+          <line value="721 FRONT ST"/>
+          <city value="VICTORIA"/>
+          <state value="BC"/>
+          <postalCode value="V9A3Y3"/>
+          <country value="CA"/>
+        </address>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="invalid"/>
+          </extension>
+          <type value="postal"/>
+          <line value="721 FRONT AVE"/>
+          <city value="Victoria"/>
+          <state value="BC"/>
+          <postalCode value="V9A3V3"/>
+          <country value="CA"/>
+        </address>
+      </Patient>
+    </resource>
+    <search>
+      <mode value="match"/>
+      <score value="31"/>
+    </search>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:90bf49dc-4590-4302-8e28-f02bb4deb353"/>
+    <resource>
+      <Patient>
+        <id value="Patient-1-Example"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient-1-Example" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">ClientRegistryPatient</a></p></div><p><b>BC Business Dates</b>: 2019-02-07 01:29:17-0800 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9123456789 (OFFICIAL)</p><p><b>name</b>: Jane Doe </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1973-05-18</p><p><b>address</b>: </p><ul><li>721 FRONT ST VICTORIA BC V9A3Y3 CA </li><li>721 FRONT AVE Victoria BC V9A3V3 CA </li></ul></div>
+        </text>
+        <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+          <valuePeriod>
+            <start value="2019-02-07T13:29:17-08:00"/>
+          </valuePeriod>
+        </extension>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="merged"/>
+          </extension>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="JHN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"/>
+          <value value="9123456789"/>
+          <period>
+            <start value="2000-01-01T11:11:11+08:00"/>
+          </period>
+        </identifier>
+        <name>
+          <use value="usual"/>
+          <family value="Doe"/>
+          <given value="Jane"/>
+          <period>
+            <start value="2018-04-05"/>
+          </period>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="2505554848"/>
+          <use value="home"/>
+          <period>
+            <start value="2000-01-02T10:10:10-08:00"/>
+          </period>
+        </telecom>
+        <gender value="female">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2017-04-05T16:16:16-08:00"/>
+            </valuePeriod>
+          </extension>
+        </gender>
+        <birthDate value="1973-05-18">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2018-10-17T03:29:17-08:00"/>
+            </valuePeriod>
+          </extension>
+        </birthDate>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="valid"/>
+          </extension>
+          <type value="physical"/>
+          <line value="721 FRONT ST"/>
+          <city value="VICTORIA"/>
+          <state value="BC"/>
+          <postalCode value="V9A3Y3"/>
+          <country value="CA"/>
+        </address>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="invalid"/>
+          </extension>
+          <type value="postal"/>
+          <line value="721 FRONT AVE"/>
+          <city value="Victoria"/>
+          <state value="BC"/>
+          <postalCode value="V9A3V3"/>
+          <country value="CA"/>
+        </address>
+      </Patient>
+    </resource>
+    <search>
+      <mode value="match"/>
+      <score value="-53"/>
+    </search>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:072f48b7-43c5-4bec-8798-026cc432adcf"/>
+    <resource>
+      <Patient>
+        <id value="Patient-2-Example"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient-2-Example" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">ClientRegistryPatient</a></p></div><p><b>BC Business Dates</b>: 2019-02-07 01:29:17-0800 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: 9123456789 (OFFICIAL)</p><p><b>name</b>: John Doe </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1985-12-14</p><p><b>address</b>: </p><ul><li>721 FRONT ST VICTORIA BC V9A3Y3 CA </li><li>721 FRONT AVE Victoria BC V9A3V3 CA </li></ul><p><b>multipleBirth</b>: false</p></div>
+        </text>
+        <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+          <valuePeriod>
+            <start value="2019-02-07T13:29:17-08:00"/>
+          </valuePeriod>
+        </extension>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="merged"/>
+          </extension>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="JHN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"/>
+          <value value="9123456789"/>
+          <period>
+            <start value="2000-01-01T11:11:11+08:00"/>
+          </period>
+        </identifier>
+        <name>
+          <use value="usual"/>
+          <family value="Doe"/>
+          <given value="John"/>
+          <period>
+            <start value="2017-04-05"/>
+          </period>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="2505554848"/>
+          <use value="home"/>
+          <period>
+            <start value="2000-01-02T10:10:10-08:00"/>
+          </period>
+        </telecom>
+        <gender value="female">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2017-04-05T16:16:16-08:00"/>
+            </valuePeriod>
+          </extension>
+        </gender>
+        <birthDate value="1985-12-14">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2019-10-17T03:29:17-08:00"/>
+            </valuePeriod>
+          </extension>
+        </birthDate>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="valid"/>
+          </extension>
+          <type value="physical"/>
+          <line value="721 FRONT ST"/>
+          <city value="VICTORIA"/>
+          <state value="BC"/>
+          <postalCode value="V9A3Y3"/>
+          <country value="CA"/>
+        </address>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="invalid"/>
+          </extension>
+          <type value="postal"/>
+          <line value="721 FRONT AVE"/>
+          <city value="Victoria"/>
+          <state value="BC"/>
+          <postalCode value="V9A3V3"/>
+          <country value="CA"/>
+        </address>
+        <multipleBirthBoolean value="false">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2019-10-17T03:29:17-08:00"/>
+            </valuePeriod>
+          </extension>
+        </multipleBirthBoolean>
+      </Patient>
+    </resource>
+    <search>
+      <mode value="match"/>
+      <score value="-56"/>
+    </search>
+  </entry>
+</Bundle>

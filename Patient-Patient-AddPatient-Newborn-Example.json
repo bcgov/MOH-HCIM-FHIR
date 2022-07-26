@@ -1,0 +1,62 @@
+{
+  "resourceType": "Patient",
+  "id": "Patient-AddPatient-Newborn-Example",
+  "meta": {
+    "profile": [
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Baby girl </b> female, DoB: 2021-11-02 ( Account number: 123345654 (SECONDARY))</p></div>"
+  },
+  "identifier": [
+    {
+      "extension": [
+        {
+          "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode": "active"
+        }
+      ],
+      "use": "secondary",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "AN"
+          }
+        ]
+      },
+      "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+      "value": "123345654"
+    }
+  ],
+  "name": [
+    {
+      "given": [
+        "Baby girl"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "2505554848",
+      "use": "home"
+    }
+  ],
+  "gender": "female",
+  "birthDate": "2021-11-02",
+  "address": [
+    {
+      "type": "physical",
+      "line": [
+        "721 FRONT ST"
+      ],
+      "city": "VICTORIA",
+      "state": "BC",
+      "postalCode": "V9A3Y3",
+      "country": "CA"
+    }
+  ]
+}

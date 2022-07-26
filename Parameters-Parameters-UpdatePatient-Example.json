@@ -1,0 +1,63 @@
+{
+  "resourceType": "Parameters",
+  "id": "Parameters-UpdatePatient-Example",
+  "meta": {
+    "profile": [
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "messageId",
+      "valueString": "98028b44-882a-4c72-8c92-b87d916147e1"
+    },
+    {
+      "name": "messageDateTime",
+      "valueDateTime": "2021-11-02T13:28:17-08:00"
+    },
+    {
+      "name": "SRI",
+      "valueIdentifier": {
+        "extension": [
+          {
+            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+            "valueCode": "active"
+          }
+        ],
+        "use": "official",
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "code": "AN"
+            }
+          ]
+        },
+        "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+        "value": "123345654"
+      }
+    },
+    {
+      "name": "patchOperation",
+      "resource": {
+        "resourceType": "Parameters",
+        "id": "Parameters-DeletePatch-Example",
+        "parameter": [
+          {
+            "name": "operation",
+            "part": [
+              {
+                "name": "type",
+                "valueCode": "delete"
+              },
+              {
+                "name": "path",
+                "valueString": "Patient.address.where(type = 'physical')"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

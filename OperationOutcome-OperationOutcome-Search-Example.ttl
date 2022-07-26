@@ -1,0 +1,35 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/OperationOutcome/OperationOutcome-Search-Example> a fhir:OperationOutcome;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "OperationOutcome-Search-Example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"OperationOutcome-Search-Example\" </p></div><h3>Issues</h3><table class=\"grid\"><tr><td>-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td>*</td><td>warning</td><td>business-rule</td><td>Warning: The identifier you used in the query has been merged. The surviving identifier was returned. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#BCHCIM.GD.0.0015)</span></td></tr></table></div>"
+  ];
+  fhir:OperationOutcome.issue [
+     fhir:index 0;
+     fhir:OperationOutcome.issue.severity [ fhir:value "warning" ];
+     fhir:OperationOutcome.issue.code [ fhir:value "business-rule" ];
+     fhir:OperationOutcome.issue.details [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes" ];
+         fhir:Coding.code [ fhir:value "BCHCIM.GD.0.0015" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Warning: The identifier you used in the query has been merged. The surviving identifier was returned." ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/OperationOutcome/OperationOutcome-Search-Example.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

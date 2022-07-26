@@ -1,0 +1,134 @@
+{
+  "resourceType": "Patient",
+  "id": "Patient-2-Example",
+  "meta": {
+    "profile": [
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>John Doe </b> female, DoB: 1985-12-14 ( Jurisdictional health number: 9123456789 (OFFICIAL))</p></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+      "valuePeriod": {
+        "start": "2019-02-07T13:29:17-08:00"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "extension": [
+        {
+          "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode": "merged"
+        }
+      ],
+      "use": "official",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "JHN"
+          }
+        ]
+      },
+      "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
+      "value": "9123456789",
+      "period": {
+        "start": "2000-01-01T11:11:11+08:00"
+      }
+    }
+  ],
+  "name": [
+    {
+      "use": "usual",
+      "family": "Doe",
+      "given": [
+        "John"
+      ],
+      "period": {
+        "start": "2017-04-05"
+      }
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "2505554848",
+      "use": "home",
+      "period": {
+        "start": "2000-01-02T10:10:10-08:00"
+      }
+    }
+  ],
+  "gender": "female",
+  "_gender": {
+    "extension": [
+      {
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+        "valuePeriod": {
+          "start": "2017-04-05T16:16:16-08:00"
+        }
+      }
+    ]
+  },
+  "birthDate": "1985-12-14",
+  "_birthDate": {
+    "extension": [
+      {
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+        "valuePeriod": {
+          "start": "2019-10-17T03:29:17-08:00"
+        }
+      }
+    ]
+  },
+  "address": [
+    {
+      "extension": [
+        {
+          "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+          "valueCode": "valid"
+        }
+      ],
+      "type": "physical",
+      "line": [
+        "721 FRONT ST"
+      ],
+      "city": "VICTORIA",
+      "state": "BC",
+      "postalCode": "V9A3Y3",
+      "country": "CA"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+          "valueCode": "invalid"
+        }
+      ],
+      "type": "postal",
+      "line": [
+        "721 FRONT AVE"
+      ],
+      "city": "Victoria",
+      "state": "BC",
+      "postalCode": "V9A3V3",
+      "country": "CA"
+    }
+  ],
+  "multipleBirthBoolean": false,
+  "_multipleBirthBoolean": {
+    "extension": [
+      {
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+        "valuePeriod": {
+          "start": "2019-10-17T03:29:17-08:00"
+        }
+      }
+    ]
+  }
+}

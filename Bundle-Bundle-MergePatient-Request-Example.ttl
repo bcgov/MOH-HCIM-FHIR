@@ -1,0 +1,224 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Bundle/Bundle-MergePatient-Request-Example> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Bundle-MergePatient-Request-Example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle>
+     ]
+  ];
+  fhir:Bundle.type [ fhir:value "collection"];
+  fhir:Bundle.timestamp [ fhir:value "2011-09-13T16:11:43.000-07:00"^^xsd:dateTime];
+  fhir:Bundle.link [
+     fhir:index 0;
+     fhir:Bundle.link.relation [ fhir:value "self" ];
+     fhir:Bundle.link.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/Patient/$MergePatient" ]
+  ];
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f2222" ];
+     fhir:Bundle.entry.resource <urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f2222>
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f4444" ];
+     fhir:Bundle.entry.resource <urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f4444>
+  ] .
+
+<urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f2222> a fhir:Parameters;
+  fhir:Resource.id [ fhir:value "Parameters-MergePatient-TwoNonSurvivors-Example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in>
+     ]
+  ];
+  fhir:Parameters.parameter [
+     fhir:index 0;
+     fhir:Parameters.parameter.name [ fhir:value "messageId" ];
+     fhir:Parameters.parameter.valueString [ fhir:value "98028b44-882a-4c72-8c92-b87d916147e1" ]
+  ], [
+     fhir:index 1;
+     fhir:Parameters.parameter.name [ fhir:value "messageDateTime" ];
+     fhir:Parameters.parameter.valueDateTime [ fhir:value "2021-11-02T13:28:17-08:00"^^xsd:dateTime ]
+  ] .
+
+<urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f4444> a fhir:Patient;
+  fhir:Resource.id [ fhir:value "Patient-MergePatient-Example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Patient-MergePatient-Example\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: id: 876092N4</p><p><b>active</b>: true</p><p><b>name</b>: Darrel Dwayne (OFFICIAL)</p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1966-10-01</p><p><b>address</b>: 721 FRONT ST VICTORIA BC V9A3Y3 CA </p><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: cancelled</p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: cancelled</p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote></div>"
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
+     fhir:Identifier.value [ fhir:value "876092N4" ]
+  ];
+  fhir:Patient.active [ fhir:value "true"^^xsd:boolean];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "official" ];
+     fhir:HumanName.family [ fhir:value "Dwayne" ];
+     fhir:HumanName.given [
+       fhir:value "Darrel";
+       fhir:index 0
+     ];
+     fhir:HumanName.period [
+       fhir:Period.start [ fhir:value "2017-04-05"^^xsd:date ]
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "2505554848" ];
+     fhir:ContactPoint.use [ fhir:value "home" ];
+     fhir:ContactPoint.period [
+       fhir:Period.start [ fhir:value "2000-01-02T10:10:10-08:00"^^xsd:dateTime ]
+     ]
+  ];
+  fhir:Patient.gender [ fhir:value "male"];
+  fhir:Patient.birthDate [ fhir:value "1966-10-01"^^xsd:date];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.type [ fhir:value "physical" ];
+     fhir:Address.line [
+       fhir:value "721 FRONT ST";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "VICTORIA" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.postalCode [ fhir:value "V9A3Y3" ];
+     fhir:Address.country [ fhir:value "CA" ]
+  ];
+  fhir:Patient.link [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "cancelled" ]
+     ];
+     fhir:Patient.link.other [
+       fhir:Reference.identifier [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+           fhir:Extension.valueCode [ fhir:value "active" ]
+         ];
+         fhir:Identifier.use [ fhir:value "official" ];
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+             fhir:Coding.code [ fhir:value "AN" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
+         fhir:Identifier.value [ fhir:value "123345654" ]
+       ]
+     ];
+     fhir:Patient.link.type [ fhir:value "replaces" ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "cancelled" ]
+     ];
+     fhir:Patient.link.other [
+       fhir:Reference.identifier [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+           fhir:Extension.valueCode [ fhir:value "merged" ]
+         ];
+         fhir:Identifier.use [ fhir:value "official" ];
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+             fhir:Coding.code [ fhir:value "JHN" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC" ];
+         fhir:Identifier.value [ fhir:value "9123456778" ]
+       ]
+     ];
+     fhir:Patient.link.type [ fhir:value "replaces" ]
+  ], [
+     fhir:index 2;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "obsolete" ]
+     ];
+     fhir:Patient.link.other [
+       fhir:Reference.identifier [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+           fhir:Extension.valueCode [ fhir:value "active" ]
+         ];
+         fhir:Identifier.use [ fhir:value "secondary" ];
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+             fhir:Coding.code [ fhir:value "AN" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
+         fhir:Identifier.value [ fhir:value "123345654" ]
+       ]
+     ];
+     fhir:Patient.link.type [ fhir:value "replaces" ]
+  ], [
+     fhir:index 3;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "obsolete" ]
+     ];
+     fhir:Patient.link.other [
+       fhir:Reference.identifier [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+           fhir:Extension.valueCode [ fhir:value "merged" ]
+         ];
+         fhir:Identifier.use [ fhir:value "official" ];
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+             fhir:Coding.code [ fhir:value "JHN" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC" ];
+         fhir:Identifier.value [ fhir:value "9876543210" ]
+       ]
+     ];
+     fhir:Patient.link.type [ fhir:value "replaces" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Bundle/Bundle-MergePatient-Request-Example.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

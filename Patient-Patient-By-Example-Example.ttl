@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Patient/Patient-By-Example-Example> a fhir:Patient;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Patient-By-Example-Example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Jill Janey (OFFICIAL)</b> male, DoB: 1940-06-06</p></div>"
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "official" ];
+     fhir:HumanName.family [ fhir:value "Janey" ];
+     fhir:HumanName.given [
+       fhir:value "Jill";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "2505554848" ];
+     fhir:ContactPoint.use [ fhir:value "home" ]
+  ];
+  fhir:Patient.gender [ fhir:value "male"];
+  fhir:Patient.birthDate [ fhir:value "1940-06-06"^^xsd:date];
+  fhir:Patient.deceasedDateTime [ fhir:value "2019-07-07"^^xsd:date];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.type [ fhir:value "physical" ];
+     fhir:Address.line [
+       fhir:value "636 Misty Way";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "PRINCE GEORGE" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.postalCode [ fhir:value "V8W 3P9" ];
+     fhir:Address.country [ fhir:value "CA" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Patient/Patient-By-Example-Example.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,46 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/RelatedPerson/RelatedPerson-MotherOfBabyBoy-Example> a fhir:RelatedPerson;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "RelatedPerson-MotherOfBabyBoy-Example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"RelatedPerson-MotherOfBabyBoy-Example\" </p></div><p><b>identifier</b>: Jurisdictional health number: 9123456788 (OFFICIAL)</p><p><b>patient</b>: <a href=\"Bundle-Bundle-FindCandidates-Response-Example.html#urn-uuid-90bf49dc-4590-4302-8e28-f02bb4deb353\">urn:uuid:90bf49dc-4590-4302-8e28-f02bb4deb353</a></p><p><b>relationship</b>: natural mother <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-RoleCode.html\">RoleCode</a>#NMTH)</span></p></div>"
+  ];
+  fhir:RelatedPerson.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "JHN" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC" ];
+     fhir:Identifier.value [ fhir:value "9123456788" ]
+  ];
+  fhir:RelatedPerson.patient [
+     fhir:Reference.reference [ fhir:value "urn:uuid:90bf49dc-4590-4302-8e28-f02bb4deb353" ]
+  ];
+  fhir:RelatedPerson.relationship [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ];
+       fhir:Coding.code [ fhir:value "NMTH" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/RelatedPerson/RelatedPerson-MotherOfBabyBoy-Example.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

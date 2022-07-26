@@ -1,0 +1,131 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Patient/Patient-BabyBoy-Example> a fhir:Patient;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Patient-BabyBoy-Example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>John Doe </b> male, DoB: 2019-12-12 ( Jurisdictional health number: 9123456789 (OFFICIAL))</p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2019-11-12T13:29:17-08:00"^^xsd:dateTime ]
+     ]
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "merged" ]
+     ];
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "JHN" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC" ];
+     fhir:Identifier.value [ fhir:value "9123456789" ];
+     fhir:Identifier.period [
+       fhir:Period.start [ fhir:value "2000-01-01T11:11:11+08:00"^^xsd:dateTime ]
+     ]
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "usual" ];
+     fhir:HumanName.family [ fhir:value "Doe" ];
+     fhir:HumanName.given [
+       fhir:value "John";
+       fhir:index 0
+     ];
+     fhir:HumanName.period [
+       fhir:Period.start [ fhir:value "2017-04-05"^^xsd:date ]
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "2505554848" ];
+     fhir:ContactPoint.use [ fhir:value "home" ];
+     fhir:ContactPoint.period [
+       fhir:Period.start [ fhir:value "2000-01-02T10:10:10-08:00"^^xsd:dateTime ]
+     ]
+  ];
+  fhir:Patient.gender [
+     fhir:value "male";
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+       fhir:Extension.valuePeriod [
+         fhir:Period.start [ fhir:value "2017-04-05T16:16:16-08:00"^^xsd:dateTime ]
+       ]
+     ]
+  ];
+  fhir:Patient.birthDate [
+     fhir:value "2019-12-12"^^xsd:date;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+       fhir:Extension.valuePeriod [
+         fhir:Period.start [ fhir:value "2019-11-12T03:29:17-08:00"^^xsd:dateTime ]
+       ]
+     ]
+  ];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "valid" ]
+     ];
+     fhir:Address.type [ fhir:value "physical" ];
+     fhir:Address.line [
+       fhir:value "721 FRONT ST";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "VICTORIA" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.postalCode [ fhir:value "V9A3Y3" ];
+     fhir:Address.country [ fhir:value "CA" ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "invalid" ]
+     ];
+     fhir:Address.type [ fhir:value "postal" ];
+     fhir:Address.line [
+       fhir:value "721 FRONT AVE";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Victoria" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.postalCode [ fhir:value "V9A3V3" ];
+     fhir:Address.country [ fhir:value "CA" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Patient/Patient-BabyBoy-Example.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

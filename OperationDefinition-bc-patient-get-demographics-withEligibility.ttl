@@ -1,0 +1,81 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-get-demographics-withEligibility> a fhir:OperationDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "bc-patient-get-demographics-withEligibility"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GetDemographicswithEligibility</h2><p>QUERY: GetDemographicswithEligibility</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics-withEligibility</pre><p>URL: [base]/Patient/$GetDemographics.withEligibility</p><p>Input parameters Profile: <a href=\"StructureDefinition-bc-get-demographics-request-bundle.html\">GetDemographicsRequestBundle</a></p><p>Output parameters Profile: <a href=\"StructureDefinition-bc-search-withEligibility-response-bundle.html\">SearchWithEligibilityResponseBundle</a></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>GetDemographicsRequestBundle</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>GetDemographics with Eligibility request Bundle.</p>\n</div></td></tr><tr><td>OUT</td><td>SearchResponseBundle</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>GetDemograponics with Eligibility response Bundle.</p>\n</div></td></tr></table></div>"
+  ];
+  fhir:OperationDefinition.url [ fhir:value "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics-withEligibility"];
+  fhir:OperationDefinition.version [ fhir:value "0.1.0"];
+  fhir:OperationDefinition.name [ fhir:value "GetDemographicswithEligibility"];
+  fhir:OperationDefinition.title [ fhir:value "GetDemographics withEligibility"];
+  fhir:OperationDefinition.status [ fhir:value "draft"];
+  fhir:OperationDefinition.kind [ fhir:value "query"];
+  fhir:OperationDefinition.date [ fhir:value "2022-07-26T13:19:23+00:00"^^xsd:dateTime];
+  fhir:OperationDefinition.publisher [ fhir:value "BC Ministry of Health"];
+  fhir:OperationDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "BC Ministry of Health" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health" ]
+     ]
+  ];
+  fhir:OperationDefinition.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "CA" ];
+       fhir:Coding.display [ fhir:value "Canada" ]
+     ]
+  ];
+  fhir:OperationDefinition.code [ fhir:value "GetDemographics.withEligibility"];
+  fhir:OperationDefinition.resource [
+     fhir:value "Patient";
+     fhir:index 0
+  ];
+  fhir:OperationDefinition.system [ fhir:value "false"^^xsd:boolean];
+  fhir:OperationDefinition.type [ fhir:value "true"^^xsd:boolean];
+  fhir:OperationDefinition.instance [ fhir:value "false"^^xsd:boolean];
+  fhir:OperationDefinition.inputProfile [
+     fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle";
+     fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle>
+  ];
+  fhir:OperationDefinition.outputProfile [
+     fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-withEligibility-response-bundle";
+     fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-withEligibility-response-bundle>
+  ];
+  fhir:OperationDefinition.parameter [
+     fhir:index 0;
+     fhir:OperationDefinition.parameter.name [ fhir:value "GetDemographicsRequestBundle" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "1"^^xsd:integer ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "GetDemographics with Eligibility request Bundle." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "Bundle" ]
+  ], [
+     fhir:index 1;
+     fhir:OperationDefinition.parameter.name [ fhir:value "SearchResponseBundle" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "out" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "1"^^xsd:integer ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "GetDemograponics with Eligibility response Bundle." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "Bundle" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-get-demographics-withEligibility.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

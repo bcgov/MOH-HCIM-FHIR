@@ -1,0 +1,138 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Patient/Patient-Identifier-Examples> a fhir:Patient;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Patient-Identifier-Examples"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Jodi Jedi (OFFICIAL)</b> female, DoB: 1965-01-01 ( Jurisdictional health number: 9123456789 (OFFICIAL))</p></div>"
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "merged" ]
+     ];
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "JHN" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC" ];
+     fhir:Identifier.value [ fhir:value "9123456789" ];
+     fhir:Identifier.period [
+       fhir:Period.start [ fhir:value "2000-01-01T11:11:11+08:00"^^xsd:dateTime ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "active" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "sourceID" ];
+         fhir:Extension.valueIdentifier [
+           fhir:Identifier.assigner [
+             fhir:Reference.display [ fhir:value "ORG_SRC" ]
+           ]
+         ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension" ]
+     ];
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "AN" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
+     fhir:Identifier.value [ fhir:value "abc123345654" ];
+     fhir:Identifier.period [
+       fhir:Period.start [ fhir:value "2000-01-01T11:11:11+08:00"^^xsd:dateTime ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "active" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "sourceID" ];
+         fhir:Extension.valueIdentifier [
+           fhir:Identifier.assigner [
+             fhir:Reference.display [ fhir:value "ORG_SUBSRC e.g. FHA_CAC or VPP_CW" ]
+           ]
+         ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension" ]
+     ];
+     fhir:Identifier.use [ fhir:value "secondary" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "AN" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
+     fhir:Identifier.value [ fhir:value "def123345654" ];
+     fhir:Identifier.period [
+       fhir:Period.start [ fhir:value "2000-01-01T11:11:11+08:00"^^xsd:dateTime ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "active" ]
+     ];
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "JHN" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/QC" ];
+     fhir:Identifier.value [ fhir:value "9123345654" ];
+     fhir:Identifier.period [
+       fhir:Period.start [ fhir:value "2000-01-01T11:11:11+08:00"^^xsd:dateTime ]
+     ]
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "official" ];
+     fhir:HumanName.family [ fhir:value "Jedi" ];
+     fhir:HumanName.given [
+       fhir:value "Jodi";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.gender [ fhir:value "female"];
+  fhir:Patient.birthDate [ fhir:value "1965-01-01"^^xsd:date] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Patient/Patient-Identifier-Examples.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

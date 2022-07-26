@@ -1,0 +1,431 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "50dd1cfd-fcf4-42d7-9c61-2dc81376fdd6",
+  "meta" : {
+    "lastUpdated" : "2022-07-26T13:19:23.309+00:00"
+  },
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-address-type-value-set",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "bc-address-type-value-set",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on: </p><ul><li><a href=\"http://hl7.org/fhir/R4/codesystem-address-type.html\">AddressType v4.0.1 (CodeSystem)</a></li><li><a href=\"http://hl7.org/fhir/R4/valueset-address-type.html\">AddressType v4.0.1 (ValueSet)</a></li></ul></div><p>All codes in this table are from the system <a href=\"http://hl7.org/fhir/R4/codesystem-address-type.html\"><code>http://hl7.org/fhir/address-type</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-address-type-postal\"> </a>  <a href=\"http://hl7.org/fhir/R4/codesystem-address-type.html#address-type-postal\">postal</a></td><td>Postal</td><td>Mailing addresses - PO Boxes and care-of addresses.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-address-type-physical\"> </a>  <a href=\"http://hl7.org/fhir/R4/codesystem-address-type.html#address-type-physical\">physical</a></td><td>Physical</td><td>A physical address that can be visited.</td></tr></table></div>"
+      },
+      "url" : "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-address-type-value-set",
+      "version" : "0.1.0",
+      "name" : "AddressTypeVS",
+      "title" : "BC Address Type Value Set",
+      "status" : "active",
+      "date" : "2022-07-26T13:19:23+00:00",
+      "publisher" : "BC Ministry of Health",
+      "contact" : [{
+        "name" : "BC Ministry of Health",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+        }]
+      }],
+      "description" : "BC Address Type value set, sliced to meet BC constraints.",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "CA",
+          "display" : "Canada"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:eecae969-45fb-4a55-98ab-c1da2b634bf4",
+        "timestamp" : "2022-07-26T13:19:55+00:00",
+        "total" : 2,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/ValueSet/address-type|4.0.1"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/address-type|4.0.1"
+        }],
+        "contains" : [{
+          "system" : "http://hl7.org/fhir/address-type",
+          "code" : "postal",
+          "display" : "Postal"
+        },
+        {
+          "system" : "http://hl7.org/fhir/address-type",
+          "code" : "physical",
+          "display" : "Physical"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-address-validation-value-set",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "bc-address-validation-value-set",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-bc-client-registry-address-validation-code-system.html\">BC Client Registry Address Validation Status Code v0.1.0 (CodeSystem)</a></p><p>All codes in this table are from the system <a href=\"CodeSystem-bc-client-registry-address-validation-code-system.html\"><code>http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-address-validation-code-system</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hlth.gov.bc.ca-fhir-client-CodeSystem-bc-client-registry-address-validation-code-system-valid\"> </a>  <a href=\"CodeSystem-bc-client-registry-address-validation-code-system.html#bc-client-registry-address-validation-code-system-valid\">valid</a></td><td>valid</td><td>The address is valid, i.e. there is a reasonable good chance this address is known to Canada Post.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hlth.gov.bc.ca-fhir-client-CodeSystem-bc-client-registry-address-validation-code-system-invalid\"> </a>  <a href=\"CodeSystem-bc-client-registry-address-validation-code-system.html#bc-client-registry-address-validation-code-system-invalid\">invalid</a></td><td>invalid</td><td>The address validation status is invalid and like not recognized by Canada Post.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hlth.gov.bc.ca-fhir-client-CodeSystem-bc-client-registry-address-validation-code-system-unknown\"> </a>  <a href=\"CodeSystem-bc-client-registry-address-validation-code-system.html#bc-client-registry-address-validation-code-system-unknown\">unknown</a></td><td>unknown</td><td>The address validation status is unknown.</td></tr></table></div>"
+      },
+      "url" : "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-address-validation-value-set",
+      "version" : "0.1.0",
+      "name" : "AddressValidationVS",
+      "title" : "BC Address Validation Value Set",
+      "status" : "active",
+      "date" : "2022-07-26T13:19:23+00:00",
+      "publisher" : "BC Ministry of Health",
+      "contact" : [{
+        "name" : "BC Ministry of Health",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+        }]
+      }],
+      "description" : "BC Address Validation value set used to describe the validation status of an address",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "CA",
+          "display" : "Canada"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:24d52424-eca8-4739-872c-19927dd83200",
+        "timestamp" : "2022-07-26T13:19:55+00:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-address-validation-code-system|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-address-validation-code-system",
+          "code" : "valid",
+          "display" : "valid"
+        },
+        {
+          "system" : "http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-address-validation-code-system",
+          "code" : "invalid",
+          "display" : "invalid"
+        },
+        {
+          "system" : "http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-address-validation-code-system",
+          "code" : "unknown",
+          "display" : "unknown"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "bc-contact-point-system-value-set",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on: </p><ul><li><a href=\"http://hl7.org/fhir/R4/valueset-contact-point-system.html\">ContactPointSystem v4.0.1 (ValueSet)</a></li><li><a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-system.html\">ContactPointSystem v4.0.1 (CodeSystem)</a></li></ul></div><p>All codes in this table are from the system <a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-system.html\"><code>http://hl7.org/fhir/contact-point-system</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-contact-point-system-phone\"> </a>  <a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-system.html#contact-point-system-phone\">phone</a></td><td>Phone</td><td>The value is a telephone number used for voice calls. Use of full international numbers starting with + is recommended to enable automatic dialing support but not required.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-contact-point-system-email\"> </a>  <a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-system.html#contact-point-system-email\">email</a></td><td>Email</td><td>The value is an email address.</td></tr></table></div>"
+      },
+      "url" : "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set",
+      "version" : "0.1.0",
+      "name" : "ContactPointSystemVS",
+      "title" : "BC Contact Point System Value Set",
+      "status" : "active",
+      "date" : "2022-07-26T13:19:23+00:00",
+      "publisher" : "BC Ministry of Health",
+      "contact" : [{
+        "name" : "BC Ministry of Health",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+        }]
+      }],
+      "description" : "BC Contact Point System value set, sliced to meet BC constraints.",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "CA",
+          "display" : "Canada"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:672edd7d-9b14-4289-81fa-0bb364bd44dc",
+        "timestamp" : "2022-07-26T13:19:55+00:00",
+        "total" : 2,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/contact-point-system|4.0.1"
+        }],
+        "contains" : [{
+          "system" : "http://hl7.org/fhir/contact-point-system",
+          "code" : "phone",
+          "display" : "Phone"
+        },
+        {
+          "system" : "http://hl7.org/fhir/contact-point-system",
+          "code" : "email",
+          "display" : "Email"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "bc-contact-point-use-value-set",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on: </p><ul><li><a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-use.html\">ContactPointUse v4.0.1 (CodeSystem)</a></li><li><a href=\"http://hl7.org/fhir/R4/valueset-contact-point-use.html\">ContactPointUse v4.0.1 (ValueSet)</a></li></ul></div><p>All codes in this table are from the system <a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-use.html\"><code>http://hl7.org/fhir/contact-point-use</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-contact-point-use-home\"> </a>  <a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-use.html#contact-point-use-home\">home</a></td><td>Home</td><td>A communication contact point at a home; attempted contacts for business purposes might intrude privacy and chances are one will contact family or other household members instead of the person one wishes to call. Typically used with urgent cases, or if no other contacts are available.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-contact-point-use-work\"> </a>  <a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-use.html#contact-point-use-work\">work</a></td><td>Work</td><td>An office contact point. First choice for business related contacts during business hours.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-contact-point-use-mobile\"> </a>  <a href=\"http://hl7.org/fhir/R4/codesystem-contact-point-use.html#contact-point-use-mobile\">mobile</a></td><td>Mobile</td><td>A telecommunication device that moves and stays with its owner. May have characteristics of all other use codes, suitable for urgent matters, not the first choice for routine business.</td></tr></table></div>"
+      },
+      "url" : "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set",
+      "version" : "0.1.0",
+      "name" : "ContactPointUseVS",
+      "title" : "BC Contact Point Use Value Set",
+      "status" : "active",
+      "date" : "2022-07-26T13:19:23+00:00",
+      "publisher" : "BC Ministry of Health",
+      "contact" : [{
+        "name" : "BC Ministry of Health",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+        }]
+      }],
+      "description" : "BC Contact Point Use value set, sliced to meet BC constraints.",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "CA",
+          "display" : "Canada"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:6ac85c3d-c51c-4403-88cd-2788f8b90584",
+        "timestamp" : "2022-07-26T13:19:55+00:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/contact-point-use|4.0.1"
+        }],
+        "contains" : [{
+          "system" : "http://hl7.org/fhir/contact-point-use",
+          "code" : "home",
+          "display" : "Home"
+        },
+        {
+          "system" : "http://hl7.org/fhir/contact-point-use",
+          "code" : "work",
+          "display" : "Work"
+        },
+        {
+          "system" : "http://hl7.org/fhir/contact-point-use",
+          "code" : "mobile",
+          "display" : "Mobile"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-identifier-status-value-set",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "bc-identifier-status-value-set",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-bc-identifier-status-code-system.html\">BC Client registry identifier status code system v0.1.0 (CodeSystem)</a></p><p>All codes in this table are from the system <a href=\"CodeSystem-bc-identifier-status-code-system.html\"><code>http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-identifier-status-code-system</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hlth.gov.bc.ca-fhir-client-CodeSystem-bc-identifier-status-code-system-merged\"> </a>  <a href=\"CodeSystem-bc-identifier-status-code-system.html#bc-identifier-status-code-system-merged\">merged</a></td><td>merged</td><td>The identifier has been merged.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hlth.gov.bc.ca-fhir-client-CodeSystem-bc-identifier-status-code-system-active\"> </a>  <a href=\"CodeSystem-bc-identifier-status-code-system.html#bc-identifier-status-code-system-active\">active</a></td><td>active</td><td>The identifier is active.</td></tr></table></div>"
+      },
+      "url" : "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-identifier-status-value-set",
+      "version" : "0.1.0",
+      "name" : "IdentifierStatusVS",
+      "title" : "BC Identifier Status Value Set",
+      "status" : "active",
+      "date" : "2022-07-26T13:19:23+00:00",
+      "publisher" : "BC Ministry of Health",
+      "contact" : [{
+        "name" : "BC Ministry of Health",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+        }]
+      }],
+      "description" : "BC Identifier Status value set used to describe the status of an identifier.",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "CA",
+          "display" : "Canada"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:82b7b617-0be2-4b67-b04b-a74a64683799",
+        "timestamp" : "2022-07-26T13:19:55+00:00",
+        "total" : 2,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-identifier-status-code-system|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-identifier-status-code-system",
+          "code" : "merged",
+          "display" : "merged"
+        },
+        {
+          "system" : "http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-identifier-status-code-system",
+          "code" : "active",
+          "display" : "active"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-merge-status-value-set",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "bc-merge-status-value-set",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-bc-client-registry-merge-status-code-system.html\">BC Client Registry merge status. v0.1.0 (CodeSystem)</a></p><p>All codes in this table are from the system <a href=\"CodeSystem-bc-client-registry-merge-status-code-system.html\"><code>http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-merge-status-code-system</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hlth.gov.bc.ca-fhir-client-CodeSystem-bc-client-registry-merge-status-code-system-obsolete\"> </a>  <a href=\"CodeSystem-bc-client-registry-merge-status-code-system.html#bc-client-registry-merge-status-code-system-obsolete\">obsolete</a></td><td>obsolete</td><td>The merge obsoletes this Patient.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hlth.gov.bc.ca-fhir-client-CodeSystem-bc-client-registry-merge-status-code-system-cancelled\"> </a>  <a href=\"CodeSystem-bc-client-registry-merge-status-code-system.html#bc-client-registry-merge-status-code-system-cancelled\">cancelled</a></td><td>cancelled</td><td>The merge cancels this Patient.</td></tr></table></div>"
+      },
+      "url" : "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-merge-status-value-set",
+      "version" : "0.1.0",
+      "name" : "MergeStatusVS",
+      "title" : "BC Merge Status Value Set",
+      "status" : "active",
+      "date" : "2022-07-26T13:19:23+00:00",
+      "publisher" : "BC Ministry of Health",
+      "contact" : [{
+        "name" : "BC Ministry of Health",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+        }]
+      }],
+      "description" : "BC Merge Status value set used to describe the merge status of a Patient.",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "CA",
+          "display" : "Canada"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:78708465-d8ca-4b49-bede-c6c34168c97a",
+        "timestamp" : "2022-07-26T13:19:56+00:00",
+        "total" : 2,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-merge-status-code-system|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-merge-status-code-system",
+          "code" : "obsolete",
+          "display" : "obsolete"
+        },
+        {
+          "system" : "http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-merge-status-code-system",
+          "code" : "cancelled",
+          "display" : "cancelled"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "bc-name-use-value-set",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on: </p><ul><li><a href=\"http://hl7.org/fhir/R4/codesystem-name-use.html\">NameUse v4.0.1 (CodeSystem)</a></li><li><a href=\"http://hl7.org/fhir/R4/valueset-name-use.html\">NameUse v4.0.1 (ValueSet)</a></li></ul></div><p>All codes in this table are from the system <a href=\"http://hl7.org/fhir/R4/codesystem-name-use.html\"><code>http://hl7.org/fhir/name-use</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-name-use-usual\"> </a>  <a href=\"http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-usual\">usual</a></td><td>Usual</td><td>Known as/conventional/the one you normally use.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-name-use-official\"> </a>  <a href=\"http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-official\">official</a></td><td>Official</td><td>The formal name as registered in an official (government) registry, but which name might not be commonly used. May be called &quot;legal name&quot;.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-name-use-nickname\"> </a>  <a href=\"http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-nickname\">nickname</a></td><td>Nickname</td><td>A name that is used to address the person in an informal manner, but is not part of their formal or usual name.</td></tr></table></div>"
+      },
+      "url" : "http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set",
+      "version" : "0.1.0",
+      "name" : "NameUseVS",
+      "title" : "BC Name Use value set.",
+      "status" : "active",
+      "date" : "2022-07-26T13:19:23+00:00",
+      "publisher" : "BC Ministry of Health",
+      "contact" : [{
+        "name" : "BC Ministry of Health",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+        }]
+      }],
+      "description" : "BC Name Use value set, sliced to meet BC constraints.",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "CA",
+          "display" : "Canada"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:2589e5f3-b742-491d-b319-9bf756b60568",
+        "timestamp" : "2022-07-26T13:19:56+00:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/ValueSet/name-use|4.0.1"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/name-use|4.0.1"
+        }],
+        "contains" : [{
+          "system" : "http://hl7.org/fhir/name-use",
+          "code" : "usual",
+          "display" : "Usual"
+        },
+        {
+          "system" : "http://hl7.org/fhir/name-use",
+          "code" : "official",
+          "display" : "Official"
+        },
+        {
+          "system" : "http://hl7.org/fhir/name-use",
+          "code" : "nickname",
+          "display" : "Nickname"
+        }]
+      }
+    }
+  }]
+}
