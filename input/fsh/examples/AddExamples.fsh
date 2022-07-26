@@ -75,8 +75,6 @@ InstanceOf: AddResponseBundle
 Description: "A sample AddPatient Operation response."
 * type = #collection
 * timestamp = "2011-09-13T16:11:43.000-07:00"
-* identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f7a3b"
 * link[0].relation = "self"
 * link[0].url = "urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1"
 
