@@ -44,8 +44,6 @@ InstanceOf: ReviseResponseBundle
 Description: "A sample RevisePatient Operation response."
 * type = #collection
 * timestamp = "2011-09-13T16:11:43.000-07:00"
-* identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f7a3b"
 
 * entry[0].resource = Parameters-RevisePatient-Response-Example
 * entry[0].fullUrl = "urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33"
