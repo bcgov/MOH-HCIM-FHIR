@@ -50,8 +50,8 @@ Description: "A sample RevisePatient Operation response."
 * entry[0].resource = Parameters-RevisePatient-Response-Example
 * entry[0].fullUrl = "urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33"
 
-* entry[1].resource = OperationOutcome-Example
-* entry[1].fullUrl = "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"
+* entry[1].resource = OperationOutcome-Example-RP
+* entry[1].fullUrl = "urn:uuid:2435edad-33f3-4a54-bbdb-1d28d25ce8c7"
 
 * entry[2].resource = Patient-AddReviseOrMergePatient-Response-Example
 * entry[2].fullUrl = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"
