@@ -47,13 +47,13 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1",
+      "fullUrl": "urn:uuid:2435edad-33f3-4a54-bbdb-1d28d25ce8c7",
       "resource": {
         "resourceType": "OperationOutcome",
-        "id": "OperationOutcome-Example",
+        "id": "OperationOutcome-Example-RP",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"OperationOutcome-Example\" </p></div><blockquote><p><b>issue</b></p><p><b>severity</b>: warning</p><p><b>code</b>: business-rule</p><p><b>details</b>: Warning: The Revise Patient name has been modified to filter out invalid characters. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#HCIM.RP.1.0017)</span></p></blockquote><blockquote><p><b>issue</b></p><p><b>severity</b>: error</p><p><b>code</b>: business-rule</p><p><b>details</b>: The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ... <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#HCIM.RP.1.0017)</span></p></blockquote></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"OperationOutcome-Example-RP\" </p></div><blockquote><p><b>issue</b></p><p><b>severity</b>: warning</p><p><b>code</b>: business-rule</p><p><b>details</b>: Warning: The Revise Patient name has been modified to filter out invalid characters. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#HCIM.RP.1.0017)</span></p></blockquote><blockquote><p><b>issue</b></p><p><b>severity</b>: warning</p><p><b>code</b>: business-rule</p><p><b>details</b>: Warning: the Revise Person request successfully completed, however the record is the subject of a Potential Duplicates task. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#BCHCIM.RP.1.0502)</span></p></blockquote></div>"
         },
         "issue": [
           {
@@ -70,16 +70,16 @@
             }
           },
           {
-            "severity": "error",
+            "severity": "warning",
             "code": "business-rule",
             "details": {
               "coding": [
                 {
                   "system": "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes",
-                  "code": "HCIM.RP.1.0017"
+                  "code": "BCHCIM.RP.1.0502"
                 }
               ],
-              "text": "The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ..."
+              "text": "Warning: the Revise Person request successfully completed, however the record is the subject of a Potential Duplicates task."
             }
           }
         ]
