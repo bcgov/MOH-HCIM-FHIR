@@ -52,7 +52,7 @@
   <version value="0.1.0"/>
   <name value="ClientRegistryPatient"/>
   <status value="active"/>
-  <date value="2022-07-26T13:19:23+00:00"/>
+  <date value="2022-07-26T13:53:56+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -1890,13 +1890,6 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
-      <constraint>
-        <key value="invariant-sourceid-1"/>
-        <severity value="error"/>
-        <human value="When using the bc-sourceid-extension one of sourceId or userId must be populated."/>
-        <expression value="extension.count()=1 or extension.count()=2"/>
-        <source value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"/>
-      </constraint>
       <mustSupport value="true"/>
       <isModifier value="false"/>
     </element>
@@ -2134,13 +2127,6 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
-      <constraint>
-        <key value="invariant-sourceid-1"/>
-        <severity value="error"/>
-        <human value="When using the bc-sourceid-extension one of sourceId or userId must be populated."/>
-        <expression value="extension.count()=1 or extension.count()=2"/>
-        <source value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"/>
-      </constraint>
       <mustSupport value="true"/>
       <isModifier value="false"/>
     </element>
@@ -2375,13 +2361,6 @@
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
-      </constraint>
-      <constraint>
-        <key value="invariant-sourceid-1"/>
-        <severity value="error"/>
-        <human value="When using the bc-sourceid-extension one of sourceId or userId must be populated."/>
-        <expression value="extension.count()=1 or extension.count()=2"/>
-        <source value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"/>
       </constraint>
       <mustSupport value="true"/>
       <isModifier value="false"/>
