@@ -40,8 +40,6 @@ Usage: #inline
 * value = "9123456778"
 * type.coding.code = #JHN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
-* extension.valueCode = #merged
 * use = #official
 
 Instance: IdentifierExamplePHN2NoPeriod
@@ -52,8 +50,6 @@ Usage: #inline
 * value = "9876543210"
 * type.coding.code = #JHN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
-* extension.valueCode = #merged
 * use = #official
 
 Instance: IdentifierExampleSRI
@@ -66,11 +62,9 @@ Usage: #inline
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * period.start = "2000-01-01T11:11:11+08:00"
 * use = #official
+* assigner.display = "ORG_SRC e.g. VPP_CER, IHA_IHA"
 * extension[+].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * extension[=].valueCode = #active
-* extension[+].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
-* extension[=].extension[+].url = "sourceID"
-* extension[=].extension[=].valueIdentifier.assigner.display = "ORG_SRC"
 
 Instance: IdentifierExampleSRINoPeriod
 InstanceOf: Identifier
@@ -80,6 +74,7 @@ Usage: #inline
 * value = "123345654"
 * type.coding.code = #AN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* assigner.display = "ORG_SRC e.g. VPP_CER, IHA_IHA"
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * extension.valueCode = #active
 * use = #official
@@ -92,14 +87,11 @@ Usage: #inline
 * value = "def123345654"
 * type.coding.code = #AN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* assigner.display = "ORG_SUBSRC e.g. FHA_CAC or VPP_CW"
 * extension[+].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * extension[=].valueCode = #active
 * period.start = "2000-01-01T11:11:11+08:00"
-//* period.end = "2010-01-01T11:11:11+08:00"
 * use = #secondary
-* extension[+].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
-* extension[=].extension[+].url = "sourceID"
-* extension[=].extension[=].valueIdentifier.assigner.display = "ORG_SUBSRC e.g. FHA_CAC or VPP_CW"
 
 Instance: IdentifierExampleSSRINoPeriod
 InstanceOf: Identifier
@@ -109,6 +101,7 @@ Usage: #inline
 * value = "123345654"
 * type.coding.code = #AN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* assigner.display = "ORG_SUBSRC e.g. FHA_CAC or VPP_CW"
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * extension.valueCode = #active
 * use = #secondary
