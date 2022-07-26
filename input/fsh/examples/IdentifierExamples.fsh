@@ -19,10 +19,7 @@ Usage: #inline
 * value = "9123456789"
 * type.coding.code = #JHN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
-* extension.valueCode = #merged
 * period.start = "2000-01-01T11:11:11+08:00"
-//* period.end = "2010-01-01T11:11:11+08:00"
 * use = #official
 
 Instance: IdentifierExampleMothersPHN
