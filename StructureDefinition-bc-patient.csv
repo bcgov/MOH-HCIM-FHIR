@@ -162,6 +162,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","BC Gender History","This extension allows the Client Registry to include historical gender codes in a single Patient resource.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Patient.gender.extension:genderIdentity","Patient.gender.extension","genderIdentity","","",0,1,"Y","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/patient-genderIdentity]]} {[]}
+","The patient's gender identity","The gender the patient identifies with. The Patient's gender identity is used as guidance (e.g. for staff) about how to interact with the patient.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.gender.value","Patient.gender.value","","","",0,1,"","","","string {[]} {[]}
 ","Primitive value for code","Primitive value for code","","","","","","","","","",,,,,"",,,,"string.value",0,1,"",""
 "Patient.birthDate","Patient.birthDate","","","",1,1,"Y","","Y","date {[]} {[]}
