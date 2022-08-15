@@ -1,4 +1,5 @@
 Profile: ClientRegistryPatient
+//Parent: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient
 Parent: Patient
 Id: bc-patient
 Description: "General constraints on the Patient resource for use in the BC Client Registry project."
@@ -24,7 +25,7 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * telecom.system ^short = "phone | email"
 * telecom.extension contains SourceIDExtension named sourceID 0..1 MS
 * gender 1..1 MS
-* gender.extension contains BusinessPeriodExtension named genderEffectiveDates 0..1 MS and SourceIDExtension named sourceID 0..1 MS and GenderHistoryExtension named history 0..* MS
+* gender.extension contains BusinessPeriodExtension named genderEffectiveDates 0..1 MS and SourceIDExtension named sourceID 0..1 MS and GenderHistoryExtension named history 0..* MS and http://hl7.org/fhir/StructureDefinition/patient-genderIdentity named genderIdentity 0..1 MS
 * birthDate 1..1 MS
 * birthDate.extension contains BusinessPeriodExtension named birthDateEffectiveDates 0..1 and SourceIDExtension named sourceID 0..1 MS and BirthDateHistoryExtension named history 0..* MS 
 * multipleBirth[x].extension contains BusinessPeriodExtension named multipleBirthEffectiveDates 0..1 MS and SourceIDExtension named sourceID 0..1 MS and MultipleBirthHistoryExtension named history 0..* MS 
@@ -63,7 +64,7 @@ Extension: GenderHistoryExtension
 Id: bc-gender-history-extension
 Title: "BC Gender History"
 Description: "This extension allows the Client Registry to include historical gender codes in a single Patient resource."
-* extension contains gender 0..* MS and BusinessPeriodExtension named businessDates 1..1 MS and SourceIDExtension named sourceID 0..1 MS
+* extension contains gender 0..* MS and BusinessPeriodExtension named businessDates 1..1 MS and SourceIDExtension named sourceID 0..1 MS and http://hl7.org/fhir/StructureDefinition/patient-genderIdentity named genderIdentity 0..1 MS
 * extension[gender].value[x] 1..1 MS
 * extension[gender].value[x] only code
 * extension[gender].valueCode from AdministrativeGender (required)

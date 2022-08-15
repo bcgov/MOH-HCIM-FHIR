@@ -10,7 +10,7 @@ InstanceOf: RelatedPerson
 Description: "Example of related person who is the mother"
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#NMTH
 * patient.reference = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"
-* identifier = IdentifierExampleMothersPHN
+//* identifier = IdentifierExampleMothersPHN
 
 Instance: RelatedPerson-MotherOfBabyBoy-Example
 InstanceOf: RelatedPerson

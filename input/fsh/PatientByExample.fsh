@@ -1,4 +1,5 @@
 Profile: PatientByExample
+//Parent: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient
 Parent: Patient
 Id: bc-patient-by-example
 Description: "General constraints on the Patient resource for use in the BC Client Registry project for queries."

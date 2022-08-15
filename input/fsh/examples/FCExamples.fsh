@@ -94,22 +94,6 @@ Description: "Example of FindCandidates with mother's PHN response Bundle."
 * entry[operationOutcome].fullUrl = "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"
 * entry[operationOutcome].search.mode = #outcome
 
-// This response is complex .... the response to the Find Candidates
-// request must have child and mother with link->relatedPerson->child
-// for each child.  This example has two children, twins.
-//
-// The mother Patient has two links, each link is to a related person
-// and the related persons reference the boy and girl with a NCHILD code.
-//
-// bundle
-//	- boy patient
-//	- girl patient
-//	- mother related person to boy
-//	- mother related person to girl
-//
-// links between resource use references to Bundle-relative uuids
-
-
 //child 1
 * entry[2].resource = Patient-BabyGirl-Example
 * entry[2].search.score = 100
@@ -122,10 +106,17 @@ Description: "Example of FindCandidates with mother's PHN response Bundle."
 * entry[3].search.mode = #match
 * entry[3].fullUrl = "urn:uuid:90bf49dc-4590-4302-8e28-f02bb4deb353"
 
+// mother with patient.reference to baby boy
 * entry[4].resource = RelatedPerson-MotherOfBabyBoy-Example
 * entry[4].fullUrl = "urn:uuid:425b6c71-b198-4e75-b32c-1b3086935c6a"
 * entry[4].search.mode = #include
 
+// mother with patient.reference to baby girl
 * entry[5].resource = RelatedPerson-MotherOfBabyGirl-Example
 * entry[5].fullUrl = "urn:uuid:4a288971-8af6-4d77-a071-4ba3a10042e5"
 * entry[5].search.mode = #include
+
+// mother
+* entry[6].resource = Patient-Mother-Example
+* entry[6].fullUrl = "urn:uuid:e0930c14-4264-4bc8-b494-d977396db402"
+* entry[6].search.mode = #include
