@@ -11,7 +11,7 @@
   <name value="BCHealthClientIdentityManagement"/>
   <title value="BC Client Registry FHIR Implementation Guide"/>
   <status value="draft"/>
-  <date value="2022-08-15T20:51:57+00:00"/>
+  <date value="2022-08-16T21:28:14+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -481,6 +481,17 @@
       </reference>
       <name value="BC Gender History"/>
       <description value="This extension allows the Client Registry to include historical gender codes in a single Patient resource."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/bc-gender-identity-extension"/>
+      </reference>
+      <name value="BC Gender Identity with business dates."/>
+      <description value="Gender Identity with business dates."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
