@@ -8,35 +8,54 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Darrel Dwayne (OFFICIAL)</b> male, DoB: 1966-10-01 ( id: 876092N4)</p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Dar Dwayne </b> male, DoB: 1966-10-01 ( Account number: 8375493847 (OFFICIAL))</p></div>"
   },
   "identifier": [
     {
-      "system": "http://hlth.gov.bc.ca/fhir/client/bc-sri",
-      "value": "876092N4"
+      "extension": [
+        {
+          "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode": "active"
+        }
+      ],
+      "use": "official",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "AN"
+          }
+        ]
+      },
+      "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+      "value": "8375493847",
+      "assigner": {
+        "display": "ORG_SRC e.g. VPP_CER, IHA_IHA"
+      }
     }
   ],
   "active": true,
   "name": [
     {
+      "use": "usual",
+      "family": "Dwayne",
+      "given": [
+        "Dar"
+      ]
+    },
+    {
       "use": "official",
       "family": "Dwayne",
       "given": [
         "Darrel"
-      ],
-      "period": {
-        "start": "2017-04-05"
-      }
+      ]
     }
   ],
   "telecom": [
     {
       "system": "phone",
       "value": "2505554848",
-      "use": "home",
-      "period": {
-        "start": "2000-01-02T10:10:10-08:00"
-      }
+      "use": "home"
     }
   ],
   "gender": "male",

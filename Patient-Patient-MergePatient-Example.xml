@@ -6,28 +6,40 @@
     <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Darrel Dwayne (OFFICIAL)</b> male, DoB: 1966-10-01 ( id: 876092N4)</p></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Dar Dwayne </b> male, DoB: 1966-10-01 ( Account number: 8375493847 (OFFICIAL))</p></div>
   </text>
   <identifier>
-    <system value="http://hlth.gov.bc.ca/fhir/client/bc-sri"/>
-    <value value="876092N4"/>
+    <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+      <valueCode value="active"/>
+    </extension>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="AN"/>
+      </coding>
+    </type>
+    <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+    <value value="8375493847"/>
+    <assigner>
+      <display value="ORG_SRC e.g. VPP_CER, IHA_IHA"/>
+    </assigner>
   </identifier>
   <active value="true"/>
+  <name>
+    <use value="usual"/>
+    <family value="Dwayne"/>
+    <given value="Dar"/>
+  </name>
   <name>
     <use value="official"/>
     <family value="Dwayne"/>
     <given value="Darrel"/>
-    <period>
-      <start value="2017-04-05"/>
-    </period>
   </name>
   <telecom>
     <system value="phone"/>
     <value value="2505554848"/>
     <use value="home"/>
-    <period>
-      <start value="2000-01-02T10:10:10-08:00"/>
-    </period>
   </telecom>
   <gender value="male"/>
   <birthDate value="1966-10-01"/>

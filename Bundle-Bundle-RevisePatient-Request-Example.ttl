@@ -62,7 +62,7 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient \"Patient-RevisePatient-Example\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Account number: abc123345654 (OFFICIAL)</p><p><b>name</b>: John Johnny Doe </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-06-06</p><p><b>address</b>: 721 FRONT ST VICTORIA BC V9A3Y3 CA </p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient \"Patient-RevisePatient-Example\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Account number: 123345654 (OFFICIAL)</p><p><b>name</b>: John Doe </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-06-06</p><p><b>address</b>: 721 FRONT ST VICTORIA BC V9A3Y3 CA </p></div>"
   ];
   fhir:Patient.identifier [
      fhir:index 0;
@@ -80,10 +80,7 @@
        ]
      ];
      fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
-     fhir:Identifier.value [ fhir:value "abc123345654" ];
-     fhir:Identifier.period [
-       fhir:Period.start [ fhir:value "2000-01-01T11:11:11+08:00"^^xsd:dateTime ]
-     ];
+     fhir:Identifier.value [ fhir:value "123345654" ];
      fhir:Identifier.assigner [
        fhir:Reference.display [ fhir:value "ORG_SRC e.g. VPP_CER, IHA_IHA" ]
      ]
@@ -95,22 +92,13 @@
      fhir:HumanName.given [
        fhir:value "John";
        fhir:index 0
-     ], [
-       fhir:value "Johnny";
-       fhir:index 1
-     ];
-     fhir:HumanName.period [
-       fhir:Period.start [ fhir:value "2017-04-05"^^xsd:date ]
      ]
   ];
   fhir:Patient.telecom [
      fhir:index 0;
      fhir:ContactPoint.system [ fhir:value "phone" ];
      fhir:ContactPoint.value [ fhir:value "2505554848" ];
-     fhir:ContactPoint.use [ fhir:value "home" ];
-     fhir:ContactPoint.period [
-       fhir:Period.start [ fhir:value "2000-01-02T10:10:10-08:00"^^xsd:dateTime ]
-     ]
+     fhir:ContactPoint.use [ fhir:value "home" ]
   ];
   fhir:Patient.gender [ fhir:value "male"];
   fhir:Patient.birthDate [ fhir:value "1940-06-06"^^xsd:date];

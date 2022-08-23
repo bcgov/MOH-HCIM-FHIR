@@ -17,34 +17,52 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Darrel Dwayne (OFFICIAL)</b> male, DoB: 1966-10-01 ( id: 876092N4)</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Dar Dwayne </b> male, DoB: 1966-10-01 ( Account number: 8375493847 (OFFICIAL))</p></div>"
   ];
   fhir:Patient.identifier [
      fhir:index 0;
-     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
-     fhir:Identifier.value [ fhir:value "876092N4" ]
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "active" ]
+     ];
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "AN" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
+     fhir:Identifier.value [ fhir:value "8375493847" ];
+     fhir:Identifier.assigner [
+       fhir:Reference.display [ fhir:value "ORG_SRC e.g. VPP_CER, IHA_IHA" ]
+     ]
   ];
   fhir:Patient.active [ fhir:value "true"^^xsd:boolean];
   fhir:Patient.name [
      fhir:index 0;
+     fhir:HumanName.use [ fhir:value "usual" ];
+     fhir:HumanName.family [ fhir:value "Dwayne" ];
+     fhir:HumanName.given [
+       fhir:value "Dar";
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 1;
      fhir:HumanName.use [ fhir:value "official" ];
      fhir:HumanName.family [ fhir:value "Dwayne" ];
      fhir:HumanName.given [
        fhir:value "Darrel";
        fhir:index 0
-     ];
-     fhir:HumanName.period [
-       fhir:Period.start [ fhir:value "2017-04-05"^^xsd:date ]
      ]
   ];
   fhir:Patient.telecom [
      fhir:index 0;
      fhir:ContactPoint.system [ fhir:value "phone" ];
      fhir:ContactPoint.value [ fhir:value "2505554848" ];
-     fhir:ContactPoint.use [ fhir:value "home" ];
-     fhir:ContactPoint.period [
-       fhir:Period.start [ fhir:value "2000-01-02T10:10:10-08:00"^^xsd:dateTime ]
-     ]
+     fhir:ContactPoint.use [ fhir:value "home" ]
   ];
   fhir:Patient.gender [ fhir:value "male"];
   fhir:Patient.birthDate [ fhir:value "1966-10-01"^^xsd:date];

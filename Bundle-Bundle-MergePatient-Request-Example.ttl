@@ -62,34 +62,52 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient \"Patient-MergePatient-Example\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: id: 876092N4</p><p><b>active</b>: true</p><p><b>name</b>: Darrel Dwayne (OFFICIAL)</p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1966-10-01</p><p><b>address</b>: 721 FRONT ST VICTORIA BC V9A3Y3 CA </p><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: cancelled</p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: cancelled</p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient \"Patient-MergePatient-Example\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Account number: 8375493847 (OFFICIAL)</p><p><b>active</b>: true</p><p><b>name</b>: Dar Dwayne , Darrel Dwayne (OFFICIAL)</p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1966-10-01</p><p><b>address</b>: 721 FRONT ST VICTORIA BC V9A3Y3 CA </p><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: cancelled</p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: cancelled</p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span></span></p><p><b>type</b>: replaces</p></blockquote></div>"
   ];
   fhir:Patient.identifier [
      fhir:index 0;
-     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-sri" ];
-     fhir:Identifier.value [ fhir:value "876092N4" ]
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "active" ]
+     ];
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "AN" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
+     fhir:Identifier.value [ fhir:value "8375493847" ];
+     fhir:Identifier.assigner [
+       fhir:Reference.display [ fhir:value "ORG_SRC e.g. VPP_CER, IHA_IHA" ]
+     ]
   ];
   fhir:Patient.active [ fhir:value "true"^^xsd:boolean];
   fhir:Patient.name [
      fhir:index 0;
+     fhir:HumanName.use [ fhir:value "usual" ];
+     fhir:HumanName.family [ fhir:value "Dwayne" ];
+     fhir:HumanName.given [
+       fhir:value "Dar";
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 1;
      fhir:HumanName.use [ fhir:value "official" ];
      fhir:HumanName.family [ fhir:value "Dwayne" ];
      fhir:HumanName.given [
        fhir:value "Darrel";
        fhir:index 0
-     ];
-     fhir:HumanName.period [
-       fhir:Period.start [ fhir:value "2017-04-05"^^xsd:date ]
      ]
   ];
   fhir:Patient.telecom [
      fhir:index 0;
      fhir:ContactPoint.system [ fhir:value "phone" ];
      fhir:ContactPoint.value [ fhir:value "2505554848" ];
-     fhir:ContactPoint.use [ fhir:value "home" ];
-     fhir:ContactPoint.period [
-       fhir:Period.start [ fhir:value "2000-01-02T10:10:10-08:00"^^xsd:dateTime ]
-     ]
+     fhir:ContactPoint.use [ fhir:value "home" ]
   ];
   fhir:Patient.gender [ fhir:value "male"];
   fhir:Patient.birthDate [ fhir:value "1966-10-01"^^xsd:date];
