@@ -79,6 +79,19 @@ Usage: #inline
 * extension.valueCode = #active
 * use = #official
 
+Instance: IdentifierExampleSRINoPeriodForMerge
+InstanceOf: Identifier
+Description: "An example of a SRI Identifier."
+Usage: #inline
+* system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
+* value = "8375493847"
+* type.coding.code = #AN
+* type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* assigner.display = "ORG_SRC e.g. VPP_CER, IHA_IHA"
+* extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
+* extension.valueCode = #active
+* use = #official
+
 Instance: IdentifierExampleSSRI
 InstanceOf: Identifier
 Description: "An example of a SSRI Identifier."

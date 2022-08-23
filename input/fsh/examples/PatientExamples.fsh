@@ -2,9 +2,9 @@ Instance: Patient-RevisePatient-Example
 InstanceOf: ClientRegistryPatient
 Description: "Patient example for a RevisePatient operation"
 * address = Address-0-Example
-* telecom = ContactPoint-Example-Home-Phone
-* identifier = IdentifierExampleSRI
-* name = Name-Example-JohnDoe
+* telecom = ContactPoint-Example-Home-Phone-NoPeriod
+* identifier = IdentifierExampleSRINoPeriod
+* name = Name-Example-JohnDoe-NoPeriod
 * gender = #male
 * birthDate = 1940-06-06
 
@@ -34,12 +34,11 @@ Instance: Patient-MergePatient-Example
 InstanceOf: ClientRegistryPatient
 Description: "Example of a merge patient Patient"
 * active = true
-* identifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
-* identifier.value = "876092N4"
+* identifier = IdentifierExampleSRINoPeriodForMerge
 * address[0] = Address-0-Example
-* telecom[0] = ContactPoint-Example-Home-Phone
-* name = Name-Example-DarDwayne
-* name = Name-Example-DarrelDwayne
+* telecom[0] = ContactPoint-Example-Home-Phone-NoPeriod
+* name[+] = Name-Example-DarDwayne
+* name[+] = Name-Example-DarrelDwayne
 * gender = #male
 * birthDate = 1966-10-01
 * link[0].type = #replaces

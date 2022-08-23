@@ -85,7 +85,6 @@ Usage: #inline
 * given = "Darrel"
 * family = "Dwayne"
 * use = #official
-* period.start = "2017-04-05"
 
 Instance: Name-Example-DarDwayne
 InstanceOf: HumanName
@@ -94,4 +93,3 @@ Usage: #inline
 * given = "Dar"
 * family = "Dwayne"
 * use = #usual
-* period.start = "2018-04-05"
