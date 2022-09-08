@@ -164,6 +164,7 @@ Profile: ReviseRequestBundle
 Parent: Bundle
 Id: bc-revise-request-bundle
 Description:  "A Bundle that is used in the Client Registry for Revise Patient requests.  This is also used by Patient Notitifications."
+* obeys invariant-relatedperson-1
 * type 1..1 MS
 * type = #collection (exactly)
 * entry 2..*
@@ -214,6 +215,7 @@ Profile: UpdateRequestBundle
 Parent: Bundle
 Id: bc-update-request-bundle
 Description:  "A Bundle that is used in the Client Registry for Patient update requests."
+* obeys invariant-relatedperson-1
 * type 1..1 MS
 * type = #collection (exactly)
 * entry 2..*
