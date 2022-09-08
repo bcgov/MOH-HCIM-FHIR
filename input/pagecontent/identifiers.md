@@ -1,6 +1,6 @@
 ### Identifiers
 
-The Client Registry makes use of several kinds of identifiers, each requiring different attributes and codes.  This page explains, in more detail, the different kinds and how in FHIR they should be represented.  This page has PHN, SRI, SSRI and alternate identifier examples below.
+The Client Registry makes use of several kinds of identifiers, each requiring different attributes and codes.  This page explains, in more detail, the different kinds and how in FHIR they should be represented.  This page has PHN, SRI, SSRI, encrypted and encoded PHNs and alternate identifier examples below.
 
 PHN example:
 
@@ -16,6 +16,25 @@ PHN example:
       },
       "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
       "value" : "123345654",
+      "period" : {
+        "start" : "2000-01-01T11:11:11+08:00",
+        "end" : "2010-01-01T11:11:11+08:00"
+      }
+    }
+Encrypted and encoded PHN example:
+
+    {
+      "use" : "official",
+      "type" : {
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "JHN"
+          }
+        ]
+      },
+      "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC-encrypted",
+      "value" : "aGVsbG8=",
       "period" : {
         "start" : "2000-01-01T11:11:11+08:00",
         "end" : "2010-01-01T11:11:11+08:00"
