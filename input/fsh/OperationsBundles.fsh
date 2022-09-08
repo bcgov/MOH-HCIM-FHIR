@@ -8,7 +8,7 @@ Id: bc-get-demographics-request-bundle
 Description: "A Bundle that is used in the Get Demographics Operation request."
 * type 1..1 MS
 * type = #collection (exactly)
-* entry 2..*
+* entry 2..2
 * entry.resource 1..1 MS
 * entry.fullUrl 1..1 MS
 * entry.search 0..1
@@ -56,7 +56,7 @@ Id: bc-search-withEligibility-response-bundle
 Description: "A Bundle that is used in the Client Registry response to Get Demographics with Eligibility queries."
 * type 1..1 MS
 * type = #searchset (exactly)
-* entry 3..*
+* entry 2..4
 * entry.resource 1..1 MS
 * entry.fullUrl 1..1 MS
 * entry.search 0..1
@@ -86,7 +86,7 @@ Description: "A Bundle that is used in the Find Candidates Operation request."
 * obeys invariant-fc-1
 * type 1..1 MS
 * type = #collection (exactly)
-* entry 2..*
+* entry 2..3
 * entry.resource 1..1 MS
 * entry.fullUrl 1..1 MS
 * entry.search 0..1
@@ -114,7 +114,7 @@ Id: bc-add-request-bundle
 Description:  "A Bundle that is used in the Client Registry for Add Patient requests."
 * type 1..1 MS
 * type = #collection (exactly)
-* entry 2..*
+* entry 2..3
 * entry.resource 1..1 MS
 * entry.fullUrl 1..1 MS
 * entry.search 0..1
@@ -138,7 +138,7 @@ Id: bc-add-response-bundle
 Description:  "A Bundle that is used in the Client Registry response to Add Patient requests."
 * type 1..1 MS
 * type = #collection (exactly)
-* entry 2..*
+* entry 2..3
 * entry.resource 1..1 MS
 * entry.fullUrl 1..1 MS
 * entry.search 0..1
@@ -164,10 +164,9 @@ Profile: ReviseRequestBundle
 Parent: Bundle
 Id: bc-revise-request-bundle
 Description:  "A Bundle that is used in the Client Registry for Revise Patient requests.  This is also used by Patient Notitifications."
-* obeys invariant-relatedperson-1
 * type 1..1 MS
 * type = #collection (exactly)
-* entry 2..*
+* entry 2..2
 * entry.resource 1..1 MS
 * entry.fullUrl 1..1 MS
 * entry.search 0..1
@@ -189,7 +188,7 @@ Id: bc-revise-response-bundle
 Description:  "A Bundle that is used in the Client Registry response to Revise Patient requests."
 * type 1..1 MS
 * type = #collection (exactly)
-* entry 2..*
+* entry 2..3
 * entry.resource 1..1 MS
 * entry.fullUrl 1..1 MS
 * entry.search 0..1
@@ -215,10 +214,9 @@ Profile: UpdateRequestBundle
 Parent: Bundle
 Id: bc-update-request-bundle
 Description:  "A Bundle that is used in the Client Registry for Patient update requests."
-* obeys invariant-relatedperson-1
 * type 1..1 MS
 * type = #collection (exactly)
-* entry 2..*
+* entry 2..2
 * entry.resource 1..1 MS
 * entry.fullUrl 1..1 MS
 * entry.search 0..1
@@ -246,7 +244,7 @@ Id: bc-merge-request-bundle
 Description:  "A Bundle that is used in the Client Registry for Add Patient requests."
 * type 1..1 MS
 * type = #collection (exactly)
-* entry 2..*
+* entry 2..2
 * entry.resource 1..1 MS
 * entry.fullUrl 1..1 MS
 * entry.search 0..1
@@ -268,7 +266,7 @@ Id: bc-merge-response-bundle
 Description:  "A Bundle that is used in the Client Registry response to Merge Patient requests."
 * type 1..1 MS
 * type = #collection (exactly)
-* entry 2..*
+* entry 2..2
 * entry.resource 1..1 MS
 * entry.fullUrl 1..1 MS
 * entry.search 0..1
