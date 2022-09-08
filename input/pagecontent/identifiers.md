@@ -21,6 +21,7 @@ PHN example:
         "end" : "2010-01-01T11:11:11+08:00"
       }
     }
+
 Encrypted and encoded PHN example:
 
     {
