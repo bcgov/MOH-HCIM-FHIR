@@ -193,7 +193,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h3 id="identifiers">Identifiers</h3>
 
-<p>The Client Registry makes use of several kinds of identifiers, each requiring different attributes and codes.  This page explains, in more detail, the different kinds and how in FHIR they should be represented.  This page has PHN, SRI, SSRI and alternate identifier examples below.</p>
+<p>The Client Registry makes use of several kinds of identifiers, each requiring different attributes and codes.  This page explains, in more detail, the different kinds and how in FHIR they should be represented.  This page has PHN, SRI, SSRI, encrypted and encoded PHNs and alternate identifier examples below.</p>
 
 <p>PHN example:</p>
 
@@ -209,6 +209,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   },
   "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
   "value" : "123345654",
+  "period" : {
+    "start" : "2000-01-01T11:11:11+08:00",
+    "end" : "2010-01-01T11:11:11+08:00"
+  }
+} Encrypted and encoded PHN example:
+
+{
+  "use" : "official",
+  "type" : {
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "JHN"
+      }
+    ]
+  },
+  "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC-encrypted",
+  "value" : "aGVsbG8=",
   "period" : {
     "start" : "2000-01-01T11:11:11+08:00",
     "end" : "2010-01-01T11:11:11+08:00"
@@ -501,7 +519,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 23, 2022 21:30+0000">2022-08-23</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 8, 2022 16:47+0000">2022-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
