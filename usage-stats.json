@@ -486,6 +486,14 @@
       ]
     },
     {
+      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient-operation-extension",
+      "title": "A code the describes how a particular Patient attribute is to be changed",
+      "types": [
+        "CodeableConcept",
+        "CodeableConcept"
+      ]
+    },
+    {
       "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
       "title": "BC Address Validation Status Code",
       "types": [
@@ -496,22 +504,6 @@
   ],
   "profiles": {
     "Bundle": [
-      {
-        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle",
-        "title": "ReviseRequestBundle"
-      },
-      {
-        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle",
-        "title": "ReviseResponseBundle"
-      },
-      {
-        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
-        "title": "SearchResponseBundle"
-      },
-      {
-        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-withEligibility-response-bundle",
-        "title": "SearchWithEligibilityResponseBundle"
-      },
       {
         "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-request-bundle",
         "title": "UpdateRequestBundle"
@@ -529,12 +521,8 @@
     ],
     "Patient": [
       {
-        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient",
-        "title": "ClientRegistryPatient"
-      },
-      {
-        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example",
-        "title": "PatientByExample"
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient",
+        "title": "PatientUpdate"
       }
     ]
   },
@@ -578,6 +566,13 @@
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
       "StructureDefinition.snapshot.element"
     ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
     ],
@@ -618,7 +613,6 @@
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension": [
       "Bundle.entry.resource.identifier",
       "Bundle.entry.resource.link.other.identifier",
-      "Parameters.parameter.valueIdentifier",
       "Patient.identifier",
       "Patient.link.other.identifier"
     ],
@@ -635,6 +629,16 @@
       "Patient.address",
       "Patient.birthDate",
       "Patient.deceasedDateTime",
+      "Patient.deceased[x]",
+      "Patient.gender",
+      "Patient.identifier",
+      "Patient.multipleBirth[x]",
+      "Patient.name",
+      "Patient.telecom"
+    ],
+    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient-operation-extension": [
+      "Patient.address",
+      "Patient.birthDate",
       "Patient.deceased[x]",
       "Patient.gender",
       "Patient.identifier",
