@@ -3,7 +3,7 @@
 Cardinality | Resource Type | Comment
 :---|:---|:---
 1..1 | MetadataParametersIn | See [profile](StructureDefinition-bc-metadata-parameters-in.html).
-1..1 | Parameters | A FHIRPath operation, limited to updates.
+1..1 | UpdatePatient | See [profile](StructureDefinition-bc-update-patient.html).
 {:.grid}
 
 #### Out Bundle Entries

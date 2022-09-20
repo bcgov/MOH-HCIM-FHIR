@@ -12,6 +12,21 @@ Id: bc-merge-status-value-set
 Description: "BC Merge Status value set used to describe the merge status of a Patient."
 * codes from system MergeStatusCS
 
+CodeSystem: UpdatePatientOperationCS
+Id: bc-client-registry-update-patient-operation-code-system
+Title: "BC Code System Of Allowed Update Operations"
+Description: "BC Code System of allowed update patient operations."
+* ^caseSensitive = true
+* #add "add" "This operation adds an attribute."
+* #delete "delete" "This operation deletes an existing attribute."
+* #replace "replace" "This operation replaces an existing attribute."
+
+ValueSet: UpdatePatientOperationVS
+Title: "BC Update Patient Operation Value Set"
+Id: bc-client-registry-update-patient-operation-value-set
+Description: "A Value Set of allowed update operations."
+* codes from system UpdatePatientOperationCS
+
 CodeSystem: AddressValidationCS
 Id: bc-client-registry-address-validation-code-system
 Title: "BC Client Registry Address Validation Status Code"

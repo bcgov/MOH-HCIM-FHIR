@@ -524,35 +524,32 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 
 * rest[0].mode = #server
 * rest[0].resource[0].type = #Parameters
-* rest[0].resource[0].operation[0].name = "FindCandidates"
-* rest[0].resource[0].operation[0].definition = Canonical(FindCandidates)
-* rest[0].resource[0].operation[1].name = "GetDemographics"
-* rest[0].resource[0].operation[1].definition = Canonical(GetDemographics)
-* rest[0].resource[0].operation[2].name = "GetDemographics.withEligibility"
-* rest[0].resource[0].operation[2].definition = Canonical(GetDemographics.withEligibility)
-* rest[0].resource[0].operation[3].name = "RevisePatient"
-* rest[0].resource[0].operation[3].definition = Canonical(RevisePatient)
-* rest[0].resource[0].operation[4].name = "UpdatePatient"
-* rest[0].resource[0].operation[4].definition = Canonical(UpdatePatient)
-* rest[0].resource[0].operation[5].name = "AddPatient"
-* rest[0].resource[0].operation[5].definition = Canonical(AddPatient)
-* rest[0].resource[0].operation[6].name = "MergePatient"
-* rest[0].resource[0].operation[6].definition = Canonical(MergePatient)
+* rest[0].resource[0].operation[+].name = "FindCandidates"
+* rest[0].resource[0].operation[=].definition = Canonical(FindCandidates)
+* rest[0].resource[0].operation[+].name = "GetDemographics"
+* rest[0].resource[0].operation[=].definition = Canonical(GetDemographics)
+* rest[0].resource[0].operation[+].name = "GetDemographics.withEligibility"
+* rest[0].resource[0].operation[=].definition = Canonical(GetDemographics.withEligibility)
+* rest[0].resource[0].operation[+].name = "RevisePatient"
+* rest[0].resource[0].operation[=].definition = Canonical(RevisePatient)
+* rest[0].resource[0].operation[+].name = "UpdatePatient"
+* rest[0].resource[0].operation[=].definition = Canonical(UpdatePatient)
+* rest[0].resource[0].operation[+].name = "AddPatient"
+* rest[0].resource[0].operation[=].definition = Canonical(AddPatient)
+* rest[0].resource[0].operation[+].name = "MergePatient"
+* rest[0].resource[0].operation[=].definition = Canonical(MergePatient)
 
 // definition of async is the same as the synchronous
-* rest[0].resource[0].operation[7].name = "AddPatient.Async"
-* rest[0].resource[0].operation[7].definition = Canonical(AddPatient)
-* rest[0].resource[0].operation[7].documentation = "
-Although this is an independent Operation the definition is the same as the [AddPatient](OperationDefinition-bc-patient-add.html)"
-* rest[0].resource[0].operation[8].name = "RevisePatient.Async"
-* rest[0].resource[0].operation[8].definition = Canonical(RevisePatient)
-* rest[0].resource[0].operation[8].documentation = "
-Although this is an independent Operation the definition is the same as the [RevisePatient](OperationDefinition-bc-patient-revise.html)"
-* rest[0].resource[0].operation[9].name = "UpdatePatient.Async"
-* rest[0].resource[0].operation[9].definition = Canonical(UpdatePatient)
-* rest[0].resource[0].operation[9].documentation = "
-Although this is an independent Operation the definition is the same as the [UpdatePatient](OperationDefinition-bc-patient-update.html)"
-* rest[0].resource[0].operation[8].name = "MergePatient.Async"
-* rest[0].resource[0].operation[8].definition = Canonical(MergePatient)
-* rest[0].resource[0].operation[8].documentation = "
+* rest[0].resource[0].operation[+].name = "AddPatient.Async"
+* rest[0].resource[0].operation[=].definition = Canonical(AddPatient)
+* rest[0].resource[0].operation[=].documentation = "Although this is an independent Operation the definition is the same as the [AddPatient](OperationDefinition-bc-patient-add.html)"
+* rest[0].resource[0].operation[+].name = "RevisePatient.Async"
+* rest[0].resource[0].operation[=].definition = Canonical(RevisePatient)
+* rest[0].resource[0].operation[=].documentation = "Although this is an independent Operation the definition is the same as the [RevisePatient](OperationDefinition-bc-patient-revise.html)"
+* rest[0].resource[0].operation[+].name = "UpdatePatient.Async"
+* rest[0].resource[0].operation[=].definition = Canonical(UpdatePatient)
+* rest[0].resource[0].operation[=].documentation = "Although this is an independent Operation the definition is the same as the [UpdatePatient](OperationDefinition-bc-patient-update.html)"
+* rest[0].resource[0].operation[+].name = "MergePatient.Async"
+* rest[0].resource[0].operation[=].definition = Canonical(MergePatient)
+* rest[0].resource[0].operation[=].documentation = "
 Although this is an independent Operation the definition is the same as the [MergePatient](OperationDefinition-bc-patient-merge.html)"

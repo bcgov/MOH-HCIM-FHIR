@@ -1,18 +1,18 @@
-Instance: Parameters-UpdatePatient-Example
-InstanceOf: MetadataParametersIn
-Description: "Example of $RevisePatient operation that updates an existing Patient"
+//Instance: Parameters-UpdatePatient-Example
+//InstanceOf: MetadataParametersIn
+//Description: "Example of $RevisePatient operation that updates an existing Patient"
 
-* parameter[messageId].name = "messageId"
-* parameter[messageId].valueString = "98028b44-882a-4c72-8c92-b87d916147e1"
+//* parameter[messageId].name = "messageId"
+//* parameter[messageId].valueString = "98028b44-882a-4c72-8c92-b87d916147e1"
 
-* parameter[messageDateTime].name = "messageDateTime"
-* parameter[messageDateTime].valueDateTime = "2021-11-02T13:28:17-08:00"
+//* parameter[messageDateTime].name = "messageDateTime"
+//* parameter[messageDateTime].valueDateTime = "2021-11-02T13:28:17-08:00"
 
-* parameter[2].name = "SRI"
-* parameter[2].valueIdentifier = IdentifierExampleSRINoPeriod
+//* parameter[2].name = "SRI"
+//* parameter[2].valueIdentifier = IdentifierExampleSRINoPeriod
 
-* parameter[3].name = "patchOperation"
-* parameter[3].resource = Parameters-DeletePatch-Example
+//* parameter[3].name = "patchOperation"
+//* parameter[3].resource = Parameters-DeletePatch-Example
 
 Instance: Parameters-UpdatePatient-Response-Example
 InstanceOf: MetadataParametersOut
@@ -51,11 +51,11 @@ Description: "A sample UpdatePatient Operation response."
 * entry[2].fullUrl = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"
 
 
-Instance: Parameters-DeletePatch-Example
-InstanceOf: Parameters
-Description: "An example of a delete patch, which is used for a partial update of a Patient resource.  This example deletes a physical address."
-* parameter[0].part[0].name = "type"
-* parameter[0].part[0].valueCode = #delete
-* parameter[0].name = "operation"
-* parameter[0].part[1].name = "path"
-* parameter[0].part[1].valueString = "Patient.address.where(type = 'physical')"
+//Instance: Parameters-DeletePatch-Example
+//InstanceOf: Parameters
+//Description: "An example of a delete patch, which is used for a partial update of a Patient resource.  This example deletes a physical address."
+//* parameter[0].part[0].name = "type"
+//* parameter[0].part[0].valueCode = #delete
+//* parameter[0].name = "operation"
+//* parameter[0].part[1].name = "path"
+//* parameter[0].part[1].valueString = "Patient.address.where(type = 'physical')"

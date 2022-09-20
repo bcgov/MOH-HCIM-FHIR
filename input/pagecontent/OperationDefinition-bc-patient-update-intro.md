@@ -1,0 +1,3 @@
+><span style="color:red">Note</span><br>This specification is currently published as a Draft Standard on the ministry GitHub and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.
+
+This is the Update Patient operation which is used to update only some attributes of a Patient.  For a partial update the sending source’s primary identifier must exist in the EMPI. For SRI source a member with the supplied SRI must exist in EMPI and for a PHN source an MOH_CRS member must exist in the EMPI with the supplied PHN.

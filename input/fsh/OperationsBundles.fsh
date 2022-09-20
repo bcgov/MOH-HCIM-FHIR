@@ -204,7 +204,7 @@ Description:  "A Bundle that is used in the Client Registry response to Revise P
 * entry[operationOutcome].resource only OperationOutcome
 * entry[operationOutcome] ^short = "Messages and codes returned by HCIM."
 * entry[patient].resource only ClientRegistryPatient
-* entry[patient] ^short = "Updated Patient."
+* entry[patient] ^short = "Revised Patient."
 
 ////////////////////////////////////
 // UPDATE
@@ -226,11 +226,11 @@ Description:  "A Bundle that is used in the Client Registry for Patient update r
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a add request."
-* entry contains operation 1..1 MS and parameters 1..1 MS
+* entry contains parameters 1..1 MS and patient 1..1 MS
 * entry[parameters].resource only MetadataParametersIn
 * entry[parameters] ^short = "Metadata in parameters"
-* entry[operation].resource only Parameters
-* entry[operation] ^short = "Parameters resource with update instructions."
+* entry[patient].resource only PatientUpdate
+* entry[patient] ^short = "Updated Patient."
 
 
 
