@@ -40,7 +40,7 @@ These items are new to the Client Registry interface and subject to change as th
 Proposal | Description | 
 :--- | :--- |
 Add Patient interaction | Some of the features normally done through the Revise Patient interaction are now part of Add Patient.  Specifically, 'force create' and newborn interactions are now done with Add Patient. |
-Update interaction | A Update interaction allows users to logically delete, add or change part of the Patient resource.  This is useful when a stakeholder doesn't need (or persist) certain Patient attributes, but today, must query and then echo back these attributes in a Revise Patient interaction.  Knowledge of [FHIRPath](http://hl7.org/fhirpath/N1/) is required to use this interaction.  The exact patch operations allowed by the Client Registry is to be determined.|
+Update interaction | A Update interaction allows users to logically delete, add or change part of the Patient resource.  This is useful when a stakeholder doesn't need (or persist) certain Patient attributes, but today, must query and then echo back these attributes in a Revise Patient interaction.  The exact operations allowed by the Client Registry is to be determined.|
 Business dates feature | Attributes will have business dates that haven't been present in V3. | 
 Get Eligibility interaction | This guide includes sections describing a Get Eligibility interaction that is similar to V3.  However the Get Eligibility FHIR specification should be provided by Health Insurance BC (HIBC).  This guide speculates on how those requests and responses may be structured but the Client Registry _FHIR team still needs to consult with HIBC_.|
 
@@ -48,7 +48,7 @@ Get Eligibility interaction | This guide includes sections describing a Get Elig
 
 All interactions will primarily use the Patient resource.  The Patient resource is ideal to represent clients as the Patient resource has many of the necessary attributes but will require some extensions.  Patients also are recommended for enterprise master patient indices by the HL7 group and is in a Normative state, i.e. stable and ready for implementation.  See [FHIR standards evolution](http://hl7.org/fhir/versions.html#std-process) for a description of Normative. 
 
-Two Patient profiles are used: the main profile [ClientRegistryPatient](StructureDefinition-bc-patient.html) and the search profile [PatientByExample](StructureDefinition-bc-patient-by-example.html).
+Three Patient profiles are used: the main profile [ClientRegistryPatient](StructureDefinition-bc-patient.html), the search profile [PatientByExample](StructureDefinition-bc-patient-by-example.html) and finally the [PatientUpdate](StructureDefinition-bc-update-request-bundle.html) for partial updates, e.g. updating just address or just telephone.
 
 ##### Patient Extensions
 
@@ -60,10 +60,13 @@ bc-business-period-extension | A Period extension for the business effective dat
 bc-validation-status-extension | A code that represents the address validation status.  This will be part of every Patient.address
 bc-death-verified-flag-extension | An extension that indicates a verified death.
 bc-*-history-extension | The set of history extensions are necessary to add historical records to the Patient resource such as gender.
+bc-gender-identity-extension | An extension that houses the gender identity codeable concept.
+bc-sourceId-extension | The source identifier code.
+bc-identifier-status-extension | The status of an identifier, e.g. active, merged.
 
 ##### Codes and Value Sets
 
-The Client Registry doesn't recognize all the codes for the elements that must be supported, see the table below which indicates the supported codes.
+The Client Registry doesn't recognize all the standard FHIR codes for some attributes that must be supported, see the table below which indicates the supported codes.
 
 Attribute | Supported Codes
 :---|:---
@@ -123,15 +126,15 @@ The body of the request message will vary depending on the business context howe
 
 The Bundle profile for the request depends on the type of request.
 
-Operations | Request Profile | Response Profile |
+Operations | Request Bundle Profile | Response Bundle Profile |
 :---|:---|:---|
 $FindCandidates | [Find Candidates request profile](StructureDefinition-bc-find-candidates-request-bundle.html) | [Find Candidates response profile](StructureDefinition-bc-search-response-bundle.html) |
 $GetDemographics | [Get Demographics request profile](StructureDefinition-bc-get-demographics-request-bundle.html) | [Get Demographics response profile](StructureDefinition-bc-search-response-bundle.html) |
 $GetDemographics.withEligibility | [Get Demographics with Eligibility Bundle profile](StructureDefinition-bc-get-demographics-request-bundle.html) | [Get Demographics response profile](StructureDefinition-bc-search-response-bundle.html) |
 $RevisePatient | [Revise Patient request profile](StructureDefinition-bc-revise-request-bundle.html) | [Revise Patient response profile](StructureDefinition-bc-revise-response-bundle.html) |
 $RevisePatient.Async |  [Revise Patient request profile](StructureDefinition-bc-revise-request-bundle.html) | [Revise Patient response profile](StructureDefinition-bc-revise-response-bundle.html) |
-$UpdatePatient | [Update Patient operation](OperationDefinition-bc-patient-update.html) | [Update Patient response profile](StructureDefinition-bc-revise-response-bundle.html) (uses revise)|
-$UpdatePatient.Async |[Update Patient operation](OperationDefinition-bc-patient-update.html) | [Update Patient response profile](StructureDefinition-bc-revise-response-bundle.html) (uses revise)|
+$UpdatePatient | [Update Patient profile](StructureDefinition-bc-update-request-bundle.html) | [Update Patient response profile](StructureDefinition-bc-revise-response-bundle.html) (uses revise)|
+$UpdatePatient.Async |[Update Patient profile](StructureDefinition-bc-update-request-bundle.html) | [Update Patient response profile](StructureDefinition-bc-revise-response-bundle.html) (uses revise)|
 $AddPatient | [Add Patient request profile](StructureDefinition-bc-add-request-bundle.html) | [Add Patient response profile](StructureDefinition-bc-add-response-bundle.html) |
 $AddPatient.Async | [Add Patient request profile](StructureDefinition-bc-add-request-bundle.html) | [Add Patient response profile](StructureDefinition-bc-add-response-bundle.html) |
 $MergePatient | [Merge Patient request profile](StructureDefinition-bc-merge-request-bundle.html) | [Merge Patient response profile](StructureDefinition-bc-merge-response-bundle.html) |
@@ -149,9 +152,9 @@ This guide touches on some of the business and conformance rules regarding use o
 
 #### Operational Parameter Resource
 
-Each interaction is a FHIR Operation using a Bundle.  The BUndle entries will consists of parameters, patients, etc.
+Each interaction is a FHIR Operation using a Bundle.  The Bundle entries will consists of parameters, patients, etc.
 
-The table below is only showing the standard parameters included in each Bundle; each Operation may have more parameters such as withHistory or mother's PHN.  More detailed information regarding each Operation can be found in the [Operation definitions](artifacts.html#operation-definitions).
+The table below is only showing the standard parameters included in each Bundle; each Operation may have more parameters such as withHistory.  More detailed information regarding each Operation can be found in the [Operation definitions](artifacts.html#operation-definitions).
 
 Parameter Name|Parameter Value|Comments|IN, OUT, both
 :---|:---|:---|:---
@@ -177,9 +180,9 @@ Find Candidates may return zero or more candidates, while Get Demographics is de
 
 More details can be found here, [Search page](search.html "Find Candidates and Get Demographics").
 
-#### Add, Revise and/or Merge Patient
+#### Add, Revise, Update and/or Merge Patient
 
-Add, Revise and Merge Patient are maintain transactions that are closely related and therefore are described in the same section.  They use the same FHIR structure and resources; merge uses additional parameters.
+Add, Revise, Update and Merge Patient are maintain transactions that are closely related and therefore are described in the same section.  They use the same FHIR structure and similar resources; merge uses additional parameters.
 
 
 Add, Revise and Merge Operations | Description
@@ -199,16 +202,16 @@ These business transactions will allow the user to:
 - generate a PHN for a new client; or
 - resolve duplicate Patients.
 
-More details can be found here, [Add, Revise and Merge page](reviseAndMerge.html).
+More details can be found here, [Add, Revise, Update and Merge page](reviseAndMerge.html).
 
 #### Distributions
 
-Distributions will use an endpoint called PatientNotification.  The FHIR structure of the interaction is the same as RevisePatient.
+Distributions will use a stakeholder client endpoint for the $PatientNotification operation.  The FHIR structure of the interaction is the same as RevisePatient.
 
 See [Patient Notifications](distributions.html) for more details.
 
 ##### Asynchronous Operations
-The asynchronous versions of Add, Revise and Merge Operations share the same request and response profile as the synchronous version.
+The asynchronous versions of Add, Revise, Update and Merge Operations share the same request and response profile as the synchronous version.
 
 The FHIR asynchronous pattern is not followed by this FHIR implementation.  The existing pattern the Client Registry uses today will be mimicked.  I.e.
 1. User sends request

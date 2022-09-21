@@ -8,6 +8,15 @@ Description: "Patient example for a RevisePatient operation"
 * gender = #male
 * birthDate = 1940-06-06
 
+Instance: Patient-UpdatePatient-Request-Example
+InstanceOf: PatientUpdate
+Description: "Patient example for a UpdatePatient operation that changes the Address."
+* address[0] = Address-0-Example
+* address[0].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient-operation-extension"
+* address[0].extension.valueCodeableConcept.coding.system = "http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-update-patient-operation-code-system"
+* address[0].extension.valueCodeableConcept.coding.code = #replace
+* identifier = IdentifierExampleSRINoPeriod
+
 Instance: Patient-AddPatient-Example
 InstanceOf: ClientRegistryPatient
 Description: "The Patient is completely new to the Client Registry, no identifiers."

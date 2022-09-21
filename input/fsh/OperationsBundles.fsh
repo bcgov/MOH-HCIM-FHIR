@@ -214,6 +214,7 @@ Profile: UpdateRequestBundle
 Parent: Bundle
 Id: bc-update-request-bundle
 Description:  "A Bundle that is used in the Client Registry for Patient update requests."
+* obeys invariant-update-1
 * type 1..1 MS
 * type = #collection (exactly)
 * entry 2..2

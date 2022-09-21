@@ -18,9 +18,11 @@ Get Demographics with Eligibility- used when a user would like to find a Patient
 <li>
 Revise Patient - used when a user is communicating a change or request for a new PHN to the Client Registry.
 </li>
+<!--
 <li>
 Update Patient - used when a user is communicating a change to the Client Registry and isn't capable of sending in the full Patient resource.  E.g. all Patient attributes are not locally persisted.
 </li>
+-->
 <li>
 Merge Patient - used when a user is communicating that an individual has multiple Patient records and which record should survive and which record(s) should be marked as non-surviving.
 </li>
@@ -61,7 +63,7 @@ When adding a newborn or using 'force create' Client Registry users SHALL use th
 The Client Registry FHIR implementation only supports JSON format and the clients SHALL use JSON for all interactions.  The MIME-type of application/fhir+json is the only one supported by the Client Registry.
 </li>
 <li>
-All interactions with Patient resources SHALL use the ClientRegistryPatient profile. The exception is the FindCandidates and GetDemographics Operations which use the PatientByExample instead of ClientRegistryPatient in the request.
+All interactions with Patient resources SHALL use one of the following profiles: ClientRegistryPatient, PatientByExample or PatientUpdate.
 </li>
 <li>
 Any Parameters' profiles used SHALL be MetadataParametersIn or MetadataParametersOut.
@@ -76,7 +78,7 @@ All of the profiles include elements that are marked as Must Support. For the pu
 The FHIR asynchronous pattern is not followed by this FHIR implementation.  The existing pattern the Client Registry uses today will be mimicked.  I.e.           <ul>
 <li>User sends request</li>
 <li>Client Registry responds with HTTP 202 Accepted</li>
-<li>Client Registry sends request to user's end point</li>
+<li>Later, the Client Registry sends request with information regarding the initial request to user's end point</li>
 <li>User system responds with 202 Accepted</li>
 </ul>
 
@@ -105,7 +107,7 @@ In summary the response Bundles for every Operation SHALL be structured as follo
 
 <h4>Data Absent Reason</h4>
 <p>
-If the Data Absent extension is present in an attribute History, for that attribute, SHALL not be returned.  If data is absent it is primarly because the record is restricted and therefore returning History isn't permitted.
+If the Data Absent extension is present onn a Patient attribute, then History, for that attribute, SHALL not be returned.  If data is absent it is primarly because the record is restricted and therefore returning History isn't permitted.
 </p>
 
 <h3>Error Handling</h3>
