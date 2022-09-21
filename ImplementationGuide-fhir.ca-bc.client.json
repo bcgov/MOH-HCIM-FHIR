@@ -10,7 +10,7 @@
   "name": "BCHealthClientIdentityManagement",
   "title": "BC Client Registry FHIR Implementation Guide",
   "status": "draft",
-  "date": "2022-09-20T22:52:25+00:00",
+  "date": "2022-09-21T21:21:33+00:00",
   "publisher": "BC Ministry of Health",
   "contact": [
     {
@@ -532,7 +532,8 @@
         },
         "name": "PatientUpdate",
         "description": "Patient profile used to update a Patient.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "PatientProfile"
       },
       {
         "extension": [
@@ -1191,6 +1192,20 @@
           }
         ],
         "reference": {
+          "reference": "Bundle/Bundle-UpdatePatient-Request-Example"
+        },
+        "name": "Bundle-UpdatePatient-Request-Example",
+        "description": "A sample UpdatePatient request.",
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-request-bundle"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
           "reference": "Bundle/Bundle-UpdatePatient-Response-Example"
         },
         "name": "Bundle-UpdatePatient-Response-Example",
@@ -1486,6 +1501,20 @@
           }
         ],
         "reference": {
+          "reference": "Parameters/Parameters-UpdatePatient-Request-Example"
+        },
+        "name": "Parameters-UpdatePatient-Request-Example",
+        "description": "Example of Update response Metadata parameters",
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Parameters"
+          }
+        ],
+        "reference": {
           "reference": "Parameters/Parameters-UpdatePatient-Response-Example"
         },
         "name": "Parameters-UpdatePatient-Response-Example",
@@ -1715,6 +1744,20 @@
         "name": "Patient-RevisePatient-Example",
         "description": "Patient example for a RevisePatient operation",
         "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/Patient-UpdatePatient-Request-Example"
+        },
+        "name": "Patient-UpdatePatient-Request-Example",
+        "description": "Patient example for a UpdatePatient operation that changes the Address.",
+        "exampleCanonical": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient"
       },
       {
         "extension": [

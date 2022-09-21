@@ -1,0 +1,62 @@
+{
+  "resourceType": "Patient",
+  "id": "Patient-UpdatePatient-Request-Example",
+  "meta": {
+    "profile": [
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Anonymous Patient</b> (no stated gender), DoB Unknown ( Account number: 123345654 (OFFICIAL))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail:</td><td colspan=\"3\">721 FRONT ST VICTORIA BC V9A3Y3 CA </td></tr></table></div>"
+  },
+  "identifier": [
+    {
+      "extension": [
+        {
+          "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode": "active"
+        }
+      ],
+      "use": "official",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "AN"
+          }
+        ]
+      },
+      "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+      "value": "123345654",
+      "assigner": {
+        "display": "ORG_SRC e.g. VPP_CER, IHA_IHA"
+      }
+    }
+  ],
+  "address": [
+    {
+      "extension": [
+        {
+          "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient-operation-extension",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-update-patient-operation-code-system",
+                "code": "replace"
+              }
+            ]
+          }
+        }
+      ],
+      "type": "physical",
+      "line": [
+        "721 FRONT ST"
+      ],
+      "city": "VICTORIA",
+      "state": "BC",
+      "postalCode": "V9A3Y3",
+      "country": "CA"
+    }
+  ]
+}

@@ -106,7 +106,7 @@
         <a href="search.html">Search Patient</a>
       </li>
       <li>
-        <a href="reviseAndMerge.html">Add, Revise And Merge Patient</a>
+        <a href="reviseAndMerge.html">Add, Revise, Update And Merge Patient</a>
       </li>
       <li>
         <a href="distributions.html">Patient Change Notificaitons</a>
@@ -263,7 +263,7 @@ Namely:</p>
     </tr>
     <tr>
       <td style="text-align: left">Update interaction</td>
-      <td style="text-align: left">A Update interaction allows users to logically delete, add or change part of the Patient resource.  This is useful when a stakeholder doesn’t need (or persist) certain Patient attributes, but today, must query and then echo back these attributes in a Revise Patient interaction.  Knowledge of <a href="http://hl7.org/fhirpath/N1/">FHIRPath</a> is required to use this interaction.  The exact patch operations allowed by the Client Registry is to be determined.</td>
+      <td style="text-align: left">A Update interaction allows users to logically delete, add or change part of the Patient resource.  This is useful when a stakeholder doesn’t need (or persist) certain Patient attributes, but today, must query and then echo back these attributes in a Revise Patient interaction.  The exact operations allowed by the Client Registry is to be determined.</td>
     </tr>
     <tr>
       <td style="text-align: left">Business dates feature</td>
@@ -280,7 +280,7 @@ Namely:</p>
 
 <p>All interactions will primarily use the Patient resource.  The Patient resource is ideal to represent clients as the Patient resource has many of the necessary attributes but will require some extensions.  Patients also are recommended for enterprise master patient indices by the HL7 group and is in a Normative state, i.e. stable and ready for implementation.  See <a href="http://hl7.org/fhir/versions.html#std-process">FHIR standards evolution</a> for a description of Normative.</p>
 
-<p>Two Patient profiles are used: the main profile <a href="StructureDefinition-bc-patient.html">ClientRegistryPatient</a> and the search profile <a href="StructureDefinition-bc-patient-by-example.html">PatientByExample</a>.</p>
+<p>Three Patient profiles are used: the main profile <a href="StructureDefinition-bc-patient.html">ClientRegistryPatient</a>, the search profile <a href="StructureDefinition-bc-patient-by-example.html">PatientByExample</a> and finally the <a href="StructureDefinition-bc-update-request-bundle.html">PatientUpdate</a> for partial updates, e.g. updating just address or just telephone.</p>
 
 <h5 id="patient-extensions">Patient Extensions</h5>
 
@@ -310,12 +310,24 @@ Namely:</p>
       <td style="text-align: left">bc-*-history-extension</td>
       <td style="text-align: left">The set of history extensions are necessary to add historical records to the Patient resource such as gender.</td>
     </tr>
+    <tr>
+      <td style="text-align: left">bc-gender-identity-extension</td>
+      <td style="text-align: left">An extension that houses the gender identity codeable concept.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">bc-sourceId-extension</td>
+      <td style="text-align: left">The source identifier code.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">bc-identifier-status-extension</td>
+      <td style="text-align: left">The status of an identifier, e.g. active, merged.</td>
+    </tr>
   </tbody>
 </table>
 
 <h5 id="codes-and-value-sets">Codes and Value Sets</h5>
 
-<p>The Client Registry doesn’t recognize all the codes for the elements that must be supported, see the table below which indicates the supported codes.</p>
+<p>The Client Registry doesn’t recognize all the standard FHIR codes for some attributes that must be supported, see the table below which indicates the supported codes.</p>
 
 <table class="grid">
   <thead>
@@ -496,8 +508,8 @@ Namely:</p>
   <thead>
     <tr>
       <th style="text-align: left">Operations</th>
-      <th style="text-align: left">Request Profile</th>
-      <th style="text-align: left">Response Profile</th>
+      <th style="text-align: left">Request Bundle Profile</th>
+      <th style="text-align: left">Response Bundle Profile</th>
     </tr>
   </thead>
   <tbody>
@@ -528,12 +540,12 @@ Namely:</p>
     </tr>
     <tr>
       <td style="text-align: left">$UpdatePatient</td>
-      <td style="text-align: left"><a href="OperationDefinition-bc-patient-update.html">Update Patient operation</a></td>
+      <td style="text-align: left"><a href="StructureDefinition-bc-update-request-bundle.html">Update Patient profile</a></td>
       <td style="text-align: left"><a href="StructureDefinition-bc-revise-response-bundle.html">Update Patient response profile</a> (uses revise)</td>
     </tr>
     <tr>
       <td style="text-align: left">$UpdatePatient.Async</td>
-      <td style="text-align: left"><a href="OperationDefinition-bc-patient-update.html">Update Patient operation</a></td>
+      <td style="text-align: left"><a href="StructureDefinition-bc-update-request-bundle.html">Update Patient profile</a></td>
       <td style="text-align: left"><a href="StructureDefinition-bc-revise-response-bundle.html">Update Patient response profile</a> (uses revise)</td>
     </tr>
     <tr>
@@ -574,9 +586,9 @@ Namely:</p>
 
 <h4 id="operational-parameter-resource">Operational Parameter Resource</h4>
 
-<p>Each interaction is a FHIR Operation using a Bundle.  The BUndle entries will consists of parameters, patients, etc.</p>
+<p>Each interaction is a FHIR Operation using a Bundle.  The Bundle entries will consists of parameters, patients, etc.</p>
 
-<p>The table below is only showing the standard parameters included in each Bundle; each Operation may have more parameters such as withHistory or mother’s PHN.  More detailed information regarding each Operation can be found in the <a href="artifacts.html#operation-definitions">Operation definitions</a>.</p>
+<p>The table below is only showing the standard parameters included in each Bundle; each Operation may have more parameters such as withHistory.  More detailed information regarding each Operation can be found in the <a href="artifacts.html#operation-definitions">Operation definitions</a>.</p>
 
 <table class="grid">
   <thead>
@@ -657,9 +669,9 @@ Namely:</p>
 
 <p>More details can be found here, <a href="search.html" title="Find Candidates and Get Demographics">Search page</a>.</p>
 
-<h4 id="add-revise-andor-merge-patient">Add, Revise and/or Merge Patient</h4>
+<h4 id="add-revise-update-andor-merge-patient">Add, Revise, Update and/or Merge Patient</h4>
 
-<p>Add, Revise and Merge Patient are maintain transactions that are closely related and therefore are described in the same section.  They use the same FHIR structure and resources; merge uses additional parameters.</p>
+<p>Add, Revise, Update and Merge Patient are maintain transactions that are closely related and therefore are described in the same section.  They use the same FHIR structure and similar resources; merge uses additional parameters.</p>
 
 <table class="grid">
   <thead>
@@ -711,16 +723,16 @@ Namely:</p>
   <li>resolve duplicate Patients.</li>
 </ul>
 
-<p>More details can be found here, <a href="reviseAndMerge.html">Add, Revise and Merge page</a>.</p>
+<p>More details can be found here, <a href="reviseAndMerge.html">Add, Revise, Update and Merge page</a>.</p>
 
 <h4 id="distributions">Distributions</h4>
 
-<p>Distributions will use an endpoint called PatientNotification.  The FHIR structure of the interaction is the same as RevisePatient.</p>
+<p>Distributions will use a stakeholder client endpoint for the $PatientNotification operation.  The FHIR structure of the interaction is the same as RevisePatient.</p>
 
 <p>See <a href="distributions.html">Patient Notifications</a> for more details.</p>
 
 <h5 id="asynchronous-operations">Asynchronous Operations</h5>
-<p>The asynchronous versions of Add, Revise and Merge Operations share the same request and response profile as the synchronous version.</p>
+<p>The asynchronous versions of Add, Revise, Update and Merge Operations share the same request and response profile as the synchronous version.</p>
 
 <p>The FHIR asynchronous pattern is not followed by this FHIR implementation.  The existing pattern the Client Registry uses today will be mimicked.  I.e.</p>
 <ol>
@@ -763,7 +775,7 @@ Namely:</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 20, 2022 22:52+0000">2022-09-20</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 21, 2022 21:21+0000">2022-09-21</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

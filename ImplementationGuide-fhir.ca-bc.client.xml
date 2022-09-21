@@ -11,7 +11,7 @@
   <name value="BCHealthClientIdentityManagement"/>
   <title value="BC Client Registry FHIR Implementation Guide"/>
   <status value="draft"/>
-  <date value="2022-09-20T22:52:25+00:00"/>
+  <date value="2022-09-21T21:21:33+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -367,6 +367,7 @@
       <name value="PatientUpdate"/>
       <description value="Patient profile used to update a Patient."/>
       <exampleBoolean value="false"/>
+      <groupingId value="PatientProfile"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -887,6 +888,17 @@
         <valueString value="Bundle"/>
       </extension>
       <reference>
+        <reference value="Bundle/Bundle-UpdatePatient-Request-Example"/>
+      </reference>
+      <name value="Bundle-UpdatePatient-Request-Example"/>
+      <description value="A sample UpdatePatient request."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-request-bundle"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
         <reference value="Bundle/Bundle-UpdatePatient-Response-Example"/>
       </reference>
       <name value="Bundle-UpdatePatient-Response-Example"/>
@@ -1119,6 +1131,17 @@
         <valueString value="Parameters"/>
       </extension>
       <reference>
+        <reference value="Parameters/Parameters-UpdatePatient-Request-Example"/>
+      </reference>
+      <name value="Parameters-UpdatePatient-Request-Example"/>
+      <description value="Example of Update response Metadata parameters"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
         <reference value="Parameters/Parameters-UpdatePatient-Response-Example"/>
       </reference>
       <name value="Parameters-UpdatePatient-Response-Example"/>
@@ -1300,6 +1323,17 @@
       <name value="Patient-RevisePatient-Example"/>
       <description value="Patient example for a RevisePatient operation"/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/Patient-UpdatePatient-Request-Example"/>
+      </reference>
+      <name value="Patient-UpdatePatient-Request-Example"/>
+      <description value="Patient example for a UpdatePatient operation that changes the Address."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

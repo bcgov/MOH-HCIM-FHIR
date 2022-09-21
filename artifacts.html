@@ -106,7 +106,7 @@
         <a href="search.html">Search Patient</a>
       </li>
       <li>
-        <a href="reviseAndMerge.html">Add, Revise And Merge Patient</a>
+        <a href="reviseAndMerge.html">Add, Revise, Update And Merge Patient</a>
       </li>
       <li>
         <a href="distributions.html">Patient Change Notificaitons</a>
@@ -202,19 +202,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#6">Response Examples</a>
       </li>
       <li>
-         <a href="#7">Structures: Resource Profiles</a>
+         <a href="#7">Structures: Extension Definitions</a>
       </li>
       <li>
-         <a href="#8">Structures: Extension Definitions</a>
+         <a href="#8">Terminology: Value Sets</a>
       </li>
       <li>
-         <a href="#9">Terminology: Value Sets</a>
+         <a href="#9">Terminology: Code Systems</a>
       </li>
       <li>
-         <a href="#10">Terminology: Code Systems</a>
-      </li>
-      <li>
-         <a href="#11">Example: Example Instances</a>
+         <a href="#10">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -361,6 +358,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </td>
                <td>
 <p>General constraints on the Patient resource for use in the BC Client Registry project for queries.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-update-patient.html"
+                     title="StructureDefinition/bc-update-patient">PatientUpdate</a>
+               </td>
+               <td>
+<p>Patient profile used to update a Patient.</p>
 </td>
             </tr>
          </tbody>
@@ -655,27 +661,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </table>
    </p>
    <a name="7"> </a>
-   <h3>Structures: Resource Profiles </h3>
-   <p>
-    <p>These define constraints on FHIR resources for systems conforming to this implementation guide</p>
-</p>
-   <p>
-      <table class="grid">
-         <col style="width:20%"/>
-         <tbody>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-update-patient.html"
-                     title="StructureDefinition/bc-update-patient">PatientUpdate</a>
-               </td>
-               <td>
-<p>Patient profile used to update a Patient.</p>
-</td>
-            </tr>
-         </tbody>
-      </table>
-   </p>
-   <a name="8"> </a>
    <h3>Structures: Extension Definitions </h3>
    <p>
     <p>These define constraints on FHIR data types for systems conforming to this implementation guide</p>
@@ -804,7 +789,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tbody>
       </table>
    </p>
-   <a name="9"> </a>
+   <a name="8"> </a>
    <h3>Terminology: Value Sets </h3>
    <p>
     <p>These define sets of codes used by systems conforming to this implementation guide</p>
@@ -888,7 +873,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tbody>
       </table>
    </p>
-   <a name="10"> </a>
+   <a name="9"> </a>
    <h3>Terminology: Code Systems </h3>
    <p>
     <p>These define new code systems used by systems conforming to this implementation guide</p>
@@ -945,7 +930,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tbody>
       </table>
    </p>
-   <a name="11"> </a>
+   <a name="10"> </a>
    <h3>Example: Example Instances </h3>
    <p>
     <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like</p>
@@ -954,6 +939,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <table class="grid">
          <col style="width:20%"/>
          <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Bundle-Bundle-UpdatePatient-Request-Example.html"
+                     title="Bundle/Bundle-UpdatePatient-Request-Example">Bundle-UpdatePatient-Request-Example</a>
+               </td>
+               <td>
+<p>A sample UpdatePatient request.</p>
+</td>
+            </tr>
             <tr>
                <td style="column-width:30%">
                   <a href="Coverage-Coverage-Active-Example.html"
@@ -1136,6 +1130,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="Parameters-Parameters-UpdatePatient-Request-Example.html"
+                     title="Parameters/Parameters-UpdatePatient-Request-Example">Parameters-UpdatePatient-Request-Example</a>
+               </td>
+               <td>
+<p>Example of Update response Metadata parameters</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="Parameters-Parameters-UpdatePatient-Response-Example.html"
                      title="Parameters/Parameters-UpdatePatient-Response-Example">Parameters-UpdatePatient-Response-Example</a>
                </td>
@@ -1286,6 +1289,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="Patient-Patient-UpdatePatient-Request-Example.html"
+                     title="Patient/Patient-UpdatePatient-Request-Example">Patient-UpdatePatient-Request-Example</a>
+               </td>
+               <td>
+<p>Patient example for a UpdatePatient operation that changes the Address.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="RelatedPerson-RelatedPerson-Mother-Example.html"
                      title="RelatedPerson/RelatedPerson-Mother-Example">RelatedPerson-Mother-Example</a>
                </td>
@@ -1338,7 +1350,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 20, 2022 22:52+0000">2022-09-20</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 21, 2022 21:21+0000">2022-09-21</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
