@@ -1,19 +1,19 @@
-Instance: UpdatePatient
+Instance: PartialUpdatePatient
 InstanceOf: OperationDefinition
-Description: "This operation is used to revise a patient's demographics, applied to only specific Patient attributes."
+Description: "This operation is used to update a patient's demographics, applied to only specific Patient attributes."
 Usage: #definition
 * id = "bc-patient-update"
 * url = "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-update"
-* name = "UpdatePatient"
-* title = "Update Patient"
+* name = "PartialUpdatePatient"
+* title = "Partial Update Patient"
 * status = #draft
 * kind = #operation
-* code = #UpdatePatient
+* code = #PartialUpdatePatient
 * resource[0] = #Patient
 * system = false
 * type = true
 * instance = false
-* inputProfile = Canonical(UpdateRequestBundle)
+* inputProfile = Canonical(PartialUpdateRequestBundle)
 * outputProfile = Canonical(ReviseResponseBundle)
 
 * parameter[0].name = #UpdatePatientRequestBundle

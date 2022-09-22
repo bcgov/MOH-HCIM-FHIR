@@ -1,4 +1,4 @@
-Profile: PatientUpdate
+Profile: PartialPatientUpdate
 //Parent: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient
 Parent: Patient
 Id: bc-update-patient

@@ -40,7 +40,7 @@ These items are new to the Client Registry interface and subject to change as th
 Proposal | Description | 
 :--- | :--- |
 Add Patient interaction | Some of the features normally done through the Revise Patient interaction are now part of Add Patient.  Specifically, 'force create' and newborn interactions are now done with Add Patient. |
-Update interaction | A Update interaction allows users to logically delete, add or change part of the Patient resource.  This is useful when a stakeholder doesn't need (or persist) certain Patient attributes, but today, must query and then echo back these attributes in a Revise Patient interaction.  The exact operations allowed by the Client Registry is to be determined.|
+Partial Update interaction | A Partial Update interaction allows users to logically delete, add or change part of the Patient resource.  This is useful when a stakeholder doesn't need (or persist) certain Patient attributes, but today, must query and then echo back these attributes in a Revise Patient interaction.  The exact operations allowed by the Client Registry is to be determined.|
 Business dates feature | Attributes will have business dates that haven't been present in V3. | 
 Get Eligibility interaction | This guide includes sections describing a Get Eligibility interaction that is similar to V3.  However the Get Eligibility FHIR specification should be provided by Health Insurance BC (HIBC).  This guide speculates on how those requests and responses may be structured but the Client Registry _FHIR team still needs to consult with HIBC_.|
 
@@ -108,8 +108,8 @@ https://..../Patient/$GetDemographics |
 https://..../Patient/$GetDemographics.withEligibility |
 https://..../Patient/$RevisePatient |
 https://..../Patient/$RevisePatient.Async |
-https://..../Patient/$UpdatePatient |
-https://..../Patient/$UpdatePatient.Async |
+https://..../Patient/$PartialUpdatePatient |
+https://..../Patient/$PartialUpdatePatient.Async |
 https://..../Patient/$AddPatient |
 https://..../Patient/$AddPatient.Async |
 https://..../Patient/$MergePatient |
@@ -133,8 +133,8 @@ $GetDemographics | [Get Demographics request profile](StructureDefinition-bc-get
 $GetDemographics.withEligibility | [Get Demographics with Eligibility Bundle profile](StructureDefinition-bc-get-demographics-request-bundle.html) | [Get Demographics response profile](StructureDefinition-bc-search-response-bundle.html) |
 $RevisePatient | [Revise Patient request profile](StructureDefinition-bc-revise-request-bundle.html) | [Revise Patient response profile](StructureDefinition-bc-revise-response-bundle.html) |
 $RevisePatient.Async |  [Revise Patient request profile](StructureDefinition-bc-revise-request-bundle.html) | [Revise Patient response profile](StructureDefinition-bc-revise-response-bundle.html) |
-$UpdatePatient | [Update Patient profile](StructureDefinition-bc-update-request-bundle.html) | [Update Patient response profile](StructureDefinition-bc-revise-response-bundle.html) (uses revise)|
-$UpdatePatient.Async |[Update Patient profile](StructureDefinition-bc-update-request-bundle.html) | [Update Patient response profile](StructureDefinition-bc-revise-response-bundle.html) (uses revise)|
+$PartialUpdatePatient | [Update Patient profile](StructureDefinition-bc-update-request-bundle.html) | [Update Patient response profile](StructureDefinition-bc-revise-response-bundle.html) (uses revise)|
+$PartialUpdatePatient.Async |[Update Patient profile](StructureDefinition-bc-update-request-bundle.html) | [Update Patient response profile](StructureDefinition-bc-revise-response-bundle.html) (uses revise)|
 $AddPatient | [Add Patient request profile](StructureDefinition-bc-add-request-bundle.html) | [Add Patient response profile](StructureDefinition-bc-add-response-bundle.html) |
 $AddPatient.Async | [Add Patient request profile](StructureDefinition-bc-add-request-bundle.html) | [Add Patient response profile](StructureDefinition-bc-add-response-bundle.html) |
 $MergePatient | [Merge Patient request profile](StructureDefinition-bc-merge-request-bundle.html) | [Merge Patient response profile](StructureDefinition-bc-merge-response-bundle.html) |
@@ -185,12 +185,12 @@ More details can be found here, [Search page](search.html "Find Candidates and G
 Add, Revise, Update and Merge Patient are maintain transactions that are closely related and therefore are described in the same section.  They use the same FHIR structure and similar resources; merge uses additional parameters.
 
 
-Add, Revise and Merge Operations | Description
+Add, Revise, Update and Merge Operations | Description
 :--- | :---
 https://..../$RevisePatient | Updating a Patient
 https://..../$RevisePatient.Async | Updating a Patient asynchronously
-https://..../$UpdatePatient | Updating a specific Patient attribute
-https://..../$UpdatePatient.Async | Updating a specific Patient attribute asynchronously
+https://..../$PartialUpdatePatient | Updating a specific Patient attribute
+https://..../$PartialUpdatePatient.Async | Updating a specific Patient attribute asynchronously
 https://..../$AddPatient | For newborns or to 'force create' a Patient
 https://..../$AddPatient.Async | The asynchronous version of AddPatient
 https://..../$MergePatient | Resolving duplicate Patients records (same individual)

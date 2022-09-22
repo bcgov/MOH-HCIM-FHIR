@@ -1,5 +1,5 @@
 Instance: Bundle-UpdatePatient-Request-Example
-InstanceOf: UpdateRequestBundle
+InstanceOf: PartialUpdateRequestBundle
 Description: "A sample UpdatePatient request."
 * type = #collection
 * timestamp = "2011-09-13T16:11:43.000-07:00"

@@ -9,7 +9,7 @@ Description: "Patient example for a RevisePatient operation"
 * birthDate = 1940-06-06
 
 Instance: Patient-UpdatePatient-Request-Example
-InstanceOf: PatientUpdate
+InstanceOf: PartialPatientUpdate
 Description: "Patient example for a UpdatePatient operation that changes the Address."
 * address[0] = Address-0-Example
 * address[0].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient-operation-extension"
