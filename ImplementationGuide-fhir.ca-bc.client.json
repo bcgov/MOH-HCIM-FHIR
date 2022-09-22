@@ -10,7 +10,7 @@
   "name": "BCHealthClientIdentityManagement",
   "title": "BC Client Registry FHIR Implementation Guide",
   "status": "draft",
-  "date": "2022-09-21T21:21:33+00:00",
+  "date": "2022-09-22T20:32:21+00:00",
   "publisher": "BC Ministry of Health",
   "contact": [
     {
@@ -513,10 +513,10 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/bc-patient-by-example"
+          "reference": "StructureDefinition/bc-update-patient"
         },
-        "name": "PatientByExample",
-        "description": "General constraints on the Patient resource for use in the BC Client Registry project for queries.",
+        "name": "PartialPatientUpdate",
+        "description": "Patient profile used to update a Patient.",
         "exampleBoolean": false,
         "groupingId": "PatientProfile"
       },
@@ -528,10 +528,25 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/bc-update-patient"
+          "reference": "StructureDefinition/bc-update-request-bundle"
         },
-        "name": "PatientUpdate",
-        "description": "Patient profile used to update a Patient.",
+        "name": "PartialUpdateRequestBundle",
+        "description": "A Bundle that is used in the Client Registry for Patient update requests.",
+        "exampleBoolean": false,
+        "groupingId": "SupportingProfiles"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/bc-patient-by-example"
+        },
+        "name": "PatientByExample",
+        "description": "General constraints on the Patient resource for use in the BC Client Registry project for queries.",
         "exampleBoolean": false,
         "groupingId": "PatientProfile"
       },
@@ -592,21 +607,6 @@
         },
         "name": "SearchWithEligibilityResponseBundle",
         "description": "A Bundle that is used in the Client Registry response to Get Demographics with Eligibility queries.",
-        "exampleBoolean": false,
-        "groupingId": "SupportingProfiles"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/bc-update-request-bundle"
-        },
-        "name": "UpdateRequestBundle",
-        "description": "A Bundle that is used in the Client Registry for Patient update requests.",
         "exampleBoolean": false,
         "groupingId": "SupportingProfiles"
       },
@@ -1946,8 +1946,8 @@
         "reference": {
           "reference": "OperationDefinition/bc-patient-update"
         },
-        "name": "UpdatePatient",
-        "description": "This operation is used to revise a patient's demographics, applied to only specific Patient attributes.",
+        "name": "PartialUpdatePatient",
+        "description": "This operation is used to update a patient's demographics, applied to only specific Patient attributes.",
         "exampleBoolean": false,
         "groupingId": "Operations"
       }

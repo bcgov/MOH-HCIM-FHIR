@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "BCHealthClientIdentityManagement"];
   fhir:ImplementationGuide.title [ fhir:value "BC Client Registry FHIR Implementation Guide"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
-  fhir:ImplementationGuide.date [ fhir:value "2022-09-21T21:21:33+00:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2022-09-22T20:32:21+00:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "BC Ministry of Health"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -494,11 +494,11 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-patient-by-example" ]
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-update-patient" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PatientByExample" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "General constraints on the Patient resource for use in the BC Client Registry project for queries." ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PartialPatientUpdate" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Patient profile used to update a Patient." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "PatientProfile" ]
      ], [
@@ -509,15 +509,30 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-update-patient" ]
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-request-bundle>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-update-request-bundle" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PatientUpdate" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Patient profile used to update a Patient." ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PartialUpdateRequestBundle" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Bundle that is used in the Client Registry for Patient update requests." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "SupportingProfiles" ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-patient-by-example" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PatientByExample" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "General constraints on the Patient resource for use in the BC Client Registry project for queries." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "PatientProfile" ]
      ], [
-       fhir:index 11;
+       fhir:index 12;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -532,7 +547,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "SupportingProfiles" ]
      ], [
-       fhir:index 12;
+       fhir:index 13;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -547,7 +562,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "SupportingProfiles" ]
      ], [
-       fhir:index 13;
+       fhir:index 14;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -562,7 +577,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "SupportingProfiles" ]
      ], [
-       fhir:index 14;
+       fhir:index 15;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -574,21 +589,6 @@
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "SearchWithEligibilityResponseBundle" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Bundle that is used in the Client Registry response to Get Demographics with Eligibility queries." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "SupportingProfiles" ]
-     ], [
-       fhir:index 15;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-request-bundle>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bc-update-request-bundle" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "UpdateRequestBundle" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Bundle that is used in the Client Registry for Patient update requests." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "SupportingProfiles" ]
      ], [
@@ -2069,8 +2069,8 @@
          fhir:link <http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-update>;
          fhir:Reference.reference [ fhir:value "OperationDefinition/bc-patient-update" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "UpdatePatient" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This operation is used to revise a patient's demographics, applied to only specific Patient attributes." ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PartialUpdatePatient" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This operation is used to update a patient's demographics, applied to only specific Patient attributes." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "Operations" ]
      ];

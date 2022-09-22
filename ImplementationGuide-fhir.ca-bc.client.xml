@@ -11,7 +11,7 @@
   <name value="BCHealthClientIdentityManagement"/>
   <title value="BC Client Registry FHIR Implementation Guide"/>
   <status value="draft"/>
-  <date value="2022-09-21T21:21:33+00:00"/>
+  <date value="2022-09-22T20:32:21+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -350,10 +350,10 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/bc-patient-by-example"/>
+        <reference value="StructureDefinition/bc-update-patient"/>
       </reference>
-      <name value="PatientByExample"/>
-      <description value="General constraints on the Patient resource for use in the BC Client Registry project for queries."/>
+      <name value="PartialPatientUpdate"/>
+      <description value="Patient profile used to update a Patient."/>
       <exampleBoolean value="false"/>
       <groupingId value="PatientProfile"/>
     </resource>
@@ -362,10 +362,22 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/bc-update-patient"/>
+        <reference value="StructureDefinition/bc-update-request-bundle"/>
       </reference>
-      <name value="PatientUpdate"/>
-      <description value="Patient profile used to update a Patient."/>
+      <name value="PartialUpdateRequestBundle"/>
+      <description value="A Bundle that is used in the Client Registry for Patient update requests."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="SupportingProfiles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/bc-patient-by-example"/>
+      </reference>
+      <name value="PatientByExample"/>
+      <description value="General constraints on the Patient resource for use in the BC Client Registry project for queries."/>
       <exampleBoolean value="false"/>
       <groupingId value="PatientProfile"/>
     </resource>
@@ -414,18 +426,6 @@
       </reference>
       <name value="SearchWithEligibilityResponseBundle"/>
       <description value="A Bundle that is used in the Client Registry response to Get Demographics with Eligibility queries."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="SupportingProfiles"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/bc-update-request-bundle"/>
-      </reference>
-      <name value="UpdateRequestBundle"/>
-      <description value="A Bundle that is used in the Client Registry for Patient update requests."/>
       <exampleBoolean value="false"/>
       <groupingId value="SupportingProfiles"/>
     </resource>
@@ -1483,8 +1483,8 @@
       <reference>
         <reference value="OperationDefinition/bc-patient-update"/>
       </reference>
-      <name value="UpdatePatient"/>
-      <description value="This operation is used to revise a patient's demographics, applied to only specific Patient attributes."/>
+      <name value="PartialUpdatePatient"/>
+      <description value="This operation is used to update a patient's demographics, applied to only specific Patient attributes."/>
       <exampleBoolean value="false"/>
       <groupingId value="Operations"/>
     </resource>

@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>FHIR.CA-BC.CLIENT\UpdatePatient - TTL Representation - FHIR v4.0.1</title>
+    <title>FHIR.CA-BC.CLIENT\PartialUpdatePatient - TTL Representation - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -154,7 +154,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>UpdatePatient</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>PartialUpdatePatient</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -212,7 +212,7 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: UpdatePatient - TTL Representation</h2>
+<h2 id="root">: PartialUpdatePatient - TTL Representation</h2>
   <table class="colsd">
     <tr>
 
@@ -220,7 +220,7 @@
         
           Draft
           
-            as of 2022-09-21
+            as of 2022-09-22
           
         
       </td>
@@ -249,15 +249,15 @@
   <a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;bc-patient-update&quot;];
   <a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.text">fhir:DomainResource.text</a> [
      <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;extensions&quot; ];
-     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;URL: [base]/Patient/$UpdatePatient&lt;/p&gt;&lt;p&gt;Input parameters Profile: &lt;a href=\&quot;StructureDefinition-bc-update-request-bundle.html\&quot;&gt;UpdateRequestBundle&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Output parameters Profile: &lt;a href=\&quot;StructureDefinition-bc-revise-response-bundle.html\&quot;&gt;ReviseResponseBundle&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Parameters&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Use&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Cardinality&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Binding&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Documentation&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IN&lt;/td&gt;&lt;td&gt;UpdatePatientRequestBundle&lt;/td&gt;&lt;td&gt;1..1&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/bundle.html\&quot;&gt;Bundle&lt;/a&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;Update request Bundle.&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OUT&lt;/td&gt;&lt;td&gt;RevisePatientResponseBundle&lt;/td&gt;&lt;td&gt;1..1&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/bundle.html\&quot;&gt;Bundle&lt;/a&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;Update response Bundle (which is the ReviseResponseBundle).&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;URL: [base]/Patient/$PartialUpdatePatient&lt;/p&gt;&lt;p&gt;Input parameters Profile: &lt;a href=\&quot;StructureDefinition-bc-update-request-bundle.html\&quot;&gt;PartialUpdateRequestBundle&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Output parameters Profile: &lt;a href=\&quot;StructureDefinition-bc-revise-response-bundle.html\&quot;&gt;ReviseResponseBundle&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Parameters&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Use&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Cardinality&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Binding&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Documentation&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IN&lt;/td&gt;&lt;td&gt;UpdatePatientRequestBundle&lt;/td&gt;&lt;td&gt;1..1&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/bundle.html\&quot;&gt;Bundle&lt;/a&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;Update request Bundle.&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OUT&lt;/td&gt;&lt;td&gt;RevisePatientResponseBundle&lt;/td&gt;&lt;td&gt;1..1&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/bundle.html\&quot;&gt;Bundle&lt;/a&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;Update response Bundle (which is the ReviseResponseBundle).&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
   ];
   <a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.url">fhir:OperationDefinition.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-update&quot;];
   <a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.version">fhir:OperationDefinition.version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;0.1.0&quot;];
-  <a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.name">fhir:OperationDefinition.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;UpdatePatient&quot;];
-  <a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.title">fhir:OperationDefinition.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Update Patient&quot;];
+  <a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.name">fhir:OperationDefinition.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;PartialUpdatePatient&quot;];
+  <a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.title">fhir:OperationDefinition.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Partial Update Patient&quot;];
   <a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.status">fhir:OperationDefinition.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;draft&quot;];
   <a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.kind">fhir:OperationDefinition.kind</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;operation&quot;];
-  <a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.date">fhir:OperationDefinition.date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2022-09-21T21:21:33+00:00&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.date">fhir:OperationDefinition.date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2022-09-22T20:32:21+00:00&quot;^^xsd:dateTime];
   <a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.publisher">fhir:OperationDefinition.publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;BC Ministry of Health&quot;];
   <a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.contact">fhir:OperationDefinition.contact</a> [
      <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
@@ -275,7 +275,7 @@
        <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;CA&quot; ];
        <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Canada&quot; ]     ]
   ];
-  <a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.code">fhir:OperationDefinition.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;UpdatePatient&quot;];
+  <a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.code">fhir:OperationDefinition.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;PartialUpdatePatient&quot;];
   <a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.resource">fhir:OperationDefinition.resource</a> [
      <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;Patient&quot;;
      <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0
@@ -345,7 +345,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 21, 2022 21:21+0000">2022-09-21</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 22, 2022 20:32+0000">2022-09-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

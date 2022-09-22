@@ -262,8 +262,8 @@ Namely:</p>
       <td style="text-align: left">Some of the features normally done through the Revise Patient interaction are now part of Add Patient.  Specifically, ‘force create’ and newborn interactions are now done with Add Patient.</td>
     </tr>
     <tr>
-      <td style="text-align: left">Update interaction</td>
-      <td style="text-align: left">A Update interaction allows users to logically delete, add or change part of the Patient resource.  This is useful when a stakeholder doesn’t need (or persist) certain Patient attributes, but today, must query and then echo back these attributes in a Revise Patient interaction.  The exact operations allowed by the Client Registry is to be determined.</td>
+      <td style="text-align: left">Partial Update interaction</td>
+      <td style="text-align: left">A Partial Update interaction allows users to logically delete, add or change part of the Patient resource.  This is useful when a stakeholder doesn’t need (or persist) certain Patient attributes, but today, must query and then echo back these attributes in a Revise Patient interaction.  The exact operations allowed by the Client Registry is to be determined.</td>
     </tr>
     <tr>
       <td style="text-align: left">Business dates feature</td>
@@ -471,10 +471,10 @@ Namely:</p>
       <td style="text-align: left">https://…./Patient/$RevisePatient.Async</td>
     </tr>
     <tr>
-      <td style="text-align: left">https://…./Patient/$UpdatePatient</td>
+      <td style="text-align: left">https://…./Patient/$PartialUpdatePatient</td>
     </tr>
     <tr>
-      <td style="text-align: left">https://…./Patient/$UpdatePatient.Async</td>
+      <td style="text-align: left">https://…./Patient/$PartialUpdatePatient.Async</td>
     </tr>
     <tr>
       <td style="text-align: left">https://…./Patient/$AddPatient</td>
@@ -539,12 +539,12 @@ Namely:</p>
       <td style="text-align: left"><a href="StructureDefinition-bc-revise-response-bundle.html">Revise Patient response profile</a></td>
     </tr>
     <tr>
-      <td style="text-align: left">$UpdatePatient</td>
+      <td style="text-align: left">$PartialUpdatePatient</td>
       <td style="text-align: left"><a href="StructureDefinition-bc-update-request-bundle.html">Update Patient profile</a></td>
       <td style="text-align: left"><a href="StructureDefinition-bc-revise-response-bundle.html">Update Patient response profile</a> (uses revise)</td>
     </tr>
     <tr>
-      <td style="text-align: left">$UpdatePatient.Async</td>
+      <td style="text-align: left">$PartialUpdatePatient.Async</td>
       <td style="text-align: left"><a href="StructureDefinition-bc-update-request-bundle.html">Update Patient profile</a></td>
       <td style="text-align: left"><a href="StructureDefinition-bc-revise-response-bundle.html">Update Patient response profile</a> (uses revise)</td>
     </tr>
@@ -676,7 +676,7 @@ Namely:</p>
 <table class="grid">
   <thead>
     <tr>
-      <th style="text-align: left">Add, Revise and Merge Operations</th>
+      <th style="text-align: left">Add, Revise, Update and Merge Operations</th>
       <th style="text-align: left">Description</th>
     </tr>
   </thead>
@@ -690,11 +690,11 @@ Namely:</p>
       <td style="text-align: left">Updating a Patient asynchronously</td>
     </tr>
     <tr>
-      <td style="text-align: left">https://…./$UpdatePatient</td>
+      <td style="text-align: left">https://…./$PartialUpdatePatient</td>
       <td style="text-align: left">Updating a specific Patient attribute</td>
     </tr>
     <tr>
-      <td style="text-align: left">https://…./$UpdatePatient.Async</td>
+      <td style="text-align: left">https://…./$PartialUpdatePatient.Async</td>
       <td style="text-align: left">Updating a specific Patient attribute asynchronously</td>
     </tr>
     <tr>
@@ -775,7 +775,7 @@ Namely:</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 21, 2022 21:21+0000">2022-09-21</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 22, 2022 20:32+0000">2022-09-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
