@@ -29,6 +29,7 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * birthDate 1..1 MS
 * birthDate.extension contains BusinessPeriodExtension named birthDateEffectiveDates 0..1 and SourceIDExtension named sourceID 0..1 MS and BirthDateHistoryExtension named history 0..* MS 
 * multipleBirth[x].extension contains BusinessPeriodExtension named multipleBirthEffectiveDates 0..1 MS and SourceIDExtension named sourceID 0..1 MS and MultipleBirthHistoryExtension named history 0..* MS 
+* link.extension contains MergeStatusExtension named mergeStatus 0..* MS
 
 Extension: GenderIdentityExtension
 Id: bc-gender-identity-extension
