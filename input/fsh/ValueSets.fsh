@@ -101,10 +101,10 @@ Id: bc-contact-point-system-value-set
 //* exclude http://hl7.org/fhir/address-use#old
 //* exclude http://hl7.org/fhir/address-use#billing
 
-ValueSet: AddressTypeVS
-Title: "BC Address Type Value Set"
-Description: "BC Address Type value set, sliced to meet BC constraints."
-Id: bc-address-type-value-set
-* include codes from valueset AddressType
-* exclude http://hl7.org/fhir/address-type#both
+//ValueSet: AddressTypeVS
+//Title: "BC Address Type Value Set"
+//Description: "BC Address Type value set, sliced to meet BC constraints."
+//Id: bc-address-type-value-set
+//* include codes from valueset AddressType
+//* exclude http://hl7.org/fhir/address-type#both
 
