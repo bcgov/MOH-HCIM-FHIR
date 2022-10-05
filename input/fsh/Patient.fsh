@@ -11,7 +11,7 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * deceased[x].extension contains BusinessPeriodExtension named deathDateEffectiveDates 0..1 MS and SourceIDExtension named sourceID 0..1 MS and DeathDateHistoryExtension named deathDateHistory 0..* MS and DeathVerifiedFlagExtension named verifiedDeathFlag 0..1 MS
 * address MS
 * address.type ^short = "postal | physical"
-* address.extension contains SourceIDExtension named sourceID 0..1 MS
+* address.extension contains SourceIDExtension named sourceID 0..1 MS and ValidationStatusExtension named validationStatus 0..1 MS
 * link 0..* MS
 * name 1..* MS
 * name.use 0..1

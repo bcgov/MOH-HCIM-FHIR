@@ -46,6 +46,10 @@ requestParameters | MetadataParametersIn | 1..1 | The request parameters are ech
 
 If the request is to return a Patient based on the mother's PHN, then the request Bundle must have a RelatedPerson resource with the mother's PHN as an Identifier.  No Patient is required in this case.  There is an example request [here](Bundle-Bundle-FindCandidates-UsingMomsPHN-Request-Example.html).
 
+#### Name.use
+
+Searching with the FindCandidates operation will match names of all use codes that the Client Registry supports no matter the name.use value provided in the request.  Name.use may be left blank.
+
 #### Examples
 
 See [Find Candidates request](Bundle-Bundle-FindCandidatesByExample-Request-Example.html) example.  
