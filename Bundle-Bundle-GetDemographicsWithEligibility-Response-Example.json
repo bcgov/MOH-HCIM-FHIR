@@ -92,7 +92,7 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Patient-GetDemographics-Example\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient \"Patient-GetDemographics-Example\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9123456789 (OFFICIAL)</p><p><b>name</b>: Jane Doe </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1972-10-16</p><p><b>address</b>: 721 FRONT ST VICTORIA BC V9A3Y3 CA </p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Patient-GetDemographics-Example\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient \"Patient-GetDemographics-Example\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: ?ngen-9? (OFFICIAL)</p><p><b>name</b>: Jane Doe </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1972-10-16</p><p><b>address</b>: 721 FRONT ST VICTORIA BC V9A3Y3 CA </p></div>"
         },
         "identifier": [
           {
@@ -106,7 +106,14 @@
               ]
             },
             "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
-            "value": "9123456789",
+            "_value": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                  "valueCode": "unknown"
+                }
+              ]
+            },
             "period": {
               "start": "2000-01-01T11:11:11+08:00"
             }
