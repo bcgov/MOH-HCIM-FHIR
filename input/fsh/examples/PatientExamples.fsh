@@ -1,10 +1,10 @@
 Instance: Patient-RevisePatient-Example
 InstanceOf: ClientRegistryPatient
 Description: "Patient example for a RevisePatient operation"
-* address = Address-0-Example
-* telecom = ContactPoint-Example-Home-Phone-NoPeriod
+* address[0] = Address-0-Example
+* telecom[0] = ContactPoint-Example-Home-Phone-NoPeriod
 * identifier = IdentifierExampleSRINoPeriod
-* name = Name-Example-JohnDoe-NoPeriod
+* name[0] = Name-Example-JohnDoe-NoPeriod
 * gender = #male
 * birthDate = 1940-06-06
 

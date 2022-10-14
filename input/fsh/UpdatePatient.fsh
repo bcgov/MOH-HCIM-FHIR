@@ -1,9 +1,15 @@
 Profile: PartialPatientUpdate
-//Parent: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient
-Parent: Patient
+Parent: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient
+//Parent: Patient
 Id: bc-update-patient
 Description: "Patient profile used to update a Patient."
+* obeys invariant-name-use-1
+* obeys invariant-address-type-1
+* obeys invariant-address-type-2
+* obeys invariant-telecom-phone-use-1
+* obeys invariant-telecom-email-use-1
 * extension contains BusinessPeriodExtension named effectiveDates 0..1 MS and GenderIdentityExtension named genderIdentity 0..1 MS
+* identifier only http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 * identifier 1..1 MS
 * identifier.extension contains SourceIDExtension named sourceID 0..1 MS and IdentifierStatusExtension named idStatus 0..1 MS and UpdatePatientOperationExtension named updateOperation 0..1 MS
 * deceased[x] 0..1 MS

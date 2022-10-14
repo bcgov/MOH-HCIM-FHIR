@@ -47,6 +47,18 @@ Usage: #inline
 * country = "CA"
 * postalCode = "V9A3Y3"
 
+// incoming address so no validation status
+Instance: Address-Both-Example
+InstanceOf: Address
+Description: "Address example physical, validation status valid"
+Usage: #inline
+* type = #both
+* line = "721 FRONT ST"
+* city = "VICTORIA"
+* state = "BC"
+* country = "CA"
+* postalCode = "V9A3Y3"
+
 Instance: Address-1-Example-Invalid
 InstanceOf: Address
 Description: "Address example postal, validation status invalid"

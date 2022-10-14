@@ -11,12 +11,20 @@ Description: "An example of a Patient with descriptive Identifier."
 * gender = #female
 * birthDate = "1965-01-01"
 
+//Profile: ClientRegistryIdentifier
+//Parent: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
+//Id: client-registry-identifier
+//Description: "Client Registry Identifier"
+
 Instance: IdentifierExamplePHN
-InstanceOf: Identifier
+//InstanceOf: Identifier
+InstanceOf: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 Description: "An example of a PHN Identifier."
 Usage: #inline
 * system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"
-* value = "9123456789"
+//* value = "9123456789"
+* value.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* value.extension.valueCode = #unknown
 * type.coding.code = #JHN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * period.start = "2000-01-01T11:11:11+08:00"

@@ -1,9 +1,15 @@
 Profile: ClientRegistryPatient
-//Parent: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient
-Parent: Patient
+Parent: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient
+//Parent: Patient
 Id: bc-patient
 Description: "General constraints on the Patient resource for use in the BC Client Registry project."
+* obeys invariant-name-use-1
+* obeys invariant-address-type-1
+* obeys invariant-address-type-2
+* obeys invariant-telecom-phone-use-1
+* obeys invariant-telecom-email-use-1
 * extension contains BusinessPeriodExtension named effectiveDates 0..1 MS and GenderIdentityExtension named genderIdentity 0..1 MS
+* identifier only http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 * identifier 0..* MS
 * identifier.extension contains SourceIDExtension named sourceID 0..1 MS and IdentifierStatusExtension named idStatus 0..1 MS
 * deceased[x] 0..1 MS
@@ -30,6 +36,7 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * birthDate.extension contains BusinessPeriodExtension named birthDateEffectiveDates 0..1 and SourceIDExtension named sourceID 0..1 MS and BirthDateHistoryExtension named history 0..* MS 
 * multipleBirth[x].extension contains BusinessPeriodExtension named multipleBirthEffectiveDates 0..1 MS and SourceIDExtension named sourceID 0..1 MS and MultipleBirthHistoryExtension named history 0..* MS 
 * link.extension contains MergeStatusExtension named mergeStatus 0..* MS
+
 
 Extension: GenderIdentityExtension
 Id: bc-gender-identity-extension

@@ -1,8 +1,9 @@
 Profile: PatientByExample
-//Parent: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient
-Parent: Patient
+Parent: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient
+//Parent: Patient
 Id: bc-patient-by-example
 Description: "General constraints on the Patient resource for use in the BC Client Registry project for queries."
+* identifier only http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 * identifier 0..1 MS
 * address 0..1 MS
 * address.type ^short = "postal | physical"
@@ -13,7 +14,6 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * name.use from NameUseVS (required)
 * name.use ^short = "usual | official | nickname"
 * telecom 0..2 MS
-
 * active 0..0
 * implicitRules 0..0
 * language 0..0
