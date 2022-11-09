@@ -16,7 +16,7 @@ Description: "A Bundle that is used for the ACK response to an aynchronous opera
 * entry ^slicing.description = "The specific bundle entries that are needed when sending the Client Registry a Find Candidates query."
 * entry contains operationOutcome 1..1 MS and parameters 1..1 MS
 * entry[parameters].resource only MetadataParametersAsync
-* entry[parameters] ^short = "Metadata async resopnse parameters."
+* entry[parameters] ^short = "Metadata async response parameters."
 * entry[operationOutcome].resource only OperationOutcome
 * entry[operationOutcome] ^short = "Acknowledgement of asynchronous operation request."
 
