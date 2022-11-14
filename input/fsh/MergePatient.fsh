@@ -3,7 +3,7 @@ InstanceOf: OperationDefinition
 Description: "This operation is used to merge patients."
 Usage: #definition
 * id = "bc-patient-merge"
-* url = "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-merge"
+* url = "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-merge"
 * name = "MergePatient"
 * title = "Merge Patient"
 * status = #draft

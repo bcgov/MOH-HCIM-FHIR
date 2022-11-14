@@ -258,7 +258,7 @@ Description:  "A Bundle that is used in the Client Registry for Add Patient requ
 * entry contains patient 1..1 MS and parameters 1..1 MS
 * entry[parameters].resource only MetadataParametersIn
 * entry[parameters] ^short = "Metadata in parameters"
-* entry[patient].resource only ClientRegistryPatient
+* entry[patient].resource only PatientMerge
 * entry[patient] ^short = "Patient resource with merge information."
 
 Profile: MergeResponseBundle

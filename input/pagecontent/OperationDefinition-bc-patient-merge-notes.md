@@ -5,7 +5,7 @@
 Cardinality | Resource Type | Comment
 :---|:---|:---
 1..1 | MetadataParametersIn | See [profile](StructureDefinition-bc-metadata-parameters-in.html).
-0..1 | ClientRegistryPatient | See [profile](StructureDefinition-bc-patient.html).
+0..1 | MergePatient | See [profile](StructureDefinition-bc-merge-patient.html).
 {:.grid}
 
 #### Out Bundle Entries

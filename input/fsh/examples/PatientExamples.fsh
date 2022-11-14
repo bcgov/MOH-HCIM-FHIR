@@ -40,16 +40,16 @@ Description: "The Patient is completely new to the Client Registry, no identifie
 * birthDate = 2021-11-02
 
 Instance: Patient-MergePatient-Example
-InstanceOf: ClientRegistryPatient
+InstanceOf: PatientMerge
 Description: "Example of a merge patient Patient"
 * active = true
 * identifier = IdentifierExampleSRINoPeriodForMerge
-* address[0] = Address-0-Example
-* telecom[0] = ContactPoint-Example-Home-Phone-NoPeriod
-* name[+] = Name-Example-DarDwayne
-* name[+] = Name-Example-DarrelDwayne
-* gender = #male
-* birthDate = 1966-10-01
+//* address[0] = Address-0-Example
+//* telecom[0] = ContactPoint-Example-Home-Phone-NoPeriod
+//* name[+] = Name-Example-DarDwayne
+//* name[+] = Name-Example-DarrelDwayne
+//* gender = #male
+//* birthDate = 1966-10-01
 * link[0].type = #replaces
 * link[0].other.identifier = IdentifierExampleSRINoPeriod
 * link[0].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"
