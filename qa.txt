@@ -1,9 +1,9 @@
 ﻿BCHealthClientIdentityManagement : Validation Results
 =========================================
 
-err = 16, warn = 26, info = 18
+err = 14, warn = 27, info = 20
 IG Publisher Version: 1.2.14
-Generated Wed Nov 09 18:19:54 UTC 2022. FHIR version 4.0.1 for fhir.ca-bc.client#0.1.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
+Generated Mon Nov 14 18:30:23 UTC 2022. FHIR version 4.0.1 for fhir.ca-bc.client#0.1.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
  Build Errors : 0 / 4 / 0
  /github/workspace/fsh-generated/resources/Bundle-Bundle-AddPatient-Newborn-Request-Example : 0 / 0 / 9
  /github/workspace/fsh-generated/resources/Bundle-Bundle-AddPatient-Request-Example : 0 / 0 / 7
@@ -35,7 +35,7 @@ Generated Wed Nov 09 18:19:54 UTC 2022. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-find-candidates : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-get-demographics : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-get-demographics-withEligibility : 2 / 0 / 1
- /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-merge : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-merge : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-notification : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-revise : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-update : 2 / 0 / 1
@@ -92,6 +92,7 @@ Generated Wed Nov 09 18:19:54 UTC 2022. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-gender-identity-extension : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-get-demographics-request-bundle : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-identifier-status-extension : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-bc-merge-patient : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-merge-request-bundle : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-merge-response-bundle : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-merge-status-extension : 0 / 0 / 1
@@ -147,6 +148,7 @@ WARNING: Bundle/Bundle-GetDemographics-Response-Example: Bundle: SearchSet bundl
 == fsh-generated/resources/Bundle-Bundle-GetDemographicsWithEligibility-Response-Example.json ==
 INFORMATION: Bundle/Bundle-GetDemographicsWithEligibility-Response-Example: Bundle: No types could be determined from the search string, so the types can't be checked
 == fsh-generated/resources/Bundle-Bundle-MergePatient-Request-Example.json ==
+INFORMATION: Bundle/Bundle-MergePatient-Request-Example: Bundle.entry[1].resource.ofType(Patient).identifier[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient
 == fsh-generated/resources/Bundle-Bundle-MergePatient-Response-Example.json ==
 == fsh-generated/resources/Bundle-Bundle-RevisePatient-Request-Example.json ==
 == fsh-generated/resources/Bundle-Bundle-RevisePatient-Response-Example.json ==
@@ -181,8 +183,6 @@ ERROR: /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-
 ERROR: OperationDefinition.where(url = 'http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics-withEligibility'): Conformance resource /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-get-demographics-withEligibility.json - the canonical URL (http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-get-demographics-withEligibility) does not match the URL (http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics-withEligibility)
 ERROR: /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-get-demographics-withEligibility: URL Mismatch http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-get-demographics-withEligibility vs http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics-withEligibility
 == fsh-generated/resources/OperationDefinition-bc-patient-merge.json ==
-ERROR: OperationDefinition.where(url = 'http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-merge'): Conformance resource /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-merge.json - the canonical URL (http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-merge) does not match the URL (http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-merge)
-ERROR: /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-merge: URL Mismatch http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-merge vs http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-merge
 == fsh-generated/resources/OperationDefinition-bc-patient-notification.json ==
 ERROR: OperationDefinition.where(url = 'http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-notification'): Conformance resource /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-notification.json - the canonical URL (http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-notification) does not match the URL (http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-notification)
 ERROR: /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-notification: URL Mismatch http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-notification vs http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-notification
@@ -229,6 +229,7 @@ INFORMATION: Parameters/Parameters-GetDemographicsWithEligibility-Example: Param
 == fsh-generated/resources/Patient-Patient-GetDemographics-withHistory-Example.json ==
 == fsh-generated/resources/Patient-Patient-Identifier-Examples.json ==
 == fsh-generated/resources/Patient-Patient-MergePatient-Example.json ==
+INFORMATION: Patient/Patient-MergePatient-Example: Patient.identifier[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient
 == fsh-generated/resources/Patient-Patient-Mother-Example.json ==
 == fsh-generated/resources/Patient-Patient-RevisePatient-Example.json ==
 == fsh-generated/resources/Patient-Patient-UpdatePatient-Request-Example.json ==
@@ -254,6 +255,8 @@ WARNING: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/Stru
 WARNING: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-identity-extension'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-bc-get-demographics-request-bundle.json ==
 == fsh-generated/resources/StructureDefinition-bc-identifier-status-extension.json ==
+== fsh-generated/resources/StructureDefinition-bc-merge-patient.json ==
+WARNING: StructureDefinition/bc-merge-patient: StructureDefinition.snapshot.element[31].fixed.ofType(CodeableConcept): For the complex type CodeableConcept, consider using a pattern rather than a fixed value to avoid over-constraining the instance
 == fsh-generated/resources/StructureDefinition-bc-merge-request-bundle.json ==
 == fsh-generated/resources/StructureDefinition-bc-merge-response-bundle.json ==
 == fsh-generated/resources/StructureDefinition-bc-merge-status-extension.json ==

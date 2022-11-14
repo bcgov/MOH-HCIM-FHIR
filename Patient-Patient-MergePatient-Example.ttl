@@ -10,14 +10,14 @@
   fhir:Resource.id [ fhir:value "Patient-MergePatient-Example"];
   fhir:Resource.meta [
      fhir:Meta.profile [
-       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient";
        fhir:index 0;
-       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient>
      ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Dar Dwayne </b> male, DoB: 1966-10-01 ( Account number: 8375493847(use: OFFICIAL))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Alternate names (see the one above)\">Alt. Name:</td><td colspan=\"3\">Darrel Dwayne (OFFICIAL)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Details:</td><td colspan=\"3\"><ul><li>ph: 2505554848(HOME)</li><li>721 FRONT ST VICTORIA BC V9A3Y3 CA </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>This record replaces: <span></span></li><li>This record replaces: <span></span></li><li>This record replaces: <span></span></li><li>This record replaces: <span></span></li></ul></td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Anonymous Patient</b> (no stated gender), DoB Unknown ( Account number: 8375493847(use: OFFICIAL))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>This record replaces: <span></span></li><li>This record replaces: <span></span></li><li>This record replaces: <span></span></li><li>This record replaces: <span></span></li></ul></td></tr></table></div>"
   ];
   fhir:Patient.identifier [
      fhir:index 0;
@@ -41,43 +41,6 @@
      ]
   ];
   fhir:Patient.active [ fhir:value "true"^^xsd:boolean];
-  fhir:Patient.name [
-     fhir:index 0;
-     fhir:HumanName.use [ fhir:value "usual" ];
-     fhir:HumanName.family [ fhir:value "Dwayne" ];
-     fhir:HumanName.given [
-       fhir:value "Dar";
-       fhir:index 0
-     ]
-  ], [
-     fhir:index 1;
-     fhir:HumanName.use [ fhir:value "official" ];
-     fhir:HumanName.family [ fhir:value "Dwayne" ];
-     fhir:HumanName.given [
-       fhir:value "Darrel";
-       fhir:index 0
-     ]
-  ];
-  fhir:Patient.telecom [
-     fhir:index 0;
-     fhir:ContactPoint.system [ fhir:value "phone" ];
-     fhir:ContactPoint.value [ fhir:value "2505554848" ];
-     fhir:ContactPoint.use [ fhir:value "home" ]
-  ];
-  fhir:Patient.gender [ fhir:value "male"];
-  fhir:Patient.birthDate [ fhir:value "1966-10-01"^^xsd:date];
-  fhir:Patient.address [
-     fhir:index 0;
-     fhir:Address.type [ fhir:value "physical" ];
-     fhir:Address.line [
-       fhir:value "721 FRONT ST";
-       fhir:index 0
-     ];
-     fhir:Address.city [ fhir:value "VICTORIA" ];
-     fhir:Address.state [ fhir:value "BC" ];
-     fhir:Address.postalCode [ fhir:value "V9A3Y3" ];
-     fhir:Address.country [ fhir:value "CA" ]
-  ];
   fhir:Patient.link [
      fhir:index 0;
      fhir:Element.extension [
