@@ -3,7 +3,7 @@ InstanceOf: OperationDefinition
 Description: "This operation is used to query for a patient.  The response can contain 0 or 1 Patient."
 Usage: #definition
 * id = "bc-patient-get-demographics"
-* url = "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics"
+* url = "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-get-demographics"
 * name = "GetDemographics"
 * title = "GetDemographics"
 * status = #draft

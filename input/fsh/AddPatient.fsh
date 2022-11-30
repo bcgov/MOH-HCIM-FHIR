@@ -3,7 +3,7 @@ InstanceOf: OperationDefinition
 Description: "This operation is used for newborns or to 'force create' a patient."
 Usage: #definition
 * id = "bc-patient-add"
-* url = "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-add"
+* url = "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add"
 * name = "AddPatient"
 * title = "AddPatient"
 * status = #draft

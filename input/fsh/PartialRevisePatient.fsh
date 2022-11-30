@@ -3,7 +3,7 @@ InstanceOf: OperationDefinition
 Description: "This operation is used to update a patient's demographics, applied to only specific Patient attributes."
 Usage: #definition
 * id = "bc-patient-update"
-* url = "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-update"
+* url = "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-update"
 * name = "PartialUpdatePatient"
 * title = "Partial Update Patient"
 * status = #draft

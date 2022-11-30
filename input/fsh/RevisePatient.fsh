@@ -3,7 +3,7 @@ InstanceOf: OperationDefinition
 Description: "This operation is used to revise a patient's demographics."
 Usage: #definition
 * id = "bc-patient-revise"
-* url = "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-revise"
+* url = "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-revise"
 * name = "RevisePatient"
 * title = "Revise Patient"
 * status = #draft
