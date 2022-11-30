@@ -13,7 +13,7 @@ InstanceOf: PartialPatientUpdate
 Description: "Patient example for a UpdatePatient operation that changes the Address."
 * address[0] = Address-0-Example
 * address[0].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient-operation-extension"
-* address[0].extension.valueCodeableConcept.coding.system = "http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-update-patient-operation-code-system"
+* address[0].extension.valueCodeableConcept.coding.system = "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-update-patient-operation-code-system"
 * address[0].extension.valueCodeableConcept.coding.code = #replace
 * identifier = IdentifierExampleSRINoPeriod
 
