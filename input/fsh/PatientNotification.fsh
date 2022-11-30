@@ -3,7 +3,7 @@ InstanceOf: OperationDefinition
 Description: "This operation is used notify a user that a patient's record has changed."
 Usage: #definition
 * id = "bc-patient-notification"
-* url = "http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-notification"
+* url = "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-notification"
 * name = "PatientNotification"
 * title = "Patient Notification"
 * status = #draft
