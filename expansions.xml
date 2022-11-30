@@ -1,11 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="4d142cc7-1a66-4bc9-913c-65dc282e1d9c"/>
+  <id value="b009c97b-9458-4749-a8b8-873bacb16874"/>
   <meta>
-    <lastUpdated value="2022-11-14T19:03:53.608+00:00"/>
+    <lastUpdated value="2022-11-30T18:54:03.303+00:00"/>
   </meta>
   <type value="collection"/>
+  <entry>
+    <fullUrl value="http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set"/>
+    <resource>
+      <ValueSet>
+        <id value="bc-name-use-value-set"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 3 concepts</p>
+            <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
+              <p>Expansion based on: </p>
+              <ul>
+                <li>
+                  <a href="http://hl7.org/fhir/R4/codesystem-name-use.html">NameUse v4.0.1 (CodeSystem)</a>
+                </li>
+                <li>
+                  <a href="http://hl7.org/fhir/R4/valueset-name-use.html">NameUse v4.0.1 (ValueSet)</a>
+                </li>
+              </ul>
+            </div>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-name-use-usual"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-usual">usual</a>
+                </td>
+                <td>http://hl7.org/fhir/name-use</td>
+                <td>Usual</td>
+                <td>
+                  <div>
+                    <p>Known as/conventional/the one you normally use.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-name-use-official"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-official">official</a>
+                </td>
+                <td>http://hl7.org/fhir/name-use</td>
+                <td>Official</td>
+                <td>
+                  <div>
+                    <p>The formal name as registered in an official (government) registry, but which name might not be commonly used. May be called &quot;legal name&quot;.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-name-use-nickname"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-nickname">nickname</a>
+                </td>
+                <td>http://hl7.org/fhir/name-use</td>
+                <td>Nickname</td>
+                <td>
+                  <div>
+                    <p>A name that is used to address the person in an informal manner, but is not part of their formal or usual name.</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set"/>
+        <version value="1.0.0"/>
+        <name value="NameUseVS"/>
+        <title value="BC Name Use value set."/>
+        <status value="active"/>
+        <date value="2022-11-30T18:54:03+00:00"/>
+        <publisher value="BC Ministry of Health"/>
+        <contact>
+          <name value="BC Ministry of Health"/>
+          <telecom>
+            <system value="url"/>
+            <value value="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"/>
+          </telecom>
+        </contact>
+        <description value="BC Name Use value set, sliced to meet BC constraints."/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="CA"/>
+            <display value="Canada"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:dbf17769-7ec2-465b-8d9d-b5513a9829d6"/>
+          <timestamp value="2022-11-30T18:54:29+00:00"/>
+          <total value="3"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://hl7.org/fhir/ValueSet/name-use|4.0.1"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://hl7.org/fhir/name-use|4.0.1"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/name-use"/>
+            <code value="usual"/>
+            <display value="Usual"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/name-use"/>
+            <code value="official"/>
+            <display value="Official"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/name-use"/>
+            <code value="nickname"/>
+            <display value="Nickname"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
   <entry>
     <fullUrl value="http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-address-validation-value-set"/>
     <resource>
@@ -16,7 +153,7 @@
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 3 concepts</p>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
-              <a href="CodeSystem-bc-client-registry-address-validation-code-system.html">BC Client Registry Address Validation Status Code v0.1.0 (CodeSystem)</a>
+              <a href="CodeSystem-bc-client-registry-address-validation-code-system.html">BC Client Registry Address Validation Status Code v1.0.0 (CodeSystem)</a>
             </p>
             <table class="codes">
               <tr>
@@ -79,11 +216,11 @@
           </div>
         </text>
         <url value="http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-address-validation-value-set"/>
-        <version value="0.1.0"/>
+        <version value="1.0.0"/>
         <name value="AddressValidationVS"/>
         <title value="BC Address Validation Value Set"/>
         <status value="active"/>
-        <date value="2022-11-14T19:03:53+00:00"/>
+        <date value="2022-11-30T18:54:03+00:00"/>
         <publisher value="BC Ministry of Health"/>
         <contact>
           <name value="BC Ministry of Health"/>
@@ -101,8 +238,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:3755a6e5-45ab-4788-b489-7d278cd85086"/>
-          <timestamp value="2022-11-14T19:04:21+00:00"/>
+          <identifier value="urn:uuid:928824c9-a93f-44f1-a097-ea8c63ceb6d1"/>
+          <timestamp value="2022-11-30T18:54:33+00:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -110,7 +247,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-address-validation-code-system|0.1.0"/>
+            <valueUri value="http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-address-validation-code-system|1.0.0"/>
           </parameter>
           <contains>
             <system value="http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-address-validation-code-system"/>
@@ -141,7 +278,7 @@
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 3 concepts</p>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
-              <a href="CodeSystem-bc-client-registry-update-patient-operation-code-system.html">BC Code System Of Allowed Update Operations v0.1.0 (CodeSystem)</a>
+              <a href="CodeSystem-bc-client-registry-update-patient-operation-code-system.html">BC Code System Of Allowed Update Operations v1.0.0 (CodeSystem)</a>
             </p>
             <table class="codes">
               <tr>
@@ -204,11 +341,11 @@
           </div>
         </text>
         <url value="http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-client-registry-update-patient-operation-value-set"/>
-        <version value="0.1.0"/>
+        <version value="1.0.0"/>
         <name value="UpdatePatientOperationVS"/>
         <title value="BC Update Patient Operation Value Set"/>
         <status value="active"/>
-        <date value="2022-11-14T19:03:53+00:00"/>
+        <date value="2022-11-30T18:54:03+00:00"/>
         <publisher value="BC Ministry of Health"/>
         <contact>
           <name value="BC Ministry of Health"/>
@@ -226,8 +363,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:a2ab199d-0c8e-43ac-9d63-1e3898b681b1"/>
-          <timestamp value="2022-11-14T19:04:26+00:00"/>
+          <identifier value="urn:uuid:77399c7c-2f01-49dc-a496-2d78f7749626"/>
+          <timestamp value="2022-11-30T18:54:40+00:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -235,7 +372,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-update-patient-operation-code-system|0.1.0"/>
+            <valueUri value="http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-update-patient-operation-code-system|1.0.0"/>
           </parameter>
           <contains>
             <system value="http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-update-patient-operation-code-system"/>
@@ -323,11 +460,11 @@
           </div>
         </text>
         <url value="http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-system-value-set"/>
-        <version value="0.1.0"/>
+        <version value="1.0.0"/>
         <name value="ContactPointSystemVS"/>
         <title value="BC Contact Point System Value Set"/>
         <status value="active"/>
-        <date value="2022-11-14T19:03:53+00:00"/>
+        <date value="2022-11-30T18:54:03+00:00"/>
         <publisher value="BC Ministry of Health"/>
         <contact>
           <name value="BC Ministry of Health"/>
@@ -345,8 +482,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:ab9437a5-8afc-4d09-a94e-707628b4008f"/>
-          <timestamp value="2022-11-14T19:04:28+00:00"/>
+          <identifier value="urn:uuid:14ac7a18-db4d-4b8b-8772-e298e54802d9"/>
+          <timestamp value="2022-11-30T18:54:44+00:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
@@ -375,25 +512,17 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set"/>
+    <fullUrl value="http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-identifier-status-value-set"/>
     <resource>
       <ValueSet>
-        <id value="bc-name-use-value-set"/>
+        <id value="bc-identifier-status-value-set"/>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 3 concepts</p>
-            <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
-              <p>Expansion based on: </p>
-              <ul>
-                <li>
-                  <a href="http://hl7.org/fhir/R4/codesystem-name-use.html">NameUse v4.0.1 (CodeSystem)</a>
-                </li>
-                <li>
-                  <a href="http://hl7.org/fhir/R4/valueset-name-use.html">NameUse v4.0.1 (ValueSet)</a>
-                </li>
-              </ul>
-            </div>
+            <p>This value set contains 2 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-bc-identifier-status-code-system.html">BC Client registry identifier status code system v1.0.0 (CodeSystem)</a>
+            </p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -411,42 +540,28 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-name-use-usual"> </a>  
-                  <a href="http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-usual">usual</a>
+                  <a name="http---hlth.gov.bc.ca-fhir-client-CodeSystem-bc-identifier-status-code-system-merged"> </a>  
+                  <a href="CodeSystem-bc-identifier-status-code-system.html#bc-identifier-status-code-system-merged">merged</a>
                 </td>
-                <td>http://hl7.org/fhir/name-use</td>
-                <td>Usual</td>
+                <td>http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-identifier-status-code-system</td>
+                <td>merged</td>
                 <td>
                   <div>
-                    <p>Known as/conventional/the one you normally use.</p>
+                    <p>The identifier has been merged.</p>
 
                   </div>
                 </td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-name-use-official"> </a>  
-                  <a href="http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-official">official</a>
+                  <a name="http---hlth.gov.bc.ca-fhir-client-CodeSystem-bc-identifier-status-code-system-active"> </a>  
+                  <a href="CodeSystem-bc-identifier-status-code-system.html#bc-identifier-status-code-system-active">active</a>
                 </td>
-                <td>http://hl7.org/fhir/name-use</td>
-                <td>Official</td>
+                <td>http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-identifier-status-code-system</td>
+                <td>active</td>
                 <td>
                   <div>
-                    <p>The formal name as registered in an official (government) registry, but which name might not be commonly used. May be called &quot;legal name&quot;.</p>
-
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-name-use-nickname"> </a>  
-                  <a href="http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-nickname">nickname</a>
-                </td>
-                <td>http://hl7.org/fhir/name-use</td>
-                <td>Nickname</td>
-                <td>
-                  <div>
-                    <p>A name that is used to address the person in an informal manner, but is not part of their formal or usual name.</p>
+                    <p>The identifier is active.</p>
 
                   </div>
                 </td>
@@ -454,12 +569,12 @@
             </table>
           </div>
         </text>
-        <url value="http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set"/>
-        <version value="0.1.0"/>
-        <name value="NameUseVS"/>
-        <title value="BC Name Use value set."/>
+        <url value="http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-identifier-status-value-set"/>
+        <version value="1.0.0"/>
+        <name value="IdentifierStatusVS"/>
+        <title value="BC Identifier Status Value Set"/>
         <status value="active"/>
-        <date value="2022-11-14T19:03:53+00:00"/>
+        <date value="2022-11-30T18:54:03+00:00"/>
         <publisher value="BC Ministry of Health"/>
         <contact>
           <name value="BC Ministry of Health"/>
@@ -468,7 +583,7 @@
             <value value="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"/>
           </telecom>
         </contact>
-        <description value="BC Name Use value set, sliced to meet BC constraints."/>
+        <description value="BC Identifier Status value set used to describe the status of an identifier."/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -477,35 +592,26 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:2b3b2bc3-3760-4fb3-a69c-06009a74d199"/>
-          <timestamp value="2022-11-14T19:04:35+00:00"/>
-          <total value="3"/>
+          <identifier value="urn:uuid:fe9ac0f1-112a-4ee8-a3f8-514318f6d41a"/>
+          <timestamp value="2022-11-30T18:54:45+00:00"/>
+          <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/ValueSet/name-use|4.0.1"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/name-use|4.0.1"/>
+            <valueUri value="http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-identifier-status-code-system|1.0.0"/>
           </parameter>
           <contains>
-            <system value="http://hl7.org/fhir/name-use"/>
-            <code value="usual"/>
-            <display value="Usual"/>
+            <system value="http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-identifier-status-code-system"/>
+            <code value="merged"/>
+            <display value="merged"/>
           </contains>
           <contains>
-            <system value="http://hl7.org/fhir/name-use"/>
-            <code value="official"/>
-            <display value="Official"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/name-use"/>
-            <code value="nickname"/>
-            <display value="Nickname"/>
+            <system value="http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-identifier-status-code-system"/>
+            <code value="active"/>
+            <display value="active"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -521,7 +627,7 @@
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 2 concepts</p>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
-              <a href="CodeSystem-bc-client-registry-merge-status-code-system.html">BC Client Registry merge status. v0.1.0 (CodeSystem)</a>
+              <a href="CodeSystem-bc-client-registry-merge-status-code-system.html">BC Client Registry merge status. v1.0.0 (CodeSystem)</a>
             </p>
             <table class="codes">
               <tr>
@@ -570,11 +676,11 @@
           </div>
         </text>
         <url value="http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-merge-status-value-set"/>
-        <version value="0.1.0"/>
+        <version value="1.0.0"/>
         <name value="MergeStatusVS"/>
         <title value="BC Merge Status Value Set"/>
         <status value="active"/>
-        <date value="2022-11-14T19:03:53+00:00"/>
+        <date value="2022-11-30T18:54:03+00:00"/>
         <publisher value="BC Ministry of Health"/>
         <contact>
           <name value="BC Ministry of Health"/>
@@ -592,8 +698,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:2df32fc6-f6ab-4709-8e41-b5adcfd27ec1"/>
-          <timestamp value="2022-11-14T19:04:40+00:00"/>
+          <identifier value="urn:uuid:4b03b5c4-7265-4df9-b797-b54741ac9305"/>
+          <timestamp value="2022-11-30T18:54:49+00:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
@@ -601,7 +707,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-merge-status-code-system|0.1.0"/>
+            <valueUri value="http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-merge-status-code-system|1.0.0"/>
           </parameter>
           <contains>
             <system value="http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-merge-status-code-system"/>
@@ -698,11 +804,11 @@
           </div>
         </text>
         <url value="http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-contact-point-use-value-set"/>
-        <version value="0.1.0"/>
+        <version value="1.0.0"/>
         <name value="ContactPointUseVS"/>
         <title value="BC Contact Point Use Value Set"/>
         <status value="active"/>
-        <date value="2022-11-14T19:03:53+00:00"/>
+        <date value="2022-11-30T18:54:03+00:00"/>
         <publisher value="BC Ministry of Health"/>
         <contact>
           <name value="BC Ministry of Health"/>
@@ -720,8 +826,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:615e967b-2db2-4c51-bf22-1fe8d659d307"/>
-          <timestamp value="2022-11-14T19:04:43+00:00"/>
+          <identifier value="urn:uuid:e709121b-0430-4bed-bfad-47fe9a2f55c8"/>
+          <timestamp value="2022-11-30T18:54:49+00:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -749,112 +855,6 @@
             <system value="http://hl7.org/fhir/contact-point-use"/>
             <code value="mobile"/>
             <display value="Mobile"/>
-          </contains>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
-  <entry>
-    <fullUrl value="http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-identifier-status-value-set"/>
-    <resource>
-      <ValueSet>
-        <id value="bc-identifier-status-value-set"/>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 2 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
-              <a href="CodeSystem-bc-identifier-status-code-system.html">BC Client registry identifier status code system v0.1.0 (CodeSystem)</a>
-            </p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>System</b>
-                </td>
-                <td>
-                  <b>Display</b>
-                </td>
-                <td>
-                  <b>Definition</b>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hlth.gov.bc.ca-fhir-client-CodeSystem-bc-identifier-status-code-system-merged"> </a>  
-                  <a href="CodeSystem-bc-identifier-status-code-system.html#bc-identifier-status-code-system-merged">merged</a>
-                </td>
-                <td>http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-identifier-status-code-system</td>
-                <td>merged</td>
-                <td>
-                  <div>
-                    <p>The identifier has been merged.</p>
-
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hlth.gov.bc.ca-fhir-client-CodeSystem-bc-identifier-status-code-system-active"> </a>  
-                  <a href="CodeSystem-bc-identifier-status-code-system.html#bc-identifier-status-code-system-active">active</a>
-                </td>
-                <td>http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-identifier-status-code-system</td>
-                <td>active</td>
-                <td>
-                  <div>
-                    <p>The identifier is active.</p>
-
-                  </div>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-identifier-status-value-set"/>
-        <version value="0.1.0"/>
-        <name value="IdentifierStatusVS"/>
-        <title value="BC Identifier Status Value Set"/>
-        <status value="active"/>
-        <date value="2022-11-14T19:03:53+00:00"/>
-        <publisher value="BC Ministry of Health"/>
-        <contact>
-          <name value="BC Ministry of Health"/>
-          <telecom>
-            <system value="url"/>
-            <value value="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"/>
-          </telecom>
-        </contact>
-        <description value="BC Identifier Status value set used to describe the status of an identifier."/>
-        <jurisdiction>
-          <coding>
-            <system value="urn:iso:std:iso:3166"/>
-            <code value="CA"/>
-            <display value="Canada"/>
-          </coding>
-        </jurisdiction>
-        <expansion>
-          <identifier value="urn:uuid:1618704c-2066-468a-b379-ec9c47f70059"/>
-          <timestamp value="2022-11-14T19:04:43+00:00"/>
-          <total value="2"/>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-identifier-status-code-system|0.1.0"/>
-          </parameter>
-          <contains>
-            <system value="http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-identifier-status-code-system"/>
-            <code value="merged"/>
-            <display value="merged"/>
-          </contains>
-          <contains>
-            <system value="http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-identifier-status-code-system"/>
-            <code value="active"/>
-            <display value="active"/>
           </contains>
         </expansion>
       </ValueSet>

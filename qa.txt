@@ -1,9 +1,9 @@
 ﻿BCHealthClientIdentityManagement : Validation Results
 =========================================
 
-err = 14, warn = 27, info = 20
-IG Publisher Version: 1.2.14
-Generated Mon Nov 14 19:07:54 UTC 2022. FHIR version 4.0.1 for fhir.ca-bc.client#0.1.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
+err = 0, warn = 27, info = 43
+IG Publisher Version: 1.2.19
+Generated Wed Nov 30 18:57:43 UTC 2022. FHIR version 4.0.1 for fhir.ca-bc.client#1.0.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
  Build Errors : 0 / 4 / 0
  /github/workspace/fsh-generated/resources/Bundle-Bundle-AddPatient-Newborn-Request-Example : 0 / 0 / 9
  /github/workspace/fsh-generated/resources/Bundle-Bundle-AddPatient-Request-Example : 0 / 0 / 7
@@ -31,14 +31,14 @@ Generated Mon Nov 14 19:07:54 UTC 2022. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/Coverage-Coverage-Active-Example : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Coverage-Coverage-InActive-Example : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ImplementationGuide-fhir.ca-bc.client : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-add : 2 / 0 / 1
- /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-find-candidates : 2 / 0 / 1
- /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-get-demographics : 2 / 0 / 1
- /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-get-demographics-withEligibility : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-add : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-find-candidates : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-get-demographics : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-get-demographics-withEligibility : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-merge : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-notification : 2 / 0 / 1
- /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-revise : 2 / 0 / 1
- /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-update : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-notification : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-revise : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-update : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/OperationOutcome-OperationOutcome-Example : 0 / 0 / 3
  /github/workspace/fsh-generated/resources/OperationOutcome-OperationOutcome-Example-RP : 0 / 0 / 3
  /github/workspace/fsh-generated/resources/OperationOutcome-OperationOutcome-Search-Example : 0 / 0 / 2
@@ -125,36 +125,51 @@ WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-v
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 == fsh-generated/resources/Bundle-Bundle-AddPatient-Newborn-Request-Example.json ==
+INFORMATION: Bundle/Bundle-AddPatient-Newborn-Request-Example: Bundle.entry[1].resource.ofType(Patient).identifier[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
 == fsh-generated/resources/Bundle-Bundle-AddPatient-Request-Example.json ==
 == fsh-generated/resources/Bundle-Bundle-AddPatient-Response-Example.json ==
+INFORMATION: Bundle/Bundle-AddPatient-Response-Example: Bundle.entry[2].resource.ofType(Patient).identifier[1]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Bundle/Bundle-AddPatient-Response-Example: Bundle.entry[2].resource.ofType(Patient).identifier[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Bundle/Bundle-AddPatient-Response-Example: Bundle.entry[2].resource.ofType(Patient).identifier[3].extension[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
 == fsh-generated/resources/Bundle-Bundle-FindCandidates-Response-Example.json ==
-INFORMATION: Bundle/Bundle-FindCandidates-Response-Example: Bundle.entry[0].resource.ofType(Parameters).parameter[4].resource.ofType(Parameters).parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in
+INFORMATION: Bundle/Bundle-FindCandidates-Response-Example: Bundle.entry[0].resource.ofType(Parameters).parameter[4].resource.ofType(Parameters).parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in|1.0.0
+INFORMATION: Bundle/Bundle-FindCandidates-Response-Example: Bundle.entry[2].resource.ofType(Patient).identifier[1]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Bundle/Bundle-FindCandidates-Response-Example: Bundle.entry[2].resource.ofType(Patient).identifier[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Bundle/Bundle-FindCandidates-Response-Example: Bundle.entry[2].resource.ofType(Patient).identifier[3].extension[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
 INFORMATION: Bundle/Bundle-FindCandidates-Response-Example: Bundle: No types could be determined from the search string, so the types can't be checked
 == fsh-generated/resources/Bundle-Bundle-FindCandidates-Response-MomsPHN-Example.json ==
-INFORMATION: Bundle/Bundle-FindCandidates-Response-MomsPHN-Example: Bundle.entry[0].resource.ofType(Parameters).parameter[4].resource.ofType(Parameters).parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in
+INFORMATION: Bundle/Bundle-FindCandidates-Response-MomsPHN-Example: Bundle.entry[0].resource.ofType(Parameters).parameter[4].resource.ofType(Parameters).parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in|1.0.0
 INFORMATION: Bundle/Bundle-FindCandidates-Response-MomsPHN-Example: Bundle: No types could be determined from the search string, so the types can't be checked
 == fsh-generated/resources/Bundle-Bundle-FindCandidates-UsingMomsPHN-Request-Example.json ==
-INFORMATION: Bundle/Bundle-FindCandidates-UsingMomsPHN-Request-Example: Bundle.entry[0].resource.ofType(Parameters).parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in
+INFORMATION: Bundle/Bundle-FindCandidates-UsingMomsPHN-Request-Example: Bundle.entry[0].resource.ofType(Parameters).parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in|1.0.0
 == fsh-generated/resources/Bundle-Bundle-FindCandidatesByExample-Request-Example.json ==
-INFORMATION: Bundle/Bundle-FindCandidatesByExample-Request-Example: Bundle.entry[0].resource.ofType(Parameters).parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in
+INFORMATION: Bundle/Bundle-FindCandidatesByExample-Request-Example: Bundle.entry[0].resource.ofType(Parameters).parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in|1.0.0
 == fsh-generated/resources/Bundle-Bundle-GetDemographics-Request-Example.json ==
-INFORMATION: Bundle/Bundle-GetDemographics-Request-Example: Bundle.entry[0].resource.ofType(Parameters).parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in
+INFORMATION: Bundle/Bundle-GetDemographics-Request-Example: Bundle.entry[0].resource.ofType(Parameters).parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in|1.0.0
 == fsh-generated/resources/Bundle-Bundle-GetDemographics-Response-Example.json ==
 INFORMATION: Bundle/Bundle-GetDemographics-Response-Example: Bundle: No types could be determined from the search string, so the types can't be checked
-INFORMATION: Bundle/Bundle-GetDemographics-Response-Example: Bundle.entry[0].resource: Unable to determine if this resource is a valid resource type for this search 
-INFORMATION: Bundle/Bundle-GetDemographics-Response-Example: Bundle.entry[1].resource: Unable to determine if this resource is a valid resource type for this search 
-INFORMATION: Bundle/Bundle-GetDemographics-Response-Example: Bundle.entry[2].resource: Unable to determine if this resource is a valid resource type for this search 
+INFORMATION: Bundle/Bundle-GetDemographics-Response-Example: Bundle.entry[0].resource: Unable to determine if this resource is a valid resource type for this search
+INFORMATION: Bundle/Bundle-GetDemographics-Response-Example: Bundle.entry[1].resource: Unable to determine if this resource is a valid resource type for this search
+INFORMATION: Bundle/Bundle-GetDemographics-Response-Example: Bundle.entry[2].resource: Unable to determine if this resource is a valid resource type for this search
 WARNING: Bundle/Bundle-GetDemographics-Response-Example: Bundle: SearchSet bundles should have search modes on the entries
 == fsh-generated/resources/Bundle-Bundle-GetDemographicsWithEligibility-Response-Example.json ==
+INFORMATION: Bundle/Bundle-GetDemographicsWithEligibility-Response-Example: Bundle.entry[3]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle|1.0.0
 INFORMATION: Bundle/Bundle-GetDemographicsWithEligibility-Response-Example: Bundle: No types could be determined from the search string, so the types can't be checked
 == fsh-generated/resources/Bundle-Bundle-MergePatient-Request-Example.json ==
-INFORMATION: Bundle/Bundle-MergePatient-Request-Example: Bundle.entry[1].resource.ofType(Patient).identifier[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient
+INFORMATION: Bundle/Bundle-MergePatient-Request-Example: Bundle.entry[1].resource.ofType(Patient).identifier[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient|1.0.0
 == fsh-generated/resources/Bundle-Bundle-MergePatient-Response-Example.json ==
 == fsh-generated/resources/Bundle-Bundle-RevisePatient-Request-Example.json ==
+INFORMATION: Bundle/Bundle-RevisePatient-Request-Example: Bundle.entry[1].resource.ofType(Patient).identifier[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
 == fsh-generated/resources/Bundle-Bundle-RevisePatient-Response-Example.json ==
+INFORMATION: Bundle/Bundle-RevisePatient-Response-Example: Bundle.entry[2].resource.ofType(Patient).identifier[1]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Bundle/Bundle-RevisePatient-Response-Example: Bundle.entry[2].resource.ofType(Patient).identifier[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Bundle/Bundle-RevisePatient-Response-Example: Bundle.entry[2].resource.ofType(Patient).identifier[3].extension[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
 == fsh-generated/resources/Bundle-Bundle-UpdatePatient-Request-Example.json ==
-INFORMATION: Bundle/Bundle-UpdatePatient-Request-Example: Bundle.entry[1].resource.ofType(Patient).identifier[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient
+INFORMATION: Bundle/Bundle-UpdatePatient-Request-Example: Bundle.entry[1].resource.ofType(Patient).identifier[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient|1.0.0
 == fsh-generated/resources/Bundle-Bundle-UpdatePatient-Response-Example.json ==
+INFORMATION: Bundle/Bundle-UpdatePatient-Response-Example: Bundle.entry[2].resource.ofType(Patient).identifier[1]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Bundle/Bundle-UpdatePatient-Response-Example: Bundle.entry[2].resource.ofType(Patient).identifier[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Bundle/Bundle-UpdatePatient-Response-Example: Bundle.entry[2].resource.ofType(Patient).identifier[3].extension[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
 == fsh-generated/resources/CapabilityStatement-bc-hcim-capability-statement-client.json ==
 == fsh-generated/resources/CapabilityStatement-bc-hcim-capability-statement-server.json ==
 == fsh-generated/resources/CodeSystem-bc-client-registry-address-validation-code-system.json ==
@@ -171,27 +186,13 @@ WARNING: CodeSystem/bc-operation-outcome-details-code-system: CodeSystem: The Sh
 == fsh-generated/resources/Coverage-Coverage-InActive-Example.json ==
 == fsh-generated/resources/ImplementationGuide-fhir.ca-bc.client.json ==
 == fsh-generated/resources/OperationDefinition-bc-patient-add.json ==
-ERROR: OperationDefinition.where(url = 'http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-add'): Conformance resource /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-add.json - the canonical URL (http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add) does not match the URL (http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-add)
-ERROR: /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-add: URL Mismatch http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add vs http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-add
 == fsh-generated/resources/OperationDefinition-bc-patient-find-candidates.json ==
-ERROR: OperationDefinition.where(url = 'http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-find-candidates'): Conformance resource /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-find-candidates.json - the canonical URL (http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-find-candidates) does not match the URL (http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-find-candidates)
-ERROR: /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-find-candidates: URL Mismatch http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-find-candidates vs http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-find-candidates
 == fsh-generated/resources/OperationDefinition-bc-patient-get-demographics.json ==
-ERROR: OperationDefinition.where(url = 'http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics'): Conformance resource /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-get-demographics.json - the canonical URL (http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-get-demographics) does not match the URL (http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics)
-ERROR: /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-get-demographics: URL Mismatch http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-get-demographics vs http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics
 == fsh-generated/resources/OperationDefinition-bc-patient-get-demographics-withEligibility.json ==
-ERROR: OperationDefinition.where(url = 'http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics-withEligibility'): Conformance resource /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-get-demographics-withEligibility.json - the canonical URL (http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-get-demographics-withEligibility) does not match the URL (http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics-withEligibility)
-ERROR: /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-get-demographics-withEligibility: URL Mismatch http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-get-demographics-withEligibility vs http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-get-demographics-withEligibility
 == fsh-generated/resources/OperationDefinition-bc-patient-merge.json ==
 == fsh-generated/resources/OperationDefinition-bc-patient-notification.json ==
-ERROR: OperationDefinition.where(url = 'http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-notification'): Conformance resource /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-notification.json - the canonical URL (http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-notification) does not match the URL (http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-notification)
-ERROR: /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-notification: URL Mismatch http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-notification vs http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-notification
 == fsh-generated/resources/OperationDefinition-bc-patient-revise.json ==
-ERROR: OperationDefinition.where(url = 'http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-revise'): Conformance resource /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-revise.json - the canonical URL (http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-revise) does not match the URL (http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-revise)
-ERROR: /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-revise: URL Mismatch http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-revise vs http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-revise
 == fsh-generated/resources/OperationDefinition-bc-patient-update.json ==
-ERROR: OperationDefinition.where(url = 'http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-update'): Conformance resource /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-update.json - the canonical URL (http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-update) does not match the URL (http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-update)
-ERROR: /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-update: URL Mismatch http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-update vs http://hl7.org/fhir/ca-bc/client/OperationDefinition/bc-patient-update
 == fsh-generated/resources/OperationOutcome-OperationOutcome-Example.json ==
 == fsh-generated/resources/OperationOutcome-OperationOutcome-Example-RP.json ==
 == fsh-generated/resources/OperationOutcome-OperationOutcome-Search-Example.json ==
@@ -199,15 +200,15 @@ ERROR: /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-
 == fsh-generated/resources/Parameters-Parameters-AddPatient-Newborn-Example.json ==
 == fsh-generated/resources/Parameters-Parameters-AddPatient-Response-Example.json ==
 == fsh-generated/resources/Parameters-Parameters-FindCandidates-Example.json ==
-INFORMATION: Parameters/Parameters-FindCandidates-Example: Parameters.parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in
+INFORMATION: Parameters/Parameters-FindCandidates-Example: Parameters.parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in|1.0.0
 == fsh-generated/resources/Parameters-Parameters-FindCandidates-Response-Example.json ==
-INFORMATION: Parameters/Parameters-FindCandidates-Response-Example: Parameters.parameter[4].resource.ofType(Parameters).parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in
+INFORMATION: Parameters/Parameters-FindCandidates-Response-Example: Parameters.parameter[4].resource.ofType(Parameters).parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in|1.0.0
 == fsh-generated/resources/Parameters-Parameters-GetDemographics-Example.json ==
-INFORMATION: Parameters/Parameters-GetDemographics-Example: Parameters.parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in
+INFORMATION: Parameters/Parameters-GetDemographics-Example: Parameters.parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in|1.0.0
 == fsh-generated/resources/Parameters-Parameters-GetDemographics-IN-Example.json ==
 == fsh-generated/resources/Parameters-Parameters-GetDemographics-Response-Example.json ==
 == fsh-generated/resources/Parameters-Parameters-GetDemographicsWithEligibility-Example.json ==
-INFORMATION: Parameters/Parameters-GetDemographicsWithEligibility-Example: Parameters.parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in
+INFORMATION: Parameters/Parameters-GetDemographicsWithEligibility-Example: Parameters.parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in|1.0.0
 == fsh-generated/resources/Parameters-Parameters-GetDemographicsWithEligibility-Response-Example.json ==
 == fsh-generated/resources/Parameters-Parameters-MergePatient-Response-Example.json ==
 == fsh-generated/resources/Parameters-Parameters-MergePatient-TwoNonSurvivors-Example.json ==
@@ -216,11 +217,18 @@ INFORMATION: Parameters/Parameters-GetDemographicsWithEligibility-Example: Param
 == fsh-generated/resources/Parameters-Parameters-UpdatePatient-Request-Example.json ==
 == fsh-generated/resources/Parameters-Parameters-UpdatePatient-Response-Example.json ==
 == fsh-generated/resources/Patient-Patient-0-Example.json ==
+INFORMATION: Patient/Patient-0-Example: Patient.identifier[1]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Patient/Patient-0-Example: Patient.identifier[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Patient/Patient-0-Example: Patient.identifier[3].extension[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
 == fsh-generated/resources/Patient-Patient-1-Example.json ==
 == fsh-generated/resources/Patient-Patient-2-Example.json ==
 == fsh-generated/resources/Patient-Patient-AddPatient-Example.json ==
 == fsh-generated/resources/Patient-Patient-AddPatient-Newborn-Example.json ==
+INFORMATION: Patient/Patient-AddPatient-Newborn-Example: Patient.identifier[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
 == fsh-generated/resources/Patient-Patient-AddReviseOrMergePatient-Response-Example.json ==
+INFORMATION: Patient/Patient-AddReviseOrMergePatient-Response-Example: Patient.identifier[1]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Patient/Patient-AddReviseOrMergePatient-Response-Example: Patient.identifier[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Patient/Patient-AddReviseOrMergePatient-Response-Example: Patient.identifier[3].extension[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
 == fsh-generated/resources/Patient-Patient-BabyBoy-Example.json ==
 == fsh-generated/resources/Patient-Patient-BabyGirl-Example.json ==
 == fsh-generated/resources/Patient-Patient-By-Example-Example.json ==
@@ -229,11 +237,12 @@ INFORMATION: Parameters/Parameters-GetDemographicsWithEligibility-Example: Param
 == fsh-generated/resources/Patient-Patient-GetDemographics-withHistory-Example.json ==
 == fsh-generated/resources/Patient-Patient-Identifier-Examples.json ==
 == fsh-generated/resources/Patient-Patient-MergePatient-Example.json ==
-INFORMATION: Patient/Patient-MergePatient-Example: Patient.identifier[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient
+INFORMATION: Patient/Patient-MergePatient-Example: Patient.identifier[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient|1.0.0
 == fsh-generated/resources/Patient-Patient-Mother-Example.json ==
 == fsh-generated/resources/Patient-Patient-RevisePatient-Example.json ==
+INFORMATION: Patient/Patient-RevisePatient-Example: Patient.identifier[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
 == fsh-generated/resources/Patient-Patient-UpdatePatient-Request-Example.json ==
-INFORMATION: Patient/Patient-UpdatePatient-Request-Example: Patient.identifier[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient
+INFORMATION: Patient/Patient-UpdatePatient-Request-Example: Patient.identifier[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient|1.0.0
 == fsh-generated/resources/RelatedPerson-MothersPHN-RelatedPerson-ForFC.json ==
 == fsh-generated/resources/RelatedPerson-RelatedPerson-Mother-Example.json ==
 == fsh-generated/resources/RelatedPerson-RelatedPerson-MotherOfBabyBoy-Example.json ==
