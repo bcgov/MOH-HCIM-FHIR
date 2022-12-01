@@ -1,262 +1,216 @@
 {
-  "resourceType": "Patient",
-  "id": "Patient-GetDemographics-withHistory-Example",
-  "meta": {
-    "profile": [
-      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
-    ]
+  "resourceType" : "Patient",
+  "id" : "Patient-GetDemographics-withHistory-Example",
+  "meta" : {
+    "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"]
   },
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Jane Doe </b> female, DoB: 1972-10-16 ( Jurisdictional health number: ?ngen-9? (use: OFFICIAL, period: 2000-01-01 11:11:11+0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td>2000-01-01</td><td style=\"background-color: #f3f5da\" title=\"Known multipleBirth status of Patient\">Multiple Birth:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Details:</td><td colspan=\"3\"><ul><li>ph: 2505554848(HOME)</li><li>721 FRONT ST VICTORIA BC V9A3Y3 CA </li><li>721 FRONT AVE Victoria BC V9A3V3 CA </li></ul></td></tr></table></div>"
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Jane Doe </b> female, DoB: 1972-10-16 ( Jurisdictional health number: ?ngen-9? (use: OFFICIAL, period: 2000-01-01 11:11:11+0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td>2000-01-01</td><td style=\"background-color: #f3f5da\" title=\"Known multipleBirth status of Patient\">Multiple Birth:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Details:</td><td colspan=\"3\"><ul><li>ph: 2505554848(HOME)</li><li>721 FRONT ST VICTORIA BC V9A3Y3 CA </li><li>721 FRONT AVE Victoria BC V9A3V3 CA </li></ul></td></tr></table></div>"
   },
-  "identifier": [
-    {
-      "use": "official",
-      "type": {
-        "coding": [
-          {
-            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-            "code": "JHN"
-          }
-        ]
-      },
-      "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
-      "_value": {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-            "valueCode": "unknown"
-          }
-        ]
-      },
-      "period": {
-        "start": "2000-01-01T11:11:11+08:00"
-      }
+  "identifier" : [{
+    "use" : "official",
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "JHN"
+      }]
+    },
+    "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
+    "_value" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+        "valueCode" : "unknown"
+      }]
+    },
+    "period" : {
+      "start" : "2000-01-01T11:11:11+08:00"
     }
-  ],
-  "name": [
-    {
-      "use": "usual",
-      "family": "Doe",
-      "given": [
-        "Jane"
-      ],
-      "period": {
-        "start": "2016-04-05",
-        "end": "2017-04-05"
-      }
+  }],
+  "name" : [{
+    "use" : "usual",
+    "family" : "Doe",
+    "given" : ["Jane"],
+    "period" : {
+      "start" : "2016-04-05",
+      "end" : "2017-04-05"
     }
-  ],
-  "telecom": [
-    {
-      "system": "phone",
-      "value": "2505554848",
-      "use": "home",
-      "period": {
-        "start": "1998-01-02T10:10:10-08:00",
-        "end": "2000-01-02T10:10:10-08:00"
-      }
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "2505554848",
+    "use" : "home",
+    "period" : {
+      "start" : "1998-01-02T10:10:10-08:00",
+      "end" : "2000-01-02T10:10:10-08:00"
     }
-  ],
-  "gender": "female",
-  "_gender": {
-    "extension": [
-      {
-        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
-        "valuePeriod": {
-          "start": "2018-04-05T16:16:16-08:00"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
-            "valuePeriod": {
-              "start": "2017-04-05T16:16:16-08:00",
-              "end": "2018-04-05T16:16:16-08:00"
-            }
-          },
-          {
-            "url": "gender",
-            "valueCode": "unknown"
-          }
-        ],
-        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension"
+  }],
+  "gender" : "female",
+  "_gender" : {
+    "extension" : [{
+      "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+      "valuePeriod" : {
+        "start" : "2018-04-05T16:16:16-08:00"
       }
-    ]
-  },
-  "birthDate": "1972-10-16",
-  "_birthDate": {
-    "extension": [
-      {
-        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
-        "valuePeriod": {
-          "start": "2020-03-17T00:00:00-08:00"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
-            "valuePeriod": {
-              "start": "2018-03-17T00:00:00-08:00"
-            }
-          },
-          {
-            "url": "birthDate",
-            "valueDate": "1972-11-16"
-          }
-        ],
-        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birthdate-history-extension"
-      }
-    ]
-  },
-  "deceasedDateTime": "2000-01-01",
-  "_deceasedDateTime": {
-    "extension": [
-      {
-        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
-        "valuePeriod": {
-          "start": "1980-01-01",
-          "end": "2000-01-01"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "sourceID",
-            "valueIdentifier": {
-              "assigner": {
-                "display": "SOURCE"
-              }
-            }
-          },
-          {
-            "url": "userID",
-            "valueIdentifier": {
-              "assigner": {
-                "display": "USERID"
-              }
-            }
-          }
-        ],
-        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
-      },
-      {
-        "extension": [
-          {
-            "url": "deathVerifiedFlag",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
-            "valuePeriod": {
-              "start": "1980-01-01",
-              "end": "2000-01-01"
-            }
-          },
-          {
-            "extension": [
-              {
-                "url": "sourceID",
-                "valueIdentifier": {
-                  "assigner": {
-                    "display": "SOURCE"
-                  }
-                }
-              },
-              {
-                "url": "userID",
-                "valueIdentifier": {
-                  "assigner": {
-                    "display": "USERID"
-                  }
-                }
-              }
-            ],
-            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
-          }
-        ],
-        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension"
-      }
-    ]
-  },
-  "address": [
-    {
-      "extension": [
-        {
-          "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
-          "valueCode": "valid"
-        }
-      ],
-      "type": "physical",
-      "line": [
-        "721 FRONT ST"
-      ],
-      "city": "VICTORIA",
-      "state": "BC",
-      "postalCode": "V9A3Y3",
-      "country": "CA"
     },
     {
-      "extension": [
-        {
-          "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
-          "valueCode": "invalid"
-        }
-      ],
-      "type": "postal",
-      "line": [
-        "721 FRONT AVE"
-      ],
-      "city": "Victoria",
-      "state": "BC",
-      "postalCode": "V9A3V3",
-      "country": "CA"
-    }
-  ],
-  "multipleBirthBoolean": true,
-  "_multipleBirthBoolean": {
-    "extension": [
-      {
-        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
-        "valuePeriod": {
-          "start": "2021-04-01T00:00:00-08:00"
+      "extension" : [{
+        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+        "valuePeriod" : {
+          "start" : "2017-04-05T16:16:16-08:00",
+          "end" : "2018-04-05T16:16:16-08:00"
         }
       },
       {
-        "extension": [
-          {
-            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
-            "valuePeriod": {
-              "start": "2018-03-17T03:29:17-08:00",
-              "end": "2019-03-17T03:29:17-08:00"
-            }
-          },
-          {
-            "url": "multipleBirth",
-            "valueBoolean": true
-          }
-        ],
-        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-multiplebirth-history-extension"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
-            "valuePeriod": {
-              "start": "2019-03-17T03:29:17-08:00",
-              "end": "2020-03-17T03:29:17-08:00"
-            }
-          },
-          {
-            "url": "multipleBirth",
-            "valueBoolean": false
-          }
-        ],
-        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-multiplebirth-history-extension"
+        "url" : "gender",
+        "valueCode" : "unknown"
+      }],
+      "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension"
+    }]
+  },
+  "birthDate" : "1972-10-16",
+  "_birthDate" : {
+    "extension" : [{
+      "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+      "valuePeriod" : {
+        "start" : "2020-03-17T00:00:00-08:00"
       }
-    ]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+        "valuePeriod" : {
+          "start" : "2018-03-17T00:00:00-08:00"
+        }
+      },
+      {
+        "url" : "birthDate",
+        "valueDate" : "1972-11-16"
+      }],
+      "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birthdate-history-extension"
+    }]
+  },
+  "deceasedDateTime" : "2000-01-01",
+  "_deceasedDateTime" : {
+    "extension" : [{
+      "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+      "valuePeriod" : {
+        "start" : "1980-01-01",
+        "end" : "2000-01-01"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "sourceID",
+        "valueIdentifier" : {
+          "assigner" : {
+            "display" : "SOURCE"
+          }
+        }
+      },
+      {
+        "url" : "userID",
+        "valueIdentifier" : {
+          "assigner" : {
+            "display" : "USERID"
+          }
+        }
+      }],
+      "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+    },
+    {
+      "extension" : [{
+        "url" : "deathVerifiedFlag",
+        "valueBoolean" : true
+      },
+      {
+        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+        "valuePeriod" : {
+          "start" : "1980-01-01",
+          "end" : "2000-01-01"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "sourceID",
+          "valueIdentifier" : {
+            "assigner" : {
+              "display" : "SOURCE"
+            }
+          }
+        },
+        {
+          "url" : "userID",
+          "valueIdentifier" : {
+            "assigner" : {
+              "display" : "USERID"
+            }
+          }
+        }],
+        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+      }],
+      "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension"
+    }]
+  },
+  "address" : [{
+    "extension" : [{
+      "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+      "valueCode" : "valid"
+    }],
+    "type" : "physical",
+    "line" : ["721 FRONT ST"],
+    "city" : "VICTORIA",
+    "state" : "BC",
+    "postalCode" : "V9A3Y3",
+    "country" : "CA"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+      "valueCode" : "invalid"
+    }],
+    "type" : "postal",
+    "line" : ["721 FRONT AVE"],
+    "city" : "Victoria",
+    "state" : "BC",
+    "postalCode" : "V9A3V3",
+    "country" : "CA"
+  }],
+  "multipleBirthBoolean" : true,
+  "_multipleBirthBoolean" : {
+    "extension" : [{
+      "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+      "valuePeriod" : {
+        "start" : "2021-04-01T00:00:00-08:00"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+        "valuePeriod" : {
+          "start" : "2018-03-17T03:29:17-08:00",
+          "end" : "2019-03-17T03:29:17-08:00"
+        }
+      },
+      {
+        "url" : "multipleBirth",
+        "valueBoolean" : true
+      }],
+      "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-multiplebirth-history-extension"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+        "valuePeriod" : {
+          "start" : "2019-03-17T03:29:17-08:00",
+          "end" : "2020-03-17T03:29:17-08:00"
+        }
+      },
+      {
+        "url" : "multipleBirth",
+        "valueBoolean" : false
+      }],
+      "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-multiplebirth-history-extension"
+    }]
   }
 }

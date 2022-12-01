@@ -7,21 +7,21 @@
 
 <http://hlth.gov.bc.ca/fhir/client/Bundle/Bundle-AddPatient-Response-Example> a fhir:Bundle;
   fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "Bundle-AddPatient-Response-Example"];
+  fhir:Resource.id [ fhir:value "Bundle-AddPatient-Response-Example"]; # 
   fhir:Resource.meta [
      fhir:Meta.profile [
        fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-response-bundle";
        fhir:index 0;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-response-bundle>
      ]
-  ];
-  fhir:Bundle.type [ fhir:value "collection"];
-  fhir:Bundle.timestamp [ fhir:value "2011-09-13T16:11:43.000-07:00"^^xsd:dateTime];
+  ]; # 
+  fhir:Bundle.type [ fhir:value "collection"]; # 
+  fhir:Bundle.timestamp [ fhir:value "2011-09-13T16:11:43.000-07:00"^^xsd:dateTime]; # 
   fhir:Bundle.link [
      fhir:index 0;
      fhir:Bundle.link.relation [ fhir:value "self" ];
      fhir:Bundle.link.url [ fhir:value "urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1" ]
-  ];
+  ]; # 
   fhir:Bundle.entry [
      fhir:index 0;
      fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33" ];
@@ -34,17 +34,17 @@
      fhir:index 2;
      fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50" ];
      fhir:Bundle.entry.resource <urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50>
-  ] .
+  ] . # 
 
 <urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33> a fhir:Parameters;
-  fhir:Resource.id [ fhir:value "Parameters-AddPatient-Response-Example"];
+  fhir:Resource.id [ fhir:value "Parameters-AddPatient-Response-Example"]; # 
   fhir:Resource.meta [
      fhir:Meta.profile [
        fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out";
        fhir:index 0;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out>
      ]
-  ];
+  ]; # 
   fhir:Parameters.parameter [
      fhir:index 0;
      fhir:Parameters.parameter.name [ fhir:value "messageId" ];
@@ -87,14 +87,14 @@
          fhir:Parameters.parameter.valueDateTime [ fhir:value "2021-11-02T13:28:17-08:00"^^xsd:dateTime ]
        ]
      ]
-  ] .
+  ] . # 
 
 <urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1> a fhir:OperationOutcome;
-  fhir:Resource.id [ fhir:value "OperationOutcome-Example"];
+  fhir:Resource.id [ fhir:value "OperationOutcome-Example"]; # 
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: OperationOutcome</b><a name=\"OperationOutcome-Example\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource OperationOutcome &quot;OperationOutcome-Example&quot; </p></div><blockquote><p><b>issue</b></p><p><b>severity</b>: warning</p><p><b>code</b>: business-rule</p><p><b>details</b>: Warning: The Revise Patient name has been modified to filter out invalid characters. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#HCIM.RP.1.0017)</span></p></blockquote><blockquote><p><b>issue</b></p><p><b>severity</b>: error</p><p><b>code</b>: business-rule</p><p><b>details</b>: The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ... <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#HCIM.RP.1.0017)</span></p></blockquote></div>"
-  ];
+  ]; # 
   fhir:OperationOutcome.issue [
      fhir:index 0;
      fhir:OperationOutcome.issue.severity [ fhir:value "warning" ];
@@ -119,28 +119,28 @@
        ];
        fhir:CodeableConcept.text [ fhir:value "The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ..." ]
      ]
-  ] .
+  ] . # 
 
 <urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50> a fhir:Patient;
-  fhir:Resource.id [ fhir:value "Patient-AddReviseOrMergePatient-Response-Example"];
+  fhir:Resource.id [ fhir:value "Patient-AddReviseOrMergePatient-Response-Example"]; # 
   fhir:Resource.meta [
      fhir:Meta.profile [
        fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
        fhir:index 0;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
      ]
-  ];
+  ]; # 
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Patient-AddReviseOrMergePatient-Response-Example\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;Patient-AddReviseOrMergePatient-Response-Example&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>BC Business Dates</b>: 2019-02-07 01:29:17-0800 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: ?ngen-9? (use: OFFICIAL, period: 2000-01-01 11:11:11+0800 --&gt; (ongoing)), Account number: abc123345654 (use: OFFICIAL, period: 2000-01-01 11:11:11+0800 --&gt; (ongoing)), Account number: def123345654 (use: SECONDARY, period: 2000-01-01 11:11:11+0800 --&gt; (ongoing)), Jurisdictional health number: 9123345654 (use: OFFICIAL, period: 2000-01-01 11:11:11+0800 --&gt; (ongoing))</p><p><b>name</b>: John Johnny Doe , Nick (NICKNAME)</p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-06-06</p><p><b>address</b>: </p><ul><li>721 FRONT ST VICTORIA BC V9A3Y3 CA </li><li>721 FRONT AVE Victoria BC V9A3V3 CA </li></ul></div>"
-  ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Patient-AddReviseOrMergePatient-Response-Example\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;Patient-AddReviseOrMergePatient-Response-Example&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>BC Business Dates</b>: 2019-02-07 13:29:17-0800 --&gt; (ongoing)</p><p><b>identifier</b>: Jurisdictional health number: ?ngen-9? (use: OFFICIAL, period: 2000-01-01 11:11:11+0800 --&gt; (ongoing)), Account number: abc123345654 (use: OFFICIAL, period: 2000-01-01 11:11:11+0800 --&gt; (ongoing)), Account number: def123345654 (use: SECONDARY, period: 2000-01-01 11:11:11+0800 --&gt; (ongoing)), Jurisdictional health number: 9123345654 (use: OFFICIAL, period: 2000-01-01 11:11:11+0800 --&gt; (ongoing))</p><p><b>name</b>: John Johnny Doe , Nick (NICKNAME)</p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-06-06</p><p><b>address</b>: </p><ul><li>721 FRONT ST VICTORIA BC V9A3Y3 CA </li><li>721 FRONT AVE Victoria BC V9A3V3 CA </li></ul></div>"
+  ]; # 
   fhir:DomainResource.extension [
      fhir:index 0;
      fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
      fhir:Extension.valuePeriod [
        fhir:Period.start [ fhir:value "2019-02-07T13:29:17-08:00"^^xsd:dateTime ]
      ]
-  ];
+  ]; # 
   fhir:Patient.identifier [
      fhir:index 0;
      fhir:Identifier.use [ fhir:value "official" ];
@@ -228,7 +228,7 @@
      fhir:Identifier.period [
        fhir:Period.start [ fhir:value "2000-01-01T11:11:11+08:00"^^xsd:dateTime ]
      ]
-  ];
+  ]; # 
   fhir:Patient.name [
      fhir:index 0;
      fhir:HumanName.use [ fhir:value "usual" ];
@@ -253,7 +253,7 @@
      fhir:HumanName.period [
        fhir:Period.start [ fhir:value "2018-05-06"^^xsd:date ]
      ]
-  ];
+  ]; # 
   fhir:Patient.telecom [
      fhir:index 0;
      fhir:ContactPoint.system [ fhir:value "phone" ];
@@ -262,7 +262,7 @@
      fhir:ContactPoint.period [
        fhir:Period.start [ fhir:value "2000-01-02T10:10:10-08:00"^^xsd:dateTime ]
      ]
-  ];
+  ]; # 
   fhir:Patient.gender [
      fhir:value "male";
      fhir:Element.extension [
@@ -272,7 +272,7 @@
          fhir:Period.start [ fhir:value "2017-04-05T16:16:16-08:00"^^xsd:dateTime ]
        ]
      ]
-  ];
+  ]; # 
   fhir:Patient.birthDate [
      fhir:value "1940-06-06"^^xsd:date;
      fhir:Element.extension [
@@ -282,7 +282,7 @@
          fhir:Period.start [ fhir:value "2020-10-17T03:29:17-08:00"^^xsd:dateTime ]
        ]
      ]
-  ];
+  ]; # 
   fhir:Patient.address [
      fhir:index 0;
      fhir:Element.extension [
@@ -315,7 +315,7 @@
      fhir:Address.state [ fhir:value "BC" ];
      fhir:Address.postalCode [ fhir:value "V9A3V3" ];
      fhir:Address.country [ fhir:value "CA" ]
-  ] .
+  ] . # 
 
 # - ontology header ------------------------------------------------------------
 

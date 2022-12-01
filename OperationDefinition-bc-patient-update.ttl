@@ -7,19 +7,19 @@
 
 <http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-update> a fhir:OperationDefinition;
   fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "bc-patient-update"];
+  fhir:Resource.id [ fhir:value "bc-patient-update"]; # 
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>URL: [base]/Patient/$PartialUpdatePatient</p><p>Input parameters Profile: <a href=\"StructureDefinition-bc-update-request-bundle.html\">PartialUpdateRequestBundle</a></p><p>Output parameters Profile: <a href=\"StructureDefinition-bc-revise-response-bundle.html\">ReviseResponseBundle</a></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>UpdatePatientRequestBundle</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>Update request Bundle.</p>\n</div></td></tr><tr><td>OUT</td><td>RevisePatientResponseBundle</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>Update response Bundle (which is the ReviseResponseBundle).</p>\n</div></td></tr></table></div>"
-  ];
-  fhir:OperationDefinition.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-update"];
-  fhir:OperationDefinition.version [ fhir:value "1.0.0"];
-  fhir:OperationDefinition.name [ fhir:value "PartialUpdatePatient"];
-  fhir:OperationDefinition.title [ fhir:value "Partial Update Patient"];
-  fhir:OperationDefinition.status [ fhir:value "draft"];
-  fhir:OperationDefinition.kind [ fhir:value "operation"];
-  fhir:OperationDefinition.date [ fhir:value "2022-11-30T20:29:42+00:00"^^xsd:dateTime];
-  fhir:OperationDefinition.publisher [ fhir:value "BC Ministry of Health"];
+  ]; # 
+  fhir:OperationDefinition.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-update"]; # 
+  fhir:OperationDefinition.version [ fhir:value "1.0.0"]; # 
+  fhir:OperationDefinition.name [ fhir:value "PartialUpdatePatient"]; # 
+  fhir:OperationDefinition.title [ fhir:value "Partial Update Patient"]; # 
+  fhir:OperationDefinition.status [ fhir:value "draft"]; # 
+  fhir:OperationDefinition.kind [ fhir:value "operation"]; # 
+  fhir:OperationDefinition.date [ fhir:value "2022-12-01T22:48:36+00:00"^^xsd:dateTime]; # 
+  fhir:OperationDefinition.publisher [ fhir:value "BC Ministry of Health"]; # 
   fhir:OperationDefinition.contact [
      fhir:index 0;
      fhir:ContactDetail.name [ fhir:value "BC Ministry of Health" ];
@@ -28,7 +28,7 @@
        fhir:ContactPoint.system [ fhir:value "url" ];
        fhir:ContactPoint.value [ fhir:value "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health" ]
      ]
-  ];
+  ]; # 
   fhir:OperationDefinition.jurisdiction [
      fhir:index 0;
      fhir:CodeableConcept.coding [
@@ -37,23 +37,23 @@
        fhir:Coding.code [ fhir:value "CA" ];
        fhir:Coding.display [ fhir:value "Canada" ]
      ]
-  ];
-  fhir:OperationDefinition.code [ fhir:value "PartialUpdatePatient"];
+  ]; # 
+  fhir:OperationDefinition.code [ fhir:value "PartialUpdatePatient"]; # 
   fhir:OperationDefinition.resource [
      fhir:value "Patient";
      fhir:index 0
-  ];
-  fhir:OperationDefinition.system [ fhir:value "false"^^xsd:boolean];
-  fhir:OperationDefinition.type [ fhir:value "true"^^xsd:boolean];
-  fhir:OperationDefinition.instance [ fhir:value "false"^^xsd:boolean];
+  ]; # 
+  fhir:OperationDefinition.system [ fhir:value "false"^^xsd:boolean]; # 
+  fhir:OperationDefinition.type [ fhir:value "true"^^xsd:boolean]; # 
+  fhir:OperationDefinition.instance [ fhir:value "false"^^xsd:boolean]; # 
   fhir:OperationDefinition.inputProfile [
      fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-request-bundle";
      fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-request-bundle>
-  ];
+  ]; # 
   fhir:OperationDefinition.outputProfile [
      fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle";
      fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle>
-  ];
+  ]; # 
   fhir:OperationDefinition.parameter [
      fhir:index 0;
      fhir:OperationDefinition.parameter.name [ fhir:value "UpdatePatientRequestBundle" ];
@@ -70,7 +70,7 @@
      fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
      fhir:OperationDefinition.parameter.documentation [ fhir:value "Update response Bundle (which is the ReviseResponseBundle)." ];
      fhir:OperationDefinition.parameter.type [ fhir:value "Bundle" ]
-  ] .
+  ] . # 
 
 # - ontology header ------------------------------------------------------------
 

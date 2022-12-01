@@ -7,21 +7,21 @@
 
 <http://hlth.gov.bc.ca/fhir/client/Bundle/Bundle-MergePatient-Request-Example> a fhir:Bundle;
   fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "Bundle-MergePatient-Request-Example"];
+  fhir:Resource.id [ fhir:value "Bundle-MergePatient-Request-Example"]; # 
   fhir:Resource.meta [
      fhir:Meta.profile [
        fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle";
        fhir:index 0;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle>
      ]
-  ];
-  fhir:Bundle.type [ fhir:value "collection"];
-  fhir:Bundle.timestamp [ fhir:value "2011-09-13T16:11:43.000-07:00"^^xsd:dateTime];
+  ]; # 
+  fhir:Bundle.type [ fhir:value "collection"]; # 
+  fhir:Bundle.timestamp [ fhir:value "2011-09-13T16:11:43.000-07:00"^^xsd:dateTime]; # 
   fhir:Bundle.link [
      fhir:index 0;
      fhir:Bundle.link.relation [ fhir:value "self" ];
      fhir:Bundle.link.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/Patient/$MergePatient" ]
-  ];
+  ]; # 
   fhir:Bundle.entry [
      fhir:index 0;
      fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f2222" ];
@@ -30,17 +30,17 @@
      fhir:index 1;
      fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f4444" ];
      fhir:Bundle.entry.resource <urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f4444>
-  ] .
+  ] . # 
 
 <urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f2222> a fhir:Parameters;
-  fhir:Resource.id [ fhir:value "Parameters-MergePatient-TwoNonSurvivors-Example"];
+  fhir:Resource.id [ fhir:value "Parameters-MergePatient-TwoNonSurvivors-Example"]; # 
   fhir:Resource.meta [
      fhir:Meta.profile [
        fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in";
        fhir:index 0;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in>
      ]
-  ];
+  ]; # 
   fhir:Parameters.parameter [
      fhir:index 0;
      fhir:Parameters.parameter.name [ fhir:value "messageId" ];
@@ -49,21 +49,21 @@
      fhir:index 1;
      fhir:Parameters.parameter.name [ fhir:value "messageDateTime" ];
      fhir:Parameters.parameter.valueDateTime [ fhir:value "2021-11-02T13:28:17-08:00"^^xsd:dateTime ]
-  ] .
+  ] . # 
 
 <urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f4444> a fhir:Patient;
-  fhir:Resource.id [ fhir:value "Patient-MergePatient-Example"];
+  fhir:Resource.id [ fhir:value "Patient-MergePatient-Example"]; # 
   fhir:Resource.meta [
      fhir:Meta.profile [
        fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient";
        fhir:index 0;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient>
      ]
-  ];
+  ]; # 
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Patient-MergePatient-Example\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;Patient-MergePatient-Example&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-merge-patient.html\">PatientMerge</a></p></div><p><b>identifier</b>: Account number: 8375493847 (use: OFFICIAL)</p><p><b>active</b>: true</p><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: cancelled</p><p><b>other</b>: <span/></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: cancelled</p><p><b>other</b>: <span/></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span/></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span/></p><p><b>type</b>: replaces</p></blockquote></div>"
-  ];
+  ]; # 
   fhir:Patient.identifier [
      fhir:index 0;
      fhir:Element.extension [
@@ -84,8 +84,8 @@
      fhir:Identifier.assigner [
        fhir:Reference.display [ fhir:value "ORG_SRC e.g. VPP_CER, IHA_IHA" ]
      ]
-  ];
-  fhir:Patient.active [ fhir:value "true"^^xsd:boolean];
+  ]; # 
+  fhir:Patient.active [ fhir:value "true"^^xsd:boolean]; # 
   fhir:Patient.link [
      fhir:index 0;
      fhir:Element.extension [
@@ -190,7 +190,7 @@
        ]
      ];
      fhir:Patient.link.type [ fhir:value "replaces" ]
-  ] .
+  ] . # 
 
 # - ontology header ------------------------------------------------------------
 

@@ -7,25 +7,25 @@
 
 <http://hlth.gov.bc.ca/fhir/client/Patient/Patient-1-Example> a fhir:Patient;
   fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "Patient-1-Example"];
+  fhir:Resource.id [ fhir:value "Patient-1-Example"]; # 
   fhir:Resource.meta [
      fhir:Meta.profile [
        fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
        fhir:index 0;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
      ]
-  ];
+  ]; # 
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Jane Doe </b> female, DoB: 1973-05-18 ( Jurisdictional health number: ?ngen-9? (use: OFFICIAL, period: 2000-01-01 11:11:11+0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Details:</td><td colspan=\"3\"><ul><li>ph: 2505554848(HOME)</li><li>721 FRONT ST VICTORIA BC V9A3Y3 CA </li><li>721 FRONT AVE Victoria BC V9A3V3 CA </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The effective dates for the parent element.\"><a href=\"StructureDefinition-bc-business-period-extension.html\">BC Business Dates:</a></td><td colspan=\"3\"><ul><li>2019-02-07 01:29:17-0800 --&gt; (ongoing)</li></ul></td></tr></table></div>"
-  ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Jane Doe </b> female, DoB: 1973-05-18 ( Jurisdictional health number: ?ngen-9? (use: OFFICIAL, period: 2000-01-01 11:11:11+0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Details:</td><td colspan=\"3\"><ul><li>ph: 2505554848(HOME)</li><li>721 FRONT ST VICTORIA BC V9A3Y3 CA </li><li>721 FRONT AVE Victoria BC V9A3V3 CA </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The effective dates for the parent element.\"><a href=\"StructureDefinition-bc-business-period-extension.html\">BC Business Dates:</a></td><td colspan=\"3\"><ul><li>2019-02-07 13:29:17-0800 --&gt; (ongoing)</li></ul></td></tr></table></div>"
+  ]; # 
   fhir:DomainResource.extension [
      fhir:index 0;
      fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
      fhir:Extension.valuePeriod [
        fhir:Period.start [ fhir:value "2019-02-07T13:29:17-08:00"^^xsd:dateTime ]
      ]
-  ];
+  ]; # 
   fhir:Patient.identifier [
      fhir:index 0;
      fhir:Identifier.use [ fhir:value "official" ];
@@ -47,7 +47,7 @@
      fhir:Identifier.period [
        fhir:Period.start [ fhir:value "2000-01-01T11:11:11+08:00"^^xsd:dateTime ]
      ]
-  ];
+  ]; # 
   fhir:Patient.name [
      fhir:index 0;
      fhir:HumanName.use [ fhir:value "usual" ];
@@ -59,7 +59,7 @@
      fhir:HumanName.period [
        fhir:Period.start [ fhir:value "2018-04-05"^^xsd:date ]
      ]
-  ];
+  ]; # 
   fhir:Patient.telecom [
      fhir:index 0;
      fhir:ContactPoint.system [ fhir:value "phone" ];
@@ -68,7 +68,7 @@
      fhir:ContactPoint.period [
        fhir:Period.start [ fhir:value "2000-01-02T10:10:10-08:00"^^xsd:dateTime ]
      ]
-  ];
+  ]; # 
   fhir:Patient.gender [
      fhir:value "female";
      fhir:Element.extension [
@@ -78,7 +78,7 @@
          fhir:Period.start [ fhir:value "2017-04-05T16:16:16-08:00"^^xsd:dateTime ]
        ]
      ]
-  ];
+  ]; # 
   fhir:Patient.birthDate [
      fhir:value "1973-05-18"^^xsd:date;
      fhir:Element.extension [
@@ -88,7 +88,7 @@
          fhir:Period.start [ fhir:value "2018-10-17T03:29:17-08:00"^^xsd:dateTime ]
        ]
      ]
-  ];
+  ]; # 
   fhir:Patient.address [
      fhir:index 0;
      fhir:Element.extension [
@@ -121,7 +121,7 @@
      fhir:Address.state [ fhir:value "BC" ];
      fhir:Address.postalCode [ fhir:value "V9A3V3" ];
      fhir:Address.country [ fhir:value "CA" ]
-  ] .
+  ] . # 
 
 # - ontology header ------------------------------------------------------------
 

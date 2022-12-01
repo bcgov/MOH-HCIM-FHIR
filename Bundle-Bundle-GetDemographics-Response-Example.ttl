@@ -7,22 +7,22 @@
 
 <http://hlth.gov.bc.ca/fhir/client/Bundle/Bundle-GetDemographics-Response-Example> a fhir:Bundle;
   fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "Bundle-GetDemographics-Response-Example"];
+  fhir:Resource.id [ fhir:value "Bundle-GetDemographics-Response-Example"]; # 
   fhir:Resource.meta [
      fhir:Meta.profile [
        fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle";
        fhir:index 0;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle>
      ]
-  ];
-  fhir:Bundle.type [ fhir:value "searchset"];
-  fhir:Bundle.timestamp [ fhir:value "2011-09-07T12:18:23.000-07:00"^^xsd:dateTime];
-  fhir:Bundle.total [ fhir:value "1"^^xsd:nonNegativeInteger];
+  ]; # 
+  fhir:Bundle.type [ fhir:value "searchset"]; # 
+  fhir:Bundle.timestamp [ fhir:value "2011-09-07T12:18:23.000-07:00"^^xsd:dateTime]; # 
+  fhir:Bundle.total [ fhir:value "1"^^xsd:nonNegativeInteger]; # 
   fhir:Bundle.link [
      fhir:index 0;
      fhir:Bundle.link.relation [ fhir:value "self" ];
      fhir:Bundle.link.url [ fhir:value "https://your.search.search.url" ]
-  ];
+  ]; # 
   fhir:Bundle.entry [
      fhir:index 0;
      fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33" ];
@@ -35,17 +35,17 @@
      fhir:index 2;
      fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c" ];
      fhir:Bundle.entry.resource <urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c>
-  ] .
+  ] . # 
 
 <urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33> a fhir:Parameters;
-  fhir:Resource.id [ fhir:value "Parameters-GetDemographics-Response-Example"];
+  fhir:Resource.id [ fhir:value "Parameters-GetDemographics-Response-Example"]; # 
   fhir:Resource.meta [
      fhir:Meta.profile [
        fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out";
        fhir:index 0;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out>
      ]
-  ];
+  ]; # 
   fhir:Parameters.parameter [
      fhir:index 0;
      fhir:Parameters.parameter.name [ fhir:value "messageId" ];
@@ -65,14 +65,14 @@
      fhir:index 3;
      fhir:Parameters.parameter.name [ fhir:value "requestMessageId" ];
      fhir:Parameters.parameter.valueString [ fhir:value "98028b44-882a-4c72-8c92-b87d916147e1" ]
-  ] .
+  ] . # 
 
 <urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1> a fhir:OperationOutcome;
-  fhir:Resource.id [ fhir:value "OperationOutcome-Search-Example"];
+  fhir:Resource.id [ fhir:value "OperationOutcome-Search-Example"]; # 
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: OperationOutcome</b><a name=\"OperationOutcome-Search-Example\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource OperationOutcome &quot;OperationOutcome-Search-Example&quot; </p></div><h3>Issues</h3><table class=\"grid\"><tr><td>-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td>*</td><td>warning</td><td>business-rule</td><td>Warning: The identifier you used in the query has been merged. The surviving identifier was returned. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#BCHCIM.GD.0.0015)</span></td></tr></table></div>"
-  ];
+  ]; # 
   fhir:OperationOutcome.issue [
      fhir:index 0;
      fhir:OperationOutcome.issue.severity [ fhir:value "warning" ];
@@ -85,21 +85,21 @@
        ];
        fhir:CodeableConcept.text [ fhir:value "Warning: The identifier you used in the query has been merged. The surviving identifier was returned." ]
      ]
-  ] .
+  ] . # 
 
 <urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c> a fhir:Patient;
-  fhir:Resource.id [ fhir:value "Patient-GetDemographics-Example"];
+  fhir:Resource.id [ fhir:value "Patient-GetDemographics-Example"]; # 
   fhir:Resource.meta [
      fhir:Meta.profile [
        fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
        fhir:index 0;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
      ]
-  ];
+  ]; # 
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Patient-GetDemographics-Example\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;Patient-GetDemographics-Example&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: ?ngen-9? (use: OFFICIAL, period: 2000-01-01 11:11:11+0800 --&gt; (ongoing))</p><p><b>name</b>: Jane Doe </p><p><b>telecom</b>: ph: 2505554848(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1972-10-16</p><p><b>address</b>: 721 FRONT ST VICTORIA BC V9A3Y3 CA </p></div>"
-  ];
+  ]; # 
   fhir:Patient.identifier [
      fhir:index 0;
      fhir:Identifier.use [ fhir:value "official" ];
@@ -121,7 +121,7 @@
      fhir:Identifier.period [
        fhir:Period.start [ fhir:value "2000-01-01T11:11:11+08:00"^^xsd:dateTime ]
      ]
-  ];
+  ]; # 
   fhir:Patient.name [
      fhir:index 0;
      fhir:HumanName.use [ fhir:value "usual" ];
@@ -130,7 +130,7 @@
        fhir:value "Jane";
        fhir:index 0
      ]
-  ];
+  ]; # 
   fhir:Patient.telecom [
      fhir:index 0;
      fhir:ContactPoint.system [ fhir:value "phone" ];
@@ -139,7 +139,7 @@
      fhir:ContactPoint.period [
        fhir:Period.start [ fhir:value "2000-01-02T10:10:10-08:00"^^xsd:dateTime ]
      ]
-  ];
+  ]; # 
   fhir:Patient.gender [
      fhir:value "female";
      fhir:Element.extension [
@@ -179,7 +179,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension" ]
      ]
-  ];
+  ]; # 
   fhir:Patient.birthDate [
      fhir:value "1972-10-16"^^xsd:date;
      fhir:Element.extension [
@@ -189,7 +189,7 @@
          fhir:Period.start [ fhir:value "2018-03-17T03:29:17-08:00"^^xsd:dateTime ]
        ]
      ]
-  ];
+  ]; # 
   fhir:Patient.address [
      fhir:index 0;
      fhir:Address.type [ fhir:value "physical" ];
@@ -201,7 +201,7 @@
      fhir:Address.state [ fhir:value "BC" ];
      fhir:Address.postalCode [ fhir:value "V9A3Y3" ];
      fhir:Address.country [ fhir:value "CA" ]
-  ] .
+  ] . # 
 
 # - ontology header ------------------------------------------------------------
 
