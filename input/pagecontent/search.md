@@ -17,7 +17,7 @@ The Mother's PHN can be used alone and will return the mother and children.  Oth
 
 The Find Candidates is a synchronous request-response transaction.
 
-Find Candidates uses a, search by example, pattern.  I.e. the request will contain an example Patient with attributes like name, date of birth, etc populated.  HCIM will search for Patients similar to the Patient in the request.  If the desired the user can omit the Patient and use a RelatedPerson resource that represents the Mother and contains (in the identifier) the Mother's PHN.  More details are in the [request Bundle](StructureDefinition-bc-find-candidates-request-bundle.html) and [response Bundle](StructureDefinition-bc-search-response-bundle.html) definitions.
+Find Candidates uses a, search by example, pattern.  I.e. the request will contain an example Patient with attributes like name, date of birth, etc populated.  HCIM will search for Patients similar to the Patient in the request.  If desired the user can omit the Patient and use a RelatedPerson resource that represents the Mother and contains (in the identifier) the Mother's PHN.  More details are in the [request Bundle](StructureDefinition-bc-find-candidates-request-bundle.html) and [response Bundle](StructureDefinition-bc-search-response-bundle.html) definitions.
 
 ### Get Demographics Search
 
@@ -34,7 +34,7 @@ More details can be found in the [request Bundle](StructureDefinition-bc-get-dem
 
 #### Get Demographics Search with Eligibility
 
-There is a special operation when the user is requesting a GetDemographics search and also requesting that the Client Registry query an external site for the British Columbia insurance status of a Patient.  This a different FHIR Operation than GetDemographics.
+This operation returns a Patient and their British Columbia insurance status.
 
 ### FHIR Structure for Searches
 

@@ -16,14 +16,17 @@ Authorized users with a point of service application integrated with the Client 
 
 Client Registry currently has a HL7 V3 implementation and this guide describes the HL7 FHIR implementation.
 
-See British Columbia's [Health Information Exchange](https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/software) for more for details on the Client Registry system and access to Client Registry.
-
-For design information start [here](design.html), to view details about profiles, operations, examples, etc, view this [page](artifacts.html).
-
-
 ## Miscellaneous
 
 Conformance verbs - SHALL, SHOULD, MAY - used in this guide's Capability Statement are defined in [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html#conflang).  The informative information outside the Capability Statement is intended to be descriptive and guide implementors through the profiles and examples without any formal requirements language.
 
 Data absent reasons are supported, see [this page](absentData.html).
+
+## Navigation and Other Links
+
+See British Columbia's [Health Information Exchange](https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/software) for more for details on the Client Registry system and access to Client Registry.
+
+For design information start [here](design.html), to view details about profiles, operations, examples, etc, view this [page](artifacts.html).
+
+
 

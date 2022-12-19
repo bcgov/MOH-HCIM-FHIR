@@ -4,9 +4,19 @@
 
 This guide still needs to undergo review and testing by the Ministry and stakeholders.
 
-* Review by BC Health Information Standards Working Group
-* Finalize the alignment to the Canadian Core and BC Core FHIR profiles
 * Testing of the guides operations and profiles to ensure proper coverage
 * Publication to BC's FHIR Portal
 
 Although this guide is complete the implementation of the new FHIR Operations will be done in stages.  Priority to the most desired services, as indicated by Client Registry stakeholders, will be implemented first.  Currently the search services are highest priority and will be completed first.
+
+### Future Interfaces
+
+The FHIR specification will expand to include RESTful interfaces for Patient.  I.e.
+
+	GET https://.../Patient/PHN
+
+Or
+
+	GET https://.../Patient?params=
+
+where a list of parameters can be used to query for Patients similar to Get Demographics.
