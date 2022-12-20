@@ -219,7 +219,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>The Find Candidates is a synchronous request-response transaction.</p>
 
-<p>Find Candidates uses a, search by example, pattern.  I.e. the request will contain an example Patient with attributes like name, date of birth, etc populated.  HCIM will search for Patients similar to the Patient in the request.  If the desired the user can omit the Patient and use a RelatedPerson resource that represents the Mother and contains (in the identifier) the Mother’s PHN.  More details are in the <a href="StructureDefinition-bc-find-candidates-request-bundle.html">request Bundle</a> and <a href="StructureDefinition-bc-search-response-bundle.html">response Bundle</a> definitions.</p>
+<p>Find Candidates uses a, search by example, pattern.  I.e. the request will contain an example Patient with attributes like name, date of birth, etc populated.  HCIM will search for Patients similar to the Patient in the request.  If desired the user can omit the Patient and use a RelatedPerson resource that represents the Mother and contains (in the identifier) the Mother’s PHN.  More details are in the <a href="StructureDefinition-bc-find-candidates-request-bundle.html">request Bundle</a> and <a href="StructureDefinition-bc-search-response-bundle.html">response Bundle</a> definitions.</p>
 
 <h3 id="get-demographics-search">Get Demographics Search</h3>
 
@@ -235,7 +235,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="get-demographics-search-with-eligibility">Get Demographics Search with Eligibility</h4>
 
-<p>There is a special operation when the user is requesting a GetDemographics search and also requesting that the Client Registry query an external site for the British Columbia insurance status of a Patient.  This a different FHIR Operation than GetDemographics.</p>
+<p>This operation returns a Patient and their British Columbia insurance status.</p>
 
 <h3 id="fhir-structure-for-searches">FHIR Structure for Searches</h3>
 
@@ -282,7 +282,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 1, 2022 22:48+0000">2022-12-01</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 19, 2022 23:56+0000">2022-12-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

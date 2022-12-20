@@ -175,7 +175,6 @@
 
 
 
-
 <ul class="nav nav-tabs">
 
   <li class="active">
@@ -274,7 +273,7 @@
   
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><p>This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when acting as a client. I.e. when sending Patient change notifications.</p><p>A Patient change notification is a FHIR Operation where the Client Registry sends a Patient/$PatientNotification request to a client. After an onboarding process by the Client Registry operational support team and developing an endpoint, clients are prepared to receive these requests.</p><p>Each request is a RevisePatientBundle. The Bundle has two entries: One with MetadataParamtersIn for messageId, messageDate and sender, one for a ClientRegistryPatient (profile of Patient). The following table describes the request and the four parameters; all are mandatory. The Client Registry SHALL use the following IN parameters when sending a change notification.</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>ReviseRequestBundle</td><td>1..1</td><td><a href="StructureDefinition-bc-revise-request-bundle.html">ReviseRequestBundle</a></td><td/><td><div><p>A Bundle with the Patient change.</p></div></td></tr><tr><td>OUT</td><td/><td/><td/><td/><td>Out is a 200 HTTP response code indicating the notificate was recieved.</td></tr></table></div>
+  <div xmlns="http://www.w3.org/1999/xhtml"><p>This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when acting as a client. I.e. when sending Patient change notifications.</p><p>A Patient change notification is a FHIR Operation where the Client Registry sends a Patient/$PatientNotification request to a client. After an onboarding process by the Client Registry operational support team and developing an endpoint, clients are prepared to receive these requests.</p><p>Each request is a RevisePatientBundle. The Bundle has two entries: One with MetadataParamtersIn for messageId, messageDate and sender, one for a ClientRegistryPatient (profile of Patient). The following table describes the request and the four parameters; all are mandatory. The Client Registry SHALL use the following IN parameters when sending a change notification.</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>ReviseRequestBundle</td><td>1..1</td><td><a href="StructureDefinition-bc-revise-request-bundle.html">ReviseRequestBundle</a></td><td></td><td><div><p>A Bundle with the Patient change.</p></div></td></tr><tr><td>OUT</td><td></td><td></td><td></td><td></td><td>Out is a 200 HTTP response code indicating the notificate was recieved.</td></tr></table></div>
 
   <!-- insert notes if present -->
   
@@ -305,7 +304,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 1, 2022 22:48+0000">2022-12-01</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 19, 2022 23:56+0000">2022-12-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
