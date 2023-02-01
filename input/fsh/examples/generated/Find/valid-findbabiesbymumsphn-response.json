@@ -1,0 +1,569 @@
+{
+  "resourceType": "Bundle",
+  "meta": {
+    "profile": [
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"
+    ]
+  },
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:91dd7048-9bcc-405a-844b-47dc2656fd07"
+  },
+  "type": "searchset",
+  "timestamp": "2023-01-23T13:58:38.9793487-08:00",
+  "total": 3,
+  "link": [
+    {
+      "relation": "canonical",
+      "url": "https://ig.cgi.com/Patient/Find.fhir"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:b46f78e1-cfa1-41a6-ba9c-fafe6822791a",
+      "resource": {
+        "resourceType": "Parameters",
+        "id": "c9630f55-346d-4a60-86ba-9c881180641e",
+        "meta": {
+          "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"
+          ]
+        },
+        "parameter": [
+          {
+            "name": "messageId",
+            "valueString": "9acccdc8-b4d0-4ac7-9f10-80d0c80136e4"
+          },
+          {
+            "name": "messageDateTime",
+            "valueDateTime": "2023-01-23T13:58:38.9591378-08:00"
+          },
+          {
+            "name": "identifiersOnly",
+            "valueBoolean": false
+          },
+          {
+            "name": "sender",
+            "valueIdentifier": {
+              "system": "http://hlth.gov.bc.ca/fhir/client/bc-org",
+              "value": "IHA"
+            }
+          },
+          {
+            "name": "enterer",
+            "valueIdentifier": {
+              "system": "http://hlth.gov.bc.ca/fhir/client/bc-userid",
+              "value": "ig.samples@cgi.com"
+            }
+          },
+          {
+            "name": "requestMessageId",
+            "valueString": "2a956654-9d48-422b-ab23-ea708462760b"
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "OperationOutcome",
+        "issue": [
+          {
+            "severity": "information",
+            "code": "business-rule",
+            "details": {
+              "coding": [
+                {
+                  "system": "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes",
+                  "code": "BCHCIM.FC.0.0012"
+                }
+              ],
+              "text": "The search completed successfully."
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "outcome"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:71092811-55f9-4e1f-8754-a6828da1d51c",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+          ]
+        },
+        "identifier": [
+          {
+            "extension": [
+              {
+                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                "valueCode": "active"
+              }
+            ],
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "JHN"
+                }
+              ]
+            },
+            "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
+            "value": "9999999991",
+            "period": {
+              "start": "2023-01-23T13:58:38-08:00"
+            }
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                "valueCode": "active"
+              }
+            ],
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "AN"
+                }
+              ]
+            },
+            "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+            "value": "C08928PL0NJ1632KM6Q0D3XV14C1F7F1519",
+            "period": {
+              "start": "2023-01-23T13:58:38-08:00"
+            },
+            "assigner": {
+              "display": "IHA_IHA"
+            }
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "family": "Shawley",
+            "given": [
+              "Baby Girl"
+            ],
+            "period": {
+              "start": "2023-01-23T13:58:38-08:00"
+            }
+          }
+        ],
+        "gender": "female",
+        "_gender": {
+          "extension": [
+            {
+              "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+              "valuePeriod": {
+                "start": "2023-01-23T13:58:38-08:00"
+              }
+            }
+          ]
+        },
+        "birthDate": "2023-01-22",
+        "_birthDate": {
+          "extension": [
+            {
+              "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+              "valuePeriod": {
+                "start": "2023-01-23T13:58:38-08:00"
+              }
+            }
+          ]
+        },
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                "valueCode": "unknown"
+              }
+            ],
+            "type": "physical",
+            "line": [
+              "13719 Froe street"
+            ],
+            "city": "Aylesford",
+            "state": "BC",
+            "country": "CA",
+            "period": {
+              "start": "2023-01-23T13:58:38-08:00"
+            }
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                "valueCode": "unknown"
+              }
+            ],
+            "type": "postal",
+            "line": [
+              "24989 School street"
+            ],
+            "city": "Thermal",
+            "state": "BC",
+            "country": "CA",
+            "period": {
+              "start": "2023-01-23T13:58:38-08:00"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "outcome"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:69b91ae6-e147-4dd0-abe7-8912ec301fd9",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+          ]
+        },
+        "identifier": [
+          {
+            "extension": [
+              {
+                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                "valueCode": "active"
+              }
+            ],
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "JHN"
+                }
+              ]
+            },
+            "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
+            "value": "9999999992",
+            "period": {
+              "start": "2023-01-23T13:58:38-08:00"
+            }
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                "valueCode": "active"
+              }
+            ],
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "AN"
+                }
+              ]
+            },
+            "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+            "value": "TNPQV08124Q7V1",
+            "period": {
+              "start": "2023-01-23T13:58:38-08:00"
+            },
+            "assigner": {
+              "display": "IHA_IHA"
+            }
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "family": "Shawley",
+            "given": [
+              "Baby Girl"
+            ],
+            "period": {
+              "start": "2023-01-23T13:58:38-08:00"
+            }
+          }
+        ],
+        "gender": "female",
+        "_gender": {
+          "extension": [
+            {
+              "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+              "valuePeriod": {
+                "start": "2023-01-23T13:58:38-08:00"
+              }
+            }
+          ]
+        },
+        "birthDate": "2023-01-22",
+        "_birthDate": {
+          "extension": [
+            {
+              "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+              "valuePeriod": {
+                "start": "2023-01-23T13:58:38-08:00"
+              }
+            }
+          ]
+        },
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                "valueCode": "unknown"
+              }
+            ],
+            "type": "physical",
+            "line": [
+              "13719 Froe street"
+            ],
+            "city": "Aylesford",
+            "state": "BC",
+            "country": "CA",
+            "period": {
+              "start": "2023-01-23T13:58:38-08:00"
+            }
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                "valueCode": "unknown"
+              }
+            ],
+            "type": "postal",
+            "line": [
+              "24989 School street"
+            ],
+            "city": "Thermal",
+            "state": "BC",
+            "country": "CA",
+            "period": {
+              "start": "2023-01-23T13:58:38-08:00"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "outcome"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e4e077df-3a85-4fa9-8df0-9ff7b2f00000",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+          ]
+        },
+        "identifier": [
+          {
+            "extension": [
+              {
+                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                "valueCode": "active"
+              }
+            ],
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "JHN"
+                }
+              ]
+            },
+            "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
+            "value": "9999999999",
+            "period": {
+              "start": "2023-01-23T13:58:38-08:00"
+            }
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                "valueCode": "active"
+              }
+            ],
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "AN"
+                }
+              ]
+            },
+            "system": "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+            "value": "P73M3D992S2972JOXOG9O0M466C0S546RI7",
+            "period": {
+              "start": "2023-01-23T13:58:38-08:00"
+            },
+            "assigner": {
+              "display": "IHA_IHA"
+            }
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "family": "Shawley",
+            "given": [
+              "Dietrich"
+            ],
+            "period": {
+              "start": "2023-01-23T13:58:38-08:00"
+            }
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "3142487326",
+            "use": "home",
+            "period": {
+              "start": "2023-01-23T13:58:38-08:00"
+            }
+          }
+        ],
+        "gender": "female",
+        "_gender": {
+          "extension": [
+            {
+              "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+              "valuePeriod": {
+                "start": "2023-01-23T13:58:38-08:00"
+              }
+            }
+          ]
+        },
+        "birthDate": "2022-12-17",
+        "_birthDate": {
+          "extension": [
+            {
+              "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+              "valuePeriod": {
+                "start": "2023-01-23T13:58:38-08:00"
+              }
+            }
+          ]
+        },
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                "valueCode": "unknown"
+              }
+            ],
+            "type": "physical",
+            "line": [
+              "13719 Froe street"
+            ],
+            "city": "Aylesford",
+            "state": "BC",
+            "country": "CA",
+            "period": {
+              "start": "2023-01-23T13:58:38-08:00"
+            }
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                "valueCode": "unknown"
+              }
+            ],
+            "type": "postal",
+            "line": [
+              "24989 School street"
+            ],
+            "city": "Thermal",
+            "state": "BC",
+            "country": "CA",
+            "period": {
+              "start": "2023-01-23T13:58:38-08:00"
+            }
+          }
+        ],
+        "link": [
+          {
+            "other": {
+              "reference": "urn:uuid:13cb4c36-102d-49c7-9f2e-f652ece39ecf"
+            },
+            "type": "seealso"
+          },
+          {
+            "other": {
+              "reference": "urn:uuid:613f5d13-9753-4c0c-89f9-f2bce0622721"
+            },
+            "type": "seealso"
+          }
+        ]
+      },
+      "search": {
+        "mode": "outcome"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:13cb4c36-102d-49c7-9f2e-f652ece39ecf",
+      "resource": {
+        "resourceType": "RelatedPerson",
+        "patient": {
+          "reference": "urn:uuid:71092811-55f9-4e1f-8754-a6828da1d51c"
+        },
+        "relationship": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                "code": "NMTH"
+              }
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:613f5d13-9753-4c0c-89f9-f2bce0622721",
+      "resource": {
+        "resourceType": "RelatedPerson",
+        "patient": {
+          "reference": "urn:uuid:69b91ae6-e147-4dd0-abe7-8912ec301fd9"
+        },
+        "relationship": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                "code": "NMTH"
+              }
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    }
+  ]
+}
