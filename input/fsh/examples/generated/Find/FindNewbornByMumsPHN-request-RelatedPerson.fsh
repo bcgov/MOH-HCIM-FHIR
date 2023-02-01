@@ -1,4 +1,4 @@
-Instance: FindBabiesByMumsPHN-RESULT
+Instance: FindBabiesByMumsPHN-RelatedPerson
 InstanceOf: RelatedPerson
 Usage: #inline
 * identifier.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
