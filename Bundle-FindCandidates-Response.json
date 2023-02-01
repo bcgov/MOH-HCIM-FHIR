@@ -1,0 +1,518 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "FindCandidates-Response",
+  "meta" : {
+    "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"]
+  },
+  "identifier" : {
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:uuid:1a6f9323-5c60-4f55-8210-9b4403c05014"
+  },
+  "type" : "searchset",
+  "timestamp" : "2023-01-23T13:58:38.9211651-08:00",
+  "total" : 2,
+  "link" : [{
+    "relation" : "canonical",
+    "url" : "https://ig.cgi.com/Patient/Find.fhir"
+  }],
+  "entry" : [{
+    "fullUrl" : "urn:uuid:c3e604ec-0917-41a8-9d90-1da8e66168d7",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "id" : "a763deae-f2cf-4b90-819b-d3c8e6a23dfd",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"]
+      },
+      "parameter" : [{
+        "name" : "messageId",
+        "valueBoolean" : false
+      },
+      {
+        "name" : "messageDateTime",
+        "valueDateTime" : "2023-01-23T13:58:38.7402027-08:00"
+      },
+      {
+        "name" : "sender",
+        "valueIdentifier" : {
+          "system" : "http://hlth.gov.bc.ca/fhir/client/bc-org",
+          "value" : "VCHA"
+        }
+      },
+      {
+        "name" : "enterer",
+        "valueIdentifier" : {
+          "system" : "http://hlth.gov.bc.ca/fhir/client/bc-userid",
+          "value" : "ig.samples@cgi.com"
+        }
+      },
+      {
+        "name" : "requestMessageId",
+        "valueString" : "f108bda7-fc0f-4cbe-8438-6981360dee82"
+      }]
+    },
+    "search" : {
+      "mode" : "include"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:c3e604ec-0917-41a8-9d90-1da8e6615678",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "id" : "FindCandidates-response-Outcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: OperationOutcome</b><a name=\"FindCandidates-response-Outcome\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource OperationOutcome &quot;FindCandidates-response-Outcome&quot; </p></div><h3>Issues</h3><table class=\"grid\"><tr><td>-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td>*</td><td>information</td><td>business-rule</td><td>The search completed successfully. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#BCHCIM.FC.0.0012)</span></td></tr></table></div>"
+      },
+      "issue" : [{
+        "severity" : "information",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes",
+            "code" : "BCHCIM.FC.0.0012"
+          }],
+          "text" : "The search completed successfully."
+        }
+      }]
+    },
+    "search" : {
+      "mode" : "outcome"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:f156cec9-77fe-40d2-a023-71f1442d4598",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "FindCandidates-response-Patient1",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"FindCandidates-response-Patient1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;FindCandidates-response-Patient1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9999999990 (use: OFFICIAL, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)), Account number: 3FMF9LXL5109WXROQ2 (use: OFFICIAL, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)), Jurisdictional health number: 57874VZMR531EI0Q2H (use: OFFICIAL, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</p><p><b>active</b>: true</p><p><b>name</b>: Elefteria Aida Patxi Pinchock , Zachary Irune Adoette (OFFICIAL), Keriann (NICKNAME)</p><p><b>telecom</b>: ph: 5614353278(MOBILE), ph: 4509409511(HOME), ph: 3524387170(WORK), <a href=\"mailto:Marianne.Huot@cgi.com\">Marianne.Huot@cgi.com</a>, <a href=\"mailto:Andoni.Schoninger@cgi.com\">Andoni.Schoninger@cgi.com</a>, <a href=\"mailto:Kord.Stavrides@cgi.com\">Kord.Stavrides@cgi.com</a></p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1925-05-14</p><p><b>deceased</b>: 1927-03-28</p><p><b>address</b>: </p><ul><li>6140 Sharon lane Glasgow BC CA </li><li>42593 Rue saint-antoine East broughton BC CA </li></ul></div>"
+      },
+      "identifier" : [{
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode" : "active"
+        }],
+        "use" : "official",
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "JHN"
+          }]
+        },
+        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
+        "value" : "9999999990",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode" : "active"
+        }],
+        "use" : "official",
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "AN"
+          }]
+        },
+        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+        "value" : "3FMF9LXL5109WXROQ2",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        },
+        "assigner" : {
+          "display" : "VCHA_VGH"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode" : "active"
+        }],
+        "use" : "official",
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "JHN"
+          }]
+        },
+        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SK",
+        "value" : "57874VZMR531EI0Q2H",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      }],
+      "active" : true,
+      "name" : [{
+        "use" : "usual",
+        "family" : "Pinchock",
+        "given" : ["Elefteria",
+        "Aida",
+        "Patxi"],
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      },
+      {
+        "use" : "official",
+        "given" : ["Zachary",
+        "Irune",
+        "Adoette"],
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      },
+      {
+        "use" : "nickname",
+        "given" : ["Keriann"],
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      }],
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "5614353278",
+        "use" : "mobile",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      },
+      {
+        "system" : "phone",
+        "value" : "4509409511",
+        "use" : "home",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      },
+      {
+        "system" : "phone",
+        "value" : "3524387170",
+        "use" : "work",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      },
+      {
+        "system" : "email",
+        "value" : "Marianne.Huot@cgi.com",
+        "use" : "mobile",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      },
+      {
+        "system" : "email",
+        "value" : "Andoni.Schoninger@cgi.com",
+        "use" : "home",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      },
+      {
+        "system" : "email",
+        "value" : "Kord.Stavrides@cgi.com",
+        "use" : "work",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      }],
+      "gender" : "male",
+      "_gender" : {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+          "valuePeriod" : {
+            "start" : "2023-01-23T13:58:38-08:00"
+          }
+        }]
+      },
+      "birthDate" : "1925-05-14",
+      "_birthDate" : {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+          "valuePeriod" : {
+            "start" : "2023-01-23T13:58:38-08:00"
+          }
+        }]
+      },
+      "deceasedDateTime" : "1927-03-28",
+      "_deceasedDateTime" : {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+          "valuePeriod" : {
+            "start" : "2023-01-23T13:58:38-08:00"
+          }
+        },
+        {
+          "extension" : [{
+            "url" : "deathVerifiedFlag",
+            "valueBoolean" : false
+          },
+          {
+            "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+            "valuePeriod" : {
+              "start" : "2023-01-23T13:58:38-08:00"
+            }
+          }],
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension"
+        }]
+      },
+      "address" : [{
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+          "valueCode" : "unknown"
+        }],
+        "type" : "physical",
+        "line" : ["6140 Sharon lane"],
+        "city" : "Glasgow",
+        "state" : "BC",
+        "country" : "CA",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+          "valueCode" : "unknown"
+        }],
+        "type" : "postal",
+        "line" : ["42593 Rue saint-antoine"],
+        "city" : "East broughton",
+        "state" : "BC",
+        "country" : "CA",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      }]
+    },
+    "search" : {
+      "mode" : "match",
+      "score" : 159
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:d8c79350-2de1-4fee-bd65-67592628916f",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "FindCandidates-response-Patient1",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"FindCandidates-response-Patient1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;FindCandidates-response-Patient1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9999999990 (use: OFFICIAL, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)), Account number: 3FMF9LXL5109WXROQ2 (use: OFFICIAL, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)), Jurisdictional health number: 57874VZMR531EI0Q2H (use: OFFICIAL, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</p><p><b>active</b>: true</p><p><b>name</b>: Elefteria Aida Patxi Pinchock , Zachary Irune Adoette (OFFICIAL), Keriann (NICKNAME)</p><p><b>telecom</b>: ph: 5614353278(MOBILE), ph: 4509409511(HOME), ph: 3524387170(WORK), <a href=\"mailto:Marianne.Huot@cgi.com\">Marianne.Huot@cgi.com</a>, <a href=\"mailto:Andoni.Schoninger@cgi.com\">Andoni.Schoninger@cgi.com</a>, <a href=\"mailto:Kord.Stavrides@cgi.com\">Kord.Stavrides@cgi.com</a></p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1925-05-14</p><p><b>deceased</b>: 1927-03-28</p><p><b>address</b>: </p><ul><li>6140 Sharon lane Glasgow BC CA </li><li>42593 Rue saint-antoine East broughton BC CA </li></ul></div>"
+      },
+      "identifier" : [{
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode" : "active"
+        }],
+        "use" : "official",
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "JHN"
+          }]
+        },
+        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
+        "value" : "9999999990",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode" : "active"
+        }],
+        "use" : "official",
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "AN"
+          }]
+        },
+        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+        "value" : "3FMF9LXL5109WXROQ2",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        },
+        "assigner" : {
+          "display" : "VCHA_VGH"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode" : "active"
+        }],
+        "use" : "official",
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "JHN"
+          }]
+        },
+        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SK",
+        "value" : "57874VZMR531EI0Q2H",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      }],
+      "active" : true,
+      "name" : [{
+        "use" : "usual",
+        "family" : "Pinchock",
+        "given" : ["Elefteria",
+        "Aida",
+        "Patxi"],
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      },
+      {
+        "use" : "official",
+        "given" : ["Zachary",
+        "Irune",
+        "Adoette"],
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      },
+      {
+        "use" : "nickname",
+        "given" : ["Keriann"],
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      }],
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "5614353278",
+        "use" : "mobile",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      },
+      {
+        "system" : "phone",
+        "value" : "4509409511",
+        "use" : "home",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      },
+      {
+        "system" : "phone",
+        "value" : "3524387170",
+        "use" : "work",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      },
+      {
+        "system" : "email",
+        "value" : "Marianne.Huot@cgi.com",
+        "use" : "mobile",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      },
+      {
+        "system" : "email",
+        "value" : "Andoni.Schoninger@cgi.com",
+        "use" : "home",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      },
+      {
+        "system" : "email",
+        "value" : "Kord.Stavrides@cgi.com",
+        "use" : "work",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      }],
+      "gender" : "male",
+      "_gender" : {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+          "valuePeriod" : {
+            "start" : "2023-01-23T13:58:38-08:00"
+          }
+        }]
+      },
+      "birthDate" : "1925-05-14",
+      "_birthDate" : {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+          "valuePeriod" : {
+            "start" : "2023-01-23T13:58:38-08:00"
+          }
+        }]
+      },
+      "deceasedDateTime" : "1927-03-28",
+      "_deceasedDateTime" : {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+          "valuePeriod" : {
+            "start" : "2023-01-23T13:58:38-08:00"
+          }
+        },
+        {
+          "extension" : [{
+            "url" : "deathVerifiedFlag",
+            "valueBoolean" : false
+          },
+          {
+            "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+            "valuePeriod" : {
+              "start" : "2023-01-23T13:58:38-08:00"
+            }
+          }],
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension"
+        }]
+      },
+      "address" : [{
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+          "valueCode" : "unknown"
+        }],
+        "type" : "physical",
+        "line" : ["6140 Sharon lane"],
+        "city" : "Glasgow",
+        "state" : "BC",
+        "country" : "CA",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+          "valueCode" : "unknown"
+        }],
+        "type" : "postal",
+        "line" : ["42593 Rue saint-antoine"],
+        "city" : "East broughton",
+        "state" : "BC",
+        "country" : "CA",
+        "period" : {
+          "start" : "2023-01-23T13:58:38-08:00"
+        }
+      }]
+    },
+    "search" : {
+      "mode" : "match",
+      "score" : 91
+    }
+  }]
+}

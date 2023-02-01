@@ -1,0 +1,583 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Bundle/FindNewbornByMumsPHN-Response> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "FindNewbornByMumsPHN-Response"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle>
+     ]
+  ]; # 
+  fhir:Bundle.identifier [
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "urn:uuid:91dd7048-9bcc-405a-844b-47dc2656fd07" ]
+  ]; # 
+  fhir:Bundle.type [ fhir:value "searchset"]; # 
+  fhir:Bundle.timestamp [ fhir:value "2023-01-23T13:58:38.9793487-08:00"^^xsd:dateTime]; # 
+  fhir:Bundle.total [ fhir:value "3"^^xsd:nonNegativeInteger]; # 
+  fhir:Bundle.link [
+     fhir:index 0;
+     fhir:Bundle.link.relation [ fhir:value "canonical" ];
+     fhir:Bundle.link.url [ fhir:value "https://ig.cgi.com/Patient/Find.fhir" ]
+  ]; # 
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:b46f78e1-cfa1-41a6-ba9c-fafe6822791a" ];
+     fhir:Bundle.entry.resource <urn:uuid:b46f78e1-cfa1-41a6-ba9c-fafe6822791a>;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "include" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:c3e604ec-0917-41a8-9d90-1da8e6611234" ];
+     fhir:Bundle.entry.resource <urn:uuid:c3e604ec-0917-41a8-9d90-1da8e6611234>;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "outcome" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:71092811-55f9-4e1f-8754-a6828da1d51c" ];
+     fhir:Bundle.entry.resource <urn:uuid:71092811-55f9-4e1f-8754-a6828da1d51c>;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "outcome" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:69b91ae6-e147-4dd0-abe7-8912ec301fd9" ];
+     fhir:Bundle.entry.resource <urn:uuid:69b91ae6-e147-4dd0-abe7-8912ec301fd9>;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "outcome" ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:e4e077df-3a85-4fa9-8df0-9ff7b2f00000" ];
+     fhir:Bundle.entry.resource <urn:uuid:e4e077df-3a85-4fa9-8df0-9ff7b2f00000>;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "outcome" ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:13cb4c36-102d-49c7-9f2e-f652ece39ecf" ];
+     fhir:Bundle.entry.resource <urn:uuid:13cb4c36-102d-49c7-9f2e-f652ece39ecf>;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "include" ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:613f5d13-9753-4c0c-89f9-f2bce0622721" ];
+     fhir:Bundle.entry.resource <urn:uuid:613f5d13-9753-4c0c-89f9-f2bce0622721>;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "include" ]
+     ]
+  ] . # 
+
+<urn:uuid:b46f78e1-cfa1-41a6-ba9c-fafe6822791a> a fhir:Parameters;
+  fhir:Resource.id [ fhir:value "c9630f55-346d-4a60-86ba-9c881180641e"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out>
+     ]
+  ]; # 
+  fhir:Parameters.parameter [
+     fhir:index 0;
+     fhir:Parameters.parameter.name [ fhir:value "messageId" ];
+     fhir:Parameters.parameter.valueString [ fhir:value "9acccdc8-b4d0-4ac7-9f10-80d0c80136e4" ]
+  ], [
+     fhir:index 1;
+     fhir:Parameters.parameter.name [ fhir:value "messageDateTime" ];
+     fhir:Parameters.parameter.valueDateTime [ fhir:value "2023-01-23T13:58:38.9591378-08:00"^^xsd:dateTime ]
+  ], [
+     fhir:index 2;
+     fhir:Parameters.parameter.name [ fhir:value "sender" ];
+     fhir:Parameters.parameter.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+  ], [
+     fhir:index 3;
+     fhir:Parameters.parameter.name [ fhir:value "enterer" ];
+     fhir:Parameters.parameter.valueIdentifier [
+       fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-userid" ];
+       fhir:Identifier.value [ fhir:value "ig.samples@cgi.com" ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Parameters.parameter.name [ fhir:value "requestMessageId" ];
+     fhir:Parameters.parameter.valueString [ fhir:value "2a956654-9d48-422b-ab23-ea708462760b" ]
+  ] . # 
+
+<urn:uuid:c3e604ec-0917-41a8-9d90-1da8e6611234> a fhir:OperationOutcome;
+  fhir:Resource.id [ fhir:value "FindNewbornByMumsPHN-Response-Outcome"]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: OperationOutcome</b><a name=\"FindNewbornByMumsPHN-Response-Outcome\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource OperationOutcome &quot;FindNewbornByMumsPHN-Response-Outcome&quot; </p></div><h3>Issues</h3><table class=\"grid\"><tr><td>-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td>*</td><td>information</td><td>business-rule</td><td>The search completed successfully. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#BCHCIM.FC.0.0012)</span></td></tr></table></div>"
+  ]; # 
+  fhir:OperationOutcome.issue [
+     fhir:index 0;
+     fhir:OperationOutcome.issue.severity [ fhir:value "information" ];
+     fhir:OperationOutcome.issue.code [ fhir:value "business-rule" ];
+     fhir:OperationOutcome.issue.details [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes" ];
+         fhir:Coding.code [ fhir:value "BCHCIM.FC.0.0012" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "The search completed successfully." ]
+     ]
+  ] . # 
+
+<urn:uuid:71092811-55f9-4e1f-8754-a6828da1d51c> a fhir:Patient;
+  fhir:Resource.id [ fhir:value "FindNewbornByMumsPHN-Response-Patient1"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"FindNewbornByMumsPHN-Response-Patient1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;FindNewbornByMumsPHN-Response-Patient1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9999999991 (use: OFFICIAL, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)), Account number: C08928PL0NJ1632KM6Q0D3XV14C1F7F1519 (use: OFFICIAL, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</p><p><b>active</b>: true</p><p><b>name</b>: Baby Girl Shawley </p><p><b>gender</b>: female</p><p><b>birthDate</b>: 2023-01-22</p><p><b>address</b>: </p><ul><li>13719 Froe street Aylesford BC CA </li><li>24989 School street Thermal BC CA </li></ul></div>"
+  ]; # 
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "active" ]
+     ];
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "JHN" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC" ];
+     fhir:Identifier.value [ fhir:value "9999999991" ];
+     fhir:Identifier.period [
+       fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "active" ]
+     ];
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "AN" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
+     fhir:Identifier.value [ fhir:value "C08928PL0NJ1632KM6Q0D3XV14C1F7F1519" ];
+     fhir:Identifier.period [
+       fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ];
+     fhir:Identifier.assigner [
+       fhir:Reference.display [ fhir:value "IHA_IHA" ]
+     ]
+  ]; # 
+  fhir:Patient.active [ fhir:value "true"^^xsd:boolean]; # 
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "usual" ];
+     fhir:HumanName.family [ fhir:value "Shawley" ];
+     fhir:HumanName.given [
+       fhir:value "Baby Girl";
+       fhir:index 0
+     ];
+     fhir:HumanName.period [
+       fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ]; # 
+  fhir:Patient.gender [
+     fhir:value "female";
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+       fhir:Extension.valuePeriod [
+         fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+       ]
+     ]
+  ]; # 
+  fhir:Patient.birthDate [
+     fhir:value "2023-01-22"^^xsd:date;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+       fhir:Extension.valuePeriod [
+         fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+       ]
+     ]
+  ]; # 
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "unknown" ]
+     ];
+     fhir:Address.type [ fhir:value "physical" ];
+     fhir:Address.line [
+       fhir:value "13719 Froe street";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Aylesford" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.country [ fhir:value "CA" ];
+     fhir:Address.period [
+       fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "unknown" ]
+     ];
+     fhir:Address.type [ fhir:value "postal" ];
+     fhir:Address.line [
+       fhir:value "24989 School street";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Thermal" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.country [ fhir:value "CA" ];
+     fhir:Address.period [
+       fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] . # 
+
+<urn:uuid:69b91ae6-e147-4dd0-abe7-8912ec301fd9> a fhir:Patient;
+  fhir:Resource.id [ fhir:value "FindNewbornByMumsPHN-Response-Patient2"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"FindNewbornByMumsPHN-Response-Patient2\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;FindNewbornByMumsPHN-Response-Patient2&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9999999992 (use: OFFICIAL, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)), Account number: TNPQV08124Q7V1 (use: OFFICIAL, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</p><p><b>active</b>: true</p><p><b>name</b>: Baby Girl Shawley </p><p><b>gender</b>: female</p><p><b>birthDate</b>: 2023-01-22</p><p><b>address</b>: </p><ul><li>13719 Froe street Aylesford BC CA </li><li>24989 School street Thermal BC CA </li></ul></div>"
+  ]; # 
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "active" ]
+     ];
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "JHN" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC" ];
+     fhir:Identifier.value [ fhir:value "9999999992" ];
+     fhir:Identifier.period [
+       fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "active" ]
+     ];
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "AN" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
+     fhir:Identifier.value [ fhir:value "TNPQV08124Q7V1" ];
+     fhir:Identifier.period [
+       fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ];
+     fhir:Identifier.assigner [
+       fhir:Reference.display [ fhir:value "IHA_IHA" ]
+     ]
+  ]; # 
+  fhir:Patient.active [ fhir:value "true"^^xsd:boolean]; # 
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "usual" ];
+     fhir:HumanName.family [ fhir:value "Shawley" ];
+     fhir:HumanName.given [
+       fhir:value "Baby Girl";
+       fhir:index 0
+     ];
+     fhir:HumanName.period [
+       fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ]; # 
+  fhir:Patient.gender [
+     fhir:value "female";
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+       fhir:Extension.valuePeriod [
+         fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+       ]
+     ]
+  ]; # 
+  fhir:Patient.birthDate [
+     fhir:value "2023-01-22"^^xsd:date;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+       fhir:Extension.valuePeriod [
+         fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+       ]
+     ]
+  ]; # 
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "unknown" ]
+     ];
+     fhir:Address.type [ fhir:value "physical" ];
+     fhir:Address.line [
+       fhir:value "13719 Froe street";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Aylesford" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.country [ fhir:value "CA" ];
+     fhir:Address.period [
+       fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "unknown" ]
+     ];
+     fhir:Address.type [ fhir:value "postal" ];
+     fhir:Address.line [
+       fhir:value "24989 School street";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Thermal" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.country [ fhir:value "CA" ];
+     fhir:Address.period [
+       fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] . # 
+
+<urn:uuid:e4e077df-3a85-4fa9-8df0-9ff7b2f00000> a fhir:Patient;
+  fhir:Resource.id [ fhir:value "FindNewbornByMumsPHN-Response-Patient3"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"FindNewbornByMumsPHN-Response-Patient3\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;FindNewbornByMumsPHN-Response-Patient3&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9999999999 (use: OFFICIAL, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)), Account number: P73M3D992S2972JOXOG9O0M466C0S546RI7 (use: OFFICIAL, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</p><p><b>active</b>: true</p><p><b>name</b>: Dietrich Shawley </p><p><b>telecom</b>: ph: 3142487326(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 2022-12-17</p><p><b>address</b>: </p><ul><li>13719 Froe street Aylesford BC CA </li><li>24989 School street Thermal BC CA </li></ul><blockquote><p><b>link</b></p><p><b>other</b>: <a href=\"#RelatedPerson_FindNewbornByMumsPHN-Response-RelatedPerson1\">See above (urn:uuid:13cb4c36-102d-49c7-9f2e-f652ece39ecf)</a></p><p><b>type</b>: seealso</p></blockquote><blockquote><p><b>link</b></p><p><b>other</b>: <a href=\"#RelatedPerson_FindNewbornByMumsPHN-Response-RelatedPerson2\">See above (urn:uuid:613f5d13-9753-4c0c-89f9-f2bce0622721)</a></p><p><b>type</b>: seealso</p></blockquote></div>"
+  ]; # 
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "active" ]
+     ];
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "JHN" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC" ];
+     fhir:Identifier.value [ fhir:value "9999999999" ];
+     fhir:Identifier.period [
+       fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "active" ]
+     ];
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "AN" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
+     fhir:Identifier.value [ fhir:value "P73M3D992S2972JOXOG9O0M466C0S546RI7" ];
+     fhir:Identifier.period [
+       fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ];
+     fhir:Identifier.assigner [
+       fhir:Reference.display [ fhir:value "IHA_IHA" ]
+     ]
+  ]; # 
+  fhir:Patient.active [ fhir:value "true"^^xsd:boolean]; # 
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "usual" ];
+     fhir:HumanName.family [ fhir:value "Shawley" ];
+     fhir:HumanName.given [
+       fhir:value "Dietrich";
+       fhir:index 0
+     ];
+     fhir:HumanName.period [
+       fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ]; # 
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "3142487326" ];
+     fhir:ContactPoint.use [ fhir:value "home" ];
+     fhir:ContactPoint.period [
+       fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ]; # 
+  fhir:Patient.gender [
+     fhir:value "female";
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+       fhir:Extension.valuePeriod [
+         fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+       ]
+     ]
+  ]; # 
+  fhir:Patient.birthDate [
+     fhir:value "2022-12-17"^^xsd:date;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
+       fhir:Extension.valuePeriod [
+         fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+       ]
+     ]
+  ]; # 
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "unknown" ]
+     ];
+     fhir:Address.type [ fhir:value "physical" ];
+     fhir:Address.line [
+       fhir:value "13719 Froe street";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Aylesford" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.country [ fhir:value "CA" ];
+     fhir:Address.period [
+       fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "unknown" ]
+     ];
+     fhir:Address.type [ fhir:value "postal" ];
+     fhir:Address.line [
+       fhir:value "24989 School street";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Thermal" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.country [ fhir:value "CA" ];
+     fhir:Address.period [
+       fhir:Period.start [ fhir:value "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ]; # 
+  fhir:Patient.link [
+     fhir:index 0;
+     fhir:Patient.link.other [
+       fhir:Reference.reference [ fhir:value "urn:uuid:13cb4c36-102d-49c7-9f2e-f652ece39ecf" ]
+     ];
+     fhir:Patient.link.type [ fhir:value "seealso" ]
+  ], [
+     fhir:index 1;
+     fhir:Patient.link.other [
+       fhir:Reference.reference [ fhir:value "urn:uuid:613f5d13-9753-4c0c-89f9-f2bce0622721" ]
+     ];
+     fhir:Patient.link.type [ fhir:value "seealso" ]
+  ] . # 
+
+<urn:uuid:13cb4c36-102d-49c7-9f2e-f652ece39ecf> a fhir:RelatedPerson;
+  fhir:Resource.id [ fhir:value "FindNewbornByMumsPHN-Response-RelatedPerson1"]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: RelatedPerson</b><a name=\"FindNewbornByMumsPHN-Response-RelatedPerson1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RelatedPerson &quot;FindNewbornByMumsPHN-Response-RelatedPerson1&quot; </p></div><p><b>patient</b>: <a href=\"#Patient_FindNewbornByMumsPHN-Response-Patient1\">See above (urn:uuid:71092811-55f9-4e1f-8754-a6828da1d51c)</a></p><p><b>relationship</b>: natural mother <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-v3-RoleCode.html\">RoleCode</a>#NMTH)</span></p></div>"
+  ]; # 
+  fhir:RelatedPerson.patient [
+     fhir:Reference.reference [ fhir:value "urn:uuid:71092811-55f9-4e1f-8754-a6828da1d51c" ]
+  ]; # 
+  fhir:RelatedPerson.relationship [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ];
+       fhir:Coding.code [ fhir:value "NMTH" ]
+     ]
+  ] . # 
+
+<urn:uuid:613f5d13-9753-4c0c-89f9-f2bce0622721> a fhir:RelatedPerson;
+  fhir:Resource.id [ fhir:value "FindNewbornByMumsPHN-Response-RelatedPerson2"]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: RelatedPerson</b><a name=\"FindNewbornByMumsPHN-Response-RelatedPerson2\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RelatedPerson &quot;FindNewbornByMumsPHN-Response-RelatedPerson2&quot; </p></div><p><b>patient</b>: <a href=\"#Patient_FindNewbornByMumsPHN-Response-Patient2\">See above (urn:uuid:69b91ae6-e147-4dd0-abe7-8912ec301fd9)</a></p><p><b>relationship</b>: natural mother <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-v3-RoleCode.html\">RoleCode</a>#NMTH)</span></p></div>"
+  ]; # 
+  fhir:RelatedPerson.patient [
+     fhir:Reference.reference [ fhir:value "urn:uuid:69b91ae6-e147-4dd0-abe7-8912ec301fd9" ]
+  ]; # 
+  fhir:RelatedPerson.relationship [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ];
+       fhir:Coding.code [ fhir:value "NMTH" ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Bundle/FindNewbornByMumsPHN-Response.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

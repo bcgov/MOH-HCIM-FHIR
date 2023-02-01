@@ -10,7 +10,7 @@
   "name" : "BCHealthClientIdentityManagement",
   "title" : "BC Client Registry FHIR Implementation Guide",
   "status" : "draft",
-  "date" : "2023-01-30T21:26:21+00:00",
+  "date" : "2023-02-01T18:07:18+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",
@@ -1158,6 +1158,19 @@
         "valueString" : "Bundle"
       }],
       "reference" : {
+        "reference" : "Bundle/AddNewbornByMumsPHN-Request"
+      },
+      "name" : "AddNewbornByMumsPHN-Request",
+      "description" : "Example of $Add request with Mother's PHN.",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle",
+      "groupingId" : "RequestExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
         "reference" : "Bundle/Bundle-AddPatient-Newborn-Request-Example"
       },
       "name" : "Bundle-AddPatient-Newborn-Request-Example",
@@ -1389,11 +1402,49 @@
         "valueString" : "Bundle"
       }],
       "reference" : {
-        "reference" : "Bundle/FindBabiesByMumsPHN-Request"
+        "reference" : "Bundle/FindCandidates-Request"
       },
-      "name" : "FindBabiesByMumsPHN-Request",
+      "name" : "FindCandidates-Request",
+      "description" : "Example of $FindCandidates request",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle",
+      "groupingId" : "RequestExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/FindCandidates-Response"
+      },
+      "name" : "FindCandidates-Response",
+      "description" : "Example of $FindCandidates response",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/FindNewbornByMumsPHN-Request"
+      },
+      "name" : "FindNewbornByMumsPHN-Request",
       "description" : "Example of $FindCandidates request with Mother's PHN.",
       "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle",
+      "groupingId" : "RequestExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/FindNewbornByMumsPHN-Response"
+      },
+      "name" : "FindNewbornByMumsPHN-Response",
+      "description" : "Example of $FindCandidates response with Mother's PHN.",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
       "groupingId" : "RequestExamples"
     },
     {

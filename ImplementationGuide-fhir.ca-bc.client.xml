@@ -11,7 +11,7 @@
   <name value="BCHealthClientIdentityManagement"/>
   <title value="BC Client Registry FHIR Implementation Guide"/>
   <status value="draft"/>
-  <date value="2023-01-30T21:26:21+00:00"/>
+  <date value="2023-02-01T18:07:18+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -961,6 +961,18 @@
         <valueString value="Bundle"/>
       </extension>
       <reference>
+        <reference value="Bundle/AddNewbornByMumsPHN-Request"/>
+      </reference>
+      <name value="AddNewbornByMumsPHN-Request"/>
+      <description value="Example of $Add request with Mother's PHN."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle"/>
+      <groupingId value="RequestExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
         <reference value="Bundle/Bundle-AddPatient-Newborn-Request-Example"/>
       </reference>
       <name value="Bundle-AddPatient-Newborn-Request-Example"/>
@@ -1174,11 +1186,46 @@
         <valueString value="Bundle"/>
       </extension>
       <reference>
-        <reference value="Bundle/FindBabiesByMumsPHN-Request"/>
+        <reference value="Bundle/FindCandidates-Request"/>
       </reference>
-      <name value="FindBabiesByMumsPHN-Request"/>
+      <name value="FindCandidates-Request"/>
+      <description value="Example of $FindCandidates request"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle"/>
+      <groupingId value="RequestExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/FindCandidates-Response"/>
+      </reference>
+      <name value="FindCandidates-Response"/>
+      <description value="Example of $FindCandidates response"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/FindNewbornByMumsPHN-Request"/>
+      </reference>
+      <name value="FindNewbornByMumsPHN-Request"/>
       <description value="Example of $FindCandidates request with Mother's PHN."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle"/>
+      <groupingId value="RequestExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/FindNewbornByMumsPHN-Response"/>
+      </reference>
+      <name value="FindNewbornByMumsPHN-Response"/>
+      <description value="Example of $FindCandidates response with Mother's PHN."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
       <groupingId value="RequestExamples"/>
     </resource>
     <resource>

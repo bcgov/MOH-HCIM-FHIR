@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="AddNewbornByMumsPHN-Request"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle"/>
+  </meta>
+  <type value="collection"/>
+  <timestamp value="2023-01-23T13:46:28.0429798-08:00"/>
+  <link>
+    <relation value="self"/>
+    <url value="urn:uuid:977f1edc-04db-439e-9f84-7cda0082812a"/>
+  </link>
+  <entry>
+    <fullUrl value="urn:uuid:66fa3c28-1121-4305-bda2-4e834fcbc0f8"/>
+    <resource>
+      <Parameters>
+        <id value="AddNewbornByMumsPHN-Request-Parameters"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"/>
+        </meta>
+        <parameter>
+          <name value="messageId"/>
+          <valueString value="eac486dd-ffe1-4272-b1ae-1ae0b0707b92"/>
+        </parameter>
+        <parameter>
+          <name value="messageDateTime"/>
+          <valueDateTime value="2023-01-23T13:46:28.0428521-08:00"/>
+        </parameter>
+      </Parameters>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:66a90476-06d2-4e62-aba7-32d0566ecf41"/>
+    <resource>
+      <Patient>
+        <id value="9578d2bd-a6ad-409c-ba66-ba8343cd40be"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Patient</b><a name="9578d2bd-a6ad-409c-ba66-ba8343cd40be"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Patient &quot;9578d2bd-a6ad-409c-ba66-ba8343cd40be&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient-by-example.html">PatientByExample</a></p></div><p><b>identifier</b>: Account number: 7G8WEPG25X18M (use: OFFICIAL)</p><p><b>name</b>: Baby Boy </p><p><b>gender</b>: male</p><p><b>birthDate</b>: 2023-01-22</p></div>
+        </text>
+        <identifier>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="AN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+          <value value="7G8WEPG25X18M"/>
+          <assigner>
+            <display value="VCHA_COMM"/>
+          </assigner>
+        </identifier>
+        <name>
+          <use value="usual"/>
+          <given value="Baby Boy"/>
+        </name>
+        <gender value="male"/>
+        <birthDate value="2023-01-22"/>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:b8d7f4cb-94db-46f6-9a01-7023a292b649"/>
+    <resource>
+      <RelatedPerson>
+        <id value="AddNewbornByMumsPHN-Request-RelatedPerson"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: RelatedPerson</b><a name="AddNewbornByMumsPHN-Request-RelatedPerson"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource RelatedPerson &quot;AddNewbornByMumsPHN-Request-RelatedPerson&quot; </p></div><p><b>identifier</b>: Jurisdictional health number: 9999999999 (use: OFFICIAL, period: 2023-01-23 13:46:27-0800 --&gt; (ongoing))</p><p><b>patient</b>: <a href="#Patient_9578d2bd-a6ad-409c-ba66-ba8343cd40be">See above (urn:uuid:66a90476-06d2-4e62-aba7-32d0566ecf41)</a></p><p><b>relationship</b>: natural mother <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-v3-RoleCode.html">RoleCode</a>#NMTH)</span></p></div>
+        </text>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="JHN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"/>
+          <value value="9999999999"/>
+          <period>
+            <start value="2023-01-23T13:46:27-08:00"/>
+          </period>
+        </identifier>
+        <patient>
+          <reference value="urn:uuid:66a90476-06d2-4e62-aba7-32d0566ecf41"/>
+        </patient>
+        <relationship>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="NMTH"/>
+          </coding>
+        </relationship>
+      </RelatedPerson>
+    </resource>
+  </entry>
+</Bundle>

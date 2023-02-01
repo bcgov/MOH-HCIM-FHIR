@@ -1,10 +1,11 @@
 ﻿BCHealthClientIdentityManagement : Validation Results
 =========================================
 
-err = 27, warn = 27, info = 44
-IG Publisher Version: 1.2.30
-Generated Mon Jan 30 21:30:30 UTC 2023. FHIR version 4.0.1 for fhir.ca-bc.client#1.0.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
+err = 46, warn = 29, info = 57
+IG Publisher Version: 1.2.31
+Generated Wed Feb 01 18:11:48 UTC 2023. FHIR version 4.0.1 for fhir.ca-bc.client#1.0.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
  Build Errors : 0 / 4 / 0
+ /github/workspace/fsh-generated/resources/Bundle-AddNewbornByMumsPHN-Request : 0 / 0 / 10
  /github/workspace/fsh-generated/resources/Bundle-Bundle-AddPatient-Newborn-Request-Example : 0 / 0 / 9
  /github/workspace/fsh-generated/resources/Bundle-Bundle-AddPatient-Request-Example : 0 / 0 / 7
  /github/workspace/fsh-generated/resources/Bundle-Bundle-AddPatient-Response-Example : 0 / 0 / 15
@@ -21,7 +22,10 @@ Generated Mon Jan 30 21:30:30 UTC 2023. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/Bundle-Bundle-RevisePatient-Response-Example : 0 / 0 / 13
  /github/workspace/fsh-generated/resources/Bundle-Bundle-UpdatePatient-Request-Example : 0 / 0 / 8
  /github/workspace/fsh-generated/resources/Bundle-Bundle-UpdatePatient-Response-Example : 0 / 0 / 13
- /github/workspace/fsh-generated/resources/Bundle-FindBabiesByMumsPHN-Request : 2 / 0 / 6
+ /github/workspace/fsh-generated/resources/Bundle-FindCandidates-Request : 4 / 0 / 7
+ /github/workspace/fsh-generated/resources/Bundle-FindCandidates-Response : 4 / 1 / 18
+ /github/workspace/fsh-generated/resources/Bundle-FindNewbornByMumsPHN-Request : 6 / 0 / 5
+ /github/workspace/fsh-generated/resources/Bundle-FindNewbornByMumsPHN-Response : 7 / 1 / 23
  /github/workspace/fsh-generated/resources/CapabilityStatement-bc-hcim-capability-statement-client : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/CapabilityStatement-bc-hcim-capability-statement-server : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-bc-client-registry-address-validation-code-system : 2 / 1 / 1
@@ -125,6 +129,9 @@ WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in 
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/Bundle-AddNewbornByMumsPHN-Request.json ==
+INFORMATION: Bundle/AddNewbornByMumsPHN-Request: Bundle.entry[1].resource.ofType(Patient).identifier[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Bundle/AddNewbornByMumsPHN-Request: Bundle.entry[1].resource.ofType(Patient).identifier[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example|1.0.0
 == fsh-generated/resources/Bundle-Bundle-AddPatient-Newborn-Request-Example.json ==
 INFORMATION: Bundle/Bundle-AddPatient-Newborn-Request-Example: Bundle.entry[1].resource.ofType(Patient).identifier[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
 == fsh-generated/resources/Bundle-Bundle-AddPatient-Request-Example.json ==
@@ -171,10 +178,45 @@ INFORMATION: Bundle/Bundle-UpdatePatient-Request-Example: Bundle.entry[1].resour
 INFORMATION: Bundle/Bundle-UpdatePatient-Response-Example: Bundle.entry[2].resource.ofType(Patient).identifier[1]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
 INFORMATION: Bundle/Bundle-UpdatePatient-Response-Example: Bundle.entry[2].resource.ofType(Patient).identifier[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
 INFORMATION: Bundle/Bundle-UpdatePatient-Response-Example: Bundle.entry[2].resource.ofType(Patient).identifier[3].extension[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
-== fsh-generated/resources/Bundle-FindBabiesByMumsPHN-Request.json ==
-INFORMATION: Bundle/FindBabiesByMumsPHN-Request: Bundle.entry[0].resource.ofType(Parameters).parameter[2]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in|1.0.0
-ERROR: Bundle/FindBabiesByMumsPHN-Request: Bundle.entry[1].resource.ofType(RelatedPerson).patient: Relative URLs must be of the format [ResourceName]/[id].  Encountered e418862f-1759-42de-98a9-00433a779e9b
-ERROR: Bundle/FindBabiesByMumsPHN-Request: Bundle.entry[1].resource.ofType(RelatedPerson).patient: Unable to resolve resource with reference 'e418862f-1759-42de-98a9-00433a779e9b'
+== fsh-generated/resources/Bundle-FindCandidates-Request.json ==
+ERROR: Bundle.entry[0].resource.parameter[0]: Unrecognized property 'valueString'
+ERROR: Bundle/FindCandidates-Request: Bundle.entry[0].resource.ofType(Parameters).parameter[0].value.ofType(boolean): This element does not match any known slice  defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in|1.0.0 and slicing is CLOSED: Bundle.entry[0].resource.ofType(Parameters).parameter[0].value.ofType(boolean): Does not match slice 'valueString' (discriminator: ($this is string))
+ERROR: Bundle/FindCandidates-Request: Bundle.entry[0].resource.ofType(Parameters).parameter[0]: Parameters.parameter:messageId.value[x]:valueString: minimum required = 1, but only found 0 (from http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in|1.0.0)
+ERROR: Bundle/FindCandidates-Request: Bundle.entry[0].resource.ofType(Parameters).parameter[0].value.ofType(boolean): The Profile 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in|1.0.0' definition allows for the type string but found type boolean
+== fsh-generated/resources/Bundle-FindCandidates-Response.json ==
+ERROR: Bundle.entry[0].resource.parameter[0]: Unrecognized property 'valueString'
+ERROR: Bundle/FindCandidates-Response: Bundle.entry[0].resource.ofType(Parameters).parameter[0].value.ofType(boolean): This element does not match any known slice  defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out|1.0.0 and slicing is CLOSED: Bundle.entry[0].resource.ofType(Parameters).parameter[0].value.ofType(boolean): Does not match slice 'valueString' (discriminator: ($this is string))
+ERROR: Bundle/FindCandidates-Response: Bundle.entry[0].resource.ofType(Parameters).parameter[0]: Parameters.parameter:messageId.value[x]:valueString: minimum required = 1, but only found 0 (from http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out|1.0.0)
+ERROR: Bundle/FindCandidates-Response: Bundle.entry[0].resource.ofType(Parameters).parameter[0].value.ofType(boolean): The Profile 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out|1.0.0' definition allows for the type string but found type boolean
+INFORMATION: Bundle/FindCandidates-Response: Bundle.entry[2].resource.ofType(Patient).identifier[1]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Bundle/FindCandidates-Response: Bundle.entry[2].resource.ofType(Patient).identifier[0].extension[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Bundle/FindCandidates-Response: Bundle.entry[2].resource.ofType(Patient).identifier[2].extension[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Bundle/FindCandidates-Response: Bundle.entry[3].resource.ofType(Patient).identifier[1]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Bundle/FindCandidates-Response: Bundle.entry[3].resource.ofType(Patient).identifier[0].extension[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Bundle/FindCandidates-Response: Bundle.entry[3].resource.ofType(Patient).identifier[2].extension[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+WARNING: Bundle/FindCandidates-Response: Bundle: SearchSet Bundles should have a self link that specifies what the search was
+== fsh-generated/resources/Bundle-FindNewbornByMumsPHN-Request.json ==
+ERROR: Bundle.entry[0].resource.parameter[0]: Unrecognized property 'valueString'
+ERROR: Bundle/FindNewbornByMumsPHN-Request: Bundle.entry[0].resource.ofType(Parameters).parameter[0].value.ofType(boolean): This element does not match any known slice  defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in|1.0.0 and slicing is CLOSED: Bundle.entry[0].resource.ofType(Parameters).parameter[0].value.ofType(boolean): Does not match slice 'valueString' (discriminator: ($this is string))
+ERROR: Bundle/FindNewbornByMumsPHN-Request: Bundle.entry[0].resource.ofType(Parameters).parameter[0]: Parameters.parameter:messageId.value[x]:valueString: minimum required = 1, but only found 0 (from http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in|1.0.0)
+ERROR: Bundle/FindNewbornByMumsPHN-Request: Bundle.entry[0].resource.ofType(Parameters).parameter[0].value.ofType(boolean): The Profile 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in|1.0.0' definition allows for the type string but found type boolean
+ERROR: Bundle/FindNewbornByMumsPHN-Request: Bundle.entry[1].resource.ofType(RelatedPerson).patient: Relative URLs must be of the format [ResourceName]/[id].  Encountered e418862f-1759-42de-98a9-00433a779e9b
+ERROR: Bundle/FindNewbornByMumsPHN-Request: Bundle.entry[1].resource.ofType(RelatedPerson).patient: Unable to resolve resource with reference 'e418862f-1759-42de-98a9-00433a779e9b'
+== fsh-generated/resources/Bundle-FindNewbornByMumsPHN-Response.json ==
+ERROR: Bundle.entry[0].resource.parameter[2]: Unrecognized property 'valueIdentifier'
+ERROR: Bundle/FindNewbornByMumsPHN-Response: Bundle.entry[0].resource.ofType(Parameters).parameter[2].value.ofType(boolean): This element does not match any known slice  defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out|1.0.0 and slicing is CLOSED: Bundle.entry[0].resource.ofType(Parameters).parameter[2].value.ofType(boolean): Does not match slice 'valueIdentifier' (discriminator: ($this is Identifier))
+ERROR: Bundle/FindNewbornByMumsPHN-Response: Bundle.entry[0].resource.ofType(Parameters).parameter[2]: Parameters.parameter:sender.value[x]:valueIdentifier: minimum required = 1, but only found 0 (from http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out|1.0.0)
+ERROR: Bundle/FindNewbornByMumsPHN-Response: Bundle.entry[0].resource.ofType(Parameters).parameter[2].value.ofType(boolean): The Profile 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out|1.0.0' definition allows for the type Identifier but found type boolean
+INFORMATION: Bundle/FindNewbornByMumsPHN-Response: Bundle.entry[2].resource.ofType(Patient).identifier[1]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Bundle/FindNewbornByMumsPHN-Response: Bundle.entry[2].resource.ofType(Patient).identifier[0].extension[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Bundle/FindNewbornByMumsPHN-Response: Bundle.entry[3].resource.ofType(Patient).identifier[1]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Bundle/FindNewbornByMumsPHN-Response: Bundle.entry[3].resource.ofType(Patient).identifier[0].extension[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Bundle/FindNewbornByMumsPHN-Response: Bundle.entry[4].resource.ofType(Patient).identifier[1]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+INFORMATION: Bundle/FindNewbornByMumsPHN-Response: Bundle.entry[4].resource.ofType(Patient).identifier[0].extension[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0
+WARNING: Bundle/FindNewbornByMumsPHN-Response: Bundle: SearchSet Bundles should have a self link that specifies what the search was
+ERROR: Bundle/FindNewbornByMumsPHN-Response: Bundle.entry[2].resource: This is not an OperationOutcome (Patient)
+ERROR: Bundle/FindNewbornByMumsPHN-Response: Bundle.entry[3].resource: This is not an OperationOutcome (Patient)
+ERROR: Bundle/FindNewbornByMumsPHN-Response: Bundle.entry[4].resource: This is not an OperationOutcome (Patient)
 == fsh-generated/resources/CapabilityStatement-bc-hcim-capability-statement-client.json ==
 == fsh-generated/resources/CapabilityStatement-bc-hcim-capability-statement-server.json ==
 == fsh-generated/resources/CodeSystem-bc-client-registry-address-validation-code-system.json ==

@@ -5,9 +5,9 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hlth.gov.bc.ca/fhir/client/Bundle/FindBabiesByMumsPHN-Request> a fhir:Bundle;
+<http://hlth.gov.bc.ca/fhir/client/Bundle/FindNewbornByMumsPHN-Request> a fhir:Bundle;
   fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "FindBabiesByMumsPHN-Request"]; # 
+  fhir:Resource.id [ fhir:value "FindNewbornByMumsPHN-Request"]; # 
   fhir:Resource.meta [
      fhir:Meta.profile [
        fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle";
@@ -33,7 +33,7 @@
   ] . # 
 
 <urn:uuid:b46f78e1-cfa1-41a6-ba9c-fafe6822791a> a fhir:Parameters;
-  fhir:Resource.id [ fhir:value "FindBabiesByMumsPHN-MESSAGE"]; # 
+  fhir:Resource.id [ fhir:value "FindBabiesByMumsPHN-Parameters"]; # 
   fhir:Resource.meta [
      fhir:Meta.profile [
        fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in";
@@ -44,22 +44,18 @@
   fhir:Parameters.parameter [
      fhir:index 0;
      fhir:Parameters.parameter.name [ fhir:value "messageId" ];
-     fhir:Parameters.parameter.valueString [ fhir:value "9acccdc8-b4d0-4ac7-9f10-80d0c80136e4" ]
+     fhir:Parameters.parameter.valueBoolean [ fhir:value "false"^^xsd:boolean ]
   ], [
      fhir:index 1;
      fhir:Parameters.parameter.name [ fhir:value "messageDateTime" ];
      fhir:Parameters.parameter.valueDateTime [ fhir:value "2023-01-23T13:58:38.9591378-08:00"^^xsd:dateTime ]
-  ], [
-     fhir:index 2;
-     fhir:Parameters.parameter.name [ fhir:value "identifiersOnly" ];
-     fhir:Parameters.parameter.valueBoolean [ fhir:value "false"^^xsd:boolean ]
   ] . # 
 
 <urn:uuid:e7ae452f-9076-4cd6-958f-1d1c55d34c38> a fhir:RelatedPerson;
-  fhir:Resource.id [ fhir:value "FindBabiesByMumsPHN-RESULT"]; # 
+  fhir:Resource.id [ fhir:value "FindBabiesByMumsPHN-RelatedPerson"]; # 
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: RelatedPerson</b><a name=\"FindBabiesByMumsPHN-RESULT\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RelatedPerson &quot;FindBabiesByMumsPHN-RESULT&quot; </p></div><p><b>identifier</b>: Jurisdictional health number: 9999999999 (use: OFFICIAL)</p><p><b>patient</b>: <a href=\"https://simplifier.net/resolve?scope=hl7.fhir.ca.baseline@1.1.4&amp;canonical=http://hl7.org/fhir/ca/baseline/e418862f-1759-42de-98a9-00433a779e9b\">e418862f-1759-42de-98a9-00433a779e9b</a></p><p><b>relationship</b>: natural mother <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-v3-RoleCode.html\">RoleCode</a>#NMTH)</span></p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: RelatedPerson</b><a name=\"FindBabiesByMumsPHN-RelatedPerson\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RelatedPerson &quot;FindBabiesByMumsPHN-RelatedPerson&quot; </p></div><p><b>identifier</b>: Jurisdictional health number: 9999999999 (use: OFFICIAL)</p><p><b>patient</b>: <a href=\"https://simplifier.net/resolve?scope=hl7.fhir.ca.baseline@1.1.4&amp;canonical=http://hl7.org/fhir/ca/baseline/e418862f-1759-42de-98a9-00433a779e9b\">e418862f-1759-42de-98a9-00433a779e9b</a></p><p><b>relationship</b>: natural mother <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-v3-RoleCode.html\">RoleCode</a>#NMTH)</span></p></div>"
   ]; # 
   fhir:RelatedPerson.identifier [
      fhir:index 0;
@@ -93,7 +89,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hlth.gov.bc.ca/fhir/client/Bundle/FindBabiesByMumsPHN-Request.ttl> a owl:Ontology;
+<http://hlth.gov.bc.ca/fhir/client/Bundle/FindNewbornByMumsPHN-Request.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

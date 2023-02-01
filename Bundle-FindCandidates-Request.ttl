@@ -1,0 +1,96 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Bundle/FindCandidates-Request> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "FindCandidates-Request"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle>
+     ]
+  ]; # 
+  fhir:Bundle.type [ fhir:value "collection"]; # 
+  fhir:Bundle.timestamp [ fhir:value "2023-01-23T13:58:38.7538206-08:00"^^xsd:dateTime]; # 
+  fhir:Bundle.link [
+     fhir:index 0;
+     fhir:Bundle.link.relation [ fhir:value "self" ];
+     fhir:Bundle.link.url [ fhir:value "urn:uuid:92cbad6f-b07c-4288-88fc-884a8d4d50ec" ]
+  ]; # 
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:c3e604ec-0917-41a8-9d90-1da8e66168d7" ];
+     fhir:Bundle.entry.resource <urn:uuid:c3e604ec-0917-41a8-9d90-1da8e66168d7>
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:f8ea5781-7772-4701-aabd-e86595f1487d" ];
+     fhir:Bundle.entry.resource <urn:uuid:f8ea5781-7772-4701-aabd-e86595f1487d>
+  ] . # 
+
+<urn:uuid:c3e604ec-0917-41a8-9d90-1da8e66168d7> a fhir:Parameters;
+  fhir:Resource.id [ fhir:value "FindCandidates-Request-Parameters"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in>
+     ]
+  ]; # 
+  fhir:Parameters.parameter [
+     fhir:index 0;
+     fhir:Parameters.parameter.name [ fhir:value "messageId" ];
+     fhir:Parameters.parameter.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+  ], [
+     fhir:index 1;
+     fhir:Parameters.parameter.name [ fhir:value "messageDateTime" ];
+     fhir:Parameters.parameter.valueDateTime [ fhir:value "2023-01-23T13:58:38.7402027-08:00"^^xsd:dateTime ]
+  ] . # 
+
+<urn:uuid:f8ea5781-7772-4701-aabd-e86595f1487d> a fhir:Patient;
+  fhir:Resource.id [ fhir:value "935d5683-785e-46e5-b747-357b58371cee"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"935d5683-785e-46e5-b747-357b58371cee\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;935d5683-785e-46e5-b747-357b58371cee&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient-by-example.html\">PatientByExample</a></p></div><p><b>name</b>: Apolo Frieson </p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1931-02-26</p><p><b>address</b>: 16063 Star trek drive Evans-thomas BC CA </p></div>"
+  ]; # 
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "usual" ];
+     fhir:HumanName.family [ fhir:value "Frieson" ];
+     fhir:HumanName.given [
+       fhir:value "Apolo";
+       fhir:index 0
+     ]
+  ]; # 
+  fhir:Patient.gender [ fhir:value "male"]; # 
+  fhir:Patient.birthDate [ fhir:value "1931-02-26"^^xsd:date]; # 
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.type [ fhir:value "physical" ];
+     fhir:Address.line [
+       fhir:value "16063 Star trek drive";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Evans-thomas" ];
+     fhir:Address.state [ fhir:value "BC" ];
+     fhir:Address.country [ fhir:value "CA" ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Bundle/FindCandidates-Request.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
