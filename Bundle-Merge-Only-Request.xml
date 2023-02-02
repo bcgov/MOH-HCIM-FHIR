@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="Merge-Only-Request"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle"/>
+  </meta>
+  <type value="collection"/>
+  <timestamp value="2023-01-23T14:45:47.9755936-08:00"/>
+  <entry>
+    <fullUrl value="urn:uuid:30f9e023-c3dc-43e3-bf91-b46da0836c16"/>
+    <resource>
+      <Parameters>
+        <id value="601e87a1-d16e-4306-8414-d447a4d128ab"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"/>
+        </meta>
+        <parameter>
+          <name value="messageId"/>
+          <valueString value="df2a3ffb-d760-40f7-9118-f1b6d86f1113"/>
+        </parameter>
+        <parameter>
+          <name value="messageDateTime"/>
+          <valueDateTime value="2023-01-23T14:45:47.9633129-08:00"/>
+        </parameter>
+      </Parameters>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:8fb558c8-1c16-4553-ba62-e165c580c337"/>
+    <resource>
+      <Patient>
+        <id value="Merge-Only-Request-Patient"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Patient</b><a name="Merge-Only-Request-Patient"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Patient &quot;Merge-Only-Request-Patient&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-merge-patient.html">PatientMerge</a></p></div><p><b>identifier</b>: Account number: B523AAZZ09U884V0X6UI0JZ (use: OFFICIAL)</p><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span/></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span/></p><p><b>type</b>: replaces</p></blockquote></div>
+        </text>
+        <identifier>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="AN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+          <value value="B523AAZZ09U884V0X6UI0JZ"/>
+          <assigner>
+            <display value="IHA_IHA"/>
+          </assigner>
+        </identifier>
+        <link>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension">
+            <valueCode value="obsolete"/>
+          </extension>
+          <other>
+            <identifier>
+              <use value="official"/>
+              <type>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                  <code value="AN"/>
+                </coding>
+              </type>
+              <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+              <value value="WLKC1153D5DD5"/>
+              <assigner>
+                <display value="IHA_IHA"/>
+              </assigner>
+            </identifier>
+          </other>
+          <type value="replaces"/>
+        </link>
+        <link>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension">
+            <valueCode value="obsolete"/>
+          </extension>
+          <other>
+            <identifier>
+              <use value="official"/>
+              <type>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                  <code value="AN"/>
+                </coding>
+              </type>
+              <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+              <value value="B8ZOG6N09171VO25STD372621L"/>
+              <assigner>
+                <display value="IHA_IHA"/>
+              </assigner>
+            </identifier>
+          </other>
+          <type value="replaces"/>
+        </link>
+      </Patient>
+    </resource>
+  </entry>
+</Bundle>

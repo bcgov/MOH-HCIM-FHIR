@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="GetDemographics-withHistory-Request"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle"/>
+  </meta>
+  <type value="collection"/>
+  <timestamp value="2023-01-23T14:00:53.7288084-08:00"/>
+  <link>
+    <relation value="self"/>
+    <url value="urn:uuid:3cfa83ab-d8c9-4536-9d02-cdc15f795ff0"/>
+  </link>
+  <entry>
+    <fullUrl value="urn:uuid:fb5ed5fa-e08f-4b88-948a-d81cd26d3453"/>
+    <resource>
+      <Parameters>
+        <id value="b52c0ad5-ab1e-4aa6-a094-971e2fe24175"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"/>
+        </meta>
+        <parameter>
+          <name value="messageId"/>
+          <valueBoolean value="true"/>
+        </parameter>
+        <parameter>
+          <name value="messageDateTime"/>
+          <valueBoolean value="false"/>
+        </parameter>
+      </Parameters>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:c83ebe98-0a68-42f1-b390-67323d4b5ce4"/>
+    <resource>
+      <Patient>
+        <id value="4466ded5-98ad-4890-96aa-8c25c67f3c22"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Patient</b><a name="4466ded5-98ad-4890-96aa-8c25c67f3c22"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Patient &quot;4466ded5-98ad-4890-96aa-8c25c67f3c22&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient-by-example.html">PatientByExample</a></p></div><p><b>identifier</b>: Account number: F4299BA5ME6L02M9471NPF0V79Q4Q (use: OFFICIAL)</p></div>
+        </text>
+        <identifier>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="AN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+          <value value="F4299BA5ME6L02M9471NPF0V79Q4Q"/>
+          <assigner>
+            <display value="VIHA_JOELAB"/>
+          </assigner>
+        </identifier>
+      </Patient>
+    </resource>
+  </entry>
+</Bundle>

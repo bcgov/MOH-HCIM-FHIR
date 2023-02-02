@@ -1,0 +1,159 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "Merge-WithPayload-Request",
+  "meta" : {
+    "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle"]
+  },
+  "type" : "collection",
+  "timestamp" : "2023-01-23T14:45:48.1500575-08:00",
+  "entry" : [{
+    "fullUrl" : "urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a15d7b9",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "id" : "2329c77d-3c91-408c-9daf-c694a61c518a",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"]
+      },
+      "parameter" : [{
+        "name" : "messageId",
+        "valueString" : "44e8efbe-280c-4a1e-8dd7-839e16a426e5"
+      },
+      {
+        "name" : "messageDateTime",
+        "valueDateTime" : "2023-01-23T14:45:48.1499176-08:00"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:1bccd29a-9d71-4f25-b2b0-fbe7484dcef1",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "Merge-WithPayload-Request-Patient",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Merge-WithPayload-Request-Patient\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;Merge-WithPayload-Request-Patient&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-merge-patient.html\">PatientMerge</a></p></div><p><b>identifier</b>: Account number: 601BXWJG9W9FB6L02W7ZIN0H66 (use: OFFICIAL)</p><p><b>name</b>: Aloja Pati Didrika Szymanski , Virginie (NICKNAME)</p><p><b>telecom</b>: ph: 3028602164(MOBILE), ph: 9056871450(HOME), ph: 3182632722(WORK), <a href=\"mailto:Hito.Schaffert@cgi.com\">Hito.Schaffert@cgi.com</a>, <a href=\"mailto:Lissandre.Svedine@cgi.com\">Lissandre.Svedine@cgi.com</a>, <a href=\"mailto:Aretha.Matsko@cgi.com\">Aretha.Matsko@cgi.com</a></p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1986-07-07</p><p><b>deceased</b>: 2006-05-17</p><p><b>address</b>: </p><ul><li>9405 Dark hollow road Klemme BC CA </li><li>40138 Par drive Tobyhanna BC CA </li></ul><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span/></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span/></p><p><b>type</b>: replaces</p></blockquote></div>"
+      },
+      "identifier" : [{
+        "use" : "official",
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "AN"
+          }]
+        },
+        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+        "value" : "601BXWJG9W9FB6L02W7ZIN0H66",
+        "assigner" : {
+          "display" : "VIHA_JOEADT"
+        }
+      }],
+      "name" : [{
+        "use" : "usual",
+        "family" : "Szymanski",
+        "given" : ["Aloja",
+        "Pati",
+        "Didrika"]
+      },
+      {
+        "use" : "nickname",
+        "given" : ["Virginie"]
+      }],
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "3028602164",
+        "use" : "mobile"
+      },
+      {
+        "system" : "phone",
+        "value" : "9056871450",
+        "use" : "home"
+      },
+      {
+        "system" : "phone",
+        "value" : "3182632722",
+        "use" : "work"
+      },
+      {
+        "system" : "email",
+        "value" : "Hito.Schaffert@cgi.com",
+        "use" : "mobile"
+      },
+      {
+        "system" : "email",
+        "value" : "Lissandre.Svedine@cgi.com",
+        "use" : "home"
+      },
+      {
+        "system" : "email",
+        "value" : "Aretha.Matsko@cgi.com",
+        "use" : "work"
+      }],
+      "gender" : "male",
+      "birthDate" : "1986-07-07",
+      "deceasedDateTime" : "2006-05-17",
+      "address" : [{
+        "type" : "physical",
+        "line" : ["9405 Dark hollow road"],
+        "city" : "Klemme",
+        "state" : "BC",
+        "country" : "CA"
+      },
+      {
+        "type" : "postal",
+        "line" : ["40138 Par drive"],
+        "city" : "Tobyhanna",
+        "state" : "BC",
+        "country" : "CA"
+      }],
+      "link" : [{
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension",
+          "valueCode" : "obsolete"
+        }],
+        "other" : {
+          "identifier" : {
+            "use" : "official",
+            "type" : {
+              "coding" : [{
+                "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "code" : "AN"
+              }]
+            },
+            "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+            "value" : "CS059OC9Z9MCLN3065382PG7P7JKM2",
+            "assigner" : {
+              "display" : "VIHA_JOEADT"
+            }
+          }
+        },
+        "type" : "replaces"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension",
+          "valueCode" : "obsolete"
+        }],
+        "other" : {
+          "identifier" : {
+            "use" : "official",
+            "type" : {
+              "coding" : [{
+                "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "code" : "AN"
+              }]
+            },
+            "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+            "value" : "0035Z44HE5845",
+            "assigner" : {
+              "display" : "VIHA_JOEADT"
+            }
+          }
+        },
+        "type" : "replaces"
+      }]
+    }
+  }]
+}

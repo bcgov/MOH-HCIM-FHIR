@@ -1,0 +1,59 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "GetDemographics-withHistory-Request",
+  "meta" : {
+    "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle"]
+  },
+  "type" : "collection",
+  "timestamp" : "2023-01-23T14:00:53.7288084-08:00",
+  "link" : [{
+    "relation" : "self",
+    "url" : "urn:uuid:3cfa83ab-d8c9-4536-9d02-cdc15f795ff0"
+  }],
+  "entry" : [{
+    "fullUrl" : "urn:uuid:fb5ed5fa-e08f-4b88-948a-d81cd26d3453",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "id" : "b52c0ad5-ab1e-4aa6-a094-971e2fe24175",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"]
+      },
+      "parameter" : [{
+        "name" : "messageId",
+        "valueBoolean" : true
+      },
+      {
+        "name" : "messageDateTime",
+        "valueBoolean" : false
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:c83ebe98-0a68-42f1-b390-67323d4b5ce4",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "4466ded5-98ad-4890-96aa-8c25c67f3c22",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"4466ded5-98ad-4890-96aa-8c25c67f3c22\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;4466ded5-98ad-4890-96aa-8c25c67f3c22&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient-by-example.html\">PatientByExample</a></p></div><p><b>identifier</b>: Account number: F4299BA5ME6L02M9471NPF0V79Q4Q (use: OFFICIAL)</p></div>"
+      },
+      "identifier" : [{
+        "use" : "official",
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "AN"
+          }]
+        },
+        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+        "value" : "F4299BA5ME6L02M9471NPF0V79Q4Q",
+        "assigner" : {
+          "display" : "VIHA_JOELAB"
+        }
+      }]
+    }
+  }]
+}

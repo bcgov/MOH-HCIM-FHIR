@@ -1,0 +1,67 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "GetDemographics-Request",
+  "meta" : {
+    "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle"]
+  },
+  "type" : "collection",
+  "timestamp" : "2023-01-23T14:00:53.5204931-08:00",
+  "link" : [{
+    "relation" : "self",
+    "url" : "urn:uuid:96d44ba7-5ca3-48ad-930e-771d9f1f2428"
+  }],
+  "entry" : [{
+    "fullUrl" : "urn:uuid:289d85b9-43a4-4902-9b52-76cb1f02ea69",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "id" : "GetDemographics-Request-Parameters",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"]
+      },
+      "parameter" : [{
+        "name" : "messageId",
+        "valueString" : "7cd363f7-982c-43cb-85b1-024e567ad571"
+      },
+      {
+        "name" : "messageDateTime",
+        "valueDateTime" : "2023-01-23T14:00:53.5108118-08:00"
+      },
+      {
+        "name" : "history",
+        "valueBoolean" : false
+      },
+      {
+        "name" : "identifiersOnly",
+        "valueBoolean" : false
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:72729b26-5d18-42e3-871a-ccfa9ba6ad06",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "1d94a4f3-f8f6-4b23-b4f3-0eb02a550be3",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"1d94a4f3-f8f6-4b23-b4f3-0eb02a550be3\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;1d94a4f3-f8f6-4b23-b4f3-0eb02a550be3&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient-by-example.html\">PatientByExample</a></p></div><p><b>identifier</b>: Account number: 1X37W2G5APJ3Q70RDS0XB25ZW0313MUT (use: OFFICIAL)</p></div>"
+      },
+      "identifier" : [{
+        "use" : "official",
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "AN"
+          }]
+        },
+        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+        "value" : "1X37W2G5APJ3Q70RDS0XB25ZW0313MUT",
+        "assigner" : {
+          "display" : "VIHA_JOELAB"
+        }
+      }]
+    }
+  }]
+}

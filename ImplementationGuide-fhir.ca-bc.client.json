@@ -10,7 +10,7 @@
   "name" : "BCHealthClientIdentityManagement",
   "title" : "BC Client Registry FHIR Implementation Guide",
   "status" : "draft",
-  "date" : "2023-02-01T18:22:44+00:00",
+  "date" : "2023-02-02T00:15:50+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",
@@ -1171,12 +1171,24 @@
         "valueString" : "Bundle"
       }],
       "reference" : {
+        "reference" : "Bundle/AddPatient-Request"
+      },
+      "name" : "AddPatient-Request",
+      "description" : "Example of $Add Patient request with all data fields populated.",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle",
+      "groupingId" : "RequestExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
         "reference" : "Bundle/Bundle-AddPatient-Newborn-Request-Example"
       },
       "name" : "Bundle-AddPatient-Newborn-Request-Example",
       "description" : "Example of $AddPatient operation for a newborn.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle",
-      "groupingId" : "RequestExamples"
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle"
     },
     {
       "extension" : [{
@@ -1188,8 +1200,7 @@
       },
       "name" : "Bundle-AddPatient-Request-Example",
       "description" : "Example of $AddPatient operation.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle",
-      "groupingId" : "RequestExamples"
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle"
     },
     {
       "extension" : [{
@@ -1201,8 +1212,7 @@
       },
       "name" : "Bundle-AddPatient-Response-Example",
       "description" : "A sample AddPatient Operation response.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-response-bundle",
-      "groupingId" : "ResponseExamples"
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-response-bundle"
     },
     {
       "extension" : [{
@@ -1214,8 +1224,7 @@
       },
       "name" : "Bundle-FindCandidates-Response-Example",
       "description" : "Example of FindCandidates response Bundle.  Patient0 has PHN, alternate, SRI and SSRI identifier examples.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
-      "groupingId" : "ResponseExamples"
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"
     },
     {
       "extension" : [{
@@ -1227,8 +1236,7 @@
       },
       "name" : "Bundle-FindCandidates-Response-MomsPHN-Example",
       "description" : "Example of FindCandidates with mother's PHN response Bundle.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
-      "groupingId" : "ResponseExamples"
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"
     },
     {
       "extension" : [{
@@ -1240,8 +1248,7 @@
       },
       "name" : "Bundle-FindCandidates-UsingMomsPHN-Request-Example",
       "description" : "Example of $FindCandidates operation with Mother's PHN.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle",
-      "groupingId" : "RequestExamples"
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle"
     },
     {
       "extension" : [{
@@ -1253,8 +1260,7 @@
       },
       "name" : "Bundle-FindCandidatesByExample-Request-Example",
       "description" : "Example of $FindCandidates operation",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle",
-      "groupingId" : "RequestExamples"
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle"
     },
     {
       "extension" : [{
@@ -1266,8 +1272,7 @@
       },
       "name" : "Bundle-GetDemographics-Request-Example",
       "description" : "Example of $GetDemographics operation",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle",
-      "groupingId" : "RequestExamples"
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle"
     },
     {
       "extension" : [{
@@ -1279,8 +1284,7 @@
       },
       "name" : "Bundle-GetDemographics-Response-Example",
       "description" : "Example of $GetDemographics operation response Bundle",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
-      "groupingId" : "ResponseExamples"
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"
     },
     {
       "extension" : [{
@@ -1292,8 +1296,7 @@
       },
       "name" : "Bundle-GetDemographicsWithEligibility-Response-Example",
       "description" : "Example of $GetDemographics.withEligibility operation response Bundle",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
-      "groupingId" : "ResponseExamples"
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"
     },
     {
       "extension" : [{
@@ -1305,8 +1308,7 @@
       },
       "name" : "Bundle-MergePatient-Request-Example",
       "description" : "Example of $MergePatient operation.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle",
-      "groupingId" : "RequestExamples"
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle"
     },
     {
       "extension" : [{
@@ -1318,8 +1320,7 @@
       },
       "name" : "Bundle-MergePatient-Response-Example",
       "description" : "A sample MergePatient Operation response.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle",
-      "groupingId" : "ResponseExamples"
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle"
     },
     {
       "extension" : [{
@@ -1331,8 +1332,7 @@
       },
       "name" : "Bundle-RevisePatient-Request-Example",
       "description" : "Example of $RevisePatient operation.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle",
-      "groupingId" : "RequestExamples"
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle"
     },
     {
       "extension" : [{
@@ -1344,8 +1344,7 @@
       },
       "name" : "Bundle-RevisePatient-Response-Example",
       "description" : "A sample RevisePatient Operation response.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle",
-      "groupingId" : "ResponseExamples"
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle"
     },
     {
       "extension" : [{
@@ -1369,8 +1368,7 @@
       },
       "name" : "Bundle-UpdatePatient-Response-Example",
       "description" : "A sample UpdatePatient Operation response.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle",
-      "groupingId" : "ResponseExamples"
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle"
     },
     {
       "extension" : [{
@@ -1445,7 +1443,137 @@
       "name" : "FindNewbornByMumsPHN-Response",
       "description" : "Example of $FindCandidates response with Mother's PHN.",
       "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
+      "groupingId" : "ResponseExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/GetDemographics-Request"
+      },
+      "name" : "GetDemographics-Request",
+      "description" : "Example of $GetDemographics request",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle",
       "groupingId" : "RequestExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/GetDemographics-Response"
+      },
+      "name" : "GetDemographics-Response",
+      "description" : "Example of $GetDemographics response",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
+      "groupingId" : "ResponseExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/GetDemographics-withHistory-Request"
+      },
+      "name" : "GetDemographics-withHistory-Request",
+      "description" : "Example of $GetDemographics request with History",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle",
+      "groupingId" : "RequestExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/GetDemographics-withHistory-Response"
+      },
+      "name" : "GetDemographics-withHistory-Response",
+      "description" : "Example of $GetDemographics response with History",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
+      "groupingId" : "ResponseExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/GetDemographics-withPHNInfo-Response"
+      },
+      "name" : "GetDemographics-withPHNInfo-Response",
+      "description" : "Example of $GetDemographics response with PHN info. Only organization users with specific access will receive this data, to be used by the admin Webapp ",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
+      "groupingId" : "ResponseExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/Merge-Only-Request"
+      },
+      "name" : "Merge-Only-Request",
+      "description" : "Example of $Merge only request.",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle",
+      "groupingId" : "RequestExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/Merge-Response"
+      },
+      "name" : "Merge-Response",
+      "description" : "Example of $Merge response.",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle",
+      "groupingId" : "ResponseExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/Merge-SSRI-Request"
+      },
+      "name" : "Merge-SSRI-Request",
+      "description" : "Example of $Merge request with SSRI.",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle",
+      "groupingId" : "RequestExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/Merge-WithPayload-Request"
+      },
+      "name" : "Merge-WithPayload-Request",
+      "description" : "Example of $Merge with payload request.",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle",
+      "groupingId" : "RequestExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/Merge-WithPayload-Response"
+      },
+      "name" : "Merge-WithPayload-Response",
+      "description" : "Example of $Merge response with payload.",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle",
+      "groupingId" : "ResponseExamples"
     },
     {
       "extension" : [{
@@ -1926,6 +2054,32 @@
       "name" : "RelatedPerson-MotherOfBabyGirl-Example",
       "description" : "Example of related person who is the mother",
       "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/Revise-Async-ACK"
+      },
+      "name" : "Revise-Async-ACK",
+      "description" : "Example of an Asynchronous $Revise ACK message.",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-async-ack-response-bundle",
+      "groupingId" : "ResponseExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/Revise-withMaxData-Request"
+      },
+      "name" : "Revise-withMaxData-Request",
+      "description" : "Example of $Revise request with all data fields populated.",
+      "exampleBoolean" : true,
+      "groupingId" : "RequestExamples"
     },
     {
       "extension" : [{

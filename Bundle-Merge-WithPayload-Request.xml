@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="Merge-WithPayload-Request"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle"/>
+  </meta>
+  <type value="collection"/>
+  <timestamp value="2023-01-23T14:45:48.1500575-08:00"/>
+  <entry>
+    <fullUrl value="urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a15d7b9"/>
+    <resource>
+      <Parameters>
+        <id value="2329c77d-3c91-408c-9daf-c694a61c518a"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"/>
+        </meta>
+        <parameter>
+          <name value="messageId"/>
+          <valueString value="44e8efbe-280c-4a1e-8dd7-839e16a426e5"/>
+        </parameter>
+        <parameter>
+          <name value="messageDateTime"/>
+          <valueDateTime value="2023-01-23T14:45:48.1499176-08:00"/>
+        </parameter>
+      </Parameters>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:1bccd29a-9d71-4f25-b2b0-fbe7484dcef1"/>
+    <resource>
+      <Patient>
+        <id value="Merge-WithPayload-Request-Patient"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Patient</b><a name="Merge-WithPayload-Request-Patient"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Patient &quot;Merge-WithPayload-Request-Patient&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-merge-patient.html">PatientMerge</a></p></div><p><b>identifier</b>: Account number: 601BXWJG9W9FB6L02W7ZIN0H66 (use: OFFICIAL)</p><p><b>name</b>: Aloja Pati Didrika Szymanski , Virginie (NICKNAME)</p><p><b>telecom</b>: ph: 3028602164(MOBILE), ph: 9056871450(HOME), ph: 3182632722(WORK), <a href="mailto:Hito.Schaffert@cgi.com">Hito.Schaffert@cgi.com</a>, <a href="mailto:Lissandre.Svedine@cgi.com">Lissandre.Svedine@cgi.com</a>, <a href="mailto:Aretha.Matsko@cgi.com">Aretha.Matsko@cgi.com</a></p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1986-07-07</p><p><b>deceased</b>: 2006-05-17</p><p><b>address</b>: </p><ul><li>9405 Dark hollow road Klemme BC CA </li><li>40138 Par drive Tobyhanna BC CA </li></ul><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span/></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span/></p><p><b>type</b>: replaces</p></blockquote></div>
+        </text>
+        <identifier>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="AN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+          <value value="601BXWJG9W9FB6L02W7ZIN0H66"/>
+          <assigner>
+            <display value="VIHA_JOEADT"/>
+          </assigner>
+        </identifier>
+        <name>
+          <use value="usual"/>
+          <family value="Szymanski"/>
+          <given value="Aloja"/>
+          <given value="Pati"/>
+          <given value="Didrika"/>
+        </name>
+        <name>
+          <use value="nickname"/>
+          <given value="Virginie"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="3028602164"/>
+          <use value="mobile"/>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="9056871450"/>
+          <use value="home"/>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="3182632722"/>
+          <use value="work"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="Hito.Schaffert@cgi.com"/>
+          <use value="mobile"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="Lissandre.Svedine@cgi.com"/>
+          <use value="home"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="Aretha.Matsko@cgi.com"/>
+          <use value="work"/>
+        </telecom>
+        <gender value="male"/>
+        <birthDate value="1986-07-07"/>
+        <deceasedDateTime value="2006-05-17"/>
+        <address>
+          <type value="physical"/>
+          <line value="9405 Dark hollow road"/>
+          <city value="Klemme"/>
+          <state value="BC"/>
+          <country value="CA"/>
+        </address>
+        <address>
+          <type value="postal"/>
+          <line value="40138 Par drive"/>
+          <city value="Tobyhanna"/>
+          <state value="BC"/>
+          <country value="CA"/>
+        </address>
+        <link>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension">
+            <valueCode value="obsolete"/>
+          </extension>
+          <other>
+            <identifier>
+              <use value="official"/>
+              <type>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                  <code value="AN"/>
+                </coding>
+              </type>
+              <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+              <value value="CS059OC9Z9MCLN3065382PG7P7JKM2"/>
+              <assigner>
+                <display value="VIHA_JOEADT"/>
+              </assigner>
+            </identifier>
+          </other>
+          <type value="replaces"/>
+        </link>
+        <link>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension">
+            <valueCode value="obsolete"/>
+          </extension>
+          <other>
+            <identifier>
+              <use value="official"/>
+              <type>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                  <code value="AN"/>
+                </coding>
+              </type>
+              <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+              <value value="0035Z44HE5845"/>
+              <assigner>
+                <display value="VIHA_JOEADT"/>
+              </assigner>
+            </identifier>
+          </other>
+          <type value="replaces"/>
+        </link>
+      </Patient>
+    </resource>
+  </entry>
+</Bundle>

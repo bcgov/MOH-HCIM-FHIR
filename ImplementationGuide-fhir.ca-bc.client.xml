@@ -11,7 +11,7 @@
   <name value="BCHealthClientIdentityManagement"/>
   <title value="BC Client Registry FHIR Implementation Guide"/>
   <status value="draft"/>
-  <date value="2023-02-01T18:22:44+00:00"/>
+  <date value="2023-02-02T00:15:50+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -973,12 +973,23 @@
         <valueString value="Bundle"/>
       </extension>
       <reference>
+        <reference value="Bundle/AddPatient-Request"/>
+      </reference>
+      <name value="AddPatient-Request"/>
+      <description value="Example of $Add Patient request with all data fields populated."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle"/>
+      <groupingId value="RequestExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
         <reference value="Bundle/Bundle-AddPatient-Newborn-Request-Example"/>
       </reference>
       <name value="Bundle-AddPatient-Newborn-Request-Example"/>
       <description value="Example of $AddPatient operation for a newborn."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle"/>
-      <groupingId value="RequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -990,7 +1001,6 @@
       <name value="Bundle-AddPatient-Request-Example"/>
       <description value="Example of $AddPatient operation."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle"/>
-      <groupingId value="RequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1002,7 +1012,6 @@
       <name value="Bundle-AddPatient-Response-Example"/>
       <description value="A sample AddPatient Operation response."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-response-bundle"/>
-      <groupingId value="ResponseExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1014,7 +1023,6 @@
       <name value="Bundle-FindCandidates-Response-Example"/>
       <description value="Example of FindCandidates response Bundle.  Patient0 has PHN, alternate, SRI and SSRI identifier examples."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
-      <groupingId value="ResponseExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1026,7 +1034,6 @@
       <name value="Bundle-FindCandidates-Response-MomsPHN-Example"/>
       <description value="Example of FindCandidates with mother's PHN response Bundle."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
-      <groupingId value="ResponseExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1038,7 +1045,6 @@
       <name value="Bundle-FindCandidates-UsingMomsPHN-Request-Example"/>
       <description value="Example of $FindCandidates operation with Mother's PHN."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle"/>
-      <groupingId value="RequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1050,7 +1056,6 @@
       <name value="Bundle-FindCandidatesByExample-Request-Example"/>
       <description value="Example of $FindCandidates operation"/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle"/>
-      <groupingId value="RequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1062,7 +1067,6 @@
       <name value="Bundle-GetDemographics-Request-Example"/>
       <description value="Example of $GetDemographics operation"/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle"/>
-      <groupingId value="RequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1074,7 +1078,6 @@
       <name value="Bundle-GetDemographics-Response-Example"/>
       <description value="Example of $GetDemographics operation response Bundle"/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
-      <groupingId value="ResponseExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1086,7 +1089,6 @@
       <name value="Bundle-GetDemographicsWithEligibility-Response-Example"/>
       <description value="Example of $GetDemographics.withEligibility operation response Bundle"/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
-      <groupingId value="ResponseExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1098,7 +1100,6 @@
       <name value="Bundle-MergePatient-Request-Example"/>
       <description value="Example of $MergePatient operation."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle"/>
-      <groupingId value="RequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1110,7 +1111,6 @@
       <name value="Bundle-MergePatient-Response-Example"/>
       <description value="A sample MergePatient Operation response."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle"/>
-      <groupingId value="ResponseExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1122,7 +1122,6 @@
       <name value="Bundle-RevisePatient-Request-Example"/>
       <description value="Example of $RevisePatient operation."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle"/>
-      <groupingId value="RequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1134,7 +1133,6 @@
       <name value="Bundle-RevisePatient-Response-Example"/>
       <description value="A sample RevisePatient Operation response."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle"/>
-      <groupingId value="ResponseExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1157,7 +1155,6 @@
       <name value="Bundle-UpdatePatient-Response-Example"/>
       <description value="A sample UpdatePatient Operation response."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle"/>
-      <groupingId value="ResponseExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1226,7 +1223,127 @@
       <name value="FindNewbornByMumsPHN-Response"/>
       <description value="Example of $FindCandidates response with Mother's PHN."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
+      <groupingId value="ResponseExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/GetDemographics-Request"/>
+      </reference>
+      <name value="GetDemographics-Request"/>
+      <description value="Example of $GetDemographics request"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle"/>
       <groupingId value="RequestExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/GetDemographics-Response"/>
+      </reference>
+      <name value="GetDemographics-Response"/>
+      <description value="Example of $GetDemographics response"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
+      <groupingId value="ResponseExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/GetDemographics-withHistory-Request"/>
+      </reference>
+      <name value="GetDemographics-withHistory-Request"/>
+      <description value="Example of $GetDemographics request with History"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle"/>
+      <groupingId value="RequestExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/GetDemographics-withHistory-Response"/>
+      </reference>
+      <name value="GetDemographics-withHistory-Response"/>
+      <description value="Example of $GetDemographics response with History"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
+      <groupingId value="ResponseExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/GetDemographics-withPHNInfo-Response"/>
+      </reference>
+      <name value="GetDemographics-withPHNInfo-Response"/>
+      <description value="Example of $GetDemographics response with PHN info. Only organization users with specific access will receive this data, to be used by the admin Webapp "/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
+      <groupingId value="ResponseExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Merge-Only-Request"/>
+      </reference>
+      <name value="Merge-Only-Request"/>
+      <description value="Example of $Merge only request."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle"/>
+      <groupingId value="RequestExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Merge-Response"/>
+      </reference>
+      <name value="Merge-Response"/>
+      <description value="Example of $Merge response."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle"/>
+      <groupingId value="ResponseExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Merge-SSRI-Request"/>
+      </reference>
+      <name value="Merge-SSRI-Request"/>
+      <description value="Example of $Merge request with SSRI."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle"/>
+      <groupingId value="RequestExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Merge-WithPayload-Request"/>
+      </reference>
+      <name value="Merge-WithPayload-Request"/>
+      <description value="Example of $Merge with payload request."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle"/>
+      <groupingId value="RequestExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Merge-WithPayload-Response"/>
+      </reference>
+      <name value="Merge-WithPayload-Response"/>
+      <description value="Example of $Merge response with payload."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle"/>
+      <groupingId value="ResponseExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1667,6 +1784,30 @@
       <name value="RelatedPerson-MotherOfBabyGirl-Example"/>
       <description value="Example of related person who is the mother"/>
       <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Revise-Async-ACK"/>
+      </reference>
+      <name value="Revise-Async-ACK"/>
+      <description value="Example of an Asynchronous $Revise ACK message."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-async-ack-response-bundle"/>
+      <groupingId value="ResponseExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Revise-withMaxData-Request"/>
+      </reference>
+      <name value="Revise-withMaxData-Request"/>
+      <description value="Example of $Revise request with all data fields populated."/>
+      <exampleBoolean value="true"/>
+      <groupingId value="RequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

@@ -1,0 +1,161 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "Merge-SSRI-Request",
+  "meta" : {
+    "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle"]
+  },
+  "type" : "collection",
+  "timestamp" : "2023-01-23T14:45:48.1457714-08:00",
+  "entry" : [{
+    "fullUrl" : "urn:uuid:0707b22e-65b3-4e88-a60f-d774d2b8376d",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "id" : "Merge-SSRI-Request-Parameters",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"]
+      },
+      "parameter" : [{
+        "name" : "messageId",
+        "valueString" : "c9a7ec62-c4f7-4d5d-979c-c4a503508d9b"
+      },
+      {
+        "name" : "messageDateTime",
+        "valueDateTime" : "2023-01-23T14:45:48.1454549-08:00"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:c476ddbe-f2f5-4a86-85f1-626b754a5f9b",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "Merge-SSRI-Request-Patient",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Merge-SSRI-Request-Patient\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;Merge-SSRI-Request-Patient&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-merge-patient.html\">PatientMerge</a></p></div><p><b>identifier</b>: Account number: DY29G4NH25RMX3ZFI7S48G6O (use: OFFICIAL), Account number: 0R5UU112MA979LL66JVP5CO69058 (use: SECONDARY)</p><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span/></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span/></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span/></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: cancelled</p><p><b>other</b>: <span/></p><p><b>type</b>: replaces</p></blockquote></div>"
+      },
+      "identifier" : [{
+        "use" : "official",
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "AN"
+          }]
+        },
+        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+        "value" : "DY29G4NH25RMX3ZFI7S48G6O",
+        "assigner" : {
+          "display" : "VPP_CER"
+        }
+      },
+      {
+        "use" : "secondary",
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "AN"
+          }]
+        },
+        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+        "value" : "0R5UU112MA979LL66JVP5CO69058",
+        "assigner" : {
+          "display" : "VPP_FPH"
+        }
+      }],
+      "link" : [{
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension",
+          "valueCode" : "obsolete"
+        }],
+        "other" : {
+          "identifier" : {
+            "use" : "official",
+            "type" : {
+              "coding" : [{
+                "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "code" : "AN"
+              }]
+            },
+            "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+            "value" : "AJS6T05XY0PPW88D99",
+            "assigner" : {
+              "display" : "VPP_CER"
+            }
+          }
+        },
+        "type" : "replaces"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension",
+          "valueCode" : "obsolete"
+        }],
+        "other" : {
+          "identifier" : {
+            "use" : "official",
+            "type" : {
+              "coding" : [{
+                "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "code" : "AN"
+              }]
+            },
+            "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+            "value" : "WXR1A39WE4VN4Z5I7X4JS4WJLQ65",
+            "assigner" : {
+              "display" : "VPP_CER"
+            }
+          }
+        },
+        "type" : "replaces"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension",
+          "valueCode" : "obsolete"
+        }],
+        "other" : {
+          "identifier" : {
+            "use" : "secondary",
+            "type" : {
+              "coding" : [{
+                "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "code" : "AN"
+              }]
+            },
+            "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+            "value" : "1QB24Z68EC1VIIW00P99HMY37U66YTPLD5ZDQL",
+            "assigner" : {
+              "display" : "VPP_SSH"
+            }
+          }
+        },
+        "type" : "replaces"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension",
+          "valueCode" : "cancelled"
+        }],
+        "other" : {
+          "identifier" : {
+            "use" : "secondary",
+            "type" : {
+              "coding" : [{
+                "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "code" : "AN"
+              }]
+            },
+            "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+            "value" : "VI7KR22LT7SW8GG8Y3TZTY4626MR54C8Q",
+            "assigner" : {
+              "display" : "VPP_PR"
+            }
+          }
+        },
+        "type" : "replaces"
+      }]
+    }
+  }]
+}

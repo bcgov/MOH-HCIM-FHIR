@@ -1,0 +1,1438 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>FHIR.CA-BC.CLIENT\GetDemographics-withPHNInfo-Response - JSON Representation - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/bc-fhir.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"15.43"}
+    h3,h4,h5,h6{--heading-prefix:"15.43"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">
+            <img height="71" alt="Project home" src="assets/images/BCMinistry.png"/>
+          </a>
+        </div>
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">BC Client Registry FHIR Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - Build CI
+
+
+
+  <img alt="Canada flag" src="assets/images/can.svg" height="16" title="Canada"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="overview.html">Overview</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Design
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="design.html">Summary</a>
+      </li>
+      <li>
+        <a href="search.html">Search Patient</a>
+      </li>
+      <li>
+        <a href="reviseAndMerge.html">Add, Revise, Update And Merge Patient</a>
+      </li>
+      <li>
+        <a href="distributions.html">Patient Change Notificaitons</a>
+      </li>
+      <li>
+        <a href="identifiers.html">Identifiers</a>
+      </li>
+      <li>
+        <a href="absentData.html">Data Absent</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="v3Transition.html">V3 Transition</a>
+  </li>
+  <li>
+    <a href="connectedPartner.html">Connected Partner</a>
+  </li>
+  <li>
+    <a href="capabilityStatement.html">Capability Statement</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="futurePlans.html">Future Plans</a>
+  </li>
+  <li>
+    <a href="terminology.html">Glossary</a>
+  </li>
+  <li>
+    <a href="credits.html">Credits</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>GetDemographics-withPHNInfo-Response</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0). See the <a href="http://hlth.gov.bc.ca/fhir/client/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Bundle-GetDemographics-withPHNInfo-Response.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Bundle-GetDemographics-withPHNInfo-Response.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-GetDemographics-withPHNInfo-Response.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: GetDemographics-withPHNInfo-Response - JSON Representation</h2>
+  <table class="">
+    <tr>
+
+      <td colspan="2">
+        
+          
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="Bundle-GetDemographics-withPHNInfo-Response.json" no-download="true">Raw json</a> | <a href="Bundle-GetDemographics-withPHNInfo-Response.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" style="white-space: pre; overflow: hidden"><code>
+{
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle">resourceType</a>" : "Bundle",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.id">id</a>" : "GetDemographics-withPHNInfo-Response",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.identifier">identifier</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:ietf:rfc:3986",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "urn:uuid:501f39c8-a388-49a8-aaaa-cbd5d76bb5bd"
+  },
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">type</a>" : "searchset",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.timestamp">timestamp</a>" : "2023-01-23T14:00:53.7668522-08:00",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.total">total</a>" : 1,
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link">link</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link.relation">relation</a>" : "canonical",
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link.url">url</a>" : "https://ig.cgi.com/Patient/Get.fhir"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:fb5ed5fa-e08f-4b88-948a-d81cd26d3453",
+      "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/parameters.html">resourceType</a>" : "Parameters",
+        "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.id">id</a>" : "GetDemographics-withHistory-Response-Parameters",
+        "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter">parameter</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "messageId",
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueBoolean</a>" : true
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "messageDateTime",
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueBoolean</a>" : false
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "sender",
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueIdentifier</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://hlth.gov.bc.ca/fhir/client/bc-org",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "VIHA"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "enterer",
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueIdentifier</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://hlth.gov.bc.ca/fhir/client/bc-userid",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "ig.samples@cgi.com"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "requestMessageId",
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueString</a>" : "62ac7557-95b4-42b0-acb1-dde7bc56c964"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">mode</a>" : "include"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:99982f86-4044-48a6-9e63-3d221f3a9876",
+      "<a href="http://hl7.org/fhir/R4/operationoutcome.html#OperationOutcome">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/operationoutcome.html">resourceType</a>" : "OperationOutcome",
+        "<a href="http://hl7.org/fhir/R4/operationoutcome.html#OperationOutcome.id">id</a>" : "GetDemographics-withPHNInfo-Response-Outcome",
+        "<a href="http://hl7.org/fhir/R4/operationoutcome.html#OperationOutcome.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: OperationOutcome&lt;/b&gt;&lt;a name=\&quot;GetDemographics-withPHNInfo-Response-Outcome\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource OperationOutcome &amp;quot;GetDemographics-withPHNInfo-Response-Outcome&amp;quot; &lt;/p&gt;&lt;/div&gt;&lt;h3&gt;Issues&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Severity&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Details&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;information&lt;/td&gt;&lt;td&gt;business-rule&lt;/td&gt;&lt;td&gt;The get demographics query completed successfully. &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (bc-oo-codes#BCHCIM.GD.0.0013)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/operationoutcome.html#OperationOutcome.issue">issue</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/operationoutcome.html#OperationOutcome.issue.severity">severity</a>" : "information",
+            "<a href="http://hl7.org/fhir/R4/operationoutcome.html#OperationOutcome.issue.code">code</a>" : "business-rule",
+            "<a href="http://hl7.org/fhir/R4/operationoutcome.html#OperationOutcome.issue.details">details</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "BCHCIM.GD.0.0013"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "The get demographics query completed successfully."
+            }
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">mode</a>" : "outcome"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:99982f86-4044-48a6-9e63-3d221f3a5f0d",
+      "<a href="http://hl7.org/fhir/R4/patient.html#Patient">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/patient.html">resourceType</a>" : "Patient",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.id">id</a>" : "GetDemographics-withPHNInfo-Response-Patient",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: Patient&lt;/b&gt;&lt;a name=\&quot;GetDemographics-withPHNInfo-Response-Patient\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource Patient &amp;quot;GetDemographics-withPHNInfo-Response-Patient&amp;quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-bc-patient.html\&quot;&gt;ClientRegistryPatient&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Jurisdictional health number: 9999999999 (use: OFFICIAL, period: 2023-01-23 14:00:53-0800 --&amp;gt; (ongoing)), Account number: F4299BA5ME6L02M9471NPF0V79Q4Q (use: OFFICIAL, period: 2023-01-23 14:00:53-0800 --&amp;gt; (ongoing)), Account number: OE78E6XLL7MJB (use: OFFICIAL, period: 2018-01-23 14:00:53-0800 --&amp;gt; 2023-01-23 14:00:53-0800), Account number: MVZQ14SG826PGIOY84DUDX20Q6S6Y8 (use: SECONDARY, period: 2023-01-23 14:00:53-0800 --&amp;gt; (ongoing)), Account number: FPKP88TYFTW9V7I1MA19344FH2 (use: SECONDARY, period: 2018-01-23 14:00:53-0800 --&amp;gt; 2023-01-23 14:00:53-0800), Jurisdictional health number: SI692PQ1R237ZT93076Z15S039215U8C0R (use: OFFICIAL, period: 2023-01-23 14:00:53-0800 --&amp;gt; (ongoing))&lt;/p&gt;&lt;p&gt;&lt;b&gt;active&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Alithea Joacheim Aine Parthemore , Christina Matei Marlin Kalscheuer , Abaigh Evangelia Wahchinksapa (OFFICIAL), Wilhelmus Galatea Olabisi (OFFICIAL), Mia (NICKNAME), Jutta (NICKNAME)&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: ph: 6237064105(MOBILE), ph: 6304712096(MOBILE), ph: 7121011390(HOME), ph: 4163176376(HOME), ph: 9845613474(WORK), ph: 2054428883(WORK), &lt;a href=\&quot;mailto:Berne.Aron@cgi.com\&quot;&gt;Berne.Aron@cgi.com&lt;/a&gt;, &lt;a href=\&quot;mailto:Octavius.Megown@cgi.com\&quot;&gt;Octavius.Megown@cgi.com&lt;/a&gt;, &lt;a href=\&quot;mailto:Claude.Abuel@cgi.com\&quot;&gt;Claude.Abuel@cgi.com&lt;/a&gt;, &lt;a href=\&quot;mailto:Madailein.Ivins@cgi.com\&quot;&gt;Madailein.Ivins@cgi.com&lt;/a&gt;, &lt;a href=\&quot;mailto:Akanni.Ehrler@cgi.com\&quot;&gt;Akanni.Ehrler@cgi.com&lt;/a&gt;, &lt;a href=\&quot;mailto:Tereza.Bis@cgi.com\&quot;&gt;Tereza.Bis@cgi.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;gender&lt;/b&gt;: female&lt;/p&gt;&lt;p&gt;&lt;b&gt;birthDate&lt;/b&gt;: 1946-11-28&lt;/p&gt;&lt;p&gt;&lt;b&gt;deceased&lt;/b&gt;: 1950-07-16&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;1431 Riverwood drive Lake village BC CA &lt;/li&gt;&lt;li&gt;7597 Mahlon street Maple plain BC CA &lt;/li&gt;&lt;li&gt;1699 Brand road Hills BC CA &lt;/li&gt;&lt;li&gt;33031 Arrowood drive Mayfield heights BC CA &lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "active"
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "VIHA_JOELAB"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Monica.Simmonds@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "official",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "JHN"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "9999999999",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "active"
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "PHSA_P"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Dorthe.Rought@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "official",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "AN"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "F4299BA5ME6L02M9471NPF0V79Q4Q",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2023-01-23T14:00:53-08:00"
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.assigner">assigner</a>" : {
+              "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "VIHA_JOELAB"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "merged"
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "VCHA_RICH"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Uberto.Sow@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "official",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "AN"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "OE78E6XLL7MJB",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2018-01-23T14:00:53-08:00",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2023-01-23T14:00:53-08:00"
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.assigner">assigner</a>" : {
+              "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "VIHA_JOELAB"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "active"
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "FHA_PRO"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Kennocha.Debreto@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "secondary",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "AN"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "MVZQ14SG826PGIOY84DUDX20Q6S6Y8",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2023-01-23T14:00:53-08:00"
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.assigner">assigner</a>" : {
+              "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "SSRI_SRC"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "merged"
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "FHA_PARIS"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Ivonne.Rustad@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "secondary",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "AN"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "FPKP88TYFTW9V7I1MA19344FH2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2018-01-23T14:00:53-08:00",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2023-01-23T14:00:53-08:00"
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.assigner">assigner</a>" : {
+              "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "SSRI_SRC"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "active"
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "FHA_FV"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Kate.Kamin@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "official",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "JHN"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/AB",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "SI692PQ1R237ZT93076Z15S039215U8C0R",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.active">active</a>" : true,
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.name">name</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "VCHA_VGH"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Leo.Perler@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.use">use</a>" : "usual",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a>" : "Parthemore",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a>" : [
+              "Alithea",
+              "Joacheim",
+              "Aine"
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "HIBC_MSP"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Amandine.Norem@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.use">use</a>" : "usual",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a>" : "Kalscheuer",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a>" : [
+              "Christina",
+              "Matei",
+              "Marlin"
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2020-01-23T14:00:53-08:00",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "NHA_CER"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Franchot.Depaolo@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.use">use</a>" : "official",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a>" : [
+              "Abaigh",
+              "Evangelia",
+              "Wahchinksapa"
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "VIHA_JOELAB"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Akono.Viscia@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.use">use</a>" : "official",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a>" : [
+              "Wilhelmus",
+              "Galatea",
+              "Olabisi"
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2017-01-23T14:00:53-08:00",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "NHA_CER"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Florentin.Klostermann@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.use">use</a>" : "nickname",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a>" : [
+              "Mia"
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "VCHA_RICH"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Flora.Demeester@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.use">use</a>" : "nickname",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a>" : [
+              "Jutta"
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2020-01-23T14:00:53-08:00",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.telecom">telecom</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "VIHA_SOUTH"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Margaret.Wilkins@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "6237064105",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "mobile",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "VCHA_PR"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Alissandre.Pfannenstiel@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "6304712096",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "mobile",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2021-01-23T14:00:53-08:00",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "VIHA_SOUTH"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Annunziata.Dronet@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "7121011390",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "home",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "VIHA_CENT"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Hesutu.Rohs@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "4163176376",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "home",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2017-01-23T14:00:53-08:00",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "PHNBOUND_RX"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Ngozi.Kinlin@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "9845613474",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "work",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "HIBC_MSP"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Hjalmar.Mickonis@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "2054428883",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "work",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2017-01-23T14:00:53-08:00",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "VIHA_NORTH"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Koren.Healy@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "Berne.Aron@cgi.com",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "mobile",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "FHA_PARIS"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Marcelle.Melton@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "Octavius.Megown@cgi.com",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "mobile",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2020-01-23T14:00:53-08:00",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "VIHA_JOEADT"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Leslie.Villela@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "Claude.Abuel@cgi.com",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "home",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "VIHA_JOELAB"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Rhoda.Hergenroeder@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "Madailein.Ivins@cgi.com",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "home",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2019-01-23T14:00:53-08:00",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "VIHA_NORTH"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Mana.Novielli@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "Akanni.Ehrler@cgi.com",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "work",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "PHSA_P"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Mary.Kirkpatrick@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "Tereza.Bis@cgi.com",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "work",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2017-01-23T14:00:53-08:00",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.gender">gender</a>" : "female",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.gender">_gender</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#code#code.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valuePeriod</a>" : {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2023-01-23T14:00:53-08:00"
+              }
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "FHA_SF"
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Irving.Desmarias@samples.com"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/administrative-gender",
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "female"
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valuePeriod</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2019-01-23T14:00:53-08:00",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2023-01-23T14:00:53-08:00"
+                  }
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                    {
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "VIHA_NORTH"
+                    },
+                    {
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Dougal.Stelle@samples.com"
+                    }
+                  ],
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">birthDate</a>" : "1946-11-28",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">_birthDate</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#date#date.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valuePeriod</a>" : {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2023-01-23T14:00:53-08:00"
+              }
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "FHA_FV"
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Maitena.Moulin@samples.com"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "birthDate",
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueDate</a>" : "1995-07-05"
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valuePeriod</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2017-01-23T14:00:53-08:00",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2023-01-23T14:00:53-08:00"
+                  }
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                    {
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "FHA_PRO"
+                    },
+                    {
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Ulrich.Degenhart@samples.com"
+                    }
+                  ],
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birthdate-history-extension"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.deceased[x]">deceasedDateTime</a>" : "1950-07-16",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.deceased[x]">_deceasedDateTime</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#dateTime#dateTime.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valuePeriod</a>" : {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2023-01-23T14:00:53-08:00"
+              }
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "VCHA_PR"
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Ottavio.Glovier@samples.com"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "deathVerifiedFlag",
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueBoolean</a>" : false
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valuePeriod</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2023-01-23T14:00:53-08:00"
+                  }
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                    {
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "PHNBOUND_RX"
+                    },
+                    {
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Jose.Baranovic@samples.com"
+                    }
+                  ],
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                    {
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "deathVerifiedFlag",
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueBoolean</a>" : false
+                    },
+                    {
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valuePeriod</a>" : {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2021-01-23T14:00:53-08:00",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2023-01-23T14:00:53-08:00"
+                      }
+                    },
+                    {
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                        {
+                          "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                          "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "VCHA_VGH"
+                        },
+                        {
+                          "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                          "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Aline.Otter@samples.com"
+                        }
+                      ],
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+                    }
+                  ],
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-history-extension"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "deathDate",
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueDateTime</a>" : "2000-02-04"
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valuePeriod</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2020-01-23T14:00:53-08:00",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2023-01-23T14:00:53-08:00"
+                  }
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                    {
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "IHA_IHA"
+                    },
+                    {
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Deina.Deandrade@samples.com"
+                    }
+                  ],
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-history-extension"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.address">address</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "unknown"
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "PHARM_RX"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Yuli.Raulston@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.type">type</a>" : "physical",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a>" : [
+              "1431 Riverwood drive"
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a>" : "Lake village",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.state">state</a>" : "BC",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.country">country</a>" : "CA",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "unknown"
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "VCHA_PHC"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Clarence.Beloate@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.type">type</a>" : "physical",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a>" : [
+              "7597 Mahlon street"
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a>" : "Maple plain",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.state">state</a>" : "BC",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.country">country</a>" : "CA",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2017-01-23T14:00:53-08:00",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "unknown"
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "VIHA_JOELAB"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Jeannot.Buchinski@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.type">type</a>" : "postal",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a>" : [
+              "1699 Brand road"
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a>" : "Hills",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.state">state</a>" : "BC",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.country">country</a>" : "CA",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "unknown"
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "sourceID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "VCHA_VGH"
+                  },
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "userID",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Cormac.Moor@samples.com"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.type">type</a>" : "postal",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a>" : [
+              "33031 Arrowood drive"
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a>" : "Mayfield heights",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.state">state</a>" : "BC",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.country">country</a>" : "CA",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.period">period</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2020-01-23T14:00:53-08:00",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2023-01-23T14:00:53-08:00"
+            }
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">mode</a>" : "outcome"
+      }
+    }
+  ]
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 2, 2023 00:15+0000">2023-02-02</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

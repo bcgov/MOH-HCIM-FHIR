@@ -1,0 +1,81 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "Merge-Response",
+  "meta" : {
+    "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle"]
+  },
+  "identifier" : {
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:uuid:5af209ac-343b-497c-8be3-7394b677318c"
+  },
+  "type" : "collection",
+  "timestamp" : "2023-01-23T14:45:48.1142315-08:00",
+  "link" : [{
+    "relation" : "canonical",
+    "url" : "https://ig.cgi.com/Patient/Merge.fhir"
+  }],
+  "entry" : [{
+    "fullUrl" : "urn:uuid:30f9e023-c3dc-43e3-bf91-b46da0836c16",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "id" : "601e87a1-d16e-4306-8414-d447a4d128ab",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"]
+      },
+      "parameter" : [{
+        "name" : "messageId",
+        "valueString" : "df2a3ffb-d760-40f7-9118-f1b6d86f1113"
+      },
+      {
+        "name" : "messageDateTime",
+        "valueDateTime" : "2023-01-23T14:45:47.9633129-08:00"
+      },
+      {
+        "name" : "sender",
+        "valueIdentifier" : {
+          "system" : "http://hlth.gov.bc.ca/fhir/client/bc-org",
+          "value" : "IHA"
+        }
+      },
+      {
+        "name" : "enterer",
+        "valueIdentifier" : {
+          "system" : "http://hlth.gov.bc.ca/fhir/client/bc-userid",
+          "value" : "ig.samples@cgi.com"
+        }
+      },
+      {
+        "name" : "requestMessageId",
+        "valueString" : "0cb29b89-8329-4f10-ba40-5384da37d0c2"
+      }]
+    },
+    "search" : {
+      "mode" : "include"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:30f9e023-c3dc-43e3-bf91-b46da0831234",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "id" : "Merge-Response-Outcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: OperationOutcome</b><a name=\"Merge-Response-Outcome\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource OperationOutcome &quot;Merge-Response-Outcome&quot; </p></div><h3>Issues</h3><table class=\"grid\"><tr><td>-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td>*</td><td>information</td><td>business-rule</td><td>The Person Merge request has completed successfully. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#BCHCIM.PM.0.0008)</span></td></tr></table></div>"
+      },
+      "issue" : [{
+        "severity" : "information",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes",
+            "code" : "BCHCIM.PM.0.0008"
+          }],
+          "text" : "The Person Merge request has completed successfully."
+        }
+      }]
+    },
+    "search" : {
+      "mode" : "outcome"
+    }
+  }]
+}

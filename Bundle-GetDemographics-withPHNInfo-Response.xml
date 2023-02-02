@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="GetDemographics-withPHNInfo-Response"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
+  </meta>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:501f39c8-a388-49a8-aaaa-cbd5d76bb5bd"/>
+  </identifier>
+  <type value="searchset"/>
+  <timestamp value="2023-01-23T14:00:53.7668522-08:00"/>
+  <total value="1"/>
+  <link>
+    <relation value="canonical"/>
+    <url value="https://ig.cgi.com/Patient/Get.fhir"/>
+  </link>
+  <entry>
+    <fullUrl value="urn:uuid:fb5ed5fa-e08f-4b88-948a-d81cd26d3453"/>
+    <resource>
+      <Parameters>
+        <id value="GetDemographics-withHistory-Response-Parameters"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"/>
+        </meta>
+        <parameter>
+          <name value="messageId"/>
+          <valueBoolean value="true"/>
+        </parameter>
+        <parameter>
+          <name value="messageDateTime"/>
+          <valueBoolean value="false"/>
+        </parameter>
+        <parameter>
+          <name value="sender"/>
+          <valueIdentifier>
+            <system value="http://hlth.gov.bc.ca/fhir/client/bc-org"/>
+            <value value="VIHA"/>
+          </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="enterer"/>
+          <valueIdentifier>
+            <system value="http://hlth.gov.bc.ca/fhir/client/bc-userid"/>
+            <value value="ig.samples@cgi.com"/>
+          </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="requestMessageId"/>
+          <valueString value="62ac7557-95b4-42b0-acb1-dde7bc56c964"/>
+        </parameter>
+      </Parameters>
+    </resource>
+    <search>
+      <mode value="include"/>
+    </search>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:99982f86-4044-48a6-9e63-3d221f3a9876"/>
+    <resource>
+      <OperationOutcome>
+        <id value="GetDemographics-withPHNInfo-Response-Outcome"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: OperationOutcome</b><a name="GetDemographics-withPHNInfo-Response-Outcome"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource OperationOutcome &quot;GetDemographics-withPHNInfo-Response-Outcome&quot; </p></div><h3>Issues</h3><table class="grid"><tr><td>-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td>*</td><td>information</td><td>business-rule</td><td>The get demographics query completed successfully. <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (bc-oo-codes#BCHCIM.GD.0.0013)</span></td></tr></table></div>
+        </text>
+        <issue>
+          <severity value="information"/>
+          <code value="business-rule"/>
+          <details>
+            <coding>
+              <system value="http://hlth.gov.bc.ca/fhir/client/bc-oo-codes"/>
+              <code value="BCHCIM.GD.0.0013"/>
+            </coding>
+            <text value="The get demographics query completed successfully."/>
+          </details>
+        </issue>
+      </OperationOutcome>
+    </resource>
+    <search>
+      <mode value="outcome"/>
+    </search>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:99982f86-4044-48a6-9e63-3d221f3a5f0d"/>
+    <resource>
+      <Patient>
+        <id value="GetDemographics-withPHNInfo-Response-Patient"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Patient</b><a name="GetDemographics-withPHNInfo-Response-Patient"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Patient &quot;GetDemographics-withPHNInfo-Response-Patient&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9999999999 (use: OFFICIAL, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)), Account number: F4299BA5ME6L02M9471NPF0V79Q4Q (use: OFFICIAL, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)), Account number: OE78E6XLL7MJB (use: OFFICIAL, period: 2018-01-23 14:00:53-0800 --&gt; 2023-01-23 14:00:53-0800), Account number: MVZQ14SG826PGIOY84DUDX20Q6S6Y8 (use: SECONDARY, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)), Account number: FPKP88TYFTW9V7I1MA19344FH2 (use: SECONDARY, period: 2018-01-23 14:00:53-0800 --&gt; 2023-01-23 14:00:53-0800), Jurisdictional health number: SI692PQ1R237ZT93076Z15S039215U8C0R (use: OFFICIAL, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing))</p><p><b>active</b>: true</p><p><b>name</b>: Alithea Joacheim Aine Parthemore , Christina Matei Marlin Kalscheuer , Abaigh Evangelia Wahchinksapa (OFFICIAL), Wilhelmus Galatea Olabisi (OFFICIAL), Mia (NICKNAME), Jutta (NICKNAME)</p><p><b>telecom</b>: ph: 6237064105(MOBILE), ph: 6304712096(MOBILE), ph: 7121011390(HOME), ph: 4163176376(HOME), ph: 9845613474(WORK), ph: 2054428883(WORK), <a href="mailto:Berne.Aron@cgi.com">Berne.Aron@cgi.com</a>, <a href="mailto:Octavius.Megown@cgi.com">Octavius.Megown@cgi.com</a>, <a href="mailto:Claude.Abuel@cgi.com">Claude.Abuel@cgi.com</a>, <a href="mailto:Madailein.Ivins@cgi.com">Madailein.Ivins@cgi.com</a>, <a href="mailto:Akanni.Ehrler@cgi.com">Akanni.Ehrler@cgi.com</a>, <a href="mailto:Tereza.Bis@cgi.com">Tereza.Bis@cgi.com</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1946-11-28</p><p><b>deceased</b>: 1950-07-16</p><p><b>address</b>: </p><ul><li>1431 Riverwood drive Lake village BC CA </li><li>7597 Mahlon street Maple plain BC CA </li><li>1699 Brand road Hills BC CA </li><li>33031 Arrowood drive Mayfield heights BC CA </li></ul></div>
+        </text>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="VIHA_JOELAB"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Monica.Simmonds@samples.com"/>
+            </extension>
+          </extension>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="JHN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"/>
+          <value value="9999999999"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </identifier>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="PHSA_P"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Dorthe.Rought@samples.com"/>
+            </extension>
+          </extension>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="AN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+          <value value="F4299BA5ME6L02M9471NPF0V79Q4Q"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+          <assigner>
+            <display value="VIHA_JOELAB"/>
+          </assigner>
+        </identifier>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="merged"/>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="VCHA_RICH"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Uberto.Sow@samples.com"/>
+            </extension>
+          </extension>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="AN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+          <value value="OE78E6XLL7MJB"/>
+          <period>
+            <start value="2018-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+          <assigner>
+            <display value="VIHA_JOELAB"/>
+          </assigner>
+        </identifier>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="FHA_PRO"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Kennocha.Debreto@samples.com"/>
+            </extension>
+          </extension>
+          <use value="secondary"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="AN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+          <value value="MVZQ14SG826PGIOY84DUDX20Q6S6Y8"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+          <assigner>
+            <display value="SSRI_SRC"/>
+          </assigner>
+        </identifier>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="merged"/>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="FHA_PARIS"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Ivonne.Rustad@samples.com"/>
+            </extension>
+          </extension>
+          <use value="secondary"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="AN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+          <value value="FPKP88TYFTW9V7I1MA19344FH2"/>
+          <period>
+            <start value="2018-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+          <assigner>
+            <display value="SSRI_SRC"/>
+          </assigner>
+        </identifier>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="FHA_FV"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Kate.Kamin@samples.com"/>
+            </extension>
+          </extension>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="JHN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/AB"/>
+          <value value="SI692PQ1R237ZT93076Z15S039215U8C0R"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </identifier>
+        <active value="true"/>
+        <name>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="VCHA_VGH"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Leo.Perler@samples.com"/>
+            </extension>
+          </extension>
+          <use value="usual"/>
+          <family value="Parthemore"/>
+          <given value="Alithea"/>
+          <given value="Joacheim"/>
+          <given value="Aine"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </name>
+        <name>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="HIBC_MSP"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Amandine.Norem@samples.com"/>
+            </extension>
+          </extension>
+          <use value="usual"/>
+          <family value="Kalscheuer"/>
+          <given value="Christina"/>
+          <given value="Matei"/>
+          <given value="Marlin"/>
+          <period>
+            <start value="2020-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </name>
+        <name>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="NHA_CER"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Franchot.Depaolo@samples.com"/>
+            </extension>
+          </extension>
+          <use value="official"/>
+          <given value="Abaigh"/>
+          <given value="Evangelia"/>
+          <given value="Wahchinksapa"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </name>
+        <name>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="VIHA_JOELAB"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Akono.Viscia@samples.com"/>
+            </extension>
+          </extension>
+          <use value="official"/>
+          <given value="Wilhelmus"/>
+          <given value="Galatea"/>
+          <given value="Olabisi"/>
+          <period>
+            <start value="2017-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </name>
+        <name>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="NHA_CER"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Florentin.Klostermann@samples.com"/>
+            </extension>
+          </extension>
+          <use value="nickname"/>
+          <given value="Mia"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </name>
+        <name>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="VCHA_RICH"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Flora.Demeester@samples.com"/>
+            </extension>
+          </extension>
+          <use value="nickname"/>
+          <given value="Jutta"/>
+          <period>
+            <start value="2020-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </name>
+        <telecom>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="VIHA_SOUTH"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Margaret.Wilkins@samples.com"/>
+            </extension>
+          </extension>
+          <system value="phone"/>
+          <value value="6237064105"/>
+          <use value="mobile"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="VCHA_PR"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Alissandre.Pfannenstiel@samples.com"/>
+            </extension>
+          </extension>
+          <system value="phone"/>
+          <value value="6304712096"/>
+          <use value="mobile"/>
+          <period>
+            <start value="2021-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="VIHA_SOUTH"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Annunziata.Dronet@samples.com"/>
+            </extension>
+          </extension>
+          <system value="phone"/>
+          <value value="7121011390"/>
+          <use value="home"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="VIHA_CENT"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Hesutu.Rohs@samples.com"/>
+            </extension>
+          </extension>
+          <system value="phone"/>
+          <value value="4163176376"/>
+          <use value="home"/>
+          <period>
+            <start value="2017-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="PHNBOUND_RX"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Ngozi.Kinlin@samples.com"/>
+            </extension>
+          </extension>
+          <system value="phone"/>
+          <value value="9845613474"/>
+          <use value="work"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="HIBC_MSP"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Hjalmar.Mickonis@samples.com"/>
+            </extension>
+          </extension>
+          <system value="phone"/>
+          <value value="2054428883"/>
+          <use value="work"/>
+          <period>
+            <start value="2017-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="VIHA_NORTH"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Koren.Healy@samples.com"/>
+            </extension>
+          </extension>
+          <system value="email"/>
+          <value value="Berne.Aron@cgi.com"/>
+          <use value="mobile"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="FHA_PARIS"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Marcelle.Melton@samples.com"/>
+            </extension>
+          </extension>
+          <system value="email"/>
+          <value value="Octavius.Megown@cgi.com"/>
+          <use value="mobile"/>
+          <period>
+            <start value="2020-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="VIHA_JOEADT"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Leslie.Villela@samples.com"/>
+            </extension>
+          </extension>
+          <system value="email"/>
+          <value value="Claude.Abuel@cgi.com"/>
+          <use value="home"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="VIHA_JOELAB"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Rhoda.Hergenroeder@samples.com"/>
+            </extension>
+          </extension>
+          <system value="email"/>
+          <value value="Madailein.Ivins@cgi.com"/>
+          <use value="home"/>
+          <period>
+            <start value="2019-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="VIHA_NORTH"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Mana.Novielli@samples.com"/>
+            </extension>
+          </extension>
+          <system value="email"/>
+          <value value="Akanni.Ehrler@cgi.com"/>
+          <use value="work"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="PHSA_P"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Mary.Kirkpatrick@samples.com"/>
+            </extension>
+          </extension>
+          <system value="email"/>
+          <value value="Tereza.Bis@cgi.com"/>
+          <use value="work"/>
+          <period>
+            <start value="2017-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <gender value="female">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2023-01-23T14:00:53-08:00"/>
+            </valuePeriod>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="FHA_SF"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Irving.Desmarias@samples.com"/>
+            </extension>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension">
+            <extension url="http://hl7.org/fhir/administrative-gender">
+              <valueCode value="female"/>
+            </extension>
+            <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+              <valuePeriod>
+                <start value="2019-01-23T14:00:53-08:00"/>
+                <end value="2023-01-23T14:00:53-08:00"/>
+              </valuePeriod>
+            </extension>
+            <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+              <extension url="sourceID">
+                <valueString value="VIHA_NORTH"/>
+              </extension>
+              <extension url="userID">
+                <valueString value="Dougal.Stelle@samples.com"/>
+              </extension>
+            </extension>
+          </extension>
+        </gender>
+        <birthDate value="1946-11-28">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2023-01-23T14:00:53-08:00"/>
+            </valuePeriod>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="FHA_FV"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Maitena.Moulin@samples.com"/>
+            </extension>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birthdate-history-extension">
+            <extension url="birthDate">
+              <valueDate value="1995-07-05"/>
+            </extension>
+            <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+              <valuePeriod>
+                <start value="2017-01-23T14:00:53-08:00"/>
+                <end value="2023-01-23T14:00:53-08:00"/>
+              </valuePeriod>
+            </extension>
+            <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+              <extension url="sourceID">
+                <valueString value="FHA_PRO"/>
+              </extension>
+              <extension url="userID">
+                <valueString value="Ulrich.Degenhart@samples.com"/>
+              </extension>
+            </extension>
+          </extension>
+        </birthDate>
+        <deceasedDateTime value="1950-07-16">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2023-01-23T14:00:53-08:00"/>
+            </valuePeriod>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="VCHA_PR"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Ottavio.Glovier@samples.com"/>
+            </extension>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension">
+            <extension url="deathVerifiedFlag">
+              <valueBoolean value="false"/>
+            </extension>
+            <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+              <valuePeriod>
+                <start value="2023-01-23T14:00:53-08:00"/>
+              </valuePeriod>
+            </extension>
+            <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+              <extension url="sourceID">
+                <valueString value="PHNBOUND_RX"/>
+              </extension>
+              <extension url="userID">
+                <valueString value="Jose.Baranovic@samples.com"/>
+              </extension>
+            </extension>
+            <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-history-extension">
+              <extension url="deathVerifiedFlag">
+                <valueBoolean value="false"/>
+              </extension>
+              <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+                <valuePeriod>
+                  <start value="2021-01-23T14:00:53-08:00"/>
+                  <end value="2023-01-23T14:00:53-08:00"/>
+                </valuePeriod>
+              </extension>
+              <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+                <extension url="sourceID">
+                  <valueString value="VCHA_VGH"/>
+                </extension>
+                <extension url="userID">
+                  <valueString value="Aline.Otter@samples.com"/>
+                </extension>
+              </extension>
+            </extension>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-history-extension">
+            <extension url="deathDate">
+              <valueDateTime value="2000-02-04"/>
+            </extension>
+            <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+              <valuePeriod>
+                <start value="2020-01-23T14:00:53-08:00"/>
+                <end value="2023-01-23T14:00:53-08:00"/>
+              </valuePeriod>
+            </extension>
+            <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+              <extension url="sourceID">
+                <valueString value="IHA_IHA"/>
+              </extension>
+              <extension url="userID">
+                <valueString value="Deina.Deandrade@samples.com"/>
+              </extension>
+            </extension>
+          </extension>
+        </deceasedDateTime>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="unknown"/>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="PHARM_RX"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Yuli.Raulston@samples.com"/>
+            </extension>
+          </extension>
+          <type value="physical"/>
+          <line value="1431 Riverwood drive"/>
+          <city value="Lake village"/>
+          <state value="BC"/>
+          <country value="CA"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </address>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="unknown"/>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="VCHA_PHC"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Clarence.Beloate@samples.com"/>
+            </extension>
+          </extension>
+          <type value="physical"/>
+          <line value="7597 Mahlon street"/>
+          <city value="Maple plain"/>
+          <state value="BC"/>
+          <country value="CA"/>
+          <period>
+            <start value="2017-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </address>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="unknown"/>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="VIHA_JOELAB"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Jeannot.Buchinski@samples.com"/>
+            </extension>
+          </extension>
+          <type value="postal"/>
+          <line value="1699 Brand road"/>
+          <city value="Hills"/>
+          <state value="BC"/>
+          <country value="CA"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </address>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="unknown"/>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension">
+            <extension url="sourceID">
+              <valueString value="VCHA_VGH"/>
+            </extension>
+            <extension url="userID">
+              <valueString value="Cormac.Moor@samples.com"/>
+            </extension>
+          </extension>
+          <type value="postal"/>
+          <line value="33031 Arrowood drive"/>
+          <city value="Mayfield heights"/>
+          <state value="BC"/>
+          <country value="CA"/>
+          <period>
+            <start value="2020-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </address>
+      </Patient>
+    </resource>
+    <search>
+      <mode value="outcome"/>
+    </search>
+  </entry>
+</Bundle>

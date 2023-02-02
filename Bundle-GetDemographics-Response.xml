@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="GetDemographics-Response"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
+  </meta>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:9b9cb4b5-6845-4d6b-b71e-b0cb42f92da9"/>
+  </identifier>
+  <type value="searchset"/>
+  <timestamp value="2023-01-23T14:00:53.6840428-08:00"/>
+  <total value="1"/>
+  <link>
+    <relation value="canonical"/>
+    <url value="https://ig.cgi.com/Patient/Get.fhir"/>
+  </link>
+  <entry>
+    <fullUrl value="urn:uuid:289d85b9-43a4-4902-9b52-76cb1f02ea69"/>
+    <resource>
+      <Parameters>
+        <id value="f957605d-72a3-4930-a71a-71225c389e44"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"/>
+        </meta>
+        <parameter>
+          <name value="messageId"/>
+          <valueBoolean value="false"/>
+        </parameter>
+        <parameter>
+          <name value="messageDateTime"/>
+          <valueBoolean value="false"/>
+        </parameter>
+        <parameter>
+          <name value="sender"/>
+          <valueIdentifier>
+            <system value="http://hlth.gov.bc.ca/fhir/client/bc-org"/>
+            <value value="VIHA"/>
+          </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="enterer"/>
+          <valueIdentifier>
+            <system value="http://hlth.gov.bc.ca/fhir/client/bc-userid"/>
+            <value value="ig.samples@cgi.com"/>
+          </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="requestMessageId"/>
+          <valueString value="73b06e0b-8372-496e-83dc-796b42cf730f"/>
+        </parameter>
+      </Parameters>
+    </resource>
+    <search>
+      <mode value="include"/>
+    </search>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:289d85b9-43a4-4902-9b52-76cb1f01234"/>
+    <resource>
+      <OperationOutcome>
+        <id value="GetDemographics-Response-Outcome"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: OperationOutcome</b><a name="GetDemographics-Response-Outcome"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource OperationOutcome &quot;GetDemographics-Response-Outcome&quot; </p></div><h3>Issues</h3><table class="grid"><tr><td>-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td>*</td><td>information</td><td>business-rule</td><td>The get demographics query completed successfully. <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (bc-oo-codes#BCHCIM.GD.0.0013)</span></td></tr></table></div>
+        </text>
+        <issue>
+          <severity value="information"/>
+          <code value="business-rule"/>
+          <details>
+            <coding>
+              <system value="http://hlth.gov.bc.ca/fhir/client/bc-oo-codes"/>
+              <code value="BCHCIM.GD.0.0013"/>
+            </coding>
+            <text value="The get demographics query completed successfully."/>
+          </details>
+        </issue>
+      </OperationOutcome>
+    </resource>
+    <search>
+      <mode value="outcome"/>
+    </search>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:27fb3c46-a6ea-4986-8238-d94d6655cc1d"/>
+    <resource>
+      <Patient>
+        <id value="GetDemographics-Response-Patient"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Patient</b><a name="GetDemographics-Response-Patient"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Patient &quot;GetDemographics-Response-Patient&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9999999999 (use: OFFICIAL), Account number: 1X37W2G5APJ3Q70RDS0XB25ZW0313MUT (use: OFFICIAL, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)), Jurisdictional health number: 137Q50W1TI6SW94Z120WP14VSB291COAD (use: OFFICIAL, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing))</p><p><b>active</b>: true</p><p><b>name</b>: Benedetta Wuliton Ararinda Colpitts , Ahanu Bardo Natalene (OFFICIAL), Athanasia (NICKNAME)</p><p><b>telecom</b>: ph: 2045588814(MOBILE), ph: 7705666584(HOME), ph: 8156366902(WORK), <a href="mailto:Agapios.Nesmith@cgi.com">Agapios.Nesmith@cgi.com</a>, <a href="mailto:Editta.Panchik@cgi.com">Editta.Panchik@cgi.com</a>, <a href="mailto:Weayaya.Sharber@cgi.com">Weayaya.Sharber@cgi.com</a></p><p><b>gender</b>: male</p><p><b>birthDate</b>: 2005-05-24</p><p><b>deceased</b>: 2006-08-28</p><p><b>address</b>: </p><ul><li>30729 Middleville road Signal mountain BC CA </li><li>47625 Colony street Benton township BC CA </li></ul></div>
+        </text>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="JHN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"/>
+          <value value="9999999999"/>
+        </identifier>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="AN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+          <value value="1X37W2G5APJ3Q70RDS0XB25ZW0313MUT"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+          <assigner>
+            <display value="VIHA_JOELAB"/>
+          </assigner>
+        </identifier>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="JHN"/>
+            </coding>
+          </type>
+          <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/AB"/>
+          <value value="137Q50W1TI6SW94Z120WP14VSB291COAD"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </identifier>
+        <active value="true"/>
+        <name>
+          <use value="usual"/>
+          <family value="Colpitts"/>
+          <given value="Benedetta"/>
+          <given value="Wuliton"/>
+          <given value="Ararinda"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </name>
+        <name>
+          <use value="official"/>
+          <given value="Ahanu"/>
+          <given value="Bardo"/>
+          <given value="Natalene"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </name>
+        <name>
+          <use value="nickname"/>
+          <given value="Athanasia"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="2045588814"/>
+          <use value="mobile"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="7705666584"/>
+          <use value="home"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="8156366902"/>
+          <use value="work"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="Agapios.Nesmith@cgi.com"/>
+          <use value="mobile"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="Editta.Panchik@cgi.com"/>
+          <use value="home"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="Weayaya.Sharber@cgi.com"/>
+          <use value="work"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <gender value="male">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2023-01-23T14:00:53-08:00"/>
+            </valuePeriod>
+          </extension>
+        </gender>
+        <birthDate value="2005-05-24">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2023-01-23T14:00:53-08:00"/>
+            </valuePeriod>
+          </extension>
+        </birthDate>
+        <deceasedDateTime value="2006-08-28">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2023-01-23T14:00:53-08:00"/>
+            </valuePeriod>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension">
+            <extension url="deathVerifiedFlag">
+              <valueBoolean value="false"/>
+            </extension>
+            <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+              <valuePeriod>
+                <start value="2023-01-23T14:00:53-08:00"/>
+              </valuePeriod>
+            </extension>
+          </extension>
+        </deceasedDateTime>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="unknown"/>
+          </extension>
+          <type value="physical"/>
+          <line value="30729 Middleville road"/>
+          <city value="Signal mountain"/>
+          <state value="BC"/>
+          <country value="CA"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </address>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="unknown"/>
+          </extension>
+          <type value="postal"/>
+          <line value="47625 Colony street"/>
+          <city value="Benton township"/>
+          <state value="BC"/>
+          <country value="CA"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </address>
+      </Patient>
+    </resource>
+    <search>
+      <mode value="outcome"/>
+    </search>
+  </entry>
+</Bundle>

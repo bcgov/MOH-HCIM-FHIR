@@ -1,0 +1,81 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "Revise-Async-ACK",
+  "meta" : {
+    "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-async-ack-response-bundle"]
+  },
+  "identifier" : {
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:uuid:157abc8c-036b-4fb6-960a-ba66e931189d"
+  },
+  "type" : "collection",
+  "timestamp" : "2023-01-23T14:02:15.999572-08:00",
+  "link" : [{
+    "relation" : "canonical",
+    "url" : "Patient\\Revise"
+  }],
+  "entry" : [{
+    "fullUrl" : "urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "id" : "6426876c-8118-4020-8364-7021d0a1ec23",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameter-async-response"]
+      },
+      "parameter" : [{
+        "name" : "messageId",
+        "valueString" : "f95c3be0-b6ed-4aec-b969-7bc7da904315"
+      },
+      {
+        "name" : "messageDateTime",
+        "valueDateTime" : "2023-01-23T14:02:15.7581133-08:00"
+      },
+      {
+        "name" : "sender",
+        "valueIdentifier" : {
+          "system" : "http://hlth.gov.bc.ca/fhir/client/bc-org",
+          "value" : "VPP"
+        }
+      },
+      {
+        "name" : "enterer",
+        "valueIdentifier" : {
+          "system" : "http://hlth.gov.bc.ca/fhir/client/bc-userid",
+          "value" : "ig.samples@cgi.com"
+        }
+      },
+      {
+        "name" : "requestMessageId",
+        "valueString" : "823d7eb6-24d5-452f-b2d0-f86f2f6130e7"
+      }]
+    },
+    "search" : {
+      "mode" : "include"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:e12213c8-9351-4a9b-94cb-54d3710b9876",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "id" : "Revise-Async-ACK-Outcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: OperationOutcome</b><a name=\"Revise-Async-ACK-Outcome\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource OperationOutcome &quot;Revise-Async-ACK-Outcome&quot; </p></div><h3>Issues</h3><table class=\"grid\"><tr><td>-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td>*</td><td>information</td><td>business-rule</td><td>The Revise Person request has been accepted for processing. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#BCHCIM.RP.0.0007)</span></td></tr></table></div>"
+      },
+      "issue" : [{
+        "severity" : "information",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes",
+            "code" : "BCHCIM.RP.0.0007"
+          }],
+          "text" : "The Revise Person request has been accepted for processing."
+        }
+      }]
+    },
+    "search" : {
+      "mode" : "outcome"
+    }
+  }]
+}
