@@ -10,7 +10,7 @@
   "name" : "BCHealthClientIdentityManagement",
   "title" : "BC Client Registry FHIR Implementation Guide",
   "status" : "draft",
-  "date" : "2023-02-02T17:38:38+00:00",
+  "date" : "2023-02-07T22:10:03+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",
@@ -783,9 +783,8 @@
         "reference" : "StructureDefinition/bc-patient-by-example"
       },
       "name" : "PatientByExample",
-      "description" : "General constraints on the Patient resource for use in the BC Client Registry project for queries.",
-      "exampleBoolean" : false,
-      "groupingId" : "PatientProfile"
+      "description" : "Will get removed. General constraints on the Patient resource for use in the BC Client Registry project for queries. PatientByExample is a resource of the Client Registry FHIR implementation use only by Get Demographics and Find Candidates",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1184,114 +1183,6 @@
         "valueString" : "Bundle"
       }],
       "reference" : {
-        "reference" : "Bundle/Bundle-AddPatient-Newborn-Request-Example"
-      },
-      "name" : "Bundle-AddPatient-Newborn-Request-Example",
-      "description" : "Example of $AddPatient operation for a newborn.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/Bundle-AddPatient-Request-Example"
-      },
-      "name" : "Bundle-AddPatient-Request-Example",
-      "description" : "Example of $AddPatient operation.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/Bundle-AddPatient-Response-Example"
-      },
-      "name" : "Bundle-AddPatient-Response-Example",
-      "description" : "A sample AddPatient Operation response.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-response-bundle"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/Bundle-FindCandidates-Response-Example"
-      },
-      "name" : "Bundle-FindCandidates-Response-Example",
-      "description" : "Example of FindCandidates response Bundle.  Patient0 has PHN, alternate, SRI and SSRI identifier examples.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/Bundle-FindCandidates-Response-MomsPHN-Example"
-      },
-      "name" : "Bundle-FindCandidates-Response-MomsPHN-Example",
-      "description" : "Example of FindCandidates with mother's PHN response Bundle.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/Bundle-FindCandidates-UsingMomsPHN-Request-Example"
-      },
-      "name" : "Bundle-FindCandidates-UsingMomsPHN-Request-Example",
-      "description" : "Example of $FindCandidates operation with Mother's PHN.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/Bundle-FindCandidatesByExample-Request-Example"
-      },
-      "name" : "Bundle-FindCandidatesByExample-Request-Example",
-      "description" : "Example of $FindCandidates operation",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/Bundle-GetDemographics-Request-Example"
-      },
-      "name" : "Bundle-GetDemographics-Request-Example",
-      "description" : "Example of $GetDemographics operation",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/Bundle-GetDemographics-Response-Example"
-      },
-      "name" : "Bundle-GetDemographics-Response-Example",
-      "description" : "Example of $GetDemographics operation response Bundle",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
         "reference" : "Bundle/Bundle-GetDemographicsWithEligibility-Response-Example"
       },
       "name" : "Bundle-GetDemographicsWithEligibility-Response-Example",
@@ -1328,34 +1219,10 @@
         "valueString" : "Bundle"
       }],
       "reference" : {
-        "reference" : "Bundle/Bundle-RevisePatient-Request-Example"
-      },
-      "name" : "Bundle-RevisePatient-Request-Example",
-      "description" : "Example of $RevisePatient operation.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/Bundle-RevisePatient-Response-Example"
-      },
-      "name" : "Bundle-RevisePatient-Response-Example",
-      "description" : "A sample RevisePatient Operation response.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
         "reference" : "Bundle/Bundle-UpdatePatient-Request-Example"
       },
       "name" : "Bundle-UpdatePatient-Request-Example",
-      "description" : "A sample UpdatePatient request.",
+      "description" : "A sample UpdatePatient request. This example shows a Address update that replaces an existing address.",
       "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-request-bundle"
     },
     {
@@ -1417,7 +1284,8 @@
       },
       "name" : "FindCandidates-Response",
       "description" : "Example of $FindCandidates response",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
+      "groupingId" : "ResponseExamples"
     },
     {
       "extension" : [{
@@ -1578,18 +1446,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "RelatedPerson"
-      }],
-      "reference" : {
-        "reference" : "RelatedPerson/MothersPHN-RelatedPerson-ForFC"
-      },
-      "name" : "MothersPHN-RelatedPerson-ForFC",
-      "description" : "RelatedPerson, representing Mother, for Find Candidate Operation by mother's PHN",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "OperationOutcome"
       }],
       "reference" : {
@@ -1605,119 +1461,11 @@
         "valueString" : "OperationOutcome"
       }],
       "reference" : {
-        "reference" : "OperationOutcome/OperationOutcome-Example-RP"
-      },
-      "name" : "OperationOutcome-Example-RP",
-      "description" : "Example OperationOutcome for a Client Registry Revise Patient.",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationOutcome"
-      }],
-      "reference" : {
         "reference" : "OperationOutcome/OperationOutcome-Search-Example"
       },
       "name" : "OperationOutcome-Search-Example",
       "description" : "Example OperationOutcome for a Client Registry Search",
       "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Parameters"
-      }],
-      "reference" : {
-        "reference" : "Parameters/Parameters-AddPatient-Example"
-      },
-      "name" : "Parameters-AddPatient-Example",
-      "description" : "Example of $AddPatient parameters.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Parameters"
-      }],
-      "reference" : {
-        "reference" : "Parameters/Parameters-AddPatient-Newborn-Example"
-      },
-      "name" : "Parameters-AddPatient-Newborn-Example",
-      "description" : "Example of $RevisePatient.Newborn operation where the Patient is a newborn.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Parameters"
-      }],
-      "reference" : {
-        "reference" : "Parameters/Parameters-AddPatient-Response-Example"
-      },
-      "name" : "Parameters-AddPatient-Response-Example",
-      "description" : "Example of Add response Metadata parameters",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Parameters"
-      }],
-      "reference" : {
-        "reference" : "Parameters/Parameters-FindCandidates-Example"
-      },
-      "name" : "Parameters-FindCandidates-Example",
-      "description" : "Example of $FindCandidates search parameters.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Parameters"
-      }],
-      "reference" : {
-        "reference" : "Parameters/Parameters-FindCandidates-Response-Example"
-      },
-      "name" : "Parameters-FindCandidates-Response-Example",
-      "description" : "Example of $FindCandidates response Metadata parameters",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Parameters"
-      }],
-      "reference" : {
-        "reference" : "Parameters/Parameters-GetDemographics-Example"
-      },
-      "name" : "Parameters-GetDemographics-Example",
-      "description" : "Example of $GetDemographics operation",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Parameters"
-      }],
-      "reference" : {
-        "reference" : "Parameters/Parameters-GetDemographics-IN-Example"
-      },
-      "name" : "Parameters-GetDemographics-IN-Example",
-      "description" : "Example of $GetDemographics operation, IN parameters",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Parameters"
-      }],
-      "reference" : {
-        "reference" : "Parameters/Parameters-GetDemographics-Response-Example"
-      },
-      "name" : "Parameters-GetDemographics-Response-Example",
-      "description" : "Example of $GetDemographics response Metadata parameters",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"
     },
     {
       "extension" : [{
@@ -1773,30 +1521,6 @@
         "valueString" : "Parameters"
       }],
       "reference" : {
-        "reference" : "Parameters/Parameters-RevisePatient-Example"
-      },
-      "name" : "Parameters-RevisePatient-Example",
-      "description" : "Example of $RevisePatient operation that updates an existing Patient",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Parameters"
-      }],
-      "reference" : {
-        "reference" : "Parameters/Parameters-RevisePatient-Response-Example"
-      },
-      "name" : "Parameters-RevisePatient-Response-Example",
-      "description" : "Example of Revise response Metadata parameters",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Parameters"
-      }],
-      "reference" : {
         "reference" : "Parameters/Parameters-UpdatePatient-Request-Example"
       },
       "name" : "Parameters-UpdatePatient-Request-Example",
@@ -1821,155 +1545,11 @@
         "valueString" : "Patient"
       }],
       "reference" : {
-        "reference" : "Patient/Patient-0-Example"
-      },
-      "name" : "Patient-0-Example",
-      "description" : "Example of Patient for query response Bundle with 4 different kinds of identifiers: SRI-PHN, SRI, SSRI and alternative.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/Patient-1-Example"
-      },
-      "name" : "Patient-1-Example",
-      "description" : "Example of Patient for query response Bundle",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/Patient-2-Example"
-      },
-      "name" : "Patient-2-Example",
-      "description" : "Example of Patient for query response Bundle",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/Patient-AddPatient-Example"
-      },
-      "name" : "Patient-AddPatient-Example",
-      "description" : "The Patient is completely new to the Client Registry, no identifiers.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/Patient-AddPatient-Newborn-Example"
-      },
-      "name" : "Patient-AddPatient-Newborn-Example",
-      "description" : "The Patient is completely new to the Client Registry, no identifiers.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/Patient-AddReviseOrMergePatient-Response-Example"
-      },
-      "name" : "Patient-AddReviseOrMergePatient-Response-Example",
-      "description" : "Example of Merge or Revise response Bundle with 4 different kinds of identifiers: SRI-PHN, SRI, SSRI and alternative.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/Patient-BabyBoy-Example"
-      },
-      "name" : "Patient-BabyBoy-Example",
-      "description" : "Example of Patient newborn for query response Bundle",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/Patient-BabyGirl-Example"
-      },
-      "name" : "Patient-BabyGirl-Example",
-      "description" : "Example of Patient newborn for query response Bundle",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/Patient-By-Example-Example"
-      },
-      "name" : "Patient-By-Example-Example",
-      "description" : "An example of a Patient used for Find Candidates query.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/Patient-By-Example-GD-Example"
-      },
-      "name" : "Patient-By-Example-GD-Example",
-      "description" : "An example of a Patient used for Get Demographics query.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
         "reference" : "Patient/Patient-GetDemographics-Example"
       },
       "name" : "Patient-GetDemographics-Example",
       "description" : "Example of Patient for $GetDemographics operation response",
       "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/Patient-GetDemographics-withHistory-Example"
-      },
-      "name" : "Patient-GetDemographics-withHistory-Example",
-      "description" : "Example of Patient for $GetDemographics operation response",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/Patient-Identifier-Examples"
-      },
-      "name" : "Patient-Identifier-Examples",
-      "description" : "An example of a Patient with descriptive Identifier.",
-      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -1989,71 +1569,11 @@
         "valueString" : "Patient"
       }],
       "reference" : {
-        "reference" : "Patient/Patient-Mother-Example"
-      },
-      "name" : "Patient-Mother-Example",
-      "description" : "Example of Patient for query response Bundle",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/Patient-RevisePatient-Example"
-      },
-      "name" : "Patient-RevisePatient-Example",
-      "description" : "Patient example for a RevisePatient operation",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
         "reference" : "Patient/Patient-UpdatePatient-Request-Example"
       },
       "name" : "Patient-UpdatePatient-Request-Example",
       "description" : "Patient example for a UpdatePatient operation that changes the Address.",
       "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "RelatedPerson"
-      }],
-      "reference" : {
-        "reference" : "RelatedPerson/RelatedPerson-Mother-Example"
-      },
-      "name" : "RelatedPerson-Mother-Example",
-      "description" : "Example of related person's PHN as Identifier",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "RelatedPerson"
-      }],
-      "reference" : {
-        "reference" : "RelatedPerson/RelatedPerson-MotherOfBabyBoy-Example"
-      },
-      "name" : "RelatedPerson-MotherOfBabyBoy-Example",
-      "description" : "Example of related person who is the mother",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "RelatedPerson"
-      }],
-      "reference" : {
-        "reference" : "RelatedPerson/RelatedPerson-MotherOfBabyGirl-Example"
-      },
-      "name" : "RelatedPerson-MotherOfBabyGirl-Example",
-      "description" : "Example of related person who is the mother",
-      "exampleBoolean" : true
     },
     {
       "extension" : [{
