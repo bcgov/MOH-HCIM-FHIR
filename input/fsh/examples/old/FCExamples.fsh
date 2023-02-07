@@ -1,4 +1,4 @@
-Instance: Bundle-FindCandidates-UsingMomsPHN-Request-Example
+/*Instance: Bundle-FindCandidates-UsingMomsPHN-Request-Example
 InstanceOf: FindCandidatesRequestBundle
 Description: "Example of $FindCandidates operation with Mother's PHN."
 * type = #collection
@@ -22,10 +22,10 @@ Description: "RelatedPerson, representing Mother, for Find Candidate Operation b
 // Data absent reason was not passing validation and can't use uuid as 
 // uuid is an internal reference (fullUrl in Bunlde must be found matching
 // the uuid).  Instead we use the simple text display.
-* patient.display = "The newborn."
+* patient.display = "The newborn."/**/
 
 
-Instance: Parameters-FindCandidates-Response-Example
+/*Instance: Parameters-FindCandidates-Response-Example
 InstanceOf: MetadataParametersOut
 Description: "Example of $FindCandidates response Metadata parameters"
 
@@ -65,19 +65,19 @@ Description: "Example of FindCandidates response Bundle.  Patient0 has PHN, alte
 * entry[2].resource = Patient-0-Example
 * entry[2].search.score = 31
 * entry[2].search.mode = #match
-* entry[2].fullUrl = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"
+* entry[2].fullUrl = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"*/
 
-* entry[3].resource = Patient-1-Example
+/* entry[3].resource = Patient-1-Example
 * entry[3].search.score = -53
 * entry[3].search.mode = #match
-* entry[3].fullUrl = "urn:uuid:90bf49dc-4590-4302-8e28-f02bb4deb353"
+* entry[3].fullUrl = "urn:uuid:90bf49dc-4590-4302-8e28-f02bb4deb353"*/
 
-* entry[4].resource = Patient-2-Example
-* entry[4].search.score = -56
-* entry[4].search.mode = #match
-* entry[4].fullUrl = "urn:uuid:072f48b7-43c5-4bec-8798-026cc432adcf"
+/* entry[3].resource = Patient-2-Example
+* entry[3].search.score = -56
+* entry[3].search.mode = #match
+* entry[3].fullUrl = "urn:uuid:072f48b7-43c5-4bec-8798-026cc432adcf"*/
 
-Instance: Bundle-FindCandidates-Response-MomsPHN-Example
+/*Instance: Bundle-FindCandidates-Response-MomsPHN-Example
 InstanceOf: SearchResponseBundle
 Description: "Example of FindCandidates with mother's PHN response Bundle."
 * type = #searchset
@@ -119,4 +119,4 @@ Description: "Example of FindCandidates with mother's PHN response Bundle."
 // mother
 * entry[6].resource = Patient-Mother-Example
 * entry[6].fullUrl = "urn:uuid:e0930c14-4264-4bc8-b494-d977396db402"
-* entry[6].search.mode = #include
+* entry[6].search.mode = #include*/

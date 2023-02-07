@@ -1,6 +1,6 @@
 Instance: Bundle-UpdatePatient-Request-Example
 InstanceOf: PartialUpdateRequestBundle
-Description: "A sample UpdatePatient request."
+Description: "A sample UpdatePatient request. This example shows a Address update that replaces an existing address."
 * type = #collection
 * timestamp = "2011-09-13T16:11:43.000-07:00"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -63,7 +63,5 @@ Description: "A sample UpdatePatient Operation response."
 * entry[1].resource = OperationOutcome-Example
 * entry[1].fullUrl = "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"
 
-* entry[2].resource = Patient-AddReviseOrMergePatient-Response-Example
-* entry[2].fullUrl = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"
-
-
+/* entry[2].resource = Patient-AddReviseOrMergePatient-Response-Example
+* entry[2].fullUrl = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"*/

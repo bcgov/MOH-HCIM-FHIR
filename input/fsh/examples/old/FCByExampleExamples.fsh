@@ -1,4 +1,4 @@
-Instance: Bundle-FindCandidatesByExample-Request-Example
+/*Instance: Bundle-FindCandidatesByExample-Request-Example
 InstanceOf: FindCandidatesRequestBundle
 Description: "Example of $FindCandidates operation"
 * type = #collection
@@ -22,5 +22,5 @@ Description: "Example of $FindCandidates search parameters."
 * parameter[messageDateTime].valueDateTime = "2015-02-07T13:28:17-08:00"
 
 * parameter[2].name = "identifiersOnly"
-* parameter[2].valueBoolean = false
+* parameter[2].valueBoolean = false*/
 

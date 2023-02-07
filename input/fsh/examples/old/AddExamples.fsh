@@ -1,4 +1,4 @@
-Instance: Bundle-AddPatient-Request-Example
+/*Instance: Bundle-AddPatient-Request-Example
 InstanceOf: AddRequestBundle
 Description: "Example of $AddPatient operation."
 * type = #collection
@@ -84,7 +84,5 @@ Description: "A sample AddPatient Operation response."
 * entry[1].resource = OperationOutcome-Example
 * entry[1].fullUrl = "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1"
 
-* entry[2].resource = Patient-AddReviseOrMergePatient-Response-Example
-* entry[2].fullUrl = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"
-
-
+/* entry[2].resource = Patient-AddReviseOrMergePatient-Response-Example
+* entry[2].fullUrl = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"*/

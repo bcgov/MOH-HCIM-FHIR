@@ -1,0 +1,1 @@
+The RevisePatient FHIR Operation use the ReviseResponseBundle profile.  The Bundle entries are all mandatory:  a Patient, a Parameters, namely the MetadataParameters and OperationOutcome.  Response meta data such as response creation time or response unique ID, etc, will be in the MetadataParameters resource.  Any errors and warnings should be placed in the OperationOutcome.

@@ -19,7 +19,7 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * address.type ^short = "postal | physical"
 * address.extension contains SourceIDExtension named sourceID 0..1 MS and ValidationStatusExtension named validationStatus 0..1 MS
 * link 0..* MS
-* name 1..* MS
+* name 0..* MS
 * name.use 0..1
 * name.use from NameUseVS (required)
 * name.use ^short = "usual | official | nickname"
@@ -30,9 +30,9 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * telecom.system from ContactPointSystemVS (required)
 * telecom.system ^short = "phone | email"
 * telecom.extension contains SourceIDExtension named sourceID 0..1 MS
-* gender 1..1 MS
+* gender 0..1 MS
 * gender.extension contains BusinessPeriodExtension named genderEffectiveDates 0..1 MS and SourceIDExtension named sourceID 0..1 MS and GenderHistoryExtension named history 0..* MS
-* birthDate 1..1 MS
+* birthDate 0..1 MS
 * birthDate.extension contains BusinessPeriodExtension named birthDateEffectiveDates 0..1 and SourceIDExtension named sourceID 0..1 MS and BirthDateHistoryExtension named history 0..* MS 
 * multipleBirth[x].extension contains BusinessPeriodExtension named multipleBirthEffectiveDates 0..1 MS and SourceIDExtension named sourceID 0..1 MS and MultipleBirthHistoryExtension named history 0..* MS 
 * link.extension contains MergeStatusExtension named mergeStatus 0..* MS

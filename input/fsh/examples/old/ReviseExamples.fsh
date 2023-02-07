@@ -1,4 +1,4 @@
-Instance: Bundle-RevisePatient-Request-Example
+/*Instance: Bundle-RevisePatient-Request-Example
 InstanceOf: ReviseRequestBundle
 Description: "Example of $RevisePatient operation."
 * type = #collection
@@ -51,6 +51,5 @@ Description: "A sample RevisePatient Operation response."
 * entry[1].resource = OperationOutcome-Example-RP
 * entry[1].fullUrl = "urn:uuid:2435edad-33f3-4a54-bbdb-1d28d25ce8c7"
 
-* entry[2].resource = Patient-AddReviseOrMergePatient-Response-Example
-* entry[2].fullUrl = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"
-
+/* entry[2].resource = Patient-AddReviseOrMergePatient-Response-Example
+* entry[2].fullUrl = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"*/

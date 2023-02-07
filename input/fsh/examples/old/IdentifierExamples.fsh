@@ -1,4 +1,4 @@
-Instance: Patient-Identifier-Examples
+/*Instance: Patient-Identifier-Examples
 InstanceOf: Patient
 Description: "An example of a Patient with descriptive Identifier."
 * identifier[0] = IdentifierExamplePHN
@@ -9,7 +9,7 @@ Description: "An example of a Patient with descriptive Identifier."
 * name.family = "Jedi"
 * name.use = #official
 * gender = #female
-* birthDate = "1965-01-01"
+* birthDate = "1965-01-01"*/
 
 //Profile: ClientRegistryIdentifier
 //Parent: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
@@ -30,7 +30,7 @@ Usage: #inline
 * period.start = "2000-01-01T11:11:11+08:00"
 * use = #official
 
-Instance: IdentifierExampleMothersPHN
+/*Instance: IdentifierExampleMothersPHN
 InstanceOf: Identifier
 Description: "An example of a PHN Identifier."
 Usage: #inline
@@ -38,7 +38,7 @@ Usage: #inline
 * value = "9123456788"
 * type.coding.code = #JHN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* use = #official
+* use = #official*/
 
 Instance: IdentifierExamplePHNNoPeriod
 InstanceOf: Identifier
@@ -60,7 +60,7 @@ Usage: #inline
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * use = #official
 
-Instance: IdentifierExampleSRI
+/*Instance: IdentifierExampleSRI
 InstanceOf: Identifier
 Description: "An example of a SRI Identifier."
 Usage: #inline
@@ -72,7 +72,7 @@ Usage: #inline
 * use = #official
 * assigner.display = "ORG_SRC e.g. VPP_CER, IHA_IHA"
 * extension[+].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
-* extension[=].valueCode = #active
+* extension[=].valueCode = #active*/
 
 Instance: IdentifierExampleSRINoPeriod
 InstanceOf: Identifier
@@ -100,7 +100,7 @@ Usage: #inline
 * extension.valueCode = #active
 * use = #official
 
-Instance: IdentifierExampleSSRI
+/*Instance: IdentifierExampleSSRI
 InstanceOf: Identifier
 Description: "An example of a SSRI Identifier."
 Usage: #inline
@@ -112,7 +112,7 @@ Usage: #inline
 * extension[+].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * extension[=].valueCode = #active
 * period.start = "2000-01-01T11:11:11+08:00"
-* use = #secondary
+* use = #secondary*/
 
 Instance: IdentifierExampleSSRINoPeriod
 InstanceOf: Identifier
@@ -127,7 +127,7 @@ Usage: #inline
 * extension.valueCode = #active
 * use = #secondary
 
-Instance: IdentifierExampleQCPHN
+/*Instance: IdentifierExampleQCPHN
 InstanceOf: Identifier
 Description: "An example of a Quebec PHN Identifier."
 Usage: #inline
@@ -151,6 +151,6 @@ Usage: #inline
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * extension.valueCode = #active
-* use = #official
+* use = #official*/
 
 

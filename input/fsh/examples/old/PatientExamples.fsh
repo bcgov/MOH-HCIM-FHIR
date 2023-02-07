@@ -1,4 +1,4 @@
-Instance: Patient-RevisePatient-Example
+/*Instance: Patient-RevisePatient-Example
 InstanceOf: ClientRegistryPatient
 Description: "Patient example for a RevisePatient operation"
 * address[0] = Address-0-Example
@@ -6,7 +6,7 @@ Description: "Patient example for a RevisePatient operation"
 * identifier = IdentifierExampleSRINoPeriod
 * name[0] = Name-Example-JohnDoe-NoPeriod
 * gender = #male
-* birthDate = 1940-06-06
+* birthDate = 1940-06-06*/
 
 Instance: Patient-UpdatePatient-Request-Example
 InstanceOf: PartialPatientUpdate
@@ -17,7 +17,7 @@ Description: "Patient example for a UpdatePatient operation that changes the Add
 * address[0].extension.valueCodeableConcept.coding.code = #replace
 * identifier = IdentifierExampleSRINoPeriod
 
-Instance: Patient-AddPatient-Example
+/*Instance: Patient-AddPatient-Example
 InstanceOf: ClientRegistryPatient
 Description: "The Patient is completely new to the Client Registry, no identifiers."
 * address = Address-0-Example-NoPeriod-NoStatus
@@ -27,9 +27,9 @@ Description: "The Patient is completely new to the Client Registry, no identifie
 * telecom[+] = ContactPoint-Example-Work-Email-NoPeriod
 * name = Name-Example-JohnDoe-NoPeriod
 * gender = #male
-* birthDate = 1940-06-06
+* birthDate = 1940-06-06*/
 
-Instance: Patient-AddPatient-Newborn-Example
+/*Instance: Patient-AddPatient-Newborn-Example
 InstanceOf: ClientRegistryPatient
 Description: "The Patient is completely new to the Client Registry, no identifiers."
 * identifier = IdentifierExampleSSRINoPeriod
@@ -37,7 +37,7 @@ Description: "The Patient is completely new to the Client Registry, no identifie
 * telecom[0] = ContactPoint-Example-Home-Phone-NoPeriod
 * name.given = "Baby girl"
 * gender = #female
-* birthDate = 2021-11-02
+* birthDate = 2021-11-02*/
 
 Instance: Patient-MergePatient-Example
 InstanceOf: PatientMerge
@@ -70,7 +70,7 @@ Description: "Example of a merge patient Patient"
 * link[3].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"
 * link[3].extension.valueCode = #obsolete
 
-Instance: Patient-0-Example
+/*Instance: Patient-0-Example
 InstanceOf: ClientRegistryPatient
 Description: "Example of Patient for query response Bundle with 4 different kinds of identifiers: SRI-PHN, SRI, SSRI and alternative."
 // Patient business date
@@ -91,23 +91,6 @@ Description: "Example of Patient for query response Bundle with 4 different kind
 * birthDate.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * birthDate.extension[0].valuePeriod.start = "2020-10-17T03:29:17-08:00"
 
-Instance: Patient-1-Example
-InstanceOf: ClientRegistryPatient
-Description: "Example of Patient for query response Bundle"
-* extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* extension[0].valuePeriod.start = "2019-02-07T13:29:17-08:00"
-* address[0] = Address-0-Example-Valid
-* address[1] = Address-1-Example-Invalid
-* telecom[0] = ContactPoint-Example-Home-Phone
-* identifier[0] = IdentifierExamplePHN
-* name = Name-Example-JaneDoe
-* gender = #female
-* gender.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* gender.extension[0].valuePeriod.start = "2017-04-05T16:16:16-08:00"
-* birthDate = 1973-05-18
-* birthDate.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* birthDate.extension[0].valuePeriod.start = "2018-10-17T03:29:17-08:00"
-
 Instance: Patient-2-Example
 InstanceOf: ClientRegistryPatient
 Description: "Example of Patient for query response Bundle"
@@ -126,7 +109,7 @@ Description: "Example of Patient for query response Bundle"
 * birthDate.extension[0].valuePeriod.start = "2019-10-17T03:29:17-08:00"
 * multipleBirthBoolean = false
 * multipleBirthBoolean.extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* multipleBirthBoolean.extension[0].valuePeriod.start = "2019-10-17T03:29:17-08:00"
+* multipleBirthBoolean.extension[0].valuePeriod.start = "2019-10-17T03:29:17-08:00"*/
 
 Instance: Patient-GetDemographics-Example
 InstanceOf: ClientRegistryPatient
@@ -154,9 +137,9 @@ Description: "Example of Patient for $GetDemographics operation response"
 * birthDate.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * birthDate.extension.valuePeriod.start = "2018-03-17T03:29:17-08:00"
 
-Instance: Patient-AddReviseOrMergePatient-Response-Example
+/*Instance: Patient-MergePatient-Response-Example
 InstanceOf: ClientRegistryPatient
-Description: "Example of Merge or Revise response Bundle with 4 different kinds of identifiers: SRI-PHN, SRI, SSRI and alternative."
+Description: "Example of Merge response Bundle with 4 different kinds of identifiers: SRI-PHN, SRI, SSRI and alternative."
 // Patient business date
 * extension[+].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * extension[=].valuePeriod.start = "2019-02-07T13:29:17-08:00"
@@ -175,43 +158,6 @@ Description: "Example of Merge or Revise response Bundle with 4 different kinds 
 * birthDate = 1940-06-06
 * birthDate.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * birthDate.extension.valuePeriod.start = "2020-10-17T03:29:17-08:00"
-
-
-Instance: Patient-BabyBoy-Example
-InstanceOf: ClientRegistryPatient
-Description: "Example of Patient newborn for query response Bundle"
-* extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* extension[0].valuePeriod.start = "2019-11-12T13:29:17-08:00"
-* address[0] = Address-0-Example-Valid
-* address[1] = Address-1-Example-Invalid
-* telecom[0] = ContactPoint-Example-Home-Phone
-* identifier[0] = IdentifierExamplePHN
-* name = Name-Example-JohnDoe
-* gender = #male
-* gender.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* gender.extension.valuePeriod.start = "2017-04-05T16:16:16-08:00"
-* birthDate = 2019-12-12
-* birthDate.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* birthDate.extension.valuePeriod.start = "2019-11-12T03:29:17-08:00"
-
-
-Instance: Patient-BabyGirl-Example
-InstanceOf: ClientRegistryPatient
-Description: "Example of Patient newborn for query response Bundle"
-* extension[0].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* extension[0].valuePeriod.start = "2019-11-12T13:21:13-08:00"
-* address[0] = Address-0-Example-Valid
-* address[1] = Address-1-Example-Invalid
-* telecom[0] = ContactPoint-Example-Home-Phone
-* identifier[0] = IdentifierExamplePHN
-* name = Name-Example-JaneDoe
-* gender = #female
-* gender.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* gender.extension.valuePeriod.start = "2017-04-05T16:16:16-08:00"
-* birthDate = 2019-12-12
-* birthDate.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-* birthDate.extension.valuePeriod.start = "2019-11-12T03:29:17-08:00"
-
 
 Instance: Patient-Mother-Example
 InstanceOf: ClientRegistryPatient
@@ -232,9 +178,9 @@ Description: "Example of Patient for query response Bundle"
 * link[0].other.reference = "urn:uuid:425b6c71-b198-4e75-b32c-1b3086935c6a"
 * link[0].type = #seealso
 * link[1].other.reference = "urn:uuid:4a288971-8af6-4d77-a071-4ba3a10042e5"
-* link[1].type = #seealso
+* link[1].type = #seealso*/
 
-Instance: Patient-GetDemographics-withHistory-Example
+/*Instance: Patient-GetDemographics-withHistory-Example
 InstanceOf: ClientRegistryPatient
 Description: "Example of Patient for $GetDemographics operation response"
 * address[0] = Address-0-Example-Valid
@@ -277,34 +223,28 @@ Description: "Example of Patient for $GetDemographics operation response"
 * multipleBirthBoolean.extension[2].extension[0].valuePeriod.end = "2020-03-17T03:29:17-08:00"
 * multipleBirthBoolean.extension[2].extension[1].url = "multipleBirth"
 * multipleBirthBoolean.extension[2].extension[1].valueBoolean = false
-
 * deceasedDateTime = "2000-01-01"
-
 // date period
 * deceasedDateTime.extension[deathDateEffectiveDates].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * deceasedDateTime.extension[deathDateEffectiveDates].valuePeriod.start = "1980-01-01"
 * deceasedDateTime.extension[deathDateEffectiveDates].valuePeriod.end = "2000-01-01"
-
 // date source
 * deceasedDateTime.extension[sourceID].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
 * deceasedDateTime.extension[sourceID].extension[0].url = "sourceID"
 * deceasedDateTime.extension[sourceID].extension[0].valueIdentifier.assigner.display = "SOURCE"
 * deceasedDateTime.extension[sourceID].extension[1].url = "userID"
 * deceasedDateTime.extension[sourceID].extension[1].valueIdentifier.assigner.display = "USERID"
-
 // flag
 * deceasedDateTime.extension[verifiedDeathFlag].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension"
 * deceasedDateTime.extension[verifiedDeathFlag].extension[deathVerifiedFlag].url = "deathVerifiedFlag"
 * deceasedDateTime.extension[verifiedDeathFlag].extension[deathVerifiedFlag].valueBoolean = true
-
 // flag period
 * deceasedDateTime.extension[verifiedDeathFlag].extension[businessDates].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * deceasedDateTime.extension[verifiedDeathFlag].extension[businessDates].valuePeriod.start = "1980-01-01"
 * deceasedDateTime.extension[verifiedDeathFlag].extension[businessDates].valuePeriod.end = "2000-01-01"
-
 // flag source
 * deceasedDateTime.extension[verifiedDeathFlag].extension[sourceID].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
 * deceasedDateTime.extension[verifiedDeathFlag].extension[sourceID].extension[0].url = "sourceID"
 * deceasedDateTime.extension[verifiedDeathFlag].extension[sourceID].extension[0].valueIdentifier.assigner.display = "SOURCE"
 * deceasedDateTime.extension[verifiedDeathFlag].extension[sourceID].extension[1].url = "userID"
-* deceasedDateTime.extension[verifiedDeathFlag].extension[sourceID].extension[1].valueIdentifier.assigner.display = "USERID"
+* deceasedDateTime.extension[verifiedDeathFlag].extension[sourceID].extension[1].valueIdentifier.assigner.display = "USERID"*/
