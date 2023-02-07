@@ -8,4 +8,4 @@ This a special case of Get Demographics that returns the British Columbia insura
 
 The request is a Bundle with Resources for search parameters (MetadataParametersIn), a Patient to match against.
 
-The Patient Bundle entry is a [Patient by Example](StructureDefinition-bc-patient-by-example.html). The patient is a constrained Patient resource limited to the availabe search criteria. See the Get Demographics [search design](search.html#get-demographics-search) for more details on the critera.
+The Patient Bundle entry is a [Patient](StructureDefinition-bc-patient.html). See the Get Demographics [search design](search.html#get-demographics-search) for more details on the critera.

@@ -1,5 +1,5 @@
 Instance: AddNewbornByMumsPHN-Request-Patient
-InstanceOf: PatientByExample
+InstanceOf: ClientRegistryPatient
 Usage: #inline
 * id = "9578d2bd-a6ad-409c-ba66-ba8343cd40be"
 * identifier.use = #official

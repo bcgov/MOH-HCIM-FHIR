@@ -2,6 +2,6 @@
 
 The Get Demographics query is a FHIR Operation.
 
-The request is a Bundle with Resources for search parameters and a Patient, i.e. [Patient by Example](StructureDefinition-bc-patient-by-example.html), to match against.  The Patient (by example) resource must have an identifier for this search to succeed.  
+The request is a Bundle with Resources for search parameters and a Patient, i.e. [ClientRegistryClient](StructureDefinition-bc-patient.html), to match against.  The Patient resource must have an identifier for this search to succeed.  
 
 

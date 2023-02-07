@@ -25,6 +25,6 @@ Besides the mandatory parameters, Revise Patient has no additional out parameter
 
 #### Examples
 
-See [Revise Patient request](Bundle-Bundle-RevisePatient-Request-Example.html) example.  
-See [Revise Patient response](Bundle-Bundle-RevisePatient-Response-Example.html) example.  
+See [Revise Patient request](Bundle-Revise-WithMaxData-Request.html) example.  
+See [Revise Patient response](Bundle-Revise-Response.html) example.  
 

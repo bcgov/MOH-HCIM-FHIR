@@ -1,5 +1,5 @@
 Instance: GetDemographics-withHistory-Request-Patient
-InstanceOf: PatientByExample
+InstanceOf: ClientRegistryPatient
 Usage: #inline
 * id = "4466ded5-98ad-4890-96aa-8c25c67f3c22"
 * identifier.use = #official

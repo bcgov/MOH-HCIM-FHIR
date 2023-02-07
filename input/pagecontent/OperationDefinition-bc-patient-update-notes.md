@@ -23,8 +23,8 @@ Besides the two mandatory name-value pairs, see [here](StructureDefinition-bc-me
 
 Besides the mandatory parameters, there additional Out parameters required.
 
+
 #### Examples
 
-See [Update Patient request](Bundle-Bundle-UpdatePatient-Request-Example.html) example.
-See [Update Patient response](Bundle-Bundle-UpdatePatient-Response-Example.html)
-example.  THe update response is identifical to the example Revise Patient response.
+See [Update Patient request](Bundle-Bundle-UpdatePatient-Request-Example.html) example.  
+See [Update Patient response](Bundle-Bundle-UpdatePatient-Response-Example.html) example. The update response is identifical to the example Revise Patient response.
