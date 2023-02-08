@@ -14,7 +14,14 @@ Description: "A sample UpdatePatient request. This example shows a Address updat
 * entry[1].resource = Patient-UpdatePatient-Request-Example
 * entry[1].fullUrl = "urn:uuid:c789da11-0e78-4eb5-a9b2-d31d8249fd50"
 
-
+Instance: Patient-UpdatePatient-Request-Example
+InstanceOf: PartialPatientUpdate
+Description: "Patient example for a UpdatePatient operation that changes the Address."
+* address[0] = Address-0-Example
+* address[0].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient-operation-extension"
+* address[0].extension.valueCodeableConcept.coding.system = "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-update-patient-operation-code-system"
+* address[0].extension.valueCodeableConcept.coding.code = #replace
+* identifier = IdentifierExampleSRINoPeriod
 
 Instance: Parameters-UpdatePatient-Request-Example
 InstanceOf: MetadataParametersIn
@@ -25,8 +32,6 @@ Description: "Example of Update response Metadata parameters"
 
 * parameter[messageDateTime].name = "messageDateTime"
 * parameter[messageDateTime].valueDateTime = "2015-02-07T13:29:17-08:00"
-
-
 
 Instance: Parameters-UpdatePatient-Response-Example
 InstanceOf: MetadataParametersOut
@@ -44,7 +49,6 @@ Description: "Example of Update response Metadata parameters"
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.value = "MOH_CRS"
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
-
 
 
 Instance: Bundle-UpdatePatient-Response-Example
