@@ -5,7 +5,7 @@ The response may not include any Patients if none matched the criteria.  If ther
 Cardinality | Resource Type | Comment
 :---|:---|:---
 1..1 | MetadataParametersIn | See [profile](StructureDefinition-bc-metadata-parameters-in.html).
-0..1 | PatientByExample | See [profile](StructureDefinition-bc-patient-by-example.html).
+0..1 | ClientRegistryPatient | See [profile](StructureDefinition-bc-patient.html).
 {:.grid}
 
 #### Out Bundle Entries
@@ -39,5 +39,5 @@ requestParameters | MetadataParametersIn | 1..1 | The request parameters are ech
 
 #### Examples
 
-See [Get Demographics with Eligibility request](Bundle-Bundle-GetDemographics-Request-Example.html) example.  This is the example for the Get Demograhics request as the only difference is the URL.  
+See [Get Demographics with Eligibility request](Bundle-GetDemographics-Request.html) example.  This is the example for the Get Demograhics request as the only difference is the URL.  
 See [Get Demographics with Eligibility response](Bundle-Bundle-GetDemographicsWithEligibility-Response-Example.html) example.  

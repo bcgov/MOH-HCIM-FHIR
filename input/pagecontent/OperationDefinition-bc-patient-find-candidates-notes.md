@@ -10,7 +10,7 @@ If the search used mother's PHN then RelatedPerson resources are returned which 
 Cardinality | Resource Type | Comment
 :---|:---|:---
 1..1 | MetadataParametersIn | See [profile](StructureDefinition-bc-metadata-parameters-in.html).
-0..1 | PatientByExample | See [profile](StructureDefinition-bc-patient-by-example.html).
+0..1 | ClientRegistryPatient | See [profile](StructureDefinition-bc-patient.html).
 0..1 | RelatedPerson | This a standard FHIR resource, not profiled by the Client Registry.
 {:.grid}
 
@@ -52,8 +52,8 @@ Searching with the FindCandidates operation will match names of all use codes th
 
 #### Examples
 
-See [Find Candidates request](Bundle-Bundle-FindCandidatesByExample-Request-Example.html) example.  
-See [Find Candidates mother's PHN request](Bundle-Bundle-FindCandidates-UsingMomsPHN-Request-Example.html) example.  
-See [Find Candidates response](Bundle-Bundle-FindCandidates-Response-Example.html) example.  
-See [Find Candidates mother's PHN response](Bundle-Bundle-FindCandidates-Response-MomsPHN-Example.html) example.  
+See [Find Candidates request](Bundle-FindCandidates-Request.html) example.  
+See [Find Candidates mother's PHN request](Bundle-FindNewbornByMumsPHN-request.html) example.  
+See [Find Candidates response](Bundle-FindCandidates-response.html) example.  
+See [Find Candidates mother's PHN response](Bundle-FindNewbornByMumsPHN-response.html) example.  
 

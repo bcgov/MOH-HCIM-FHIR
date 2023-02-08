@@ -1,4 +1,4 @@
-Instance: Patient-By-Example-Example
+/*Instance: Patient-By-Example-Example
 InstanceOf: PatientByExample
 Description: "An example of a Patient used for Find Candidates query."
 * name.given = "Jill"
@@ -15,11 +15,11 @@ Description: "An example of a Patient used for Find Candidates query."
 * address.city = "PRINCE GEORGE"
 * address.state = "BC"
 * address.country = "CA"
-* address.postalCode = "V8W 3P9"
+* address.postalCode = "V8W 3P9"*/
 
-Instance: Patient-By-Example-GD-Example
+/*Instance: Patient-By-Example-GD-Example
 InstanceOf: PatientByExample
 Description: "An example of a Patient used for Get Demographics query."
-* identifier = IdentifierExampleMothersPHN
+* identifier = IdentifierExampleMothersPHN*/
 
 

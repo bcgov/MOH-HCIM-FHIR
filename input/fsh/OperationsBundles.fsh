@@ -21,7 +21,7 @@ Description: "A Bundle that is used in the Get Demographics Operation request."
 * entry contains patient 1..1 MS and parameters 1..1 MS
 * entry[parameters].resource only MetadataParametersIn
 * entry[parameters] ^short = "Metadata in parameters."
-* entry[patient].resource only PatientByExample
+* entry[patient].resource only ClientRegistryPatient
 * entry[patient] ^short = "An example Patient with Identifier that the Client Registry will use to fufill the search request."
 
 Profile: SearchResponseBundle
@@ -99,7 +99,7 @@ Description: "A Bundle that is used in the Find Candidates Operation request."
 * entry contains patient 0..1 MS and parameters 1..1 MS and relatedPerson 0..1 MS
 * entry[parameters].resource only MetadataParametersIn
 * entry[parameters] ^short = "Metadata in parameters."
-* entry[patient].resource only PatientByExample
+* entry[patient].resource only ClientRegistryPatient
 * entry[patient] ^short = "An example Patient that the Client Registry will use to find matching Patients."
 * entry[relatedPerson].resource only RelatedPerson
 * entry[relatedPerson] ^short = "Resource for Mother's PHN."

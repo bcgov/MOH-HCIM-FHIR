@@ -22,14 +22,6 @@ Usage: #inline
 * system = #phone
 * value = "2504445656"
 
-Instance: ContactPoint-Example-Home-Phone-2-NoPeriod
-InstanceOf: ContactPoint
-Description: "ContactPoint example home phone with end date."
-Usage: #inline
-* use = #home
-* system = #phone
-* value = "2505554848"
-
 Instance: ContactPoint-Example-Home-Email-NoPeriod
 InstanceOf: ContactPoint
 Description: "ContactPoint example home email."

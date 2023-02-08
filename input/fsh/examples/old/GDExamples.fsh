@@ -1,4 +1,4 @@
-Instance: Bundle-GetDemographics-Request-Example
+/*Instance: Bundle-GetDemographics-Request-Example
 InstanceOf: GetDemographicsRequestBundle
 Description: "Example of $GetDemographics operation"
 * type = #collection
@@ -62,4 +62,4 @@ InstanceOf: Parameters
 Description: "Example of $GetDemographics operation, IN parameters"
 * parameter[0].name = "identifier"
 * parameter[0].valueIdentifier = IdentifierExamplePHN
-
+*/

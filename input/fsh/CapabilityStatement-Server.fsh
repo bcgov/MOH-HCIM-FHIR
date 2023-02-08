@@ -63,7 +63,7 @@ When adding a newborn or using 'force create' Client Registry users SHALL use th
 The Client Registry FHIR implementation only supports JSON format and the clients SHALL use JSON for all interactions.  The MIME-type of application/fhir+json is the only one supported by the Client Registry.
 </li>
 <li>
-All interactions with Patient resources SHALL use one of the following profiles: ClientRegistryPatient, PatientByExample or PatientUpdate.
+All interactions with Patient resources SHALL use one of the following profiles: ClientRegistryPatient or PatientUpdate.
 </li>
 <li>
 Any Parameters' profiles used SHALL be MetadataParametersIn or MetadataParametersOut.

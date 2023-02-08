@@ -30,6 +30,6 @@ The mother's PHN may be required, if so the PHN is sent to the Client Registry v
 
 #### Examples
 
-See [Add Patient request](Bundle-Bundle-AddPatient-Request-Example.html) example.  
-See [Add Patient newborn request](Bundle-Bundle-AddPatient-Newborn-Request-Example.html) example.  
-See [Add Patient response](Bundle-Bundle-AddPatient-Response-Example.html) example.  
+See [Add Patient request](Bundle-AddPatient-Request.html) example.  
+See [Add Patient newborn request](Bundle-AddNewbornByMumsPHN-Request.html) example.  
+See [Add Patient response](Bundle-AddPatient-Response.html) example.  

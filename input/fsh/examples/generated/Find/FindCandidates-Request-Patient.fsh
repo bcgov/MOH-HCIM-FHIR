@@ -1,5 +1,5 @@
 Instance: FindCandidates-Request-Patient
-InstanceOf: PatientByExample
+InstanceOf: ClientRegistryPatient
 Usage: #inline
 * id = "935d5683-785e-46e5-b747-357b58371cee"
 * name.use = #usual

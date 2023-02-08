@@ -5,7 +5,7 @@ The response to a Patient Notification Operation is a HTTP status code 200 on su
 Cardinality | Resource Type | Comment
 :---|:---|:---
 1..1 | MetadataParametersIn | See [profile](StructureDefinition-bc-metadata-parameters-in.html).
-1..1 | ClientRegistryPatient | See [profile](StructureDefinition-bc-patient-by-example.html).
+1..1 | ClientRegistryPatient | See [profile](StructureDefinition-bc-patient.html).
 {:.grid}
 
 #### Out Bundle Entries
@@ -22,5 +22,6 @@ N/A
 
 #### Examples
 
-See [Patient Notification request](Bundle-Bundle-RevisePatient-Request-Example.html) example.  This the revise patient example as it is identical to the notification request.  
+The following example is actually the revise patient example as it is identical to the notification request.
+See [Patient Notification request](Bundle-Revise-WithMaxData-Request.html) example. 
 
