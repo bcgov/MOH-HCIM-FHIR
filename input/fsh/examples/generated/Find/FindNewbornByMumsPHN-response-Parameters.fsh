@@ -6,8 +6,8 @@ Usage: #inline
 * parameter[messageId].valueString = "9acccdc8-b4d0-4ac7-9f10-80d0c80136e4"
 * parameter[messageDateTime].name = "messageDateTime"
 * parameter[messageDateTime].valueDateTime = "2023-01-23T13:58:38.9591378-08:00"
-* parameter[2].name = "identifiersOnly"
-* parameter[2].valueBoolean = false
+* parameter[identifiersOnly].name = "identifiersOnly"
+* parameter[identifiersOnly].valueBoolean = false
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 * parameter[sender].valueIdentifier.value = "IHA"

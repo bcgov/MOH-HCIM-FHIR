@@ -6,7 +6,7 @@ Description: "Parameters profile for BC meta data - incoming messages."
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #open
 * parameter ^slicing.description = "The specific parameters to specify BC Metadata."
-* parameter contains messageId 1..1 MS and messageDateTime 1..1 MS
+* parameter contains messageId 1..1 MS and messageDateTime 1..1 MS and identifiersOnly 0..1 MS and history 0..1 MS
 * parameter[messageId].name MS
 * parameter[messageId].name = "messageId"
 * parameter[messageId].value[x] only string
@@ -19,6 +19,16 @@ Description: "Parameters profile for BC meta data - incoming messages."
 * parameter[messageDateTime].value[x] only dateTime
 * parameter[messageDateTime].resource 0..0
 * parameter[messageDateTime].part 0..0
+* parameter[identifiersOnly].name MS
+* parameter[identifiersOnly].name = "identifiersOnly"
+* parameter[identifiersOnly].value[x] only boolean
+* parameter[identifiersOnly].resource 0..0
+* parameter[identifiersOnly].part 0..0
+* parameter[history].name MS
+* parameter[history].name = "history"
+* parameter[history].value[x] only boolean
+* parameter[history].resource 0..0
+* parameter[history].part 0..0
 
 Profile: MetadataParametersOut
 Parent: MetadataParametersIn

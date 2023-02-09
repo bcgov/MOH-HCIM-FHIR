@@ -6,10 +6,10 @@ Usage: #inline
 * parameter[messageId].valueString = "7cd363f7-982c-43cb-85b1-024e567ad571"
 * parameter[messageDateTime].name = "messageDateTime"
 * parameter[messageDateTime].valueDateTime = "2023-01-23T14:00:53.5108118-08:00"
-* parameter[+].name = "history"
-* parameter[=].valueBoolean = false
-* parameter[+].name = "identifiersOnly"
-* parameter[=].valueBoolean = false
+* parameter[history].name = "history"
+* parameter[history].valueBoolean = false
+* parameter[identifiersOnly].name = "identifiersOnly"
+* parameter[identifiersOnly].valueBoolean = false
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 * parameter[sender].valueIdentifier.value = "VIHA"
