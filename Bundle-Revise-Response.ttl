@@ -1,0 +1,174 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Bundle/Revise-Response> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Revise-Response"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle>
+     ]
+  ]; # 
+  fhir:Bundle.identifier [
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "urn:uuid:db5d47ac-0323-4def-9d2f-97d84a6f341d" ]
+  ]; # 
+  fhir:Bundle.type [ fhir:value "collection"]; # 
+  fhir:Bundle.timestamp [ fhir:value "2023-01-23T14:02:15.9747697-08:00"^^xsd:dateTime]; # 
+  fhir:Bundle.link [
+     fhir:index 0;
+     fhir:Bundle.link.relation [ fhir:value "canonical" ];
+     fhir:Bundle.link.url [ fhir:value "Patient\\Revise" ]
+  ]; # 
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4" ];
+     fhir:Bundle.entry.resource <urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4>;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "include" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:445c4b0d-95f7-4492-88ba-b491516b4567" ];
+     fhir:Bundle.entry.resource <urn:uuid:445c4b0d-95f7-4492-88ba-b491516b4567>;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "outcome" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:445c4b0d-95f7-4492-88ba-b491516b1508" ];
+     fhir:Bundle.entry.resource <urn:uuid:445c4b0d-95f7-4492-88ba-b491516b1508>;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "outcome" ]
+     ]
+  ] . # 
+
+<urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4> a fhir:Parameters;
+  fhir:Resource.id [ fhir:value "6426876c-8118-4020-8364-7021d0a1ec23"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out>
+     ]
+  ]; # 
+  fhir:Parameters.parameter [
+     fhir:index 0;
+     fhir:Parameters.parameter.name [ fhir:value "messageId" ];
+     fhir:Parameters.parameter.valueString [ fhir:value "f95c3be0-b6ed-4aec-b969-7bc7da904315" ]
+  ], [
+     fhir:index 1;
+     fhir:Parameters.parameter.name [ fhir:value "messageDateTime" ];
+     fhir:Parameters.parameter.valueDateTime [ fhir:value "2023-01-23T14:02:15.7581133-08:00"^^xsd:dateTime ]
+  ], [
+     fhir:index 2;
+     fhir:Parameters.parameter.name [ fhir:value "sender" ];
+     fhir:Parameters.parameter.valueIdentifier [
+       fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-org" ];
+       fhir:Identifier.value [ fhir:value "VPP" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Parameters.parameter.name [ fhir:value "enterer" ];
+     fhir:Parameters.parameter.valueIdentifier [
+       fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-userid" ];
+       fhir:Identifier.value [ fhir:value "ig.samples@cgi.com" ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Parameters.parameter.name [ fhir:value "requestMessageId" ];
+     fhir:Parameters.parameter.valueString [ fhir:value "823d7eb6-24d5-452f-b2d0-f86f2f6130e7" ]
+  ] . # 
+
+<urn:uuid:445c4b0d-95f7-4492-88ba-b491516b4567> a fhir:OperationOutcome;
+  fhir:Resource.id [ fhir:value "Revise-Response-Outcome"]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: OperationOutcome</b><a name=\"Revise-Response-Outcome\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource OperationOutcome &quot;Revise-Response-Outcome&quot; </p></div><h3>Issues</h3><table class=\"grid\"><tr><td>-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td>*</td><td>information</td><td>business-rule</td><td>Transaction processed.A new PHN was assigned. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#BCHCIM.RP.0.0000)</span></td></tr></table></div>"
+  ]; # 
+  fhir:OperationOutcome.issue [
+     fhir:index 0;
+     fhir:OperationOutcome.issue.severity [ fhir:value "information" ];
+     fhir:OperationOutcome.issue.code [ fhir:value "business-rule" ];
+     fhir:OperationOutcome.issue.details [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes" ];
+         fhir:Coding.code [ fhir:value "BCHCIM.RP.0.0000" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Transaction processed.A new PHN was assigned." ]
+     ]
+  ] . # 
+
+<urn:uuid:445c4b0d-95f7-4492-88ba-b491516b1508> a fhir:Patient;
+  fhir:Resource.id [ fhir:value "Revise-Response-Patient"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
+       fhir:index 0;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Revise-Response-Patient\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;Revise-Response-Patient&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9999999999 (use: OFFICIAL, period: 2023-01-23 14:02:15-0800 --&gt; (ongoing)), Account number: 2B6F8GN410H1T27NPE (use: OFFICIAL, period: 2023-01-23 14:02:15-0800 --&gt; (ongoing))</p><p><b>active</b>: true</p></div>"
+  ]; # 
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "active" ]
+     ];
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "JHN" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC" ];
+     fhir:Identifier.value [ fhir:value "9999999999" ];
+     fhir:Identifier.period [
+       fhir:Period.start [ fhir:value "2023-01-23T14:02:15-08:00"^^xsd:dateTime ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
+       fhir:Extension.valueCode [ fhir:value "active" ]
+     ];
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "AN" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
+     fhir:Identifier.value [ fhir:value "2B6F8GN410H1T27NPE" ];
+     fhir:Identifier.period [
+       fhir:Period.start [ fhir:value "2023-01-23T14:02:15-08:00"^^xsd:dateTime ]
+     ];
+     fhir:Identifier.assigner [
+       fhir:Reference.display [ fhir:value "VPP_CER" ]
+     ]
+  ]; # 
+  fhir:Patient.active [ fhir:value "true"^^xsd:boolean] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Bundle/Revise-Response.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
