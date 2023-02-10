@@ -3,11 +3,6 @@ Parent: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient
 //Parent: Patient
 Id: bc-patient
 Description: "General constraints on the Patient resource for use in the BC Client Registry project."
-* obeys invariant-name-use-1
-* obeys invariant-address-type-1
-* obeys invariant-address-type-2
-* obeys invariant-telecom-phone-use-1
-* obeys invariant-telecom-email-use-1
 * extension contains BusinessPeriodExtension named effectiveDates 0..1 MS and GenderIdentityExtension named genderIdentity 0..1 MS
 * identifier only http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 * identifier 0..* MS
@@ -121,9 +116,9 @@ Title: "BC SourceID and UserID"
 Description: "Identifiers for the source and user that modified the specific element that this extension is on."
 * extension contains sourceID 0..1 MS and userID 0..1 MS
 * extension[sourceID].value[x] 0..1 MS
-* extension[sourceID].value[x] only Identifier
+* extension[sourceID].value[x] only string
 * extension[userID].value[x] 0..1 MS
-* extension[userID].value[x] only Identifier
+* extension[userID].value[x] only string
 
 Extension: IdentifierStatusExtension
 Id: bc-identifier-status-extension
