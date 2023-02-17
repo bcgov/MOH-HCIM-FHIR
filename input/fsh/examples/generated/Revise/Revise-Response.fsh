@@ -10,10 +10,7 @@ Usage: #example
 * link.url = "Patient\\Revise"
 * entry[0].fullUrl = "urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4"
 * entry[=].resource = Revise-Response-Parameters
-* entry[=].search.mode = #include
 * entry[+].fullUrl = "urn:uuid:445c4b0d-95f7-4492-88ba-b491516b4567"
 * entry[=].resource = Revise-Response-Outcome
-* entry[=].search.mode = #outcome
 * entry[+].fullUrl = "urn:uuid:445c4b0d-95f7-4492-88ba-b491516b1508"
 * entry[=].resource = Revise-Response-Patient
-* entry[=].search.mode = #outcome

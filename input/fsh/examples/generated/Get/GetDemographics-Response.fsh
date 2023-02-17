@@ -13,8 +13,8 @@ Usage: #example
 * entry[=].resource = GetDemographics-Response-Parameters
 * entry[=].search.mode = #include
 * entry[+].resource = GetDemographics-Response-Outcome
-* entry[=].fullUrl = "urn:uuid:289d85b9-43a4-4902-9b52-76cb1f01234"
+* entry[=].fullUrl = "urn:uuid:f156cec9-77fe-40d2-a023-71f1442d4599"
 * entry[=].search.mode = #outcome
 * entry[+].fullUrl = "urn:uuid:27fb3c46-a6ea-4986-8238-d94d6655cc1d"
 * entry[=].resource = GetDemographics-Response-Patient
-* entry[=].search.mode = #outcome
+* entry[=].search.mode = #match

@@ -10,7 +10,5 @@ Usage: #example
 * link.url = "https://ig.cgi.com/Patient/Merge.fhir"
 * entry[0].fullUrl = "urn:uuid:30f9e023-c3dc-43e3-bf91-b46da0836c16"
 * entry[=].resource = Merge-Response-Parameters
-* entry[=].search.mode = #include
 * entry[+].resource = Merge-Response-Outcome
 * entry[=].fullUrl = "urn:uuid:30f9e023-c3dc-43e3-bf91-b46da0831234"
-* entry[=].search.mode = #outcome

@@ -17,4 +17,4 @@ Usage: #example
 * entry[=].search.mode = #outcome
 * entry[+].fullUrl = "urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf7f4ba"
 * entry[=].resource = GetDemographics-withHistory-Response-Patient
-* entry[=].search.mode = #outcome
+* entry[=].search.mode = #match

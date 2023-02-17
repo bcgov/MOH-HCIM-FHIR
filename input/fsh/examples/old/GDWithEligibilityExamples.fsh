@@ -1,4 +1,4 @@
-Instance: Parameters-GetDemographicsWithEligibility-Example
+/* Instance: Parameters-GetDemographicsWithEligibility-Example
 InstanceOf: MetadataParametersIn
 Description: "Example of $GetDemographics.withEligibility operation"
 * parameter[messageId].name = "messageId"
@@ -11,7 +11,7 @@ Description: "Example of $GetDemographics.withEligibility operation"
 * parameter[2].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-sri"
 * parameter[2].valueIdentifier.value = "912345892"
 * parameter[2].valueIdentifier.type.coding.code = #JHN
-* parameter[2].valueIdentifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* parameter[2].valueIdentifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203" */
 
 
 Instance: Parameters-GetDemographicsWithEligibility-Response-Example

@@ -264,7 +264,7 @@ Usage: #inline
 * gender.extension[=].extension[+].url = "userID"
 * gender.extension[=].extension[=].valueString = "Irving.Desmarias@samples.com"
 * gender.extension[+].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension"
-* gender.extension[=].extension[0].url = "http://hl7.org/fhir/administrative-gender"
+* gender.extension[=].extension[0].url = "gender"
 * gender.extension[=].extension[=].valueCode = #female
 * gender.extension[=].extension[+].url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
 * gender.extension[=].extension[=].valuePeriod.start = "2019-01-23T14:00:53-08:00"
