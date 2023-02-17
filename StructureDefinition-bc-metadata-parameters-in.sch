@@ -16,6 +16,10 @@
       <sch:assert test="count(f:part) &lt;= 0">part: maximum cardinality of 'part' is 0</sch:assert>
       <sch:assert test="count(f:resource) &lt;= 0">resource: maximum cardinality of 'resource' is 0</sch:assert>
       <sch:assert test="count(f:part) &lt;= 0">part: maximum cardinality of 'part' is 0</sch:assert>
+      <sch:assert test="count(f:resource) &lt;= 0">resource: maximum cardinality of 'resource' is 0</sch:assert>
+      <sch:assert test="count(f:part) &lt;= 0">part: maximum cardinality of 'part' is 0</sch:assert>
+      <sch:assert test="count(f:resource) &lt;= 0">resource: maximum cardinality of 'resource' is 0</sch:assert>
+      <sch:assert test="count(f:part) &lt;= 0">part: maximum cardinality of 'part' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>

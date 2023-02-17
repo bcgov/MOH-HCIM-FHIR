@@ -17,7 +17,7 @@
   "version" : "1.0.0",
   "name" : "ReviseRequestBundle",
   "status" : "active",
-  "date" : "2023-02-09T00:02:19+00:00",
+  "date" : "2023-02-17T22:47:47+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",
@@ -1894,41 +1894,6 @@
         "expression" : "text.`div`.exists()",
         "xpath" : "exists(f:text/h:div)",
         "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
-      },
-      {
-        "key" : "invariant-name-use-1",
-        "severity" : "error",
-        "human" : "Each type of allowed Name.use can only be used once.",
-        "expression" : "name.where(use = 'nickname').count()<=1 and name.where(use = 'usual').count()<=1 and name.where(use = 'official').count()<=1",
-        "source" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
-      },
-      {
-        "key" : "invariant-address-type-1",
-        "severity" : "error",
-        "human" : "Address.type, if both, must not include any other types of addresses, i.e. no postal and no physical.",
-        "expression" : "address.where(type = 'both').count()>=1 implies (address.where(type = 'physical').count()=0 and address.where(type = 'postal').count()=0)",
-        "source" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
-      },
-      {
-        "key" : "invariant-address-type-2",
-        "severity" : "error",
-        "human" : "Each Address.type, if Address.type is NOT both, must be present no more than once.",
-        "expression" : "address.where(type = 'both').count()=0 implies (address.where(type = 'physical').count()<=1 and address.where(type = 'postal').count()<=1)",
-        "source" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
-      },
-      {
-        "key" : "invariant-telecom-phone-use-1",
-        "severity" : "error",
-        "human" : "Each type of allowed Telecom.use for phone systems can only be used once.",
-        "expression" : "telecom.where(use = 'home' and system='phone').count()<=1 and telecom.where(use = 'work' and system='phone').count()<=1 and telecom.where(use = 'mobile' and system='phone').count()<=1",
-        "source" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
-      },
-      {
-        "key" : "invariant-telecom-email-use-1",
-        "severity" : "error",
-        "human" : "Each type of allowed Telecom.use for email systems can only be used once.",
-        "expression" : "telecom.where(use = 'home' and system='email').count()<=1 and telecom.where(use = 'work' and system='email').count()<=1 and telecom.where(use = 'mobile' and system='email').count()<=1",
-        "source" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
       }],
       "isModifier" : false,
       "isSummary" : false,

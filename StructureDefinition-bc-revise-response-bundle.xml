@@ -28,7 +28,7 @@
   <version value="1.0.0"/>
   <name value="ReviseResponseBundle"/>
   <status value="active"/>
-  <date value="2023-02-09T00:02:19+00:00"/>
+  <date value="2023-02-17T22:47:47+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -1836,41 +1836,6 @@
         <expression value="text.`div`.exists()"/>
         <xpath value="exists(f:text/h:div)"/>
         <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
-      </constraint>
-      <constraint>
-        <key value="invariant-name-use-1"/>
-        <severity value="error"/>
-        <human value="Each type of allowed Name.use can only be used once."/>
-        <expression value="name.where(use = 'nickname').count()&lt;=1 and name.where(use = 'usual').count()&lt;=1 and name.where(use = 'official').count()&lt;=1"/>
-        <source value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
-      </constraint>
-      <constraint>
-        <key value="invariant-address-type-1"/>
-        <severity value="error"/>
-        <human value="Address.type, if both, must not include any other types of addresses, i.e. no postal and no physical."/>
-        <expression value="address.where(type = 'both').count()&gt;=1 implies (address.where(type = 'physical').count()=0 and address.where(type = 'postal').count()=0)"/>
-        <source value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
-      </constraint>
-      <constraint>
-        <key value="invariant-address-type-2"/>
-        <severity value="error"/>
-        <human value="Each Address.type, if Address.type is NOT both, must be present no more than once."/>
-        <expression value="address.where(type = 'both').count()=0 implies (address.where(type = 'physical').count()&lt;=1 and address.where(type = 'postal').count()&lt;=1)"/>
-        <source value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
-      </constraint>
-      <constraint>
-        <key value="invariant-telecom-phone-use-1"/>
-        <severity value="error"/>
-        <human value="Each type of allowed Telecom.use for phone systems can only be used once."/>
-        <expression value="telecom.where(use = 'home' and system='phone').count()&lt;=1 and telecom.where(use = 'work' and system='phone').count()&lt;=1 and telecom.where(use = 'mobile' and system='phone').count()&lt;=1"/>
-        <source value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
-      </constraint>
-      <constraint>
-        <key value="invariant-telecom-email-use-1"/>
-        <severity value="error"/>
-        <human value="Each type of allowed Telecom.use for email systems can only be used once."/>
-        <expression value="telecom.where(use = 'home' and system='email').count()&lt;=1 and telecom.where(use = 'work' and system='email').count()&lt;=1 and telecom.where(use = 'mobile' and system='email').count()&lt;=1"/>
-        <source value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
       </constraint>
       <isModifier value="false"/>
       <isSummary value="false"/>

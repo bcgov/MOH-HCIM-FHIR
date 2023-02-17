@@ -46,21 +46,21 @@
      fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:71092811-55f9-4e1f-8754-a6828da1d51c" ];
      fhir:Bundle.entry.resource <urn:uuid:71092811-55f9-4e1f-8754-a6828da1d51c>;
      fhir:Bundle.entry.search [
-       fhir:Bundle.entry.search.mode [ fhir:value "outcome" ]
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ]
      ]
   ], [
      fhir:index 3;
      fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:69b91ae6-e147-4dd0-abe7-8912ec301fd9" ];
      fhir:Bundle.entry.resource <urn:uuid:69b91ae6-e147-4dd0-abe7-8912ec301fd9>;
      fhir:Bundle.entry.search [
-       fhir:Bundle.entry.search.mode [ fhir:value "outcome" ]
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ]
      ]
   ], [
      fhir:index 4;
      fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:e4e077df-3a85-4fa9-8df0-9ff7b2f00000" ];
      fhir:Bundle.entry.resource <urn:uuid:e4e077df-3a85-4fa9-8df0-9ff7b2f00000>;
      fhir:Bundle.entry.search [
-       fhir:Bundle.entry.search.mode [ fhir:value "outcome" ]
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ]
      ]
   ], [
      fhir:index 5;
@@ -98,16 +98,23 @@
   ], [
      fhir:index 2;
      fhir:Parameters.parameter.name [ fhir:value "sender" ];
-     fhir:Parameters.parameter.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     fhir:Parameters.parameter.valueIdentifier [
+       fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-org" ];
+       fhir:Identifier.value [ fhir:value "IHA" ]
+     ]
   ], [
      fhir:index 3;
+     fhir:Parameters.parameter.name [ fhir:value "identifiersOnly" ];
+     fhir:Parameters.parameter.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+  ], [
+     fhir:index 4;
      fhir:Parameters.parameter.name [ fhir:value "enterer" ];
      fhir:Parameters.parameter.valueIdentifier [
        fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-userid" ];
        fhir:Identifier.value [ fhir:value "ig.samples@cgi.com" ]
      ]
   ], [
-     fhir:index 4;
+     fhir:index 5;
      fhir:Parameters.parameter.name [ fhir:value "requestMessageId" ];
      fhir:Parameters.parameter.valueString [ fhir:value "2a956654-9d48-422b-ab23-ea708462760b" ]
   ] . # 

@@ -46,7 +46,7 @@
      fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:99982f86-4044-48a6-9e63-3d221f3a5f0d" ];
      fhir:Bundle.entry.resource <urn:uuid:99982f86-4044-48a6-9e63-3d221f3a5f0d>;
      fhir:Bundle.entry.search [
-       fhir:Bundle.entry.search.mode [ fhir:value "outcome" ]
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ]
      ]
   ] . # 
 
@@ -62,11 +62,11 @@
   fhir:Parameters.parameter [
      fhir:index 0;
      fhir:Parameters.parameter.name [ fhir:value "messageId" ];
-     fhir:Parameters.parameter.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+     fhir:Parameters.parameter.valueString [ fhir:value "0cf19fde-0808-4ffe-b029-3aa06bc008a9" ]
   ], [
      fhir:index 1;
      fhir:Parameters.parameter.name [ fhir:value "messageDateTime" ];
-     fhir:Parameters.parameter.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     fhir:Parameters.parameter.valueDateTime [ fhir:value "2023-01-23T14:00:53.7286055-08:00"^^xsd:dateTime ]
   ], [
      fhir:index 2;
      fhir:Parameters.parameter.name [ fhir:value "sender" ];
@@ -76,13 +76,21 @@
      ]
   ], [
      fhir:index 3;
+     fhir:Parameters.parameter.name [ fhir:value "history" ];
+     fhir:Parameters.parameter.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+  ], [
+     fhir:index 4;
+     fhir:Parameters.parameter.name [ fhir:value "identifiersOnly" ];
+     fhir:Parameters.parameter.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+  ], [
+     fhir:index 5;
      fhir:Parameters.parameter.name [ fhir:value "enterer" ];
      fhir:Parameters.parameter.valueIdentifier [
        fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-userid" ];
        fhir:Identifier.value [ fhir:value "ig.samples@cgi.com" ]
      ]
   ], [
-     fhir:index 4;
+     fhir:index 6;
      fhir:Parameters.parameter.name [ fhir:value "requestMessageId" ];
      fhir:Parameters.parameter.valueString [ fhir:value "62ac7557-95b4-42b0-acb1-dde7bc56c964" ]
   ] . # 
@@ -779,7 +787,7 @@
        fhir:index 2;
        fhir:Element.extension [
          fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/administrative-gender" ];
+         fhir:Extension.url [ fhir:value "gender" ];
          fhir:Extension.valueCode [ fhir:value "female" ]
        ], [
          fhir:index 1;

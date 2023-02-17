@@ -25,11 +25,11 @@
       },
       "parameter" : [{
         "name" : "messageId",
-        "valueBoolean" : true
+        "valueString" : "0cf19fde-0808-4ffe-b029-3aa06bc008a9"
       },
       {
         "name" : "messageDateTime",
-        "valueBoolean" : false
+        "valueDateTime" : "2023-01-23T14:00:53.7286055-08:00"
       },
       {
         "name" : "sender",
@@ -37,6 +37,14 @@
           "system" : "http://hlth.gov.bc.ca/fhir/client/bc-org",
           "value" : "VIHA"
         }
+      },
+      {
+        "name" : "history",
+        "valueBoolean" : true
+      },
+      {
+        "name" : "identifiersOnly",
+        "valueBoolean" : false
       },
       {
         "name" : "enterer",
@@ -656,7 +664,7 @@
         },
         {
           "extension" : [{
-            "url" : "http://hl7.org/fhir/administrative-gender",
+            "url" : "gender",
             "valueCode" : "female"
           },
           {
@@ -923,7 +931,7 @@
       }]
     },
     "search" : {
-      "mode" : "outcome"
+      "mode" : "match"
     }
   }]
 }

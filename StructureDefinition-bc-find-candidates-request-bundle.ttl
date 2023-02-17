@@ -25,7 +25,7 @@
   fhir:StructureDefinition.version [ fhir:value "1.0.0"]; # 
   fhir:StructureDefinition.name [ fhir:value "FindCandidatesRequestBundle"]; # 
   fhir:StructureDefinition.status [ fhir:value "active"]; # 
-  fhir:StructureDefinition.date [ fhir:value "2023-02-09T00:02:19+00:00"^^xsd:dateTime]; # 
+  fhir:StructureDefinition.date [ fhir:value "2023-02-17T22:47:47+00:00"^^xsd:dateTime]; # 
   fhir:StructureDefinition.publisher [ fhir:value "BC Ministry of Health"]; # 
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -2394,56 +2394,6 @@
          fhir:ElementDefinition.constraint.source [
            fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource";
            fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
-         ]
-       ], [
-         fhir:index 5;
-         fhir:ElementDefinition.constraint.key [ fhir:value "invariant-name-use-1" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "Each type of allowed Name.use can only be used once." ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "name.where(use = 'nickname').count()<=1 and name.where(use = 'usual').count()<=1 and name.where(use = 'official').count()<=1" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
-           fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
-         ]
-       ], [
-         fhir:index 6;
-         fhir:ElementDefinition.constraint.key [ fhir:value "invariant-address-type-1" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "Address.type, if both, must not include any other types of addresses, i.e. no postal and no physical." ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "address.where(type = 'both').count()>=1 implies (address.where(type = 'physical').count()=0 and address.where(type = 'postal').count()=0)" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
-           fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
-         ]
-       ], [
-         fhir:index 7;
-         fhir:ElementDefinition.constraint.key [ fhir:value "invariant-address-type-2" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "Each Address.type, if Address.type is NOT both, must be present no more than once." ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "address.where(type = 'both').count()=0 implies (address.where(type = 'physical').count()<=1 and address.where(type = 'postal').count()<=1)" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
-           fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
-         ]
-       ], [
-         fhir:index 8;
-         fhir:ElementDefinition.constraint.key [ fhir:value "invariant-telecom-phone-use-1" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "Each type of allowed Telecom.use for phone systems can only be used once." ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "telecom.where(use = 'home' and system='phone').count()<=1 and telecom.where(use = 'work' and system='phone').count()<=1 and telecom.where(use = 'mobile' and system='phone').count()<=1" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
-           fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
-         ]
-       ], [
-         fhir:index 9;
-         fhir:ElementDefinition.constraint.key [ fhir:value "invariant-telecom-email-use-1" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "Each type of allowed Telecom.use for email systems can only be used once." ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "telecom.where(use = 'home' and system='email').count()<=1 and telecom.where(use = 'work' and system='email').count()<=1 and telecom.where(use = 'mobile' and system='email').count()<=1" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
-           fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
          ]
        ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];

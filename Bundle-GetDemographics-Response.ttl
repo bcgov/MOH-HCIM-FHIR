@@ -36,8 +36,8 @@
      ]
   ], [
      fhir:index 1;
-     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:289d85b9-43a4-4902-9b52-76cb1f01234" ];
-     fhir:Bundle.entry.resource <urn:uuid:289d85b9-43a4-4902-9b52-76cb1f01234>;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:f156cec9-77fe-40d2-a023-71f1442d4599" ];
+     fhir:Bundle.entry.resource <urn:uuid:f156cec9-77fe-40d2-a023-71f1442d4599>;
      fhir:Bundle.entry.search [
        fhir:Bundle.entry.search.mode [ fhir:value "outcome" ]
      ]
@@ -46,7 +46,7 @@
      fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:27fb3c46-a6ea-4986-8238-d94d6655cc1d" ];
      fhir:Bundle.entry.resource <urn:uuid:27fb3c46-a6ea-4986-8238-d94d6655cc1d>;
      fhir:Bundle.entry.search [
-       fhir:Bundle.entry.search.mode [ fhir:value "outcome" ]
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ]
      ]
   ] . # 
 
@@ -62,11 +62,11 @@
   fhir:Parameters.parameter [
      fhir:index 0;
      fhir:Parameters.parameter.name [ fhir:value "messageId" ];
-     fhir:Parameters.parameter.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     fhir:Parameters.parameter.valueString [ fhir:value "7cd363f7-982c-43cb-85b1-024e567ad571" ]
   ], [
      fhir:index 1;
      fhir:Parameters.parameter.name [ fhir:value "messageDateTime" ];
-     fhir:Parameters.parameter.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+     fhir:Parameters.parameter.valueDateTime [ fhir:value "2023-01-23T14:00:53.5108118-08:00"^^xsd:dateTime ]
   ], [
      fhir:index 2;
      fhir:Parameters.parameter.name [ fhir:value "sender" ];
@@ -76,18 +76,26 @@
      ]
   ], [
      fhir:index 3;
+     fhir:Parameters.parameter.name [ fhir:value "history" ];
+     fhir:Parameters.parameter.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+  ], [
+     fhir:index 4;
+     fhir:Parameters.parameter.name [ fhir:value "identifiersOnly" ];
+     fhir:Parameters.parameter.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+  ], [
+     fhir:index 5;
      fhir:Parameters.parameter.name [ fhir:value "enterer" ];
      fhir:Parameters.parameter.valueIdentifier [
        fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-userid" ];
        fhir:Identifier.value [ fhir:value "ig.samples@cgi.com" ]
      ]
   ], [
-     fhir:index 4;
+     fhir:index 6;
      fhir:Parameters.parameter.name [ fhir:value "requestMessageId" ];
      fhir:Parameters.parameter.valueString [ fhir:value "73b06e0b-8372-496e-83dc-796b42cf730f" ]
   ] . # 
 
-<urn:uuid:289d85b9-43a4-4902-9b52-76cb1f01234> a fhir:OperationOutcome;
+<urn:uuid:f156cec9-77fe-40d2-a023-71f1442d4599> a fhir:OperationOutcome;
   fhir:Resource.id [ fhir:value "GetDemographics-Response-Outcome"]; # 
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];

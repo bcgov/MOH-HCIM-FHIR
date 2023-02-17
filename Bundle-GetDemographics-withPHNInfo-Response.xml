@@ -26,11 +26,11 @@
         </meta>
         <parameter>
           <name value="messageId"/>
-          <valueBoolean value="true"/>
+          <valueString value="0cf19fde-0808-4ffe-b029-3aa06bc008a9"/>
         </parameter>
         <parameter>
           <name value="messageDateTime"/>
-          <valueBoolean value="false"/>
+          <valueDateTime value="2023-01-23T14:00:53.7286055-08:00"/>
         </parameter>
         <parameter>
           <name value="sender"/>
@@ -38,6 +38,14 @@
             <system value="http://hlth.gov.bc.ca/fhir/client/bc-org"/>
             <value value="VIHA"/>
           </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="history"/>
+          <valueBoolean value="true"/>
+        </parameter>
+        <parameter>
+          <name value="identifiersOnly"/>
+          <valueBoolean value="false"/>
         </parameter>
         <parameter>
           <name value="enterer"/>
@@ -573,7 +581,7 @@
             </extension>
           </extension>
           <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-history-extension">
-            <extension url="http://hl7.org/fhir/administrative-gender">
+            <extension url="gender">
               <valueCode value="female"/>
             </extension>
             <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
@@ -786,7 +794,7 @@
       </Patient>
     </resource>
     <search>
-      <mode value="outcome"/>
+      <mode value="match"/>
     </search>
   </entry>
 </Bundle>
