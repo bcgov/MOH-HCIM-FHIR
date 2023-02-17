@@ -10,10 +10,7 @@ Usage: #example
 * link.url = "https://ig.cgi.com/Patient/Add.fhir"
 * entry[0].fullUrl = "urn:uuid:0185235c-f8ea-4107-8979-591ddc2df30b"
 * entry[=].resource = AddPatient-Response-Parameters
-* entry[=].search.mode = #include
 * entry[+].resource = AddPatient-Response-Outcome 
 * entry[=].fullUrl = "urn:uuid:0185235c-f8ea-4107-8979-591ddc2d1234"
-* entry[=].search.mode = #outcome
 * entry[+].fullUrl = "urn:uuid:0913f566-d444-405c-9de7-9250f3173bd4"
 * entry[=].resource = AddPatient-Response-Patient
-* entry[=].search.mode = #outcome

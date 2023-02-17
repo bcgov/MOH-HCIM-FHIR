@@ -98,9 +98,9 @@ Extension: DeathVerifiedFlagHistoryExtension
 Id: bc-death-verified-flag-history-extension
 Title: "BC Death Verified Flag History"
 Description: "This extension allows the Client Registry to include historical death flags in a single Patient resource."
-* extension contains deathFlag 1..1 MS and BusinessPeriodExtension named businessDates 1..1 MS and SourceIDExtension named sourceID 0..1 MS
-* extension[deathFlag].value[x] 1..1 MS
-* extension[deathFlag].value[x] only boolean
+* extension contains deathVerifiedFlag 1..1 MS and BusinessPeriodExtension named businessDates 1..1 MS and SourceIDExtension named sourceID 0..1 MS
+* extension[deathVerifiedFlag].value[x] 1..1 MS
+* extension[deathVerifiedFlag].value[x] only boolean
 
 Extension: MultipleBirthHistoryExtension
 Id: bc-multiplebirth-history-extension

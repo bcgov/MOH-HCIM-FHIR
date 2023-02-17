@@ -17,13 +17,13 @@ Usage: #example
 * entry[=].search.mode = #outcome
 * entry[+].fullUrl = "urn:uuid:71092811-55f9-4e1f-8754-a6828da1d51c"
 * entry[=].resource = FindNewbornByMumsPHN-Response-Patient1
-* entry[=].search.mode = #outcome
+* entry[=].search.mode = #match
 * entry[+].fullUrl = "urn:uuid:69b91ae6-e147-4dd0-abe7-8912ec301fd9"
 * entry[=].resource = FindNewbornByMumsPHN-Response-Patient2
-* entry[=].search.mode = #outcome
+* entry[=].search.mode = #match
 * entry[+].fullUrl = "urn:uuid:e4e077df-3a85-4fa9-8df0-9ff7b2f00000"
 * entry[=].resource = FindNewbornByMumsPHN-Response-Patient3
-* entry[=].search.mode = #outcome
+* entry[=].search.mode = #match
 * entry[+].fullUrl = "urn:uuid:13cb4c36-102d-49c7-9f2e-f652ece39ecf"
 * entry[=].resource = FindNewbornByMumsPHN-Response-RelatedPerson1
 * entry[=].search.mode = #include

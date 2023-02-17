@@ -2,7 +2,7 @@ Instance: Revise-withMaxData-Request
 InstanceOf: Bundle
 Description: "Example of $Revise request with all data fields populated."
 Usage: #example
-* meta.profile = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-bundle"
+* meta.profile = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle"
 * type = #collection
 * timestamp = "2023-01-23T14:02:15.7695447-08:00"
 * link.relation = "self"

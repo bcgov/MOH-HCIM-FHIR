@@ -10,7 +10,5 @@ Usage: #example
 * link.url = "Patient\\Revise"
 * entry[0].fullUrl = "urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4"
 * entry[=].resource = Revise-Async-ACK-Parameters
-* entry[=].search.mode = #include
 * entry[+].resource = Revise-Async-ACK-Outcome
 * entry[=].fullUrl = "urn:uuid:e12213c8-9351-4a9b-94cb-54d3710b9876"
-* entry[=].search.mode = #outcome
