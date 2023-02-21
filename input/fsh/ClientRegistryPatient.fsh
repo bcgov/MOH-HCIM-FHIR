@@ -92,7 +92,7 @@ Title: "BC Death Date History"
 Description: "This extension allows the Client Registry to include historical death dates and flags in a single Patient resource."
 * extension contains deathDate 1..1 MS and BusinessPeriodExtension named businessDates 1..1 MS  and SourceIDExtension named sourceID 0..1 MS
 * extension[deathDate].value[x] 1..1 MS
-* extension[deathDate].value[x] only date
+* extension[deathDate].value[x] only dateTime
 
 Extension: DeathVerifiedFlagHistoryExtension
 Id: bc-death-verified-flag-history-extension
