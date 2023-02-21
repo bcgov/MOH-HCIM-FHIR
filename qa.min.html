@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 8, errors = 28, warn = 30, info = 55-->
+<!-- broken links = 8, errors = 27, warn = 30, info = 55-->
 <head>
   <title>BCHealthClientIdentityManagement : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for BCHealthClientIdentityManagement</h1>
- <p>Generated Fri Feb 17 23:24:42 UTC 2023, FHIR version 4.0.1 for fhir.ca-bc.client#1.0.0 (canonical = <a href="http://hlth.gov.bc.ca/fhir/client">http://hlth.gov.bc.ca/fhir/client</a> (<a href="http://hlth.gov.bc.ca/fhir/client/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
+ <p>Generated Tue Feb 21 21:32:49 UTC 2023, FHIR version 4.0.1 for fhir.ca-bc.client#1.0.0 (canonical = <a href="http://hlth.gov.bc.ca/fhir/client">http://hlth.gov.bc.ca/fhir/client</a> (<a href="http://hlth.gov.bc.ca/fhir/client/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.2.37</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = fhir.ca-bc.client, Canonical = http://hlth.gov.bc.ca/fhir/client</td></tr>
@@ -59,7 +59,7 @@
  <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
  <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://hlth.gov.bc.ca/fhir/client (Problem #1 with package-list.json at http://hlth.gov.bc.ca/fhir/client: hlth.gov.bc.ca)</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
- <tr><td>Summary:</td><td> errors = 28, warn = 30, info = 55, broken links = 8</td></tr>
+ <tr><td>Summary:</td><td> errors = 27, warn = 30, info = 55, broken links = 8</td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -83,8 +83,8 @@
    <tr style="background-color: #EFFFEF">
      <td><a href="#_github_workspace_fsh-generated_resources_Bundle-GetDemographics-withHistory-Response"><b>/github/workspace/fsh-generated/resources/Bundle-GetDemographics-withHistory-Response</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>5</b></td>
    </tr>
-   <tr style="background-color: #ffcccc">
-     <td><a href="#_github_workspace_fsh-generated_resources_Bundle-GetDemographics-withPHNInfo-Response"><b>/github/workspace/fsh-generated/resources/Bundle-GetDemographics-withPHNInfo-Response</b></a></td><td><b>1</b></td><td><b>1</b></td><td><b>8</b></td>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_Bundle-GetDemographics-withPHNInfo-Response"><b>/github/workspace/fsh-generated/resources/Bundle-GetDemographics-withPHNInfo-Response</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>8</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_github_workspace_fsh-generated_resources_CodeSystem-bc-client-registry-address-validation-code-system"><b>/github/workspace/fsh-generated/resources/CodeSystem-bc-client-registry-address-validation-code-system</b></a></td><td><b>2</b></td><td><b>1</b></td><td><b>0</b></td>
@@ -349,9 +349,6 @@
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b><a href="">Bundle.entry[2].resource/*Patient/GetDemographics-withPHNInfo-Response-Patient*/.identifier[5].extension[1] (l305/c16)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0</b> <span id="sl45" class="flip" onclick="flip('l45')">Show Reasoning</span><div id="l45" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient|1.0.0<ul><li>Bundle.entry[2].resource/*Patient/GetDemographics-withPHNInfo-Response-Patient*/.identifier[5].extension[1]: discriminator = true and ('http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-identifierversion' in url)</li></ul></div></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[2].resource/*Patient/GetDemographics-withPHNInfo-Response-Patient*/.deceased.ofType(dateTime).extension[3].extension[0].value.ofType(dateTime) (l967/c18)</b></td><td><b>error</b></td><td title="Extension_PROF_Type"><b>The Profile 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-history-extension|1.0.0' definition allows for the type date but found type dateTime</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle (l1/c2)</b></td><td><b>warning</b></td><td title="BUNDLE_SEARCH_NOSELF"><b>SearchSet Bundles should have a self link that specifies what the search was</b></td>
@@ -755,14 +752,6 @@
    </tr>
    <tr style="background-color: #fff4ee">
      <td><a href="CodeSystem-bc-operation-outcome-details-code-system.html">fsh-generated/resources/CodeSystem-bc-operation-outcome-details-code-system.json</a></td><td><b>The ShareableCodeSystem profile says that the experimental element is mandatory, but it is not present. Published code systems SHOULD conform to the ShareableCodeSystem profile</b></td>
-   </tr>
-</table>
-<hr/>
-<a name="Extension_PROF_Type"> </a>
-<h2>Extension_PROF_Type</h2>
- <table class="grid">
-   <tr style="background-color: #ffeeee">
-     <td><a href="Bundle-GetDemographics-withPHNInfo-Response.html">fsh-generated/resources/Bundle-GetDemographics-withPHNInfo-Response.json</a></td><td><b>The Profile 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-history-extension|1.0.0' definition allows for the type date but found type dateTime</b></td>
    </tr>
 </table>
 <hr/>
