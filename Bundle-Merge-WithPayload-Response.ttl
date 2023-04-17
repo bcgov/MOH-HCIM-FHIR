@@ -5,98 +5,83 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hlth.gov.bc.ca/fhir/client/Bundle/Merge-WithPayload-Response> a fhir:Bundle;
-  fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "Merge-WithPayload-Response"]; # 
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle";
-       fhir:index 0;
+<http://hlth.gov.bc.ca/fhir/client/Bundle/Merge-WithPayload-Response> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Merge-WithPayload-Response"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle"^^xsd:anyURI ;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle>
-     ]
-  ]; # 
-  fhir:Bundle.identifier [
-     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
-     fhir:Identifier.value [ fhir:value "urn:uuid:a9dfb452-0127-4f07-bbf3-61f757c9b98a" ]
-  ]; # 
-  fhir:Bundle.type [ fhir:value "collection"]; # 
-  fhir:Bundle.timestamp [ fhir:value "2023-01-23T14:45:48.2127738-08:00"^^xsd:dateTime]; # 
-  fhir:Bundle.link [
-     fhir:index 0;
-     fhir:Bundle.link.relation [ fhir:value "canonical" ];
-     fhir:Bundle.link.url [ fhir:value "https://ig.cgi.com/Patient/Merge.fhir" ]
-  ]; # 
-  fhir:Bundle.entry [
-     fhir:index 0;
-     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a15d7b9" ];
-     fhir:Bundle.entry.resource <urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a15d7b9>
-  ], [
-     fhir:index 1;
-     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a154567" ];
-     fhir:Bundle.entry.resource <urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a154567>
-  ] . # 
+     ] )
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:uuid:a9dfb452-0127-4f07-bbf3-61f757c9b98a" ]
+  ] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:timestamp [ fhir:v "2023-01-23T14:45:48.2127738-08:00"^^xsd:dateTime] ; # 
+  fhir:link ( [
+     fhir:relation [ fhir:v "canonical" ] ;
+     fhir:url [ fhir:v "https://ig.cgi.com/Patient/Merge.fhir"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a15d7b9"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a15d7b9> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a154567"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a154567> )
+  ] ) . # 
 
-<urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a15d7b9> a fhir:Parameters;
-  fhir:Resource.id [ fhir:value "2329c77d-3c91-408c-9daf-c694a61c518a"]; # 
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out";
-       fhir:index 0;
+<urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a15d7b9> a fhir:Parameters ;
+  fhir:id [ fhir:v "2329c77d-3c91-408c-9daf-c694a61c518a"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"^^xsd:anyURI ;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out>
+     ] )
+  ] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "messageId" ] ;
+     fhir:value [ fhir:v "44e8efbe-280c-4a1e-8dd7-839e16a426e5" ]
+  ] [
+     fhir:name [ fhir:v "messageDateTime" ] ;
+     fhir:value [ fhir:v "2023-01-23T14:45:48.1499176-08:00"^^xsd:dateTime ]
+  ] [
+     fhir:name [ fhir:v "sender" ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/bc-org"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "VIHA" ]
      ]
-  ]; # 
-  fhir:Parameters.parameter [
-     fhir:index 0;
-     fhir:Parameters.parameter.name [ fhir:value "messageId" ];
-     fhir:Parameters.parameter.valueString [ fhir:value "44e8efbe-280c-4a1e-8dd7-839e16a426e5" ]
-  ], [
-     fhir:index 1;
-     fhir:Parameters.parameter.name [ fhir:value "messageDateTime" ];
-     fhir:Parameters.parameter.valueDateTime [ fhir:value "2023-01-23T14:45:48.1499176-08:00"^^xsd:dateTime ]
-  ], [
-     fhir:index 2;
-     fhir:Parameters.parameter.name [ fhir:value "sender" ];
-     fhir:Parameters.parameter.valueIdentifier [
-       fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-org" ];
-       fhir:Identifier.value [ fhir:value "VIHA" ]
+  ] [
+     fhir:name [ fhir:v "enterer" ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/bc-userid"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "ig.samples@cgi.com" ]
      ]
-  ], [
-     fhir:index 3;
-     fhir:Parameters.parameter.name [ fhir:value "enterer" ];
-     fhir:Parameters.parameter.valueIdentifier [
-       fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-userid" ];
-       fhir:Identifier.value [ fhir:value "ig.samples@cgi.com" ]
-     ]
-  ], [
-     fhir:index 4;
-     fhir:Parameters.parameter.name [ fhir:value "requestMessageId" ];
-     fhir:Parameters.parameter.valueString [ fhir:value "5d0fe5dd-01c9-4cca-abd2-0383bead9107" ]
-  ] . # 
+  ] [
+     fhir:name [ fhir:v "requestMessageId" ] ;
+     fhir:value [ fhir:v "5d0fe5dd-01c9-4cca-abd2-0383bead9107" ]
+  ] ) . # 
 
-<urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a154567> a fhir:OperationOutcome;
-  fhir:Resource.id [ fhir:value "Merge-WithPayload-Response-Outcome"]; # 
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: OperationOutcome</b><a name=\"Merge-WithPayload-Response-Outcome\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource OperationOutcome &quot;Merge-WithPayload-Response-Outcome&quot; </p></div><h3>Issues</h3><table class=\"grid\"><tr><td>-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td>*</td><td>information</td><td>business-rule</td><td>The Revise Person Request has been processed, and an existing PHN was found. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#BCHCIM.RP.0.0001)</span></td></tr></table></div>"
-  ]; # 
-  fhir:OperationOutcome.issue [
-     fhir:index 0;
-     fhir:OperationOutcome.issue.severity [ fhir:value "information" ];
-     fhir:OperationOutcome.issue.code [ fhir:value "business-rule" ];
-     fhir:OperationOutcome.issue.details [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes" ];
-         fhir:Coding.code [ fhir:value "BCHCIM.RP.0.0001" ]
-       ];
-       fhir:CodeableConcept.text [ fhir:value "The Revise Person Request has been processed, and an existing PHN was found." ]
+<urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a154567> a fhir:OperationOutcome ;
+  fhir:id [ fhir:v "Merge-WithPayload-Response-Outcome"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: OperationOutcome</b><a name=\"Merge-WithPayload-Response-Outcome\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource OperationOutcome &quot;Merge-WithPayload-Response-Outcome&quot; </p></div><h3>Issues</h3><table class=\"grid\"><tr><td>-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td>*</td><td>information</td><td>business-rule</td><td>The Revise Person Request has been processed, and an existing PHN was found. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#BCHCIM.RP.0.0001)</span></td></tr></table></div>"
+  ] ; # 
+  fhir:issue ( [
+     fhir:severity [ fhir:v "information" ] ;
+     fhir:code [ fhir:v "business-rule" ] ;
+     fhir:details [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "BCHCIM.RP.0.0001" ]
+       ] ) ;
+       fhir:text [ fhir:v "The Revise Person Request has been processed, and an existing PHN was found." ]
      ]
-  ] . # 
-
-# - ontology header ------------------------------------------------------------
-
-<http://hlth.gov.bc.ca/fhir/client/Bundle/Merge-WithPayload-Response.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+  ] ) . # 
 
 # -------------------------------------------------------------------------------------
 

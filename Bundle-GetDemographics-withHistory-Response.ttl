@@ -5,562 +5,446 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hlth.gov.bc.ca/fhir/client/Bundle/GetDemographics-withHistory-Response> a fhir:Bundle;
-  fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "GetDemographics-withHistory-Response"]; # 
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle";
-       fhir:index 0;
+<http://hlth.gov.bc.ca/fhir/client/Bundle/GetDemographics-withHistory-Response> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "GetDemographics-withHistory-Response"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"^^xsd:anyURI ;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle>
+     ] )
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:uuid:bb039f6f-3c18-4427-ad5e-d9de62dccf6b" ]
+  ] ; # 
+  fhir:type [ fhir:v "searchset"] ; # 
+  fhir:timestamp [ fhir:v "2023-01-23T14:00:54.4107299-08:00"^^xsd:dateTime] ; # 
+  fhir:total [ fhir:v "1"^^xsd:nonNegativeInteger] ; # 
+  fhir:link ( [
+     fhir:relation [ fhir:v "canonical" ] ;
+     fhir:url [ fhir:v "https://ig.cgi.com/Patient/Get.fhir"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:fb5ed5fa-e08f-4b88-948a-d81cd26d3453"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:fb5ed5fa-e08f-4b88-948a-d81cd26d3453> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "include" ]
      ]
-  ]; # 
-  fhir:Bundle.identifier [
-     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
-     fhir:Identifier.value [ fhir:value "urn:uuid:bb039f6f-3c18-4427-ad5e-d9de62dccf6b" ]
-  ]; # 
-  fhir:Bundle.type [ fhir:value "searchset"]; # 
-  fhir:Bundle.timestamp [ fhir:value "2023-01-23T14:00:54.4107299-08:00"^^xsd:dateTime]; # 
-  fhir:Bundle.total [ fhir:value "1"^^xsd:nonNegativeInteger]; # 
-  fhir:Bundle.link [
-     fhir:index 0;
-     fhir:Bundle.link.relation [ fhir:value "canonical" ];
-     fhir:Bundle.link.url [ fhir:value "https://ig.cgi.com/Patient/Get.fhir" ]
-  ]; # 
-  fhir:Bundle.entry [
-     fhir:index 0;
-     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:fb5ed5fa-e08f-4b88-948a-d81cd26d3453" ];
-     fhir:Bundle.entry.resource <urn:uuid:fb5ed5fa-e08f-4b88-948a-d81cd26d3453>;
-     fhir:Bundle.entry.search [
-       fhir:Bundle.entry.search.mode [ fhir:value "include" ]
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf74567"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf74567> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "outcome" ]
      ]
-  ], [
-     fhir:index 1;
-     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf74567" ];
-     fhir:Bundle.entry.resource <urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf74567>;
-     fhir:Bundle.entry.search [
-       fhir:Bundle.entry.search.mode [ fhir:value "outcome" ]
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf7f4ba"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf7f4ba> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "match" ]
      ]
-  ], [
-     fhir:index 2;
-     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf7f4ba" ];
-     fhir:Bundle.entry.resource <urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf7f4ba>;
-     fhir:Bundle.entry.search [
-       fhir:Bundle.entry.search.mode [ fhir:value "match" ]
-     ]
-  ] . # 
+  ] ) . # 
 
-<urn:uuid:fb5ed5fa-e08f-4b88-948a-d81cd26d3453> a fhir:Parameters;
-  fhir:Resource.id [ fhir:value "GetDemographics-withHistory-Response-Parameters"]; # 
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out";
-       fhir:index 0;
+<urn:uuid:fb5ed5fa-e08f-4b88-948a-d81cd26d3453> a fhir:Parameters ;
+  fhir:id [ fhir:v "GetDemographics-withHistory-Response-Parameters"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"^^xsd:anyURI ;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out>
+     ] )
+  ] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "messageId" ] ;
+     fhir:value [ fhir:v "0cf19fde-0808-4ffe-b029-3aa06bc008a9" ]
+  ] [
+     fhir:name [ fhir:v "messageDateTime" ] ;
+     fhir:value [ fhir:v "2023-01-23T14:00:53.7286055-08:00"^^xsd:dateTime ]
+  ] [
+     fhir:name [ fhir:v "sender" ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/bc-org"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "VIHA" ]
      ]
-  ]; # 
-  fhir:Parameters.parameter [
-     fhir:index 0;
-     fhir:Parameters.parameter.name [ fhir:value "messageId" ];
-     fhir:Parameters.parameter.valueString [ fhir:value "0cf19fde-0808-4ffe-b029-3aa06bc008a9" ]
-  ], [
-     fhir:index 1;
-     fhir:Parameters.parameter.name [ fhir:value "messageDateTime" ];
-     fhir:Parameters.parameter.valueDateTime [ fhir:value "2023-01-23T14:00:53.7286055-08:00"^^xsd:dateTime ]
-  ], [
-     fhir:index 2;
-     fhir:Parameters.parameter.name [ fhir:value "sender" ];
-     fhir:Parameters.parameter.valueIdentifier [
-       fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-org" ];
-       fhir:Identifier.value [ fhir:value "VIHA" ]
+  ] [
+     fhir:name [ fhir:v "history" ] ;
+     fhir:value [ fhir:v "true"^^xsd:boolean ]
+  ] [
+     fhir:name [ fhir:v "identifiersOnly" ] ;
+     fhir:value [ fhir:v "false"^^xsd:boolean ]
+  ] [
+     fhir:name [ fhir:v "enterer" ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/bc-userid"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "ig.samples@cgi.com" ]
      ]
-  ], [
-     fhir:index 3;
-     fhir:Parameters.parameter.name [ fhir:value "history" ];
-     fhir:Parameters.parameter.valueBoolean [ fhir:value "true"^^xsd:boolean ]
-  ], [
-     fhir:index 4;
-     fhir:Parameters.parameter.name [ fhir:value "identifiersOnly" ];
-     fhir:Parameters.parameter.valueBoolean [ fhir:value "false"^^xsd:boolean ]
-  ], [
-     fhir:index 5;
-     fhir:Parameters.parameter.name [ fhir:value "enterer" ];
-     fhir:Parameters.parameter.valueIdentifier [
-       fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-userid" ];
-       fhir:Identifier.value [ fhir:value "ig.samples@cgi.com" ]
-     ]
-  ], [
-     fhir:index 6;
-     fhir:Parameters.parameter.name [ fhir:value "requestMessageId" ];
-     fhir:Parameters.parameter.valueString [ fhir:value "62ac7557-95b4-42b0-acb1-dde7bc56c964" ]
-  ] . # 
+  ] [
+     fhir:name [ fhir:v "requestMessageId" ] ;
+     fhir:value [ fhir:v "62ac7557-95b4-42b0-acb1-dde7bc56c964" ]
+  ] ) . # 
 
-<urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf74567> a fhir:OperationOutcome;
-  fhir:Resource.id [ fhir:value "GetDemographics-withHistory-Response-Outcome"]; # 
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: OperationOutcome</b><a name=\"GetDemographics-withHistory-Response-Outcome\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource OperationOutcome &quot;GetDemographics-withHistory-Response-Outcome&quot; </p></div><h3>Issues</h3><table class=\"grid\"><tr><td>-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td>*</td><td>information</td><td>business-rule</td><td>The get demographics query completed successfully. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#BCHCIM.GD.0.0013)</span></td></tr></table></div>"
-  ]; # 
-  fhir:OperationOutcome.issue [
-     fhir:index 0;
-     fhir:OperationOutcome.issue.severity [ fhir:value "information" ];
-     fhir:OperationOutcome.issue.code [ fhir:value "business-rule" ];
-     fhir:OperationOutcome.issue.details [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes" ];
-         fhir:Coding.code [ fhir:value "BCHCIM.GD.0.0013" ]
-       ];
-       fhir:CodeableConcept.text [ fhir:value "The get demographics query completed successfully." ]
+<urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf74567> a fhir:OperationOutcome ;
+  fhir:id [ fhir:v "GetDemographics-withHistory-Response-Outcome"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: OperationOutcome</b><a name=\"GetDemographics-withHistory-Response-Outcome\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource OperationOutcome &quot;GetDemographics-withHistory-Response-Outcome&quot; </p></div><h3>Issues</h3><table class=\"grid\"><tr><td>-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td>*</td><td>information</td><td>business-rule</td><td>The get demographics query completed successfully. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#BCHCIM.GD.0.0013)</span></td></tr></table></div>"
+  ] ; # 
+  fhir:issue ( [
+     fhir:severity [ fhir:v "information" ] ;
+     fhir:code [ fhir:v "business-rule" ] ;
+     fhir:details [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "BCHCIM.GD.0.0013" ]
+       ] ) ;
+       fhir:text [ fhir:v "The get demographics query completed successfully." ]
      ]
-  ] . # 
+  ] ) . # 
 
-<urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf7f4ba> a fhir:Patient;
-  fhir:Resource.id [ fhir:value "GetDemographics-withHistory-Response-Patient"]; # 
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
-       fhir:index 0;
+<urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf7f4ba> a fhir:Patient ;
+  fhir:id [ fhir:v "GetDemographics-withHistory-Response-Patient"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"^^xsd:anyURI ;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"GetDemographics-withHistory-Response-Patient\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;GetDemographics-withHistory-Response-Patient&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9999999999 (use: OFFICIAL, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)), Account number: F4299BA5ME6L02M9471NPF0V79Q4Q (use: OFFICIAL, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)), Account number: OE78E6XLL7MJB (use: OFFICIAL, period: 2018-01-23 14:00:53-0800 --&gt; 2023-01-23 14:00:53-0800), Account number: MVZQ14SG826PGIOY84DUDX20Q6S6Y8 (use: SECONDARY, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)), Account number: FPKP88TYFTW9V7I1MA19344FH2 (use: SECONDARY, period: 2018-01-23 14:00:53-0800 --&gt; 2023-01-23 14:00:53-0800)</p><p><b>active</b>: true</p><p><b>name</b>: Alithea Joacheim Aine Parthemore , Christina Matei Marlin Kalscheuer , Abaigh Evangelia Wahchinksapa (OFFICIAL), Wilhelmus Galatea Olabisi (OFFICIAL), Mia (NICKNAME), Jutta (NICKNAME)</p><p><b>telecom</b>: ph: 6237064105(MOBILE), ph: 6304712096(MOBILE), ph: 7121011390(HOME), ph: 4163176376(HOME), ph: 9845613474(WORK), ph: 2054428883(WORK), <a href=\"mailto:Berne.Aron@cgi.com\">Berne.Aron@cgi.com</a>, <a href=\"mailto:Octavius.Megown@cgi.com\">Octavius.Megown@cgi.com</a>, <a href=\"mailto:Claude.Abuel@cgi.com\">Claude.Abuel@cgi.com</a>, <a href=\"mailto:Madailein.Ivins@cgi.com\">Madailein.Ivins@cgi.com</a>, <a href=\"mailto:Akanni.Ehrler@cgi.com\">Akanni.Ehrler@cgi.com</a>, <a href=\"mailto:Tereza.Bis@cgi.com\">Tereza.Bis@cgi.com</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1946-11-28</p><p><b>deceased</b>: 1950-07-16</p><p><b>address</b>: </p><ul><li>1431 Riverwood drive Lake village BC CA </li><li>7597 Mahlon street Maple plain BC CA </li><li>1699 Brand road Hills BC CA </li><li>33031 Arrowood drive Mayfield heights BC CA </li></ul></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "active" ]
+     ] ) ;
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "JHN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "9999999999" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
      ]
-  ]; # 
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"GetDemographics-withHistory-Response-Patient\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;GetDemographics-withHistory-Response-Patient&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9999999999 (use: OFFICIAL, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)), Account number: F4299BA5ME6L02M9471NPF0V79Q4Q (use: OFFICIAL, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)), Account number: OE78E6XLL7MJB (use: OFFICIAL, period: 2018-01-23 14:00:53-0800 --&gt; 2023-01-23 14:00:53-0800), Account number: MVZQ14SG826PGIOY84DUDX20Q6S6Y8 (use: SECONDARY, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)), Account number: FPKP88TYFTW9V7I1MA19344FH2 (use: SECONDARY, period: 2018-01-23 14:00:53-0800 --&gt; 2023-01-23 14:00:53-0800)</p><p><b>active</b>: true</p><p><b>name</b>: Alithea Joacheim Aine Parthemore , Christina Matei Marlin Kalscheuer , Abaigh Evangelia Wahchinksapa (OFFICIAL), Wilhelmus Galatea Olabisi (OFFICIAL), Mia (NICKNAME), Jutta (NICKNAME)</p><p><b>telecom</b>: ph: 6237064105(MOBILE), ph: 6304712096(MOBILE), ph: 7121011390(HOME), ph: 4163176376(HOME), ph: 9845613474(WORK), ph: 2054428883(WORK), <a href=\"mailto:Berne.Aron@cgi.com\">Berne.Aron@cgi.com</a>, <a href=\"mailto:Octavius.Megown@cgi.com\">Octavius.Megown@cgi.com</a>, <a href=\"mailto:Claude.Abuel@cgi.com\">Claude.Abuel@cgi.com</a>, <a href=\"mailto:Madailein.Ivins@cgi.com\">Madailein.Ivins@cgi.com</a>, <a href=\"mailto:Akanni.Ehrler@cgi.com\">Akanni.Ehrler@cgi.com</a>, <a href=\"mailto:Tereza.Bis@cgi.com\">Tereza.Bis@cgi.com</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1946-11-28</p><p><b>deceased</b>: 1950-07-16</p><p><b>address</b>: </p><ul><li>1431 Riverwood drive Lake village BC CA </li><li>7597 Mahlon street Maple plain BC CA </li><li>1699 Brand road Hills BC CA </li><li>33031 Arrowood drive Mayfield heights BC CA </li></ul></div>"
-  ]; # 
-  fhir:Patient.identifier [
-     fhir:index 0;
-     fhir:Element.extension [
-       fhir:index 0;
-       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
-       fhir:Extension.valueCode [ fhir:value "active" ]
-     ];
-     fhir:Identifier.use [ fhir:value "official" ];
-     fhir:Identifier.type [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
-         fhir:Coding.code [ fhir:value "JHN" ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "active" ]
+     ] ) ;
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "AN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "F4299BA5ME6L02M9471NPF0V79Q4Q" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "VIHA_JOELAB" ]
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "merged" ]
+     ] ) ;
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "AN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "OE78E6XLL7MJB" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2018-01-23T14:00:53-08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "VIHA_JOELAB" ]
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "active" ]
+     ] ) ;
+     fhir:use [ fhir:v "secondary" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "AN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "MVZQ14SG826PGIOY84DUDX20Q6S6Y8" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "SSRI_SRC" ]
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "merged" ]
+     ] ) ;
+     fhir:use [ fhir:v "secondary" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "AN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "FPKP88TYFTW9V7I1MA19344FH2" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2018-01-23T14:00:53-08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "SSRI_SRC" ]
+     ]
+  ] ) ; # 
+  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:family [ fhir:v "Parthemore" ] ;
+     fhir:given ( [ fhir:v "Alithea" ] [ fhir:v "Joacheim" ] [ fhir:v "Aine" ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:family [ fhir:v "Kalscheuer" ] ;
+     fhir:given ( [ fhir:v "Christina" ] [ fhir:v "Matei" ] [ fhir:v "Marlin" ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2020-01-23T14:00:53-08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:given ( [ fhir:v "Abaigh" ] [ fhir:v "Evangelia" ] [ fhir:v "Wahchinksapa" ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:given ( [ fhir:v "Wilhelmus" ] [ fhir:v "Galatea" ] [ fhir:v "Olabisi" ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2017-01-23T14:00:53-08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:use [ fhir:v "nickname" ] ;
+     fhir:given ( [ fhir:v "Mia" ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:use [ fhir:v "nickname" ] ;
+     fhir:given ( [ fhir:v "Jutta" ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2020-01-23T14:00:53-08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ]
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "6237064105" ] ;
+     fhir:use [ fhir:v "mobile" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "6304712096" ] ;
+     fhir:use [ fhir:v "mobile" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2021-01-23T14:00:53-08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "7121011390" ] ;
+     fhir:use [ fhir:v "home" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "4163176376" ] ;
+     fhir:use [ fhir:v "home" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2017-01-23T14:00:53-08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "9845613474" ] ;
+     fhir:use [ fhir:v "work" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "2054428883" ] ;
+     fhir:use [ fhir:v "work" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2017-01-23T14:00:53-08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Berne.Aron@cgi.com" ] ;
+     fhir:use [ fhir:v "mobile" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Octavius.Megown@cgi.com" ] ;
+     fhir:use [ fhir:v "mobile" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2020-01-23T14:00:53-08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Claude.Abuel@cgi.com" ] ;
+     fhir:use [ fhir:v "home" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Madailein.Ivins@cgi.com" ] ;
+     fhir:use [ fhir:v "home" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2019-01-23T14:00:53-08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Akanni.Ehrler@cgi.com" ] ;
+     fhir:use [ fhir:v "work" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Tereza.Bis@cgi.com" ] ;
+     fhir:use [ fhir:v "work" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2017-01-23T14:00:53-08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ]
+  ] ) ; # 
+  fhir:gender [
+     fhir:v "female" ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
        ]
-     ];
-     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC" ];
-     fhir:Identifier.value [ fhir:value "9999999999" ];
-     fhir:Identifier.period [
-       fhir:Period.start [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ]
-  ], [
-     fhir:index 1;
-     fhir:Element.extension [
-       fhir:index 0;
-       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
-       fhir:Extension.valueCode [ fhir:value "active" ]
-     ];
-     fhir:Identifier.use [ fhir:value "official" ];
-     fhir:Identifier.type [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
-         fhir:Coding.code [ fhir:value "AN" ]
+     ] )
+  ] ; # 
+  fhir:birthDate [
+     fhir:v "1946-11-28"^^xsd:date ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
        ]
-     ];
-     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
-     fhir:Identifier.value [ fhir:value "F4299BA5ME6L02M9471NPF0V79Q4Q" ];
-     fhir:Identifier.period [
-       fhir:Period.start [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ];
-     fhir:Identifier.assigner [
-       fhir:Reference.display [ fhir:value "VIHA_JOELAB" ]
-     ]
-  ], [
-     fhir:index 2;
-     fhir:Element.extension [
-       fhir:index 0;
-       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
-       fhir:Extension.valueCode [ fhir:value "merged" ]
-     ];
-     fhir:Identifier.use [ fhir:value "official" ];
-     fhir:Identifier.type [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
-         fhir:Coding.code [ fhir:value "AN" ]
+     ] )
+  ] ; # 
+  fhir:deceased [
+     fhir:v "1950-07-16"^^xsd:date ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
        ]
-     ];
-     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
-     fhir:Identifier.value [ fhir:value "OE78E6XLL7MJB" ];
-     fhir:Identifier.period [
-       fhir:Period.start [ fhir:value "2018-01-23T14:00:53-08:00"^^xsd:dateTime ];
-       fhir:Period.end [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ];
-     fhir:Identifier.assigner [
-       fhir:Reference.display [ fhir:value "VIHA_JOELAB" ]
-     ]
-  ], [
-     fhir:index 3;
-     fhir:Element.extension [
-       fhir:index 0;
-       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
-       fhir:Extension.valueCode [ fhir:value "active" ]
-     ];
-     fhir:Identifier.use [ fhir:value "secondary" ];
-     fhir:Identifier.type [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
-         fhir:Coding.code [ fhir:value "AN" ]
-       ]
-     ];
-     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
-     fhir:Identifier.value [ fhir:value "MVZQ14SG826PGIOY84DUDX20Q6S6Y8" ];
-     fhir:Identifier.period [
-       fhir:Period.start [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ];
-     fhir:Identifier.assigner [
-       fhir:Reference.display [ fhir:value "SSRI_SRC" ]
-     ]
-  ], [
-     fhir:index 4;
-     fhir:Element.extension [
-       fhir:index 0;
-       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
-       fhir:Extension.valueCode [ fhir:value "merged" ]
-     ];
-     fhir:Identifier.use [ fhir:value "secondary" ];
-     fhir:Identifier.type [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
-         fhir:Coding.code [ fhir:value "AN" ]
-       ]
-     ];
-     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
-     fhir:Identifier.value [ fhir:value "FPKP88TYFTW9V7I1MA19344FH2" ];
-     fhir:Identifier.period [
-       fhir:Period.start [ fhir:value "2018-01-23T14:00:53-08:00"^^xsd:dateTime ];
-       fhir:Period.end [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ];
-     fhir:Identifier.assigner [
-       fhir:Reference.display [ fhir:value "SSRI_SRC" ]
-     ]
-  ]; # 
-  fhir:Patient.active [ fhir:value "true"^^xsd:boolean]; # 
-  fhir:Patient.name [
-     fhir:index 0;
-     fhir:HumanName.use [ fhir:value "usual" ];
-     fhir:HumanName.family [ fhir:value "Parthemore" ];
-     fhir:HumanName.given [
-       fhir:value "Alithea";
-       fhir:index 0
-     ], [
-       fhir:value "Joacheim";
-       fhir:index 1
-     ], [
-       fhir:value "Aine";
-       fhir:index 2
-     ];
-     fhir:HumanName.period [
-       fhir:Period.start [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ]
-  ], [
-     fhir:index 1;
-     fhir:HumanName.use [ fhir:value "usual" ];
-     fhir:HumanName.family [ fhir:value "Kalscheuer" ];
-     fhir:HumanName.given [
-       fhir:value "Christina";
-       fhir:index 0
-     ], [
-       fhir:value "Matei";
-       fhir:index 1
-     ], [
-       fhir:value "Marlin";
-       fhir:index 2
-     ];
-     fhir:HumanName.period [
-       fhir:Period.start [ fhir:value "2020-01-23T14:00:53-08:00"^^xsd:dateTime ];
-       fhir:Period.end [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ]
-  ], [
-     fhir:index 2;
-     fhir:HumanName.use [ fhir:value "official" ];
-     fhir:HumanName.given [
-       fhir:value "Abaigh";
-       fhir:index 0
-     ], [
-       fhir:value "Evangelia";
-       fhir:index 1
-     ], [
-       fhir:value "Wahchinksapa";
-       fhir:index 2
-     ];
-     fhir:HumanName.period [
-       fhir:Period.start [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ]
-  ], [
-     fhir:index 3;
-     fhir:HumanName.use [ fhir:value "official" ];
-     fhir:HumanName.given [
-       fhir:value "Wilhelmus";
-       fhir:index 0
-     ], [
-       fhir:value "Galatea";
-       fhir:index 1
-     ], [
-       fhir:value "Olabisi";
-       fhir:index 2
-     ];
-     fhir:HumanName.period [
-       fhir:Period.start [ fhir:value "2017-01-23T14:00:53-08:00"^^xsd:dateTime ];
-       fhir:Period.end [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ]
-  ], [
-     fhir:index 4;
-     fhir:HumanName.use [ fhir:value "nickname" ];
-     fhir:HumanName.given [
-       fhir:value "Mia";
-       fhir:index 0
-     ];
-     fhir:HumanName.period [
-       fhir:Period.start [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ]
-  ], [
-     fhir:index 5;
-     fhir:HumanName.use [ fhir:value "nickname" ];
-     fhir:HumanName.given [
-       fhir:value "Jutta";
-       fhir:index 0
-     ];
-     fhir:HumanName.period [
-       fhir:Period.start [ fhir:value "2020-01-23T14:00:53-08:00"^^xsd:dateTime ];
-       fhir:Period.end [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ]
-  ]; # 
-  fhir:Patient.telecom [
-     fhir:index 0;
-     fhir:ContactPoint.system [ fhir:value "phone" ];
-     fhir:ContactPoint.value [ fhir:value "6237064105" ];
-     fhir:ContactPoint.use [ fhir:value "mobile" ];
-     fhir:ContactPoint.period [
-       fhir:Period.start [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ]
-  ], [
-     fhir:index 1;
-     fhir:ContactPoint.system [ fhir:value "phone" ];
-     fhir:ContactPoint.value [ fhir:value "6304712096" ];
-     fhir:ContactPoint.use [ fhir:value "mobile" ];
-     fhir:ContactPoint.period [
-       fhir:Period.start [ fhir:value "2021-01-23T14:00:53-08:00"^^xsd:dateTime ];
-       fhir:Period.end [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ]
-  ], [
-     fhir:index 2;
-     fhir:ContactPoint.system [ fhir:value "phone" ];
-     fhir:ContactPoint.value [ fhir:value "7121011390" ];
-     fhir:ContactPoint.use [ fhir:value "home" ];
-     fhir:ContactPoint.period [
-       fhir:Period.start [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ]
-  ], [
-     fhir:index 3;
-     fhir:ContactPoint.system [ fhir:value "phone" ];
-     fhir:ContactPoint.value [ fhir:value "4163176376" ];
-     fhir:ContactPoint.use [ fhir:value "home" ];
-     fhir:ContactPoint.period [
-       fhir:Period.start [ fhir:value "2017-01-23T14:00:53-08:00"^^xsd:dateTime ];
-       fhir:Period.end [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ]
-  ], [
-     fhir:index 4;
-     fhir:ContactPoint.system [ fhir:value "phone" ];
-     fhir:ContactPoint.value [ fhir:value "9845613474" ];
-     fhir:ContactPoint.use [ fhir:value "work" ];
-     fhir:ContactPoint.period [
-       fhir:Period.start [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ]
-  ], [
-     fhir:index 5;
-     fhir:ContactPoint.system [ fhir:value "phone" ];
-     fhir:ContactPoint.value [ fhir:value "2054428883" ];
-     fhir:ContactPoint.use [ fhir:value "work" ];
-     fhir:ContactPoint.period [
-       fhir:Period.start [ fhir:value "2017-01-23T14:00:53-08:00"^^xsd:dateTime ];
-       fhir:Period.end [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ]
-  ], [
-     fhir:index 6;
-     fhir:ContactPoint.system [ fhir:value "email" ];
-     fhir:ContactPoint.value [ fhir:value "Berne.Aron@cgi.com" ];
-     fhir:ContactPoint.use [ fhir:value "mobile" ];
-     fhir:ContactPoint.period [
-       fhir:Period.start [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ]
-  ], [
-     fhir:index 7;
-     fhir:ContactPoint.system [ fhir:value "email" ];
-     fhir:ContactPoint.value [ fhir:value "Octavius.Megown@cgi.com" ];
-     fhir:ContactPoint.use [ fhir:value "mobile" ];
-     fhir:ContactPoint.period [
-       fhir:Period.start [ fhir:value "2020-01-23T14:00:53-08:00"^^xsd:dateTime ];
-       fhir:Period.end [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ]
-  ], [
-     fhir:index 8;
-     fhir:ContactPoint.system [ fhir:value "email" ];
-     fhir:ContactPoint.value [ fhir:value "Claude.Abuel@cgi.com" ];
-     fhir:ContactPoint.use [ fhir:value "home" ];
-     fhir:ContactPoint.period [
-       fhir:Period.start [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ]
-  ], [
-     fhir:index 9;
-     fhir:ContactPoint.system [ fhir:value "email" ];
-     fhir:ContactPoint.value [ fhir:value "Madailein.Ivins@cgi.com" ];
-     fhir:ContactPoint.use [ fhir:value "home" ];
-     fhir:ContactPoint.period [
-       fhir:Period.start [ fhir:value "2019-01-23T14:00:53-08:00"^^xsd:dateTime ];
-       fhir:Period.end [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ]
-  ], [
-     fhir:index 10;
-     fhir:ContactPoint.system [ fhir:value "email" ];
-     fhir:ContactPoint.value [ fhir:value "Akanni.Ehrler@cgi.com" ];
-     fhir:ContactPoint.use [ fhir:value "work" ];
-     fhir:ContactPoint.period [
-       fhir:Period.start [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ]
-  ], [
-     fhir:index 11;
-     fhir:ContactPoint.system [ fhir:value "email" ];
-     fhir:ContactPoint.value [ fhir:value "Tereza.Bis@cgi.com" ];
-     fhir:ContactPoint.use [ fhir:value "work" ];
-     fhir:ContactPoint.period [
-       fhir:Period.start [ fhir:value "2017-01-23T14:00:53-08:00"^^xsd:dateTime ];
-       fhir:Period.end [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ]
-  ]; # 
-  fhir:Patient.gender [
-     fhir:value "female";
-     fhir:Element.extension [
-       fhir:index 0;
-       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
-       fhir:Extension.valuePeriod [
-         fhir:Period.start [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-       ]
-     ]
-  ]; # 
-  fhir:Patient.birthDate [
-     fhir:value "1946-11-28"^^xsd:date;
-     fhir:Element.extension [
-       fhir:index 0;
-       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
-       fhir:Extension.valuePeriod [
-         fhir:Period.start [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-       ]
-     ]
-  ]; # 
-  fhir:Patient.deceasedDateTime [
-     fhir:value "1950-07-16"^^xsd:date;
-     fhir:Element.extension [
-       fhir:index 0;
-       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
-       fhir:Extension.valuePeriod [
-         fhir:Period.start [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-       ]
-     ], [
-       fhir:index 1;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "deathVerifiedFlag" ];
-         fhir:Extension.valueBoolean [ fhir:value "false"^^xsd:boolean ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension" ];
-         fhir:Extension.valuePeriod [
-           fhir:Period.start [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "deathVerifiedFlag"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "false"^^xsd:boolean ]
+       ] [
+         fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Period ;
+           fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
          ]
-       ];
-       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension"^^xsd:anyURI ]
+     ] )
+  ] ; # 
+  fhir:address ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "unknown" ]
+     ] ) ;
+     fhir:type [ fhir:v "physical" ] ;
+     fhir:line ( [ fhir:v "1431 Riverwood drive" ] ) ;
+     fhir:city [ fhir:v "Lake village" ] ;
+     fhir:state [ fhir:v "BC" ] ;
+     fhir:country [ fhir:v "CA" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
      ]
-  ]; # 
-  fhir:Patient.address [
-     fhir:index 0;
-     fhir:Element.extension [
-       fhir:index 0;
-       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension" ];
-       fhir:Extension.valueCode [ fhir:value "unknown" ]
-     ];
-     fhir:Address.type [ fhir:value "physical" ];
-     fhir:Address.line [
-       fhir:value "1431 Riverwood drive";
-       fhir:index 0
-     ];
-     fhir:Address.city [ fhir:value "Lake village" ];
-     fhir:Address.state [ fhir:value "BC" ];
-     fhir:Address.country [ fhir:value "CA" ];
-     fhir:Address.period [
-       fhir:Period.start [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "unknown" ]
+     ] ) ;
+     fhir:type [ fhir:v "physical" ] ;
+     fhir:line ( [ fhir:v "7597 Mahlon street" ] ) ;
+     fhir:city [ fhir:v "Maple plain" ] ;
+     fhir:state [ fhir:v "BC" ] ;
+     fhir:country [ fhir:v "CA" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2017-01-23T14:00:53-08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
      ]
-  ], [
-     fhir:index 1;
-     fhir:Element.extension [
-       fhir:index 0;
-       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension" ];
-       fhir:Extension.valueCode [ fhir:value "unknown" ]
-     ];
-     fhir:Address.type [ fhir:value "physical" ];
-     fhir:Address.line [
-       fhir:value "7597 Mahlon street";
-       fhir:index 0
-     ];
-     fhir:Address.city [ fhir:value "Maple plain" ];
-     fhir:Address.state [ fhir:value "BC" ];
-     fhir:Address.country [ fhir:value "CA" ];
-     fhir:Address.period [
-       fhir:Period.start [ fhir:value "2017-01-23T14:00:53-08:00"^^xsd:dateTime ];
-       fhir:Period.end [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "unknown" ]
+     ] ) ;
+     fhir:type [ fhir:v "postal" ] ;
+     fhir:line ( [ fhir:v "1699 Brand road" ] ) ;
+     fhir:city [ fhir:v "Hills" ] ;
+     fhir:state [ fhir:v "BC" ] ;
+     fhir:country [ fhir:v "CA" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
      ]
-  ], [
-     fhir:index 2;
-     fhir:Element.extension [
-       fhir:index 0;
-       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension" ];
-       fhir:Extension.valueCode [ fhir:value "unknown" ]
-     ];
-     fhir:Address.type [ fhir:value "postal" ];
-     fhir:Address.line [
-       fhir:value "1699 Brand road";
-       fhir:index 0
-     ];
-     fhir:Address.city [ fhir:value "Hills" ];
-     fhir:Address.state [ fhir:value "BC" ];
-     fhir:Address.country [ fhir:value "CA" ];
-     fhir:Address.period [
-       fhir:Period.start [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "unknown" ]
+     ] ) ;
+     fhir:type [ fhir:v "postal" ] ;
+     fhir:line ( [ fhir:v "33031 Arrowood drive" ] ) ;
+     fhir:city [ fhir:v "Mayfield heights" ] ;
+     fhir:state [ fhir:v "BC" ] ;
+     fhir:country [ fhir:v "CA" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2020-01-23T14:00:53-08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
      ]
-  ], [
-     fhir:index 3;
-     fhir:Element.extension [
-       fhir:index 0;
-       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension" ];
-       fhir:Extension.valueCode [ fhir:value "unknown" ]
-     ];
-     fhir:Address.type [ fhir:value "postal" ];
-     fhir:Address.line [
-       fhir:value "33031 Arrowood drive";
-       fhir:index 0
-     ];
-     fhir:Address.city [ fhir:value "Mayfield heights" ];
-     fhir:Address.state [ fhir:value "BC" ];
-     fhir:Address.country [ fhir:value "CA" ];
-     fhir:Address.period [
-       fhir:Period.start [ fhir:value "2020-01-23T14:00:53-08:00"^^xsd:dateTime ];
-       fhir:Period.end [ fhir:value "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ]
-  ] . # 
-
-# - ontology header ------------------------------------------------------------
-
-<http://hlth.gov.bc.ca/fhir/client/Bundle/GetDemographics-withHistory-Response.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+  ] ) . # 
 
 # -------------------------------------------------------------------------------------
 

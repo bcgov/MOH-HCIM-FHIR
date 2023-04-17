@@ -5,98 +5,83 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hlth.gov.bc.ca/fhir/client/Bundle/Revise-Async-ACK> a fhir:Bundle;
-  fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "Revise-Async-ACK"]; # 
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-async-ack-response-bundle";
-       fhir:index 0;
+<http://hlth.gov.bc.ca/fhir/client/Bundle/Revise-Async-ACK> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Revise-Async-ACK"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-async-ack-response-bundle"^^xsd:anyURI ;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-async-ack-response-bundle>
-     ]
-  ]; # 
-  fhir:Bundle.identifier [
-     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
-     fhir:Identifier.value [ fhir:value "urn:uuid:157abc8c-036b-4fb6-960a-ba66e931189d" ]
-  ]; # 
-  fhir:Bundle.type [ fhir:value "collection"]; # 
-  fhir:Bundle.timestamp [ fhir:value "2023-01-23T14:02:15.999572-08:00"^^xsd:dateTime]; # 
-  fhir:Bundle.link [
-     fhir:index 0;
-     fhir:Bundle.link.relation [ fhir:value "canonical" ];
-     fhir:Bundle.link.url [ fhir:value "Patient\\Revise" ]
-  ]; # 
-  fhir:Bundle.entry [
-     fhir:index 0;
-     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4" ];
-     fhir:Bundle.entry.resource <urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4>
-  ], [
-     fhir:index 1;
-     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:e12213c8-9351-4a9b-94cb-54d3710b9876" ];
-     fhir:Bundle.entry.resource <urn:uuid:e12213c8-9351-4a9b-94cb-54d3710b9876>
-  ] . # 
+     ] )
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:uuid:157abc8c-036b-4fb6-960a-ba66e931189d" ]
+  ] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:timestamp [ fhir:v "2023-01-23T14:02:15.999572-08:00"^^xsd:dateTime] ; # 
+  fhir:link ( [
+     fhir:relation [ fhir:v "canonical" ] ;
+     fhir:url [ fhir:v "Patient\\Revise"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:e12213c8-9351-4a9b-94cb-54d3710b9876"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:e12213c8-9351-4a9b-94cb-54d3710b9876> )
+  ] ) . # 
 
-<urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4> a fhir:Parameters;
-  fhir:Resource.id [ fhir:value "6426876c-8118-4020-8364-7021d0a1ec23"]; # 
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameter-async-response";
-       fhir:index 0;
+<urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4> a fhir:Parameters ;
+  fhir:id [ fhir:v "6426876c-8118-4020-8364-7021d0a1ec23"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameter-async-response"^^xsd:anyURI ;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameter-async-response>
+     ] )
+  ] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "messageId" ] ;
+     fhir:value [ fhir:v "f95c3be0-b6ed-4aec-b969-7bc7da904315" ]
+  ] [
+     fhir:name [ fhir:v "messageDateTime" ] ;
+     fhir:value [ fhir:v "2023-01-23T14:02:15.7581133-08:00"^^xsd:dateTime ]
+  ] [
+     fhir:name [ fhir:v "sender" ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/bc-org"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "VPP" ]
      ]
-  ]; # 
-  fhir:Parameters.parameter [
-     fhir:index 0;
-     fhir:Parameters.parameter.name [ fhir:value "messageId" ];
-     fhir:Parameters.parameter.valueString [ fhir:value "f95c3be0-b6ed-4aec-b969-7bc7da904315" ]
-  ], [
-     fhir:index 1;
-     fhir:Parameters.parameter.name [ fhir:value "messageDateTime" ];
-     fhir:Parameters.parameter.valueDateTime [ fhir:value "2023-01-23T14:02:15.7581133-08:00"^^xsd:dateTime ]
-  ], [
-     fhir:index 2;
-     fhir:Parameters.parameter.name [ fhir:value "sender" ];
-     fhir:Parameters.parameter.valueIdentifier [
-       fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-org" ];
-       fhir:Identifier.value [ fhir:value "VPP" ]
+  ] [
+     fhir:name [ fhir:v "enterer" ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/bc-userid"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "ig.samples@cgi.com" ]
      ]
-  ], [
-     fhir:index 3;
-     fhir:Parameters.parameter.name [ fhir:value "enterer" ];
-     fhir:Parameters.parameter.valueIdentifier [
-       fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-userid" ];
-       fhir:Identifier.value [ fhir:value "ig.samples@cgi.com" ]
-     ]
-  ], [
-     fhir:index 4;
-     fhir:Parameters.parameter.name [ fhir:value "requestMessageId" ];
-     fhir:Parameters.parameter.valueString [ fhir:value "823d7eb6-24d5-452f-b2d0-f86f2f6130e7" ]
-  ] . # 
+  ] [
+     fhir:name [ fhir:v "requestMessageId" ] ;
+     fhir:value [ fhir:v "823d7eb6-24d5-452f-b2d0-f86f2f6130e7" ]
+  ] ) . # 
 
-<urn:uuid:e12213c8-9351-4a9b-94cb-54d3710b9876> a fhir:OperationOutcome;
-  fhir:Resource.id [ fhir:value "Revise-Async-ACK-Outcome"]; # 
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: OperationOutcome</b><a name=\"Revise-Async-ACK-Outcome\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource OperationOutcome &quot;Revise-Async-ACK-Outcome&quot; </p></div><h3>Issues</h3><table class=\"grid\"><tr><td>-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td>*</td><td>information</td><td>business-rule</td><td>The Revise Person request has been accepted for processing. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#BCHCIM.RP.0.0007)</span></td></tr></table></div>"
-  ]; # 
-  fhir:OperationOutcome.issue [
-     fhir:index 0;
-     fhir:OperationOutcome.issue.severity [ fhir:value "information" ];
-     fhir:OperationOutcome.issue.code [ fhir:value "business-rule" ];
-     fhir:OperationOutcome.issue.details [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes" ];
-         fhir:Coding.code [ fhir:value "BCHCIM.RP.0.0007" ]
-       ];
-       fhir:CodeableConcept.text [ fhir:value "The Revise Person request has been accepted for processing." ]
+<urn:uuid:e12213c8-9351-4a9b-94cb-54d3710b9876> a fhir:OperationOutcome ;
+  fhir:id [ fhir:v "Revise-Async-ACK-Outcome"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: OperationOutcome</b><a name=\"Revise-Async-ACK-Outcome\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource OperationOutcome &quot;Revise-Async-ACK-Outcome&quot; </p></div><h3>Issues</h3><table class=\"grid\"><tr><td>-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td>*</td><td>information</td><td>business-rule</td><td>The Revise Person request has been accepted for processing. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (bc-oo-codes#BCHCIM.RP.0.0007)</span></td></tr></table></div>"
+  ] ; # 
+  fhir:issue ( [
+     fhir:severity [ fhir:v "information" ] ;
+     fhir:code [ fhir:v "business-rule" ] ;
+     fhir:details [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "BCHCIM.RP.0.0007" ]
+       ] ) ;
+       fhir:text [ fhir:v "The Revise Person request has been accepted for processing." ]
      ]
-  ] . # 
-
-# - ontology header ------------------------------------------------------------
-
-<http://hlth.gov.bc.ca/fhir/client/Bundle/Revise-Async-ACK.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+  ] ) . # 
 
 # -------------------------------------------------------------------------------------
 

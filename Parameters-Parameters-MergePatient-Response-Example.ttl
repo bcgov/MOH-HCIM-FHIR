@@ -5,41 +5,32 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hlth.gov.bc.ca/fhir/client/Parameters/Parameters-MergePatient-Response-Example> a fhir:Parameters;
-  fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "Parameters-MergePatient-Response-Example"]; # 
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out";
-       fhir:index 0;
+<http://hlth.gov.bc.ca/fhir/client/Parameters/Parameters-MergePatient-Response-Example> a fhir:Parameters ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Parameters-MergePatient-Response-Example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"^^xsd:anyURI ;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out>
+     ] )
+  ] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "messageId" ] ;
+     fhir:value [ fhir:v "c087e71e-3e7e-4c22-a3ce-61523f600615" ]
+  ] [
+     fhir:name [ fhir:v "messageDateTime" ] ;
+     fhir:value [ fhir:v "2015-02-07T13:29:17-08:00"^^xsd:dateTime ]
+  ] [
+     fhir:name [ fhir:v "sender" ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/bc-org"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "MOH_CRS" ]
      ]
-  ]; # 
-  fhir:Parameters.parameter [
-     fhir:index 0;
-     fhir:Parameters.parameter.name [ fhir:value "messageId" ];
-     fhir:Parameters.parameter.valueString [ fhir:value "c087e71e-3e7e-4c22-a3ce-61523f600615" ]
-  ], [
-     fhir:index 1;
-     fhir:Parameters.parameter.name [ fhir:value "messageDateTime" ];
-     fhir:Parameters.parameter.valueDateTime [ fhir:value "2015-02-07T13:29:17-08:00"^^xsd:dateTime ]
-  ], [
-     fhir:index 2;
-     fhir:Parameters.parameter.name [ fhir:value "sender" ];
-     fhir:Parameters.parameter.valueIdentifier [
-       fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/bc-org" ];
-       fhir:Identifier.value [ fhir:value "MOH_CRS" ]
-     ]
-  ], [
-     fhir:index 3;
-     fhir:Parameters.parameter.name [ fhir:value "requestMessageId" ];
-     fhir:Parameters.parameter.valueString [ fhir:value "98028b44-882a-4c72-8c92-b87d916147e1" ]
-  ] . # 
-
-# - ontology header ------------------------------------------------------------
-
-<http://hlth.gov.bc.ca/fhir/client/Parameters/Parameters-MergePatient-Response-Example.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+  ] [
+     fhir:name [ fhir:v "requestMessageId" ] ;
+     fhir:value [ fhir:v "98028b44-882a-4c72-8c92-b87d916147e1" ]
+  ] ) . # 
 
 # -------------------------------------------------------------------------------------
 

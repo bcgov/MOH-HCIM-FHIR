@@ -5,77 +5,63 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add> a fhir:OperationDefinition;
-  fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "bc-patient-add"]; # 
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "extensions" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>URL: [base]/Patient/$AddPatient</p><p>Input parameters Profile: <a href=\"StructureDefinition-bc-add-request-bundle.html\">AddRequestBundle</a></p><p>Output parameters Profile: <a href=\"StructureDefinition-bc-add-response-bundle.html\">AddResponseBundle</a></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>AddRequestBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The AddPatient operation request Bundle.</p>\n</div></td></tr><tr><td>OUT</td><td>AddResponseBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The AddPatient operation response Bundle.</p>\n</div></td></tr></table></div>"
-  ]; # 
-  fhir:OperationDefinition.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add"]; # 
-  fhir:OperationDefinition.version [ fhir:value "1.0.0"]; # 
-  fhir:OperationDefinition.name [ fhir:value "AddPatient"]; # 
-  fhir:OperationDefinition.title [ fhir:value "AddPatient"]; # 
-  fhir:OperationDefinition.status [ fhir:value "draft"]; # 
-  fhir:OperationDefinition.kind [ fhir:value "operation"]; # 
-  fhir:OperationDefinition.date [ fhir:value "2023-02-21T21:29:24+00:00"^^xsd:dateTime]; # 
-  fhir:OperationDefinition.publisher [ fhir:value "BC Ministry of Health"]; # 
-  fhir:OperationDefinition.contact [
-     fhir:index 0;
-     fhir:ContactDetail.name [ fhir:value "BC Ministry of Health" ];
-     fhir:ContactDetail.telecom [
-       fhir:index 0;
-       fhir:ContactPoint.system [ fhir:value "url" ];
-       fhir:ContactPoint.value [ fhir:value "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health" ]
-     ]
-  ]; # 
-  fhir:OperationDefinition.jurisdiction [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
-       fhir:Coding.code [ fhir:value "CA" ];
-       fhir:Coding.display [ fhir:value "Canada" ]
-     ]
-  ]; # 
-  fhir:OperationDefinition.code [ fhir:value "AddPatient"]; # 
-  fhir:OperationDefinition.resource [
-     fhir:value "Patient";
-     fhir:index 0
-  ]; # 
-  fhir:OperationDefinition.system [ fhir:value "false"^^xsd:boolean]; # 
-  fhir:OperationDefinition.type [ fhir:value "true"^^xsd:boolean]; # 
-  fhir:OperationDefinition.instance [ fhir:value "false"^^xsd:boolean]; # 
-  fhir:OperationDefinition.inputProfile [
-     fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle";
+<http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add> a fhir:OperationDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "bc-patient-add"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>URL: [base]/Patient/$AddPatient</p><p>Input parameters Profile: <a href=\"StructureDefinition-bc-add-request-bundle.html\">AddRequestBundle</a></p><p>Output parameters Profile: <a href=\"StructureDefinition-bc-add-response-bundle.html\">AddResponseBundle</a></p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>AddRequestBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The AddPatient operation request Bundle.</p>\n</div></td></tr><tr><td>OUT</td><td>AddResponseBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The AddPatient operation response Bundle.</p>\n</div></td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "AddPatient"] ; # 
+  fhir:title [ fhir:v "AddPatient"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "operation"] ; # 
+  fhir:date [ fhir:v "2023-04-17T21:31:48+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "BC Ministry of Health"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "BC Ministry of Health" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health" ]
+     ] )
+  ] ) ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CA" ] ;
+       fhir:display [ fhir:v "Canada" ]
+     ] )
+  ] ) ; # 
+  fhir:code [ fhir:v "AddPatient"] ; # 
+  fhir:resource ( [ fhir:v "Patient"] ) ; # 
+  fhir:system [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:type [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:instance [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:inputProfile [
+     fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle"^^xsd:anyURI ;
      fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle>
-  ]; # 
-  fhir:OperationDefinition.outputProfile [
-     fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-response-bundle";
+  ] ; # 
+  fhir:outputProfile [
+     fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-response-bundle"^^xsd:anyURI ;
      fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-response-bundle>
-  ]; # 
-  fhir:OperationDefinition.parameter [
-     fhir:index 0;
-     fhir:OperationDefinition.parameter.name [ fhir:value "AddRequestBundle" ];
-     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
-     fhir:OperationDefinition.parameter.min [ fhir:value "1"^^xsd:integer ];
-     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
-     fhir:OperationDefinition.parameter.documentation [ fhir:value "The AddPatient operation request Bundle." ];
-     fhir:OperationDefinition.parameter.type [ fhir:value "Bundle" ]
-  ], [
-     fhir:index 1;
-     fhir:OperationDefinition.parameter.name [ fhir:value "AddResponseBundle" ];
-     fhir:OperationDefinition.parameter.use [ fhir:value "out" ];
-     fhir:OperationDefinition.parameter.min [ fhir:value "1"^^xsd:integer ];
-     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
-     fhir:OperationDefinition.parameter.documentation [ fhir:value "The AddPatient operation response Bundle." ];
-     fhir:OperationDefinition.parameter.type [ fhir:value "Bundle" ]
-  ] . # 
-
-# - ontology header ------------------------------------------------------------
-
-<http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+  ] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "AddRequestBundle" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v "1"^^xsd:integer ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The AddPatient operation request Bundle." ] ;
+     fhir:type [ fhir:v "Bundle" ]
+  ] [
+     fhir:name [ fhir:v "AddResponseBundle" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:min [ fhir:v "1"^^xsd:integer ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The AddPatient operation response Bundle." ] ;
+     fhir:type [ fhir:v "Bundle" ]
+  ] ) . # 
 
 # -------------------------------------------------------------------------------------
 

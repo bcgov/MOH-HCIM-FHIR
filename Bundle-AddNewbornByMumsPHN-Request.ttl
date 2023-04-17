@@ -5,139 +5,114 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hlth.gov.bc.ca/fhir/client/Bundle/AddNewbornByMumsPHN-Request> a fhir:Bundle;
-  fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "AddNewbornByMumsPHN-Request"]; # 
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle";
-       fhir:index 0;
+<http://hlth.gov.bc.ca/fhir/client/Bundle/AddNewbornByMumsPHN-Request> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "AddNewbornByMumsPHN-Request"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle"^^xsd:anyURI ;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle>
-     ]
-  ]; # 
-  fhir:Bundle.type [ fhir:value "collection"]; # 
-  fhir:Bundle.timestamp [ fhir:value "2023-01-23T13:46:28.0429798-08:00"^^xsd:dateTime]; # 
-  fhir:Bundle.link [
-     fhir:index 0;
-     fhir:Bundle.link.relation [ fhir:value "self" ];
-     fhir:Bundle.link.url [ fhir:value "urn:uuid:977f1edc-04db-439e-9f84-7cda0082812a" ]
-  ]; # 
-  fhir:Bundle.entry [
-     fhir:index 0;
-     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:66fa3c28-1121-4305-bda2-4e834fcbc0f8" ];
-     fhir:Bundle.entry.resource <urn:uuid:66fa3c28-1121-4305-bda2-4e834fcbc0f8>
-  ], [
-     fhir:index 1;
-     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:66a90476-06d2-4e62-aba7-32d0566ecf41" ];
-     fhir:Bundle.entry.resource <urn:uuid:66a90476-06d2-4e62-aba7-32d0566ecf41>
-  ], [
-     fhir:index 2;
-     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:b8d7f4cb-94db-46f6-9a01-7023a292b649" ];
-     fhir:Bundle.entry.resource <urn:uuid:b8d7f4cb-94db-46f6-9a01-7023a292b649>
-  ] . # 
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:timestamp [ fhir:v "2023-01-23T13:46:28.0429798-08:00"^^xsd:dateTime] ; # 
+  fhir:link ( [
+     fhir:relation [ fhir:v "self" ] ;
+     fhir:url [ fhir:v "urn:uuid:977f1edc-04db-439e-9f84-7cda0082812a"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:66fa3c28-1121-4305-bda2-4e834fcbc0f8"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:66fa3c28-1121-4305-bda2-4e834fcbc0f8> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:66a90476-06d2-4e62-aba7-32d0566ecf41"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:66a90476-06d2-4e62-aba7-32d0566ecf41> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:b8d7f4cb-94db-46f6-9a01-7023a292b649"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:b8d7f4cb-94db-46f6-9a01-7023a292b649> )
+  ] ) . # 
 
-<urn:uuid:66fa3c28-1121-4305-bda2-4e834fcbc0f8> a fhir:Parameters;
-  fhir:Resource.id [ fhir:value "AddNewbornByMumsPHN-Request-Parameters"]; # 
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in";
-       fhir:index 0;
+<urn:uuid:66fa3c28-1121-4305-bda2-4e834fcbc0f8> a fhir:Parameters ;
+  fhir:id [ fhir:v "AddNewbornByMumsPHN-Request-Parameters"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"^^xsd:anyURI ;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in>
-     ]
-  ]; # 
-  fhir:Parameters.parameter [
-     fhir:index 0;
-     fhir:Parameters.parameter.name [ fhir:value "messageId" ];
-     fhir:Parameters.parameter.valueString [ fhir:value "eac486dd-ffe1-4272-b1ae-1ae0b0707b92" ]
-  ], [
-     fhir:index 1;
-     fhir:Parameters.parameter.name [ fhir:value "messageDateTime" ];
-     fhir:Parameters.parameter.valueDateTime [ fhir:value "2023-01-23T13:46:28.0428521-08:00"^^xsd:dateTime ]
-  ] . # 
+     ] )
+  ] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "messageId" ] ;
+     fhir:value [ fhir:v "eac486dd-ffe1-4272-b1ae-1ae0b0707b92" ]
+  ] [
+     fhir:name [ fhir:v "messageDateTime" ] ;
+     fhir:value [ fhir:v "2023-01-23T13:46:28.0428521-08:00"^^xsd:dateTime ]
+  ] ) . # 
 
-<urn:uuid:66a90476-06d2-4e62-aba7-32d0566ecf41> a fhir:Patient;
-  fhir:Resource.id [ fhir:value "9578d2bd-a6ad-409c-ba66-ba8343cd40be"]; # 
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
-       fhir:index 0;
+<urn:uuid:66a90476-06d2-4e62-aba7-32d0566ecf41> a fhir:Patient ;
+  fhir:id [ fhir:v "9578d2bd-a6ad-409c-ba66-ba8343cd40be"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"^^xsd:anyURI ;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"9578d2bd-a6ad-409c-ba66-ba8343cd40be\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;9578d2bd-a6ad-409c-ba66-ba8343cd40be&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Account number: 7G8WEPG25X18M (use: OFFICIAL)</p><p><b>name</b>: Baby Boy </p><p><b>gender</b>: male</p><p><b>birthDate</b>: 2023-01-22</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "AN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "7G8WEPG25X18M" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "VCHA_COMM" ]
      ]
-  ]; # 
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"9578d2bd-a6ad-409c-ba66-ba8343cd40be\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;9578d2bd-a6ad-409c-ba66-ba8343cd40be&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Account number: 7G8WEPG25X18M (use: OFFICIAL)</p><p><b>name</b>: Baby Boy </p><p><b>gender</b>: male</p><p><b>birthDate</b>: 2023-01-22</p></div>"
-  ]; # 
-  fhir:Patient.identifier [
-     fhir:index 0;
-     fhir:Identifier.use [ fhir:value "official" ];
-     fhir:Identifier.type [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
-         fhir:Coding.code [ fhir:value "AN" ]
-       ]
-     ];
-     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
-     fhir:Identifier.value [ fhir:value "7G8WEPG25X18M" ];
-     fhir:Identifier.assigner [
-       fhir:Reference.display [ fhir:value "VCHA_COMM" ]
-     ]
-  ]; # 
-  fhir:Patient.name [
-     fhir:index 0;
-     fhir:HumanName.use [ fhir:value "usual" ];
-     fhir:HumanName.given [
-       fhir:value "Baby Boy";
-       fhir:index 0
-     ]
-  ]; # 
-  fhir:Patient.gender [ fhir:value "male"]; # 
-  fhir:Patient.birthDate [ fhir:value "2023-01-22"^^xsd:date] . # 
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:given ( [ fhir:v "Baby Boy" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "2023-01-22"^^xsd:date] . # 
 
-<urn:uuid:b8d7f4cb-94db-46f6-9a01-7023a292b649> a fhir:RelatedPerson;
-  fhir:Resource.id [ fhir:value "AddNewbornByMumsPHN-Request-RelatedPerson"]; # 
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: RelatedPerson</b><a name=\"AddNewbornByMumsPHN-Request-RelatedPerson\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RelatedPerson &quot;AddNewbornByMumsPHN-Request-RelatedPerson&quot; </p></div><p><b>identifier</b>: Jurisdictional health number: 9999999999 (use: OFFICIAL, period: 2023-01-23 13:46:27-0800 --&gt; (ongoing))</p><p><b>patient</b>: <a href=\"#Patient_9578d2bd-a6ad-409c-ba66-ba8343cd40be\">See above (urn:uuid:66a90476-06d2-4e62-aba7-32d0566ecf41)</a></p><p><b>relationship</b>: natural mother <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-v3-RoleCode.html\">RoleCode</a>#NMTH)</span></p></div>"
-  ]; # 
-  fhir:RelatedPerson.identifier [
-     fhir:index 0;
-     fhir:Element.extension [
-       fhir:index 0;
-       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension" ];
-       fhir:Extension.valueCode [ fhir:value "active" ]
-     ];
-     fhir:Identifier.use [ fhir:value "official" ];
-     fhir:Identifier.type [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
-         fhir:Coding.code [ fhir:value "JHN" ]
-       ]
-     ];
-     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC" ];
-     fhir:Identifier.value [ fhir:value "9999999999" ];
-     fhir:Identifier.period [
-       fhir:Period.start [ fhir:value "2023-01-23T13:46:27-08:00"^^xsd:dateTime ]
+<urn:uuid:b8d7f4cb-94db-46f6-9a01-7023a292b649> a fhir:RelatedPerson ;
+  fhir:id [ fhir:v "AddNewbornByMumsPHN-Request-RelatedPerson"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: RelatedPerson</b><a name=\"AddNewbornByMumsPHN-Request-RelatedPerson\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RelatedPerson &quot;AddNewbornByMumsPHN-Request-RelatedPerson&quot; </p></div><p><b>identifier</b>: Jurisdictional health number: 9999999999 (use: OFFICIAL, period: 2023-01-23 13:46:27-0800 --&gt; (ongoing))</p><p><b>patient</b>: <a href=\"#Patient_9578d2bd-a6ad-409c-ba66-ba8343cd40be\">See above (urn:uuid:66a90476-06d2-4e62-aba7-32d0566ecf41)</a></p><p><b>relationship</b>: natural mother <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-v3-RoleCode.html\">RoleCode</a>#NMTH)</span></p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "active" ]
+     ] ) ;
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "JHN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "9999999999" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:46:27-08:00"^^xsd:dateTime ]
      ]
-  ]; # 
-  fhir:RelatedPerson.patient [
-     fhir:Reference.reference [ fhir:value "urn:uuid:66a90476-06d2-4e62-aba7-32d0566ecf41" ]
-  ]; # 
-  fhir:RelatedPerson.relationship [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ];
-       fhir:Coding.code [ fhir:value "NMTH" ]
-     ]
-  ] . # 
-
-# - ontology header ------------------------------------------------------------
-
-<http://hlth.gov.bc.ca/fhir/client/Bundle/AddNewbornByMumsPHN-Request.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+  ] ) ; # 
+  fhir:patient [
+     fhir:reference [ fhir:v "urn:uuid:66a90476-06d2-4e62-aba7-32d0566ecf41" ]
+  ] ; # 
+  fhir:relationship ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "NMTH" ]
+     ] )
+  ] ) . # 
 
 # -------------------------------------------------------------------------------------
 

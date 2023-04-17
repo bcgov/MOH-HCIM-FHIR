@@ -5,305 +5,234 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hlth.gov.bc.ca/fhir/client/Bundle/Revise-withMaxData-Request> a fhir:Bundle;
-  fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "Revise-withMaxData-Request"]; # 
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle";
-       fhir:index 0;
+<http://hlth.gov.bc.ca/fhir/client/Bundle/Revise-withMaxData-Request> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Revise-withMaxData-Request"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle"^^xsd:anyURI ;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle>
-     ]
-  ]; # 
-  fhir:Bundle.type [ fhir:value "collection"]; # 
-  fhir:Bundle.timestamp [ fhir:value "2023-01-23T14:02:15.7695447-08:00"^^xsd:dateTime]; # 
-  fhir:Bundle.link [
-     fhir:index 0;
-     fhir:Bundle.link.relation [ fhir:value "self" ];
-     fhir:Bundle.link.url [ fhir:value "urn:uuid:1d822cfb-c6a5-43db-ac7e-277234bceb2a" ]
-  ]; # 
-  fhir:Bundle.entry [
-     fhir:index 0;
-     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4" ];
-     fhir:Bundle.entry.resource <urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4>
-  ], [
-     fhir:index 1;
-     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:112a2ba8-c3c9-4b08-8cfd-f025b85b3e0c" ];
-     fhir:Bundle.entry.resource <urn:uuid:112a2ba8-c3c9-4b08-8cfd-f025b85b3e0c>
-  ] . # 
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:timestamp [ fhir:v "2023-01-23T14:02:15.7695447-08:00"^^xsd:dateTime] ; # 
+  fhir:link ( [
+     fhir:relation [ fhir:v "self" ] ;
+     fhir:url [ fhir:v "urn:uuid:1d822cfb-c6a5-43db-ac7e-277234bceb2a"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:112a2ba8-c3c9-4b08-8cfd-f025b85b3e0c"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:112a2ba8-c3c9-4b08-8cfd-f025b85b3e0c> )
+  ] ) . # 
 
-<urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4> a fhir:Parameters;
-  fhir:Resource.id [ fhir:value "6426876c-8118-4020-8364-7021d0a1ec23"]; # 
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in";
-       fhir:index 0;
+<urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4> a fhir:Parameters ;
+  fhir:id [ fhir:v "6426876c-8118-4020-8364-7021d0a1ec23"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"^^xsd:anyURI ;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in>
-     ]
-  ]; # 
-  fhir:Parameters.parameter [
-     fhir:index 0;
-     fhir:Parameters.parameter.name [ fhir:value "messageId" ];
-     fhir:Parameters.parameter.valueString [ fhir:value "f95c3be0-b6ed-4aec-b969-7bc7da904315" ]
-  ], [
-     fhir:index 1;
-     fhir:Parameters.parameter.name [ fhir:value "messageDateTime" ];
-     fhir:Parameters.parameter.valueDateTime [ fhir:value "2023-01-23T14:02:15.7581133-08:00"^^xsd:dateTime ]
-  ] . # 
+     ] )
+  ] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "messageId" ] ;
+     fhir:value [ fhir:v "f95c3be0-b6ed-4aec-b969-7bc7da904315" ]
+  ] [
+     fhir:name [ fhir:v "messageDateTime" ] ;
+     fhir:value [ fhir:v "2023-01-23T14:02:15.7581133-08:00"^^xsd:dateTime ]
+  ] ) . # 
 
-<urn:uuid:112a2ba8-c3c9-4b08-8cfd-f025b85b3e0c> a fhir:Patient;
-  fhir:Resource.id [ fhir:value "Revise-withMaxData-Request-Patient"]; # 
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient";
-       fhir:index 0;
+<urn:uuid:112a2ba8-c3c9-4b08-8cfd-f025b85b3e0c> a fhir:Patient ;
+  fhir:id [ fhir:v "Revise-withMaxData-Request-Patient"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"^^xsd:anyURI ;
        fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Revise-withMaxData-Request-Patient\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;Revise-withMaxData-Request-Patient&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Account number: 2B6F8GN410H1T27NPE (use: OFFICIAL), Account number: Y4DCP5VK29F31R80O8K2O08D5WAU2K950U40D8 (use: SECONDARY), Account number: 0EZFV8L7L7E1W9UF9AB3Z (use: SECONDARY), Account number: 2281UM0D8528TIVRW5FF4ESNK53N9KO (use: SECONDARY), Account number: JDU70IH8L8575631A39QQMA0DQ7N3DS4 (use: SECONDARY), Account number: 154G21E7EK1BT06K72JIM5LE8M0VK09F20A4 (use: SECONDARY), Account number: R8ZNY8I1JI98M15K634C6LOU15375PA (use: SECONDARY), Account number: 6M4S730KM98FJ954A2Z981NQLVWTWZ (use: SECONDARY), Jurisdictional health number: 54X3KSPOCH235SDF42WQK6 (use: OFFICIAL)</p><p><b>name</b>: Geraldine Celestine Iye Banek , Jervis Wilu Jules Coad (OFFICIAL), Theodore (NICKNAME)</p><p><b>telecom</b>: ph: 8195411094(MOBILE), ph: 9847273917(HOME), ph: 4328811019(WORK), <a href=\"mailto:Bly.Beaule@cgi.com\">Bly.Beaule@cgi.com</a>, <a href=\"mailto:Elisabeth.Mrotz@cgi.com\">Elisabeth.Mrotz@cgi.com</a>, <a href=\"mailto:Whitney.Holway@cgi.com\">Whitney.Holway@cgi.com</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1956-12-17</p><p><b>deceased</b>: 2008-10-26</p><p><b>address</b>: </p><ul><li>48610 Hilltop street Waukesha BC CA </li><li>8547 Green hill road Ansonville BC CA </li></ul></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "AN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2B6F8GN410H1T27NPE" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "VPP_CER" ]
      ]
-  ]; # 
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Revise-withMaxData-Request-Patient\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;Revise-withMaxData-Request-Patient&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Account number: 2B6F8GN410H1T27NPE (use: OFFICIAL), Account number: Y4DCP5VK29F31R80O8K2O08D5WAU2K950U40D8 (use: SECONDARY), Account number: 0EZFV8L7L7E1W9UF9AB3Z (use: SECONDARY), Account number: 2281UM0D8528TIVRW5FF4ESNK53N9KO (use: SECONDARY), Account number: JDU70IH8L8575631A39QQMA0DQ7N3DS4 (use: SECONDARY), Account number: 154G21E7EK1BT06K72JIM5LE8M0VK09F20A4 (use: SECONDARY), Account number: R8ZNY8I1JI98M15K634C6LOU15375PA (use: SECONDARY), Account number: 6M4S730KM98FJ954A2Z981NQLVWTWZ (use: SECONDARY), Jurisdictional health number: 54X3KSPOCH235SDF42WQK6 (use: OFFICIAL)</p><p><b>name</b>: Geraldine Celestine Iye Banek , Jervis Wilu Jules Coad (OFFICIAL), Theodore (NICKNAME)</p><p><b>telecom</b>: ph: 8195411094(MOBILE), ph: 9847273917(HOME), ph: 4328811019(WORK), <a href=\"mailto:Bly.Beaule@cgi.com\">Bly.Beaule@cgi.com</a>, <a href=\"mailto:Elisabeth.Mrotz@cgi.com\">Elisabeth.Mrotz@cgi.com</a>, <a href=\"mailto:Whitney.Holway@cgi.com\">Whitney.Holway@cgi.com</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1956-12-17</p><p><b>deceased</b>: 2008-10-26</p><p><b>address</b>: </p><ul><li>48610 Hilltop street Waukesha BC CA </li><li>8547 Green hill road Ansonville BC CA </li></ul></div>"
-  ]; # 
-  fhir:Patient.identifier [
-     fhir:index 0;
-     fhir:Identifier.use [ fhir:value "official" ];
-     fhir:Identifier.type [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
-         fhir:Coding.code [ fhir:value "AN" ]
-       ]
-     ];
-     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
-     fhir:Identifier.value [ fhir:value "2B6F8GN410H1T27NPE" ];
-     fhir:Identifier.assigner [
-       fhir:Reference.display [ fhir:value "VPP_CER" ]
+  ] [
+     fhir:use [ fhir:v "secondary" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "AN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Y4DCP5VK29F31R80O8K2O08D5WAU2K950U40D8" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "VPP_VGH" ]
      ]
-  ], [
-     fhir:index 1;
-     fhir:Identifier.use [ fhir:value "secondary" ];
-     fhir:Identifier.type [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
-         fhir:Coding.code [ fhir:value "AN" ]
-       ]
-     ];
-     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
-     fhir:Identifier.value [ fhir:value "Y4DCP5VK29F31R80O8K2O08D5WAU2K950U40D8" ];
-     fhir:Identifier.assigner [
-       fhir:Reference.display [ fhir:value "VPP_VGH" ]
+  ] [
+     fhir:use [ fhir:v "secondary" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "AN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "0EZFV8L7L7E1W9UF9AB3Z" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "VPP_PHC" ]
      ]
-  ], [
-     fhir:index 2;
-     fhir:Identifier.use [ fhir:value "secondary" ];
-     fhir:Identifier.type [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
-         fhir:Coding.code [ fhir:value "AN" ]
-       ]
-     ];
-     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
-     fhir:Identifier.value [ fhir:value "0EZFV8L7L7E1W9UF9AB3Z" ];
-     fhir:Identifier.assigner [
-       fhir:Reference.display [ fhir:value "VPP_PHC" ]
+  ] [
+     fhir:use [ fhir:v "secondary" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "AN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2281UM0D8528TIVRW5FF4ESNK53N9KO" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "VPP_FPH" ]
      ]
-  ], [
-     fhir:index 3;
-     fhir:Identifier.use [ fhir:value "secondary" ];
-     fhir:Identifier.type [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
-         fhir:Coding.code [ fhir:value "AN" ]
-       ]
-     ];
-     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
-     fhir:Identifier.value [ fhir:value "2281UM0D8528TIVRW5FF4ESNK53N9KO" ];
-     fhir:Identifier.assigner [
-       fhir:Reference.display [ fhir:value "VPP_FPH" ]
+  ] [
+     fhir:use [ fhir:v "secondary" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "AN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "JDU70IH8L8575631A39QQMA0DQ7N3DS4" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "VPP_CW" ]
      ]
-  ], [
-     fhir:index 4;
-     fhir:Identifier.use [ fhir:value "secondary" ];
-     fhir:Identifier.type [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
-         fhir:Coding.code [ fhir:value "AN" ]
-       ]
-     ];
-     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
-     fhir:Identifier.value [ fhir:value "JDU70IH8L8575631A39QQMA0DQ7N3DS4" ];
-     fhir:Identifier.assigner [
-       fhir:Reference.display [ fhir:value "VPP_CW" ]
+  ] [
+     fhir:use [ fhir:v "secondary" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "AN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "154G21E7EK1BT06K72JIM5LE8M0VK09F20A4" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "VPP_LION" ]
      ]
-  ], [
-     fhir:index 5;
-     fhir:Identifier.use [ fhir:value "secondary" ];
-     fhir:Identifier.type [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
-         fhir:Coding.code [ fhir:value "AN" ]
-       ]
-     ];
-     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
-     fhir:Identifier.value [ fhir:value "154G21E7EK1BT06K72JIM5LE8M0VK09F20A4" ];
-     fhir:Identifier.assigner [
-       fhir:Reference.display [ fhir:value "VPP_LION" ]
+  ] [
+     fhir:use [ fhir:v "secondary" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "AN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "R8ZNY8I1JI98M15K634C6LOU15375PA" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "VPP_PR" ]
      ]
-  ], [
-     fhir:index 6;
-     fhir:Identifier.use [ fhir:value "secondary" ];
-     fhir:Identifier.type [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
-         fhir:Coding.code [ fhir:value "AN" ]
-       ]
-     ];
-     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
-     fhir:Identifier.value [ fhir:value "R8ZNY8I1JI98M15K634C6LOU15375PA" ];
-     fhir:Identifier.assigner [
-       fhir:Reference.display [ fhir:value "VPP_PR" ]
+  ] [
+     fhir:use [ fhir:v "secondary" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "AN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "6M4S730KM98FJ954A2Z981NQLVWTWZ" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "VPP_BCCA" ]
      ]
-  ], [
-     fhir:index 7;
-     fhir:Identifier.use [ fhir:value "secondary" ];
-     fhir:Identifier.type [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
-         fhir:Coding.code [ fhir:value "AN" ]
-       ]
-     ];
-     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode" ];
-     fhir:Identifier.value [ fhir:value "6M4S730KM98FJ954A2Z981NQLVWTWZ" ];
-     fhir:Identifier.assigner [
-       fhir:Reference.display [ fhir:value "VPP_BCCA" ]
-     ]
-  ], [
-     fhir:index 8;
-     fhir:Identifier.use [ fhir:value "official" ];
-     fhir:Identifier.type [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
-         fhir:Coding.code [ fhir:value "JHN" ]
-       ]
-     ];
-     fhir:Identifier.system [ fhir:value "http://hlth.gov.bc.ca/fhir/client/id-issuer/NB" ];
-     fhir:Identifier.value [ fhir:value "54X3KSPOCH235SDF42WQK6" ]
-  ]; # 
-  fhir:Patient.name [
-     fhir:index 0;
-     fhir:HumanName.use [ fhir:value "usual" ];
-     fhir:HumanName.family [ fhir:value "Banek" ];
-     fhir:HumanName.given [
-       fhir:value "Geraldine";
-       fhir:index 0
-     ], [
-       fhir:value "Celestine";
-       fhir:index 1
-     ], [
-       fhir:value "Iye";
-       fhir:index 2
-     ]
-  ], [
-     fhir:index 1;
-     fhir:HumanName.use [ fhir:value "official" ];
-     fhir:HumanName.family [ fhir:value "Coad" ];
-     fhir:HumanName.given [
-       fhir:value "Jervis";
-       fhir:index 0
-     ], [
-       fhir:value "Wilu";
-       fhir:index 1
-     ], [
-       fhir:value "Jules";
-       fhir:index 2
-     ]
-  ], [
-     fhir:index 2;
-     fhir:HumanName.use [ fhir:value "nickname" ];
-     fhir:HumanName.given [
-       fhir:value "Theodore";
-       fhir:index 0
-     ]
-  ]; # 
-  fhir:Patient.telecom [
-     fhir:index 0;
-     fhir:ContactPoint.system [ fhir:value "phone" ];
-     fhir:ContactPoint.value [ fhir:value "8195411094" ];
-     fhir:ContactPoint.use [ fhir:value "mobile" ]
-  ], [
-     fhir:index 1;
-     fhir:ContactPoint.system [ fhir:value "phone" ];
-     fhir:ContactPoint.value [ fhir:value "9847273917" ];
-     fhir:ContactPoint.use [ fhir:value "home" ]
-  ], [
-     fhir:index 2;
-     fhir:ContactPoint.system [ fhir:value "phone" ];
-     fhir:ContactPoint.value [ fhir:value "4328811019" ];
-     fhir:ContactPoint.use [ fhir:value "work" ]
-  ], [
-     fhir:index 3;
-     fhir:ContactPoint.system [ fhir:value "email" ];
-     fhir:ContactPoint.value [ fhir:value "Bly.Beaule@cgi.com" ];
-     fhir:ContactPoint.use [ fhir:value "mobile" ]
-  ], [
-     fhir:index 4;
-     fhir:ContactPoint.system [ fhir:value "email" ];
-     fhir:ContactPoint.value [ fhir:value "Elisabeth.Mrotz@cgi.com" ];
-     fhir:ContactPoint.use [ fhir:value "home" ]
-  ], [
-     fhir:index 5;
-     fhir:ContactPoint.system [ fhir:value "email" ];
-     fhir:ContactPoint.value [ fhir:value "Whitney.Holway@cgi.com" ];
-     fhir:ContactPoint.use [ fhir:value "work" ]
-  ]; # 
-  fhir:Patient.gender [ fhir:value "female"]; # 
-  fhir:Patient.birthDate [ fhir:value "1956-12-17"^^xsd:date]; # 
-  fhir:Patient.deceasedDateTime [
-     fhir:value "2008-10-26"^^xsd:date;
-     fhir:Element.extension [
-       fhir:index 0;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "deathVerifiedFlag" ];
-         fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
-       ];
-       fhir:Extension.url [ fhir:value "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension" ]
-     ]
-  ]; # 
-  fhir:Patient.address [
-     fhir:index 0;
-     fhir:Address.type [ fhir:value "physical" ];
-     fhir:Address.line [
-       fhir:value "48610 Hilltop street";
-       fhir:index 0
-     ];
-     fhir:Address.city [ fhir:value "Waukesha" ];
-     fhir:Address.state [ fhir:value "BC" ];
-     fhir:Address.country [ fhir:value "CA" ]
-  ], [
-     fhir:index 1;
-     fhir:Address.type [ fhir:value "postal" ];
-     fhir:Address.line [
-       fhir:value "8547 Green hill road";
-       fhir:index 0
-     ];
-     fhir:Address.city [ fhir:value "Ansonville" ];
-     fhir:Address.state [ fhir:value "BC" ];
-     fhir:Address.country [ fhir:value "CA" ]
-  ] . # 
-
-# - ontology header ------------------------------------------------------------
-
-<http://hlth.gov.bc.ca/fhir/client/Bundle/Revise-withMaxData-Request.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+  ] [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "JHN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/NB"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "54X3KSPOCH235SDF42WQK6" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:family [ fhir:v "Banek" ] ;
+     fhir:given ( [ fhir:v "Geraldine" ] [ fhir:v "Celestine" ] [ fhir:v "Iye" ] )
+  ] [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Coad" ] ;
+     fhir:given ( [ fhir:v "Jervis" ] [ fhir:v "Wilu" ] [ fhir:v "Jules" ] )
+  ] [
+     fhir:use [ fhir:v "nickname" ] ;
+     fhir:given ( [ fhir:v "Theodore" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "8195411094" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "9847273917" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "4328811019" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Bly.Beaule@cgi.com" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Elisabeth.Mrotz@cgi.com" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Whitney.Holway@cgi.com" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1956-12-17"^^xsd:date] ; # 
+  fhir:deceased [
+     fhir:v "2008-10-26"^^xsd:date ;
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "deathVerifiedFlag"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true"^^xsd:boolean ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension"^^xsd:anyURI ]
+     ] )
+  ] ; # 
+  fhir:address ( [
+     fhir:type [ fhir:v "physical" ] ;
+     fhir:line ( [ fhir:v "48610 Hilltop street" ] ) ;
+     fhir:city [ fhir:v "Waukesha" ] ;
+     fhir:state [ fhir:v "BC" ] ;
+     fhir:country [ fhir:v "CA" ]
+  ] [
+     fhir:type [ fhir:v "postal" ] ;
+     fhir:line ( [ fhir:v "8547 Green hill road" ] ) ;
+     fhir:city [ fhir:v "Ansonville" ] ;
+     fhir:state [ fhir:v "BC" ] ;
+     fhir:country [ fhir:v "CA" ]
+  ] ) . # 
 
 # -------------------------------------------------------------------------------------
 

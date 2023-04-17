@@ -5,46 +5,37 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-operation-outcome-details-code-system> a fhir:CodeSystem;
-  fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "bc-operation-outcome-details-code-system"]; # 
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-operation-outcome-details-code-system</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr></table></div>"
-  ]; # 
-  fhir:CodeSystem.url [ fhir:value "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-operation-outcome-details-code-system"]; # 
-  fhir:CodeSystem.version [ fhir:value "1.0.0"]; # 
-  fhir:CodeSystem.name [ fhir:value "OperationOutcomeDetailsCS"]; # 
-  fhir:CodeSystem.title [ fhir:value "BC Client Registry Operation Outcome details code system"]; # 
-  fhir:CodeSystem.status [ fhir:value "active"]; # 
-  fhir:CodeSystem.date [ fhir:value "2023-02-21T21:29:24+00:00"^^xsd:dateTime]; # 
-  fhir:CodeSystem.publisher [ fhir:value "BC Ministry of Health"]; # 
-  fhir:CodeSystem.contact [
-     fhir:index 0;
-     fhir:ContactDetail.name [ fhir:value "BC Ministry of Health" ];
-     fhir:ContactDetail.telecom [
-       fhir:index 0;
-       fhir:ContactPoint.system [ fhir:value "url" ];
-       fhir:ContactPoint.value [ fhir:value "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health" ]
-     ]
-  ]; # 
-  fhir:CodeSystem.description [ fhir:value "BC Client Registry Operation Outcome details code system"]; # 
-  fhir:CodeSystem.jurisdiction [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
-       fhir:Coding.code [ fhir:value "CA" ];
-       fhir:Coding.display [ fhir:value "Canada" ]
-     ]
-  ]; # 
-  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean]; # 
-  fhir:CodeSystem.content [ fhir:value "complete"] . # 
-
-# - ontology header ------------------------------------------------------------
-
-<http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-operation-outcome-details-code-system.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+<http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-operation-outcome-details-code-system> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "bc-operation-outcome-details-code-system"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-operation-outcome-details-code-system</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-operation-outcome-details-code-system"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "OperationOutcomeDetailsCS"] ; # 
+  fhir:title [ fhir:v "BC Client Registry Operation Outcome details code system"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2023-04-17T21:31:48+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "BC Ministry of Health"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "BC Ministry of Health" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "BC Client Registry Operation Outcome details code system"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CA" ] ;
+       fhir:display [ fhir:v "Canada" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] . # 
 
 # -------------------------------------------------------------------------------------
 
