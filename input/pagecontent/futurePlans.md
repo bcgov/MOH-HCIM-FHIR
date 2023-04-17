@@ -23,7 +23,7 @@ To access this release through messaging, in the HTTP Accept header, update the 
 
 The FHIR specification will expand to include RESTful interfaces for Patient.  I.e.
 
-	GET https://.../Patient/PHN
+	GET https://.../Patient/1b3ef948-4e25-4108-84c2-3727a6fb5a3b
 
 Or
 
