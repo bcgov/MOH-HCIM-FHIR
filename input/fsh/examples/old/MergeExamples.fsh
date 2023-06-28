@@ -64,7 +64,7 @@ Description: "Example of a merge patient Patient"
 * link[0].extension.valueCode = #cancelled
 
 * link[1].type = #replaces
-* link[1].other.identifier = IdentifierExamplePHNNoPeriod
+* link[1].other.identifier = IdentifierExampleSSRINoPeriod
 * link[1].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"
 * link[1].extension.valueCode = #cancelled
 
@@ -77,3 +77,17 @@ Description: "Example of a merge patient Patient"
 * link[3].other.identifier = IdentifierExamplePHN2NoPeriod
 * link[3].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"
 * link[3].extension.valueCode = #obsolete
+
+
+Instance: IdentifierExampleSSRINoPeriodNoValue
+InstanceOf: Identifier
+Description: "An example of a SSRI Identifier."
+Usage: #inline
+* system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
+* value = ""
+* type.coding.code = #AN
+* type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* assigner.display = "ORG_SUBSRC e.g. FHA_CAC or VPP_CW"
+* extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
+* extension.valueCode = #active
+* use = #secondary

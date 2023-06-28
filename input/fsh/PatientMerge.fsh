@@ -3,10 +3,13 @@ Parent: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient
 //Parent: Patient
 Id: bc-merge-patient
 Description: "General constraints on the Patient resource for use in the BC Client Registry project Merge Operation."
+* obeys invariant-merge-patient-1 
+* obeys invariant-merge-patient-2 
+* obeys invariant-merge-patient-3 
 * extension contains BusinessPeriodExtension named effectiveDates 0..1 MS and GenderIdentityExtension named genderIdentity 0..1 MS
 * identifier only http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
-* identifier 0..* MS
-* identifier.extension contains /*SourceIDExtension named sourceID 0..1 MS and */ IdentifierStatusExtension named idStatus 0..1 MS
+* identifier 1..* MS
+/* identifier.extension contains /*SourceIDExtension named sourceID 0..1 MS and IdentifierStatusExtension named idStatus 0..1 MS*/
 * deceased[x] 0..1 MS
 * deceased[x] only dateTime
 * deceased[x].extension contains BusinessPeriodExtension named deathDateEffectiveDates 0..1 MS /*and SourceIDExtension named sourceID 0..1 MS and DeathDateHistoryExtension named deathDateHistory 0..* MS */ and DeathVerifiedFlagExtension named verifiedDeathFlag 0..1 MS
@@ -36,3 +39,18 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * multipleBirth[x].extension contains BusinessPeriodExtension named multipleBirthEffectiveDates 0..1 MS /*and SourceIDExtension named sourceID 0..1 MS and MultipleBirthHistoryExtension named history 0..* MS */
 * link.extension contains MergeStatusExtension named mergeStatus 0..* MS
 
+
+Invariant: invariant-merge-patient-1
+Description: "In a PatientMerge resource, all link.other.identifier must have a value"
+Expression: "Patient.link.other.identifier.where(value.empty() or value ='').empty()"
+Severity: #error
+
+Invariant: invariant-merge-patient-2
+Description: "In a PatientMerge resource, identifier.extension shall not be present"
+Expression: "Patient.identifier.value.extension.empty()"
+Severity: #error
+
+Invariant: invariant-merge-patient-3
+Description: "In a PatientMerge resource, link.other.identifier.extension shall never be present"
+Expression: "Patient.link.other.identifier.value.extension.empty()"
+Severity: #error
