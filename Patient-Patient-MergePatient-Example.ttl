@@ -70,15 +70,22 @@
      ] ) ;
      fhir:other [
        fhir:identifier [
-         fhir:use [ fhir:v "official" ] ;
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "active" ]
+         ] ) ;
+         fhir:use [ fhir:v "secondary" ] ;
          fhir:type [
            fhir:coding ( [
              fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
-             fhir:code [ fhir:v "JHN" ]
+             fhir:code [ fhir:v "AN" ]
            ] )
          ] ;
-         fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "9123456778" ]
+         fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "123345654" ] ;
+         fhir:assigner [
+           fhir:display [ fhir:v "ORG_SUBSRC e.g. FHA_CAC or VPP_CW" ]
+         ]
        ]
      ] ;
      fhir:type [ fhir:v "replaces" ]

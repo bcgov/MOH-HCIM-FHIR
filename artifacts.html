@@ -31,10 +31,10 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -308,6 +308,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="OperationDefinition-bc-patient-update.html"
+                     title="OperationDefinition/bc-patient-update">PartialUpdatePatient</a>
+               </td>
+               <td>
+<p>This operation is used to update a patient’s demographics, applied to only specific Patient attributes.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="OperationDefinition-bc-patient-notification.html"
                      title="OperationDefinition/bc-patient-notification">PatientNotification</a>
                </td>
@@ -322,15 +331,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </td>
                <td>
 <p>This operation is used to revise a patient’s demographics.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="OperationDefinition-bc-patient-update.html"
-                     title="OperationDefinition/bc-patient-update">PartialUpdatePatient</a>
-               </td>
-               <td>
-<p>This operation is used to update a patient’s demographics, applied to only specific Patient attributes.</p>
 </td>
             </tr>
          </tbody>
@@ -752,6 +752,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tbody>
             <tr>
                <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-update-patient-operation-extension.html"
+                     title="StructureDefinition/bc-update-patient-operation-extension">A code the describes how a particular Patient attribute is to be changed</a>
+               </td>
+               <td>
+<p>A code the describes how a particular Patient attribute is to be changed.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-bc-validation-status-extension.html"
+                     title="StructureDefinition/bc-validation-status-extension">BC Address Validation Status Code</a>
+               </td>
+               <td>
+<p>A code that represents the validation status of the address</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="StructureDefinition-bc-birthdate-history-extension.html"
                      title="StructureDefinition/bc-birthdate-history-extension">BC Birth Date History</a>
                </td>
@@ -847,24 +865,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </td>
                <td>
 <p>Identifiers for the source and user that modified the specific element that this extension is on.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-update-patient-operation-extension.html"
-                     title="StructureDefinition/bc-update-patient-operation-extension">A code the describes how a particular Patient attribute is to be changed</a>
-               </td>
-               <td>
-<p>A code the describes how a particular Patient attribute is to be changed.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-bc-validation-status-extension.html"
-                     title="StructureDefinition/bc-validation-status-extension">BC Address Validation Status Code</a>
-               </td>
-               <td>
-<p>A code that represents the validation status of the address</p>
 </td>
             </tr>
          </tbody>
@@ -1191,7 +1191,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 17, 2023 21:31+0000">2023-04-17</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jun 28, 2023 23:19+0000">2023-06-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

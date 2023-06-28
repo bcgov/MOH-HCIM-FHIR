@@ -93,15 +93,22 @@
         }],
         "other" : {
           "identifier" : {
-            "use" : "official",
+            "extension" : [{
+              "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+              "valueCode" : "active"
+            }],
+            "use" : "secondary",
             "type" : {
               "coding" : [{
                 "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-                "code" : "JHN"
+                "code" : "AN"
               }]
             },
-            "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
-            "value" : "9123456778"
+            "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+            "value" : "123345654",
+            "assigner" : {
+              "display" : "ORG_SUBSRC e.g. FHA_CAC or VPP_CW"
+            }
           }
         },
         "type" : "replaces"
