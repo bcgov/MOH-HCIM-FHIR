@@ -53,7 +53,7 @@ Searching with the FindCandidates operation will match names of all use codes th
 #### Examples
 
 See [Find Candidates request](Bundle-FindCandidates-Request.html) example.  
-See [Find Candidates mother's PHN request](Bundle-FindNewbornByMumsPHN-request.html) example.  
-See [Find Candidates response](Bundle-FindCandidates-response.html) example.  
-See [Find Candidates mother's PHN response](Bundle-FindNewbornByMumsPHN-response.html) example.  
+See [Find Candidates mother's PHN request](Bundle-FindNewbornByMumsPHN-Request.html) example.  
+See [Find Candidates response](Bundle-FindCandidates-Response.html) example.  
+See [Find Candidates mother's PHN response](Bundle-FindNewbornByMumsPHN-Response.html) example.  
 
