@@ -44,7 +44,7 @@ requestParameters | MetadataParametersIn | 1..1 | The request parameters are ech
 
 #### Mother's PHN
 
-If the request is to return a Patient based on the mother's PHN, then the request Bundle must have a RelatedPerson resource with the mother's PHN as an Identifier.  No Patient is required in this case.  There is an example request [here](Bundle-Bundle-FindCandidates-UsingMomsPHN-Request-Example.html).
+If the request is to return a Patient based on the mother's PHN, then the request Bundle must have a RelatedPerson resource with the mother's PHN as an Identifier.  No Patient is required in this case.  There is an example request [here](Bundle-FindNewbornByMumsPHN-Request.html).
 
 #### Name.use
 

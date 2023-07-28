@@ -1,3 +1,6 @@
+##### ALternate Structure
+To improve support for commercial off the shelf FHIR server products and to be conformant, the Client Registry offers an alternative Operation Resource structure.  Instead of the request body being a Bundle (as described on this page) the user can optionally send in the same Bundle, but wrapped in a Parameters Resource.  The Parameters Resource has a single parameter, name is operationBundle, and value is the Bundle Resource.  This also helps somftware products that expect a Parameters Resource for each Operation.
+
 #### In Bundle Entries
 
 Cardinality | Resource Type | Comment
