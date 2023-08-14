@@ -2,8 +2,8 @@
 =========================================
 
 err = 28, warn = 42, info = 55
-IG Publisher Version: 1.3.25
-Generated Fri Jul 28 16:59:07 UTC 2023. FHIR version 4.0.1 for fhir.ca-bc.client#1.0.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
+IG Publisher Version: 1.3.28
+Generated Mon Aug 14 17:14:11 UTC 2023. FHIR version 4.0.1 for fhir.ca-bc.client#1.0.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
  Build Errors : 16 / 4 / 0
  /github/workspace/fsh-generated/resources/Bundle-AddNewbornByMumsPHN-Request : 0 / 0 / 9
  /github/workspace/fsh-generated/resources/Bundle-AddPatient-Request : 0 / 0 / 8
@@ -99,7 +99,7 @@ Generated Fri Jul 28 16:59:07 UTC 2023. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/ValueSet-bc-name-use-value-set : 2 / 1 / 1
 </table>
 == n/a ==
-ERROR: /github/workspace/output/OperationDefinition-bc-patient-find-candidates.html#/html/body/div/div/div/div/div/div/p/a at Line 304, column 320: The link 'Bundle-Bundle-FindCandidates-Response-MomsPHN-Example.html' for "here" cannot be resolved
+ERROR: /github/workspace/output/OperationDefinition-bc-patient-find-candidates.html#/html/body/div/div/div/div/div/div/p/a at Line 306, column 320: The link 'Bundle-Bundle-FindCandidates-Response-MomsPHN-Example.html' for "here" cannot be resolved
 ERROR: /github/workspace/output/OperationDefinition-bc-patient-get-demographics.html#/html/body/div/div/div/div/div/div/p/a at Line 412, column 6: The link 'Bundle-GetDemographics-withPHNinfo-Response.html' for "Get Demographics with PHN info response" cannot be resolved
 ERROR: /github/workspace/output/OperationDefinition-bc-patient-notification.html#/html/body/div/div/div/div/div/div/p/a at Line 340, column 6: The link 'Bundle-Revise-WithMaxData-Request.html' for "Patient Notification request" cannot be resolved
 ERROR: /github/workspace/output/OperationDefinition-bc-patient-revise.html#/html/body/div/div/div/div/div/div/p/a at Line 363, column 9: The link 'Bundle-Revise-WithMaxData-Request.html' for "Revise Patient request" cannot be resolved
@@ -301,7 +301,7 @@ WARNING: StructureDefinition/bc-update-patient: StructureDefinition.snapshot.ele
 == fsh-generated/resources/StructureDefinition-bc-update-patient-operation-extension.json ==
 WARNING: StructureDefinition/bc-update-patient-operation-extension: StructureDefinition.context[0]: Review the extension type: extensions should not have a context of Element unless it's really intended that they can be used anywhere
 == fsh-generated/resources/StructureDefinition-bc-update-request-bundle.json ==
-ERROR: StructureDefinition/bc-update-request-bundle: StructureDefinition.snapshot.element[0].constraint[9]: Error in invariant 'invariant-update-1' with expression 'entry.resource.ofType(Patient).name.count()>=1 or entry.resource.ofType(Patient).telecom.count()>=1 or entry.resource.ofType(Patient).gender.count() >=1 or entry.resource.ofType(Patient).deceased[x].count()>=1 or entry.resource.ofType(Patient).address.count()>=1 or entry.resource.ofType(Patient).communication.count()>=1': Error evaluating FHIRPath expression: The name 'x' is not valid for any of the possible types: [http://hl7.org/fhir/StructureDefinition/Bundle] (@char 12)
+ERROR: StructureDefinition/bc-update-request-bundle: StructureDefinition.snapshot.element[0].constraint[9]: Error in constraint 'invariant-update-1' with expression 'entry.resource.ofType(Patient).name.count()>=1 or entry.resource.ofType(Patient).telecom.count()>=1 or entry.resource.ofType(Patient).gender.count() >=1 or entry.resource.ofType(Patient).deceased[x].count()>=1 or entry.resource.ofType(Patient).address.count()>=1 or entry.resource.ofType(Patient).communication.count()>=1': Error evaluating FHIRPath expression: The name 'x' is not valid for any of the possible types: [http://hl7.org/fhir/StructureDefinition/Bundle] (@char 12)
 == fsh-generated/resources/StructureDefinition-bc-validation-status-extension.json ==
 WARNING: StructureDefinition/bc-validation-status-extension: StructureDefinition.context[0]: Review the extension type: extensions should not have a context of Element unless it's really intended that they can be used anywhere
 == fsh-generated/resources/ValueSet-bc-address-validation-value-set.json ==
