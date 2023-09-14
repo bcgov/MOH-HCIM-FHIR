@@ -28,5 +28,7 @@ See British Columbia's [Health Information Exchange](https://www2.gov.bc.ca/gov/
 
 For design information start [here](design.html), to view details about profiles, operations, examples, etc, view this [page](artifacts.html).
 
+Releases are described [here](futurePlans.html).
+
 
 

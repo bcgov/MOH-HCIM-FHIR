@@ -1,6 +1,7 @@
 Instance: FindNewbornByMumsPHN-Response-Patient1
 InstanceOf: ClientRegistryPatient
 Usage: #inline
+* id = "249bfac6-d4d8-40da-91f9-1922124f67b3"
 * identifier[0].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * identifier[=].extension.valueCode = #active
 * identifier[=].use = #official

@@ -1,6 +1,7 @@
 Instance: FindCandidates-response-Patient1
 InstanceOf: ClientRegistryPatient
 Usage: #inline
+* id = "2d71a59d-1ec3-4678-8e6e-eac7a9bc1980"
 * identifier[0].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * identifier[=].extension.valueCode = #active
 * identifier[=].use = #official

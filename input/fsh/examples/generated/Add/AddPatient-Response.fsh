@@ -12,5 +12,5 @@ Usage: #example
 * entry[=].resource = AddPatient-Response-Parameters
 * entry[+].resource = AddPatient-Response-Outcome 
 * entry[=].fullUrl = "urn:uuid:0185235c-f8ea-4107-8979-591ddc2d1234"
-* entry[+].fullUrl = "urn:uuid:0913f566-d444-405c-9de7-9250f3173bd4"
+* entry[+].fullUrl = "https://hcim.ehealth.gov.bc.ca/Patient/da3c9784-deb8-4d70-96ec-32d4129b408d"
 * entry[=].resource = AddPatient-Response-Patient

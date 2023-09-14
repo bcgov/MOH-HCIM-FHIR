@@ -1,6 +1,7 @@
 Instance: AddPatient-Response-Patient
 InstanceOf: ClientRegistryPatient
 Usage: #inline
+* id = "da3c9784-deb8-4d70-96ec-32d4129b408d"
 * identifier[0].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * identifier[=].extension.valueCode = #active
 * identifier[=].use = #official

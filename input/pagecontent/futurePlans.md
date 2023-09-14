@@ -19,15 +19,22 @@ This section describes everything that is available in this release. Currently t
 To access this release through messaging, in the HTTP Accept header, update the versions to:
 <b> fhirVersion=4.0;BCFhirVersion=1 </b>
 
-### Future Interfaces
 
-The FHIR specification will expand to include RESTful interfaces for Patient.  I.e.
+This release includes the following Operations
 
-	GET https://.../Patient/1b3ef948-4e25-4108-84c2-3727a6fb5a3b
+Operation |
+:--- |
+[FindCandidate](OperationDefinition-bc-patient-find-candidates.html) |
+[GetDemographics](OperationDefinition-bc-patient-get-demographics.html) |
+{:.grid}
 
-Or
+The GetDemographics.withEligibility Operation is not included.
 
-	GET https://.../Patient?params=
 
-where a list of parameters can be used to query for Patients similar to Get Demographics.
+
+
+
+
+
+
 

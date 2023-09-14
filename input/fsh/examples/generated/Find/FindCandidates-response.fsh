@@ -15,11 +15,11 @@ Usage: #example
 * entry[+].resource = FindCandidates-response-Outcome 
 * entry[=].fullUrl = "urn:uuid:c3e604ec-0917-41a8-9d90-1da8e6615678"
 * entry[=].search.mode = #outcome
-* entry[+].fullUrl = "urn:uuid:f156cec9-77fe-40d2-a023-71f1442d4598"
+* entry[+].fullUrl = "https://hcim.ehealth.gov.bc.ca/Patient/2d71a59d-1ec3-4678-8e6e-eac7a9bc1980"
 * entry[=].resource = FindCandidates-response-Patient1
 * entry[=].search.mode = #match
 * entry[=].search.score = 159
-* entry[+].fullUrl = "urn:uuid:d8c79350-2de1-4fee-bd65-67592628916f"
-* entry[=].resource = FindCandidates-response-Patient1
+* entry[+].fullUrl = "https://hcim.ehealth.gov.bc.ca/Patient/9f5b4f12-2bc2-4ff9-8c66-33e397014099"
+* entry[=].resource = FindCandidates-response-Patient2
 * entry[=].search.mode = #match
 * entry[=].search.score = 91

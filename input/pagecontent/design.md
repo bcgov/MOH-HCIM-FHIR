@@ -49,6 +49,10 @@ All interactions will primarily use the Patient resource.  The Patient resource 
 
 Four Patient profiles are used: the main profile [ClientRegistryPatient](StructureDefinition-bc-patient.html) - used also the search profile in the search operation (GetDemographics and FindCandidates), the merge profile [MergePatient](StructureDefinition-bc-merge-patient.html) and finally the [PatientUpdate](StructureDefinition-bc-update-request-bundle.html) for partial updates, e.g. updating just address or just telephone.
 
+##### Patient Resource (Logical) Id
+
+PHN is a sensitive Patient attribute and although considered for the Paitent Resource ID this idea was discarded.  A non-PII surrogate Resource ID has been created which this guide will call the surrogate PHN.  It is a universal uniuqe identifier (UUID) and Patient Resources will be populated with this UUID.
+
 ##### Patient Extensions
 
 There are several extensions that are applied to the Patient resource.  The list below is an overview, more details on the extensions can be found by following the links on the Patient resource snapshot [page](StructureDefinition-bc-patient.html) .
@@ -142,6 +146,24 @@ $PatientNotification |  [Patient Notification request profile](StructureDefiniti
 ##### Responses
 
 Response resources are wrapped in Bundles.  A search operation like Get Demographics or Find Candidates will be a searchset Bundle that echoes back the search parameters by including an extra Parameters resource in the Bundle.
+
+#### FHIR Restful
+
+The surrogate PHN can be used to query for Patients.
+
+https://..../Patient/UUID
+
+Two operations related to UUID are also available
+
+Restful|
+:--- |
+GET https://..../Patient/UUID/$HistoryPatient |
+GET https://..../Patient/UUID/_elements=identifier |
+{:.grid}
+
+$HistoryPatient is equivalent to the [$GetDemograhpics with the withHistory parameter](OperationDefinition-bc-patient-get-demographics.html#metadata-in-parameters).
+
+_elements=identifier is equivalent to the [$GetDemographics with the idenifiersOnly parameter](OperationDefinition-bc-patient-get-demographics.html#metadata-in-parameters).
 
 ### Design Outcomes - Details
 

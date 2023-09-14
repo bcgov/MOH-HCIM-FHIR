@@ -15,13 +15,13 @@ Usage: #example
 * entry[+].resource = FindNewbornByMumsPHN-Response-Outcome
 * entry[=].fullUrl = "urn:uuid:c3e604ec-0917-41a8-9d90-1da8e6611234"
 * entry[=].search.mode = #outcome
-* entry[+].fullUrl = "urn:uuid:71092811-55f9-4e1f-8754-a6828da1d51c"
+* entry[+].fullUrl = "https://hcim.ehealth.gov.bc.ca/Patient/249bfac6-d4d8-40da-91f9-1922124f67b3"
 * entry[=].resource = FindNewbornByMumsPHN-Response-Patient1
 * entry[=].search.mode = #match
-* entry[+].fullUrl = "urn:uuid:69b91ae6-e147-4dd0-abe7-8912ec301fd9"
+* entry[+].fullUrl = "https://hcim.ehealth.gov.bc.ca/Patient/719066ea-5992-4fb3-b05a-1859340762c1"
 * entry[=].resource = FindNewbornByMumsPHN-Response-Patient2
 * entry[=].search.mode = #match
-* entry[+].fullUrl = "urn:uuid:e4e077df-3a85-4fa9-8df0-9ff7b2f00000"
+* entry[+].fullUrl = "https://hcim.ehealth.gov.bc.ca/Patient/2fc21607-32e0-463b-aef4-1aaee713d381"
 * entry[=].resource = FindNewbornByMumsPHN-Response-Patient3
 * entry[=].search.mode = #match
 * entry[+].fullUrl = "urn:uuid:13cb4c36-102d-49c7-9f2e-f652ece39ecf"
