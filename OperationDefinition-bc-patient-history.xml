@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-patient-history"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">Placeholder</div>
+  </text>
+  <url value="http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-history"/>
+  <version value="1.0.0"/>
+  <name value="HistoryPatient"/>
+  <title value="HistoryPatient"/>
+  <status value="draft"/>
+  <kind value="operation"/>
+  <date value="2023-09-14T16:14:11+00:00"/>
+  <publisher value="BC Ministry of Health"/>
+  <contact>
+    <name value="BC Ministry of Health"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="CA"/>
+      <display value="Canada"/>
+    </coding>
+  </jurisdiction>
+  <code value="HistoryPatient"/>
+  <resource value="Patient"/>
+  <system value="false"/>
+  <type value="false"/>
+  <instance value="true"/>
+  <outputProfile value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+  <parameter>
+    <name value="return"/>
+    <use value="out"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="The history operation response Bundle."/>
+    <type value="Bundle"/>
+  </parameter>
+</OperationDefinition>

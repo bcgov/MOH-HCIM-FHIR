@@ -1,0 +1,44 @@
+{
+  "resourceType" : "OperationDefinition",
+  "id" : "bc-patient-history",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder</div>"
+  },
+  "url" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-history",
+  "version" : "1.0.0",
+  "name" : "HistoryPatient",
+  "title" : "HistoryPatient",
+  "status" : "draft",
+  "kind" : "operation",
+  "date" : "2023-09-14T16:14:11+00:00",
+  "publisher" : "BC Ministry of Health",
+  "contact" : [{
+    "name" : "BC Ministry of Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CA",
+      "display" : "Canada"
+    }]
+  }],
+  "code" : "HistoryPatient",
+  "resource" : ["Patient"],
+  "system" : false,
+  "type" : false,
+  "instance" : true,
+  "outputProfile" : "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "parameter" : [{
+    "name" : "return",
+    "use" : "out",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "The history operation response Bundle.",
+    "type" : "Bundle"
+  }]
+}

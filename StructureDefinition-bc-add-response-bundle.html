@@ -7,7 +7,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>FHIR.CA-BC.CLIENT\AddResponseBundle - FHIR v4.0.1</title>
+    <title>AddResponseBundle - BC Client Registry FHIR Implementation Guide v1.0.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -45,8 +45,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"15.15"}
-    h3,h4,h5,h6{--heading-prefix:"15.15"}</style>
+    <style type="text/css">h2{--heading-prefix:"15.16"}
+    h3,h4,h5,h6{--heading-prefix:"15.16"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Left logo - typically the publisher's logo - project or affiliate -->
@@ -243,7 +243,7 @@
 
   </h2>
 
-  <table class="colsd">
+  <table class="colsi">
 
     <tr>
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-response-bundle<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-response-bundle"/></span>
@@ -263,9 +263,9 @@
 
       <td colspan="4">
         
-          Draft
+          Active
           
-            as of 2023-08-14
+            as of 2023-09-14
           
         
       </td>
@@ -679,8 +679,17 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
             <h4>Constraints</h4>
 <table class="list">
 <tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>bdl-5</td><td>error</td><td>Bundle.entry:patient, Bundle.entry:parameters, Bundle.entry:operationOutcome</td><td>must be a resource unless there's a request or response<br/>: resource.exists() or request.exists() or response.exists()</td><td></td></tr>
-<tr><td>bdl-8</td><td>error</td><td>Bundle.entry:patient, Bundle.entry:parameters, Bundle.entry:operationOutcome</td><td>fullUrl cannot be a version specific reference<br/>: fullUrl.contains('/_history/').not()</td><td></td></tr>
+<tr><td>bdl-1</td><td>error</td><td>Bundle</td><td>total only when a search or history<br/>: total.empty() or (type = 'searchset') or (type = 'history')</td><td></td></tr>
+<tr><td>bdl-2</td><td>error</td><td>Bundle</td><td>entry.search only when a search<br/>: entry.search.empty() or (type = 'searchset')</td><td></td></tr>
+<tr><td>bdl-3</td><td>error</td><td>Bundle</td><td>entry.request mandatory for batch/transaction/history, otherwise prohibited<br/>: entry.all(request.exists() = (%resource.type = 'batch' or %resource.type = 'transaction' or %resource.type = 'history'))</td><td></td></tr>
+<tr><td>bdl-4</td><td>error</td><td>Bundle</td><td>entry.response mandatory for batch-response/transaction-response/history, otherwise prohibited<br/>: entry.all(response.exists() = (%resource.type = 'batch-response' or %resource.type = 'transaction-response' or %resource.type = 'history'))</td><td></td></tr>
+<tr><td>bdl-5</td><td>error</td><td>Bundle.entry, Bundle.entry:patient, Bundle.entry:parameters, Bundle.entry:operationOutcome</td><td>must be a resource unless there's a request or response<br/>: resource.exists() or request.exists() or response.exists()</td><td></td></tr>
+<tr><td>bdl-7</td><td>error</td><td>Bundle</td><td>FullUrl must be unique in a bundle, or else entries with the same fullUrl must have different meta.versionId (except in history bundles)<br/>: (type = 'history') or entry.where(fullUrl.exists()).select(fullUrl&amp;resource.meta.versionId).isDistinct()</td><td></td></tr>
+<tr><td>bdl-8</td><td>error</td><td>Bundle.entry, Bundle.entry:patient, Bundle.entry:parameters, Bundle.entry:operationOutcome</td><td>fullUrl cannot be a version specific reference<br/>: fullUrl.contains('/_history/').not()</td><td></td></tr>
+<tr><td>bdl-9</td><td>error</td><td>Bundle</td><td>A document must have an identifier with a system and a value<br/>: type = 'document' implies (identifier.system.exists() and identifier.value.exists())</td><td></td></tr>
+<tr><td>bdl-10</td><td>error</td><td>Bundle</td><td>A document must have a date<br/>: type = 'document' implies (timestamp.hasValue())</td><td></td></tr>
+<tr><td>bdl-11</td><td>error</td><td>Bundle</td><td>A document must have a Composition as the first resource<br/>: type = 'document' implies entry.first().resource.is(Composition)</td><td></td></tr>
+<tr><td>bdl-12</td><td>error</td><td>Bundle</td><td>A message must have a MessageHeader as the first resource<br/>: type = 'message' implies entry.first().resource.is(MessageHeader)</td><td></td></tr>
 <tr><td>dom-2</td><td>error</td><td>Bundle.entry:patient.resource</td><td>If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>: contained.contained.empty()</td><td></td></tr>
 <tr><td>dom-3</td><td>error</td><td>Bundle.entry:patient.resource</td><td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource<br/>: contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</td><td></td></tr>
 <tr><td>dom-4</td><td>error</td><td>Bundle.entry:patient.resource</td><td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>: contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</td><td></td></tr>
@@ -1227,8 +1236,17 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
             <h4>Constraints</h4>
 <table class="list">
 <tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>bdl-5</td><td>error</td><td>Bundle.entry:patient, Bundle.entry:parameters, Bundle.entry:operationOutcome</td><td>must be a resource unless there's a request or response<br/>: resource.exists() or request.exists() or response.exists()</td><td></td></tr>
-<tr><td>bdl-8</td><td>error</td><td>Bundle.entry:patient, Bundle.entry:parameters, Bundle.entry:operationOutcome</td><td>fullUrl cannot be a version specific reference<br/>: fullUrl.contains('/_history/').not()</td><td></td></tr>
+<tr><td>bdl-1</td><td>error</td><td>Bundle</td><td>total only when a search or history<br/>: total.empty() or (type = 'searchset') or (type = 'history')</td><td></td></tr>
+<tr><td>bdl-2</td><td>error</td><td>Bundle</td><td>entry.search only when a search<br/>: entry.search.empty() or (type = 'searchset')</td><td></td></tr>
+<tr><td>bdl-3</td><td>error</td><td>Bundle</td><td>entry.request mandatory for batch/transaction/history, otherwise prohibited<br/>: entry.all(request.exists() = (%resource.type = 'batch' or %resource.type = 'transaction' or %resource.type = 'history'))</td><td></td></tr>
+<tr><td>bdl-4</td><td>error</td><td>Bundle</td><td>entry.response mandatory for batch-response/transaction-response/history, otherwise prohibited<br/>: entry.all(response.exists() = (%resource.type = 'batch-response' or %resource.type = 'transaction-response' or %resource.type = 'history'))</td><td></td></tr>
+<tr><td>bdl-5</td><td>error</td><td>Bundle.entry, Bundle.entry:patient, Bundle.entry:parameters, Bundle.entry:operationOutcome</td><td>must be a resource unless there's a request or response<br/>: resource.exists() or request.exists() or response.exists()</td><td></td></tr>
+<tr><td>bdl-7</td><td>error</td><td>Bundle</td><td>FullUrl must be unique in a bundle, or else entries with the same fullUrl must have different meta.versionId (except in history bundles)<br/>: (type = 'history') or entry.where(fullUrl.exists()).select(fullUrl&amp;resource.meta.versionId).isDistinct()</td><td></td></tr>
+<tr><td>bdl-8</td><td>error</td><td>Bundle.entry, Bundle.entry:patient, Bundle.entry:parameters, Bundle.entry:operationOutcome</td><td>fullUrl cannot be a version specific reference<br/>: fullUrl.contains('/_history/').not()</td><td></td></tr>
+<tr><td>bdl-9</td><td>error</td><td>Bundle</td><td>A document must have an identifier with a system and a value<br/>: type = 'document' implies (identifier.system.exists() and identifier.value.exists())</td><td></td></tr>
+<tr><td>bdl-10</td><td>error</td><td>Bundle</td><td>A document must have a date<br/>: type = 'document' implies (timestamp.hasValue())</td><td></td></tr>
+<tr><td>bdl-11</td><td>error</td><td>Bundle</td><td>A document must have a Composition as the first resource<br/>: type = 'document' implies entry.first().resource.is(Composition)</td><td></td></tr>
+<tr><td>bdl-12</td><td>error</td><td>Bundle</td><td>A message must have a MessageHeader as the first resource<br/>: type = 'message' implies entry.first().resource.is(MessageHeader)</td><td></td></tr>
 <tr><td>dom-2</td><td>error</td><td>Bundle.entry:patient.resource</td><td>If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>: contained.contained.empty()</td><td></td></tr>
 <tr><td>dom-3</td><td>error</td><td>Bundle.entry:patient.resource</td><td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource<br/>: contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</td><td></td></tr>
 <tr><td>dom-4</td><td>error</td><td>Bundle.entry:patient.resource</td><td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>: contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</td><td></td></tr>
@@ -1486,7 +1504,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Aug 14, 2023 17:37+0000">2023-08-14</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 14, 2023 16:14+0000">2023-09-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
