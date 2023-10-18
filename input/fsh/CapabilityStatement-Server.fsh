@@ -1,5 +1,6 @@
 Instance: HCIMCapabilityStatementServer
 InstanceOf: CapabilityStatement
+Usage: #definition
 * text.status = #generated
 * text.div = "<div>
 

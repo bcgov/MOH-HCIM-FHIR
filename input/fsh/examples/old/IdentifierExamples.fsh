@@ -1,6 +1,7 @@
 Instance: IdentifierExamplePHN
 //InstanceOf: Identifier
 InstanceOf: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
+//InstanceOf: http://hl7.org/fhir/StructureDefinition/Identifier
 Description: "An example of a PHN Identifier."
 Usage: #inline
 * system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"
@@ -13,7 +14,8 @@ Usage: #inline
 * use = #official
 
 Instance: IdentifierExamplePHNNoPeriod
-InstanceOf: Identifier
+//InstanceOf: Identifier
+InstanceOf: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 Description: "An example of a PHN Identifier."
 Usage: #inline
 * system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"
@@ -23,7 +25,8 @@ Usage: #inline
 * use = #official
 
 Instance: IdentifierExamplePHN2NoPeriod
-InstanceOf: Identifier
+//InstanceOf: Identifier
+InstanceOf: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 Description: "An example of a PHN Identifier."
 Usage: #inline
 * system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"
@@ -33,7 +36,8 @@ Usage: #inline
 * use = #official
 
 Instance: IdentifierExampleSRINoPeriod
-InstanceOf: Identifier
+//InstanceOf: Identifier
+InstanceOf: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 Description: "An example of a SRI Identifier."
 Usage: #inline
 * system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
@@ -46,7 +50,8 @@ Usage: #inline
 * use = #official
 
 Instance: IdentifierExampleSRINoPeriodForMerge
-InstanceOf: Identifier
+//InstanceOf: Identifier
+InstanceOf: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 Description: "An example of a SRI Identifier."
 Usage: #inline
 * system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
@@ -59,7 +64,8 @@ Usage: #inline
 * use = #official
 
 Instance: IdentifierExampleSSRINoPeriod
-InstanceOf: Identifier
+//InstanceOf: Identifier
+InstanceOf: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 Description: "An example of a SSRI Identifier."
 Usage: #inline
 * system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"

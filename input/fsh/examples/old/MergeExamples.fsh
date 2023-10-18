@@ -80,7 +80,8 @@ Description: "Example of a merge patient Patient"
 
 
 Instance: IdentifierExampleSSRINoPeriodNoValue
-InstanceOf: Identifier
+//InstanceOf: Identifier
+InstanceOf: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 Description: "An example of a SSRI Identifier."
 Usage: #inline
 * system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"

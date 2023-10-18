@@ -6,15 +6,7 @@ PHN example:
 
     {
       "use" : "official",
-      "type" : {
-        "coding" : [
-          {
-            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-            "code" : "JHN"
-          }
-        ]
-      },
-      "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
+      "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
       "value" : "123345654",
       "period" : {
         "start" : "2000-01-01T11:11:11+08:00",
@@ -26,14 +18,6 @@ Encrypted and encoded PHN example:
 
     {
       "use" : "official",
-      "type" : {
-        "coding" : [
-          {
-            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-            "code" : "JHN"
-          }
-        ]
-      },
       "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC-encrypted",
       "value" : "aGVsbG8=",
       "period" : {
@@ -46,19 +30,8 @@ Non PHN, SRI example;
 
     {
       "use" : "official",
-      "type" : {
-        "coding" : [
-          {
-            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-            "code" : "AN"
-          }
-        ]
-      },
-      "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+      "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-iha-iha-source-patient-id",
       "value" : "abc123345654",
-      "assigner" : {
-        "display" : "ORG_SRC e.g. VPP_CER, IHA_IHA"
-      },
       "period" : {
         "start" : "2000-01-01T11:11:11+08:00"
       }
@@ -68,19 +41,8 @@ This represents a SSRI identifier; notice the use is secondary (as opposed to of
 
     {
       "use" : "secondary",
-      "type" : {
-        "coding" : [
-          {
-            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-            "code" : "AN"
-          }
-        ]
-      },
-      "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+      "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cw-source-patient-id",
       "value" : "def123345654",
-      "assigner" : {
-        "display" : "ORG_SUBSRC e.g. FHA_CAC or VPP_CW"
-      },
       "period" : {
         "start" : "2000-01-01T11:11:11+08:00"
       }
@@ -91,15 +53,7 @@ This represents alternate identifiers.  In the example below the identifier is f
 
     {
       "use" : "official",
-      "type" : {
-        "coding" : [
-          {
-            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-            "code" : "JHN"
-          }
-        ]
-      },
-      "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/QC",
+      "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-qc-patient-healthcare-id",
       "value" : "123345654",
       "period" : {
         "start" : "2000-01-01T11:11:11+08:00",
@@ -109,28 +63,28 @@ This represents alternate identifiers.  In the example below the identifier is f
 
 The system value is formated as follows http://hlth.gov.bc.ca/fhir/client/id-issuer/_issuer code_.
 
-EMPI | Model Type | HL7 FHIR TYpe | HL7 FHIR System | HL7 FHIR Use | Notes
+Model Type | HL7 FHIR TYpe | HL7 FHIR System | Notes
 :---|:---|:---|:---|:---|:---|:---
-MemHead (CRS)|BCPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/BC|official|
-MemHead (Not CRS)|SRI|AN|http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode|official|Uses the HCIM Source Code 
-SSRI|SSRI|AN|http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode|secondary|Uses the HCIM Source Code.
-ALTID|PEPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/PE|official|
-ALTID|QCPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/QC|official|Quebec health number.
-ALTID|SKPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/SK|official|
-ALTID|YTPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/YT|official|
-ALTID|AHULI|U|http://hlth.gov.bc.ca/fhir/client/id-issuer/AHULI|official|
-ALTID|CACF|MI|http://hlth.gov.bc.ca/fhir/client/id-issuer/CACF|official|
-ALTID|RCMP|EN|http://hlth.gov.bc.ca/fhir/client/id-issuer/RCMP|official|
-ALTID|TRTY|TN|http://hlth.gov.bc.ca/fhir/client/id-issuer/TRTY|official|
-ALTID|VAC|U|http://hlth.gov.bc.ca/fhir/client/id-issuer/VAC|official|
-ALTID|CCIMS|U|http://hlth.gov.bc.ca/fhir/client/id-issuer/CCIMS|official|
-ALTID|ABPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/AB|official|
-ALTID|CPIM|U|http://hlth.gov.bc.ca/fhir/client/id-issuer/CPIM|official|
-ALTID|MBPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/MB|official|
-ALTID|NBPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/NB|official|
-ALTID|NFPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/NF|official|
-ALTID|NSPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/NS|official|
-ALTID|NTPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/NT|official|
-ALTID|NUPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/NU|official|
-ALTID|ONPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/ON|official|
+BCPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/BC|
+SRI|AN|http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode|Uses the HCIM Source Code 
+SSRI|AN|http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode|Uses the HCIM Source Code.
+ABPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-ab-patient-healthcare-id|
+MBPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-mb-patient-healthcare-id|
+NBPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-nb-patient-healthcare-id|
+NFPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-nl-patient-healthcare-id|
+NSPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-ns-patient-healthcare-id|
+NTPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-nt-patient-healthcare-id|
+NUPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-nu-patient-healthcare-id|
+ONPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-on-patient-hcn|
+PEPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-pe-patient-healthcare-id|
+QCPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-qc-patient-healthcare-id|Quebec health number.
+SKPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-sk-patient-healthcare-id|
+YTPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-yt-patient-healthcare-id|
+AHULI|U|http://hlth.gov.bc.ca/fhir/client/id-issuer/AHULI|
+CACF|MI|https://fhir.infoway-inforoute.ca/NamingSystem/ca-armed-forces-health-id|
+RCMP|EN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-royal-mounted-police-health-id|
+TRTY|TN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-indigenous-northern-affairs-number|
+VAC|U|http://hlth.gov.bc.ca/fhir/client/id-issuer/VAC|
+CCIMS|U|https://fhir.infoway-inforoute.ca/NamingSystem/ca-correctional-service-health-id|
+CPIM|U|https://fhir.infoway-inforoute.ca/NamingSystem/ca-cpim-service-health-id|
 {:.grid}
