@@ -3,14 +3,14 @@
   "id" : "fhir.ca-bc.client",
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder</div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>BCHealthClientIdentityManagement</h2><p>The official URL for this implementation guide is: </p><pre>http://hlth.gov.bc.ca/fhir/client/ImplementationGuide/fhir.ca-bc.client</pre><div><p>FHIR Implementation Guide for BC MOH Client Registry</p>\n</div></div>"
   },
   "url" : "http://hlth.gov.bc.ca/fhir/client/ImplementationGuide/fhir.ca-bc.client",
   "version" : "1.0.0",
   "name" : "BCHealthClientIdentityManagement",
   "title" : "BC Client Registry FHIR Implementation Guide",
   "status" : "draft",
-  "date" : "2023-09-14T16:14:11+00:00",
+  "date" : "2023-10-18T23:27:00+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",
@@ -259,6 +259,17 @@
       "extension" : [{
         "url" : "code",
         "valueString" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-wg"
       },
       {
         "url" : "value",
@@ -537,6 +548,17 @@
     {
       "extension" : [{
         "url" : "code",
+        "valueCode" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
         "valueCode" : "active-tables"
       },
       {
@@ -622,6 +644,70 @@
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-update-patient-operation-extension"
+      },
+      "name" : "A code the describes how a particular Patient attribute is to be changed",
+      "description" : "A code the describes how a particular Patient attribute is to be changed.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/AddNewbornByMumsPHN-Request"
+      },
+      "name" : "AddNewbornByMumsPHN-Request",
+      "description" : "Example of $Add request with Mother's PHN.",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle",
+      "groupingId" : "RequestExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "OperationDefinition"
+      }],
+      "reference" : {
+        "reference" : "OperationDefinition/bc-patient-add"
+      },
+      "name" : "AddPatient",
+      "description" : "This operation is used for newborns or to 'force create' a patient.",
+      "exampleBoolean" : false,
+      "groupingId" : "Operations"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/AddPatient-Request"
+      },
+      "name" : "AddPatient-Request",
+      "description" : "Example of $Add Patient request with all data fields populated.",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle",
+      "groupingId" : "RequestExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/AddPatient-Response"
+      },
+      "name" : "AddPatient-Response",
+      "description" : "Example of a $Add Patient Response message.",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-response-bundle",
+      "groupingId" : "ResponseExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -661,357 +747,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-patient"
-      },
-      "name" : "ClientRegistryPatient",
-      "description" : "General constraints on the Patient resource for use in the BC Client Registry project.",
-      "exampleBoolean" : false,
-      "groupingId" : "PatientProfile"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-find-candidates-request-bundle"
-      },
-      "name" : "FindCandidatesRequestBundle",
-      "description" : "A Bundle that is used in the Find Candidates Operation request.",
-      "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-get-demographics-request-bundle"
-      },
-      "name" : "GetDemographicsRequestBundle",
-      "description" : "A Bundle that is used in the Get Demographics Operation request.",
-      "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-merge-request-bundle"
-      },
-      "name" : "MergeRequestBundle",
-      "description" : "A Bundle that is used in the Client Registry for Add Patient requests.",
-      "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-merge-response-bundle"
-      },
-      "name" : "MergeResponseBundle",
-      "description" : "A Bundle that is used in the Client Registry response to Merge Patient requests.",
-      "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-metadata-parameter-async-response"
-      },
-      "name" : "MetadataParametersAsync",
-      "description" : "Parameters profile for BC meta data - outbound messages.",
-      "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-metadata-parameters-in"
-      },
-      "name" : "MetadataParametersIn",
-      "description" : "Parameters profile for BC meta data - incoming messages.",
-      "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-metadata-parameters-out"
-      },
-      "name" : "MetadataParametersOut",
-      "description" : "Parameters profile for BC meta data - outbound messages.",
-      "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-update-patient"
-      },
-      "name" : "PartialPatientUpdate",
-      "description" : "Patient profile used to update a Patient.",
-      "exampleBoolean" : false,
-      "groupingId" : "PatientProfile"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-update-request-bundle"
-      },
-      "name" : "PartialUpdateRequestBundle",
-      "description" : "A Bundle that is used in the Client Registry for Patient update requests.",
-      "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-patient-by-example"
-      },
-      "name" : "PatientByExample",
-      "description" : "Will get removed. General constraints on the Patient resource for use in the BC Client Registry project for queries. PatientByExample is a resource of the Client Registry FHIR implementation use only by Get Demographics and Find Candidates",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-merge-patient"
-      },
-      "name" : "PatientMerge",
-      "description" : "General constraints on the Patient resource for use in the BC Client Registry project Merge Operation.",
-      "exampleBoolean" : false,
-      "groupingId" : "PatientProfile"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-revise-request-bundle"
-      },
-      "name" : "ReviseRequestBundle",
-      "description" : "A Bundle that is used in the Client Registry for Revise Patient requests.  This is also used by Patient Notitifications.",
-      "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-revise-response-bundle"
-      },
-      "name" : "ReviseResponseBundle",
-      "description" : "A Bundle that is used in the Client Registry response to Revise Patient requests.",
-      "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-search-response-bundle"
-      },
-      "name" : "SearchResponseBundle",
-      "description" : "A Bundle that is used in the Client Registry response to Find Candidates and Get Demographics queries.",
-      "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-search-withEligibility-response-bundle"
-      },
-      "name" : "SearchWithEligibilityResponseBundle",
-      "description" : "A Bundle that is used in the Client Registry response to Get Demographics with Eligibility queries.",
-      "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-birthdate-history-extension"
-      },
-      "name" : "BC Birth Date History",
-      "description" : "This extension allows the Client Registry to include historical birth dates in a single Patient resource.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-business-period-extension"
-      },
-      "name" : "BC Business Dates",
-      "description" : "The effective dates for the parent element.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-death-date-history-extension"
-      },
-      "name" : "BC Death Date History",
-      "description" : "This extension allows the Client Registry to include historical death dates and flags in a single Patient resource.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-death-verified-flag-extension"
-      },
-      "name" : "BC Death Verified Flag",
-      "description" : "The Patients death is verified and as recorded in the Client Registry as a flag.  This also includes death verified flag history as required.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-death-verified-flag-history-extension"
-      },
-      "name" : "BC Death Verified Flag History",
-      "description" : "This extension allows the Client Registry to include historical death flags in a single Patient resource.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-gender-history-extension"
-      },
-      "name" : "BC Gender History",
-      "description" : "This extension allows the Client Registry to include historical gender codes in a single Patient resource.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-gender-identity-extension"
-      },
-      "name" : "BC Gender Identity with business dates.",
-      "description" : "Gender Identity with business dates.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-identifier-status-extension"
-      },
-      "name" : "BC Identifier Status",
-      "description" : "Identifier status.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-merge-status-extension"
-      },
-      "name" : "BC Merge Status Code",
-      "description" : "A code that represents the Merge status of the Patient.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-multiplebirth-history-extension"
-      },
-      "name" : "BC Multiple Birth History",
-      "description" : "This extension allows the Client Registry to include historical multiple birth values in a single Patient resource.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-sourceId-extension"
-      },
-      "name" : "BC SourceID and UserID",
-      "description" : "Identifiers for the source and user that modified the specific element that this extension is on.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-update-patient-operation-extension"
-      },
-      "name" : "A code the describes how a particular Patient attribute is to be changed",
-      "description" : "A code the describes how a particular Patient attribute is to be changed.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
@@ -1036,73 +771,25 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
+        "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
-        "reference" : "ValueSet/bc-contact-point-system-value-set"
+        "reference" : "StructureDefinition/bc-birthdate-history-extension"
       },
-      "name" : "BC Contact Point System Value Set",
-      "description" : "BC Contact Point System value set, sliced to meet BC constraints.",
+      "name" : "BC Birth Date History",
+      "description" : "This extension allows the Client Registry to include historical birth dates in a single Patient resource.",
       "exampleBoolean" : false
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
+        "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
-        "reference" : "ValueSet/bc-contact-point-use-value-set"
+        "reference" : "StructureDefinition/bc-business-period-extension"
       },
-      "name" : "BC Contact Point Use Value Set",
-      "description" : "BC Contact Point Use value set, sliced to meet BC constraints.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/bc-identifier-status-value-set"
-      },
-      "name" : "BC Identifier Status Value Set",
-      "description" : "BC Identifier Status value set used to describe the status of an identifier.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/bc-merge-status-value-set"
-      },
-      "name" : "BC Merge Status Value Set",
-      "description" : "BC Merge Status value set used to describe the merge status of a Patient.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/bc-name-use-value-set"
-      },
-      "name" : "BC Name Use value set.",
-      "description" : "BC Name Use value set, sliced to meet BC constraints.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/bc-client-registry-update-patient-operation-value-set"
-      },
-      "name" : "BC Update Patient Operation Value Set",
-      "description" : "A Value Set of allowed update operations.",
+      "name" : "BC Business Dates",
+      "description" : "The effective dates for the parent element.",
       "exampleBoolean" : false
     },
     {
@@ -1168,41 +855,208 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
+        "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "Bundle/AddNewbornByMumsPHN-Request"
+        "reference" : "ValueSet/bc-contact-point-system-value-set"
       },
-      "name" : "AddNewbornByMumsPHN-Request",
-      "description" : "Example of $Add request with Mother's PHN.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle",
-      "groupingId" : "RequestExamples"
+      "name" : "BC Contact Point System Value Set",
+      "description" : "BC Contact Point System value set, sliced to meet BC constraints.",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
+        "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "Bundle/AddPatient-Request"
+        "reference" : "ValueSet/bc-contact-point-use-value-set"
       },
-      "name" : "AddPatient-Request",
-      "description" : "Example of $Add Patient request with all data fields populated.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle",
-      "groupingId" : "RequestExamples"
+      "name" : "BC Contact Point Use Value Set",
+      "description" : "BC Contact Point Use value set, sliced to meet BC constraints.",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
+        "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
-        "reference" : "Bundle/AddPatient-Response"
+        "reference" : "StructureDefinition/bc-death-date-history-extension"
       },
-      "name" : "AddPatient-Response",
-      "description" : "Example of a $Add Patient Response message.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-response-bundle",
-      "groupingId" : "ResponseExamples"
+      "name" : "BC Death Date History",
+      "description" : "This extension allows the Client Registry to include historical death dates and flags in a single Patient resource.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-death-verified-flag-extension"
+      },
+      "name" : "BC Death Verified Flag",
+      "description" : "The Patients death is verified and as recorded in the Client Registry as a flag.  This also includes death verified flag history as required.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-death-verified-flag-history-extension"
+      },
+      "name" : "BC Death Verified Flag History",
+      "description" : "This extension allows the Client Registry to include historical death flags in a single Patient resource.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-gender-history-extension"
+      },
+      "name" : "BC Gender History",
+      "description" : "This extension allows the Client Registry to include historical gender codes in a single Patient resource.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-gender-identity-extension"
+      },
+      "name" : "BC Gender Identity with business dates.",
+      "description" : "Gender Identity with business dates.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CapabilityStatement"
+      }],
+      "reference" : {
+        "reference" : "CapabilityStatement/bc-hcim-capability-statement-client"
+      },
+      "name" : "BC HCIM Capability Statement",
+      "description" : "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a client. I.e. sending notifications.",
+      "exampleBoolean" : false,
+      "groupingId" : "CapabilityStatement"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CapabilityStatement"
+      }],
+      "reference" : {
+        "reference" : "CapabilityStatement/bc-hcim-capability-statement-server"
+      },
+      "name" : "BC HCIM Capability Statement",
+      "description" : "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a server.",
+      "exampleBoolean" : false,
+      "groupingId" : "CapabilityStatement"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-identifier-status-extension"
+      },
+      "name" : "BC Identifier Status",
+      "description" : "Identifier status.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/bc-identifier-status-value-set"
+      },
+      "name" : "BC Identifier Status Value Set",
+      "description" : "BC Identifier Status value set used to describe the status of an identifier.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-merge-status-extension"
+      },
+      "name" : "BC Merge Status Code",
+      "description" : "A code that represents the Merge status of the Patient.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/bc-merge-status-value-set"
+      },
+      "name" : "BC Merge Status Value Set",
+      "description" : "BC Merge Status value set used to describe the merge status of a Patient.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-multiplebirth-history-extension"
+      },
+      "name" : "BC Multiple Birth History",
+      "description" : "This extension allows the Client Registry to include historical multiple birth values in a single Patient resource.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/bc-name-use-value-set"
+      },
+      "name" : "BC Name Use value set.",
+      "description" : "BC Name Use value set, sliced to meet BC constraints.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-sourceId-extension"
+      },
+      "name" : "BC SourceID and UserID",
+      "description" : "Identifiers for the source and user that modified the specific element that this extension is on.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/bc-client-registry-update-patient-operation-value-set"
+      },
+      "name" : "BC Update Patient Operation Value Set",
+      "description" : "A Value Set of allowed update operations.",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1267,6 +1121,19 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-patient"
+      },
+      "name" : "ClientRegistryPatient",
+      "description" : "General constraints on the Patient resource for use in the BC Client Registry project.",
+      "exampleBoolean" : false,
+      "groupingId" : "PatientProfile"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Coverage"
       }],
       "reference" : {
@@ -1287,6 +1154,19 @@
       "name" : "Coverage-InActive-Example",
       "description" : "Example of Get Eligibility response, the patient is not eligible.",
       "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "OperationDefinition"
+      }],
+      "reference" : {
+        "reference" : "OperationDefinition/bc-patient-find-candidates"
+      },
+      "name" : "Find Candidates By Example",
+      "description" : "This operation is used to query for a patient.  The response can contain 0 or more Patients.",
+      "exampleBoolean" : false,
+      "groupingId" : "Operations"
     },
     {
       "extension" : [{
@@ -1317,6 +1197,19 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-find-candidates-request-bundle"
+      },
+      "name" : "FindCandidatesRequestBundle",
+      "description" : "A Bundle that is used in the Find Candidates Operation request.",
+      "exampleBoolean" : false,
+      "groupingId" : "SupportingProfiles"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
       }],
       "reference" : {
@@ -1339,6 +1232,32 @@
       "description" : "Example of $FindCandidates response with Mother's PHN.",
       "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
       "groupingId" : "ResponseExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "OperationDefinition"
+      }],
+      "reference" : {
+        "reference" : "OperationDefinition/bc-patient-get-demographics"
+      },
+      "name" : "GetDemographics",
+      "description" : "This operation is used to query for a patient.  The response can contain 0 or 1 Patient.",
+      "exampleBoolean" : false,
+      "groupingId" : "Operations"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "OperationDefinition"
+      }],
+      "reference" : {
+        "reference" : "OperationDefinition/bc-patient-get-demographics-withEligibility"
+      },
+      "name" : "GetDemographics withEligibility",
+      "description" : "This operation is used to query for a patient.  The response can contain 0 or 1 Patient and the insurance eligibility.",
+      "exampleBoolean" : false,
+      "groupingId" : "Operations"
     },
     {
       "extension" : [{
@@ -1408,6 +1327,45 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-get-demographics-request-bundle"
+      },
+      "name" : "GetDemographicsRequestBundle",
+      "description" : "A Bundle that is used in the Get Demographics Operation request.",
+      "exampleBoolean" : false,
+      "groupingId" : "SupportingProfiles"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "OperationDefinition"
+      }],
+      "reference" : {
+        "reference" : "OperationDefinition/bc-patient-history"
+      },
+      "name" : "HistoryPatient",
+      "description" : "This operation is used to return the historical attributes of a patient.",
+      "exampleBoolean" : false,
+      "groupingId" : "Operations"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "OperationDefinition"
+      }],
+      "reference" : {
+        "reference" : "OperationDefinition/bc-patient-merge"
+      },
+      "name" : "Merge Patient",
+      "description" : "This operation is used to merge patients.",
+      "exampleBoolean" : false,
+      "groupingId" : "Operations"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
       }],
       "reference" : {
@@ -1469,6 +1427,71 @@
       "description" : "Example of $Merge response with payload.",
       "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle",
       "groupingId" : "ResponseExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-merge-request-bundle"
+      },
+      "name" : "MergeRequestBundle",
+      "description" : "A Bundle that is used in the Client Registry for Add Patient requests.",
+      "exampleBoolean" : false,
+      "groupingId" : "SupportingProfiles"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-merge-response-bundle"
+      },
+      "name" : "MergeResponseBundle",
+      "description" : "A Bundle that is used in the Client Registry response to Merge Patient requests.",
+      "exampleBoolean" : false,
+      "groupingId" : "SupportingProfiles"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-metadata-parameter-async-response"
+      },
+      "name" : "MetadataParametersAsync",
+      "description" : "Parameters profile for BC meta data - outbound messages.",
+      "exampleBoolean" : false,
+      "groupingId" : "SupportingProfiles"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-metadata-parameters-in"
+      },
+      "name" : "MetadataParametersIn",
+      "description" : "Parameters profile for BC meta data - incoming messages.",
+      "exampleBoolean" : false,
+      "groupingId" : "SupportingProfiles"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-metadata-parameters-out"
+      },
+      "name" : "MetadataParametersOut",
+      "description" : "Parameters profile for BC meta data - outbound messages.",
+      "exampleBoolean" : false,
+      "groupingId" : "SupportingProfiles"
     },
     {
       "extension" : [{
@@ -1557,6 +1580,58 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "OperationDefinition"
+      }],
+      "reference" : {
+        "reference" : "OperationDefinition/bc-patient-update"
+      },
+      "name" : "Partial Update Patient",
+      "description" : "This operation is used to update a patient's demographics, applied to only specific Patient attributes.",
+      "exampleBoolean" : false,
+      "groupingId" : "Operations"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-update-patient"
+      },
+      "name" : "PartialPatientUpdate",
+      "description" : "Patient profile used to update a Patient.",
+      "exampleBoolean" : false,
+      "groupingId" : "PatientProfile"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-update-request-bundle"
+      },
+      "name" : "PartialUpdateRequestBundle",
+      "description" : "A Bundle that is used in the Client Registry for Patient update requests.",
+      "exampleBoolean" : false,
+      "groupingId" : "SupportingProfiles"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "OperationDefinition"
+      }],
+      "reference" : {
+        "reference" : "OperationDefinition/bc-patient-notification"
+      },
+      "name" : "Patient Notification",
+      "description" : "This operation is used notify a user that a patient's record has changed.",
+      "exampleBoolean" : false,
+      "groupingId" : "Operations"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
       }],
       "reference" : {
@@ -1589,6 +1664,44 @@
       "name" : "Patient-UpdatePatient-Request-Example",
       "description" : "Patient example for a UpdatePatient operation that changes the Address.",
       "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-patient-by-example"
+      },
+      "name" : "PatientByExample",
+      "description" : "Will get removed. General constraints on the Patient resource for use in the BC Client Registry project for queries. PatientByExample is a resource of the Client Registry FHIR implementation use only by Get Demographics and Find Candidates",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-merge-patient"
+      },
+      "name" : "PatientMerge",
+      "description" : "General constraints on the Patient resource for use in the BC Client Registry project Merge Operation.",
+      "exampleBoolean" : false,
+      "groupingId" : "PatientProfile"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "OperationDefinition"
+      }],
+      "reference" : {
+        "reference" : "OperationDefinition/bc-patient-revise"
+      },
+      "name" : "Revise Patient",
+      "description" : "This operation is used to revise a patient's demographics.",
+      "exampleBoolean" : false,
+      "groupingId" : "Operations"
     },
     {
       "extension" : [{
@@ -1632,145 +1745,54 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CapabilityStatement"
+        "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "CapabilityStatement/bc-hcim-capability-statement-client"
+        "reference" : "StructureDefinition/bc-revise-request-bundle"
       },
-      "name" : "HCIMCapabilityStatementClient",
-      "description" : "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a client. I.e. sending notifications.",
-      "exampleBoolean" : true,
-      "groupingId" : "CapabilityStatement"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CapabilityStatement"
-      }],
-      "reference" : {
-        "reference" : "CapabilityStatement/bc-hcim-capability-statement-server"
-      },
-      "name" : "HCIMCapabilityStatementServer",
-      "description" : "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a server.",
-      "exampleBoolean" : true,
-      "groupingId" : "CapabilityStatement"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationDefinition"
-      }],
-      "reference" : {
-        "reference" : "OperationDefinition/bc-patient-add"
-      },
-      "name" : "AddPatient",
-      "description" : "This operation is used for newborns or to 'force create' a patient.",
+      "name" : "ReviseRequestBundle",
+      "description" : "A Bundle that is used in the Client Registry for Revise Patient requests.  This is also used by Patient Notitifications.",
       "exampleBoolean" : false,
-      "groupingId" : "Operations"
+      "groupingId" : "SupportingProfiles"
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationDefinition"
+        "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "OperationDefinition/bc-patient-find-candidates"
+        "reference" : "StructureDefinition/bc-revise-response-bundle"
       },
-      "name" : "FindCandidates",
-      "description" : "This operation is used to query for a patient.  The response can contain 0 or more Patients.",
+      "name" : "ReviseResponseBundle",
+      "description" : "A Bundle that is used in the Client Registry response to Revise Patient requests.",
       "exampleBoolean" : false,
-      "groupingId" : "Operations"
+      "groupingId" : "SupportingProfiles"
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationDefinition"
+        "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "OperationDefinition/bc-patient-get-demographics"
+        "reference" : "StructureDefinition/bc-search-response-bundle"
       },
-      "name" : "GetDemographics",
-      "description" : "This operation is used to query for a patient.  The response can contain 0 or 1 Patient.",
+      "name" : "SearchResponseBundle",
+      "description" : "A Bundle that is used in the Client Registry response to Find Candidates and Get Demographics queries.",
       "exampleBoolean" : false,
-      "groupingId" : "Operations"
+      "groupingId" : "SupportingProfiles"
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationDefinition"
+        "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "OperationDefinition/bc-patient-get-demographics-withEligibility"
+        "reference" : "StructureDefinition/bc-search-withEligibility-response-bundle"
       },
-      "name" : "GetDemographics.withEligibility",
-      "description" : "This operation is used to query for a patient.  The response can contain 0 or 1 Patient and the insurance eligibility.",
+      "name" : "SearchWithEligibilityResponseBundle",
+      "description" : "A Bundle that is used in the Client Registry response to Get Demographics with Eligibility queries.",
       "exampleBoolean" : false,
-      "groupingId" : "Operations"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationDefinition"
-      }],
-      "reference" : {
-        "reference" : "OperationDefinition/bc-patient-history"
-      },
-      "name" : "HistoryPatient",
-      "description" : "This operation is used to return the historical attributes of a patient.",
-      "exampleBoolean" : false,
-      "groupingId" : "Operations"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationDefinition"
-      }],
-      "reference" : {
-        "reference" : "OperationDefinition/bc-patient-merge"
-      },
-      "name" : "MergePatient",
-      "description" : "This operation is used to merge patients.",
-      "exampleBoolean" : false,
-      "groupingId" : "Operations"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationDefinition"
-      }],
-      "reference" : {
-        "reference" : "OperationDefinition/bc-patient-notification"
-      },
-      "name" : "PatientNotification",
-      "description" : "This operation is used notify a user that a patient's record has changed.",
-      "exampleBoolean" : false,
-      "groupingId" : "Operations"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationDefinition"
-      }],
-      "reference" : {
-        "reference" : "OperationDefinition/bc-patient-revise"
-      },
-      "name" : "RevisePatient",
-      "description" : "This operation is used to revise a patient's demographics.",
-      "exampleBoolean" : false,
-      "groupingId" : "Operations"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationDefinition"
-      }],
-      "reference" : {
-        "reference" : "OperationDefinition/bc-patient-update"
-      },
-      "name" : "PartialUpdatePatient",
-      "description" : "This operation is used to update a patient's demographics, applied to only specific Patient attributes.",
-      "exampleBoolean" : false,
-      "groupingId" : "Operations"
+      "groupingId" : "SupportingProfiles"
     }],
     "page" : {
       "extension" : [{
