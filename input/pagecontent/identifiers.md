@@ -61,30 +61,38 @@ This represents alternate identifiers.  In the example below the identifier is f
       }
     }
 
-The system value is formated as follows http://hlth.gov.bc.ca/fhir/client/id-issuer/_issuer code_.
 
-Model Type | HL7 FHIR TYpe | HL7 FHIR System | Notes
+The Naming Systems in the "system" field are registered in the [Canadian URI Registry](https://simplifier.net/canadianuriregistry/~resources?category=NamingSystem&sortBy=RankScore_desc)  and in the [BC-core project](https://simplifier.net/bccore/~resources?category=NamingSystem&sortBy=RankScore_desc).
+The ones in the BC-Core project are formated from the V3 Assigning Authority code (source ID or issuer code) following this pattern:
+ https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-_SOURCE_ID_-patient-id
+
+See https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cw-source-patient-id for example, "vpp-cw" is the V3 Assigning Authority code.
+
+The Naming Systems from the [Canadian URI Registry](https://simplifier.net/canadianuriregistry/~resources?category=NamingSystem&sortBy=RankScore_desc) that are used for patient identifier in HCIM are listed in the table below.
+All Naming Systems used for Patient identifiers in HCIM are listed in this [file](HCIM_NamingSystems_Draft.pdf)
+
+V3 Assigning Authority | HL7 FHIR Naming System | Notes
 :---|:---|:---|:---|:---|:---|:---
-BCPHN|JHN|http://hlth.gov.bc.ca/fhir/client/id-issuer/BC|
-SRI|AN|http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode|Uses the HCIM Source Code 
-SSRI|AN|http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode|Uses the HCIM Source Code.
-ABPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-ab-patient-healthcare-id|
-MBPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-mb-patient-healthcare-id|
-NBPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-nb-patient-healthcare-id|
-NFPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-nl-patient-healthcare-id|
-NSPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-ns-patient-healthcare-id|
-NTPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-nt-patient-healthcare-id|
-NUPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-nu-patient-healthcare-id|
-ONPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-on-patient-hcn|
-PEPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-pe-patient-healthcare-id|
-QCPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-qc-patient-healthcare-id|Quebec health number.
-SKPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-sk-patient-healthcare-id|
-YTPHN|JHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-yt-patient-healthcare-id|
-AHULI|U|http://hlth.gov.bc.ca/fhir/client/id-issuer/AHULI|
-CACF|MI|https://fhir.infoway-inforoute.ca/NamingSystem/ca-armed-forces-health-id|
-RCMP|EN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-royal-mounted-police-health-id|
-TRTY|TN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-indigenous-northern-affairs-number|
-VAC|U|http://hlth.gov.bc.ca/fhir/client/id-issuer/VAC|
-CCIMS|U|https://fhir.infoway-inforoute.ca/NamingSystem/ca-correctional-service-health-id|
-CPIM|U|https://fhir.infoway-inforoute.ca/NamingSystem/ca-cpim-service-health-id|
+BCPHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id|
+MOH-CRS|https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id| 
+PUBH_PANO|https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-panorama-client-id|
+HIBC_MSP|https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id|
+ABPHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-ab-patient-healthcare-id|
+MBPHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-mb-patient-healthcare-id|
+NBPHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-nb-patient-healthcare-id|
+NFPHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-nl-patient-healthcare-id|
+NSPHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-ns-patient-healthcare-id|
+NTPHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-nt-patient-healthcare-id|
+NUPHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-nu-patient-healthcare-id|
+ONPHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-on-patient-hcn|
+PEPHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-pe-patient-healthcare-id|
+QCPHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-qc-patient-healthcare-id|
+SKPHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-sk-patient-healthcare-id|
+YTPHN|https://fhir.infoway-inforoute.ca/NamingSystem/ca-yt-patient-healthcare-id|
+CACF|https://fhir.infoway-inforoute.ca/NamingSystem/ca-armed-forces-health-id|
+RCMP|https://fhir.infoway-inforoute.ca/NamingSystem/ca-royal-mounted-police-health-id|
+TRTY|https://fhir.infoway-inforoute.ca/NamingSystem/ca-indigenous-northern-affairs-number|
+VAC|https://fhir.infoway-inforoute.ca/NamingSystem/ca-veterans-affairs-health-id|
+CCIMS|https://fhir.infoway-inforoute.ca/NamingSystem/ca-correctional-service-health-id|
+CPIM|https://fhir.infoway-inforoute.ca/NamingSystem/ca-cpim-service-health-id|
 {:.grid}
