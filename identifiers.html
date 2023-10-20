@@ -258,147 +258,131 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 }
 </code></pre></div></div>
 
-<p>The system value is formated as follows http://hlth.gov.bc.ca/fhir/client/id-issuer/<em>issuer code</em>.</p>
+<p>The Naming Systems in the “system” field are registered in the <a href="https://simplifier.net/canadianuriregistry/~resources?category=NamingSystem&amp;sortBy=RankScore_desc">Canadian URI Registry</a>  and in the <a href="https://simplifier.net/bccore/~resources?category=NamingSystem&amp;sortBy=RankScore_desc">BC-core project</a>.
+The ones in the BC-Core project are formated from the V3 Assigning Authority code (source ID or issuer code) following this pattern:
+ https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-_SOURCE_ID_-patient-id</p>
+
+<p>See https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cw-source-patient-id for example, “vpp-cw” is the V3 Assigning Authority code.</p>
+
+<p>The Naming Systems from the <a href="https://simplifier.net/canadianuriregistry/~resources?category=NamingSystem&amp;sortBy=RankScore_desc">Canadian URI Registry</a> that are used for patient identifier in HCIM are listed in the table below.
+All Naming Systems used for Patient identifiers in HCIM are listed in this <a href="HCIM_NamingSystems_Draft.pdf">file</a></p>
 
 <table class="grid">
   <thead>
     <tr>
-      <th style="text-align: left">Model Type</th>
-      <th style="text-align: left">HL7 FHIR TYpe</th>
-      <th style="text-align: left">HL7 FHIR System</th>
+      <th style="text-align: left">V3 Assigning Authority</th>
+      <th style="text-align: left">HL7 FHIR Naming System</th>
       <th style="text-align: left">Notes</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align: left">BCPHN</td>
-      <td style="text-align: left">JHN</td>
-      <td style="text-align: left">http://hlth.gov.bc.ca/fhir/client/id-issuer/BC</td>
+      <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
-      <td style="text-align: left">SRI</td>
-      <td style="text-align: left">AN</td>
-      <td style="text-align: left">http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode</td>
-      <td style="text-align: left">Uses the HCIM Source Code</td>
+      <td style="text-align: left">MOH-CRS</td>
+      <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</td>
+      <td style="text-align: left"> </td>
     </tr>
     <tr>
-      <td style="text-align: left">SSRI</td>
-      <td style="text-align: left">AN</td>
-      <td style="text-align: left">http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode</td>
-      <td style="text-align: left">Uses the HCIM Source Code.</td>
+      <td style="text-align: left">PUBH_PANO</td>
+      <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-panorama-client-id</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">HIBC_MSP</td>
+      <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id</td>
+      <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">ABPHN</td>
-      <td style="text-align: left">JHN</td>
       <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-ab-patient-healthcare-id</td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">MBPHN</td>
-      <td style="text-align: left">JHN</td>
       <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-mb-patient-healthcare-id</td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">NBPHN</td>
-      <td style="text-align: left">JHN</td>
       <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-nb-patient-healthcare-id</td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">NFPHN</td>
-      <td style="text-align: left">JHN</td>
       <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-nl-patient-healthcare-id</td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">NSPHN</td>
-      <td style="text-align: left">JHN</td>
       <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-ns-patient-healthcare-id</td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">NTPHN</td>
-      <td style="text-align: left">JHN</td>
       <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-nt-patient-healthcare-id</td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">NUPHN</td>
-      <td style="text-align: left">JHN</td>
       <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-nu-patient-healthcare-id</td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">ONPHN</td>
-      <td style="text-align: left">JHN</td>
       <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-on-patient-hcn</td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">PEPHN</td>
-      <td style="text-align: left">JHN</td>
       <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-pe-patient-healthcare-id</td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">QCPHN</td>
-      <td style="text-align: left">JHN</td>
       <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-qc-patient-healthcare-id</td>
-      <td style="text-align: left">Quebec health number.</td>
+      <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">SKPHN</td>
-      <td style="text-align: left">JHN</td>
       <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-sk-patient-healthcare-id</td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">YTPHN</td>
-      <td style="text-align: left">JHN</td>
       <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-yt-patient-healthcare-id</td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
-      <td style="text-align: left">AHULI</td>
-      <td style="text-align: left">U</td>
-      <td style="text-align: left">http://hlth.gov.bc.ca/fhir/client/id-issuer/AHULI</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
       <td style="text-align: left">CACF</td>
-      <td style="text-align: left">MI</td>
       <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-armed-forces-health-id</td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">RCMP</td>
-      <td style="text-align: left">EN</td>
       <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-royal-mounted-police-health-id</td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">TRTY</td>
-      <td style="text-align: left">TN</td>
       <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-indigenous-northern-affairs-number</td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">VAC</td>
-      <td style="text-align: left">U</td>
-      <td style="text-align: left">http://hlth.gov.bc.ca/fhir/client/id-issuer/VAC</td>
+      <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-veterans-affairs-health-id</td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">CCIMS</td>
-      <td style="text-align: left">U</td>
       <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-correctional-service-health-id</td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">CPIM</td>
-      <td style="text-align: left">U</td>
       <td style="text-align: left">https://fhir.infoway-inforoute.ca/NamingSystem/ca-cpim-service-health-id</td>
       <td style="text-align: left"> </td>
     </tr>
@@ -430,7 +414,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 18, 2023 23:27+0000">2023-10-18</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Oct 20, 2023 17:32+0000">2023-10-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
