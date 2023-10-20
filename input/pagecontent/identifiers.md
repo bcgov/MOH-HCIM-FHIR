@@ -63,13 +63,14 @@ This represents alternate identifiers.  In the example below the identifier is f
 
 
 The Naming Systems in the "system" field are registered in the [Canadian URI Registry](https://simplifier.net/canadianuriregistry/~resources?category=NamingSystem&sortBy=RankScore_desc)  and in the [BC-core project](https://simplifier.net/bccore/~resources?category=NamingSystem&sortBy=RankScore_desc).
+
 The ones in the BC-Core project are formated from the V3 Assigning Authority code (source ID or issuer code) following this pattern:
- https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-_SOURCE_ID_-patient-id
+ https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-_SOURCE_ID_-source-patient-id
+Example: https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cw-source-patient-id , "vpp-cw" is the V3 Assigning Authority code.
 
-See https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cw-source-patient-id for example, "vpp-cw" is the V3 Assigning Authority code.
+The Naming Systems from the [Canadian URI Registry](https://simplifier.net/canadianuriregistry/~resources?category=NamingSystem&sortBy=RankScore_desc) used for patient identifier in HCIM are listed in the table below.
 
-The Naming Systems from the [Canadian URI Registry](https://simplifier.net/canadianuriregistry/~resources?category=NamingSystem&sortBy=RankScore_desc) that are used for patient identifier in HCIM are listed in the table below.
-All Naming Systems used for Patient identifiers in HCIM are listed in this [file](HCIM_NamingSystems_Draft.pdf)
+All Naming Systems used for Patient identifiers in HCIM are listed in this [file](HCIM_NamingSystems_Draft.pdf).
 
 V3 Assigning Authority | HL7 FHIR Naming System | Notes
 :---|:---|:---|:---|:---|:---|:---
