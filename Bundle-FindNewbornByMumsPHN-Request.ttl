@@ -51,7 +51,7 @@
   fhir:id [ fhir:v "FindBabiesByMumsPHN-RelatedPerson"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: RelatedPerson</b><a name=\"FindBabiesByMumsPHN-RelatedPerson\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RelatedPerson &quot;FindBabiesByMumsPHN-RelatedPerson&quot; </p></div><p><b>identifier</b>: Jurisdictional health number: 9999999999 (use: OFFICIAL)</p><p><b>patient</b>: <a href=\"https://simplifier.net/resolve?scope=hl7.fhir.ca.baseline@1.1.4&amp;canonical=http://hl7.org/fhir/ca/baseline/e418862f-1759-42de-98a9-00433a779e9b\">e418862f-1759-42de-98a9-00433a779e9b</a></p><p><b>relationship</b>: natural mother <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-v3-RoleCode.html\">RoleCode</a>#NMTH)</span></p></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: RelatedPerson</b><a name=\"FindBabiesByMumsPHN-RelatedPerson\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RelatedPerson &quot;FindBabiesByMumsPHN-RelatedPerson&quot; </p></div><p><b>identifier</b>: id: 9999999999 (use: OFFICIAL)</p><p><b>patient</b>: <a href=\"https://simplifier.net/resolve?scope=hl7.fhir.ca.baseline@1.1.4&amp;canonical=http://hl7.org/fhir/ca/baseline/e418862f-1759-42de-98a9-00433a779e9b\">e418862f-1759-42de-98a9-00433a779e9b</a></p><p><b>relationship</b>: natural mother <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-v3-RoleCode.html\">RoleCode</a>#NMTH)</span></p></div>"
   ] ; # 
   fhir:identifier ( [
      fhir:extension ( [
@@ -59,14 +59,11 @@
        fhir:value [ fhir:v "active" ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "JHN" ]
-       ] )
-     ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "9999999999" ]
+     fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "9999999999" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "MOH Client Registry - MOH_CRS" ]
+     ]
   ] ) ; # 
   fhir:patient [
      fhir:reference [ fhir:v "e418862f-1759-42de-98a9-00433a779e9b" ]

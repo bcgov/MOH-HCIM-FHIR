@@ -34,7 +34,7 @@
         "name" : "sender",
         "valueIdentifier" : {
           "system" : "http://hlth.gov.bc.ca/fhir/client/bc-org",
-          "value" : "PHARM"
+          "value" : "HIBC"
         }
       },
       {
@@ -73,16 +73,16 @@
     }
   },
   {
-    "fullUrl" : "https://hcim.ehealth.gov.bc.ca/Patient/da3c9784-deb8-4d70-96ec-32d4129b408d",
+    "fullUrl" : "urn:uuid:33f234d1-5781-45f2-8c8c-4b7cdd809078",
     "resource" : {
       "resourceType" : "Patient",
-      "id" : "da3c9784-deb8-4d70-96ec-32d4129b408d",
+      "id" : "AddPatient-Response-Patient",
       "meta" : {
         "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"]
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"da3c9784-deb8-4d70-96ec-32d4129b408d\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;da3c9784-deb8-4d70-96ec-32d4129b408d&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9999999999\u00a0(use:\u00a0OFFICIAL,\u00a0period:\u00a02023-01-23 13:46:27-0800 --&gt; (ongoing)), Account number: 9999999999\u00a0(use:\u00a0OFFICIAL,\u00a0period:\u00a02023-01-23 13:46:27-0800 --&gt; (ongoing))</p><p><b>active</b>: true</p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"AddPatient-Response-Patient\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;AddPatient-Response-Patient&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: id:\u00a09253484802\u00a0(use:\u00a0OFFICIAL,\u00a0period:\u00a02023-01-23 13:46:27-0800 --&gt; (ongoing)), id:\u00a09455882493\u00a0(use:\u00a0OFFICIAL,\u00a0period:\u00a02023-01-23 13:46:27-0800 --&gt; (ongoing))</p><p><b>active</b>: true</p></div>"
       },
       "identifier" : [{
         "extension" : [{
@@ -90,16 +90,13 @@
           "valueCode" : "active"
         }],
         "use" : "official",
-        "type" : {
-          "coding" : [{
-            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-            "code" : "JHN"
-          }]
-        },
-        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
-        "value" : "9999999999",
+        "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+        "value" : "9253484802",
         "period" : {
           "start" : "2023-01-23T13:46:27-08:00"
+        },
+        "assigner" : {
+          "display" : "MOH Client Registry - MOH_CRS"
         }
       },
       {
@@ -108,19 +105,13 @@
           "valueCode" : "active"
         }],
         "use" : "official",
-        "type" : {
-          "coding" : [{
-            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-            "code" : "AN"
-          }]
-        },
-        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
-        "value" : "9999999999",
+        "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id",
+        "value" : "9455882493",
         "period" : {
           "start" : "2023-01-23T13:46:27-08:00"
         },
         "assigner" : {
-          "display" : "PHARM_RX"
+          "display" : "HIBC - Health Insurance British Columbia MSP"
         }
       }],
       "active" : true

@@ -48,7 +48,7 @@
   ] ) . # 
 
 <urn:uuid:66a90476-06d2-4e62-aba7-32d0566ecf41> a fhir:Patient ;
-  fhir:id [ fhir:v "9578d2bd-a6ad-409c-ba66-ba8343cd40be"] ; # 
+  fhir:id [ fhir:v "AddNewbornByMumsPHN-Request-Patient"] ; # 
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"^^xsd:anyURI ;
@@ -57,34 +57,33 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"9578d2bd-a6ad-409c-ba66-ba8343cd40be\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;9578d2bd-a6ad-409c-ba66-ba8343cd40be&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Account number: 7G8WEPG25X18M (use: OFFICIAL)</p><p><b>name</b>: Baby Boy </p><p><b>gender</b>: male</p><p><b>birthDate</b>: 2023-01-22</p></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"AddNewbornByMumsPHN-Request-Patient\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;AddNewbornByMumsPHN-Request-Patient&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: id: 4PX0WI5WO23CZRYTQ4GZP6MUJ9R6P2N6MS8Z156 (use: OFFICIAL)</p><p><b>name</b>: Baby Boy Jaroscak </p><p><b>gender</b>: male</p><p><b>birthDate</b>: 2023-01-22</p><p><b>address</b>: 46005 Lake forest drive Mattice BC CA </p></div>"
   ] ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "AN" ]
-       ] )
-     ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "7G8WEPG25X18M" ] ;
-     fhir:assigner [
-       fhir:display [ fhir:v "VCHA_COMM" ]
-     ]
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-north-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "4PX0WI5WO23CZRYTQ4GZP6MUJ9R6P2N6MS8Z156" ]
   ] ) ; # 
   fhir:name ( [
      fhir:use [ fhir:v "usual" ] ;
+     fhir:family [ fhir:v "Jaroscak" ] ;
      fhir:given ( [ fhir:v "Baby Boy" ] )
   ] ) ; # 
   fhir:gender [ fhir:v "male"] ; # 
-  fhir:birthDate [ fhir:v "2023-01-22"^^xsd:date] . # 
+  fhir:birthDate [ fhir:v "2023-01-22"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:type [ fhir:v "physical" ] ;
+     fhir:line ( [ fhir:v "46005 Lake forest drive" ] ) ;
+     fhir:city [ fhir:v "Mattice" ] ;
+     fhir:state [ fhir:v "BC" ] ;
+     fhir:country [ fhir:v "CA" ]
+  ] ) . # 
 
 <urn:uuid:b8d7f4cb-94db-46f6-9a01-7023a292b649> a fhir:RelatedPerson ;
   fhir:id [ fhir:v "AddNewbornByMumsPHN-Request-RelatedPerson"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: RelatedPerson</b><a name=\"AddNewbornByMumsPHN-Request-RelatedPerson\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RelatedPerson &quot;AddNewbornByMumsPHN-Request-RelatedPerson&quot; </p></div><p><b>identifier</b>: Jurisdictional health number: 9999999999 (use: OFFICIAL, period: 2023-01-23 13:46:27-0800 --&gt; (ongoing))</p><p><b>patient</b>: <a href=\"#Patient_9578d2bd-a6ad-409c-ba66-ba8343cd40be\">See above (urn:uuid:66a90476-06d2-4e62-aba7-32d0566ecf41)</a></p><p><b>relationship</b>: natural mother <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-v3-RoleCode.html\">RoleCode</a>#NMTH)</span></p></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: RelatedPerson</b><a name=\"AddNewbornByMumsPHN-Request-RelatedPerson\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RelatedPerson &quot;AddNewbornByMumsPHN-Request-RelatedPerson&quot; </p></div><p><b>identifier</b>: id: 9253484802 (use: OFFICIAL, period: 2023-01-23 13:46:27-0800 --&gt; (ongoing))</p><p><b>patient</b>: <a href=\"#Patient_AddNewbornByMumsPHN-Request-Patient\">See above (urn:uuid:66a90476-06d2-4e62-aba7-32d0566ecf41)</a></p><p><b>relationship</b>: natural mother <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-v3-RoleCode.html\">RoleCode</a>#NMTH)</span></p></div>"
   ] ; # 
   fhir:identifier ( [
      fhir:extension ( [
@@ -92,16 +91,13 @@
        fhir:value [ fhir:v "active" ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "JHN" ]
-       ] )
-     ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "9999999999" ] ;
+     fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "9253484802" ] ;
      fhir:period [
        fhir:start [ fhir:v "2023-01-23T13:46:27-08:00"^^xsd:dateTime ]
+     ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "MOH Client Registry - MOH_CRS" ]
      ]
   ] ) ; # 
   fhir:patient [
