@@ -1,22 +1,23 @@
 Instance: FindNewbornByMumsPHN-Response-Patient1
 InstanceOf: ClientRegistryPatient
 Usage: #inline
-* id = "249bfac6-d4d8-40da-91f9-1922124f67b3"
+* id = "26a6dc2a-8bad-45f3-b8e2-8829f554e8a4"
 * identifier[0].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * identifier[=].extension.valueCode = #active
 * identifier[=].use = #official
-* identifier[=].type = $v2-0203#JHN
-* identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"
+//* identifier[=].type = $v2-0203#JHN
+* identifier[=].system = "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"
 * identifier[=].value = "9999999991"
 * identifier[=].period.start = "2023-01-23T13:58:38-08:00"
+* identifier[=].assigner.display = "MOH Client Registry - MOH_CRS"
 * identifier[+].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * identifier[=].extension.valueCode = #active
 * identifier[=].use = #official
-* identifier[=].type = $v2-0203#AN
-* identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
-* identifier[=].value = "C08928PL0NJ1632KM6Q0D3XV14C1F7F1519"
+//* identifier[=].type = $v2-0203#AN
+* identifier[=].system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id"
+* identifier[=].value = "TCYS809BQAQS9323KO27C74502OZF714KM29"
 * identifier[=].period.start = "2023-01-23T13:58:38-08:00"
-* identifier[=].assigner.display = "IHA_IHA"
+* identifier[=].assigner.display = "FHA Meditech - Fraser Valley - FHA_MT"
 * active = true
 * name.use = #usual
 * name.family = "Shawley"

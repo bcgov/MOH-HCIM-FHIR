@@ -1,7 +1,7 @@
 Instance: FindCandidates-response-Parameters 
 InstanceOf: MetadataParametersOut
 Usage: #inline
-* id = "a763deae-f2cf-4b90-819b-d3c8e6a23dfd"
+//* id = "a763deae-f2cf-4b90-819b-d3c8e6a23dfd"
 * parameter[messageId].name = "messageId"
 * parameter[messageId].valueString = "f4a5d2f7-cbea-4f80-9804-b13b9be9f2b9"
 * parameter[messageDateTime].name = "messageDateTime"
@@ -10,7 +10,7 @@ Usage: #inline
 * parameter[identifiersOnly].valueBoolean = false
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
-* parameter[sender].valueIdentifier.value = "VCHA"
+* parameter[sender].valueIdentifier.value = "VIHA"
 * parameter[enterer].name = "enterer"
 * parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-userid"
 * parameter[enterer].valueIdentifier.value = "ig.samples@cgi.com"

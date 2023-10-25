@@ -1,28 +1,29 @@
 Instance: FindCandidates-response-Patient1
 InstanceOf: ClientRegistryPatient
 Usage: #inline
-* id = "2d71a59d-1ec3-4678-8e6e-eac7a9bc1980"
+* id = "cd710a55-680e-4297-82bf-e4a396401d39"
 * identifier[0].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * identifier[=].extension.valueCode = #active
 * identifier[=].use = #official
-* identifier[=].type = $v2-0203#JHN
-* identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"
+//* identifier[=].type = $v2-0203#JHN
+* identifier[=].system = "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"
 * identifier[=].value = "9999999990"
 * identifier[=].period.start = "2023-01-23T13:58:38-08:00"
+* identifier[=].assigner.display = "MOH Client Registry - MOH_CRS"
 * identifier[+].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * identifier[=].extension.valueCode = #active
 * identifier[=].use = #official
-* identifier[=].type = $v2-0203#AN
-* identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
-* identifier[=].value = "3FMF9LXL5109WXROQ2"
+//* identifier[=].type = $v2-0203#AN
+* identifier[=].system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-south-source-patient-id"
+* identifier[=].value = "53I5HTA2R5RT9XB6R27R52L8OXT18M1MZW"
 * identifier[=].period.start = "2023-01-23T13:58:38-08:00"
-* identifier[=].assigner.display = "VCHA_VGH"
+* identifier[=].assigner.display = "VIHA Cerner - VIHA_SOUTH"
 * identifier[+].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * identifier[=].extension.valueCode = #active
 * identifier[=].use = #official
-* identifier[=].type = $v2-0203#JHN
-* identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SK"
-* identifier[=].value = "57874VZMR531EI0Q2H"
+//* identifier[=].type = $v2-0203#JHN
+* identifier[=].system = "https://fhir.infoway-inforoute.ca/NamingSystem/ca-nl-patient-healthcare-id"
+* identifier[=].value = "EW4426MY2H20U5824HO4"
 * identifier[=].period.start = "2023-01-23T13:58:38-08:00"
 * active = true
 * name[0].use = #usual

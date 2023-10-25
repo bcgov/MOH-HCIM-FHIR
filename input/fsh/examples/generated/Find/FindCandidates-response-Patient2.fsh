@@ -1,28 +1,30 @@
 Instance: FindCandidates-response-Patient2
 InstanceOf: ClientRegistryPatient
 Usage: #inline
-* id = "9f5b4f12-2bc2-4ff9-8c66-33e397014099" 
+* id = "113c95fd-157a-46ee-a483-67059821b708" 
 * identifier[0].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * identifier[=].extension.valueCode = #active
 * identifier[=].use = #official
-* identifier[=].type = $v2-0203#JHN
-* identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"
+//* identifier[=].type = $v2-0203#JHN
+* identifier[=].system = "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"
 * identifier[=].value = "9999999991"
 * identifier[=].period.start = "2023-01-23T13:58:38-08:00"
+* identifier[=].assigner.display = "MOH Client Registry - MOH_CRS"
 * identifier[+].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * identifier[=].extension.valueCode = #active
 * identifier[=].use = #official
-* identifier[=].type = $v2-0203#AN
-* identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
-* identifier[=].value = "839XR93I57QW4UDR5IQ9Q1SO7R0A031EEUEK3"
+//* identifier[=].type = $v2-0203#AN
+* identifier[=].system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-south-source-patient-id"
+* identifier[=].value = "188N1MV4JZ77LYP7LSQBLVG2W2F09J41XU3F5HU"
 * identifier[=].period.start = "2023-01-23T13:58:38-08:00"
-* identifier[=].assigner.display = "VCHA_VGH"
+* identifier[=].assigner.display = "VIHA Cerner - VIHA_SOUTH"
 * identifier[+].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * identifier[=].extension.valueCode = #active
 * identifier[=].use = #official
-* identifier[=].type = $v2-0203#JHN
-* identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/NT"
-* identifier[=].value = "KC4P97HX00LN6Z7539Q16FJ"
+//* identifier[=].type = $v2-0203#JHN
+//* identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/NT"
+* identifier[=].system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id"
+* identifier[=].value = "28XFXSJ8MTNRVKY7QR763H3U7"
 * identifier[=].period.start = "2023-01-23T13:58:38-08:00"
 * active = true
 * name[0].use = #usual

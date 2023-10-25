@@ -7,7 +7,7 @@ Usage: #inline
 * parameter[messageDateTime].valueDateTime = "2023-01-23T13:46:27.8027717-08:00"
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
-* parameter[sender].valueIdentifier.value = "PHARM"
+* parameter[sender].valueIdentifier.value = "HIBC"
 * parameter[enterer].name = "enterer"
 * parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-userid"
 * parameter[enterer].valueIdentifier.value = "ig.samples@cgi.com"

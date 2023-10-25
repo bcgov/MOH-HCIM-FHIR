@@ -1,21 +1,21 @@
 Instance: AddPatient-Request-Patient
 InstanceOf: ClientRegistryPatient
 Usage: #inline
-* id = "366e61cb-2f6d-4a7f-b607-c3e625aa9be7"
+//* id = "366e61cb-2f6d-4a7f-b607-c3e625aa9be7"
 * identifier[0].use = #official
-* identifier[=].type = $v2-0203#AN
-* identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
-* identifier[=].value = "9999999999"
-* identifier[=].assigner.display = "PHARM_RX"
+//* identifier[=].type = $v2-0203#AN
+* identifier[=].system = "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id"
+* identifier[=].value = "9455882493"
+//* identifier[=].assigner.display = "PHARM_RX"
 * identifier[+].use = #official
-* identifier[=].type = $v2-0203#JHN
-* identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/NT"
-* identifier[=].value = "W0JK5022A60OW79Q"
+//* identifier[=].type = $v2-0203#JHN
+* identifier[=].system = "https://fhir.infoway-inforoute.ca/NamingSystem/ca-veterans-affairs-health-id"
+* identifier[=].value = "3EP14D12Y8Q618LPKH04QW28"
 * identifier[+].use = #official
-* identifier[=].type = $v2-0203#JHN
-* identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"
-* identifier[=].value = "9999999999"
-* identifier[=].period.start = "2023-01-23T13:46:27-08:00"
+//* identifier[=].type = $v2-0203#JHN
+* identifier[=].system = "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"
+* identifier[=].value = "9253484802"
+//* identifier[=].period.start = "2023-01-23T13:46:27-08:00"
 * name[0].use = #usual
 * name[=].family = "Gillette"
 * name[=].given[0] = "Legarra"
