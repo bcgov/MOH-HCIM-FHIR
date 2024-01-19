@@ -3,7 +3,7 @@ InstanceOf: RelatedPerson
 Usage: #inline
 * identifier.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * identifier.extension.valueCode = #active
-* identifier.use = #official
+//* identifier.use = #official
 //* identifier.type = $v2-0203#JHN
 * identifier.system = "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"
 * identifier.value = "9999999999"

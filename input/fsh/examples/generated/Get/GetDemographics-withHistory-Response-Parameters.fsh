@@ -11,7 +11,7 @@ Usage: #inline
 * parameter[identifiersOnly].valueBoolean = false
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
-* parameter[sender].valueIdentifier.value = "VIHA"
+* parameter[sender].valueIdentifier.value = "FHA"
 * parameter[enterer].name = "enterer"
 * parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-userid"
 * parameter[enterer].valueIdentifier.value = "ig.samples@cgi.com"

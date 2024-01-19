@@ -1,10 +1,22 @@
 ### Identifiers
 
-The Client Registry makes use of several kinds of identifiers, each requiring different attributes and codes.  This page explains, in more detail, the different kinds and how in FHIR they should be represented.  This page has PHN, SRI, SSRI, encrypted and encoded PHNs and alternate identifier examples below.
+The Client Registry makes use of several kinds of identifiers, each requiring different attributes and codes.  This page explains, in more detail, the different kinds and how in FHIR they should be represented. This page has PHN, SRI, SSRI, encrypted and encoded PHNs and alternate identifier examples below.
+The use is supplied in the examples below as it is returned in the response messages, but the use is not required in any of the request message.
 
-PHN example:
+PHN Request example, notice that there is no value set for "use"
 
     {
+      "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+      "value" : "123345654",
+      "period" : {
+        "start" : "2000-01-01T11:11:11+08:00",
+        "end" : "2010-01-01T11:11:11+08:00"
+      }
+    }
+
+PHN Response example: 
+    
+    { 
       "use" : "official",
       "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
       "value" : "123345654",
@@ -15,7 +27,7 @@ PHN example:
     }
 
 Encrypted and encoded PHN example:
-
+    
     {
       "use" : "official",
       "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC-encrypted",
@@ -27,7 +39,7 @@ Encrypted and encoded PHN example:
     }
 
 Non PHN, SRI example;
-
+   
     {
       "use" : "official",
       "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-iha-iha-source-patient-id",
@@ -38,7 +50,7 @@ Non PHN, SRI example;
     }
 
 This represents a SSRI identifier; notice the use is secondary (as opposed to official like above SRI example)..
-
+    
     {
       "use" : "secondary",
       "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cw-source-patient-id",
@@ -49,8 +61,8 @@ This represents a SSRI identifier; notice the use is secondary (as opposed to of
     }
 
 
-This represents alternate identifiers.  In the example below the identifier is from Quebec, and the system represents this with 'QC' at the end.
-
+This represents alternate identifiers. In the example below the identifier is from Quebec, and the system represents this with 'QC' at the end.
+    
     {
       "use" : "official",
       "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-qc-patient-healthcare-id",
@@ -70,7 +82,7 @@ Example: https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cw-source-patient-
 
 The Naming Systems from the [Canadian URI Registry](https://simplifier.net/canadianuriregistry/~resources?category=NamingSystem&sortBy=RankScore_desc) used for patient identifier in HCIM are listed in the table below.
 
-All Naming Systems used for Patient identifiers in HCIM are listed in this [file](HCIM_NamingSystems_Draft.pdf).
+All Naming Systems used for Patient identifiers in HCIM are listed in this [file](HCIMNamingSystems.pdf).
 
 V3 Assigning Authority | HL7 FHIR Naming System | Notes
 :---|:---|:---|:---|:---|:---|:---

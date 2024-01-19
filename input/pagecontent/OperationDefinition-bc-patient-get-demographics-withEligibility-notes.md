@@ -15,7 +15,7 @@ Cardinality | Resource Type | Comment
 1..1 | MetadataParametersOut | See [profile](StructureDefinition-bc-metadata-parameters-out.html).
 1,,1 | OperationOutcome | An OperationOutcome resource that has warnings and errors regarding the operation requested.
 0..1 | ClientRegistryPatient | See [profile](StructureDefinition-bc-patient.html)
-0..1 | Coverage | The insurnace covergage.
+0..1 | Coverage | The insurnace coverage.
 {:.grid}
 
 #### Metadata In Parameters

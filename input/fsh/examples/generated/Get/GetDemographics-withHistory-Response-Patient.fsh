@@ -1,47 +1,49 @@
 Instance: GetDemographics-withHistory-Response-Patient 
 InstanceOf: ClientRegistryPatient
 Usage: #inline
+* id = "87d81314-eba2-4071-af5a-f2b98bf4c13a"
 * identifier[0].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * identifier[=].extension.valueCode = #active
 * identifier[=].use = #official
-* identifier[=].type = $v2-0203#JHN
-* identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"
+//* identifier[=].type = $v2-0203#JHN
+* identifier[=].system = "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"
 * identifier[=].value = "9999999999"
 * identifier[=].period.start = "2023-01-23T14:00:53-08:00"
+* identifier[=].assigner.display = "MOH Client Registry - MOH_CRS"
 * identifier[+].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * identifier[=].extension.valueCode = #active
 * identifier[=].use = #official
-* identifier[=].type = $v2-0203#AN
-* identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
-* identifier[=].value = "F4299BA5ME6L02M9471NPF0V79Q4Q"
+//* identifier[=].type = $v2-0203#AN
+* identifier[=].system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id"
+* identifier[=].value = "2701XI3IW2R95W87WH3H16082KJ2LEVENM0LNTW"
 * identifier[=].period.start = "2023-01-23T14:00:53-08:00"
-* identifier[=].assigner.display = "VIHA_JOELAB"
+* identifier[=].assigner.display = "FHA Meditech - Fraser Valley - FHA_FV"
 * identifier[+].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * identifier[=].extension.valueCode = #merged
 * identifier[=].use = #official
-* identifier[=].type = $v2-0203#AN
-* identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
-* identifier[=].value = "OE78E6XLL7MJB"
+//* identifier[=].type = $v2-0203#AN
+* identifier[=].system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id"
+* identifier[=].value = "3B022OESRB7W41F3511QJ9PDCE244509HWHH5J"
 * identifier[=].period.start = "2018-01-23T14:00:53-08:00"
 * identifier[=].period.end = "2023-01-23T14:00:53-08:00"
-* identifier[=].assigner.display = "VIHA_JOELAB"
+* identifier[=].assigner.display = "FHA Meditech - Fraser Valley - FHA_FV"
 * identifier[+].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * identifier[=].extension.valueCode = #active
 * identifier[=].use = #secondary
-* identifier[=].type = $v2-0203#AN
-* identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
-* identifier[=].value = "MVZQ14SG826PGIOY84DUDX20Q6S6Y8"
+//* identifier[=].type = $v2-0203#AN
+* identifier[=].system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-arh-source-patient-id"
+* identifier[=].value = "8FV66J82GPKBH83"
 * identifier[=].period.start = "2023-01-23T14:00:53-08:00"
-* identifier[=].assigner.display = "SSRI_SRC"
+* identifier[=].assigner.display = "Abbotsford Regional Hospital"
 * identifier[+].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * identifier[=].extension.valueCode = #merged
 * identifier[=].use = #secondary
-* identifier[=].type = $v2-0203#AN
-* identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
-* identifier[=].value = "FPKP88TYFTW9V7I1MA19344FH2"
+//* identifier[=].type = $v2-0203#AN
+* identifier[=].system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-bh-source-patient-id"
+* identifier[=].value = "UO9W191ASP6JN937P3H476IPHC0K83V4Q65"
 * identifier[=].period.start = "2018-01-23T14:00:53-08:00"
 * identifier[=].period.end = "2023-01-23T14:00:53-08:00"
-* identifier[=].assigner.display = "SSRI_SRC"
+* identifier[=].assigner.display = "Burnaby Hospital"
 * active = true
 * name[0].use = #usual
 * name[=].family = "Parthemore"

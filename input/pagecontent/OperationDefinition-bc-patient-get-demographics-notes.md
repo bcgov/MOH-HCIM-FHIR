@@ -1,5 +1,7 @@
 The response may not include any Patients if none matched the criteria.  If there are patients returned, the Bundle.entry.search.score (i.e. entry for the Patient resource) will contain the Client Registry score.
 
+In the context of the Get Demographics request message, the Patient resource must not have both a resource id (Patient.id) and a identifier(Patient.identifier) in the same request. If they are both supplied the message will be rejected.
+
 #### In Bundle Entries
 
 Cardinality | Resource Type | Comment

@@ -4,23 +4,24 @@ Usage: #inline
 * identifier[0].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * identifier[=].extension.valueCode = #active
 * identifier[=].use = #official
-* identifier[=].type = $v2-0203#JHN
-* identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"
+//* identifier[=].type = $v2-0203#JHN
+* identifier[=].system = "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"
 * identifier[=].value = "9999999999"
+* identifier[=].assigner.display = "MOH Client Registry - MOH_CRS"
 * identifier[+].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * identifier[=].extension.valueCode = #active
 * identifier[=].use = #official
-* identifier[=].type = $v2-0203#AN
-* identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
-* identifier[=].value = "1X37W2G5APJ3Q70RDS0XB25ZW0313MUT"
+//* identifier[=].type = $v2-0203#AN
+* identifier[=].system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id"
+* identifier[=].value = "8H1496LN8U1F17JP0H2VV"
 * identifier[=].period.start = "2023-01-23T14:00:53-08:00"
-* identifier[=].assigner.display = "VIHA_JOELAB"
+* identifier[=].assigner.display = "FHA Meditech - Fraser Valley - FHA_MT"
 * identifier[+].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * identifier[=].extension.valueCode = #active
 * identifier[=].use = #official
-* identifier[=].type = $v2-0203#JHN
-* identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/AB"
-* identifier[=].value = "137Q50W1TI6SW94Z120WP14VSB291COAD"
+//* identifier[=].type = $v2-0203#JHN
+* identifier[=].system = "https://fhir.infoway-inforoute.ca/NamingSystem/ca-ab-patient-healthcare-id"
+* identifier[=].value = "4N2H10HY59EQ210Y5M098X0EPDM08I7KX38583O"
 * identifier[=].period.start = "2023-01-23T14:00:53-08:00"
 * active = true
 * name[0].use = #usual

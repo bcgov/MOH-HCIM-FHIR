@@ -1,7 +1,7 @@
 Instance: GetDemographics-Response-Parameters
 InstanceOf: MetadataParametersOut
 Usage: #inline
-* id = "f957605d-72a3-4930-a71a-71225c389e44"
+//* id = "f957605d-72a3-4930-a71a-71225c389e44"
 * parameter[messageId].name = "messageId"
 * parameter[messageId].valueString = "7cd363f7-982c-43cb-85b1-024e567ad571"
 * parameter[messageDateTime].name = "messageDateTime"
@@ -12,7 +12,7 @@ Usage: #inline
 * parameter[identifiersOnly].valueBoolean = false
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
-* parameter[sender].valueIdentifier.value = "VIHA"
+* parameter[sender].valueIdentifier.value = "FHA"
 * parameter[enterer].name = "enterer"
 * parameter[enterer].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-userid"
 * parameter[enterer].valueIdentifier.value = "ig.samples@cgi.com"

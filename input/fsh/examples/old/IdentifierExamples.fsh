@@ -4,7 +4,7 @@ InstanceOf: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifi
 //InstanceOf: http://hl7.org/fhir/StructureDefinition/Identifier
 Description: "An example of a PHN Identifier."
 Usage: #inline
-* system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"
+* system = "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"
 //* value = "9123456789"
 * value.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * value.extension.valueCode = #unknown
@@ -18,7 +18,7 @@ Instance: IdentifierExamplePHNNoPeriod
 InstanceOf: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 Description: "An example of a PHN Identifier."
 Usage: #inline
-* system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"
+* system = "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"
 * value = "9123456778"
 * type.coding.code = #JHN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
@@ -29,7 +29,7 @@ Instance: IdentifierExamplePHN2NoPeriod
 InstanceOf: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 Description: "An example of a PHN Identifier."
 Usage: #inline
-* system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"
+* system = "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"
 * value = "9876543210"
 * type.coding.code = #JHN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
@@ -40,11 +40,11 @@ Instance: IdentifierExampleSRINoPeriod
 InstanceOf: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 Description: "An example of a SRI Identifier."
 Usage: #inline
-* system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
+* system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-iha-iha-source-patient-id"
 * value = "123345654"
 * type.coding.code = #AN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* assigner.display = "ORG_SRC e.g. VPP_CER, IHA_IHA"
+//* assigner.display = "ORG_SRC e.g. VPP_CER, IHA_IHA"
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * extension.valueCode = #active
 * use = #official
@@ -54,11 +54,11 @@ Instance: IdentifierExampleSRINoPeriodForMerge
 InstanceOf: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 Description: "An example of a SRI Identifier."
 Usage: #inline
-* system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
+* system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-iha-iha-source-patient-id"
 * value = "8375493847"
 * type.coding.code = #AN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* assigner.display = "ORG_SRC e.g. VPP_CER, IHA_IHA"
+//* assigner.display = "ORG_SRC e.g. VPP_CER, IHA_IHA"
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * extension.valueCode = #active
 * use = #official
@@ -68,11 +68,11 @@ Instance: IdentifierExampleSSRINoPeriod
 InstanceOf: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 Description: "An example of a SSRI Identifier."
 Usage: #inline
-* system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
+* system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cw-source-patient-id"
 * value = "123345654"
 * type.coding.code = #AN
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* assigner.display = "ORG_SUBSRC e.g. FHA_CAC or VPP_CW"
+//* assigner.display = "ORG_SUBSRC e.g. FHA_CAC or VPP_CW"
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * extension.valueCode = #active
 * use = #secondary
