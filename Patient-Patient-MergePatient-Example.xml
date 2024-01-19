@@ -6,7 +6,7 @@
     <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>Anonymous Patient</b> (no stated gender), DoB Unknown ( Account number: 8375493847 (use: OFFICIAL))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>This record replaces: <span>Account number: 123345654 (use: OFFICIAL)</span></li><li>This record replaces: <span>Account number: 123345654 (use: SECONDARY)</span></li><li>This record replaces: <span>Account number: 123345654 (use: SECONDARY)</span></li><li>This record replaces: <span>Jurisdictional health number: 9876543210 (use: OFFICIAL)</span></li></ul></td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>Anonymous Patient</b> (no stated gender), DoB Unknown ( Account number: 8375493847 (use: OFFICIAL))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>This record replaces: <span>Account number: 123345654 (use: OFFICIAL)</span></li><li>This record replaces: <span>Account number: 123345654 (use: SECONDARY)</span></li><li>This record replaces: <span>Account number: 123345654 (use: SECONDARY)</span></li><li>This record replaces: <span>Jurisdictional health number: 9876543210 (use: OFFICIAL)</span></li></ul></td></tr></table></div>
   </text>
   <identifier>
     <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
@@ -19,11 +19,8 @@
         <code value="AN"/>
       </coding>
     </type>
-    <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+    <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-iha-iha-source-patient-id"/>
     <value value="8375493847"/>
-    <assigner>
-      <display value="ORG_SRC e.g. VPP_CER, IHA_IHA"/>
-    </assigner>
   </identifier>
   <active value="true"/>
   <link>
@@ -42,11 +39,8 @@
             <code value="AN"/>
           </coding>
         </type>
-        <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+        <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-iha-iha-source-patient-id"/>
         <value value="123345654"/>
-        <assigner>
-          <display value="ORG_SRC e.g. VPP_CER, IHA_IHA"/>
-        </assigner>
       </identifier>
     </other>
     <type value="replaces"/>
@@ -67,11 +61,8 @@
             <code value="AN"/>
           </coding>
         </type>
-        <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+        <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cw-source-patient-id"/>
         <value value="123345654"/>
-        <assigner>
-          <display value="ORG_SUBSRC e.g. FHA_CAC or VPP_CW"/>
-        </assigner>
       </identifier>
     </other>
     <type value="replaces"/>
@@ -92,11 +83,8 @@
             <code value="AN"/>
           </coding>
         </type>
-        <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"/>
+        <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cw-source-patient-id"/>
         <value value="123345654"/>
-        <assigner>
-          <display value="ORG_SUBSRC e.g. FHA_CAC or VPP_CW"/>
-        </assigner>
       </identifier>
     </other>
     <type value="replaces"/>
@@ -114,7 +102,7 @@
             <code value="JHN"/>
           </coding>
         </type>
-        <system value="http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"/>
+        <system value="https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"/>
         <value value="9876543210"/>
       </identifier>
     </other>

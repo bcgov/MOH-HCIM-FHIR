@@ -54,7 +54,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Revise-withMaxData-Request-Patient\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;Revise-withMaxData-Request-Patient&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Account number: 2B6F8GN410H1T27NPE (use: OFFICIAL), Account number: Y4DCP5VK29F31R80O8K2O08D5WAU2K950U40D8 (use: SECONDARY), Account number: 0EZFV8L7L7E1W9UF9AB3Z (use: SECONDARY), Account number: 2281UM0D8528TIVRW5FF4ESNK53N9KO (use: SECONDARY), Account number: JDU70IH8L8575631A39QQMA0DQ7N3DS4 (use: SECONDARY), Account number: 154G21E7EK1BT06K72JIM5LE8M0VK09F20A4 (use: SECONDARY), Account number: R8ZNY8I1JI98M15K634C6LOU15375PA (use: SECONDARY), Account number: 6M4S730KM98FJ954A2Z981NQLVWTWZ (use: SECONDARY), Jurisdictional health number: 54X3KSPOCH235SDF42WQK6 (use: OFFICIAL)</p><p><b>name</b>: Geraldine Celestine Iye Banek , Jervis Wilu Jules Coad (OFFICIAL), Theodore (NICKNAME)</p><p><b>telecom</b>: ph: 8195411094(MOBILE), ph: 9847273917(HOME), ph: 4328811019(WORK), <a href=\"mailto:Bly.Beaule@cgi.com\">Bly.Beaule@cgi.com</a>, <a href=\"mailto:Elisabeth.Mrotz@cgi.com\">Elisabeth.Mrotz@cgi.com</a>, <a href=\"mailto:Whitney.Holway@cgi.com\">Whitney.Holway@cgi.com</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1956-12-17</p><p><b>deceased</b>: 2008-10-26</p><p><b>address</b>: </p><ul><li>48610 Hilltop street Waukesha BC CA </li><li>8547 Green hill road Ansonville BC CA </li></ul></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Revise-withMaxData-Request-Patient\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;Revise-withMaxData-Request-Patient&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Account number: 2B6F8GN410H1T27NPE (use: OFFICIAL), Account number: Y4DCP5VK29F31R80O8K2O08D5WAU2K950U40D8 (use: SECONDARY), Account number: 0EZFV8L7L7E1W9UF9AB3Z (use: SECONDARY), Account number: 2281UM0D8528TIVRW5FF4ESNK53N9KO (use: SECONDARY), Account number: JDU70IH8L8575631A39QQMA0DQ7N3DS4 (use: SECONDARY), Account number: 154G21E7EK1BT06K72JIM5LE8M0VK09F20A4 (use: SECONDARY), Account number: R8ZNY8I1JI98M15K634C6LOU15375PA (use: SECONDARY), Account number: 6M4S730KM98FJ954A2Z981NQLVWTWZ (use: SECONDARY), Jurisdictional health number: 54X3KSPOCH235SDF42WQK6 (use: OFFICIAL)</p><p><b>name</b>: Geraldine Celestine Iye Banek , Jervis Wilu Jules Coad (OFFICIAL), Theodore (NICKNAME)</p><p><b>telecom</b>: ph: 8195411094(MOBILE), ph: 9847273917(HOME), ph: 4328811019(WORK), <a href=\"mailto:Bly.Beaule@cgi.com\">Bly.Beaule@cgi.com</a>, <a href=\"mailto:Elisabeth.Mrotz@cgi.com\">Elisabeth.Mrotz@cgi.com</a>, <a href=\"mailto:Whitney.Holway@cgi.com\">Whitney.Holway@cgi.com</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1956-12-17</p><p><b>deceased</b>: 2008-10-26</p><p><b>address</b>: </p><ul><li>48610 Hilltop street Waukesha BC CA </li><li>8547 Green hill road Ansonville BC CA </li></ul></div>"
   ] ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;
@@ -64,11 +64,8 @@
          fhir:code [ fhir:v "AN" ]
        ] )
      ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "2B6F8GN410H1T27NPE" ] ;
-     fhir:assigner [
-       fhir:display [ fhir:v "VPP_CER" ]
-     ]
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cer-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2B6F8GN410H1T27NPE" ]
   ] [
      fhir:use [ fhir:v "secondary" ] ;
      fhir:type [
@@ -77,11 +74,8 @@
          fhir:code [ fhir:v "AN" ]
        ] )
      ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "Y4DCP5VK29F31R80O8K2O08D5WAU2K950U40D8" ] ;
-     fhir:assigner [
-       fhir:display [ fhir:v "VPP_VGH" ]
-     ]
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-vgh-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Y4DCP5VK29F31R80O8K2O08D5WAU2K950U40D8" ]
   ] [
      fhir:use [ fhir:v "secondary" ] ;
      fhir:type [
@@ -90,11 +84,8 @@
          fhir:code [ fhir:v "AN" ]
        ] )
      ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "0EZFV8L7L7E1W9UF9AB3Z" ] ;
-     fhir:assigner [
-       fhir:display [ fhir:v "VPP_PHC" ]
-     ]
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-phc-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "0EZFV8L7L7E1W9UF9AB3Z" ]
   ] [
      fhir:use [ fhir:v "secondary" ] ;
      fhir:type [
@@ -103,11 +94,8 @@
          fhir:code [ fhir:v "AN" ]
        ] )
      ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "2281UM0D8528TIVRW5FF4ESNK53N9KO" ] ;
-     fhir:assigner [
-       fhir:display [ fhir:v "VPP_FPH" ]
-     ]
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-fph-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2281UM0D8528TIVRW5FF4ESNK53N9KO" ]
   ] [
      fhir:use [ fhir:v "secondary" ] ;
      fhir:type [
@@ -116,11 +104,8 @@
          fhir:code [ fhir:v "AN" ]
        ] )
      ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "JDU70IH8L8575631A39QQMA0DQ7N3DS4" ] ;
-     fhir:assigner [
-       fhir:display [ fhir:v "VPP_CW" ]
-     ]
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cw-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "JDU70IH8L8575631A39QQMA0DQ7N3DS4" ]
   ] [
      fhir:use [ fhir:v "secondary" ] ;
      fhir:type [
@@ -129,11 +114,8 @@
          fhir:code [ fhir:v "AN" ]
        ] )
      ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "154G21E7EK1BT06K72JIM5LE8M0VK09F20A4" ] ;
-     fhir:assigner [
-       fhir:display [ fhir:v "VPP_LION" ]
-     ]
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-lion-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "154G21E7EK1BT06K72JIM5LE8M0VK09F20A4" ]
   ] [
      fhir:use [ fhir:v "secondary" ] ;
      fhir:type [
@@ -142,11 +124,8 @@
          fhir:code [ fhir:v "AN" ]
        ] )
      ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "R8ZNY8I1JI98M15K634C6LOU15375PA" ] ;
-     fhir:assigner [
-       fhir:display [ fhir:v "VPP_PR" ]
-     ]
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-pr-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "R8ZNY8I1JI98M15K634C6LOU15375PA" ]
   ] [
      fhir:use [ fhir:v "secondary" ] ;
      fhir:type [
@@ -155,11 +134,8 @@
          fhir:code [ fhir:v "AN" ]
        ] )
      ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "6M4S730KM98FJ954A2Z981NQLVWTWZ" ] ;
-     fhir:assigner [
-       fhir:display [ fhir:v "VPP_BCCA" ]
-     ]
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-bcca-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "6M4S730KM98FJ954A2Z981NQLVWTWZ" ]
   ] [
      fhir:use [ fhir:v "official" ] ;
      fhir:type [
@@ -168,7 +144,7 @@
          fhir:code [ fhir:v "JHN" ]
        ] )
      ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/NB"^^xsd:anyURI ] ;
+     fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-nb-patient-healthcare-id"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "54X3KSPOCH235SDF42WQK6" ]
   ] ) ; # 
   fhir:name ( [

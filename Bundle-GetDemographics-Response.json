@@ -13,13 +13,13 @@
   "total" : 1,
   "link" : [{
     "relation" : "canonical",
-    "url" : "https://ig.cgi.com/Patient/Get.fhir"
+    "url" : "https://ig.cgi.com/Patient/$GetDemographics"
   }],
   "entry" : [{
     "fullUrl" : "urn:uuid:289d85b9-43a4-4902-9b52-76cb1f02ea69",
     "resource" : {
       "resourceType" : "Parameters",
-      "id" : "f957605d-72a3-4930-a71a-71225c389e44",
+      "id" : "GetDemographics-Response-Parameters",
       "meta" : {
         "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"]
       },
@@ -35,7 +35,7 @@
         "name" : "sender",
         "valueIdentifier" : {
           "system" : "http://hlth.gov.bc.ca/fhir/client/bc-org",
-          "value" : "VIHA"
+          "value" : "FHA"
         }
       },
       {
@@ -57,9 +57,6 @@
         "name" : "requestMessageId",
         "valueString" : "73b06e0b-8372-496e-83dc-796b42cf730f"
       }]
-    },
-    "search" : {
-      "mode" : "include"
     }
   },
   {
@@ -97,7 +94,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"GetDemographics-Response-Patient\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;GetDemographics-Response-Patient&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9999999999\u00a0(use:\u00a0OFFICIAL), Account number: 1X37W2G5APJ3Q70RDS0XB25ZW0313MUT\u00a0(use:\u00a0OFFICIAL,\u00a0period:\u00a02023-01-23 14:00:53-0800 --&gt; (ongoing)), Jurisdictional health number: 137Q50W1TI6SW94Z120WP14VSB291COAD\u00a0(use:\u00a0OFFICIAL,\u00a0period:\u00a02023-01-23 14:00:53-0800 --&gt; (ongoing))</p><p><b>active</b>: true</p><p><b>name</b>: Benedetta Wuliton Ararinda Colpitts , Ahanu Bardo Natalene (OFFICIAL), Athanasia (NICKNAME)</p><p><b>telecom</b>: ph: 2045588814(MOBILE), ph: 7705666584(HOME), ph: 8156366902(WORK), <a href=\"mailto:Agapios.Nesmith@cgi.com\">Agapios.Nesmith@cgi.com</a>, <a href=\"mailto:Editta.Panchik@cgi.com\">Editta.Panchik@cgi.com</a>, <a href=\"mailto:Weayaya.Sharber@cgi.com\">Weayaya.Sharber@cgi.com</a></p><p><b>gender</b>: male</p><p><b>birthDate</b>: 2005-05-24</p><p><b>deceased</b>: 2006-08-28</p><p><b>address</b>: </p><ul><li>30729 Middleville road Signal mountain BC CA </li><li>47625 Colony street Benton township BC CA </li></ul></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"GetDemographics-Response-Patient\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;GetDemographics-Response-Patient&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: id:\u00a09999999999\u00a0(use:\u00a0OFFICIAL), id:\u00a08H1496LN8U1F17JP0H2VV\u00a0(use:\u00a0OFFICIAL,\u00a0period:\u00a02023-01-23 14:00:53-0800 --&gt; (ongoing)), id:\u00a04N2H10HY59EQ210Y5M098X0EPDM08I7KX38583O\u00a0(use:\u00a0OFFICIAL,\u00a0period:\u00a02023-01-23 14:00:53-0800 --&gt; (ongoing))</p><p><b>active</b>: true</p><p><b>name</b>: Benedetta Wuliton Ararinda Colpitts , Ahanu Bardo Natalene (OFFICIAL), Athanasia (NICKNAME)</p><p><b>telecom</b>: ph: 2045588814(MOBILE), ph: 7705666584(HOME), ph: 8156366902(WORK), <a href=\"mailto:Agapios.Nesmith@cgi.com\">Agapios.Nesmith@cgi.com</a>, <a href=\"mailto:Editta.Panchik@cgi.com\">Editta.Panchik@cgi.com</a>, <a href=\"mailto:Weayaya.Sharber@cgi.com\">Weayaya.Sharber@cgi.com</a></p><p><b>gender</b>: male</p><p><b>birthDate</b>: 2005-05-24</p><p><b>deceased</b>: 2006-08-28</p><p><b>address</b>: </p><ul><li>30729 Middleville road Signal mountain BC CA </li><li>47625 Colony street Benton township BC CA </li></ul></div>"
       },
       "identifier" : [{
         "extension" : [{
@@ -105,34 +102,10 @@
           "valueCode" : "active"
         }],
         "use" : "official",
-        "type" : {
-          "coding" : [{
-            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-            "code" : "JHN"
-          }]
-        },
-        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
-        "value" : "9999999999"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
-          "valueCode" : "active"
-        }],
-        "use" : "official",
-        "type" : {
-          "coding" : [{
-            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-            "code" : "AN"
-          }]
-        },
-        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
-        "value" : "1X37W2G5APJ3Q70RDS0XB25ZW0313MUT",
-        "period" : {
-          "start" : "2023-01-23T14:00:53-08:00"
-        },
+        "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+        "value" : "9999999999",
         "assigner" : {
-          "display" : "VIHA_JOELAB"
+          "display" : "MOH Client Registry - MOH_CRS"
         }
       },
       {
@@ -141,14 +114,23 @@
           "valueCode" : "active"
         }],
         "use" : "official",
-        "type" : {
-          "coding" : [{
-            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-            "code" : "JHN"
-          }]
+        "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id",
+        "value" : "8H1496LN8U1F17JP0H2VV",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
         },
-        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/AB",
-        "value" : "137Q50W1TI6SW94Z120WP14VSB291COAD",
+        "assigner" : {
+          "display" : "FHA Meditech - Fraser Valley - FHA_MT"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode" : "active"
+        }],
+        "use" : "official",
+        "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-ab-patient-healthcare-id",
+        "value" : "4N2H10HY59EQ210Y5M098X0EPDM08I7KX38583O",
         "period" : {
           "start" : "2023-01-23T14:00:53-08:00"
         }
@@ -296,9 +278,6 @@
           "start" : "2023-01-23T14:00:53-08:00"
         }
       }]
-    },
-    "search" : {
-      "mode" : "match"
     }
   }]
 }

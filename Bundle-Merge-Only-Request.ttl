@@ -25,7 +25,7 @@
   ] ) . # 
 
 <urn:uuid:30f9e023-c3dc-43e3-bf91-b46da0836c16> a fhir:Parameters ;
-  fhir:id [ fhir:v "601e87a1-d16e-4306-8414-d447a4d128ab"] ; # 
+  fhir:id [ fhir:v "Merge-Only-Request-Parameters"] ; # 
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"^^xsd:anyURI ;
@@ -50,18 +50,12 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "extensions" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Merge-Only-Request-Patient\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;Merge-Only-Request-Patient&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-merge-patient.html\">PatientMerge</a></p></div><p><b>identifier</b>: Account number: B523AAZZ09U884V0X6UI0JZ (use: OFFICIAL)</p><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span>Account number: WLKC1153D5DD5 (use: OFFICIAL)</span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span>Account number: B8ZOG6N09171VO25STD372621L (use: OFFICIAL)</span></p><p><b>type</b>: replaces</p></blockquote></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Merge-Only-Request-Patient\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;Merge-Only-Request-Patient&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-merge-patient.html\">PatientMerge</a></p></div><p><b>identifier</b>: id: 56N4QF275188070LV60O8RM2L (use: OFFICIAL)</p><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span>id: 58EZ32AH5MLP9GT20 (use: OFFICIAL)</span></p><p><b>type</b>: replaces</p></blockquote><blockquote><p><b>link</b></p><p><b>BC Merge Status Code</b>: obsolete</p><p><b>other</b>: <span>id: JP5Y964W2B1B13C6 (use: OFFICIAL)</span></p><p><b>type</b>: replaces</p></blockquote></div>"
   ] ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "AN" ]
-       ] )
-     ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "B523AAZZ09U884V0X6UI0JZ" ] ;
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vcha-rich-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "56N4QF275188070LV60O8RM2L" ] ;
      fhir:assigner [
        fhir:display [ fhir:v "IHA_IHA" ]
      ]
@@ -74,14 +68,8 @@
      fhir:other [
        fhir:identifier [
          fhir:use [ fhir:v "official" ] ;
-         fhir:type [
-           fhir:coding ( [
-             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
-             fhir:code [ fhir:v "AN" ]
-           ] )
-         ] ;
-         fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "WLKC1153D5DD5" ] ;
+         fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vcha-rich-source-patient-id"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "58EZ32AH5MLP9GT20" ] ;
          fhir:assigner [
            fhir:display [ fhir:v "IHA_IHA" ]
          ]
@@ -96,14 +84,8 @@
      fhir:other [
        fhir:identifier [
          fhir:use [ fhir:v "official" ] ;
-         fhir:type [
-           fhir:coding ( [
-             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
-             fhir:code [ fhir:v "AN" ]
-           ] )
-         ] ;
-         fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "B8ZOG6N09171VO25STD372621L" ] ;
+         fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vcha-rich-source-patient-id"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "JP5Y964W2B1B13C6" ] ;
          fhir:assigner [
            fhir:display [ fhir:v "IHA_IHA" ]
          ]

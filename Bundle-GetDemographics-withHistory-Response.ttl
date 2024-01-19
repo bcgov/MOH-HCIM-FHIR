@@ -23,14 +23,11 @@
   fhir:total [ fhir:v "1"^^xsd:nonNegativeInteger] ; # 
   fhir:link ( [
      fhir:relation [ fhir:v "canonical" ] ;
-     fhir:url [ fhir:v "https://ig.cgi.com/Patient/Get.fhir"^^xsd:anyURI ]
+     fhir:url [ fhir:v "https://ig.cgi.com/Patient/$GetDemographics"^^xsd:anyURI ]
   ] ) ; # 
   fhir:entry ( [
      fhir:fullUrl [ fhir:v "urn:uuid:fb5ed5fa-e08f-4b88-948a-d81cd26d3453"^^xsd:anyURI ] ;
-     fhir:resource ( <urn:uuid:fb5ed5fa-e08f-4b88-948a-d81cd26d3453> ) ;
-     fhir:search [
-       fhir:mode [ fhir:v "include" ]
-     ]
+     fhir:resource ( <urn:uuid:fb5ed5fa-e08f-4b88-948a-d81cd26d3453> )
   ] [
      fhir:fullUrl [ fhir:v "urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf74567"^^xsd:anyURI ] ;
      fhir:resource ( <urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf74567> ) ;
@@ -39,10 +36,7 @@
      ]
   ] [
      fhir:fullUrl [ fhir:v "urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf7f4ba"^^xsd:anyURI ] ;
-     fhir:resource ( <urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf7f4ba> ) ;
-     fhir:search [
-       fhir:mode [ fhir:v "match" ]
-     ]
+     fhir:resource ( <urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf7f4ba> )
   ] ) . # 
 
 <urn:uuid:fb5ed5fa-e08f-4b88-948a-d81cd26d3453> a fhir:Parameters ;
@@ -64,7 +58,7 @@
      fhir:value [
        a fhir:Identifier ;
        fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/bc-org"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "VIHA" ]
+       fhir:value [ fhir:v "FHA" ]
      ]
   ] [
      fhir:name [ fhir:v "history" ] ;
@@ -103,7 +97,7 @@
   ] ) . # 
 
 <urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf7f4ba> a fhir:Patient ;
-  fhir:id [ fhir:v "GetDemographics-withHistory-Response-Patient"] ; # 
+  fhir:id [ fhir:v "87d81314-eba2-4071-af5a-f2b98bf4c13a"] ; # 
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"^^xsd:anyURI ;
@@ -112,7 +106,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"GetDemographics-withHistory-Response-Patient\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;GetDemographics-withHistory-Response-Patient&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9999999999 (use: OFFICIAL, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)), Account number: F4299BA5ME6L02M9471NPF0V79Q4Q (use: OFFICIAL, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)), Account number: OE78E6XLL7MJB (use: OFFICIAL, period: 2018-01-23 14:00:53-0800 --&gt; 2023-01-23 14:00:53-0800), Account number: MVZQ14SG826PGIOY84DUDX20Q6S6Y8 (use: SECONDARY, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)), Account number: FPKP88TYFTW9V7I1MA19344FH2 (use: SECONDARY, period: 2018-01-23 14:00:53-0800 --&gt; 2023-01-23 14:00:53-0800)</p><p><b>active</b>: true</p><p><b>name</b>: Alithea Joacheim Aine Parthemore , Christina Matei Marlin Kalscheuer , Abaigh Evangelia Wahchinksapa (OFFICIAL), Wilhelmus Galatea Olabisi (OFFICIAL), Mia (NICKNAME), Jutta (NICKNAME)</p><p><b>telecom</b>: ph: 6237064105(MOBILE), ph: 6304712096(MOBILE), ph: 7121011390(HOME), ph: 4163176376(HOME), ph: 9845613474(WORK), ph: 2054428883(WORK), <a href=\"mailto:Berne.Aron@cgi.com\">Berne.Aron@cgi.com</a>, <a href=\"mailto:Octavius.Megown@cgi.com\">Octavius.Megown@cgi.com</a>, <a href=\"mailto:Claude.Abuel@cgi.com\">Claude.Abuel@cgi.com</a>, <a href=\"mailto:Madailein.Ivins@cgi.com\">Madailein.Ivins@cgi.com</a>, <a href=\"mailto:Akanni.Ehrler@cgi.com\">Akanni.Ehrler@cgi.com</a>, <a href=\"mailto:Tereza.Bis@cgi.com\">Tereza.Bis@cgi.com</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1946-11-28</p><p><b>deceased</b>: 1950-07-16</p><p><b>address</b>: </p><ul><li>1431 Riverwood drive Lake village BC CA </li><li>7597 Mahlon street Maple plain BC CA </li><li>1699 Brand road Hills BC CA </li><li>33031 Arrowood drive Mayfield heights BC CA </li></ul></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"87d81314-eba2-4071-af5a-f2b98bf4c13a\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;87d81314-eba2-4071-af5a-f2b98bf4c13a&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: id: 9999999999 (use: OFFICIAL, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)), id: 2701XI3IW2R95W87WH3H16082KJ2LEVENM0LNTW (use: OFFICIAL, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)), id: 3B022OESRB7W41F3511QJ9PDCE244509HWHH5J (use: OFFICIAL, period: 2018-01-23 14:00:53-0800 --&gt; 2023-01-23 14:00:53-0800), id: 8FV66J82GPKBH83 (use: SECONDARY, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)), id: UO9W191ASP6JN937P3H476IPHC0K83V4Q65 (use: SECONDARY, period: 2018-01-23 14:00:53-0800 --&gt; 2023-01-23 14:00:53-0800)</p><p><b>active</b>: true</p><p><b>name</b>: Alithea Joacheim Aine Parthemore , Christina Matei Marlin Kalscheuer , Abaigh Evangelia Wahchinksapa (OFFICIAL), Wilhelmus Galatea Olabisi (OFFICIAL), Mia (NICKNAME), Jutta (NICKNAME)</p><p><b>telecom</b>: ph: 6237064105(MOBILE), ph: 6304712096(MOBILE), ph: 7121011390(HOME), ph: 4163176376(HOME), ph: 9845613474(WORK), ph: 2054428883(WORK), <a href=\"mailto:Berne.Aron@cgi.com\">Berne.Aron@cgi.com</a>, <a href=\"mailto:Octavius.Megown@cgi.com\">Octavius.Megown@cgi.com</a>, <a href=\"mailto:Claude.Abuel@cgi.com\">Claude.Abuel@cgi.com</a>, <a href=\"mailto:Madailein.Ivins@cgi.com\">Madailein.Ivins@cgi.com</a>, <a href=\"mailto:Akanni.Ehrler@cgi.com\">Akanni.Ehrler@cgi.com</a>, <a href=\"mailto:Tereza.Bis@cgi.com\">Tereza.Bis@cgi.com</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1946-11-28</p><p><b>deceased</b>: 1950-07-16</p><p><b>address</b>: </p><ul><li>1431 Riverwood drive Lake village BC CA </li><li>7597 Mahlon street Maple plain BC CA </li><li>1699 Brand road Hills BC CA </li><li>33031 Arrowood drive Mayfield heights BC CA </li></ul></div>"
   ] ; # 
   fhir:identifier ( [
      fhir:extension ( [
@@ -120,16 +114,13 @@
        fhir:value [ fhir:v "active" ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "JHN" ]
-       ] )
-     ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"^^xsd:anyURI ] ;
+     fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "9999999999" ] ;
      fhir:period [
        fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
+     ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "MOH Client Registry - MOH_CRS" ]
      ]
   ] [
      fhir:extension ( [
@@ -137,19 +128,13 @@
        fhir:value [ fhir:v "active" ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "AN" ]
-       ] )
-     ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "F4299BA5ME6L02M9471NPF0V79Q4Q" ] ;
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2701XI3IW2R95W87WH3H16082KJ2LEVENM0LNTW" ] ;
      fhir:period [
        fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
      ] ;
      fhir:assigner [
-       fhir:display [ fhir:v "VIHA_JOELAB" ]
+       fhir:display [ fhir:v "FHA Meditech - Fraser Valley - FHA_FV" ]
      ]
   ] [
      fhir:extension ( [
@@ -157,20 +142,14 @@
        fhir:value [ fhir:v "merged" ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "AN" ]
-       ] )
-     ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "OE78E6XLL7MJB" ] ;
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "3B022OESRB7W41F3511QJ9PDCE244509HWHH5J" ] ;
      fhir:period [
        fhir:start [ fhir:v "2018-01-23T14:00:53-08:00"^^xsd:dateTime ] ;
        fhir:end [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
      ] ;
      fhir:assigner [
-       fhir:display [ fhir:v "VIHA_JOELAB" ]
+       fhir:display [ fhir:v "FHA Meditech - Fraser Valley - FHA_FV" ]
      ]
   ] [
      fhir:extension ( [
@@ -178,19 +157,13 @@
        fhir:value [ fhir:v "active" ]
      ] ) ;
      fhir:use [ fhir:v "secondary" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "AN" ]
-       ] )
-     ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "MVZQ14SG826PGIOY84DUDX20Q6S6Y8" ] ;
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-arh-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8FV66J82GPKBH83" ] ;
      fhir:period [
        fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
      ] ;
      fhir:assigner [
-       fhir:display [ fhir:v "SSRI_SRC" ]
+       fhir:display [ fhir:v "Abbotsford Regional Hospital" ]
      ]
   ] [
      fhir:extension ( [
@@ -198,20 +171,14 @@
        fhir:value [ fhir:v "merged" ]
      ] ) ;
      fhir:use [ fhir:v "secondary" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "AN" ]
-       ] )
-     ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "FPKP88TYFTW9V7I1MA19344FH2" ] ;
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-bh-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "UO9W191ASP6JN937P3H476IPHC0K83V4Q65" ] ;
      fhir:period [
        fhir:start [ fhir:v "2018-01-23T14:00:53-08:00"^^xsd:dateTime ] ;
        fhir:end [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
      ] ;
      fhir:assigner [
-       fhir:display [ fhir:v "SSRI_SRC" ]
+       fhir:display [ fhir:v "Burnaby Hospital" ]
      ]
   ] ) ; # 
   fhir:active [ fhir:v "true"^^xsd:boolean] ; # 

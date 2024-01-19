@@ -165,7 +165,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0). See the <a href="http://hlth.gov.bc.ca/fhir/client/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+    <!-- ReleaseHeader --><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://hlth.gov.bc.ca/fhir/client/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   
 
 
@@ -235,7 +235,7 @@
         
           Draft
           
-            as of 2023-10-25
+            as of 2024-01-19
           
         
       </td>
@@ -270,9 +270,13 @@
 
 <p>The Find Candidates query is a FHIR Operation.</p>
 
-<p>The request is a Bundle with Resources for message meta data, a Patient to match against and possibly a RelatedPerson representing the Mother with a PHN Identifier.  The response is a Bundle with Resources for Patient’s that matched, response meta data, operation outcome resources and if using mother’s PHN RelatedPerson resources.</p>
+<p>The request is a Bundle with Resources for message meta data, a Patient to match against and possibly a RelatedPerson representing the Mother with a PHN Identifier. The response is a Bundle with Resources for Patient’s that matched, response meta data, operation outcome resources and if using mother’s PHN RelatedPerson resources.</p>
 
-<p>This is a ‘search by example’ and the Patient resource may be populated with various values and combinations of values.  Those values are matched against the Client Registry.  For optimal searching and to be conformant with Health Information Exchange standards please review the Client Registry conformance standards found <a href="https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/software/conformance-standards">here</a>.  Those documents specify combinations of values that are best suited to find your Patients.</p>
+<p>This is a ‘search by example’ and the Patient resource may be populated with various values and combinations of values. Those values are matched against the Client Registry.</p>
+
+<p>Please refer also to the <a href="identifiers.html">Identifiers</a> page to find more details regarding how to use Identifier in your query.</p>
+
+<p>For optimal searching and to be conformant with Health Information Exchange standards please review the Client Registry conformance standards found <a href="https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/software/conformance-standards">here</a>.  Those documents specify combinations of values that are best suited to find your Patients.</p>
 
 
 </div>
@@ -303,7 +307,7 @@
 
 <p>If multiple Patients match they will all be returned.</p>
 
-<p><a name="l505">​</a>If the search used mother’s PHN then RelatedPerson resources are returned which include (a) the mother’s identifier and (b) a reference to the related Patient in the response Bundle.  There may be multiple Patients returned, and therefore also multiple RelatedPersons, one per Patient (e.g. twins).  See an example <a href="Bundle-Bundle-FindCandidates-Response-MomsPHN-Example.html">here</a>.</p>
+<p><a name="l514">​</a>If the search used mother’s PHN then RelatedPerson resources are returned which include (a) the mother’s identifier and (b) a reference to the related Patient in the response Bundle.  There may be multiple Patients returned, and therefore also multiple RelatedPersons, one per Patient (e.g. twins).  See an example <a href="Bundle-Bundle-FindCandidates-Response-MomsPHN-Example.html">here</a>.</p>
 
 <h4 id="in-bundle-entries">In Bundle Entries</h4>
 
@@ -459,7 +463,7 @@ See <a href="Bundle-FindNewbornByMumsPHN-Response.html">Find Candidates mother�
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 25, 2023 21:08+0000">2023-10-25</span>
+          IG &copy; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 19, 2024 19:46+0000">2024-01-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

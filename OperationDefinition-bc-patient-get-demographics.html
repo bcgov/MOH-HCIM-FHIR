@@ -165,7 +165,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0). See the <a href="http://hlth.gov.bc.ca/fhir/client/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+    <!-- ReleaseHeader --><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://hlth.gov.bc.ca/fhir/client/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   
 
 
@@ -235,7 +235,7 @@
         
           Draft
           
-            as of 2023-10-25
+            as of 2024-01-19
           
         
       </td>
@@ -270,7 +270,8 @@
 
 <p>The Get Demographics query is a FHIR Operation.</p>
 
-<p>The request is a Bundle with Resources for search parameters and a Patient, i.e. <a href="StructureDefinition-bc-patient.html">ClientRegistryClient</a>, to match against.  The Patient resource must have an identifier for this search to succeed.</p>
+<p>The request is a Bundle with Resources for search parameters and a Patient, i.e. <a href="StructureDefinition-bc-patient.html">ClientRegistryClient</a>, to match against.  The Patient resource must have an identifier for this search to succeed.<br/>
+Please refer also to the <a href="identifiers.html">Identifiers</a> page to find more details regarding how to use Identifier in your query.</p>
 
 
 </div>
@@ -298,6 +299,8 @@
 <div markdown="1" style="display:inline-block">
 
 <p>The response may not include any Patients if none matched the criteria.  If there are patients returned, the Bundle.entry.search.score (i.e. entry for the Patient resource) will contain the Client Registry score.</p>
+
+<p>In the context of the Get Demographics request message, the Patient resource must not have both a resource id (Patient.id) and a identifier(Patient.identifier) in the same request. If they are both supplied the message will be rejected.</p>
 
 <h4 id="in-bundle-entries">In Bundle Entries</h4>
 
@@ -406,7 +409,7 @@
 
 <h4 id="examples">Examples</h4>
 
-<p><a name="l730">​</a>See <a href="Bundle-GetDemographics-Request.html">Get Demographics request</a> example.<br/>
+<p><a name="l738">​</a>See <a href="Bundle-GetDemographics-Request.html">Get Demographics request</a> example.<br/>
 See <a href="Bundle-GetDemographics-Response.html">Get Demographics response</a> example.<br/>
 See <a href="Bundle-GetDemographics-withHistory-Response.html">Get Demographics with history response</a> example.<br/>
 See <a href="Bundle-GetDemographics-withPHNinfo-Response.html">Get Demographics with PHN info response</a> example.</p>
@@ -441,7 +444,7 @@ See <a href="Bundle-GetDemographics-withPHNinfo-Response.html">Get Demographics 
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 25, 2023 21:08+0000">2023-10-25</span>
+          IG &copy; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 19, 2024 19:46+0000">2024-01-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

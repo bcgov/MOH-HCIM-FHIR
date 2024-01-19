@@ -23,14 +23,11 @@
   fhir:total [ fhir:v "1"^^xsd:nonNegativeInteger] ; # 
   fhir:link ( [
      fhir:relation [ fhir:v "canonical" ] ;
-     fhir:url [ fhir:v "https://ig.cgi.com/Patient/Get.fhir"^^xsd:anyURI ]
+     fhir:url [ fhir:v "https://ig.cgi.com/Patient/$GetDemographics"^^xsd:anyURI ]
   ] ) ; # 
   fhir:entry ( [
      fhir:fullUrl [ fhir:v "urn:uuid:289d85b9-43a4-4902-9b52-76cb1f02ea69"^^xsd:anyURI ] ;
-     fhir:resource ( <urn:uuid:289d85b9-43a4-4902-9b52-76cb1f02ea69> ) ;
-     fhir:search [
-       fhir:mode [ fhir:v "include" ]
-     ]
+     fhir:resource ( <urn:uuid:289d85b9-43a4-4902-9b52-76cb1f02ea69> )
   ] [
      fhir:fullUrl [ fhir:v "urn:uuid:f156cec9-77fe-40d2-a023-71f1442d4599"^^xsd:anyURI ] ;
      fhir:resource ( <urn:uuid:f156cec9-77fe-40d2-a023-71f1442d4599> ) ;
@@ -39,14 +36,11 @@
      ]
   ] [
      fhir:fullUrl [ fhir:v "urn:uuid:27fb3c46-a6ea-4986-8238-d94d6655cc1d"^^xsd:anyURI ] ;
-     fhir:resource ( <urn:uuid:27fb3c46-a6ea-4986-8238-d94d6655cc1d> ) ;
-     fhir:search [
-       fhir:mode [ fhir:v "match" ]
-     ]
+     fhir:resource ( <urn:uuid:27fb3c46-a6ea-4986-8238-d94d6655cc1d> )
   ] ) . # 
 
 <urn:uuid:289d85b9-43a4-4902-9b52-76cb1f02ea69> a fhir:Parameters ;
-  fhir:id [ fhir:v "f957605d-72a3-4930-a71a-71225c389e44"] ; # 
+  fhir:id [ fhir:v "GetDemographics-Response-Parameters"] ; # 
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"^^xsd:anyURI ;
@@ -64,7 +58,7 @@
      fhir:value [
        a fhir:Identifier ;
        fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/bc-org"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "VIHA" ]
+       fhir:value [ fhir:v "FHA" ]
      ]
   ] [
      fhir:name [ fhir:v "history" ] ;
@@ -112,7 +106,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"GetDemographics-Response-Patient\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;GetDemographics-Response-Patient&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: Jurisdictional health number: 9999999999 (use: OFFICIAL), Account number: 1X37W2G5APJ3Q70RDS0XB25ZW0313MUT (use: OFFICIAL, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)), Jurisdictional health number: 137Q50W1TI6SW94Z120WP14VSB291COAD (use: OFFICIAL, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing))</p><p><b>active</b>: true</p><p><b>name</b>: Benedetta Wuliton Ararinda Colpitts , Ahanu Bardo Natalene (OFFICIAL), Athanasia (NICKNAME)</p><p><b>telecom</b>: ph: 2045588814(MOBILE), ph: 7705666584(HOME), ph: 8156366902(WORK), <a href=\"mailto:Agapios.Nesmith@cgi.com\">Agapios.Nesmith@cgi.com</a>, <a href=\"mailto:Editta.Panchik@cgi.com\">Editta.Panchik@cgi.com</a>, <a href=\"mailto:Weayaya.Sharber@cgi.com\">Weayaya.Sharber@cgi.com</a></p><p><b>gender</b>: male</p><p><b>birthDate</b>: 2005-05-24</p><p><b>deceased</b>: 2006-08-28</p><p><b>address</b>: </p><ul><li>30729 Middleville road Signal mountain BC CA </li><li>47625 Colony street Benton township BC CA </li></ul></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"GetDemographics-Response-Patient\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;GetDemographics-Response-Patient&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p><b>identifier</b>: id: 9999999999 (use: OFFICIAL), id: 8H1496LN8U1F17JP0H2VV (use: OFFICIAL, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)), id: 4N2H10HY59EQ210Y5M098X0EPDM08I7KX38583O (use: OFFICIAL, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing))</p><p><b>active</b>: true</p><p><b>name</b>: Benedetta Wuliton Ararinda Colpitts , Ahanu Bardo Natalene (OFFICIAL), Athanasia (NICKNAME)</p><p><b>telecom</b>: ph: 2045588814(MOBILE), ph: 7705666584(HOME), ph: 8156366902(WORK), <a href=\"mailto:Agapios.Nesmith@cgi.com\">Agapios.Nesmith@cgi.com</a>, <a href=\"mailto:Editta.Panchik@cgi.com\">Editta.Panchik@cgi.com</a>, <a href=\"mailto:Weayaya.Sharber@cgi.com\">Weayaya.Sharber@cgi.com</a></p><p><b>gender</b>: male</p><p><b>birthDate</b>: 2005-05-24</p><p><b>deceased</b>: 2006-08-28</p><p><b>address</b>: </p><ul><li>30729 Middleville road Signal mountain BC CA </li><li>47625 Colony street Benton township BC CA </li></ul></div>"
   ] ; # 
   fhir:identifier ( [
      fhir:extension ( [
@@ -120,33 +114,10 @@
        fhir:value [ fhir:v "active" ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "JHN" ]
-       ] )
-     ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "9999999999" ]
-  ] [
-     fhir:extension ( [
-       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
-     ] ) ;
-     fhir:use [ fhir:v "official" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "AN" ]
-       ] )
-     ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "1X37W2G5APJ3Q70RDS0XB25ZW0313MUT" ] ;
-     fhir:period [
-       fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
-     ] ;
+     fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "9999999999" ] ;
      fhir:assigner [
-       fhir:display [ fhir:v "VIHA_JOELAB" ]
+       fhir:display [ fhir:v "MOH Client Registry - MOH_CRS" ]
      ]
   ] [
      fhir:extension ( [
@@ -154,14 +125,22 @@
        fhir:value [ fhir:v "active" ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "JHN" ]
-       ] )
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8H1496LN8U1F17JP0H2VV" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
      ] ;
-     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/AB"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "137Q50W1TI6SW94Z120WP14VSB291COAD" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "FHA Meditech - Fraser Valley - FHA_MT" ]
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "active" ]
+     ] ) ;
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-ab-patient-healthcare-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "4N2H10HY59EQ210Y5M098X0EPDM08I7KX38583O" ] ;
      fhir:period [
        fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
      ]

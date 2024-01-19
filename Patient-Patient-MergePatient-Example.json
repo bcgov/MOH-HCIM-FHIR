@@ -6,7 +6,7 @@
   },
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Anonymous Patient</b> (no stated gender), DoB Unknown ( Account number: 8375493847\u00a0(use:\u00a0OFFICIAL))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>This record replaces: <span>Account number: 123345654\u00a0(use:\u00a0OFFICIAL)</span></li><li>This record replaces: <span>Account number: 123345654\u00a0(use:\u00a0SECONDARY)</span></li><li>This record replaces: <span>Account number: 123345654\u00a0(use:\u00a0SECONDARY)</span></li><li>This record replaces: <span>Jurisdictional health number: 9876543210\u00a0(use:\u00a0OFFICIAL)</span></li></ul></td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Anonymous Patient</b> (no stated gender), DoB Unknown ( Account number:\u00a08375493847\u00a0(use:\u00a0OFFICIAL))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>This record replaces: <span>Account number:\u00a0123345654\u00a0(use:\u00a0OFFICIAL)</span></li><li>This record replaces: <span>Account number:\u00a0123345654\u00a0(use:\u00a0SECONDARY)</span></li><li>This record replaces: <span>Account number:\u00a0123345654\u00a0(use:\u00a0SECONDARY)</span></li><li>This record replaces: <span>Jurisdictional health number:\u00a09876543210\u00a0(use:\u00a0OFFICIAL)</span></li></ul></td></tr></table></div>"
   },
   "identifier" : [{
     "extension" : [{
@@ -20,11 +20,8 @@
         "code" : "AN"
       }]
     },
-    "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
-    "value" : "8375493847",
-    "assigner" : {
-      "display" : "ORG_SRC e.g. VPP_CER, IHA_IHA"
-    }
+    "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-iha-iha-source-patient-id",
+    "value" : "8375493847"
   }],
   "active" : true,
   "link" : [{
@@ -45,11 +42,8 @@
             "code" : "AN"
           }]
         },
-        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
-        "value" : "123345654",
-        "assigner" : {
-          "display" : "ORG_SRC e.g. VPP_CER, IHA_IHA"
-        }
+        "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-iha-iha-source-patient-id",
+        "value" : "123345654"
       }
     },
     "type" : "replaces"
@@ -72,11 +66,8 @@
             "code" : "AN"
           }]
         },
-        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
-        "value" : "123345654",
-        "assigner" : {
-          "display" : "ORG_SUBSRC e.g. FHA_CAC or VPP_CW"
-        }
+        "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cw-source-patient-id",
+        "value" : "123345654"
       }
     },
     "type" : "replaces"
@@ -99,11 +90,8 @@
             "code" : "AN"
           }]
         },
-        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
-        "value" : "123345654",
-        "assigner" : {
-          "display" : "ORG_SUBSRC e.g. FHA_CAC or VPP_CW"
-        }
+        "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cw-source-patient-id",
+        "value" : "123345654"
       }
     },
     "type" : "replaces"
@@ -122,7 +110,7 @@
             "code" : "JHN"
           }]
         },
-        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/BC",
+        "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
         "value" : "9876543210"
       }
     },
