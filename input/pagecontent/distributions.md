@@ -1,9 +1,12 @@
 ><span style="color:red">Note</span><br>This specification is currently published as a Draft Standard on the ministry GitHub and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.
 
-### Patient Change Notifications
+### Patient Change Subscriptions
 
-This is an interaction for which the Client Registry acts as the requester (the client) and the user system acts as the FHIR server.  Notifications are sent when a patient record is created or changed and the user has been registered to receive notifications (in the form of a FHIR message) that contain new patient data.  More specifically, users apply to receive a distribution based on an event such as PHN change or merge.  The full patient record is sent, and any missing data indicates that that particular data has been deleted in the Client Registry.
+Patient Change Notifications are sent when a patient record is created or changed and the user system has subscribed to receive notifications about those changes.  This guide supports the R4 Subscriptions referened in the [Subscriptions for R5 Backport Implementation Guide](http://hl7.org/fhir/uv/subscriptions-backport/).
 
-The expected success response is a HTTP code 200 without a body.  
+User Systems will POST a new Subscription instance to the Client Registry's Subscription endpoint.  The Subscription criteria is set to the HCIM Patient Change Subscription Topic Canonical.  The filterCriteria extension on Subscription.criteria indicates which specific Patient Change events (from the [Patient Change value set](ValueSet-bc-client-registry-patient-change-notification-events-value-set.html)) the user system is requesting to be informed about.  When those types of changes occur, the Client Registry **SHALL** send a notification over the requested channel indicating that a change to a patient record has occurred.
 
-It is the user's responsibility to create a conformant FHIR endpoint for the Patient Notification interaction.  As such, this guide, and other FHIR specifications should be understood by the user and utilized to create the FHIR endpoint.
+In all cases, the content extension on the Subscription payload will be set to 'full-resource' and then the subscription notification will contain the changed patient data.
+
+Additional information about creating subscriptions can be found [here]({{site.data.fhir.path}}subscription.html).
+
