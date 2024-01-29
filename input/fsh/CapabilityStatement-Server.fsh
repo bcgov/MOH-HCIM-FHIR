@@ -556,3 +556,15 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 * rest[0].resource[0].operation[=].definition = Canonical(MergePatient)
 * rest[0].resource[0].operation[=].documentation = "
 Although this is an independent Operation the definition is the same as the [MergePatient](OperationDefinition-bc-patient-merge.html)"
+
+* rest[0].resource[1]
+  * extension[0]
+    * url = "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/capabilitystatement-subscriptiontopic-canonical"
+    * valueCanonical = "http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution"
+  * type = #Subscription
+  * interaction[0]
+    * code = #create
+  * interaction[1]
+    * code = #update
+  * interaction[2]
+    * code = #delete

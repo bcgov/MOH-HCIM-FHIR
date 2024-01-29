@@ -7,11 +7,9 @@ Usage: #definition
 <p>This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when acting as a client.  I.e. when sending Patient change notifications.</p>
 
 <p>
-A Patient change notification is a FHIR Operation where the Client Registry sends a Patient/$PatientNotification request to a client.  After an onboarding process by the Client Registry operational support team and developing an endpoint, clients are prepared to receive these requests.
-</p>
-
+A Patient change notification is accomplished by using Subscriptions.  A client will register a Subscription with the Client Registry.  When the Client Registry determines that a change to a Patient has occurred, it will notify all clients that have subscribed to changes of that specific type.</p>
 <p>
-Each request is a RevisePatientBundle. The Bundle has two entries:  One with MetadataParamtersIn for messageId, messageDate and sender, one for a ClientRegistryPatient (profile of Patient).  The following table describes the request and the four parameters; all are mandatory.  The Client Registry SHALL use the following IN parameters when sending a change notification.
+The outgoing response to the Subscription is a Bundle. The Bundle has two entries:  One with MetadataParamtersIn for messageId, messageDate and sender, one for a ClientRegistryPatient (profile of Patient).  The following table describes the request and the four parameters; all are mandatory.  The Client Registry SHALL use the following IN parameters when sending a change notification.
 </p>
 <table class=\"grid\">
 	<tr>
@@ -54,7 +52,7 @@ Each request is a RevisePatientBundle. The Bundle has two entries:  One with Met
 		<td></td>
 		<td></td>
 		<td></td>
-		<td>Out is a 200 HTTP response code indicating the notificate was recieved.
+		<td>Out is a 200 HTTP response code indicating the subscription response was recieved.
 		</td>
 	</tr>
 </table>
@@ -77,6 +75,14 @@ Each request is a RevisePatientBundle. The Bundle has two entries:  One with Met
 * format[0] = #json
 
 * rest[0].mode = #client
-* rest[0].resource[0].type = #Bundle
-* rest[0].resource[0].operation[0].name = "PatientNotification"
-* rest[0].resource[0].operation[0].definition = Canonical(PatientNotification)
+* rest[0].resource[0]
+  * extension[0]
+    * url = "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/capabilitystatement-subscriptiontopic-canonical"
+    * valueCanonical = "http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution"
+  * type = #Subscription
+  * interaction[0]
+    * code = #create
+  * interaction[1]
+    * code = #update
+  * interaction[2]
+    * code = #delete
