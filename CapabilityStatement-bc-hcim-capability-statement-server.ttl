@@ -115,6 +115,22 @@
          ] ;
          fhir:documentation [ fhir:v "\nAlthough this is an independent Operation the definition is the same as the [MergePatient](OperationDefinition-bc-patient-merge.html)" ]
        ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/capabilitystatement-subscriptiontopic-canonical"^^xsd:anyURI ] ;
+         fhir:value [
+           fhir:v "http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution"^^xsd:anyURI ;
+           fhir:link <http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution>
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "Subscription" ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "create" ]
+       ] [
+         fhir:code [ fhir:v "update" ]
+       ] [
+         fhir:code [ fhir:v "delete" ]
+       ] )
      ] )
   ] ) . # 
 

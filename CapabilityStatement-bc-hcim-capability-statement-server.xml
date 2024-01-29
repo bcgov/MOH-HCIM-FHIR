@@ -88,5 +88,20 @@ Update Patient - used when a user is communicating a change to the Client Regist
         <documentation value="&#xA;Although this is an independent Operation the definition is the same as the [MergePatient](OperationDefinition-bc-patient-merge.html)"/>
       </operation>
     </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/capabilitystatement-subscriptiontopic-canonical">
+        <valueCanonical value="http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution"/>
+      </extension>
+      <type value="Subscription"/>
+      <interaction>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <code value="update"/>
+      </interaction>
+      <interaction>
+        <code value="delete"/>
+      </interaction>
+    </resource>
   </rest>
 </CapabilityStatement>

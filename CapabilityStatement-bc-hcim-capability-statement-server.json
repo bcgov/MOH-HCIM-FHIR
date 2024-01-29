@@ -85,6 +85,22 @@
         "definition" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-merge",
         "documentation" : "\nAlthough this is an independent Operation the definition is the same as the [MergePatient](OperationDefinition-bc-patient-merge.html)"
       }]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/capabilitystatement-subscriptiontopic-canonical",
+        "valueCanonical" : "http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution"
+      }],
+      "type" : "Subscription",
+      "interaction" : [{
+        "code" : "create"
+      },
+      {
+        "code" : "update"
+      },
+      {
+        "code" : "delete"
+      }]
     }]
   }]
 }
