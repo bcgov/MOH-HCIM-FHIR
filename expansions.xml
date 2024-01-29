@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="2d944b78-7aa4-44d4-8719-e72680d87309"/>
+  <id value="dd54949a-bcbe-461c-a8f8-840d7274d630"/>
   <meta>
-    <lastUpdated value="2024-01-19T19:46:50.191+00:00"/>
+    <lastUpdated value="2024-01-29T03:29:58.590+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -82,7 +82,7 @@
         <name value="AddressValidationVS"/>
         <title value="BC Address Validation Value Set"/>
         <status value="draft"/>
-        <date value="2024-01-19T19:46:50+00:00"/>
+        <date value="2024-01-29T03:29:58+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -91,8 +91,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:a4f87e54-d3ce-4ff7-a8bc-525afc1dbef2"/>
-          <timestamp value="2024-01-19T19:47:42+00:00"/>
+          <identifier value="urn:uuid:9ef79899-44db-463e-8c08-96a28c844890"/>
+          <timestamp value="2024-01-29T03:30:53+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -125,6 +125,263 @@
             <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-address-validation-code-system"/>
             <code value="unknown"/>
             <display value="unknown"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-client-registry-patient-change-notification-events"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html">codesystem BC Client Registry Patient Change Notification Events Code System v1.0.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 10 concepts.</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---terminology.hlth.gov.bc.ca-ClientRegistry-CodeSystem-bc-client-registry-patient-change-notification-events-COMPOSITE"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-COMPOSITE">COMPOSITE</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>composite</td>
+                <td>
+                  <div>
+                    <p>Composite view distributions inform a subscribing system that their records are out-of-sync with the composite view and a subscriber that a data attribute has been modified on a specific source.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---terminology.hlth.gov.bc.ca-ClientRegistry-CodeSystem-bc-client-registry-patient-change-notification-events-DEATH"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-DEATH">DEATH</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>death</td>
+                <td>
+                  <div>
+                    <p>DEATH distributions inform a subscriber that they have a record that is out of sync with the Date of Death, or the Deceased indicator is present and a change to the composite view has occurred and a subscribing system there is a Date of Death, or the Deceased indicator is present and a change to the composite view has occurred.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---terminology.hlth.gov.bc.ca-ClientRegistry-CodeSystem-bc-client-registry-patient-change-notification-events-EID"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-EID">EID</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>eid</td>
+                <td>
+                  <div>
+                    <p>EID distributions inform subscribers when one of their source records has changed entity sets and/or is out-of-sync with the composite view.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---terminology.hlth.gov.bc.ca-ClientRegistry-CodeSystem-bc-client-registry-patient-change-notification-events-NEW"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-NEW">NEW</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>new PHN</td>
+                <td>
+                  <div>
+                    <p>The New PHN (NEW) distribution is a non-source distribution and informs subscribers of all new PHNs.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---terminology.hlth.gov.bc.ca-ClientRegistry-CodeSystem-bc-client-registry-patient-change-notification-events-NEWBORN"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-NEWBORN">NEWBORN</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>newborn</td>
+                <td>
+                  <div>
+                    <p>This distribution informs subscribers that a newborn record has been created in the EMPI, and has been assigned a PHN.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---terminology.hlth.gov.bc.ca-ClientRegistry-CodeSystem-bc-client-registry-patient-change-notification-events-NEWBORN-GENDER"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-NEWBORN_GENDER">NEWBORN_GENDER</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>newborn gender</td>
+                <td>
+                  <div>
+                    <p>A non-source distribution and informs subscribers when the gender on a newborn record changes from unknown or undifferentiated to any other gender value.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---terminology.hlth.gov.bc.ca-ClientRegistry-CodeSystem-bc-client-registry-patient-change-notification-events-PHN"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-PHN">PHN</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>PHN change</td>
+                <td>
+                  <div>
+                    <p>PHN Change distributions inform source systems that their purported PHN is out-of-sync with the PHN in the composite view.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---terminology.hlth.gov.bc.ca-ClientRegistry-CodeSystem-bc-client-registry-patient-change-notification-events-PHNJOIN"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-PHNJOIN">PHNJOIN</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>PHN Join</td>
+                <td>
+                  <div>
+                    <p>PHN Join distributions inform source systems that their record has joined an entity with a PHN.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---terminology.hlth.gov.bc.ca-ClientRegistry-CodeSystem-bc-client-registry-patient-change-notification-events-PHNMERGE"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-PHNMERGE">PHNMERGE</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>PHN Merge</td>
+                <td>
+                  <div>
+                    <p>PHN merge is a non-source distribution and informs subscribers of merged PHNs.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---terminology.hlth.gov.bc.ca-ClientRegistry-CodeSystem-bc-client-registry-patient-change-notification-events-SSRI"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-SSRI">SSRI</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>SSRI Sync</td>
+                <td>
+                  <div>
+                    <p>SSRI Sync distributions notify a parent system that one of its child system’s records has joined the set.</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-client-registry-patient-change-notification-events"/>
+        <version value="1.0.0"/>
+        <name value="PatientChangeNotificationEventsValueSet"/>
+        <title value="BC Client Registry Patient Change Notification Events Value Set"/>
+        <status value="draft"/>
+        <date value="2024-01-29T03:29:58+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="CA"/>
+            <display value="Canada"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:ca19fcdf-dcd0-4b76-a72d-d942752fbaff"/>
+          <timestamp value="2024-01-29T03:30:53+00:00"/>
+          <total value="10"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events|1.0.0"/>
+          </parameter>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="COMPOSITE"/>
+            <display value="composite"/>
+          </contains>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="DEATH"/>
+            <display value="death"/>
+          </contains>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="EID"/>
+            <display value="eid"/>
+          </contains>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="NEW"/>
+            <display value="new PHN"/>
+          </contains>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="NEWBORN"/>
+            <display value="newborn"/>
+          </contains>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="NEWBORN_GENDER"/>
+            <display value="newborn gender"/>
+          </contains>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="PHN"/>
+            <display value="PHN change"/>
+          </contains>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="PHNJOIN"/>
+            <display value="PHN Join"/>
+          </contains>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="PHNMERGE"/>
+            <display value="PHN Merge"/>
+          </contains>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="SSRI"/>
+            <display value="SSRI Sync"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -206,7 +463,7 @@
         <name value="UpdatePatientOperationVS"/>
         <title value="BC Update Patient Operation Value Set"/>
         <status value="draft"/>
-        <date value="2024-01-19T19:46:50+00:00"/>
+        <date value="2024-01-29T03:29:58+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -215,8 +472,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:066f1447-4942-4330-8bd7-5fb1bc80e26e"/>
-          <timestamp value="2024-01-19T19:47:42+00:00"/>
+          <identifier value="urn:uuid:81fe99b3-f37e-4a85-80a4-b56fe2fb8ffe"/>
+          <timestamp value="2024-01-29T03:30:53+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -324,7 +581,7 @@
         <name value="ContactPointSystemVS"/>
         <title value="BC Contact Point System Value Set"/>
         <status value="draft"/>
-        <date value="2024-01-19T19:46:50+00:00"/>
+        <date value="2024-01-29T03:29:58+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -333,8 +590,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:1f6867c4-b167-406f-a7c2-43e9f18838eb"/>
-          <timestamp value="2024-01-19T19:47:42+00:00"/>
+          <identifier value="urn:uuid:69078a20-b9ab-4c5e-b43a-b71a2268596e"/>
+          <timestamp value="2024-01-29T03:30:53+00:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -455,7 +712,7 @@
         <name value="ContactPointUseVS"/>
         <title value="BC Contact Point Use Value Set"/>
         <status value="draft"/>
-        <date value="2024-01-19T19:46:50+00:00"/>
+        <date value="2024-01-29T03:29:58+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -464,8 +721,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:01549867-cca8-4a2c-88f2-9ade3f2770a9"/>
-          <timestamp value="2024-01-19T19:47:42+00:00"/>
+          <identifier value="urn:uuid:0701b25e-b3a0-4148-8ff5-6db2ce8ec5f2"/>
+          <timestamp value="2024-01-29T03:30:53+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -569,7 +826,7 @@
         <name value="IdentifierStatusVS"/>
         <title value="BC Identifier Status Value Set"/>
         <status value="draft"/>
-        <date value="2024-01-19T19:46:50+00:00"/>
+        <date value="2024-01-29T03:29:58+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -578,8 +835,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:08b830b7-7668-4df0-b0f0-b37f134c55ae"/>
-          <timestamp value="2024-01-19T19:47:42+00:00"/>
+          <identifier value="urn:uuid:410d843c-8074-49b3-b90f-e82b0346d348"/>
+          <timestamp value="2024-01-29T03:30:53+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -674,7 +931,7 @@
         <name value="MergeStatusVS"/>
         <title value="BC Merge Status Value Set"/>
         <status value="draft"/>
-        <date value="2024-01-19T19:46:50+00:00"/>
+        <date value="2024-01-29T03:29:58+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -683,8 +940,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:fc1f96cd-44db-4b26-9bb5-fee5fba069bd"/>
-          <timestamp value="2024-01-19T19:47:42+00:00"/>
+          <identifier value="urn:uuid:bd8f13a9-d325-4b82-bc1b-70823a1e67a0"/>
+          <timestamp value="2024-01-29T03:30:53+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -801,7 +1058,7 @@
         <name value="NameUseVS"/>
         <title value="BC Name Use value set."/>
         <status value="draft"/>
-        <date value="2024-01-19T19:46:50+00:00"/>
+        <date value="2024-01-29T03:29:58+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -810,8 +1067,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:cfcef85e-2fe3-421a-af28-1cd1be2390f2"/>
-          <timestamp value="2024-01-19T19:47:42+00:00"/>
+          <identifier value="urn:uuid:292de266-c054-406b-b658-92d307b4d542"/>
+          <timestamp value="2024-01-29T03:30:53+00:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>

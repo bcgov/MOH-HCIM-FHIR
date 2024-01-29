@@ -1,0 +1,83 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "bc-client-registry-patient-change-notification-events",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">COMPOSITE<a name=\"bc-client-registry-patient-change-notification-events-COMPOSITE\"> </a></td><td>composite</td><td>Composite view distributions inform a subscribing system that their records are out-of-sync with the composite view and a subscriber that a data attribute has been modified on a specific source.</td></tr><tr><td style=\"white-space:nowrap\">DEATH<a name=\"bc-client-registry-patient-change-notification-events-DEATH\"> </a></td><td>death</td><td>DEATH distributions inform a subscriber that they have a record that is out of sync with the Date of Death, or the Deceased indicator is present and a change to the composite view has occurred and a subscribing system there is a Date of Death, or the Deceased indicator is present and a change to the composite view has occurred.</td></tr><tr><td style=\"white-space:nowrap\">EID<a name=\"bc-client-registry-patient-change-notification-events-EID\"> </a></td><td>eid</td><td>EID distributions inform subscribers when one of their source records has changed entity sets and/or is out-of-sync with the composite view.</td></tr><tr><td style=\"white-space:nowrap\">NEW<a name=\"bc-client-registry-patient-change-notification-events-NEW\"> </a></td><td>new PHN</td><td>The New PHN (NEW) distribution is a non-source distribution and informs subscribers of all new PHNs.</td></tr><tr><td style=\"white-space:nowrap\">NEWBORN<a name=\"bc-client-registry-patient-change-notification-events-NEWBORN\"> </a></td><td>newborn</td><td>This distribution informs subscribers that a newborn record has been created in the EMPI, and has been assigned a PHN.</td></tr><tr><td style=\"white-space:nowrap\">NEWBORN_GENDER<a name=\"bc-client-registry-patient-change-notification-events-NEWBORN_GENDER\"> </a></td><td>newborn gender</td><td>A non-source distribution and informs subscribers when the gender on a newborn record changes from unknown or undifferentiated to any other gender value.</td></tr><tr><td style=\"white-space:nowrap\">PHN<a name=\"bc-client-registry-patient-change-notification-events-PHN\"> </a></td><td>PHN change</td><td>PHN Change distributions inform source systems that their purported PHN is out-of-sync with the PHN in the composite view.</td></tr><tr><td style=\"white-space:nowrap\">PHNJOIN<a name=\"bc-client-registry-patient-change-notification-events-PHNJOIN\"> </a></td><td>PHN Join</td><td>PHN Join distributions inform source systems that their record has joined an entity with a PHN.</td></tr><tr><td style=\"white-space:nowrap\">PHNMERGE<a name=\"bc-client-registry-patient-change-notification-events-PHNMERGE\"> </a></td><td>PHN Merge</td><td>PHN merge is a non-source distribution and informs subscribers of merged PHNs.</td></tr><tr><td style=\"white-space:nowrap\">SSRI<a name=\"bc-client-registry-patient-change-notification-events-SSRI\"> </a></td><td>SSRI Sync</td><td>SSRI Sync distributions notify a parent system that one of its child system’s records has joined the set.</td></tr></table></div>"
+  },
+  "url" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+  "version" : "1.0.0",
+  "name" : "PatientChangeNotificationEvents",
+  "title" : "BC Client Registry Patient Change Notification Events Code System",
+  "status" : "draft",
+  "date" : "2024-01-29T03:29:58+00:00",
+  "publisher" : "BC Ministry of Health",
+  "contact" : [{
+    "name" : "BC Ministry of Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+    }]
+  }],
+  "description" : "Codes used to indicate that type of patient changes that a subscriber is interested in receiving.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CA",
+      "display" : "Canada"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 10,
+  "concept" : [{
+    "code" : "COMPOSITE",
+    "display" : "composite",
+    "definition" : "Composite view distributions inform a subscribing system that their records are out-of-sync with the composite view and a subscriber that a data attribute has been modified on a specific source."
+  },
+  {
+    "code" : "DEATH",
+    "display" : "death",
+    "definition" : "DEATH distributions inform a subscriber that they have a record that is out of sync with the Date of Death, or the Deceased indicator is present and a change to the composite view has occurred and a subscribing system there is a Date of Death, or the Deceased indicator is present and a change to the composite view has occurred."
+  },
+  {
+    "code" : "EID",
+    "display" : "eid",
+    "definition" : "EID distributions inform subscribers when one of their source records has changed entity sets and/or is out-of-sync with the composite view."
+  },
+  {
+    "code" : "NEW",
+    "display" : "new PHN",
+    "definition" : "The New PHN (NEW) distribution is a non-source distribution and informs subscribers of all new PHNs."
+  },
+  {
+    "code" : "NEWBORN",
+    "display" : "newborn",
+    "definition" : "This distribution informs subscribers that a newborn record has been created in the EMPI, and has been assigned a PHN."
+  },
+  {
+    "code" : "NEWBORN_GENDER",
+    "display" : "newborn gender",
+    "definition" : "A non-source distribution and informs subscribers when the gender on a newborn record changes from unknown or undifferentiated to any other gender value."
+  },
+  {
+    "code" : "PHN",
+    "display" : "PHN change",
+    "definition" : "PHN Change distributions inform source systems that their purported PHN is out-of-sync with the PHN in the composite view."
+  },
+  {
+    "code" : "PHNJOIN",
+    "display" : "PHN Join",
+    "definition" : "PHN Join distributions inform source systems that their record has joined an entity with a PHN."
+  },
+  {
+    "code" : "PHNMERGE",
+    "display" : "PHN Merge",
+    "definition" : "PHN merge is a non-source distribution and informs subscribers of merged PHNs."
+  },
+  {
+    "code" : "SSRI",
+    "display" : "SSRI Sync",
+    "definition" : "SSRI Sync distributions notify a parent system that one of its child system’s records has joined the set."
+  }]
+}

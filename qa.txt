@@ -1,10 +1,10 @@
 BCHealthClientIdentityManagement : Validation Results
 =========================================
 
-err = 30, warn = 55, info = 80
-IG Publisher Version: 1.5.14
-Generated Fri Jan 19 19:50:27 UTC 2024. FHIR version 4.0.1 for fhir.ca-bc.client#1.0.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
- Build Errors : 4 / 4 / 0
+err = 44, warn = 65, info = 90
+IG Publisher Version: 1.5.15
+Generated Mon Jan 29 03:33:48 UTC 2024. FHIR version 4.0.1 for fhir.ca-bc.client#1.0.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
+ Build Errors : 18 / 6 / 0
  /github/workspace/fsh-generated/resources/Bundle-AddNewbornByMumsPHN-Request : 0 / 0 / 9
  /github/workspace/fsh-generated/resources/Bundle-AddPatient-Request : 0 / 0 / 10
  /github/workspace/fsh-generated/resources/Bundle-AddPatient-Response : 0 / 0 / 11
@@ -34,6 +34,7 @@ Generated Fri Jan 19 19:50:27 UTC 2024. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/CapabilityStatement-bc-hcim-capability-statement-server : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-bc-client-registry-address-validation-code-system : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-bc-client-registry-merge-status-code-system : 2 / 1 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-bc-client-registry-patient-change-notification-events : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-bc-client-registry-update-patient-operation-code-system : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-bc-identifier-status-code-system : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-bc-operation-outcome-details-code-system : 2 / 1 / 1
@@ -59,6 +60,7 @@ Generated Fri Jan 19 19:50:27 UTC 2024. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/Patient-Patient-GetDemographics-Example : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Patient-Patient-MergePatient-Example : 0 / 0 / 2
  /github/workspace/fsh-generated/resources/Patient-Patient-UpdatePatient-Request-Example : 0 / 0 / 3
+ /github/workspace/fsh-generated/resources/StructureDefinition-HCIMPatientChangeSubscription : 3 / 3 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-add-request-bundle : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-add-response-bundle : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-async-ack-response-bundle : 0 / 0 / 1
@@ -91,19 +93,38 @@ Generated Fri Jan 19 19:50:27 UTC 2024. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-update-patient-operation-extension : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-update-request-bundle : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-validation-status-extension : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/Subscription-SampleCompositeSubscriptionRequest : 2 / 3 / 1
  /github/workspace/fsh-generated/resources/ValueSet-bc-address-validation-value-set : 2 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-bc-client-registry-patient-change-notification-events-value-set : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/ValueSet-bc-client-registry-update-patient-operation-value-set : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/ValueSet-bc-contact-point-system-value-set : 2 / 1 / 2
  /github/workspace/fsh-generated/resources/ValueSet-bc-contact-point-use-value-set : 2 / 1 / 2
  /github/workspace/fsh-generated/resources/ValueSet-bc-identifier-status-value-set : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/ValueSet-bc-merge-status-value-set : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/ValueSet-bc-name-use-value-set : 2 / 1 / 2
+ /github/workspace/input/resources/SubscriptionTopic : 3 / 0 / 11
 </table>
 == n/a ==
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/HCIMPatientChangeSubscription.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource SubscriptionTopic/PASSubscriptionTopic.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Subscription.status: The reference http://hl7.org/fhir/ValueSet/subscription-status|4.3.0 could not be resolved
+ERROR: Subscription.channel.type: The reference http://hl7.org/fhir/ValueSet/subscription-channel-type|4.3.0 could not be resolved
 ERROR: /github/workspace/output/OperationDefinition-bc-patient-find-candidates.html#/html/body/div/div/div/div/div/div/p/a at Line 310, column 320: The link 'Bundle-Bundle-FindCandidates-Response-MomsPHN-Example.html' for "here" cannot be resolved
 ERROR: /github/workspace/output/OperationDefinition-bc-patient-get-demographics.html#/html/body/div/div/div/div/div/div/p/a at Line 415, column 6: The link 'Bundle-GetDemographics-withPHNinfo-Response.html' for "Get Demographics with PHN info response" cannot be resolved
 ERROR: /github/workspace/output/OperationDefinition-bc-patient-notification.html#/html/body/div/div/div/div/div/div/p/a at Line 340, column 6: The link 'Bundle-Revise-WithMaxData-Request.html' for "Patient Notification request" cannot be resolved
 ERROR: /github/workspace/output/OperationDefinition-bc-patient-revise.html#/html/body/div/div/div/div/div/div/p/a at Line 365, column 9: The link 'Bundle-Revise-WithMaxData-Request.html' for "Revise Patient request" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-HCIMPatientChangeSubscription-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/span/a at Line 319, column 403: The link 'subscription-status|4.3.0.html' for "subscription-status|4.3.0" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-HCIMPatientChangeSubscription-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/span/a at Line 353, column 544: The link 'subscription-channel-type|4.3.0.html' for "subscription-channel-type|4.3.0" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-HCIMPatientChangeSubscription-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/span/a at Line 438, column 295: The link 'subscription-status|4.3.0.html' for "subscription-status|4.3.0" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-HCIMPatientChangeSubscription-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/span/a at Line 498, column 400: The link 'subscription-channel-type|4.3.0.html' for "subscription-channel-type|4.3.0" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-HCIMPatientChangeSubscription.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 378, column 1913: The link 'subscription-status|4.3.0.html' for "subscription-status|4.3.0" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-HCIMPatientChangeSubscription.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 389, column 1876: The link 'subscription-channel-type|4.3.0.html' for "subscription-channel-type|4.3.0" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-HCIMPatientChangeSubscription.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 446, column 1909: The link 'subscription-status|4.3.0.html' for "subscription-status|4.3.0" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-HCIMPatientChangeSubscription.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 465, column 1872: The link 'subscription-channel-type|4.3.0.html' for "subscription-channel-type|4.3.0" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-HCIMPatientChangeSubscription.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 677, column 1913: The link 'subscription-status|4.3.0.html' for "subscription-status|4.3.0" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-HCIMPatientChangeSubscription.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 688, column 1876: The link 'subscription-channel-type|4.3.0.html' for "subscription-channel-type|4.3.0" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-HCIMPatientChangeSubscription.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 745, column 1909: The link 'subscription-status|4.3.0.html' for "subscription-status|4.3.0" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-HCIMPatientChangeSubscription.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 764, column 1872: The link 'subscription-channel-type|4.3.0.html' for "subscription-channel-type|4.3.0" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
@@ -235,6 +256,10 @@ ERROR: /github/workspace/fsh-generated/resources/CodeSystem-bc-client-registry-a
 ERROR: CodeSystem.where(url = 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-merge-status-code-system'): Conformance resource /github/workspace/fsh-generated/resources/CodeSystem-bc-client-registry-merge-status-code-system.json - the canonical URL (http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-merge-status-code-system) does not match the URL (https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-merge-status-code-system)
 WARNING: CodeSystem/bc-client-registry-merge-status-code-system: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
 ERROR: /github/workspace/fsh-generated/resources/CodeSystem-bc-client-registry-merge-status-code-system: URL Mismatch http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-merge-status-code-system vs https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-merge-status-code-system
+== fsh-generated/resources/CodeSystem-bc-client-registry-patient-change-notification-events.json ==
+ERROR: CodeSystem.where(url = 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events'): Conformance resource /github/workspace/fsh-generated/resources/CodeSystem-bc-client-registry-patient-change-notification-events.json - the canonical URL (http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-patient-change-notification-events) does not match the URL (https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events)
+WARNING: CodeSystem/bc-client-registry-patient-change-notification-events: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+ERROR: /github/workspace/fsh-generated/resources/CodeSystem-bc-client-registry-patient-change-notification-events: URL Mismatch http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-patient-change-notification-events vs https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events
 == fsh-generated/resources/CodeSystem-bc-client-registry-update-patient-operation-code-system.json ==
 ERROR: CodeSystem.where(url = 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-update-patient-operation-code-system'): Conformance resource /github/workspace/fsh-generated/resources/CodeSystem-bc-client-registry-update-patient-operation-code-system.json - the canonical URL (http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-update-patient-operation-code-system) does not match the URL (https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-update-patient-operation-code-system)
 WARNING: CodeSystem/bc-client-registry-update-patient-operation-code-system: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
@@ -276,6 +301,13 @@ INFORMATION: Patient/Patient-MergePatient-Example: Patient.identifier[0]: This e
 == fsh-generated/resources/Patient-Patient-UpdatePatient-Request-Example.json ==
 INFORMATION: Patient/Patient-UpdatePatient-Request-Example: Patient.identifier[0]: This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Patient/Patient-UpdatePatient-Request-Example: Patient.address[0].extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-update-patient-operation-code-system|1.0.0
+== fsh-generated/resources/StructureDefinition-HCIMPatientChangeSubscription.json ==
+ERROR: StructureDefinition/HCIMPatientChangeSubscription: StructureDefinition.snapshot.element[9].binding.valueSet: Canonical URL 'http://hl7.org/fhir/ValueSet/subscription-status|4.3.0' does not resolve
+ERROR: StructureDefinition/HCIMPatientChangeSubscription: StructureDefinition.snapshot.element[26].binding.valueSet: Canonical URL 'http://hl7.org/fhir/ValueSet/subscription-channel-type|4.3.0' does not resolve
+ERROR: StructureDefinition/HCIMPatientChangeSubscription: StructureDefinition.snapshot.element[32].binding.valueSet: Canonical URL 'http://hl7.org/fhir/ValueSet/mimetypes|4.3.0' does not resolve
+WARNING: StructureDefinition/HCIMPatientChangeSubscription: StructureDefinition.snapshot.element[9].binding: The valueSet reference http://hl7.org/fhir/ValueSet/subscription-status|4.3.0 on element Subscription.status could not be resolved
+WARNING: StructureDefinition/HCIMPatientChangeSubscription: StructureDefinition.snapshot.element[26].binding: The valueSet reference http://hl7.org/fhir/ValueSet/subscription-channel-type|4.3.0 on element Subscription.channel.type could not be resolved
+WARNING: StructureDefinition/HCIMPatientChangeSubscription: StructureDefinition.snapshot.element[32].binding: The valueSet reference http://hl7.org/fhir/ValueSet/mimetypes|4.3.0 on element Subscription.channel.payload could not be resolved
 == fsh-generated/resources/StructureDefinition-bc-add-request-bundle.json ==
 == fsh-generated/resources/StructureDefinition-bc-add-response-bundle.json ==
 == fsh-generated/resources/StructureDefinition-bc-async-ack-response-bundle.json ==
@@ -331,10 +363,20 @@ WARNING: StructureDefinition/bc-update-patient-operation-extension: StructureDef
 ERROR: StructureDefinition/bc-update-request-bundle: StructureDefinition.snapshot.element[0].constraint[9]: Error in constraint 'invariant-update-1' with expression 'entry.resource.ofType(Patient).name.count()>=1 or entry.resource.ofType(Patient).telecom.count()>=1 or entry.resource.ofType(Patient).gender.count() >=1 or entry.resource.ofType(Patient).deceased[x].count()>=1 or entry.resource.ofType(Patient).address.count()>=1 or entry.resource.ofType(Patient).communication.count()>=1': Error evaluating FHIRPath expression: The name 'x' is not valid for any of the possible types: [http://hl7.org/fhir/StructureDefinition/Bundle] (@char 12)
 == fsh-generated/resources/StructureDefinition-bc-validation-status-extension.json ==
 WARNING: StructureDefinition/bc-validation-status-extension: StructureDefinition.context[0]: Review the extension type for bc-validation-status-extension: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+== fsh-generated/resources/Subscription-SampleCompositeSubscriptionRequest.json ==
+WARNING: Subscription/SampleCompositeSubscriptionRequest: Subscription.status: ValueSet 'http://hl7.org/fhir/ValueSet/subscription-status|4.3.0' not found
+WARNING: Subscription/SampleCompositeSubscriptionRequest: Subscription.channel.type: ValueSet 'http://hl7.org/fhir/ValueSet/subscription-channel-type|4.3.0' not found
+WARNING: Subscription/SampleCompositeSubscriptionRequest: Subscription.channel.payload: ValueSet 'http://hl7.org/fhir/ValueSet/mimetypes|4.3.0' not found
+ERROR: Subscription/SampleCompositeSubscriptionRequest: Subscription.channel.payload.extension[0]: Constraint failed: ext-1: 'Must have either extensions or value[x], not both' (defined in http://hl7.org/fhir/StructureDefinition/Extension)
+ERROR: Subscription/SampleCompositeSubscriptionRequest: Subscription.channel.payload.extension[0]: The Extension 'http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-payload-content' definition is for a simple extension, so it must contain a value
 == fsh-generated/resources/ValueSet-bc-address-validation-value-set.json ==
 ERROR: ValueSet.where(url = 'https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-address-validation-value-set'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-bc-address-validation-value-set.json - the canonical URL (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-address-validation-value-set) does not match the URL (https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-address-validation-value-set)
 WARNING: ValueSet/bc-address-validation-value-set: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 ERROR: /github/workspace/fsh-generated/resources/ValueSet-bc-address-validation-value-set: URL Mismatch http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-address-validation-value-set vs https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-address-validation-value-set
+== fsh-generated/resources/ValueSet-bc-client-registry-patient-change-notification-events-value-set.json ==
+ERROR: ValueSet.where(url = 'https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-client-registry-patient-change-notification-events'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-bc-client-registry-patient-change-notification-events-value-set.json - the canonical URL (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-client-registry-patient-change-notification-events-value-set) does not match the URL (https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-client-registry-patient-change-notification-events)
+WARNING: ValueSet/bc-client-registry-patient-change-notification-events-value-set: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+ERROR: /github/workspace/fsh-generated/resources/ValueSet-bc-client-registry-patient-change-notification-events-value-set: URL Mismatch http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-client-registry-patient-change-notification-events-value-set vs https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-client-registry-patient-change-notification-events
 == fsh-generated/resources/ValueSet-bc-client-registry-update-patient-operation-value-set.json ==
 ERROR: ValueSet.where(url = 'https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-client-registry-update-patient-operation-value-set'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-bc-client-registry-update-patient-operation-value-set.json - the canonical URL (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-client-registry-update-patient-operation-value-set) does not match the URL (https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-client-registry-update-patient-operation-value-set)
 WARNING: ValueSet/bc-client-registry-update-patient-operation-value-set: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
@@ -362,3 +404,17 @@ ERROR: ValueSet.where(url = 'https://terminology.hlth.gov.bc.ca/ClientRegistry/V
 WARNING: ValueSet/bc-name-use-value-set: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 INFORMATION: ValueSet.where(id = 'bc-name-use-value-set'): The value set expansion is incomplete
 ERROR: /github/workspace/fsh-generated/resources/ValueSet-bc-name-use-value-set: URL Mismatch http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-name-use-value-set vs https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set
+== input/resources/SubscriptionTopic.json ==
+ERROR: SubscriptionTopic.where(url = 'http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution'): Conformance resource /github/workspace/input/resources/SubscriptionTopic.json - the canonical URL (http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/PASSubscriptionTopic) does not match the URL (http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution)
+ERROR: SubscriptionTopic.url: Resource id/url mismatch: PASSubscriptionTopic/http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution
+INFORMATION: SubscriptionTopic/PASSubscriptionTopic: SubscriptionTopic.eventTrigger[0].event: Reference to draft CodeSystem https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events|1.0.0
+INFORMATION: SubscriptionTopic/PASSubscriptionTopic: SubscriptionTopic.eventTrigger[1].event: Reference to draft CodeSystem https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events|1.0.0
+INFORMATION: SubscriptionTopic/PASSubscriptionTopic: SubscriptionTopic.eventTrigger[2].event: Reference to draft CodeSystem https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events|1.0.0
+INFORMATION: SubscriptionTopic/PASSubscriptionTopic: SubscriptionTopic.eventTrigger[3].event: Reference to draft CodeSystem https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events|1.0.0
+INFORMATION: SubscriptionTopic/PASSubscriptionTopic: SubscriptionTopic.eventTrigger[4].event: Reference to draft CodeSystem https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events|1.0.0
+INFORMATION: SubscriptionTopic/PASSubscriptionTopic: SubscriptionTopic.eventTrigger[5].event: Reference to draft CodeSystem https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events|1.0.0
+INFORMATION: SubscriptionTopic/PASSubscriptionTopic: SubscriptionTopic.eventTrigger[6].event: Reference to draft CodeSystem https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events|1.0.0
+INFORMATION: SubscriptionTopic/PASSubscriptionTopic: SubscriptionTopic.eventTrigger[7].event: Reference to draft CodeSystem https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events|1.0.0
+INFORMATION: SubscriptionTopic/PASSubscriptionTopic: SubscriptionTopic.eventTrigger[8].event: Reference to draft CodeSystem https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events|1.0.0
+INFORMATION: SubscriptionTopic/PASSubscriptionTopic: SubscriptionTopic.eventTrigger[9].event: Reference to draft CodeSystem https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events|1.0.0
+ERROR: /github/workspace/input/resources/SubscriptionTopic: URL Mismatch http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/PASSubscriptionTopic vs http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution

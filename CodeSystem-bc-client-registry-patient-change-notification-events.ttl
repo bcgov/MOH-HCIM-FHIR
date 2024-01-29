@@ -1,0 +1,83 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-patient-change-notification-events> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "bc-client-registry-patient-change-notification-events"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">COMPOSITE<a name=\"bc-client-registry-patient-change-notification-events-COMPOSITE\"> </a></td><td>composite</td><td>Composite view distributions inform a subscribing system that their records are out-of-sync with the composite view and a subscriber that a data attribute has been modified on a specific source.</td></tr><tr><td style=\"white-space:nowrap\">DEATH<a name=\"bc-client-registry-patient-change-notification-events-DEATH\"> </a></td><td>death</td><td>DEATH distributions inform a subscriber that they have a record that is out of sync with the Date of Death, or the Deceased indicator is present and a change to the composite view has occurred and a subscribing system there is a Date of Death, or the Deceased indicator is present and a change to the composite view has occurred.</td></tr><tr><td style=\"white-space:nowrap\">EID<a name=\"bc-client-registry-patient-change-notification-events-EID\"> </a></td><td>eid</td><td>EID distributions inform subscribers when one of their source records has changed entity sets and/or is out-of-sync with the composite view.</td></tr><tr><td style=\"white-space:nowrap\">NEW<a name=\"bc-client-registry-patient-change-notification-events-NEW\"> </a></td><td>new PHN</td><td>The New PHN (NEW) distribution is a non-source distribution and informs subscribers of all new PHNs.</td></tr><tr><td style=\"white-space:nowrap\">NEWBORN<a name=\"bc-client-registry-patient-change-notification-events-NEWBORN\"> </a></td><td>newborn</td><td>This distribution informs subscribers that a newborn record has been created in the EMPI, and has been assigned a PHN.</td></tr><tr><td style=\"white-space:nowrap\">NEWBORN_GENDER<a name=\"bc-client-registry-patient-change-notification-events-NEWBORN_GENDER\"> </a></td><td>newborn gender</td><td>A non-source distribution and informs subscribers when the gender on a newborn record changes from unknown or undifferentiated to any other gender value.</td></tr><tr><td style=\"white-space:nowrap\">PHN<a name=\"bc-client-registry-patient-change-notification-events-PHN\"> </a></td><td>PHN change</td><td>PHN Change distributions inform source systems that their purported PHN is out-of-sync with the PHN in the composite view.</td></tr><tr><td style=\"white-space:nowrap\">PHNJOIN<a name=\"bc-client-registry-patient-change-notification-events-PHNJOIN\"> </a></td><td>PHN Join</td><td>PHN Join distributions inform source systems that their record has joined an entity with a PHN.</td></tr><tr><td style=\"white-space:nowrap\">PHNMERGE<a name=\"bc-client-registry-patient-change-notification-events-PHNMERGE\"> </a></td><td>PHN Merge</td><td>PHN merge is a non-source distribution and informs subscribers of merged PHNs.</td></tr><tr><td style=\"white-space:nowrap\">SSRI<a name=\"bc-client-registry-patient-change-notification-events-SSRI\"> </a></td><td>SSRI Sync</td><td>SSRI Sync distributions notify a parent system that one of its child system’s records has joined the set.</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "PatientChangeNotificationEvents"] ; # 
+  fhir:title [ fhir:v "BC Client Registry Patient Change Notification Events Code System"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2024-01-29T03:29:58+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "BC Ministry of Health"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "BC Ministry of Health" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes used to indicate that type of patient changes that a subscriber is interested in receiving."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CA" ] ;
+       fhir:display [ fhir:v "Canada" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "10"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "COMPOSITE" ] ;
+     fhir:display [ fhir:v "composite" ] ;
+     fhir:definition [ fhir:v "Composite view distributions inform a subscribing system that their records are out-of-sync with the composite view and a subscriber that a data attribute has been modified on a specific source." ]
+  ] [
+     fhir:code [ fhir:v "DEATH" ] ;
+     fhir:display [ fhir:v "death" ] ;
+     fhir:definition [ fhir:v "DEATH distributions inform a subscriber that they have a record that is out of sync with the Date of Death, or the Deceased indicator is present and a change to the composite view has occurred and a subscribing system there is a Date of Death, or the Deceased indicator is present and a change to the composite view has occurred." ]
+  ] [
+     fhir:code [ fhir:v "EID" ] ;
+     fhir:display [ fhir:v "eid" ] ;
+     fhir:definition [ fhir:v "EID distributions inform subscribers when one of their source records has changed entity sets and/or is out-of-sync with the composite view." ]
+  ] [
+     fhir:code [ fhir:v "NEW" ] ;
+     fhir:display [ fhir:v "new PHN" ] ;
+     fhir:definition [ fhir:v "The New PHN (NEW) distribution is a non-source distribution and informs subscribers of all new PHNs." ]
+  ] [
+     fhir:code [ fhir:v "NEWBORN" ] ;
+     fhir:display [ fhir:v "newborn" ] ;
+     fhir:definition [ fhir:v "This distribution informs subscribers that a newborn record has been created in the EMPI, and has been assigned a PHN." ]
+  ] [
+     fhir:code [ fhir:v "NEWBORN_GENDER" ] ;
+     fhir:display [ fhir:v "newborn gender" ] ;
+     fhir:definition [ fhir:v "A non-source distribution and informs subscribers when the gender on a newborn record changes from unknown or undifferentiated to any other gender value." ]
+  ] [
+     fhir:code [ fhir:v "PHN" ] ;
+     fhir:display [ fhir:v "PHN change" ] ;
+     fhir:definition [ fhir:v "PHN Change distributions inform source systems that their purported PHN is out-of-sync with the PHN in the composite view." ]
+  ] [
+     fhir:code [ fhir:v "PHNJOIN" ] ;
+     fhir:display [ fhir:v "PHN Join" ] ;
+     fhir:definition [ fhir:v "PHN Join distributions inform source systems that their record has joined an entity with a PHN." ]
+  ] [
+     fhir:code [ fhir:v "PHNMERGE" ] ;
+     fhir:display [ fhir:v "PHN Merge" ] ;
+     fhir:definition [ fhir:v "PHN merge is a non-source distribution and informs subscribers of merged PHNs." ]
+  ] [
+     fhir:code [ fhir:v "SSRI" ] ;
+     fhir:display [ fhir:v "SSRI Sync" ] ;
+     fhir:definition [ fhir:v "SSRI Sync distributions notify a parent system that one of its child system’s records has joined the set." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

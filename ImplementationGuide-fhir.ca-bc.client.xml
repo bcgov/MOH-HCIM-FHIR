@@ -11,7 +11,7 @@
   <name value="BCHealthClientIdentityManagement"/>
   <title value="BC Client Registry FHIR Implementation Guide"/>
   <status value="draft"/>
-  <date value="2024-01-19T19:46:50+00:00"/>
+  <date value="2024-01-29T03:29:58+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -51,6 +51,11 @@
     <uri value="http://hl7.org/fhir/ca/baseline/ImplementationGuide/hl7.fhir.ca.baseline"/>
     <packageId value="hl7.fhir.ca.baseline"/>
     <version value="1.1.4"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_uv_subscriptions_backport">
+    <uri value="http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport"/>
+    <packageId value="hl7.fhir.uv.subscriptions-backport"/>
+    <version value="1.1.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -668,6 +673,28 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
+        <reference value="CodeSystem/bc-client-registry-patient-change-notification-events"/>
+      </reference>
+      <name value="BC Client Registry Patient Change Notification Events Code System"/>
+      <description value="Codes used to indicate that type of patient changes that a subscriber is interested in receiving."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/bc-client-registry-patient-change-notification-events-value-set"/>
+      </reference>
+      <name value="BC Client Registry Patient Change Notification Events Value Set"/>
+      <description value="Codes used to indicate that type of patient changes that a subscriber is interested in receiving."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
         <reference value="CodeSystem/bc-client-registry-update-patient-operation-code-system"/>
       </reference>
       <name value="BC Code System Of Allowed Update Operations"/>
@@ -1122,6 +1149,26 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SubscriptionTopic"/>
+      </extension>
+      <reference>
+        <reference value="SubscriptionTopic/PASSubscriptionTopic"/>
+      </reference>
+      <name value="HCIM Patient Change Distributions Subscription Topic"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/HCIMPatientChangeSubscription"/>
+      </reference>
+      <name value="HCIMPatientChangeSubscription"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="OperationDefinition"/>
       </extension>
       <reference>
@@ -1516,6 +1563,17 @@
       <description value="A Bundle that is used in the Client Registry response to Revise Patient requests."/>
       <exampleBoolean value="false"/>
       <groupingId value="SupportingProfiles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Subscription"/>
+      </extension>
+      <reference>
+        <reference value="Subscription/SampleCompositeSubscriptionRequest"/>
+      </reference>
+      <name value="SampleCompositeSubscriptionRequest"/>
+      <description value="Sample subscription request for Composite View events"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/HCIMPatientChangeSubscription"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "BCHealthClientIdentityManagement"] ; # 
   fhir:title [ fhir:v "BC Client Registry FHIR Implementation Guide"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-01-19T19:46:50+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-01-29T03:29:58+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "BC Ministry of Health"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "BC Ministry of Health" ] ;
@@ -69,6 +69,14 @@
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.ca.baseline" ] ;
      fhir:version [ fhir:v "1.1.4" ]
+  ] [
+     fhir:id [ fhir:v "hl7_fhir_uv_subscriptions_backport" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.subscriptions-backport" ] ;
+     fhir:version [ fhir:v "1.1.0" ]
   ] ) ; # 
   fhir:definition [
      fhir:extension ( [
@@ -764,6 +772,30 @@
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-patient-change-notification-events> ;
+         fhir:reference [ fhir:v "CodeSystem/bc-client-registry-patient-change-notification-events" ]
+       ] ;
+       fhir:name [ fhir:v "BC Client Registry Patient Change Notification Events Code System" ] ;
+       fhir:description [ fhir:v "Codes used to indicate that type of patient changes that a subscriber is interested in receiving." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-client-registry-patient-change-notification-events-value-set> ;
+         fhir:reference [ fhir:v "ValueSet/bc-client-registry-patient-change-notification-events-value-set" ]
+       ] ;
+       fhir:name [ fhir:v "BC Client Registry Patient Change Notification Events Value Set" ] ;
+       fhir:description [ fhir:v "Codes used to indicate that type of patient changes that a subscriber is interested in receiving." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
          fhir:link <http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-update-patient-operation-code-system> ;
          fhir:reference [ fhir:v "CodeSystem/bc-client-registry-update-patient-operation-code-system" ]
        ] ;
@@ -1300,6 +1332,28 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "SubscriptionTopic" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/PASSubscriptionTopic> ;
+         fhir:reference [ fhir:v "SubscriptionTopic/PASSubscriptionTopic" ]
+       ] ;
+       fhir:name [ fhir:v "HCIM Patient Change Distributions Subscription Topic" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/HCIMPatientChangeSubscription> ;
+         fhir:reference [ fhir:v "StructureDefinition/HCIMPatientChangeSubscription" ]
+       ] ;
+       fhir:name [ fhir:v "HCIMPatientChangeSubscription" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "OperationDefinition" ]
        ] ) ;
        fhir:reference [
@@ -1776,6 +1830,21 @@
        fhir:description [ fhir:v "A Bundle that is used in the Client Registry response to Revise Patient requests." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ] ;
        fhir:groupingId [ fhir:v "SupportingProfiles" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Subscription" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/Subscription/SampleCompositeSubscriptionRequest> ;
+         fhir:reference [ fhir:v "Subscription/SampleCompositeSubscriptionRequest" ]
+       ] ;
+       fhir:name [ fhir:v "SampleCompositeSubscriptionRequest" ] ;
+       fhir:description [ fhir:v "Sample subscription request for Composite View events" ] ;
+       fhir:example [
+         fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/HCIMPatientChangeSubscription"^^xsd:anyURI ;
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/HCIMPatientChangeSubscription>
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
