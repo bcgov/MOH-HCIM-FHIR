@@ -25,8 +25,12 @@ Description: "Codes used to indicate that type of patient changes that a subscri
 Profile: HCIMPatientChangeSubscription
 Parent: http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription
 * criteria = "http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution"
-* channel.type = #rest-hook
-* channel.payload.extension[content].valueCode = #full-resource
+* channel MS
+  * type = #rest-hook
+  * type MS
+  * endpoint 1..1 MS
+  * payload MS
+    * extension[content].valueCode = #full-resource
 
 Instance: SampleCompositeSubscriptionRequest
 InstanceOf: HCIMPatientChangeSubscription
