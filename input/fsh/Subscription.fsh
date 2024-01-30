@@ -38,4 +38,5 @@ Description: "Sample subscription request for Composite View events"
 * status = #active
 * reason = "Want to receive composite view notifications"
 * criteria.extension[filterCriteria].valueString = "eventCode=COMPOSITE"
-* channel.payload = #application/fhir+xml"
+* channel.endpoint = "http://example.org/subscription-response-channel"
+* channel.payload = #application/fhir+json"
