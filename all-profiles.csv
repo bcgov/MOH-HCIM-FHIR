@@ -64,7 +64,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HCIMPatientChangeSubscription","Subscription.error","Subscription.error","","","",0,1,"","","Y","string {[]} {[]}
 ","Latest error note","A record of the last error that occurred when the server processed a notification.","","","","","","","","","",,,,,"",,,,"Subscription.error",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"HCIMPatientChangeSubscription","Subscription.channel","Subscription.channel","","","",1,1,"","","Y","BackboneElement {[]} {[]}
+"HCIMPatientChangeSubscription","Subscription.channel","Subscription.channel","","","",1,1,"Y","","Y","BackboneElement {[]} {[]}
 ","The channel on which to report matches to the criteria","Details where to send notifications when resources are received that meet the criteria.","","","","","","","","","",,,,,"",,,,"Subscription.channel",1,1,"","ele-1:All FHIR elements must have a @value or children unless an empty Parameters resource {hasValue() or (children().count() > id.count()) or $this is Parameters}
 "
 "HCIMPatientChangeSubscription","Subscription.channel.id","Subscription.channel.id","","","",0,1,"","","","string {[]} {[]}
@@ -91,7 +91,7 @@ user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"HCIMPatientChangeSubscription","Subscription.channel.type","Subscription.channel.type","","","",1,1,"","","Y","code {[]} {[]}
+"HCIMPatientChangeSubscription","Subscription.channel.type","Subscription.channel.type","","","",1,1,"Y","","Y","code {[]} {[]}
 ","rest-hook | websocket | email | sms | message","The type of channel to send notifications on.","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""rest-hook""/>","","","",,"required","The type of method used to execute a subscription.","http://hl7.org/fhir/ValueSet/subscription-channel-type|4.3.0","",,,,"Subscription.channel.type",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "HCIMPatientChangeSubscription","Subscription.channel.type.id","Subscription.channel.type.id","","","",0,1,"","","","string {[]} {[]}
@@ -106,10 +106,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "HCIMPatientChangeSubscription","Subscription.channel.type.value","Subscription.channel.type.value","","","",0,1,"","","","code {[]} {[]}
 ","Primitive value for code","Primitive value for code","","","","","","","","","",,,,,"",,,,"string.value",0,1,"",""
-"HCIMPatientChangeSubscription","Subscription.channel.endpoint","Subscription.channel.endpoint","","","",0,1,"","","Y","url {[]} {[]}
+"HCIMPatientChangeSubscription","Subscription.channel.endpoint","Subscription.channel.endpoint","","","",1,1,"Y","","Y","url {[]} {[]}
 ","Where the channel points to","The url that describes the actual end-point to send messages to.","For rest-hook, and websocket, the end-point must be an http: or https: URL; for email, a mailto: url, for sms, a tel: url, and for message the endpoint can be in any form of url the server understands (usually, http: or mllp:). The URI is allowed to be relative; in which case, it is relative to the server end-point (since there may be more than one, clients should avoid using relative URIs).","","","","","","","","",,,,,"",,,,"Subscription.channel.endpoint",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"HCIMPatientChangeSubscription","Subscription.channel.payload","Subscription.channel.payload","","","",1,1,"","","Y","code {[]} {[]}
+"HCIMPatientChangeSubscription","Subscription.channel.payload","Subscription.channel.payload","","","",1,1,"Y","","Y","code {[]} {[]}
 ","MIME type to send, or omit for no payload","The mime type to send the payload in - either application/fhir+xml, or application/fhir+json. If the payload is not present, then there is no payload in the notification, just a notification. The mime type ""text/plain"" may also be used for Email and SMS subscriptions.","Sending the payload has obvious security implications. The server is responsible for ensuring that the content is appropriately secured.","","","","","","","","",,"required","BCP 13 (RFCs 2045, 2046, 2047, 4288, 4289 and 2049)","http://hl7.org/fhir/ValueSet/mimetypes|4.3.0","",,,,"Subscription.channel.payload",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "HCIMPatientChangeSubscription","Subscription.channel.payload.id","Subscription.channel.payload.id","","","",0,1,"","","","string {[]} {[]}
