@@ -179,7 +179,7 @@ Parameter Name|Parameter Value|Comments|IN, OUT, both
 :---|:---|:---|:---
 message id|parameter.value[string]|Message (unique) id|both
 create time|parameter.value[dateTime]|Creation date of message|both
-request message id|parameter.value[string]|Message (unique) id|OUT
+request message id|parameter.value[string]|Message (unique) id from request message|OUT
 sender|parameter.value[Identifier]|Message sender|OUT
 enterer|parameter.value[Identifier]|UserId for message|OUT
 requestParameters|parameter.value[MetadataParametersIn]|For searches this is included in the response and echoes back the search IN parameters.
