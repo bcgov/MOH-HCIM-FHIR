@@ -45,6 +45,8 @@ Description: "Parameters profile for BC meta data - outbound messages."
 * parameter[requestMessageId].value[x] only string
 * parameter[requestMessageId].resource 0..0
 * parameter[requestMessageId].part 0..0
+* parameter[requestMessageId] ^short = "The messageID coming from the request"
+//* parameter[requestMessageId].description = "messageId from the Request"
 * parameter[sender].name MS
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier 1..1 MS
