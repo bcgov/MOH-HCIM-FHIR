@@ -3,6 +3,7 @@ Parent: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient
 //Parent: Patient
 Id: bc-update-patient
 Description: "Patient profile used to update a Patient."
+* ^status = #draft
 * extension contains BusinessPeriodExtension named effectiveDates 0..1 MS and GenderIdentityExtension named genderIdentity 0..1 MS
 * identifier only http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 * identifier 1..1 MS

@@ -69,7 +69,8 @@ Description: "Parameters profile for BC meta data - outbound messages."
 Profile: MetadataParametersAsync
 Parent: MetadataParametersIn
 Id: bc-metadata-parameter-async-response
-Description: "Parameters profile for BC meta data - outbound messages."
+Description: "Parameters profile for BC meta data - async messages."
+* ^status = #draft
 * parameter ^slicing.discriminator.type = #value
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #open
@@ -81,6 +82,7 @@ Description: "Parameters profile for BC meta data - outbound messages."
 * parameter[requestMessageId].value[x] only string
 * parameter[requestMessageId].resource 0..0
 * parameter[requestMessageId].part 0..0
+* parameter[requestMessageId] ^short = "The messageID coming from the request"
 * parameter[sender].name MS
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier 1..1 MS

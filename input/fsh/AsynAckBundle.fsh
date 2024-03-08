@@ -2,6 +2,7 @@ Profile: AsyncAckBundle
 Parent: Bundle
 Id: bc-async-ack-response-bundle
 Description: "A Bundle that is used for the ACK response to an aynchronous operation request."
+* ^status = #draft
 * type 1..1 MS
 * type = #collection (exactly)
 * entry 2..2

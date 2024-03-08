@@ -9,5 +9,5 @@ Below is a summary of the onboarding process for Client Registry points of servi
 1. After the point of service system is ready there will be quality checks and message testing that confirms conformance.
 1. Dates are discussed for Production implementation and Production setup commences.
 
-Further information regarding conformance standards can be found on the [Client Registry conformance](https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/software/conformance-standards "BC Government Health Information Exchange") website.
+All the information regarding conformance standards can be found on the [Client Registry conformance](https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/software/getting-started "BC Government Health Information Exchange") website.
 

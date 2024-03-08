@@ -214,6 +214,7 @@ Profile: PartialUpdateRequestBundle
 Parent: Bundle
 Id: bc-update-request-bundle
 Description:  "A Bundle that is used in the Client Registry for Patient update requests."
+* ^status = #draft
 * obeys invariant-update-1
 * type 1..1 MS
 * type = #collection (exactly)
