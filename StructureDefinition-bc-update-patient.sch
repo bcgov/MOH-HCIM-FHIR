@@ -25,6 +25,7 @@
     <sch:rule context="f:Patient/f:identifier">
       <sch:assert test="count(f:extension[@url = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension']) &lt;= 1">extension with URL = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient-operation-extension']) &lt;= 1">extension with URL = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient-operation-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-identifierversion']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-identifierversion': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
