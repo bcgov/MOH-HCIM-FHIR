@@ -1,9 +1,4 @@
-{% raw %}
-<blockquote class="stu-note">
-<p>
-This specification is currently published as a Draft Standard on the ministry GitHub and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide. </p>
-</blockquote>
-{% endraw %}
+
 
 The FHIR artifacts have been created according to the current understood expectations. Priority to the most desired services, as indicated by Client Registry stakeholders, will be implemented first. It still needs to undergo review and testing. Over the next year, the following needs to be completed before this guide will be ready for implementation:
 
