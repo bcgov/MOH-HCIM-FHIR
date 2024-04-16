@@ -3,7 +3,7 @@ The response may not include any Patients if none matched the criteria.  If ther
 
 If multiple Patients match they will all be returned.
 
-If the search used mother's PHN then RelatedPerson resources are returned which include (a) the mother's identifier and (b) a reference to the related Patient in the response Bundle.  There may be multiple Patients returned, and therefore also multiple RelatedPersons, one per Patient (e.g. twins).  See an example [here](Bundle-Bundle-FindCandidates-Response-MomsPHN-Example.html).
+If the search used mother's PHN then RelatedPerson resources are returned which include (a) the mother's identifier and (b) a reference to the related Patient in the response Bundle.  There may be multiple Patients returned, and therefore also multiple RelatedPersons, one per Patient (e.g. twins).  See an example [here](Bundle-FindNewbornByMumsPHN-Response.html).
 
 #### In Bundle Entries
 

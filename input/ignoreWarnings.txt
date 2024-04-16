@@ -1,12 +1,23 @@
 == Suppressed Messages ==
 
-# Extra elements that are not defined as slices
-This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-business-parameters
-This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters
-This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle
+# Inherited mapping has text that looks like HTML
+The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 
-# Terminology that won't be available when generating the examples
-Code System URI 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' is unknown so the code cannot be validated
+# CA Baseline fixes values rather then patterns them
+For the complex type CodeableConcept, consider using a pattern rather than a fixed value to avoid over-constraining the instance
 
-# Check this to see if this is valid or if it is an error in slicing
-This element does not match any known slice defined in the profile http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient
+# Large value sets
+The value set expansion is too large, and only a subset has been displayed
+
+# Terminology artifacts that are unknown to validator
+A definition for CodeSystem 'http://hlth.gov.bc.ca/fhir/client/bc-oo-codes' could not be found, so the code cannot be validated
+
+# Slices don't match - these should be looked at
+This element does not match any known slice defined in the profile%
+
+# Example search bundles need links and modes - look at these
+SearchSet Bundles should have a self link that specifies what the search was
+SearchSet bundles should have search modes on the entries
+
+# Example operation has specific search string
+No types could be determined from the search string, so the types can''t be checked
