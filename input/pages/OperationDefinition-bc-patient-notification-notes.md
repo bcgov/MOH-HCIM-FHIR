@@ -23,5 +23,5 @@ N/A
 #### Examples
 
 The following example is actually the revise patient example as it is identical to the notification request.
-See [Patient Notification request](Bundle-Revise-WithMaxData-Request.html) example. 
+See [Patient Notification request](Bundle-Revise-withMaxData-Request.html) example. 
 

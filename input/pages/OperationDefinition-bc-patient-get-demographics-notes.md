@@ -43,4 +43,4 @@ requestParameters | MetadataParametersIn | 1..1 | The request parameters are ech
 See [Get Demographics request](Bundle-GetDemographics-Request.html) example.  
 See [Get Demographics response](Bundle-GetDemographics-Response.html) example.  
 See [Get Demographics with history response](Bundle-GetDemographics-withHistory-Response.html) example.  
-See [Get Demographics with PHN info response](Bundle-GetDemographics-withPHNinfo-Response.html) example.  
+See [Get Demographics with PHN info response](Bundle-GetDemographics-withPHNInfo-Response.html) example.  
