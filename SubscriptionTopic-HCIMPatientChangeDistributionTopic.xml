@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Basic xmlns="http://hl7.org/fhir">
-  <id value="PASSubscriptionTopic"/>
+  <id value="HCIMPatientChangeDistributionTopic"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><table class="grid"><tr><td colspan="2"><b>Event Triggers</b></td></tr><tr><th><b>Resource</b></th><th><b>Event</b></th></tr><tr><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td><span title="Codes: {https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events COMPOSITE}">composite</span></td></tr><tr><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td><span title="Codes: {https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events DEATH}">death</span></td></tr><tr><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td><span title="Codes: {https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events EID}">eid</span></td></tr><tr><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td><span title="Codes: {https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events NEW}">new PHN</span></td></tr><tr><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td><span title="Codes: {https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events NEWBORN}">newborn</span></td></tr><tr><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td><span title="Codes: {https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events NEWBORN_GENDER}">newborn gender</span></td></tr><tr><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td><span title="Codes: {https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events PHN}">PHN change</span></td></tr><tr><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td><span title="Codes: {https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events PHNJOIN}">PHN Join</span></td></tr><tr><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td><span title="Codes: {https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events PHNMERGE}">PHN Merge</span></td></tr><tr><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td><span title="Codes: {https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events SSRI}">SSRI Sync</span></td></tr></table><table class="grid"><tr><td colspan="2"><b>Can Filter By</b></td></tr><tr><th><b>Filter Parameter</b></th><th><b>Comparators</b></th></tr><tr><td>eventCode</td><td>eq</td></tr></table></div>
   </text>
   <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.url">
-    <valueUri value="http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution"/>
+    <valueUri value="http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistributionTopic"/>
   </extension>
   <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.version">
     <valueString value="1.0.0"/>
   </extension>
   <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.name">
-    <valueString value="HCIMPatientChangeDistributionsSubscriptionTopic"/>
+    <valueString value="HCIMPatientChangeDistributionsTopic"/>
   </extension>
   <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.title">
-    <valueString value="HCIM Patient Change Distributions Subscription Topic"/>
+    <valueString value="HCIM Patient Change Distributions Topic"/>
   </extension>
   <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.status">
     <valueCode value="active"/>
@@ -24,7 +24,7 @@
     <valueBoolean value="false"/>
   </extension>
   <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.date">
-    <valueDateTime value="2024-03-25T22:09:10+00:00"/>
+    <valueDateTime value="2024-04-16T20:55:14+00:00"/>
   </extension>
   <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.publisher">
     <valueString value="BC Ministry of Health"/>
@@ -37,6 +37,9 @@
         <value value="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"/>
       </telecom>
     </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.description">
+    <valueMarkdown value="This is the subscription topic used for subscribing to different change distributions."/>
   </extension>
   <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.jurisdiction">
     <valueCodeableConcept>

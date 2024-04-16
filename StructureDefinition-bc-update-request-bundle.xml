@@ -20,7 +20,7 @@
   <version value="1.0.0"/>
   <name value="PartialUpdateRequestBundle"/>
   <status value="draft"/>
-  <date value="2024-03-25T22:09:10+00:00"/>
+  <date value="2024-04-16T20:55:14+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -151,7 +151,7 @@
         <key value="invariant-update-1"/>
         <severity value="error"/>
         <human value="When Updating a Patient with the UpdatePatient Operation at least one of name, telecom, gender, address, birthDate or deceased attributes must be present."/>
-        <expression value="entry.resource.ofType(Patient).name.count()&gt;=1 or entry.resource.ofType(Patient).telecom.count()&gt;=1 or entry.resource.ofType(Patient).gender.count() &gt;=1 or entry.resource.ofType(Patient).deceased[x].count()&gt;=1 or entry.resource.ofType(Patient).address.count()&gt;=1 or entry.resource.ofType(Patient).communication.count()&gt;=1"/>
+        <expression value="entry.resource.ofType(Patient).name.count()&gt;=1 or entry.resource.ofType(Patient).telecom.count()&gt;=1 or entry.resource.ofType(Patient).gender.count() &gt;=1 or entry.resource.ofType(Patient).deceased.count()&gt;=1 or entry.resource.ofType(Patient).address.count()&gt;=1 or entry.resource.ofType(Patient).communication.count()&gt;=1"/>
         <source value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-request-bundle"/>
       </constraint>
       <isModifier value="false"/>
@@ -3550,7 +3550,7 @@
         <key value="invariant-update-1"/>
         <severity value="error"/>
         <human value="When Updating a Patient with the UpdatePatient Operation at least one of name, telecom, gender, address, birthDate or deceased attributes must be present."/>
-        <expression value="entry.resource.ofType(Patient).name.count()&gt;=1 or entry.resource.ofType(Patient).telecom.count()&gt;=1 or entry.resource.ofType(Patient).gender.count() &gt;=1 or entry.resource.ofType(Patient).deceased[x].count()&gt;=1 or entry.resource.ofType(Patient).address.count()&gt;=1 or entry.resource.ofType(Patient).communication.count()&gt;=1"/>
+        <expression value="entry.resource.ofType(Patient).name.count()&gt;=1 or entry.resource.ofType(Patient).telecom.count()&gt;=1 or entry.resource.ofType(Patient).gender.count() &gt;=1 or entry.resource.ofType(Patient).deceased.count()&gt;=1 or entry.resource.ofType(Patient).address.count()&gt;=1 or entry.resource.ofType(Patient).communication.count()&gt;=1"/>
         <source value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-request-bundle"/>
       </constraint>
     </element>

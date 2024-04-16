@@ -16,7 +16,7 @@
   fhir:version [ fhir:v "1.0.0"] ; # 
   fhir:name [ fhir:v "PartialUpdateRequestBundle"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-03-25T22:09:10+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-04-16T20:55:14+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "BC Ministry of Health"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "BC Ministry of Health" ] ;
@@ -166,7 +166,7 @@
          fhir:key [ fhir:v "invariant-update-1" ] ;
          fhir:severity [ fhir:v "error" ] ;
          fhir:human [ fhir:v "When Updating a Patient with the UpdatePatient Operation at least one of name, telecom, gender, address, birthDate or deceased attributes must be present." ] ;
-         fhir:expression [ fhir:v "entry.resource.ofType(Patient).name.count()>=1 or entry.resource.ofType(Patient).telecom.count()>=1 or entry.resource.ofType(Patient).gender.count() >=1 or entry.resource.ofType(Patient).deceased[x].count()>=1 or entry.resource.ofType(Patient).address.count()>=1 or entry.resource.ofType(Patient).communication.count()>=1" ] ;
+         fhir:expression [ fhir:v "entry.resource.ofType(Patient).name.count()>=1 or entry.resource.ofType(Patient).telecom.count()>=1 or entry.resource.ofType(Patient).gender.count() >=1 or entry.resource.ofType(Patient).deceased.count()>=1 or entry.resource.ofType(Patient).address.count()>=1 or entry.resource.ofType(Patient).communication.count()>=1" ] ;
          fhir:source [
            fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-request-bundle"^^xsd:anyURI ;
            fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-request-bundle>
@@ -3913,7 +3913,7 @@
          fhir:key [ fhir:v "invariant-update-1" ] ;
          fhir:severity [ fhir:v "error" ] ;
          fhir:human [ fhir:v "When Updating a Patient with the UpdatePatient Operation at least one of name, telecom, gender, address, birthDate or deceased attributes must be present." ] ;
-         fhir:expression [ fhir:v "entry.resource.ofType(Patient).name.count()>=1 or entry.resource.ofType(Patient).telecom.count()>=1 or entry.resource.ofType(Patient).gender.count() >=1 or entry.resource.ofType(Patient).deceased[x].count()>=1 or entry.resource.ofType(Patient).address.count()>=1 or entry.resource.ofType(Patient).communication.count()>=1" ] ;
+         fhir:expression [ fhir:v "entry.resource.ofType(Patient).name.count()>=1 or entry.resource.ofType(Patient).telecom.count()>=1 or entry.resource.ofType(Patient).gender.count() >=1 or entry.resource.ofType(Patient).deceased.count()>=1 or entry.resource.ofType(Patient).address.count()>=1 or entry.resource.ofType(Patient).communication.count()>=1" ] ;
          fhir:source [
            fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-request-bundle"^^xsd:anyURI ;
            fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-request-bundle>

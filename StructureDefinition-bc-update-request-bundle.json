@@ -9,7 +9,7 @@
   "version" : "1.0.0",
   "name" : "PartialUpdateRequestBundle",
   "status" : "draft",
-  "date" : "2024-03-25T22:09:10+00:00",
+  "date" : "2024-04-16T20:55:14+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",
@@ -141,7 +141,7 @@
         "key" : "invariant-update-1",
         "severity" : "error",
         "human" : "When Updating a Patient with the UpdatePatient Operation at least one of name, telecom, gender, address, birthDate or deceased attributes must be present.",
-        "expression" : "entry.resource.ofType(Patient).name.count()>=1 or entry.resource.ofType(Patient).telecom.count()>=1 or entry.resource.ofType(Patient).gender.count() >=1 or entry.resource.ofType(Patient).deceased[x].count()>=1 or entry.resource.ofType(Patient).address.count()>=1 or entry.resource.ofType(Patient).communication.count()>=1",
+        "expression" : "entry.resource.ofType(Patient).name.count()>=1 or entry.resource.ofType(Patient).telecom.count()>=1 or entry.resource.ofType(Patient).gender.count() >=1 or entry.resource.ofType(Patient).deceased.count()>=1 or entry.resource.ofType(Patient).address.count()>=1 or entry.resource.ofType(Patient).communication.count()>=1",
         "source" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-request-bundle"
       }],
       "isModifier" : false,
@@ -3675,7 +3675,7 @@
         "key" : "invariant-update-1",
         "severity" : "error",
         "human" : "When Updating a Patient with the UpdatePatient Operation at least one of name, telecom, gender, address, birthDate or deceased attributes must be present.",
-        "expression" : "entry.resource.ofType(Patient).name.count()>=1 or entry.resource.ofType(Patient).telecom.count()>=1 or entry.resource.ofType(Patient).gender.count() >=1 or entry.resource.ofType(Patient).deceased[x].count()>=1 or entry.resource.ofType(Patient).address.count()>=1 or entry.resource.ofType(Patient).communication.count()>=1",
+        "expression" : "entry.resource.ofType(Patient).name.count()>=1 or entry.resource.ofType(Patient).telecom.count()>=1 or entry.resource.ofType(Patient).gender.count() >=1 or entry.resource.ofType(Patient).deceased.count()>=1 or entry.resource.ofType(Patient).address.count()>=1 or entry.resource.ofType(Patient).communication.count()>=1",
         "source" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-request-bundle"
       }]
     },

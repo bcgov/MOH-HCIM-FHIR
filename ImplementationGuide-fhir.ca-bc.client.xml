@@ -11,7 +11,7 @@
   <name value="BCHealthClientIdentityManagement"/>
   <title value="BC Client Registry FHIR Implementation Guide"/>
   <status value="active"/>
-  <date value="2024-03-25T22:09:10+00:00"/>
+  <date value="2024-04-16T20:55:14+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -52,9 +52,9 @@
     <packageId value="hl7.fhir.ca.baseline"/>
     <version value="1.1.7"/>
   </dependsOn>
-  <dependsOn id="hl7_fhir_uv_subscriptions_backport">
+  <dependsOn id="hl7_fhir_uv_subscriptions_backport_r4">
     <uri value="http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport"/>
-    <packageId value="hl7.fhir.uv.subscriptions-backport"/>
+    <packageId value="hl7.fhir.uv.subscriptions-backport.r4"/>
     <version value="1.1.0"/>
   </dependsOn>
   <definition>
@@ -1152,9 +1152,10 @@
         <valueString value="SubscriptionTopic"/>
       </extension>
       <reference>
-        <reference value="SubscriptionTopic/PASSubscriptionTopic"/>
+        <reference value="SubscriptionTopic/HCIMPatientChangeDistributionTopic"/>
       </reference>
-      <name value="HCIM Patient Change Distributions Subscription Topic"/>
+      <name value="HCIM Patient Change Distributions Topic"/>
+      <description value="This is the subscription topic used for subscribing to different change distributions."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1165,6 +1166,7 @@
         <reference value="StructureDefinition/HCIMPatientChangeSubscription"/>
       </reference>
       <name value="HCIMPatientChangeSubscription"/>
+      <description value="Profile on subscription for HCIM Patient Changes"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
