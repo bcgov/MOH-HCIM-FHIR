@@ -107,8 +107,7 @@ Description: "Example OperationOutcome for a Client Registry Search"
 * issue.severity = #warning
 * issue.code = #business-rule
 * issue.details.text = "Warning: The identifier you used in the query has been merged. The surviving identifier was returned."
-* issue.details.coding.system = "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes"
-* issue.details.coding.code = #BCHCIM.GD.0.0015
+* issue.details = $bc-oo-codes#BCHIM.GD.0.0015
 
 // incoming address so no validation status
 Instance: Address-0-Example
