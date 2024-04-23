@@ -1,9 +1,9 @@
 BCHealthClientIdentityManagement : Validation Results
 =========================================
 
-err = 32, warn = 10, info = 3
-IG Publisher Version: 1.6.4
-Generated Tue Apr 16 21:10:44 UTC 2024. FHIR version 4.0.1 for fhir.ca-bc.client#1.0.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
+err = 32, warn = 12, info = 21
+IG Publisher Version: 1.6.6
+Generated Tue Apr 23 21:12:44 UTC 2024. FHIR version 4.0.1 for fhir.ca-bc.client#1.0.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
  Build Errors : 0 / 4 / 0
  /github/workspace/fsh-generated/resources/Bundle-AddNewbornByMumsPHN-Request : 0 / 0 / 9
  /github/workspace/fsh-generated/resources/Bundle-AddPatient-Request : 0 / 0 / 10
@@ -81,6 +81,7 @@ Generated Tue Apr 16 21:10:44 UTC 2024. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-metadata-parameter-async-response : 0 / 0 / 2
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-metadata-parameters-in : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-metadata-parameters-out : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-bc-metadata-parameters-subscription : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-multiplebirth-history-extension : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-patient : 0 / 1 / 7
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-patient-by-example : 0 / 2 / 6
@@ -89,6 +90,7 @@ Generated Tue Apr 16 21:10:44 UTC 2024. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-search-response-bundle : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-search-withEligibility-response-bundle : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-sourceId-extension : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-bc-subscription-notification-bundle : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-update-patient : 0 / 1 / 7
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-update-patient-operation-extension : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-update-request-bundle : 0 / 0 / 1
@@ -112,16 +114,24 @@ WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in 
 == fsh-generated/resources/Bundle-AddNewbornByMumsPHN-Request.json ==
 == fsh-generated/resources/Bundle-AddPatient-Request.json ==
 == fsh-generated/resources/Bundle-AddPatient-Response.json ==
+INFORMATION: Bundle/AddPatient-Response: Bundle.entry[1].resource/*OperationOutcome/AddPatient-Response-Outcome*/.issue[0].details.coding[0].system: A definition for CodeSystem 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes' could not be found, so the code cannot be validated
 == fsh-generated/resources/Bundle-Bundle-GetDemographicsWithEligibility-Response-Example.json ==
+INFORMATION: Bundle/Bundle-GetDemographicsWithEligibility-Response-Example: Bundle.entry[1].resource/*OperationOutcome/OperationOutcome-Search-Example*/.issue[0].details.coding[0]: A definition for CodeSystem 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes' could not be found, so the code cannot be validated
 == fsh-generated/resources/Bundle-Bundle-MergePatient-Request-Example.json ==
 == fsh-generated/resources/Bundle-Bundle-MergePatient-Response-Example.json ==
+INFORMATION: Bundle/Bundle-MergePatient-Response-Example: Bundle.entry[1].resource/*OperationOutcome/OperationOutcome-Example*/.issue[0].details.coding[0]: A definition for CodeSystem 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes' could not be found, so the code cannot be validated
+INFORMATION: Bundle/Bundle-MergePatient-Response-Example: Bundle.entry[1].resource/*OperationOutcome/OperationOutcome-Example*/.issue[1].details.coding[0]: A definition for CodeSystem 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes' could not be found, so the code cannot be validated
 == fsh-generated/resources/Bundle-Bundle-UpdatePatient-Request-Example.json ==
 == fsh-generated/resources/Bundle-Bundle-UpdatePatient-Response-Example.json ==
+INFORMATION: Bundle/Bundle-UpdatePatient-Response-Example: Bundle.entry[1].resource/*OperationOutcome/OperationOutcome-Example*/.issue[0].details.coding[0]: A definition for CodeSystem 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes' could not be found, so the code cannot be validated
+INFORMATION: Bundle/Bundle-UpdatePatient-Response-Example: Bundle.entry[1].resource/*OperationOutcome/OperationOutcome-Example*/.issue[1].details.coding[0]: A definition for CodeSystem 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes' could not be found, so the code cannot be validated
 == fsh-generated/resources/Bundle-FindCandidates-Request.json ==
 == fsh-generated/resources/Bundle-FindCandidates-Response.json ==
+INFORMATION: Bundle/FindCandidates-Response: Bundle.entry[1].resource/*OperationOutcome/FindCandidates-response-Outcome*/.issue[0].details.coding[0]: A definition for CodeSystem 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes' could not be found, so the code cannot be validated
 == fsh-generated/resources/Bundle-FindNewbornByMumsPHN-Request.json ==
 ERROR: Bundle/FindNewbornByMumsPHN-Request: Bundle.entry[1].resource/*RelatedPerson/FindBabiesByMumsPHN-RelatedPerson*/.patient: Unable to resolve resource with reference 'Patient/e418862f-1759-42de-98a9-00433a779e9b'
 == fsh-generated/resources/Bundle-FindNewbornByMumsPHN-Response.json ==
+INFORMATION: Bundle/FindNewbornByMumsPHN-Response: Bundle.entry[1].resource/*OperationOutcome/FindNewbornByMumsPHN-Response-Outcome*/.issue[0].details.coding[0]: A definition for CodeSystem 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes' could not be found, so the code cannot be validated
 INFORMATION: Bundle/FindNewbornByMumsPHN-Response: Bundle.entry[4].resource/*Patient/7668592e-2316-4ea8-bbab-bb601239e71e*/.link[0].other: Details for urn:uuid:13cb4c36-102d-49c7-9f2e-f652ece39ecf matching against profile http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1
 INFORMATION: Bundle/FindNewbornByMumsPHN-Response: Bundle.entry[4].resource/*Patient/7668592e-2316-4ea8-bbab-bb601239e71e*/.link[1].other: Details for urn:uuid:613f5d13-9753-4c0c-89f9-f2bce0622721 matching against profile http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1
 WARNING: Bundle/FindNewbornByMumsPHN-Response: Bundle.entry[5].resource/*RelatedPerson/FindNewbornByMumsPHN-Response-RelatedPerson1*/.patient: URN reference is not locally contained within the bundle urn:uuid:71092811-55f9-4e1f-8754-a6828da1d51c
@@ -130,16 +140,23 @@ WARNING: Bundle/FindNewbornByMumsPHN-Response: Bundle.entry[6].resource/*Related
 ERROR: Bundle/FindNewbornByMumsPHN-Response: Bundle.entry[6].resource/*RelatedPerson/FindNewbornByMumsPHN-Response-RelatedPerson2*/.patient: Unable to resolve resource with reference 'urn:uuid:69b91ae6-e147-4dd0-abe7-8912ec301fd9'
 == fsh-generated/resources/Bundle-GetDemographics-Request.json ==
 == fsh-generated/resources/Bundle-GetDemographics-Response.json ==
+INFORMATION: Bundle/GetDemographics-Response: Bundle.entry[1].resource/*OperationOutcome/GetDemographics-Response-Outcome*/.issue[0].details.coding[0]: A definition for CodeSystem 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes' could not be found, so the code cannot be validated
 == fsh-generated/resources/Bundle-GetDemographics-withHistory-Request.json ==
 == fsh-generated/resources/Bundle-GetDemographics-withHistory-Response.json ==
+INFORMATION: Bundle/GetDemographics-withHistory-Response: Bundle.entry[1].resource/*OperationOutcome/GetDemographics-withHistory-Response-Outcome*/.issue[0].details.coding[0]: A definition for CodeSystem 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes' could not be found, so the code cannot be validated
 == fsh-generated/resources/Bundle-GetDemographics-withPHNInfo-Response.json ==
+INFORMATION: Bundle/GetDemographics-withPHNInfo-Response: Bundle.entry[1].resource/*OperationOutcome/GetDemographics-withPHNInfo-Response-Outcome*/.issue[0].details.coding[0]: A definition for CodeSystem 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes' could not be found, so the code cannot be validated
 == fsh-generated/resources/Bundle-Merge-Only-Request.json ==
 == fsh-generated/resources/Bundle-Merge-Response.json ==
+INFORMATION: Bundle/Merge-Response: Bundle.entry[1].resource/*OperationOutcome/Merge-Response-Outcome*/.issue[0].details.coding[0]: A definition for CodeSystem 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes' could not be found, so the code cannot be validated
 == fsh-generated/resources/Bundle-Merge-SSRI-Request.json ==
 == fsh-generated/resources/Bundle-Merge-WithPayload-Request.json ==
 == fsh-generated/resources/Bundle-Merge-WithPayload-Response.json ==
+INFORMATION: Bundle/Merge-WithPayload-Response: Bundle.entry[1].resource/*OperationOutcome/Merge-WithPayload-Response-Outcome*/.issue[0].details.coding[0]: A definition for CodeSystem 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes' could not be found, so the code cannot be validated
 == fsh-generated/resources/Bundle-Revise-Async-ACK.json ==
+INFORMATION: Bundle/Revise-Async-ACK: Bundle.entry[1].resource/*OperationOutcome/Revise-Async-ACK-Outcome*/.issue[0].details.coding[0]: A definition for CodeSystem 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes' could not be found, so the code cannot be validated
 == fsh-generated/resources/Bundle-Revise-Response.json ==
+INFORMATION: Bundle/Revise-Response: Bundle.entry[1].resource/*OperationOutcome/Revise-Response-Outcome*/.issue[0].details.coding[0]: A definition for CodeSystem 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes' could not be found, so the code cannot be validated
 == fsh-generated/resources/Bundle-Revise-withMaxData-Request.json ==
 == fsh-generated/resources/CapabilityStatement-bc-hcim-capability-statement-client.json ==
 == fsh-generated/resources/CapabilityStatement-bc-hcim-capability-statement-server.json ==
@@ -175,7 +192,10 @@ ERROR: ImplementationGuide/fhir.ca-bc.client: ImplementationGuide.dependsOn[2].u
 == fsh-generated/resources/OperationDefinition-bc-patient-revise.json ==
 == fsh-generated/resources/OperationDefinition-bc-patient-update.json ==
 == fsh-generated/resources/OperationOutcome-OperationOutcome-Example.json ==
+INFORMATION: OperationOutcome/OperationOutcome-Example: OperationOutcome.issue[0].details.coding[0]: A definition for CodeSystem 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes' could not be found, so the code cannot be validated
+INFORMATION: OperationOutcome/OperationOutcome-Example: OperationOutcome.issue[1].details.coding[0]: A definition for CodeSystem 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes' could not be found, so the code cannot be validated
 == fsh-generated/resources/OperationOutcome-OperationOutcome-Search-Example.json ==
+INFORMATION: OperationOutcome/OperationOutcome-Search-Example: OperationOutcome.issue[0].details.coding[0]: A definition for CodeSystem 'https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes' could not be found, so the code cannot be validated
 == fsh-generated/resources/Parameters-Parameters-GetDemographicsWithEligibility-Response-Example.json ==
 == fsh-generated/resources/Parameters-Parameters-MergePatient-Response-Example.json ==
 == fsh-generated/resources/Parameters-Parameters-MergePatient-TwoNonSurvivors-Example.json ==
@@ -207,6 +227,8 @@ WARNING: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/Stru
 INFORMATION: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameter-async-response'): The Implementation Guide contains no explicitly linked examples for this profile
 == fsh-generated/resources/StructureDefinition-bc-metadata-parameters-in.json ==
 == fsh-generated/resources/StructureDefinition-bc-metadata-parameters-out.json ==
+== fsh-generated/resources/StructureDefinition-bc-metadata-parameters-subscription.json ==
+WARNING: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-subscription'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-bc-multiplebirth-history-extension.json ==
 WARNING: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-multiplebirth-history-extension'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-bc-patient.json ==
@@ -218,6 +240,8 @@ WARNING: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/Stru
 == fsh-generated/resources/StructureDefinition-bc-search-withEligibility-response-bundle.json ==
 WARNING: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-withEligibility-response-bundle'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-bc-sourceId-extension.json ==
+== fsh-generated/resources/StructureDefinition-bc-subscription-notification-bundle.json ==
+WARNING: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-bc-update-patient.json ==
 == fsh-generated/resources/StructureDefinition-bc-update-patient-operation-extension.json ==
 == fsh-generated/resources/StructureDefinition-bc-update-request-bundle.json ==

@@ -10,7 +10,7 @@
   "name" : "BCHealthClientIdentityManagement",
   "title" : "BC Client Registry FHIR Implementation Guide",
   "status" : "active",
-  "date" : "2024-04-16T21:07:01+00:00",
+  "date" : "2024-04-23T21:08:53+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",
@@ -38,7 +38,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "5.3.0"
+    "version" : "5.5.0"
   },
   {
     "id" : "hl7ext",
@@ -1550,6 +1550,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-metadata-parameters-subscription"
+      },
+      "name" : "MetadataParametersSubscription",
+      "description" : "Parameters profile for BC meta data when a subscription response is sent.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "OperationOutcome"
       }],
       "reference" : {
@@ -1859,6 +1871,18 @@
       "description" : "A Bundle that is used in the Client Registry response to Get Demographics with Eligibility queries.",
       "exampleBoolean" : false,
       "groupingId" : "SupportingProfiles"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bc-subscription-notification-bundle"
+      },
+      "name" : "SubscriptionNotificationBundle",
+      "description" : "A Bundle that is used in the Client Registry when sending subscription notifications.",
+      "exampleBoolean" : false
     }],
     "page" : {
       "extension" : [{
