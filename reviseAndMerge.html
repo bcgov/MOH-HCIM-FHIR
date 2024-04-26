@@ -41,8 +41,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"9"}
-    h3,h4,h5,h6{--heading-prefix:"9"}</style>
+    <style type="text/css">h2{--heading-prefix:"10"}
+    h3,h4,h5,h6{--heading-prefix:"10"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Left logo - typically the publisher's logo - project or affiliate -->
@@ -88,9 +88,6 @@
               <!-- menu.xml  -->
 
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
-  <li>
-    <a href="index.html">Home</a>
-  </li>
   <li>
     <a href="overview.html">Overview</a>
   </li>
@@ -190,21 +187,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#add-patient" id="markdown-toc-add-patient">Add Patient</a></li>
-  <li><a href="#revise-patient" id="markdown-toc-revise-patient">Revise Patient</a></li>
-  <li><a href="#merge-patient" id="markdown-toc-merge-patient">Merge Patient</a></li>
-  <li><a href="#fhir-structure-for-add-revise-merge-and-distributions" id="markdown-toc-fhir-structure-for-add-revise-merge-and-distributions">FHIR Structure for Add, Revise, Merge and Distributions</a></li>
-  <li><a href="#asynchronous-operations" id="markdown-toc-asynchronous-operations">Asynchronous Operations</a></li>
-  <li><a href="#partially-update-patient" id="markdown-toc-partially-update-patient">Partially Update Patient</a></li>
+  <li><a href="#add-patient---future" id="markdown-toc-add-patient---future">Add Patient - FUTURE</a></li>
+  <li><a href="#revise-patient---future" id="markdown-toc-revise-patient---future">Revise Patient - FUTURE</a></li>
+  <li><a href="#merge-patient---future" id="markdown-toc-merge-patient---future">Merge Patient - FUTURE</a></li>
+  <li><a href="#fhir-structure-for-add-revise-merge-and-distributions---future" id="markdown-toc-fhir-structure-for-add-revise-merge-and-distributions---future">FHIR Structure for Add, Revise, Merge and Distributions - FUTURE</a></li>
+  <li><a href="#asynchronous-operations---future" id="markdown-toc-asynchronous-operations---future">Asynchronous Operations - FUTURE</a></li>
 </ul>
 
 </div>
 
-<h3 id="add-patient">Add Patient</h3>
+<h3 id="add-patient---future">Add Patient - FUTURE</h3>
 
 <p>An add is defined as an event where at least the minimum Client Registry data elements are gathered for the first time, validated using trusted identification provided by the client and a new PHN and client record is created.</p>
 
-<h3 id="revise-patient">Revise Patient</h3>
+<h3 id="revise-patient---future">Revise Patient - FUTURE</h3>
 
 <p>A revise is defined as an event where at least the minimum Client Registry data elements of an existing client with a PHN are verified using trusted identification provided by the client and updated.</p>
 
@@ -212,7 +208,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>To prevent the termination of certain attributes in the composite view, the point of service application must first query the Client Registry and resend in a Revised Person message any attributes that were returned on the query that are not maintained in the local system.</p>
 
-<h3 id="merge-patient">Merge Patient</h3>
+<h3 id="merge-patient---future">Merge Patient - FUTURE</h3>
 
 <p>The Merge Patient transaction is used to merge duplicate records in the Client Registry.</p>
 
@@ -222,7 +218,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>The patient record the point of service is keeping must be in the Client Registry prior to the merge or the Merge Person message will fail. This record is known as the ‘survivor’ record.</p>
 
-<h3 id="fhir-structure-for-add-revise-merge-and-distributions">FHIR Structure for Add, Revise, Merge and Distributions</h3>
+<h3 id="fhir-structure-for-add-revise-merge-and-distributions---future">FHIR Structure for Add, Revise, Merge and Distributions - FUTURE</h3>
 
 <p>The FHIR structure is roughly the same for Add, Merge, Revise and Distributions.  RelatedPerson is only required to AddPatient newborns.  Responses (if required) are wrapped in collection Bundles and include OperationOutcome, Operation Parameters, possible RelatedPerson resources and Patient resources.</p>
 
@@ -230,7 +226,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 	<img src="revise_merge_fhir.png" height="300" />
 </span></p>
 
-<h3 id="asynchronous-operations">Asynchronous Operations</h3>
+<h3 id="asynchronous-operations---future">Asynchronous Operations - FUTURE</h3>
 
 <p>The asynchronous pattern for Revise and Merge Patient follow the same pattern as V3.  The figure below shows a client requesting an operation from the Client Registry and the Client Registry responding, later, with the response.</p>
 
@@ -240,9 +236,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>The request/responses are associated by the unique message id in the Parameters resource.  The client must create a FHIR Operation end point to receive the responses at a later time.  Specifically the response will be a Bundle, as documented in the <a href="OperationDefinition-bc-patient-revise.html">RevisePatient</a> and <a href="OperationDefinition-bc-patient-merge.html">MergePatient</a> operations.  The response contains the IN parameters requestMessageId to link the messageId in the request to the asynchronous response.</p>
 
-<h3 id="partially-update-patient">Partially Update Patient</h3>
+<p>&lt;!— ### Partially Update Patient</p>
 
-<p>This is a special Operation that allows a user to selectively update a Patient record.  It has the same FHIR structure as Revise Patient except the Patient resource can be minimally populated. Besides an Identifier the user is able to selectively update Patient attributes.  This Operation should be used when the user doesn’t have the full Patient record available.  See the <a href="OperationDefinition-bc-patient-update.html">Update Operation</a>.</p>
+<p>This is a special Operation that allows a user to selectively update a Patient record.  It has the same FHIR structure as Revise Patient except the Patient resource can be minimally populated. Besides an Identifier the user is able to selectively update Patient attributes.  This Operation should be used when the user doesn’t have the full Patient record available.  See the <a href="OperationDefinition-bc-patient-update.html">Update Operation</a>. —&gt;</p>
 
 
 
@@ -263,7 +259,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 23, 2024 21:08+0000">2024-04-23</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 26, 2024 16:50+0000">2024-04-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

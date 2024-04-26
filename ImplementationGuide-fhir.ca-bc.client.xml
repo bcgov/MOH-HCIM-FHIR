@@ -11,7 +11,7 @@
   <name value="BCHealthClientIdentityManagement"/>
   <title value="BC Client Registry FHIR Implementation Guide"/>
   <status value="active"/>
-  <date value="2024-04-23T21:08:53+00:00"/>
+  <date value="2024-04-26T16:50:56+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -1065,18 +1065,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="OperationDefinition"/>
-      </extension>
-      <reference>
-        <reference value="OperationDefinition/bc-patient-get-demographics-withEligibility"/>
-      </reference>
-      <name value="GetDemographics withEligibility"/>
-      <description value="This operation is used to query for a patient.  The response can contain 0 or 1 Patient and the insurance eligibility."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Operations"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Bundle"/>
       </extension>
       <reference>
@@ -1610,7 +1598,6 @@
       <name value="SearchWithEligibilityResponseBundle"/>
       <description value="A Bundle that is used in the Client Registry response to Get Demographics with Eligibility queries."/>
       <exampleBoolean value="false"/>
-      <groupingId value="SupportingProfiles"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1632,26 +1619,10 @@
       <generation value="html"/>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="index.html"/>
-        </extension>
-        <nameUrl value="index.html"/>
-        <title value="Introduction"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="overview.html"/>
         </extension>
         <nameUrl value="overview.html"/>
-        <title value="HCIM Overview"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="v3Transition.html"/>
-        </extension>
-        <nameUrl value="v3Transition.html"/>
-        <title value="Transition from V3 Provider to FHIR"/>
+        <title value="Client Registry Overview"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -1664,10 +1635,34 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="v3Transition.html"/>
+        </extension>
+        <nameUrl value="v3Transition.html"/>
+        <title value="Transition from V3 Provider to FHIR"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="connectedPartner.html"/>
         </extension>
         <nameUrl value="connectedPartner.html"/>
         <title value="Connected Partners"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="capabilityStatement.html"/>
+        </extension>
+        <nameUrl value="capabilityStatement.html"/>
+        <title value="Capability Statement"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="futurePlans.html"/>
+        </extension>
+        <nameUrl value="futurePlans.html"/>
+        <title value="Future Plans"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -1712,14 +1707,6 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="futurePlans.html"/>
-        </extension>
-        <nameUrl value="futurePlans.html"/>
-        <title value="Future Plans"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="identifiers.html"/>
         </extension>
         <nameUrl value="identifiers.html"/>
@@ -1732,14 +1719,6 @@
         </extension>
         <nameUrl value="absentData.html"/>
         <title value="Data Absent Reason"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="capabilityStatement.html"/>
-        </extension>
-        <nameUrl value="capabilityStatement.html"/>
-        <title value="Capability Statement"/>
         <generation value="markdown"/>
       </page>
     </page>

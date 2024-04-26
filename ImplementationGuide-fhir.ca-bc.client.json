@@ -10,7 +10,7 @@
   "name" : "BCHealthClientIdentityManagement",
   "title" : "BC Client Registry FHIR Implementation Guide",
   "status" : "active",
-  "date" : "2024-04-23T21:08:53+00:00",
+  "date" : "2024-04-26T16:50:56+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",
@@ -1279,19 +1279,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationDefinition"
-      }],
-      "reference" : {
-        "reference" : "OperationDefinition/bc-patient-get-demographics-withEligibility"
-      },
-      "name" : "GetDemographics withEligibility",
-      "description" : "This operation is used to query for a patient.  The response can contain 0 or 1 Patient and the insurance eligibility.",
-      "exampleBoolean" : false,
-      "groupingId" : "Operations"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
       }],
       "reference" : {
@@ -1869,8 +1856,7 @@
       },
       "name" : "SearchWithEligibilityResponseBundle",
       "description" : "A Bundle that is used in the Client Registry response to Get Demographics with Eligibility queries.",
-      "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1895,28 +1881,10 @@
       "page" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "index.html"
-        }],
-        "nameUrl" : "index.html",
-        "title" : "Introduction",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "overview.html"
         }],
         "nameUrl" : "overview.html",
-        "title" : "HCIM Overview",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "v3Transition.html"
-        }],
-        "nameUrl" : "v3Transition.html",
-        "title" : "Transition from V3 Provider to FHIR",
+        "title" : "Client Registry Overview",
         "generation" : "markdown"
       },
       {
@@ -1931,10 +1899,37 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "v3Transition.html"
+        }],
+        "nameUrl" : "v3Transition.html",
+        "title" : "Transition from V3 Provider to FHIR",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "connectedPartner.html"
         }],
         "nameUrl" : "connectedPartner.html",
         "title" : "Connected Partners",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "capabilityStatement.html"
+        }],
+        "nameUrl" : "capabilityStatement.html",
+        "title" : "Capability Statement",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "futurePlans.html"
+        }],
+        "nameUrl" : "futurePlans.html",
+        "title" : "Future Plans",
         "generation" : "markdown"
       },
       {
@@ -1985,15 +1980,6 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "futurePlans.html"
-        }],
-        "nameUrl" : "futurePlans.html",
-        "title" : "Future Plans",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "identifiers.html"
         }],
         "nameUrl" : "identifiers.html",
@@ -2007,15 +1993,6 @@
         }],
         "nameUrl" : "absentData.html",
         "title" : "Data Absent Reason",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "capabilityStatement.html"
-        }],
-        "nameUrl" : "capabilityStatement.html",
-        "title" : "Capability Statement",
         "generation" : "markdown"
       }]
     },

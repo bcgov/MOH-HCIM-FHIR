@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "BCHealthClientIdentityManagement"] ; # 
   fhir:title [ fhir:v "BC Client Registry FHIR Implementation Guide"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-04-23T21:08:53+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-04-26T16:50:56+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "BC Ministry of Health"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "BC Ministry of Health" ] ;
@@ -1226,19 +1226,6 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "OperationDefinition" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-get-demographics-withEligibility> ;
-         fhir:reference [ fhir:v "OperationDefinition/bc-patient-get-demographics-withEligibility" ]
-       ] ;
-       fhir:name [ fhir:v "GetDemographics withEligibility" ] ;
-       fhir:description [ fhir:v "This operation is used to query for a patient.  The response can contain 0 or 1 Patient and the insurance eligibility." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
-       fhir:groupingId [ fhir:v "Operations" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "Bundle" ]
        ] ) ;
        fhir:reference [
@@ -1883,8 +1870,7 @@
        ] ;
        fhir:name [ fhir:v "SearchWithEligibilityResponseBundle" ] ;
        fhir:description [ fhir:v "A Bundle that is used in the Client Registry response to Get Demographics with Eligibility queries." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
-       fhir:groupingId [ fhir:v "SupportingProfiles" ]
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1909,26 +1895,10 @@
        fhir:page ( [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "index.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "index.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Introduction" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
            fhir:value [ fhir:v "overview.html"^^xsd:anyURI ]
          ] ) ;
          fhir:name [ fhir:v "overview.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "HCIM Overview" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "v3Transition.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "v3Transition.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Transition from V3 Provider to FHIR" ] ;
+         fhir:title [ fhir:v "Client Registry Overview" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
@@ -1941,10 +1911,34 @@
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "v3Transition.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "v3Transition.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Transition from V3 Provider to FHIR" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
            fhir:value [ fhir:v "connectedPartner.html"^^xsd:anyURI ]
          ] ) ;
          fhir:name [ fhir:v "connectedPartner.html"^^xsd:anyURI ] ;
          fhir:title [ fhir:v "Connected Partners" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "capabilityStatement.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "capabilityStatement.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Capability Statement" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "futurePlans.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "futurePlans.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Future Plans" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
@@ -1989,14 +1983,6 @@
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "futurePlans.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "futurePlans.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Future Plans" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
            fhir:value [ fhir:v "identifiers.html"^^xsd:anyURI ]
          ] ) ;
          fhir:name [ fhir:v "identifiers.html"^^xsd:anyURI ] ;
@@ -2009,14 +1995,6 @@
          ] ) ;
          fhir:name [ fhir:v "absentData.html"^^xsd:anyURI ] ;
          fhir:title [ fhir:v "Data Absent Reason" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "capabilityStatement.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "capabilityStatement.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Capability Statement" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] )
      ] ;
