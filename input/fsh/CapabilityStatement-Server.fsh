@@ -531,8 +531,6 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 * rest[0].resource[0].operation[=].definition = Canonical(FindCandidates)
 * rest[0].resource[0].operation[+].name = "GetDemographics"
 * rest[0].resource[0].operation[=].definition = Canonical(GetDemographics)
-* rest[0].resource[0].operation[+].name = "GetDemographics.withEligibility"
-* rest[0].resource[0].operation[=].definition = Canonical(GetDemographics.withEligibility)
 * rest[0].resource[0].operation[+].name = "RevisePatient"
 * rest[0].resource[0].operation[=].definition = Canonical(RevisePatient)
 * rest[0].resource[0].operation[+].name = "PartialUpdatePatient"

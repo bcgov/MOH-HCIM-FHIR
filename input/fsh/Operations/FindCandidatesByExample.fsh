@@ -6,7 +6,7 @@ Usage: #definition
 * url = "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-find-candidates"
 * name = "FindCandidatesByExample"
 * title = "Find Candidates By Example"
-* status = #draft
+* status = #active
 * kind = #query
 * code = #FindCandidates
 * resource[0] = #Patient

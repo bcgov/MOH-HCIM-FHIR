@@ -1,7 +1,5 @@
 
 
-### Credits Here
-
 This specification was written and built by:
 
 * BC Ministry of Health (Laura Kingcott)

@@ -1,5 +1,5 @@
 
-# Definitions
+### Glossary Terms
 
 In alphabetical order the table below defines terms used in this FHIR Implementation Guide.
 

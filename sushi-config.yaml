@@ -19,7 +19,7 @@ publisher:
   url: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health
 
 menu:
-  Home: index.html
+ # Home: index.html
   Overview: overview.html
   Design: 
      Summary: design.html
@@ -37,16 +37,20 @@ menu:
   Credits: credits.html
 
 pages:
-  index.md:
-    title: Introduction
+ # index.md:
+#  title: BC Client Registry FHIR Implementation Guide
   overview.md:
-    title: HCIM Overview
-  v3Transition.md:
-    title: Transition from V3 Provider to FHIR
+    title: Client Registry Overview  
   design.md:
     title: FHIR Design
+  v3Transition.md:
+    title: Transition from V3 Provider to FHIR
   connectedPartner.md:
     title: Connected Partners
+  capabilityStatement.md:
+    title: Capability Statement
+  futurePlans.md:
+    title: Future Plans
   terminology.md:
     title: Glossary
   credits.md:
@@ -57,14 +61,11 @@ pages:
     title: Add, Revise and Merge Patient
   distributions.md:
     title: Patient Change Notification
-  futurePlans.md:
-    title: Future Plans
   identifiers.md:
     title: Identifiers
   absentData.md:
     title: Data Absent Reason
-  capabilityStatement.md:
-    title: Capability Statement
+
 
 groups:
    CapabilityStatement:
@@ -79,10 +80,9 @@ groups:
       resources:
          - OperationDefinition/bc-patient-find-candidates
          - OperationDefinition/bc-patient-get-demographics
-         - OperationDefinition/bc-patient-get-demographics-withEligibility
          - OperationDefinition/bc-patient-add
          - OperationDefinition/bc-patient-revise
-         - OperationDefinition/bc-patient-update
+         #- OperationDefinition/bc-patient-update
          - OperationDefinition/bc-patient-merge
          - OperationDefinition/bc-patient-notification
          - OperationDefinition/bc-patient-update
@@ -102,7 +102,6 @@ groups:
          - StructureDefinition/bc-find-candidates-request-bundle
          - StructureDefinition/bc-get-demographics-request-bundle
          - StructureDefinition/bc-search-response-bundle
-         - StructureDefinition/bc-search-withEligibility-response-bundle
          - StructureDefinition/bc-add-request-bundle 
          - StructureDefinition/bc-add-response-bundle 
          - StructureDefinition/bc-merge-request-bundle 

@@ -31,10 +31,6 @@ The Get Demographics is a synchronous request-response transaction.
 More details can be found in the [request Bundle](StructureDefinition-bc-get-demographics-request-bundle.html) and [response Bundle](StructureDefinition-bc-search-response-bundle.html) definitions.
 
 
-#### Get Demographics Search with Eligibility
-
-This operation returns a Patient and their British Columbia insurance status.
-
 ### FHIR Structure for Searches
 
 Below is a figure that shows the FHIR structure for the two searches.  The request is a collection Bundle resource and the response is a searchset Bundle with 0 or more Patients and one OperationOutcome.  The OperationOutcome is where you'll find warnings and errors regarding the search.
