@@ -42,7 +42,7 @@ Below is a figure that shows the FHIR structure for the two searches.  The reque
 
 #### Get Demographics Parameters
 
-The IN and OUT search parameters and resources for Get Demographics can be found here [GetDemographics search](OperationDefinition-bc-patient-get-demographics.html).  For the withEligibility search see [GetDemographics.withEligibility](OperationDefinition-bc-patient-get-demographics-withEligibility.html).
+The IN and OUT search parameters and resources for Get Demographics can be found here [GetDemographics search](OperationDefinition-bc-patient-get-demographics.html).
 
 #### Find Candidates Parameters
 
