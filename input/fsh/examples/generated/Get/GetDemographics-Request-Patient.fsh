@@ -6,4 +6,3 @@ Usage: #inline
 //* identifier.type = $v2-0203#AN
 * identifier.system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id"
 * identifier.value = "8H1496LN8U1F17JP0H2VV"
-//* identifier.assigner.display = "VIHA_JOELAB"

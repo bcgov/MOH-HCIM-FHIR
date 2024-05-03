@@ -5,7 +5,6 @@ Usage: #inline
 * identifier[=].type = $v2-0203#AN
 * identifier[=].system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cer-source-patient-id"
 * identifier[=].value = "2B6F8GN410H1T27NPE"
-//* identifier[=].assigner.display = "VPP_CER"
 * identifier[1].use = #secondary
 * identifier[=].type = $v2-0203#AN
 * identifier[=].system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-vgh-source-patient-id"

@@ -6,7 +6,6 @@ Usage: #inline
 //* identifier[=].type = $v2-0203#AN
 * identifier[=].system = "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id"
 * identifier[=].value = "9455882493"
-//* identifier[=].assigner.display = "PHARM_RX"
 * identifier[+].use = #official
 //* identifier[=].type = $v2-0203#JHN
 * identifier[=].system = "https://fhir.infoway-inforoute.ca/NamingSystem/ca-veterans-affairs-health-id"
