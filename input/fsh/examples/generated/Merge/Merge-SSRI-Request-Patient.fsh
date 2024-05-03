@@ -5,19 +5,16 @@ Usage: #inline
 * identifier[=].type = $v2-0203#AN
 * identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
 * identifier[=].value = "DY29G4NH25RMX3ZFI7S48G6O"
-* identifier[=].assigner.display = "VPP_CER"
 * identifier[+].use = #secondary
 * identifier[=].type = $v2-0203#AN
 * identifier[=].system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
 * identifier[=].value = "0R5UU112MA979LL66JVP5CO69058"
-* identifier[=].assigner.display = "VPP_FPH"
 * link[0].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"
 * link[=].extension.valueCode = #obsolete
 * link[=].other.identifier.use = #official
 * link[=].other.identifier.type = $v2-0203#AN
 * link[=].other.identifier.system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
 * link[=].other.identifier.value = "AJS6T05XY0PPW88D99"
-* link[=].other.identifier.assigner.display = "VPP_CER"
 * link[=].type = #replaces
 * link[+].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"
 * link[=].extension.valueCode = #obsolete
@@ -25,7 +22,6 @@ Usage: #inline
 * link[=].other.identifier.type = $v2-0203#AN
 * link[=].other.identifier.system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
 * link[=].other.identifier.value = "WXR1A39WE4VN4Z5I7X4JS4WJLQ65"
-* link[=].other.identifier.assigner.display = "VPP_CER"
 * link[=].type = #replaces
 * link[+].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"
 * link[=].extension.valueCode = #obsolete
@@ -33,7 +29,6 @@ Usage: #inline
 * link[=].other.identifier.type = $v2-0203#AN
 * link[=].other.identifier.system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
 * link[=].other.identifier.value = "1QB24Z68EC1VIIW00P99HMY37U66YTPLD5ZDQL"
-* link[=].other.identifier.assigner.display = "VPP_SSH"
 * link[=].type = #replaces
 * link[+].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"
 * link[=].extension.valueCode = #cancelled
@@ -41,5 +36,4 @@ Usage: #inline
 * link[=].other.identifier.type = $v2-0203#AN
 * link[=].other.identifier.system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
 * link[=].other.identifier.value = "VI7KR22LT7SW8GG8Y3TZTY4626MR54C8Q"
-* link[=].other.identifier.assigner.display = "VPP_PR"
 * link[=].type = #replaces

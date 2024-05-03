@@ -5,7 +5,6 @@ Usage: #inline
 * identifier.type = $v2-0203#AN
 * identifier.system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
 * identifier.value = "601BXWJG9W9FB6L02W7ZIN0H66"
-* identifier.assigner.display = "VIHA_JOEADT"
 * name[0].use = #usual
 * name[=].family = "Szymanski"
 * name[=].given[0] = "Aloja"
@@ -50,7 +49,6 @@ Usage: #inline
 * link[=].other.identifier.type = $v2-0203#AN
 * link[=].other.identifier.system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
 * link[=].other.identifier.value = "CS059OC9Z9MCLN3065382PG7P7JKM2"
-* link[=].other.identifier.assigner.display = "VIHA_JOEADT"
 * link[=].type = #replaces
 * link[+].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"
 * link[=].extension.valueCode = #obsolete
@@ -58,5 +56,4 @@ Usage: #inline
 * link[=].other.identifier.type = $v2-0203#AN
 * link[=].other.identifier.system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
 * link[=].other.identifier.value = "0035Z44HE5845"
-* link[=].other.identifier.assigner.display = "VIHA_JOEADT"
 * link[=].type = #replaces
