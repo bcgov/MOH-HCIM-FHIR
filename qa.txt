@@ -1,9 +1,9 @@
 BCHealthClientIdentityManagement : Validation Results
 =========================================
 
-err = 4, warn = 12, info = 3
-IG Publisher Version: 1.6.6
-Generated Fri May 03 21:42:02 UTC 2024. FHIR version 4.0.1 for fhir.ca-bc.client#1.0.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
+err = 5, warn = 12, info = 3
+IG Publisher Version: 1.6.7
+Generated Tue May 14 21:06:29 UTC 2024. FHIR version 4.0.1 for fhir.ca-bc.client#1.0.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
  Build Errors : 0 / 4 / 0
  /github/workspace/fsh-generated/resources/Bundle-AddNewbornByMumsPHN-Request : 0 / 0 / 9
  /github/workspace/fsh-generated/resources/Bundle-AddPatient-Request : 0 / 0 / 10
@@ -94,7 +94,7 @@ Generated Fri May 03 21:42:02 UTC 2024. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-update-patient-operation-extension : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-update-request-bundle : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-validation-status-extension : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Subscription-SampleCompositeSubscriptionRequest : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Subscription-SampleCompositeSubscriptionRequest : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-bc-address-validation-value-set : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-bc-client-registry-patient-change-notification-events-value-set : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-bc-client-registry-update-patient-operation-value-set : 0 / 0 / 1
@@ -215,6 +215,7 @@ WARNING: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/Stru
 == fsh-generated/resources/StructureDefinition-bc-update-request-bundle.json ==
 == fsh-generated/resources/StructureDefinition-bc-validation-status-extension.json ==
 == fsh-generated/resources/Subscription-SampleCompositeSubscriptionRequest.json ==
+ERROR: Subscription/SampleCompositeSubscriptionRequest: Subscription.channel.payload: The value provided ('application/fhir+json"') was not found in the value set http://hl7.org/fhir/ValueSet/mimetypes|4.0.0(which actually refers to 'MimeType' (http://hl7.org/fhir/ValueSet/mimetypes|4.0.1)), and a code is required from this value set  (error message = Illegal character in query at index 67: ValueSet/$validate-code?inferSystem=true&code=application/fhir+json"&default-to-latest-version=true&url=http://hl7.org/fhir/ValueSet/mimetypes&valueSetVersion=4.0.1&cache-id=4b40a652-291b-4930-92e9-6bf60f3c1028&x-system-cache-id=dc8fd4bc-091a-424a-8a3b-6198ef146891&)
 == fsh-generated/resources/ValueSet-bc-address-validation-value-set.json ==
 == fsh-generated/resources/ValueSet-bc-client-registry-patient-change-notification-events-value-set.json ==
 == fsh-generated/resources/ValueSet-bc-client-registry-update-patient-operation-value-set.json ==
