@@ -29,25 +29,27 @@ Restful |
 
 ### Future
 
-#### HCIM release 7.7
+#### HCIM release 7.7 (Synchronous)
 
 This release may include the following Operations
 
 Operation |
 :--- |
-[Add](OperationDefinition-bc-patient-find-candidates.html) |
-[MergePatient](OperationDefinition-bc-patient-get-demographics.html) |
-[MergePatient](OperationDefinition-bc-patient-get-demographics.html) |
+[Add](OperationDefinition-bc-patient-add.html) |
+[MergePatient](OperationDefinition-bc-patient-merge.html) |
+[RevisePatient](OperationDefinition-bc-patient-revise.html) |
 {:.grid}
 
-#### HCIM release 7.8
+#### HCIM release 7.8 (Asynchronous)
 
-This release might include the following Operations
+This release might include an asynchronous way to perform the Add, Merge and Update Operations
+
+See following Supporting Profiles
 
 Operation |
 :--- |
-[Asynchronous](OperationDefinition-bc-patient-find-candidates.html) |
-Asynchronous - Design not complete|
+[Bundle](StructureDefinition-bc-async-ack-response-bundle.html) |
+[Parameters](StructureDefinition-bc-metadata-parameter-async-response.html) |
 {:.grid}
 
 #### HCIM release 8.0
