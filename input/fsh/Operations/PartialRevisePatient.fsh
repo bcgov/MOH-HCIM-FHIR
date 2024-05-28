@@ -1,4 +1,4 @@
-Instance: PartialUpdatePatient
+/**Instance: PartialUpdatePatient
 InstanceOf: OperationDefinition
 Description: "This operation is used to update a patient's demographics, applied to only specific Patient attributes."
 Usage: #definition
@@ -28,4 +28,4 @@ Usage: #definition
 * parameter[1].min = 1
 * parameter[1].max = "1"
 * parameter[1].documentation = "Update response Bundle (which is the ReviseResponseBundle)."
-* parameter[1].type = #Bundle
+* parameter[1].type = #Bundle */

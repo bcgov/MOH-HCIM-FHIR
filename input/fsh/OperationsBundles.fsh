@@ -50,7 +50,7 @@ Description: "A Bundle that is used in the Client Registry response to Find Cand
 * entry[relatedPerson].resource only RelatedPerson
 * entry[relatedPerson] ^short = "Resource for Mother's PHN."
 
-Profile: SearchWithEligibilityResponseBundle
+/**Profile: SearchWithEligibilityResponseBundle
 Parent: Bundle
 Id: bc-search-withEligibility-response-bundle
 Description: "A Bundle that is used in the Client Registry response to Get Demographics with Eligibility queries."
@@ -73,7 +73,7 @@ Description: "A Bundle that is used in the Client Registry response to Get Demog
 * entry[operationOutcome] ^short = "Messages and codes returned by HCIM."
 * entry[patient].resource only ClientRegistryPatient
 * entry[patient] ^short = "Matching Patient."
-* entry[coverage].resource only Coverage
+* entry[coverage].resource only Coverage */
 
 ////////////////////////////////////
 // FIND CANDIDATES
@@ -210,7 +210,7 @@ Description:  "A Bundle that is used in the Client Registry response to Revise P
 // UPDATE
 ////////////////////////////////////
 
-Profile: PartialUpdateRequestBundle
+/**  Profile: PartialUpdateRequestBundle
 Parent: Bundle
 Id: bc-update-request-bundle
 Description:  "A Bundle that is used in the Client Registry for Patient update requests."
@@ -232,7 +232,7 @@ Description:  "A Bundle that is used in the Client Registry for Patient update r
 * entry[parameters].resource only MetadataParametersIn
 * entry[parameters] ^short = "Metadata in parameters"
 * entry[patient].resource only PartialPatientUpdate
-* entry[patient] ^short = "Updated Patient."
+* entry[patient] ^short = "Updated Patient." */
 
 
 

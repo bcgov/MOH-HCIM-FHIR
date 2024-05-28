@@ -1,7 +1,6 @@
 Instance: AddNewbornByMumsPHN-Request-Patient
 InstanceOf: ClientRegistryPatient
 Usage: #inline
-//* id = "9578d2bd-a6ad-409c-ba66-ba8343cd40be"
 * identifier.use = #official
 * identifier.system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-north-source-patient-id"
 * identifier.value = "4PX0WI5WO23CZRYTQ4GZP6MUJ9R6P2N6MS8Z156"

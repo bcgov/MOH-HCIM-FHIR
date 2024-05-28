@@ -1,4 +1,4 @@
-Instance: Bundle-UpdatePatient-Request-Example
+/**Instance: Bundle-UpdatePatient-Request-Example
 InstanceOf: PartialUpdateRequestBundle
 Description: "A sample UpdatePatient request. This example shows a Address update that replaces an existing address."
 * type = #collection
