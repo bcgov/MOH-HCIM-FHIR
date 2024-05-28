@@ -46,7 +46,7 @@ This release might include an asynchronous way to perform the Add, Merge and Upd
 
 See following Supporting Profiles
 
-Operation |
+Supporting Profile |
 :--- |
 [Bundle](StructureDefinition-bc-async-ack-response-bundle.html) |
 [Parameters](StructureDefinition-bc-metadata-parameter-async-response.html) |
@@ -54,11 +54,12 @@ Operation |
 
 #### HCIM release 8.0
 
-This release might include the following Operations
+This release might include the following Operations and supporting profiles
 
 Operation |
 :--- |
 [Distribution](OperationDefinition-bc-patient-find-candidates.html) |
+[Subscription Bundle](StructureDefinition-bc-subscription-notification-bundle.html) |
 {:.grid}
 
 

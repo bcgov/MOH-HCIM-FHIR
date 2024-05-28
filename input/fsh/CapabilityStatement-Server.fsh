@@ -474,8 +474,8 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 * rest[0].resource[0].operation[=].definition = Canonical(GetDemographics)
 * rest[0].resource[0].operation[+].name = "RevisePatient"
 * rest[0].resource[0].operation[=].definition = Canonical(RevisePatient)
-* rest[0].resource[0].operation[+].name = "PartialUpdatePatient"
-* rest[0].resource[0].operation[=].definition = Canonical(PartialUpdatePatient)
+/* rest[0].resource[0].operation[+].name = "PartialUpdatePatient"
+* rest[0].resource[0].operation[=].definition = Canonical(PartialUpdatePatient)*/
 * rest[0].resource[0].operation[+].name = "AddPatient"
 * rest[0].resource[0].operation[=].definition = Canonical(AddPatient)
 * rest[0].resource[0].operation[+].name = "MergePatient"
@@ -488,13 +488,12 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 * rest[0].resource[0].operation[+].name = "RevisePatient.Async"
 * rest[0].resource[0].operation[=].definition = Canonical(RevisePatient)
 * rest[0].resource[0].operation[=].documentation = "Although this is an independent Operation the definition is the same as the [RevisePatient](OperationDefinition-bc-patient-revise.html)"
-* rest[0].resource[0].operation[+].name = "PartialUpdatePatient.Async"
+/* rest[0].resource[0].operation[+].name = "PartialUpdatePatient.Async"
 * rest[0].resource[0].operation[=].definition = Canonical(PartialUpdatePatient)
-* rest[0].resource[0].operation[=].documentation = "Although this is an independent Operation the definition is the same as the [UpdatePatient](OperationDefinition-bc-patient-update.html)"
+* rest[0].resource[0].operation[=].documentation = "Although this is an independent Operation the definition is the same as the [UpdatePatient](OperationDefinition-bc-patient-update.html)" */
 * rest[0].resource[0].operation[+].name = "MergePatient.Async"
 * rest[0].resource[0].operation[=].definition = Canonical(MergePatient)
-* rest[0].resource[0].operation[=].documentation = "
-Although this is an independent Operation the definition is the same as the [MergePatient](OperationDefinition-bc-patient-merge.html)"
+* rest[0].resource[0].operation[=].documentation = "Although this is an independent Operation the definition is the same as the [MergePatient](OperationDefinition-bc-patient-merge.html)"
 
 * rest[0].resource[1]
   * extension[0]

@@ -210,7 +210,7 @@ Description:  "A Bundle that is used in the Client Registry response to Revise P
 // UPDATE
 ////////////////////////////////////
 
-Profile: PartialUpdateRequestBundle
+/**  Profile: PartialUpdateRequestBundle
 Parent: Bundle
 Id: bc-update-request-bundle
 Description:  "A Bundle that is used in the Client Registry for Patient update requests."
@@ -232,7 +232,7 @@ Description:  "A Bundle that is used in the Client Registry for Patient update r
 * entry[parameters].resource only MetadataParametersIn
 * entry[parameters] ^short = "Metadata in parameters"
 * entry[patient].resource only PartialPatientUpdate
-* entry[patient] ^short = "Updated Patient."
+* entry[patient] ^short = "Updated Patient." */
 
 
 

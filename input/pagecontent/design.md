@@ -39,9 +39,7 @@ These items are new to the Client Registry interface and subject to change as th
 Proposal | Description | 
 :--- | :--- |
 Add Patient interaction | Some of the features normally done through the Revise Patient interaction are now part of Add Patient.  Specifically, 'force create' and newborn interactions are now done with Add Patient. |
-Partial Update interaction | A Partial Update interaction allows users to logically delete, add or change part of the Patient resource.  This is useful when a stakeholder doesn't need (or persist) certain Patient attributes, but today, must query and then echo back these attributes in a Revise Patient interaction.  The exact operations allowed by the Client Registry is to be determined.|
 Business dates feature | Attributes will have business dates that haven't been present in V3. | 
-
 
 #### Patient Resource
 
@@ -51,7 +49,7 @@ Four Patient profiles are used: the main profile [ClientRegistryPatient](Structu
 
 ##### Patient Resource (Logical) Id
 
-PHN is a sensitive Patient attribute and although considered for the Paitent Resource ID this idea was discarded.  A non-PII surrogate Resource ID has been created which this guide will call the surrogate PHN.  It is a universal uniuqe identifier (UUID) and Patient Resources will be populated with this UUID.
+PHN is a sensitive Patient attribute and although considered for the Paitent Resource ID this idea was discarded.  A non-PII surrogate Resource ID has been created which this guide will call the surrogate PHN.  It is a universal unique identifier (UUID) and Patient Resources will be populated with this UUID.
 
 ##### Patient Extensions
 
@@ -110,8 +108,6 @@ https://..../Patient/$FindCandidates |
 https://..../Patient/$GetDemographics |
 https://..../Patient/$RevisePatient |
 https://..../Patient/$RevisePatient.Async |
-https://..../Patient/$PartialUpdatePatient |
-https://..../Patient/$PartialUpdatePatient.Async |
 https://..../Patient/$AddPatient |
 https://..../Patient/$AddPatient.Async |
 https://..../Patient/$MergePatient |
@@ -132,8 +128,6 @@ $FindCandidates | [Find Candidates request profile](StructureDefinition-bc-find-
 $GetDemographics | [Get Demographics request profile](StructureDefinition-bc-get-demographics-request-bundle.html) | [Get Demographics response profile](StructureDefinition-bc-search-response-bundle.html) |
 $RevisePatient | [Revise Patient request profile](StructureDefinition-bc-revise-request-bundle.html) | [Revise Patient response profile](StructureDefinition-bc-revise-response-bundle.html) |
 $RevisePatient.Async |  [Revise Patient request profile](StructureDefinition-bc-revise-request-bundle.html) | [Revise Patient response profile](StructureDefinition-bc-revise-response-bundle.html) |
-$PartialUpdatePatient | [Update Patient profile](StructureDefinition-bc-update-request-bundle.html) | [Update Patient response profile](StructureDefinition-bc-revise-response-bundle.html) (uses revise)|
-$PartialUpdatePatient.Async |[Update Patient profile](StructureDefinition-bc-update-request-bundle.html) | [Update Patient response profile](StructureDefinition-bc-revise-response-bundle.html) (uses revise)|
 $AddPatient | [Add Patient request profile](StructureDefinition-bc-add-request-bundle.html) | [Add Patient response profile](StructureDefinition-bc-add-response-bundle.html) |
 $AddPatient.Async | [Add Patient request profile](StructureDefinition-bc-add-request-bundle.html) | [Add Patient response profile](StructureDefinition-bc-add-response-bundle.html) |
 $MergePatient | [Merge Patient request profile](StructureDefinition-bc-merge-request-bundle.html) | [Merge Patient response profile](StructureDefinition-bc-merge-response-bundle.html) |
@@ -211,7 +205,7 @@ https://…./$FindCandidates | Searching for Patients that match the search crit
 https://…./$GetDemographics | Searching for a single Patient
 {:.grid}
 
-Find Candidates may return zero or more candidates, while Get Demographics is designed to return zero or a single matching Patient.  These searches are expected to provide the required information to confirm a person's identify.
+Find Candidates may return zero or more candidates, while Get Demographics is designed to return zero or a single matching Patient. These searches are expected to provide the required information to confirm a person's identify.
 
 More details can be found here, [Search page](search.html "Find Candidates and Get Demographics").
 
@@ -224,8 +218,6 @@ Add, Revise, Update and Merge Operations | Description
 :--- | :---
 https://..../$RevisePatient | Updating a Patient
 https://..../$RevisePatient.Async | Updating a Patient asynchronously
-https://..../$PartialUpdatePatient | Updating a specific Patient attribute
-https://..../$PartialUpdatePatient.Async | Updating a specific Patient attribute asynchronously
 https://..../$AddPatient | For newborns or to 'force create' a Patient
 https://..../$AddPatient.Async | The asynchronous version of AddPatient
 https://..../$MergePatient | Resolving duplicate Patients records (same individual)
