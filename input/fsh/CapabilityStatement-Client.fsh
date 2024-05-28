@@ -62,8 +62,8 @@ The outgoing response to the Subscription is a Bundle. The Bundle has two entrie
 
 * id = "bc-hcim-capability-statement-client"
 * version = "1.0"
-* name = "HCIMCapabilityStatement"
-* title = "BC HCIM Capability Statement"
+* name = "HCIMClientCapabilityStatement"
+* title = "BC HCIM Client Capability Statement"
 * status = #draft
 * date = "2021-11-18"
 * publisher = "BC Ministry of Health"
