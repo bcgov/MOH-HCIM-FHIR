@@ -45,7 +45,7 @@ Business dates feature | Attributes will have business dates that haven't been p
 
 All interactions will primarily use the Patient resource.  The Patient resource is ideal to represent clients as the Patient resource has many of the necessary attributes but will require some extensions.  Patients also are recommended for enterprise master patient indices by the HL7 group and is in a Normative state, i.e. stable and ready for implementation.  See [FHIR standards evolution](http://hl7.org/fhir/versions.html#std-process) for a description of Normative. 
 
-Four Patient profiles are used: the main profile [ClientRegistryPatient](StructureDefinition-bc-patient.html) - used also the search profile in the search operation (GetDemographics and FindCandidates), the merge profile [MergePatient](StructureDefinition-bc-merge-patient.html) and finally the [PatientUpdate](StructureDefinition-bc-update-request-bundle.html) for partial updates, e.g. updating just address or just telephone.
+Two Patient profiles are used: the main profile [ClientRegistryPatient](StructureDefinition-bc-patient.html) - used also the search profile in the search operation (GetDemographics and FindCandidates), the merge profile [MergePatient](StructureDefinition-bc-merge-patient.html).
 
 ##### Patient Resource (Logical) Id
 
@@ -174,7 +174,7 @@ Search by Name and Phone |
 Search by Name and Date of Birth |
 {:.grid}
 
-Name is equalivent to the combination of both First Name and Surname.
+Name is equivalent to the combination of both First Name and Surname.
 
 ### Design Outcomes - Details
 

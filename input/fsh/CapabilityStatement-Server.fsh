@@ -38,8 +38,6 @@ Add Patient - used for newborns and 'force create' interactions
 <li>$AddPatient.Async</li>
 <li>$RevisePatient</li>
 <li>$RevisePatient.Async</li>
-<li>$UpdatePatient</li>
-<li>$UpdatePatient.Async</li>
 <li>$MergePatient</li>
 <li>$MergePatient.Async</li>
 </ul>
@@ -333,63 +331,6 @@ The AddPatient FHIR Operation SHALL use the following Bundles.
                 </td>
         </tr>
 
-</table>
-
-<h3>Update Patient</h3>
-<p>
-The UpdatePatient FHIR Operation SHALL use the following Bundles.
-</p>
-<table class=\"grid\">
-	<tr>
-		<td>
-			<b>Use</b>
-		</td>
-		<td>
-			<b>Name</b>
-		</td>
-		<td>
-			<b>Cardinality</b>
-		</td>
-		<td>
-			<b>Type</b>
-		</td>
-		<td>
-			<b>Binding</b>
-		</td>
-		<td>
-			<b>Documentation</b>
-		</td>
-	</tr>
-
-
-
-        <tr>
-                <td>IN</td>
-                <td>Update Request Bundle</td>
-                <td>1..1</td>
-                <td>
-                        <a href=\"StructureDefinition-bc-update-request-bundle.html\">UpdateRequestBundle</a></td>
-                <td></td>
-                <td>
-                        <div>
-                                <p>Request bundle.</p>
-                        </div>
-                </td>
-        </tr>
-        <tr>
-                <td>OUT</td>
-                <td>Update Response Bundle</td>
-                <td>1..1</td>
-                <td>
-                        <a href=\"StructureDefinition-bc-revise-response-bundle.html\">ReviseResponseBundle</a>
-                </td>
-                <td></td>
-                <td>
-                        <div>
-                                <p>Response bundle is a Revise Response Bundle.</p>
-                        </div>
-                </td>
-        </tr>
 </table>
 
 <h3>Merge Patient</h3>
