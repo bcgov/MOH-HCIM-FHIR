@@ -14,9 +14,6 @@ Find Candidates - used when a user would like to find a Patient, but without an 
 Get Demographics - used when a user would like to find a Patient and has an identifier that Client Registry recognizes.
 </li>
 <li>
-Get Demographics with Eligibility- used when a user would like to find a Patient and has an identifier that Client Registry recognizes.  The Client Registry, in addition to returning a Patient, also returns the Health Insurance of BC eligibility status.  The Client Registry makes a webservice call to Health Insurance of BC on behalf of the requester to determine the eligibility status.
-</li>
-<li>
 Revise Patient - used when a user is communicating a change or request for a new PHN to the Client Registry.
 </li>
 <!--
@@ -37,7 +34,6 @@ Add Patient - used for newborns and 'force create' interactions
 <ul>
 <li>$FindCandidates</li>
 <li>$GetDemographics</li>
-<li>$GetDemographics.withEligibility</li>
 <li>$AddPatient</li>
 <li>$AddPatient.Async</li>
 <li>$RevisePatient</li>
@@ -225,61 +221,6 @@ The GetDemographics FHIR Operation SHALL use the following Bundles.  This search
 			</div>
 		</td>
 	</tr>
-</table>
-
-
-<h4>Get Demographics with Eligibility</h4>
-<p>
-The GetDemographics.withEligibility FHIR Operation SHALL use the following Bundles.  This search may return zero or one Patient using the Patient profile.
-</p>
-<table class=\"grid\">
-	<tr>
-		<td>
-			<b>Use</b>
-		</td>
-		<td>
-			<b>Name</b>
-		</td>
-		<td>
-			<b>Cardinality</b>
-		</td>
-		<td>
-			<b>Type</b>
-		</td>
-		<td>
-			<b>Binding</b>
-		</td>
-		<td>
-			<b>Documentation</b>
-		</td>
-	</tr>
-        <tr>
-                <td>IN</td>
-                <td>Get Demographics with Eligibility Request Bundle</td>
-                <td>1..1</td>
-                <td>
-                        <a href=\"StructureDefinition-bc-get-demographics-request-bundle.html\">GetDemographicsRequestBundle</a></td>
-                <td></td>
-                <td>
-                        <div>
-                                <p>Request bundle.</p>
-                        </div>
-                </td>
-        </tr>
-        <tr>
-                <td>OUT</td>
-                <td>Get Demographics with Eligibility Response Bundle</td>
-                <td>1..1</td>
-                <td>
-                        <a href=\"StructureDefinition-bc-search-withEligibility-response-bundle.html\">SearchWithEligibilityResponseBundle</a>
-                </td>
-                <td></td>
-                <td>
-                        <div>
-                                <p>Response bundle.</p>
-                        </div>
-                </td>
-        </tr>
 </table>
 
 
@@ -514,9 +455,9 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 
 * id = "bc-hcim-capability-statement-server"
 * version = "1.0"
-* name = "HCIMCapabilityStatement"
-* title = "BC HCIM Capability Statement"
-* status = #draft
+* name = "HCIMServerCapabilityStatement"
+* title = "BC HCIM Server Capability Statement"
+* status = #active
 * date = "2021-11-18"
 * publisher = "BC Ministry of Health"
 * description = "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a server."

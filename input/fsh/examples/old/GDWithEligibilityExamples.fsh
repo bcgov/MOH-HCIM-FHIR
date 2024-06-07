@@ -14,7 +14,7 @@ Description: "Example of $GetDemographics.withEligibility operation"
 * parameter[2].valueIdentifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203" */
 
 
-Instance: Parameters-GetDemographicsWithEligibility-Response-Example
+/**Instance: Parameters-GetDemographicsWithEligibility-Response-Example
 InstanceOf: MetadataParametersOut
 Description: "Example of $GetDemographics.withEligibility response Metadata parameters"
 
@@ -73,7 +73,7 @@ Description: "Example of Get Eligibility response, the patient is not eligible."
 * type.coding.code = #MANDPOL
 * period.start = "2021-01-17"
 * beneficiary.reference = "urn:uuid:4e795f80-6032-42e3-bbfd-24e27f0c3e7c"
-* payor.display = "Health Insurance BC"
+* payor.display = "Health Insurance BC"*/
 
 Instance: Patient-GetDemographics-Example
 InstanceOf: ClientRegistryPatient
