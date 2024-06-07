@@ -11,7 +11,7 @@
   <name value="BCHealthClientIdentityManagement"/>
   <title value="BC Client Registry FHIR Implementation Guide"/>
   <status value="active"/>
-  <date value="2024-05-14T21:02:37+00:00"/>
+  <date value="2024-06-07T23:38:55+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -697,6 +697,10 @@
       <name value="Patient Profile"/>
       <description value="The BC Patient profile"/>
     </grouping>
+    <grouping id="Bundles">
+      <name value="Supporting Profiles - Bundles"/>
+      <description value="Bundles that support Patient and Client Registry Operations - Request and Response"/>
+    </grouping>
     <grouping id="SupportingProfiles">
       <name value="Supporting Profiles"/>
       <description value="Artifacts associated with resources that support Patient and Client Registry Operations"/>
@@ -708,6 +712,10 @@
     <grouping id="ResponseExamples">
       <name value="Response Examples"/>
       <description value="A set of operation response examples"/>
+    </grouping>
+    <grouping id="Subscriptions">
+      <name value="Supporting Profiles - Subscription / Notification"/>
+      <description value="Artifacts that support Subscription Operations"/>
     </grouping>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -778,7 +786,7 @@
       <name value="AddRequestBundle"/>
       <description value="A Bundle that is used in the Client Registry for Add Patient requests."/>
       <exampleBoolean value="false"/>
-      <groupingId value="SupportingProfiles"/>
+      <groupingId value="Bundles"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -790,7 +798,7 @@
       <name value="AddResponseBundle"/>
       <description value="A Bundle that is used in the Client Registry response to Add Patient requests."/>
       <exampleBoolean value="false"/>
-      <groupingId value="SupportingProfiles"/>
+      <groupingId value="Bundles"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -802,7 +810,7 @@
       <name value="AsyncAckBundle"/>
       <description value="A Bundle that is used for the ACK response to an aynchronous operation request."/>
       <exampleBoolean value="false"/>
-      <groupingId value="SupportingProfiles"/>
+      <groupingId value="Bundles"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1009,7 +1017,7 @@
       <reference>
         <reference value="CapabilityStatement/bc-hcim-capability-statement-client"/>
       </reference>
-      <name value="BC HCIM Capability Statement"/>
+      <name value="BC HCIM Client Capability Statement"/>
       <description value="This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a client. I.e. sending notifications."/>
       <exampleBoolean value="false"/>
       <groupingId value="CapabilityStatement"/>
@@ -1021,7 +1029,7 @@
       <reference>
         <reference value="CapabilityStatement/bc-hcim-capability-statement-server"/>
       </reference>
-      <name value="BC HCIM Capability Statement"/>
+      <name value="BC HCIM Server Capability Statement"/>
       <description value="This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a server."/>
       <exampleBoolean value="false"/>
       <groupingId value="CapabilityStatement"/>
@@ -1119,17 +1127,6 @@
         <valueString value="Bundle"/>
       </extension>
       <reference>
-        <reference value="Bundle/Bundle-GetDemographicsWithEligibility-Response-Example"/>
-      </reference>
-      <name value="Bundle-GetDemographicsWithEligibility-Response-Example"/>
-      <description value="Example of $GetDemographics.withEligibility operation response Bundle"/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
         <reference value="Bundle/Bundle-MergePatient-Request-Example"/>
       </reference>
       <name value="Bundle-MergePatient-Request-Example"/>
@@ -1183,28 +1180,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Coverage"/>
-      </extension>
-      <reference>
-        <reference value="Coverage/Coverage-Active-Example"/>
-      </reference>
-      <name value="Coverage-Active-Example"/>
-      <description value="Example of Get Eligibility response, the patient is eligible."/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Coverage"/>
-      </extension>
-      <reference>
-        <reference value="Coverage/Coverage-InActive-Example"/>
-      </reference>
-      <name value="Coverage-InActive-Example"/>
-      <description value="Example of Get Eligibility response, the patient is not eligible."/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="OperationDefinition"/>
       </extension>
       <reference>
@@ -1249,7 +1224,7 @@
       <name value="FindCandidatesRequestBundle"/>
       <description value="A Bundle that is used in the Find Candidates Operation request."/>
       <exampleBoolean value="false"/>
-      <groupingId value="SupportingProfiles"/>
+      <groupingId value="Bundles"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1357,7 +1332,7 @@
       <name value="GetDemographicsRequestBundle"/>
       <description value="A Bundle that is used in the Get Demographics Operation request."/>
       <exampleBoolean value="false"/>
-      <groupingId value="SupportingProfiles"/>
+      <groupingId value="Bundles"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1369,6 +1344,7 @@
       <name value="HCIM Patient Change Distributions Topic"/>
       <description value="This is the subscription topic used for subscribing to different change distributions."/>
       <exampleBoolean value="false"/>
+      <groupingId value="Subscriptions"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1380,6 +1356,7 @@
       <name value="HCIMPatientChangeSubscription"/>
       <description value="Profile on subscription for HCIM Patient Changes"/>
       <exampleBoolean value="false"/>
+      <groupingId value="Subscriptions"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1475,7 +1452,7 @@
       <name value="MergeRequestBundle"/>
       <description value="A Bundle that is used in the Client Registry for Add Patient requests."/>
       <exampleBoolean value="false"/>
-      <groupingId value="SupportingProfiles"/>
+      <groupingId value="Bundles"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1487,7 +1464,7 @@
       <name value="MergeResponseBundle"/>
       <description value="A Bundle that is used in the Client Registry response to Merge Patient requests."/>
       <exampleBoolean value="false"/>
-      <groupingId value="SupportingProfiles"/>
+      <groupingId value="Bundles"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1535,6 +1512,7 @@
       <name value="MetadataParametersSubscription"/>
       <description value="Parameters profile for BC meta data when a subscription response is sent."/>
       <exampleBoolean value="false"/>
+      <groupingId value="Subscriptions"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1557,17 +1535,6 @@
       <name value="OperationOutcome-Search-Example"/>
       <description value="Example OperationOutcome for a Client Registry Search"/>
       <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Parameters"/>
-      </extension>
-      <reference>
-        <reference value="Parameters/Parameters-GetDemographicsWithEligibility-Response-Example"/>
-      </reference>
-      <name value="Parameters-GetDemographicsWithEligibility-Response-Example"/>
-      <description value="Example of $GetDemographics.withEligibility response Metadata parameters"/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1623,7 +1590,6 @@
       <name value="Partial Update Patient"/>
       <description value="This operation is used to update a patient's demographics, applied to only specific Patient attributes."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Operations"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1635,7 +1601,6 @@
       <name value="PartialPatientUpdate"/>
       <description value="Patient profile used to update a Patient."/>
       <exampleBoolean value="false"/>
-      <groupingId value="PatientProfile"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1647,7 +1612,6 @@
       <name value="PartialUpdateRequestBundle"/>
       <description value="A Bundle that is used in the Client Registry for Patient update requests."/>
       <exampleBoolean value="false"/>
-      <groupingId value="SupportingProfiles"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1775,7 +1739,7 @@
       <name value="ReviseRequestBundle"/>
       <description value="A Bundle that is used in the Client Registry for Revise Patient requests.  This is also used by Patient Notitifications."/>
       <exampleBoolean value="false"/>
-      <groupingId value="SupportingProfiles"/>
+      <groupingId value="Bundles"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1787,7 +1751,7 @@
       <name value="ReviseResponseBundle"/>
       <description value="A Bundle that is used in the Client Registry response to Revise Patient requests."/>
       <exampleBoolean value="false"/>
-      <groupingId value="SupportingProfiles"/>
+      <groupingId value="Bundles"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1810,18 +1774,7 @@
       <name value="SearchResponseBundle"/>
       <description value="A Bundle that is used in the Client Registry response to Find Candidates and Get Demographics queries."/>
       <exampleBoolean value="false"/>
-      <groupingId value="SupportingProfiles"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/bc-search-withEligibility-response-bundle"/>
-      </reference>
-      <name value="SearchWithEligibilityResponseBundle"/>
-      <description value="A Bundle that is used in the Client Registry response to Get Demographics with Eligibility queries."/>
-      <exampleBoolean value="false"/>
+      <groupingId value="Bundles"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1833,6 +1786,7 @@
       <name value="SubscriptionNotificationBundle"/>
       <description value="A Bundle that is used in the Client Registry when sending subscription notifications."/>
       <exampleBoolean value="false"/>
+      <groupingId value="Subscriptions"/>
     </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">

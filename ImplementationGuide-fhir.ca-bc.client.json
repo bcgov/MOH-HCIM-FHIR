@@ -10,7 +10,7 @@
   "name" : "BCHealthClientIdentityManagement",
   "title" : "BC Client Registry FHIR Implementation Guide",
   "status" : "active",
-  "date" : "2024-05-14T21:02:37+00:00",
+  "date" : "2024-06-07T23:38:55+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",
@@ -941,6 +941,11 @@
       "description" : "The BC Patient profile"
     },
     {
+      "id" : "Bundles",
+      "name" : "Supporting Profiles - Bundles",
+      "description" : "Bundles that support Patient and Client Registry Operations - Request and Response"
+    },
+    {
       "id" : "SupportingProfiles",
       "name" : "Supporting Profiles",
       "description" : "Artifacts associated with resources that support Patient and Client Registry Operations"
@@ -954,6 +959,11 @@
       "id" : "ResponseExamples",
       "name" : "Response Examples",
       "description" : "A set of operation response examples"
+    },
+    {
+      "id" : "Subscriptions",
+      "name" : "Supporting Profiles - Subscription / Notification",
+      "description" : "Artifacts that support Subscription Operations"
     }],
     "resource" : [{
       "extension" : [{
@@ -1030,7 +1040,7 @@
       "name" : "AddRequestBundle",
       "description" : "A Bundle that is used in the Client Registry for Add Patient requests.",
       "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
+      "groupingId" : "Bundles"
     },
     {
       "extension" : [{
@@ -1043,7 +1053,7 @@
       "name" : "AddResponseBundle",
       "description" : "A Bundle that is used in the Client Registry response to Add Patient requests.",
       "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
+      "groupingId" : "Bundles"
     },
     {
       "extension" : [{
@@ -1056,7 +1066,7 @@
       "name" : "AsyncAckBundle",
       "description" : "A Bundle that is used for the ACK response to an aynchronous operation request.",
       "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
+      "groupingId" : "Bundles"
     },
     {
       "extension" : [{
@@ -1282,7 +1292,7 @@
       "reference" : {
         "reference" : "CapabilityStatement/bc-hcim-capability-statement-client"
       },
-      "name" : "BC HCIM Capability Statement",
+      "name" : "BC HCIM Client Capability Statement",
       "description" : "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a client. I.e. sending notifications.",
       "exampleBoolean" : false,
       "groupingId" : "CapabilityStatement"
@@ -1295,7 +1305,7 @@
       "reference" : {
         "reference" : "CapabilityStatement/bc-hcim-capability-statement-server"
       },
-      "name" : "BC HCIM Capability Statement",
+      "name" : "BC HCIM Server Capability Statement",
       "description" : "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a server.",
       "exampleBoolean" : false,
       "groupingId" : "CapabilityStatement"
@@ -1402,18 +1412,6 @@
         "valueString" : "Bundle"
       }],
       "reference" : {
-        "reference" : "Bundle/Bundle-GetDemographicsWithEligibility-Response-Example"
-      },
-      "name" : "Bundle-GetDemographicsWithEligibility-Response-Example",
-      "description" : "Example of $GetDemographics.withEligibility operation response Bundle",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
         "reference" : "Bundle/Bundle-MergePatient-Request-Example"
       },
       "name" : "Bundle-MergePatient-Request-Example",
@@ -1472,30 +1470,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Coverage"
-      }],
-      "reference" : {
-        "reference" : "Coverage/Coverage-Active-Example"
-      },
-      "name" : "Coverage-Active-Example",
-      "description" : "Example of Get Eligibility response, the patient is eligible.",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Coverage"
-      }],
-      "reference" : {
-        "reference" : "Coverage/Coverage-InActive-Example"
-      },
-      "name" : "Coverage-InActive-Example",
-      "description" : "Example of Get Eligibility response, the patient is not eligible.",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "OperationDefinition"
       }],
       "reference" : {
@@ -1543,7 +1517,7 @@
       "name" : "FindCandidatesRequestBundle",
       "description" : "A Bundle that is used in the Find Candidates Operation request.",
       "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
+      "groupingId" : "Bundles"
     },
     {
       "extension" : [{
@@ -1660,7 +1634,7 @@
       "name" : "GetDemographicsRequestBundle",
       "description" : "A Bundle that is used in the Get Demographics Operation request.",
       "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
+      "groupingId" : "Bundles"
     },
     {
       "extension" : [{
@@ -1672,7 +1646,8 @@
       },
       "name" : "HCIM Patient Change Distributions Topic",
       "description" : "This is the subscription topic used for subscribing to different change distributions.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Subscriptions"
     },
     {
       "extension" : [{
@@ -1684,7 +1659,8 @@
       },
       "name" : "HCIMPatientChangeSubscription",
       "description" : "Profile on subscription for HCIM Patient Changes",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Subscriptions"
     },
     {
       "extension" : [{
@@ -1788,7 +1764,7 @@
       "name" : "MergeRequestBundle",
       "description" : "A Bundle that is used in the Client Registry for Add Patient requests.",
       "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
+      "groupingId" : "Bundles"
     },
     {
       "extension" : [{
@@ -1801,7 +1777,7 @@
       "name" : "MergeResponseBundle",
       "description" : "A Bundle that is used in the Client Registry response to Merge Patient requests.",
       "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
+      "groupingId" : "Bundles"
     },
     {
       "extension" : [{
@@ -1852,7 +1828,8 @@
       },
       "name" : "MetadataParametersSubscription",
       "description" : "Parameters profile for BC meta data when a subscription response is sent.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Subscriptions"
     },
     {
       "extension" : [{
@@ -1877,18 +1854,6 @@
       "name" : "OperationOutcome-Search-Example",
       "description" : "Example OperationOutcome for a Client Registry Search",
       "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Parameters"
-      }],
-      "reference" : {
-        "reference" : "Parameters/Parameters-GetDemographicsWithEligibility-Response-Example"
-      },
-      "name" : "Parameters-GetDemographicsWithEligibility-Response-Example",
-      "description" : "Example of $GetDemographics.withEligibility response Metadata parameters",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"
     },
     {
       "extension" : [{
@@ -1948,8 +1913,7 @@
       },
       "name" : "Partial Update Patient",
       "description" : "This operation is used to update a patient's demographics, applied to only specific Patient attributes.",
-      "exampleBoolean" : false,
-      "groupingId" : "Operations"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1961,8 +1925,7 @@
       },
       "name" : "PartialPatientUpdate",
       "description" : "Patient profile used to update a Patient.",
-      "exampleBoolean" : false,
-      "groupingId" : "PatientProfile"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1974,8 +1937,7 @@
       },
       "name" : "PartialUpdateRequestBundle",
       "description" : "A Bundle that is used in the Client Registry for Patient update requests.",
-      "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -2114,7 +2076,7 @@
       "name" : "ReviseRequestBundle",
       "description" : "A Bundle that is used in the Client Registry for Revise Patient requests.  This is also used by Patient Notitifications.",
       "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
+      "groupingId" : "Bundles"
     },
     {
       "extension" : [{
@@ -2127,7 +2089,7 @@
       "name" : "ReviseResponseBundle",
       "description" : "A Bundle that is used in the Client Registry response to Revise Patient requests.",
       "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
+      "groupingId" : "Bundles"
     },
     {
       "extension" : [{
@@ -2152,19 +2114,7 @@
       "name" : "SearchResponseBundle",
       "description" : "A Bundle that is used in the Client Registry response to Find Candidates and Get Demographics queries.",
       "exampleBoolean" : false,
-      "groupingId" : "SupportingProfiles"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-search-withEligibility-response-bundle"
-      },
-      "name" : "SearchWithEligibilityResponseBundle",
-      "description" : "A Bundle that is used in the Client Registry response to Get Demographics with Eligibility queries.",
-      "exampleBoolean" : false
+      "groupingId" : "Bundles"
     },
     {
       "extension" : [{
@@ -2176,7 +2126,8 @@
       },
       "name" : "SubscriptionNotificationBundle",
       "description" : "A Bundle that is used in the Client Registry when sending subscription notifications.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Subscriptions"
     }],
     "page" : {
       "extension" : [{
