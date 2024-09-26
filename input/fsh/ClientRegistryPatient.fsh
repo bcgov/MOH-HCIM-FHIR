@@ -3,7 +3,7 @@ Parent: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient
 //Parent: Patient
 Id: bc-patient
 Description: "General constraints on the Patient resource for use in the BC Client Registry project."
-* extension contains BusinessPeriodExtension named effectiveDates 0..1 MS and GenderIdentityExtension named genderIdentity 0..1 MS
+* extension contains BusinessPeriodExtension named patientEffectiveDates 0..1 MS and GenderIdentityExtension named genderIdentity 0..1 MS
 * identifier only http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 * identifier 0..* MS
 * identifier.extension contains SourceIDExtension named sourceID 0..1 MS and IdentifierStatusExtension named idStatus 0..1 MS
@@ -39,7 +39,7 @@ Title: "BC Gender Identity with business dates."
 Description: "Gender Identity with business dates."
 * ^context.type = #element
 * ^context.expression = "Patient"
-* extension contains BusinessPeriodExtension named businessDates 0..1 MS and http://hl7.org/fhir/StructureDefinition/patient-genderIdentity named genderIdentity 0..1 MS
+* extension contains BusinessPeriodExtension named genderIdentityEffectiveDates 0..1 MS and http://hl7.org/fhir/StructureDefinition/patient-genderIdentity named genderIdentity 0..1 MS
 
 Extension: BusinessPeriodExtension
 Id: bc-business-period-extension
