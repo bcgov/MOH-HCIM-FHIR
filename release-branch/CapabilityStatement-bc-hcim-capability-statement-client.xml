@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="bc-hcim-capability-statement-client"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when acting as a client. I.e. when sending Patient change notifications.</p><p>A Patient change notification is accomplished by using Subscriptions. A client will register a Subscription with the Client Registry. When the Client Registry determines that a change to a Patient has occurred, it will notify all clients that have subscribed to changes of that specific type.</p><p>The outgoing response to the Subscription is a Bundle. The Bundle has two entries: One with MetadataParamtersIn for messageId, messageDate and sender, one for a ClientRegistryPatient (profile of Patient). The following table describes the request and the four parameters; all are mandatory. The Client Registry SHALL use the following IN parameters when sending a change notification.</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>ReviseRequestBundle</td><td>1..1</td><td><a href="StructureDefinition-bc-revise-request-bundle.html">ReviseRequestBundle</a></td><td/><td><div><p>A Bundle with the Patient change.</p></div></td></tr><tr><td>OUT</td><td/><td/><td/><td/><td>Out is a 200 HTTP response code indicating the subscription response was recieved.</td></tr></table></div>
+  </text>
+  <url value="http://hlth.gov.bc.ca/fhir/client/CapabilityStatement/bc-hcim-capability-statement-client"/>
+  <version value="1.0.0"/>
+  <name value="HCIMClientCapabilityStatement"/>
+  <title value="BC HCIM Client Capability Statement"/>
+  <status value="draft"/>
+  <date value="2021-11-18"/>
+  <publisher value="BC Ministry of Health"/>
+  <contact>
+    <name value="BC Ministry of Health"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"/>
+    </telecom>
+  </contact>
+  <description value="This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a client. I.e. sending notifications."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="CA"/>
+      <display value="Canada"/>
+    </coding>
+  </jurisdiction>
+  <kind value="capability"/>
+  <software>
+    <name value="BC HCIM FHIR Implementation"/>
+  </software>
+  <fhirVersion value="4.0.1"/>
+  <format value="json"/>
+  <rest>
+    <mode value="client"/>
+    <resource>
+      <extension url="http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/capabilitystatement-subscriptiontopic-canonical">
+        <valueCanonical value="http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution"/>
+      </extension>
+      <type value="Subscription"/>
+      <interaction>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <code value="update"/>
+      </interaction>
+      <interaction>
+        <code value="delete"/>
+      </interaction>
+    </resource>
+  </rest>
+</CapabilityStatement>

@@ -1,0 +1,150 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "Merge-WithPayload-Request",
+  "meta" : {
+    "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle"]
+  },
+  "type" : "collection",
+  "timestamp" : "2023-01-23T14:45:48.1500575-08:00",
+  "entry" : [{
+    "fullUrl" : "urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a15d7b9",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "id" : "2329c77d-3c91-408c-9daf-c694a61c518a",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"]
+      },
+      "parameter" : [{
+        "name" : "messageId",
+        "valueString" : "44e8efbe-280c-4a1e-8dd7-839e16a426e5"
+      },
+      {
+        "name" : "messageDateTime",
+        "valueDateTime" : "2023-01-23T14:45:48.1499176-08:00"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:1bccd29a-9d71-4f25-b2b0-fbe7484dcef1",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "Merge-WithPayload-Request-Patient",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_Merge-WithPayload-Request-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient Merge-WithPayload-Request-Patient</b></p><a name=\"Merge-WithPayload-Request-Patient\"> </a><a name=\"hcMerge-WithPayload-Request-Patient\"> </a><a name=\"Merge-WithPayload-Request-Patient-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Aloja Pati Didrika Szymanski  Male, DoB: 1986-07-07 ( Account number\u00a0(use:\u00a0official,\u00a0))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">2006-05-17</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Alternate names (see the one above)\">Alt. Name:</td><td colspan=\"3\">Virginie (Nickname)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 3028602164(Mobile)</li><li>ph: 9056871450(Home)</li><li>ph: 3182632722(Work)</li><li><a href=\"mailto:Hito.Schaffert@cgi.com\">Hito.Schaffert@cgi.com</a></li><li><a href=\"mailto:Lissandre.Svedine@cgi.com\">Lissandre.Svedine@cgi.com</a></li><li><a href=\"mailto:Aretha.Matsko@cgi.com\">Aretha.Matsko@cgi.com</a></li><li>9405 Dark hollow road Klemme BC CA </li><li>40138 Par drive Tobyhanna BC CA </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>This record replaces: Identifier: Account number/CS059OC9Z9MCLN3065382PG7P7JKM2\u00a0(use:\u00a0official,\u00a0)</li><li>This record replaces: Identifier: Account number/0035Z44HE5845\u00a0(use:\u00a0official,\u00a0)</li></ul></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "use" : "official",
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "AN"
+          }]
+        },
+        "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+        "value" : "601BXWJG9W9FB6L02W7ZIN0H66"
+      }],
+      "name" : [{
+        "use" : "usual",
+        "family" : "Szymanski",
+        "given" : ["Aloja",
+        "Pati",
+        "Didrika"]
+      },
+      {
+        "use" : "nickname",
+        "given" : ["Virginie"]
+      }],
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "3028602164",
+        "use" : "mobile"
+      },
+      {
+        "system" : "phone",
+        "value" : "9056871450",
+        "use" : "home"
+      },
+      {
+        "system" : "phone",
+        "value" : "3182632722",
+        "use" : "work"
+      },
+      {
+        "system" : "email",
+        "value" : "Hito.Schaffert@cgi.com",
+        "use" : "mobile"
+      },
+      {
+        "system" : "email",
+        "value" : "Lissandre.Svedine@cgi.com",
+        "use" : "home"
+      },
+      {
+        "system" : "email",
+        "value" : "Aretha.Matsko@cgi.com",
+        "use" : "work"
+      }],
+      "gender" : "male",
+      "birthDate" : "1986-07-07",
+      "deceasedDateTime" : "2006-05-17",
+      "address" : [{
+        "type" : "physical",
+        "line" : ["9405 Dark hollow road"],
+        "city" : "Klemme",
+        "state" : "BC",
+        "country" : "CA"
+      },
+      {
+        "type" : "postal",
+        "line" : ["40138 Par drive"],
+        "city" : "Tobyhanna",
+        "state" : "BC",
+        "country" : "CA"
+      }],
+      "link" : [{
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension",
+          "valueCode" : "obsolete"
+        }],
+        "other" : {
+          "identifier" : {
+            "use" : "official",
+            "type" : {
+              "coding" : [{
+                "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "code" : "AN"
+              }]
+            },
+            "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+            "value" : "CS059OC9Z9MCLN3065382PG7P7JKM2"
+          }
+        },
+        "type" : "replaces"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension",
+          "valueCode" : "obsolete"
+        }],
+        "other" : {
+          "identifier" : {
+            "use" : "official",
+            "type" : {
+              "coding" : [{
+                "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "code" : "AN"
+              }]
+            },
+            "system" : "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode",
+            "value" : "0035Z44HE5845"
+          }
+        },
+        "type" : "replaces"
+      }]
+    }
+  }]
+}

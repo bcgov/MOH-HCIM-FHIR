@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Bundle/FindNewbornByMumsPHN-Request> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "FindNewbornByMumsPHN-Request"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:timestamp [ fhir:v "2023-01-23T13:58:38.959895-08:00"^^xsd:dateTime] ; # 
+  fhir:link ( [
+     fhir:relation [ fhir:v "self" ] ;
+     fhir:url [ fhir:v "urn:uuid:61a241a9-9d87-426d-ac21-548e1b976af3"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:b46f78e1-cfa1-41a6-ba9c-fafe6822791a"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:b46f78e1-cfa1-41a6-ba9c-fafe6822791a> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:e7ae452f-9076-4cd6-958f-1d1c55d34c38"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:e7ae452f-9076-4cd6-958f-1d1c55d34c38> )
+  ] ) . # 
+
+<urn:uuid:b46f78e1-cfa1-41a6-ba9c-fafe6822791a> a fhir:Parameters ;
+  fhir:id [ fhir:v "FindBabiesByMumsPHN-Parameters"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in>
+     ] )
+  ] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "messageId" ] ;
+     fhir:value [ fhir:v "9acccdc8-b4d0-4ac7-9f10-80d0c80136e4" ]
+  ] [
+     fhir:name [ fhir:v "messageDateTime" ] ;
+     fhir:value [ fhir:v "2023-01-23T13:58:38.9591378-08:00"^^xsd:dateTime ]
+  ] [
+     fhir:name [ fhir:v "identifiersOnly" ] ;
+     fhir:value [ fhir:v "false"^^xsd:boolean ]
+  ] ) . # 
+
+<urn:uuid:e7ae452f-9076-4cd6-958f-1d1c55d34c38> a fhir:RelatedPerson ;
+  fhir:id [ fhir:v "FindBabiesByMumsPHN-RelatedPerson"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"RelatedPerson_FindBabiesByMumsPHN-RelatedPerson\"> </a><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson FindBabiesByMumsPHN-RelatedPerson</b></p><a name=\"FindBabiesByMumsPHN-RelatedPerson\"> </a><a name=\"hcFindBabiesByMumsPHN-RelatedPerson\"> </a><a name=\"FindBabiesByMumsPHN-RelatedPerson-en-US\"> </a><p><b>identifier</b>: <code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999999</p><p><b>patient</b>: <a href=\"https://simplifier.net/resolve?scope=hl7.fhir.ca.baseline@1.1.7&amp;canonical=http://hl7.org/fhir/ca/baseline/Patient/e418862f-1759-42de-98a9-00433a779e9b\">??</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode NMTH}\">natural mother</span></p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "active" ]
+     ] ) ;
+     fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "9999999999" ]
+  ] ) ; # 
+  fhir:patient [
+     fhir:link <http://hlth.gov.bc.ca/fhir/client/Patient/e418862f-1759-42de-98a9-00433a779e9b> ;
+     fhir:reference [ fhir:v "Patient/e418862f-1759-42de-98a9-00433a779e9b" ]
+  ] ; # 
+  fhir:relationship ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "NMTH" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,434 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "GetDemographics-withHistory-Response",
+  "meta" : {
+    "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"]
+  },
+  "identifier" : {
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:uuid:bb039f6f-3c18-4427-ad5e-d9de62dccf6b"
+  },
+  "type" : "searchset",
+  "timestamp" : "2023-01-23T14:00:54.4107299-08:00",
+  "total" : 1,
+  "link" : [{
+    "relation" : "canonical",
+    "url" : "https://ig.cgi.com/Patient/$GetDemographics"
+  }],
+  "entry" : [{
+    "fullUrl" : "urn:uuid:fb5ed5fa-e08f-4b88-948a-d81cd26d3453",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "id" : "GetDemographics-withHistory-Response-Parameters",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"]
+      },
+      "parameter" : [{
+        "name" : "messageId",
+        "valueString" : "0cf19fde-0808-4ffe-b029-3aa06bc008a9"
+      },
+      {
+        "name" : "sender",
+        "valueIdentifier" : {
+          "system" : "http://hlth.gov.bc.ca/fhir/client/bc-org",
+          "value" : "FHA"
+        }
+      },
+      {
+        "name" : "messageDateTime",
+        "valueDateTime" : "2023-01-23T14:00:53.7286055-08:00"
+      },
+      {
+        "name" : "history",
+        "valueBoolean" : true
+      },
+      {
+        "name" : "identifiersOnly",
+        "valueBoolean" : false
+      },
+      {
+        "name" : "enterer",
+        "valueIdentifier" : {
+          "system" : "http://hlth.gov.bc.ca/fhir/client/bc-userid",
+          "value" : "ig.samples@cgi.com"
+        }
+      },
+      {
+        "name" : "requestMessageId",
+        "valueString" : "62ac7557-95b4-42b0-acb1-dde7bc56c964"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf74567",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "id" : "GetDemographics-withHistory-Response-Outcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_GetDemographics-withHistory-Response-Outcome\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome GetDemographics-withHistory-Response-Outcome</b></p><a name=\"GetDemographics-withHistory-Response-Outcome\"> </a><a name=\"hcGetDemographics-withHistory-Response-Outcome\"> </a><a name=\"GetDemographics-withHistory-Response-Outcome-en-US\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Information</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.GD.0.0013}\">The get demographics query completed successfully.</span></td></tr></table></div>"
+      },
+      "issue" : [{
+        "severity" : "information",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes",
+            "code" : "BCHCIM.GD.0.0013"
+          }],
+          "text" : "The get demographics query completed successfully."
+        }
+      }]
+    },
+    "search" : {
+      "mode" : "outcome"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf7f4ba",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "87d81314-eba2-4071-af5a-f2b98bf4c13a",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_87d81314-eba2-4071-af5a-f2b98bf4c13a\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient 87d81314-eba2-4071-af5a-f2b98bf4c13a</b></p><a name=\"87d81314-eba2-4071-af5a-f2b98bf4c13a\"> </a><a name=\"hc87d81314-eba2-4071-af5a-f2b98bf4c13a\"> </a><a name=\"87d81314-eba2-4071-af5a-f2b98bf4c13a-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Alithea Joacheim Aine Parthemore  Female, DoB: 1946-11-28 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id#3B022OESRB7W41F3511QJ9PDCE244509HWHH5J\u00a0(use:\u00a0official,\u00a0period:\u00a02018-01-23 14:00:53-0800 --&gt; 2023-01-23 14:00:53-0800))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">1950-07-16</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999999\u00a0(use:\u00a0official,\u00a0period:\u00a02023-01-23 14:00:53-0800 --&gt; (ongoing))</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id</code>/2701XI3IW2R95W87WH3H16082KJ2LEVENM0LNTW\u00a0(use:\u00a0official,\u00a0period:\u00a02023-01-23 14:00:53-0800 --&gt; (ongoing))</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-arh-source-patient-id</code>/8FV66J82GPKBH83\u00a0(use:\u00a0secondary,\u00a0period:\u00a02023-01-23 14:00:53-0800 --&gt; (ongoing))</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-bh-source-patient-id</code>/UO9W191ASP6JN937P3H476IPHC0K83V4Q65\u00a0(use:\u00a0secondary,\u00a0period:\u00a02018-01-23 14:00:53-0800 --&gt; 2023-01-23 14:00:53-0800)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 6237064105(Mobile)</li><li>ph: 6304712096(Mobile)</li><li>ph: 7121011390(Home)</li><li>ph: 4163176376(Home)</li><li>ph: 9845613474(Work)</li><li>ph: 2054428883(Work)</li><li><a href=\"mailto:Berne.Aron@cgi.com\">Berne.Aron@cgi.com</a></li><li><a href=\"mailto:Octavius.Megown@cgi.com\">Octavius.Megown@cgi.com</a></li><li><a href=\"mailto:Claude.Abuel@cgi.com\">Claude.Abuel@cgi.com</a></li><li><a href=\"mailto:Madailein.Ivins@cgi.com\">Madailein.Ivins@cgi.com</a></li><li><a href=\"mailto:Akanni.Ehrler@cgi.com\">Akanni.Ehrler@cgi.com</a></li><li><a href=\"mailto:Tereza.Bis@cgi.com\">Tereza.Bis@cgi.com</a></li><li>1431 Riverwood drive Lake village BC CA </li><li>7597 Mahlon street Maple plain BC CA </li><li>1699 Brand road Hills BC CA </li><li>33031 Arrowood drive Mayfield heights BC CA </li></ul></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode" : "active"
+        }],
+        "use" : "official",
+        "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+        "value" : "9999999999",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        },
+        "assigner" : {
+          "display" : "MOH Client Registry - MOH_CRS"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode" : "active"
+        }],
+        "use" : "official",
+        "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id",
+        "value" : "2701XI3IW2R95W87WH3H16082KJ2LEVENM0LNTW",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        },
+        "assigner" : {
+          "display" : "FHA Meditech - Fraser Valley - FHA_FV"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode" : "merged"
+        }],
+        "use" : "official",
+        "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id",
+        "value" : "3B022OESRB7W41F3511QJ9PDCE244509HWHH5J",
+        "period" : {
+          "start" : "2018-01-23T14:00:53-08:00",
+          "end" : "2023-01-23T14:00:53-08:00"
+        },
+        "assigner" : {
+          "display" : "FHA Meditech - Fraser Valley - FHA_FV"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode" : "active"
+        }],
+        "use" : "secondary",
+        "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-arh-source-patient-id",
+        "value" : "8FV66J82GPKBH83",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        },
+        "assigner" : {
+          "display" : "Abbotsford Regional Hospital"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode" : "merged"
+        }],
+        "use" : "secondary",
+        "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-bh-source-patient-id",
+        "value" : "UO9W191ASP6JN937P3H476IPHC0K83V4Q65",
+        "period" : {
+          "start" : "2018-01-23T14:00:53-08:00",
+          "end" : "2023-01-23T14:00:53-08:00"
+        },
+        "assigner" : {
+          "display" : "Burnaby Hospital"
+        }
+      }],
+      "active" : true,
+      "name" : [{
+        "use" : "usual",
+        "family" : "Parthemore",
+        "given" : ["Alithea",
+        "Joacheim",
+        "Aine"],
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "use" : "usual",
+        "family" : "Kalscheuer",
+        "given" : ["Christina",
+        "Matei",
+        "Marlin"],
+        "period" : {
+          "start" : "2020-01-23T14:00:53-08:00",
+          "end" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "use" : "official",
+        "given" : ["Abaigh",
+        "Evangelia",
+        "Wahchinksapa"],
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "use" : "official",
+        "given" : ["Wilhelmus",
+        "Galatea",
+        "Olabisi"],
+        "period" : {
+          "start" : "2017-01-23T14:00:53-08:00",
+          "end" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "use" : "nickname",
+        "given" : ["Mia"],
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "use" : "nickname",
+        "given" : ["Jutta"],
+        "period" : {
+          "start" : "2020-01-23T14:00:53-08:00",
+          "end" : "2023-01-23T14:00:53-08:00"
+        }
+      }],
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "6237064105",
+        "use" : "mobile",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "system" : "phone",
+        "value" : "6304712096",
+        "use" : "mobile",
+        "period" : {
+          "start" : "2021-01-23T14:00:53-08:00",
+          "end" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "system" : "phone",
+        "value" : "7121011390",
+        "use" : "home",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "system" : "phone",
+        "value" : "4163176376",
+        "use" : "home",
+        "period" : {
+          "start" : "2017-01-23T14:00:53-08:00",
+          "end" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "system" : "phone",
+        "value" : "9845613474",
+        "use" : "work",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "system" : "phone",
+        "value" : "2054428883",
+        "use" : "work",
+        "period" : {
+          "start" : "2017-01-23T14:00:53-08:00",
+          "end" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "system" : "email",
+        "value" : "Berne.Aron@cgi.com",
+        "use" : "mobile",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "system" : "email",
+        "value" : "Octavius.Megown@cgi.com",
+        "use" : "mobile",
+        "period" : {
+          "start" : "2020-01-23T14:00:53-08:00",
+          "end" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "system" : "email",
+        "value" : "Claude.Abuel@cgi.com",
+        "use" : "home",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "system" : "email",
+        "value" : "Madailein.Ivins@cgi.com",
+        "use" : "home",
+        "period" : {
+          "start" : "2019-01-23T14:00:53-08:00",
+          "end" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "system" : "email",
+        "value" : "Akanni.Ehrler@cgi.com",
+        "use" : "work",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "system" : "email",
+        "value" : "Tereza.Bis@cgi.com",
+        "use" : "work",
+        "period" : {
+          "start" : "2017-01-23T14:00:53-08:00",
+          "end" : "2023-01-23T14:00:53-08:00"
+        }
+      }],
+      "gender" : "female",
+      "_gender" : {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+          "valuePeriod" : {
+            "start" : "2023-01-23T14:00:53-08:00"
+          }
+        }]
+      },
+      "birthDate" : "1946-11-28",
+      "_birthDate" : {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+          "valuePeriod" : {
+            "start" : "2023-01-23T14:00:53-08:00"
+          }
+        }]
+      },
+      "deceasedDateTime" : "1950-07-16",
+      "_deceasedDateTime" : {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+          "valuePeriod" : {
+            "start" : "2023-01-23T14:00:53-08:00"
+          }
+        },
+        {
+          "extension" : [{
+            "url" : "deathVerifiedFlag",
+            "valueBoolean" : false
+          },
+          {
+            "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+            "valuePeriod" : {
+              "start" : "2023-01-23T14:00:53-08:00"
+            }
+          }],
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension"
+        }]
+      },
+      "address" : [{
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+          "valueCode" : "unknown"
+        }],
+        "type" : "physical",
+        "line" : ["1431 Riverwood drive"],
+        "city" : "Lake village",
+        "state" : "BC",
+        "country" : "CA",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+          "valueCode" : "unknown"
+        }],
+        "type" : "physical",
+        "line" : ["7597 Mahlon street"],
+        "city" : "Maple plain",
+        "state" : "BC",
+        "country" : "CA",
+        "period" : {
+          "start" : "2017-01-23T14:00:53-08:00",
+          "end" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+          "valueCode" : "unknown"
+        }],
+        "type" : "postal",
+        "line" : ["1699 Brand road"],
+        "city" : "Hills",
+        "state" : "BC",
+        "country" : "CA",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+          "valueCode" : "unknown"
+        }],
+        "type" : "postal",
+        "line" : ["33031 Arrowood drive"],
+        "city" : "Mayfield heights",
+        "state" : "BC",
+        "country" : "CA",
+        "period" : {
+          "start" : "2020-01-23T14:00:53-08:00",
+          "end" : "2023-01-23T14:00:53-08:00"
+        }
+      }]
+    }
+  }]
+}

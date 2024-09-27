@@ -1,0 +1,45 @@
+{
+  "resourceType" : "OperationDefinition",
+  "id" : "bc-patient-notification",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition bc-patient-notification</b></p><a name=\"bc-patient-notification\"> </a><a name=\"hcbc-patient-notification\"> </a><a name=\"bc-patient-notification-en-US\"> </a><p>URL: [base]/Patient/$PatientNotification</p><p>Input parameters Profile:<a href=\"StructureDefinition-bc-revise-request-bundle.html\">ReviseRequestBundle</a></p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>ReviseRequestBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The request bundle.</p>\n</div></td></tr></table></div>"
+  },
+  "url" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-notification",
+  "version" : "1.0.0",
+  "name" : "PatientNotification",
+  "title" : "Patient Notification",
+  "status" : "draft",
+  "kind" : "operation",
+  "date" : "2024-09-27T22:56:13+00:00",
+  "publisher" : "BC Ministry of Health",
+  "contact" : [{
+    "name" : "BC Ministry of Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+    }]
+  }],
+  "description" : "This operation is used notify a user that a patient's record has changed.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CA",
+      "display" : "Canada"
+    }]
+  }],
+  "code" : "PatientNotification",
+  "resource" : ["Patient"],
+  "system" : false,
+  "type" : true,
+  "instance" : false,
+  "inputProfile" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle",
+  "parameter" : [{
+    "name" : "ReviseRequestBundle",
+    "use" : "in",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "The request bundle.",
+    "type" : "Bundle"
+  }]
+}

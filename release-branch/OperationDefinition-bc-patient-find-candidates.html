@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Find Candidates By Example - BC Client Registry FHIR Implementation Guide v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/bc-fhir.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"14.4"}
+    h3,h4,h5,h6{--heading-prefix:"14.4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">
+            <img height="71" alt="Project home" src="assets/images/BCMinistry.png"/>
+          </a>
+        </div>
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">BC Client Registry FHIR Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - Build CI
+
+
+
+  <img alt="Canada flag" src="assets/images/can.svg" height="16" title="Canada"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Overview</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Design
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="design.html">Summary</a>
+      </li>
+      <li>
+        <a href="search.html">Search Patient</a>
+      </li>
+      <li>
+        <a href="reviseAndMerge.html">Add, Revise, Update And Merge Patient</a>
+      </li>
+      <li>
+        <a href="distributions.html">Patient Change Notifications</a>
+      </li>
+      <li>
+        <a href="identifiers.html">Identifiers</a>
+      </li>
+      <li>
+        <a href="absentData.html">Data Absent</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="v3Transition.html">V3 Transition</a>
+  </li>
+  <li>
+    <a href="connectedPartner.html">Connected Partner</a>
+  </li>
+  <li>
+    <a href="capabilityStatement.html">Capability Statement</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="futurePlans.html">Future Plans</a>
+  </li>
+  <li>
+    <a href="terminology.html">Glossary</a>
+  </li>
+  <li>
+    <a href="credits.html">Credits</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Find Candidates By Example</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hlth.gov.bc.ca/fhir/client/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="OperationDefinition-bc-patient-find-candidates.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="OperationDefinition-bc-patient-find-candidates.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="OperationDefinition-bc-patient-find-candidates.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+
+  <h2 id="root">OperationDefinition: Find Candidates By Example
+
+  </h2>
+
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-find-candidates<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-find-candidates"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">1.0.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-find-candidates|1.0.0"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Active
+          
+            as of 2024-09-27
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">FindCandidatesByExample</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+<p>
+<p>This operation is used to query for a patient.  The response can contain 0 or more Patients.</p>
+
+</p>
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+<div style="display:inline-block" markdown="1">
+
+<blockquote>
+  <p><span style="color:red">Note</span><br />This specification is currently published as a Draft Standard on the ministry GitHub and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.</p>
+</blockquote>
+
+<p>The Find Candidates query is a FHIR Operation.</p>
+
+<p>The request is a Bundle with Resources for message meta data, a Patient to match against and possibly a RelatedPerson representing the Mother with a PHN Identifier. The response is a Bundle with Resources for Patient's that matched, response meta data, operation outcome resources and if using mother's PHN RelatedPerson resources.</p>
+
+<p>This is a 'search by example' and the Patient resource may be populated with various values and combinations of values. Those values are matched against the Client Registry.</p>
+
+<p>Please refer also to the <a href="identifiers.html">Identifiers</a> page to find more details regarding how to use Identifier in your query.</p>
+
+<p>For optimal searching and to be conformant with Health Information Exchange standards please review the Client Registry conformance standards found <a href="https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/software/conformance-standards">here</a>.  Those documents specify combinations of values that are best suited to find your Patients.</p>
+
+
+</div>
+
+
+
+
+<!--  <p>
+  Formats: <a href="OperationDefinition-bc-patient-find-candidates.xml.html">XML</a>, <a href="OperationDefinition-bc-patient-find-candidates.json.html">JSON</a>, <a href="OperationDefinition-bc-patient-find-candidates.ttl.html">Turtle</a>
+  </p>-->
+
+  
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: OperationDefinition bc-patient-find-candidates</b></p><a name="bc-patient-find-candidates"> </a><a name="hcbc-patient-find-candidates"> </a><a name="bc-patient-find-candidates-en-US"> </a><p>URL: [base]/Patient/$FindCandidates</p><p>Input parameters Profile:<a href="StructureDefinition-bc-find-candidates-request-bundle.html">FindCandidatesRequestBundle</a></p><p>Output parameters Profile:<a href="StructureDefinition-bc-search-response-bundle.html">SearchResponseBundle</a></p><h3>Parameters</h3><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>FindCandidatesRequestBundle</td><td/><td>1..1</td><td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td><td/><td><div><p>The FindCandidates operation request Bundle.</p>
+</div></td></tr><tr><td>OUT</td><td>SearchResponseBundle</td><td/><td>1..1</td><td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td><td/><td><div><p>The FindCandidates operation response Bundle.</p>
+</div></td></tr></table></div>
+
+  <!-- insert notes if present -->
+  
+
+<h3>Notes:</h3>
+
+
+<div style="display:inline-block" markdown="1">
+
+<p>The response may not include any Patients if none matched the criteria.  If there are patients returned, the Bundle.entry.search.score (i.e. entry for the Patient resource) will contain the Client Registry score.</p>
+
+<p>If multiple Patients match they will all be returned.</p>
+
+<p>If the search used mother's PHN then RelatedPerson resources are returned which include (a) the mother's identifier and (b) a reference to the related Patient in the response Bundle.  There may be multiple Patients returned, and therefore also multiple RelatedPersons, one per Patient (e.g. twins).  See an example <a href="Bundle-FindNewbornByMumsPHN-Response.html">here</a>.</p>
+
+<h4 id="in-bundle-entries">In Bundle Entries</h4>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th style="text-align: left">Cardinality</th>
+      <th style="text-align: left">Resource Type</th>
+      <th style="text-align: left">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">1..1</td>
+      <td style="text-align: left">MetadataParametersIn</td>
+      <td style="text-align: left">See <a href="StructureDefinition-bc-metadata-parameters-in.html">profile</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">0..1</td>
+      <td style="text-align: left">ClientRegistryPatient</td>
+      <td style="text-align: left">See <a href="StructureDefinition-bc-patient.html">profile</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">0..1</td>
+      <td style="text-align: left">RelatedPerson</td>
+      <td style="text-align: left">This a standard FHIR resource, not profiled by the Client Registry.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="out-bundle-entries">Out Bundle Entries</h4>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th style="text-align: left">Cardinality</th>
+      <th style="text-align: left">Resource Type</th>
+      <th style="text-align: left">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">1..1</td>
+      <td style="text-align: left">MetadataParametersOut</td>
+      <td style="text-align: left">See <a href="StructureDefinition-bc-metadata-parameters-out.html">profile</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">1,,1</td>
+      <td style="text-align: left">OperationOutcome</td>
+      <td style="text-align: left">An OperationOutcome resource that has warnings and errors regarding the operation requested.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">0..*</td>
+      <td style="text-align: left">ClientRegistryPatient</td>
+      <td style="text-align: left">See <a href="StructureDefinition-bc-patient.html">profile</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">0..*</td>
+      <td style="text-align: left">RelatedPerson</td>
+      <td style="text-align: left">This a standard FHIR resource, not profiled by the Client Registry.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="metadata-in-parameters">Metadata In Parameters</h4>
+
+<p>Besides the two mandatory name-value pairs, see <a href="StructureDefinition-bc-metadata-parameters-in.html">here</a>, Find Candidates has one more, see below.</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Type</th>
+      <th>Cardinality</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">identifiersOnly</td>
+      <td style="text-align: left">boolean</td>
+      <td>0..1</td>
+      <td>Instruct the Client Registry to return Patient Identifiers only when true. If not present, defaults to false. This is located in the Parameters entry of the Bundle.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="metadata-out-parameters">Metadata Out Parameters</h4>
+
+<p>Besides the mandatory parameters, the request search parameters are echoed back in the MetadataParametersOut resource with a parameter named requestParameters (which is a MetadataParametersIn resource).</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Type</th>
+      <th>Cardinality</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">requestParameters</td>
+      <td style="text-align: left">MetadataParametersIn</td>
+      <td>1..1</td>
+      <td>The request parameters are echoed back..</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="mothers-phn">Mother's PHN</h4>
+
+<p>If the request is to return a Patient based on the mother's PHN, then the request Bundle must have a RelatedPerson resource with the mother's PHN as an Identifier.  No Patient is required in this case.  There is an example request <a href="Bundle-FindNewbornByMumsPHN-Request.html">here</a>.</p>
+
+<h4 id="nameuse">Name.use</h4>
+
+<p>Searching with the FindCandidates operation will match names of all use codes that the Client Registry supports no matter the name.use value provided in the request.  Name.use may be left blank.</p>
+
+<h4 id="examples">Examples</h4>
+
+<p>See <a href="Bundle-FindCandidates-Request.html">Find Candidates request</a> example.<br />
+See <a href="Bundle-FindNewbornByMumsPHN-Request.html">Find Candidates mother's PHN request</a> example.<br />
+See <a href="Bundle-FindCandidates-Response.html">Find Candidates response</a> example.<br />
+See <a href="Bundle-FindNewbornByMumsPHN-Response.html">Find Candidates mother's PHN response</a> example.</p>
+
+
+</div>
+
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 27, 2024 22:56+0000">2024-09-27</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

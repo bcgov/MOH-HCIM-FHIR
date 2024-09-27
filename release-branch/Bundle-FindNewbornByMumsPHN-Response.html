@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>FindNewbornByMumsPHN-Response - BC Client Registry FHIR Implementation Guide v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/bc-fhir.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"14.37"}
+    h3,h4,h5,h6{--heading-prefix:"14.37"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">
+            <img height="71" alt="Project home" src="assets/images/BCMinistry.png"/>
+          </a>
+        </div>
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">BC Client Registry FHIR Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - Build CI
+
+
+
+  <img alt="Canada flag" src="assets/images/can.svg" height="16" title="Canada"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Overview</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Design
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="design.html">Summary</a>
+      </li>
+      <li>
+        <a href="search.html">Search Patient</a>
+      </li>
+      <li>
+        <a href="reviseAndMerge.html">Add, Revise, Update And Merge Patient</a>
+      </li>
+      <li>
+        <a href="distributions.html">Patient Change Notifications</a>
+      </li>
+      <li>
+        <a href="identifiers.html">Identifiers</a>
+      </li>
+      <li>
+        <a href="absentData.html">Data Absent</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="v3Transition.html">V3 Transition</a>
+  </li>
+  <li>
+    <a href="connectedPartner.html">Connected Partner</a>
+  </li>
+  <li>
+    <a href="capabilityStatement.html">Capability Statement</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="futurePlans.html">Future Plans</a>
+  </li>
+  <li>
+    <a href="terminology.html">Glossary</a>
+  </li>
+  <li>
+    <a href="credits.html">Credits</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>FindNewbornByMumsPHN-Response</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hlth.gov.bc.ca/fhir/client/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Bundle-FindNewbornByMumsPHN-Response.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-FindNewbornByMumsPHN-Response.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-FindNewbornByMumsPHN-Response.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+  <a name="root"> </a>
+
+
+  <h2 id="root">Example Bundle: FindNewbornByMumsPHN-Response</h2>
+
+
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <div><p class="res-header-id"><b>Generated Narrative: Bundle FindNewbornByMumsPHN-Response</b></p><a name="FindNewbornByMumsPHN-Response"> </a><a name="hcFindNewbornByMumsPHN-Response"> </a><a name="FindNewbornByMumsPHN-Response-en-US"> </a><p>Bundle FindNewbornByMumsPHN-Response of type searchset</p><a name="urn-uuid-b46f78e1-cfa1-41a6-ba9c-fafe6822791a"> </a><a name="Parameters_FindNewbornByMumsPHN-Response-Parameters"> </a><a name="hcParameters_FindNewbornByMumsPHN-Response-Parameters"> </a><hr/><p>Entry 1 - fullUrl = urn:uuid:b46f78e1-cfa1-41a6-ba9c-fafe6822791a</p><p>Resource Parameters:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Parameters FindNewbornByMumsPHN-Response-Parameters</b></p><a name="FindNewbornByMumsPHN-Response/FindNewbornByMumsPHN-Response-Parameters"> </a><a name="hcFindNewbornByMumsPHN-Response/FindNewbornByMumsPHN-Response-Parameters"> </a><a name="FindNewbornByMumsPHN-Response/FindNewbornByMumsPHN-Response-Parameters-en-US"> </a><h2>Parameters</h2><table class="grid"><tr><td>messageId</td><td>9acccdc8-b4d0-4ac7-9f10-80d0c80136e4</td></tr><tr><td>sender</td><td><code>http://hlth.gov.bc.ca/fhir/client/bc-org</code>/FHA</td></tr><tr><td>messageDateTime</td><td>2023-01-23 13:58:38-0800</td></tr><tr><td>identifiersOnly</td><td>false</td></tr><tr><td>enterer</td><td><code>http://hlth.gov.bc.ca/fhir/client/bc-userid</code>/ig.samples@cgi.com</td></tr><tr><td>requestMessageId</td><td>2a956654-9d48-422b-ab23-ea708462760b</td></tr></table></blockquote><a name="urn-uuid-c3e604ec-0917-41a8-9d90-1da8e6611234"> </a><a name="OperationOutcome_FindNewbornByMumsPHN-Response-Outcome"> </a><a name="hcOperationOutcome_FindNewbornByMumsPHN-Response-Outcome"> </a><hr/><p>Entry 2 - fullUrl = urn:uuid:c3e604ec-0917-41a8-9d90-1da8e6611234</p><p>Search:Mode = outcome</p><p>Resource OperationOutcome:</p><blockquote><p class="res-header-id"><b>Generated Narrative: OperationOutcome FindNewbornByMumsPHN-Response-Outcome</b></p><a name="FindNewbornByMumsPHN-Response/FindNewbornByMumsPHN-Response-Outcome"> </a><a name="hcFindNewbornByMumsPHN-Response/FindNewbornByMumsPHN-Response-Outcome"> </a><a name="FindNewbornByMumsPHN-Response/FindNewbornByMumsPHN-Response-Outcome-en-US"> </a><p>All OK</p><table class="grid"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td></tr><tr><td>Information</td><td/><td>Business Rule Violation</td><td>The search completed successfully.</td><td/></tr></table></blockquote><a name="urn-uuid-d71c7185-8419-455d-bd39-cb184193ddbc"> </a><a name="Patient_26a6dc2a-8bad-45f3-b8e2-8829f554e8a4"> </a><a name="hcPatient_26a6dc2a-8bad-45f3-b8e2-8829f554e8a4"> </a><hr/><p>Entry 3 - fullUrl = urn:uuid:d71c7185-8419-455d-bd39-cb184193ddbc</p><p>Resource Patient:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Patient 26a6dc2a-8bad-45f3-b8e2-8829f554e8a4</b></p><a name="FindNewbornByMumsPHN-Response/26a6dc2a-8bad-45f3-b8e2-8829f554e8a4"> </a><a name="hcFindNewbornByMumsPHN-Response/26a6dc2a-8bad-45f3-b8e2-8829f554e8a4"> </a><a name="FindNewbornByMumsPHN-Response/26a6dc2a-8bad-45f3-b8e2-8829f554e8a4-en-US"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Baby Girl Shawley  Female, DoB: 2023-01-22 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id#9999999991 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Other Id (see the one above)">Other Id:</td><td colspan="3"><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id</code>/TCYS809BQAQS9323KO27C74502OZF714KM29 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li>13719 Froe street Aylesford BC CA </li><li>24989 School street Thermal BC CA </li></ul></td></tr></table></blockquote><a name="urn-uuid-c7c91331-ef61-4153-b01e-b8d6447b66c5"> </a><a name="Patient_2e5169f0-7a01-49cc-8006-39d4c2bdc0ee"> </a><a name="hcPatient_2e5169f0-7a01-49cc-8006-39d4c2bdc0ee"> </a><hr/><p>Entry 4 - fullUrl = urn:uuid:c7c91331-ef61-4153-b01e-b8d6447b66c5</p><p>Resource Patient:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Patient 2e5169f0-7a01-49cc-8006-39d4c2bdc0ee</b></p><a name="FindNewbornByMumsPHN-Response/2e5169f0-7a01-49cc-8006-39d4c2bdc0ee"> </a><a name="hcFindNewbornByMumsPHN-Response/2e5169f0-7a01-49cc-8006-39d4c2bdc0ee"> </a><a name="FindNewbornByMumsPHN-Response/2e5169f0-7a01-49cc-8006-39d4c2bdc0ee-en-US"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Baby Girl Shawley  Female, DoB: 2023-01-22 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id#9999999992 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Other Id (see the one above)">Other Id:</td><td colspan="3"><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id</code>/PC88F0F67VI3AJMI (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li>13719 Froe street Aylesford BC CA </li><li>24989 School street Thermal BC CA </li></ul></td></tr></table></blockquote><a name="urn-uuid-beda6325-3140-444e-af5b-0f6c320b98d1"> </a><a name="Patient_7668592e-2316-4ea8-bbab-bb601239e71e"> </a><a name="hcPatient_7668592e-2316-4ea8-bbab-bb601239e71e"> </a><hr/><p>Entry 5 - fullUrl = urn:uuid:beda6325-3140-444e-af5b-0f6c320b98d1</p><p>Resource Patient:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Patient 7668592e-2316-4ea8-bbab-bb601239e71e</b></p><a name="FindNewbornByMumsPHN-Response/7668592e-2316-4ea8-bbab-bb601239e71e"> </a><a name="hcFindNewbornByMumsPHN-Response/7668592e-2316-4ea8-bbab-bb601239e71e"> </a><a name="FindNewbornByMumsPHN-Response/7668592e-2316-4ea8-bbab-bb601239e71e-en-US"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Dietrich Shawley  Female, DoB: 2022-12-17 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id#9999999999 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Other Id (see the one above)">Other Id:</td><td colspan="3"><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id</code>/9ZJVK0Z8Y4QS232 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li>ph: 3142487326(Home)</li><li>13719 Froe street Aylesford BC CA </li><li>24989 School street Thermal BC CA </li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>Also see: <a href="Bundle-FindNewbornByMumsPHN-Response.html#urn-uuid-13cb4c36-102d-49c7-9f2e-f652ece39ecf">Bundle: identifier = UUID:91dd7048-9bcc-405a-844b-47dc2656fd07; type = searchset; timestamp = 2023-01-23 13:58:38-0800; total = 3</a></li><li>Also see: <a href="Bundle-FindNewbornByMumsPHN-Response.html#urn-uuid-613f5d13-9753-4c0c-89f9-f2bce0622721">Bundle: identifier = UUID:91dd7048-9bcc-405a-844b-47dc2656fd07; type = searchset; timestamp = 2023-01-23 13:58:38-0800; total = 3</a></li></ul></td></tr></table></blockquote><a name="urn-uuid-13cb4c36-102d-49c7-9f2e-f652ece39ecf"> </a><a name="RelatedPerson_FindNewbornByMumsPHN-Response-RelatedPerson1"> </a><a name="hcRelatedPerson_FindNewbornByMumsPHN-Response-RelatedPerson1"> </a><hr/><p>Entry 6 - fullUrl = urn:uuid:13cb4c36-102d-49c7-9f2e-f652ece39ecf</p><p>Search:Mode = include</p><p>Resource RelatedPerson:</p><blockquote><p class="res-header-id"><b>Generated Narrative: RelatedPerson FindNewbornByMumsPHN-Response-RelatedPerson1</b></p><a name="FindNewbornByMumsPHN-Response/FindNewbornByMumsPHN-Response-RelatedPerson1"> </a><a name="hcFindNewbornByMumsPHN-Response/FindNewbornByMumsPHN-Response-RelatedPerson1"> </a><a name="FindNewbornByMumsPHN-Response/FindNewbornByMumsPHN-Response-RelatedPerson1-en-US"> </a><p><b>patient</b>: <a href="https://simplifier.net/resolve?scope=hl7.fhir.ca.baseline@1.1.7&amp;canonical=urn:uuid:71092811-55f9-4e1f-8754-a6828da1d51c">??</a></p><p><b>relationship</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode NMTH}">natural mother</span></p></blockquote><a name="urn-uuid-613f5d13-9753-4c0c-89f9-f2bce0622721"> </a><a name="RelatedPerson_FindNewbornByMumsPHN-Response-RelatedPerson2"> </a><a name="hcRelatedPerson_FindNewbornByMumsPHN-Response-RelatedPerson2"> </a><hr/><p>Entry 7 - fullUrl = urn:uuid:613f5d13-9753-4c0c-89f9-f2bce0622721</p><p>Search:Mode = include</p><p>Resource RelatedPerson:</p><blockquote><p class="res-header-id"><b>Generated Narrative: RelatedPerson FindNewbornByMumsPHN-Response-RelatedPerson2</b></p><a name="FindNewbornByMumsPHN-Response/FindNewbornByMumsPHN-Response-RelatedPerson2"> </a><a name="hcFindNewbornByMumsPHN-Response/FindNewbornByMumsPHN-Response-RelatedPerson2"> </a><a name="FindNewbornByMumsPHN-Response/FindNewbornByMumsPHN-Response-RelatedPerson2-en-US"> </a><p><b>patient</b>: <a href="https://simplifier.net/resolve?scope=hl7.fhir.ca.baseline@1.1.7&amp;canonical=urn:uuid:69b91ae6-e147-4dd0-abe7-8912ec301fd9">??</a></p><p><b>relationship</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode NMTH}">natural mother</span></p></blockquote></div>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 27, 2024 22:56+0000">2024-09-27</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

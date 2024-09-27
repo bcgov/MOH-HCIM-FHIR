@@ -1,0 +1,56 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/CodeSystem/bc-client-registry-address-validation-code-system> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "bc-client-registry-address-validation-code-system"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem bc-client-registry-address-validation-code-system</b></p><a name=\"bc-client-registry-address-validation-code-system\"> </a><a name=\"hcbc-client-registry-address-validation-code-system\"> </a><a name=\"bc-client-registry-address-validation-code-system-en-US\"> </a><p>This case-sensitive code system <code>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-address-validation-code-system</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">valid<a name=\"bc-client-registry-address-validation-code-system-valid\"> </a></td><td>The address is valid, i.e. there is a reasonable good chance this address is known to Canada Post.</td></tr><tr><td style=\"white-space:nowrap\">invalid<a name=\"bc-client-registry-address-validation-code-system-invalid\"> </a></td><td>The address validation status is invalid and like not recognized by Canada Post.</td></tr><tr><td style=\"white-space:nowrap\">unknown<a name=\"bc-client-registry-address-validation-code-system-unknown\"> </a></td><td>The address validation status is unknown.</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-address-validation-code-system"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "AddressValidationCS"] ; # 
+  fhir:title [ fhir:v "BC Client Registry Address Validation Status Code"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-09-27T22:56:13+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "BC Ministry of Health"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "BC Ministry of Health" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes used to define the address validation status."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CA" ] ;
+       fhir:display [ fhir:v "Canada" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "valid" ] ;
+     fhir:display [ fhir:v "valid" ] ;
+     fhir:definition [ fhir:v "The address is valid, i.e. there is a reasonable good chance this address is known to Canada Post." ]
+  ] [
+     fhir:code [ fhir:v "invalid" ] ;
+     fhir:display [ fhir:v "invalid" ] ;
+     fhir:definition [ fhir:v "The address validation status is invalid and like not recognized by Canada Post." ]
+  ] [
+     fhir:code [ fhir:v "unknown" ] ;
+     fhir:display [ fhir:v "unknown" ] ;
+     fhir:definition [ fhir:v "The address validation status is unknown." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

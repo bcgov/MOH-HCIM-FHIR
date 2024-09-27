@@ -1,0 +1,74 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "Merge-Only-Request",
+  "meta" : {
+    "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle"]
+  },
+  "type" : "collection",
+  "timestamp" : "2023-01-23T14:45:47.9755936-08:00",
+  "entry" : [{
+    "fullUrl" : "urn:uuid:30f9e023-c3dc-43e3-bf91-b46da0836c16",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "id" : "Merge-Only-Request-Parameters",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"]
+      },
+      "parameter" : [{
+        "name" : "messageId",
+        "valueString" : "df2a3ffb-d760-40f7-9118-f1b6d86f1113"
+      },
+      {
+        "name" : "messageDateTime",
+        "valueDateTime" : "2023-01-23T14:45:47.9633129-08:00"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:8fb558c8-1c16-4553-ba62-e165c580c337",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "Merge-Only-Request-Patient",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_Merge-Only-Request-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient Merge-Only-Request-Patient</b></p><a name=\"Merge-Only-Request-Patient\"> </a><a name=\"hcMerge-Only-Request-Patient\"> </a><a name=\"Merge-Only-Request-Patient-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient (no stated gender), DoB Unknown ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vcha-rich-source-patient-id#56N4QF275188070LV60O8RM2L\u00a0(use:\u00a0official,\u00a0))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>This record replaces: Identifier: <code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vcha-rich-source-patient-id</code>/58EZ32AH5MLP9GT20\u00a0(use:\u00a0official,\u00a0)</li><li>This record replaces: Identifier: <code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vcha-rich-source-patient-id</code>/JP5Y964W2B1B13C6\u00a0(use:\u00a0official,\u00a0)</li></ul></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "use" : "official",
+        "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vcha-rich-source-patient-id",
+        "value" : "56N4QF275188070LV60O8RM2L"
+      }],
+      "link" : [{
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension",
+          "valueCode" : "obsolete"
+        }],
+        "other" : {
+          "identifier" : {
+            "use" : "official",
+            "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vcha-rich-source-patient-id",
+            "value" : "58EZ32AH5MLP9GT20"
+          }
+        },
+        "type" : "replaces"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension",
+          "valueCode" : "obsolete"
+        }],
+        "other" : {
+          "identifier" : {
+            "use" : "official",
+            "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vcha-rich-source-patient-id",
+            "value" : "JP5Y964W2B1B13C6"
+          }
+        },
+        "type" : "replaces"
+      }]
+    }
+  }]
+}

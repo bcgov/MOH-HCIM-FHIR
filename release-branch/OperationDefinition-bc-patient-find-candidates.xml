@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-patient-find-candidates"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: OperationDefinition bc-patient-find-candidates</b></p><a name="bc-patient-find-candidates"> </a><a name="hcbc-patient-find-candidates"> </a><a name="bc-patient-find-candidates-en-US"> </a><p>URL: [base]/Patient/$FindCandidates</p><p>Input parameters Profile:<a href="StructureDefinition-bc-find-candidates-request-bundle.html">FindCandidatesRequestBundle</a></p><p>Output parameters Profile:<a href="StructureDefinition-bc-search-response-bundle.html">SearchResponseBundle</a></p><h3>Parameters</h3><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>FindCandidatesRequestBundle</td><td/><td>1..1</td><td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td><td/><td><div><p>The FindCandidates operation request Bundle.</p>
+</div></td></tr><tr><td>OUT</td><td>SearchResponseBundle</td><td/><td>1..1</td><td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td><td/><td><div><p>The FindCandidates operation response Bundle.</p>
+</div></td></tr></table></div>
+  </text>
+  <url value="http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-find-candidates"/>
+  <version value="1.0.0"/>
+  <name value="FindCandidatesByExample"/>
+  <title value="Find Candidates By Example"/>
+  <status value="active"/>
+  <kind value="query"/>
+  <date value="2024-09-27T22:56:13+00:00"/>
+  <publisher value="BC Ministry of Health"/>
+  <contact>
+    <name value="BC Ministry of Health"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"/>
+    </telecom>
+  </contact>
+  <description value="This operation is used to query for a patient.  The response can contain 0 or more Patients."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="CA"/>
+      <display value="Canada"/>
+    </coding>
+  </jurisdiction>
+  <code value="FindCandidates"/>
+  <resource value="Patient"/>
+  <system value="false"/>
+  <type value="true"/>
+  <instance value="false"/>
+  <inputProfile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle"/>
+  <outputProfile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
+  <parameter>
+    <name value="FindCandidatesRequestBundle"/>
+    <use value="in"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="The FindCandidates operation request Bundle."/>
+    <type value="Bundle"/>
+  </parameter>
+  <parameter>
+    <name value="SearchResponseBundle"/>
+    <use value="out"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="The FindCandidates operation response Bundle."/>
+    <type value="Bundle"/>
+  </parameter>
+</OperationDefinition>
