@@ -1,0 +1,54 @@
+{
+  "resourceType" : "OperationDefinition",
+  "id" : "bc-patient-get-demographics",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition bc-patient-get-demographics</b></p><a name=\"bc-patient-get-demographics\"> </a><a name=\"hcbc-patient-get-demographics\"> </a><a name=\"bc-patient-get-demographics-en-US\"> </a><p>URL: [base]/Patient/$GetDemographics</p><p>Input parameters Profile:<a href=\"StructureDefinition-bc-get-demographics-request-bundle.html\">GetDemographicsRequestBundle</a></p><p>Output parameters Profile:<a href=\"StructureDefinition-bc-search-response-bundle.html\">SearchResponseBundle</a></p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>GetDemographicsRequestBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>GetDemographics request Bundle.</p>\n</div></td></tr><tr><td>OUT</td><td>SearchResponseBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>GetDemograponics response Bundle.</p>\n</div></td></tr></table></div>"
+  },
+  "url" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-get-demographics",
+  "version" : "1.0.0",
+  "name" : "GetDemographics",
+  "title" : "GetDemographics",
+  "status" : "active",
+  "kind" : "query",
+  "date" : "2024-09-27T22:40:13+00:00",
+  "publisher" : "BC Ministry of Health",
+  "contact" : [{
+    "name" : "BC Ministry of Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+    }]
+  }],
+  "description" : "This operation is used to query for a patient.  The response can contain 0 or 1 Patient.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CA",
+      "display" : "Canada"
+    }]
+  }],
+  "code" : "GetDemographics",
+  "resource" : ["Patient"],
+  "system" : false,
+  "type" : true,
+  "instance" : false,
+  "inputProfile" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle",
+  "outputProfile" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
+  "parameter" : [{
+    "name" : "GetDemographicsRequestBundle",
+    "use" : "in",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "GetDemographics request Bundle.",
+    "type" : "Bundle"
+  },
+  {
+    "name" : "SearchResponseBundle",
+    "use" : "out",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "GetDemograponics response Bundle.",
+    "type" : "Bundle"
+  }]
+}

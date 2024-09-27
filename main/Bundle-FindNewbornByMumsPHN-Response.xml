@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="FindNewbornByMumsPHN-Response"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
+  </meta>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:91dd7048-9bcc-405a-844b-47dc2656fd07"/>
+  </identifier>
+  <type value="searchset"/>
+  <timestamp value="2023-01-23T13:58:38.9793487-08:00"/>
+  <total value="3"/>
+  <link>
+    <relation value="canonical"/>
+    <url value="https://ig.cgi.com/Patient/Find.fhir"/>
+  </link>
+  <entry>
+    <fullUrl value="urn:uuid:b46f78e1-cfa1-41a6-ba9c-fafe6822791a"/>
+    <resource>
+      <Parameters>
+        <id value="FindNewbornByMumsPHN-Response-Parameters"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"/>
+        </meta>
+        <parameter>
+          <name value="messageId"/>
+          <valueString value="9acccdc8-b4d0-4ac7-9f10-80d0c80136e4"/>
+        </parameter>
+        <parameter>
+          <name value="messageDateTime"/>
+          <valueDateTime value="2023-01-23T13:58:38.9591378-08:00"/>
+        </parameter>
+        <parameter>
+          <name value="sender"/>
+          <valueIdentifier>
+            <system value="http://hlth.gov.bc.ca/fhir/client/bc-org"/>
+            <value value="FHA"/>
+          </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="identifiersOnly"/>
+          <valueBoolean value="false"/>
+        </parameter>
+        <parameter>
+          <name value="enterer"/>
+          <valueIdentifier>
+            <system value="http://hlth.gov.bc.ca/fhir/client/bc-userid"/>
+            <value value="ig.samples@cgi.com"/>
+          </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="requestMessageId"/>
+          <valueString value="2a956654-9d48-422b-ab23-ea708462760b"/>
+        </parameter>
+      </Parameters>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:c3e604ec-0917-41a8-9d90-1da8e6611234"/>
+    <resource>
+      <OperationOutcome>
+        <id value="FindNewbornByMumsPHN-Response-Outcome"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="OperationOutcome_FindNewbornByMumsPHN-Response-Outcome"> </a><p class="res-header-id"><b>Generated Narrative: OperationOutcome FindNewbornByMumsPHN-Response-Outcome</b></p><a name="FindNewbornByMumsPHN-Response-Outcome"> </a><a name="hcFindNewbornByMumsPHN-Response-Outcome"> </a><a name="FindNewbornByMumsPHN-Response-Outcome-en-US"> </a><h3>Issues</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style="display: none">*</td><td>Information</td><td>Business Rule Violation</td><td><span title="Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.FC.0.0012}">The search completed successfully.</span></td></tr></table></div>
+        </text>
+        <issue>
+          <severity value="information"/>
+          <code value="business-rule"/>
+          <details>
+            <coding>
+              <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes"/>
+              <code value="BCHCIM.FC.0.0012"/>
+            </coding>
+            <text value="The search completed successfully."/>
+          </details>
+        </issue>
+      </OperationOutcome>
+    </resource>
+    <search>
+      <mode value="outcome"/>
+    </search>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:d71c7185-8419-455d-bd39-cb184193ddbc"/>
+    <resource>
+      <Patient>
+        <id value="26a6dc2a-8bad-45f3-b8e2-8829f554e8a4"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Patient_26a6dc2a-8bad-45f3-b8e2-8829f554e8a4"> </a><p class="res-header-id"><b>Generated Narrative: Patient 26a6dc2a-8bad-45f3-b8e2-8829f554e8a4</b></p><a name="26a6dc2a-8bad-45f3-b8e2-8829f554e8a4"> </a><a name="hc26a6dc2a-8bad-45f3-b8e2-8829f554e8a4"> </a><a name="26a6dc2a-8bad-45f3-b8e2-8829f554e8a4-en-US"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Baby Girl Shawley  Female, DoB: 2023-01-22 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id#TCYS809BQAQS9323KO27C74502OZF714KM29 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Other Id (see the one above)">Other Id:</td><td colspan="3"><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999991 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li>13719 Froe street Aylesford BC CA </li><li>24989 School street Thermal BC CA </li></ul></td></tr></table></div>
+        </text>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="official"/>
+          <system value="https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"/>
+          <value value="9999999991"/>
+          <period>
+            <start value="2023-01-23T13:58:38-08:00"/>
+          </period>
+          <assigner>
+            <display value="MOH Client Registry - MOH_CRS"/>
+          </assigner>
+        </identifier>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="official"/>
+          <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id"/>
+          <value value="TCYS809BQAQS9323KO27C74502OZF714KM29"/>
+          <period>
+            <start value="2023-01-23T13:58:38-08:00"/>
+          </period>
+          <assigner>
+            <display value="FHA Meditech - Fraser Valley - FHA_MT"/>
+          </assigner>
+        </identifier>
+        <active value="true"/>
+        <name>
+          <use value="usual"/>
+          <family value="Shawley"/>
+          <given value="Baby Girl"/>
+          <period>
+            <start value="2023-01-23T13:58:38-08:00"/>
+          </period>
+        </name>
+        <gender value="female">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2023-01-23T13:58:38-08:00"/>
+            </valuePeriod>
+          </extension>
+        </gender>
+        <birthDate value="2023-01-22">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2023-01-23T13:58:38-08:00"/>
+            </valuePeriod>
+          </extension>
+        </birthDate>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="unknown"/>
+          </extension>
+          <type value="physical"/>
+          <line value="13719 Froe street"/>
+          <city value="Aylesford"/>
+          <state value="BC"/>
+          <country value="CA"/>
+          <period>
+            <start value="2023-01-23T13:58:38-08:00"/>
+          </period>
+        </address>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="unknown"/>
+          </extension>
+          <type value="postal"/>
+          <line value="24989 School street"/>
+          <city value="Thermal"/>
+          <state value="BC"/>
+          <country value="CA"/>
+          <period>
+            <start value="2023-01-23T13:58:38-08:00"/>
+          </period>
+        </address>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:c7c91331-ef61-4153-b01e-b8d6447b66c5"/>
+    <resource>
+      <Patient>
+        <id value="2e5169f0-7a01-49cc-8006-39d4c2bdc0ee"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Patient_2e5169f0-7a01-49cc-8006-39d4c2bdc0ee"> </a><p class="res-header-id"><b>Generated Narrative: Patient 2e5169f0-7a01-49cc-8006-39d4c2bdc0ee</b></p><a name="2e5169f0-7a01-49cc-8006-39d4c2bdc0ee"> </a><a name="hc2e5169f0-7a01-49cc-8006-39d4c2bdc0ee"> </a><a name="2e5169f0-7a01-49cc-8006-39d4c2bdc0ee-en-US"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Baby Girl Shawley  Female, DoB: 2023-01-22 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id#PC88F0F67VI3AJMI (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Other Id (see the one above)">Other Id:</td><td colspan="3"><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999992 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li>13719 Froe street Aylesford BC CA </li><li>24989 School street Thermal BC CA </li></ul></td></tr></table></div>
+        </text>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="official"/>
+          <system value="https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"/>
+          <value value="9999999992"/>
+          <period>
+            <start value="2023-01-23T13:58:38-08:00"/>
+          </period>
+          <assigner>
+            <display value="MOH Client Registry - MOH_CRS"/>
+          </assigner>
+        </identifier>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="official"/>
+          <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id"/>
+          <value value="PC88F0F67VI3AJMI"/>
+          <period>
+            <start value="2023-01-23T13:58:38-08:00"/>
+          </period>
+          <assigner>
+            <display value="FHA Meditech - Fraser Valley - FHA_MT"/>
+          </assigner>
+        </identifier>
+        <active value="true"/>
+        <name>
+          <use value="usual"/>
+          <family value="Shawley"/>
+          <given value="Baby Girl"/>
+          <period>
+            <start value="2023-01-23T13:58:38-08:00"/>
+          </period>
+        </name>
+        <gender value="female">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2023-01-23T13:58:38-08:00"/>
+            </valuePeriod>
+          </extension>
+        </gender>
+        <birthDate value="2023-01-22">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2023-01-23T13:58:38-08:00"/>
+            </valuePeriod>
+          </extension>
+        </birthDate>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="unknown"/>
+          </extension>
+          <type value="physical"/>
+          <line value="13719 Froe street"/>
+          <city value="Aylesford"/>
+          <state value="BC"/>
+          <country value="CA"/>
+          <period>
+            <start value="2023-01-23T13:58:38-08:00"/>
+          </period>
+        </address>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="unknown"/>
+          </extension>
+          <type value="postal"/>
+          <line value="24989 School street"/>
+          <city value="Thermal"/>
+          <state value="BC"/>
+          <country value="CA"/>
+          <period>
+            <start value="2023-01-23T13:58:38-08:00"/>
+          </period>
+        </address>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:beda6325-3140-444e-af5b-0f6c320b98d1"/>
+    <resource>
+      <Patient>
+        <id value="7668592e-2316-4ea8-bbab-bb601239e71e"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Patient_7668592e-2316-4ea8-bbab-bb601239e71e"> </a><p class="res-header-id"><b>Generated Narrative: Patient 7668592e-2316-4ea8-bbab-bb601239e71e</b></p><a name="7668592e-2316-4ea8-bbab-bb601239e71e"> </a><a name="hc7668592e-2316-4ea8-bbab-bb601239e71e"> </a><a name="7668592e-2316-4ea8-bbab-bb601239e71e-en-US"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Dietrich Shawley  Female, DoB: 2022-12-17 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id#9ZJVK0Z8Y4QS232 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Other Id (see the one above)">Other Id:</td><td colspan="3"><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999999 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li>ph: 3142487326(Home)</li><li>13719 Froe street Aylesford BC CA </li><li>24989 School street Thermal BC CA </li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>Also see: <a href="Bundle-FindNewbornByMumsPHN-Response.html#urn-uuid-13cb4c36-102d-49c7-9f2e-f652ece39ecf">Bundle: identifier = UUID:91dd7048-9bcc-405a-844b-47dc2656fd07; type = searchset; timestamp = 2023-01-23 13:58:38-0800; total = 3</a></li><li>Also see: <a href="Bundle-FindNewbornByMumsPHN-Response.html#urn-uuid-613f5d13-9753-4c0c-89f9-f2bce0622721">Bundle: identifier = UUID:91dd7048-9bcc-405a-844b-47dc2656fd07; type = searchset; timestamp = 2023-01-23 13:58:38-0800; total = 3</a></li></ul></td></tr></table></div>
+        </text>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="official"/>
+          <system value="https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"/>
+          <value value="9999999999"/>
+          <period>
+            <start value="2023-01-23T13:58:38-08:00"/>
+          </period>
+          <assigner>
+            <display value="MOH Client Registry - MOH_CRS"/>
+          </assigner>
+        </identifier>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="official"/>
+          <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id"/>
+          <value value="9ZJVK0Z8Y4QS232"/>
+          <period>
+            <start value="2023-01-23T13:58:38-08:00"/>
+          </period>
+          <assigner>
+            <display value="FHA Meditech - Fraser Valley - FHA_MT"/>
+          </assigner>
+        </identifier>
+        <active value="true"/>
+        <name>
+          <use value="usual"/>
+          <family value="Shawley"/>
+          <given value="Dietrich"/>
+          <period>
+            <start value="2023-01-23T13:58:38-08:00"/>
+          </period>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="3142487326"/>
+          <use value="home"/>
+          <period>
+            <start value="2023-01-23T13:58:38-08:00"/>
+          </period>
+        </telecom>
+        <gender value="female">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2023-01-23T13:58:38-08:00"/>
+            </valuePeriod>
+          </extension>
+        </gender>
+        <birthDate value="2022-12-17">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2023-01-23T13:58:38-08:00"/>
+            </valuePeriod>
+          </extension>
+        </birthDate>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="unknown"/>
+          </extension>
+          <type value="physical"/>
+          <line value="13719 Froe street"/>
+          <city value="Aylesford"/>
+          <state value="BC"/>
+          <country value="CA"/>
+          <period>
+            <start value="2023-01-23T13:58:38-08:00"/>
+          </period>
+        </address>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="unknown"/>
+          </extension>
+          <type value="postal"/>
+          <line value="24989 School street"/>
+          <city value="Thermal"/>
+          <state value="BC"/>
+          <country value="CA"/>
+          <period>
+            <start value="2023-01-23T13:58:38-08:00"/>
+          </period>
+        </address>
+        <link>
+          <other>
+            <reference value="urn:uuid:13cb4c36-102d-49c7-9f2e-f652ece39ecf"/>
+          </other>
+          <type value="seealso"/>
+        </link>
+        <link>
+          <other>
+            <reference value="urn:uuid:613f5d13-9753-4c0c-89f9-f2bce0622721"/>
+          </other>
+          <type value="seealso"/>
+        </link>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:13cb4c36-102d-49c7-9f2e-f652ece39ecf"/>
+    <resource>
+      <RelatedPerson>
+        <id value="FindNewbornByMumsPHN-Response-RelatedPerson1"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="RelatedPerson_FindNewbornByMumsPHN-Response-RelatedPerson1"> </a><p class="res-header-id"><b>Generated Narrative: RelatedPerson FindNewbornByMumsPHN-Response-RelatedPerson1</b></p><a name="FindNewbornByMumsPHN-Response-RelatedPerson1"> </a><a name="hcFindNewbornByMumsPHN-Response-RelatedPerson1"> </a><a name="FindNewbornByMumsPHN-Response-RelatedPerson1-en-US"> </a><p><b>patient</b>: <a href="https://simplifier.net/resolve?scope=hl7.fhir.ca.baseline@1.1.7&amp;canonical=urn:uuid:71092811-55f9-4e1f-8754-a6828da1d51c">??</a></p><p><b>relationship</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode NMTH}">natural mother</span></p></div>
+        </text>
+        <patient>
+          <reference value="urn:uuid:71092811-55f9-4e1f-8754-a6828da1d51c"/>
+        </patient>
+        <relationship>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="NMTH"/>
+          </coding>
+        </relationship>
+      </RelatedPerson>
+    </resource>
+    <search>
+      <mode value="include"/>
+    </search>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:613f5d13-9753-4c0c-89f9-f2bce0622721"/>
+    <resource>
+      <RelatedPerson>
+        <id value="FindNewbornByMumsPHN-Response-RelatedPerson2"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="RelatedPerson_FindNewbornByMumsPHN-Response-RelatedPerson2"> </a><p class="res-header-id"><b>Generated Narrative: RelatedPerson FindNewbornByMumsPHN-Response-RelatedPerson2</b></p><a name="FindNewbornByMumsPHN-Response-RelatedPerson2"> </a><a name="hcFindNewbornByMumsPHN-Response-RelatedPerson2"> </a><a name="FindNewbornByMumsPHN-Response-RelatedPerson2-en-US"> </a><p><b>patient</b>: <a href="https://simplifier.net/resolve?scope=hl7.fhir.ca.baseline@1.1.7&amp;canonical=urn:uuid:69b91ae6-e147-4dd0-abe7-8912ec301fd9">??</a></p><p><b>relationship</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode NMTH}">natural mother</span></p></div>
+        </text>
+        <patient>
+          <reference value="urn:uuid:69b91ae6-e147-4dd0-abe7-8912ec301fd9"/>
+        </patient>
+        <relationship>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="NMTH"/>
+          </coding>
+        </relationship>
+      </RelatedPerson>
+    </resource>
+    <search>
+      <mode value="include"/>
+    </search>
+  </entry>
+</Bundle>

@@ -1,0 +1,56 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Patient/Patient-UpdatePatient-Request-Example> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Patient-UpdatePatient-Request-Example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient Patient-UpdatePatient-Request-Example</b></p><a name=\"Patient-UpdatePatient-Request-Example\"> </a><a name=\"hcPatient-UpdatePatient-Request-Example\"> </a><a name=\"Patient-UpdatePatient-Request-Example-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient (no stated gender), DoB Unknown ( Account number (use: official, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\">721 FRONT ST VICTORIA BC V9A3Y3 CA </td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "active" ]
+     ] ) ;
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "AN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-iha-iha-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "123345654" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient-operation-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-update-patient-operation-code-system"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "replace" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:type [ fhir:v "physical" ] ;
+     fhir:line ( [ fhir:v "721 FRONT ST" ] ) ;
+     fhir:city [ fhir:v "VICTORIA" ] ;
+     fhir:state [ fhir:v "BC" ] ;
+     fhir:postalCode [ fhir:v "V9A3Y3" ] ;
+     fhir:country [ fhir:v "CA" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

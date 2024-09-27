@@ -1,0 +1,127 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Bundle/Revise-Response> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Revise-Response"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle>
+     ] )
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:uuid:db5d47ac-0323-4def-9d2f-97d84a6f341d" ]
+  ] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:timestamp [ fhir:v "2023-01-23T14:02:15.9747697-08:00"^^xsd:dateTime] ; # 
+  fhir:link ( [
+     fhir:relation [ fhir:v "canonical" ] ;
+     fhir:url [ fhir:v "Patient\\Revise"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:445c4b0d-95f7-4492-88ba-b491516b4567"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:445c4b0d-95f7-4492-88ba-b491516b4567> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:445c4b0d-95f7-4492-88ba-b491516b1508"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:445c4b0d-95f7-4492-88ba-b491516b1508> )
+  ] ) . # 
+
+<urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4> a fhir:Parameters ;
+  fhir:id [ fhir:v "6426876c-8118-4020-8364-7021d0a1ec23"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out>
+     ] )
+  ] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "messageId" ] ;
+     fhir:value [ fhir:v "f95c3be0-b6ed-4aec-b969-7bc7da904315" ]
+  ] [
+     fhir:name [ fhir:v "messageDateTime" ] ;
+     fhir:value [ fhir:v "2023-01-23T14:02:15.7581133-08:00"^^xsd:dateTime ]
+  ] [
+     fhir:name [ fhir:v "sender" ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/bc-org"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "VPP" ]
+     ]
+  ] [
+     fhir:name [ fhir:v "enterer" ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/bc-userid"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "ig.samples@cgi.com" ]
+     ]
+  ] [
+     fhir:name [ fhir:v "requestMessageId" ] ;
+     fhir:value [ fhir:v "823d7eb6-24d5-452f-b2d0-f86f2f6130e7" ]
+  ] ) . # 
+
+<urn:uuid:445c4b0d-95f7-4492-88ba-b491516b4567> a fhir:OperationOutcome ;
+  fhir:id [ fhir:v "Revise-Response-Outcome"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_Revise-Response-Outcome\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome Revise-Response-Outcome</b></p><a name=\"Revise-Response-Outcome\"> </a><a name=\"hcRevise-Response-Outcome\"> </a><a name=\"Revise-Response-Outcome-en-US\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Information</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.RP.0.0000}\">Transaction processed.A new PHN was assigned.</span></td></tr></table></div>"
+  ] ; # 
+  fhir:issue ( [
+     fhir:severity [ fhir:v "information" ] ;
+     fhir:code [ fhir:v "business-rule" ] ;
+     fhir:details [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "BCHCIM.RP.0.0000" ]
+       ] ) ;
+       fhir:text [ fhir:v "Transaction processed.A new PHN was assigned." ]
+     ]
+  ] ) . # 
+
+<urn:uuid:445c4b0d-95f7-4492-88ba-b491516b1508> a fhir:Patient ;
+  fhir:id [ fhir:v "Revise-Response-Patient"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_Revise-Response-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient Revise-Response-Patient</b></p><a name=\"Revise-Response-Patient\"> </a><a name=\"hcRevise-Response-Patient\"> </a><a name=\"Revise-Response-Patient-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient (no stated gender), DoB Unknown ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cer-source-patient-id#2B6F8GN410H1T27NPE (use: official, period: 2023-01-23 14:02:15-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999999 (use: official, period: 2023-01-23 14:02:15-0800 --&gt; (ongoing))</td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "active" ]
+     ] ) ;
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "9999999999" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T14:02:15-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "active" ]
+     ] ) ;
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cer-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2B6F8GN410H1T27NPE" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T14:02:15-08:00"^^xsd:dateTime ]
+     ]
+  ] ) ; # 
+  fhir:active [ fhir:v "true"^^xsd:boolean] . # 
+
+# -------------------------------------------------------------------------------------
+

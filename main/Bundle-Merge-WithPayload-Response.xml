@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="Merge-WithPayload-Response"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle"/>
+  </meta>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:a9dfb452-0127-4f07-bbf3-61f757c9b98a"/>
+  </identifier>
+  <type value="collection"/>
+  <timestamp value="2023-01-23T14:45:48.2127738-08:00"/>
+  <link>
+    <relation value="canonical"/>
+    <url value="https://ig.cgi.com/Patient/Merge.fhir"/>
+  </link>
+  <entry>
+    <fullUrl value="urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a15d7b9"/>
+    <resource>
+      <Parameters>
+        <id value="2329c77d-3c91-408c-9daf-c694a61c518a"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"/>
+        </meta>
+        <parameter>
+          <name value="messageId"/>
+          <valueString value="44e8efbe-280c-4a1e-8dd7-839e16a426e5"/>
+        </parameter>
+        <parameter>
+          <name value="messageDateTime"/>
+          <valueDateTime value="2023-01-23T14:45:48.1499176-08:00"/>
+        </parameter>
+        <parameter>
+          <name value="sender"/>
+          <valueIdentifier>
+            <system value="http://hlth.gov.bc.ca/fhir/client/bc-org"/>
+            <value value="VIHA"/>
+          </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="enterer"/>
+          <valueIdentifier>
+            <system value="http://hlth.gov.bc.ca/fhir/client/bc-userid"/>
+            <value value="ig.samples@cgi.com"/>
+          </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="requestMessageId"/>
+          <valueString value="5d0fe5dd-01c9-4cca-abd2-0383bead9107"/>
+        </parameter>
+      </Parameters>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a154567"/>
+    <resource>
+      <OperationOutcome>
+        <id value="Merge-WithPayload-Response-Outcome"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="OperationOutcome_Merge-WithPayload-Response-Outcome"> </a><p class="res-header-id"><b>Generated Narrative: OperationOutcome Merge-WithPayload-Response-Outcome</b></p><a name="Merge-WithPayload-Response-Outcome"> </a><a name="hcMerge-WithPayload-Response-Outcome"> </a><a name="Merge-WithPayload-Response-Outcome-en-US"> </a><h3>Issues</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style="display: none">*</td><td>Information</td><td>Business Rule Violation</td><td><span title="Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.RP.0.0001}">The Revise Person Request has been processed, and an existing PHN was found.</span></td></tr></table></div>
+        </text>
+        <issue>
+          <severity value="information"/>
+          <code value="business-rule"/>
+          <details>
+            <coding>
+              <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes"/>
+              <code value="BCHCIM.RP.0.0001"/>
+            </coding>
+            <text value="The Revise Person Request has been processed, and an existing PHN was found."/>
+          </details>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+</Bundle>

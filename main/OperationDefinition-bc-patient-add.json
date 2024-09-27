@@ -1,0 +1,54 @@
+{
+  "resourceType" : "OperationDefinition",
+  "id" : "bc-patient-add",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition bc-patient-add</b></p><a name=\"bc-patient-add\"> </a><a name=\"hcbc-patient-add\"> </a><a name=\"bc-patient-add-en-US\"> </a><p>URL: [base]/Patient/$AddPatient</p><p>Input parameters Profile:<a href=\"StructureDefinition-bc-add-request-bundle.html\">AddRequestBundle</a></p><p>Output parameters Profile:<a href=\"StructureDefinition-bc-add-response-bundle.html\">AddResponseBundle</a></p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>AddRequestBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The AddPatient operation request Bundle.</p>\n</div></td></tr><tr><td>OUT</td><td>AddResponseBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The AddPatient operation response Bundle.</p>\n</div></td></tr></table></div>"
+  },
+  "url" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add",
+  "version" : "1.0.0",
+  "name" : "AddPatient",
+  "title" : "AddPatient",
+  "status" : "draft",
+  "kind" : "operation",
+  "date" : "2024-09-27T22:40:13+00:00",
+  "publisher" : "BC Ministry of Health",
+  "contact" : [{
+    "name" : "BC Ministry of Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+    }]
+  }],
+  "description" : "This operation is used for newborns or to 'force create' a patient.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CA",
+      "display" : "Canada"
+    }]
+  }],
+  "code" : "AddPatient",
+  "resource" : ["Patient"],
+  "system" : false,
+  "type" : true,
+  "instance" : false,
+  "inputProfile" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle",
+  "outputProfile" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-response-bundle",
+  "parameter" : [{
+    "name" : "AddRequestBundle",
+    "use" : "in",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "The AddPatient operation request Bundle.",
+    "type" : "Bundle"
+  },
+  {
+    "name" : "AddResponseBundle",
+    "use" : "out",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "The AddPatient operation response Bundle.",
+    "type" : "Bundle"
+  }]
+}

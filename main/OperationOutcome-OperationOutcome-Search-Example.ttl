@@ -1,0 +1,28 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/OperationOutcome/OperationOutcome-Search-Example> a fhir:OperationOutcome ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "OperationOutcome-Search-Example"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome OperationOutcome-Search-Example</b></p><a name=\"OperationOutcome-Search-Example\"> </a><a name=\"hcOperationOutcome-Search-Example\"> </a><a name=\"OperationOutcome-Search-Example-en-US\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Warning</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHIM.GD.0.0015}\">Warning: The identifier you used in the query has been merged. The surviving identifier was returned.</span></td></tr></table></div>"
+  ] ; # 
+  fhir:issue ( [
+     fhir:severity [ fhir:v "warning" ] ;
+     fhir:code [ fhir:v "business-rule" ] ;
+     fhir:details [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "BCHIM.GD.0.0015" ]
+       ] ) ;
+       fhir:text [ fhir:v "Warning: The identifier you used in the query has been merged. The surviving identifier was returned." ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>BC HCIM Server Capability Statement - BC Client Registry FHIR Implementation Guide v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/bc-fhir.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"14.2"}
+    h3,h4,h5,h6{--heading-prefix:"14.2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">
+            <img height="71" alt="Project home" src="assets/images/BCMinistry.png"/>
+          </a>
+        </div>
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">BC Client Registry FHIR Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - Build CI
+
+
+
+  <img alt="Canada flag" src="assets/images/can.svg" height="16" title="Canada"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Overview</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Design
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="design.html">Summary</a>
+      </li>
+      <li>
+        <a href="search.html">Search Patient</a>
+      </li>
+      <li>
+        <a href="reviseAndMerge.html">Add, Revise, Update And Merge Patient</a>
+      </li>
+      <li>
+        <a href="distributions.html">Patient Change Notifications</a>
+      </li>
+      <li>
+        <a href="identifiers.html">Identifiers</a>
+      </li>
+      <li>
+        <a href="absentData.html">Data Absent</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="v3Transition.html">V3 Transition</a>
+  </li>
+  <li>
+    <a href="connectedPartner.html">Connected Partner</a>
+  </li>
+  <li>
+    <a href="capabilityStatement.html">Capability Statement</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="futurePlans.html">Future Plans</a>
+  </li>
+  <li>
+    <a href="terminology.html">Glossary</a>
+  </li>
+  <li>
+    <a href="credits.html">Credits</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>BC HCIM Server Capability Statement</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hlth.gov.bc.ca/fhir/client/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="CapabilityStatement-bc-hcim-capability-statement-server.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CapabilityStatement-bc-hcim-capability-statement-server.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CapabilityStatement-bc-hcim-capability-statement-server.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+
+  <h2 id="root">CapabilityStatement: BC HCIM Server Capability Statement
+
+  </h2>
+
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://hlth.gov.bc.ca/fhir/client/CapabilityStatement/bc-hcim-capability-statement-server<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hlth.gov.bc.ca/fhir/client/CapabilityStatement/bc-hcim-capability-statement-server"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">1.0.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://hlth.gov.bc.ca/fhir/client/CapabilityStatement/bc-hcim-capability-statement-server|1.0.0"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Active
+          
+            as of 2021-11-18
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">HCIMServerCapabilityStatement</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+<p>
+<p>This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a server.</p>
+
+</p>
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+<!--  <p>
+  Formats: <a href="CapabilityStatement-bc-hcim-capability-statement-server.xml.html">XML</a>, <a href="CapabilityStatement-bc-hcim-capability-statement-server.json.html">JSON</a>, <a href="CapabilityStatement-bc-hcim-capability-statement-server.ttl.html">Turtle</a>
+  </p>-->
+
+  
+  <p>
+      <a href="bc-hcim-capability-statement-server.openapi.json" no-download="true">Raw OpenAPI-Swagger Definition file</a> | <a href="bc-hcim-capability-statement-server.openapi.json" download>Download</a>
+  </p>
+  
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><p>This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a server.</p><ul><li>Find Candidates - used when a user would like to find a Patient, but without an identifier, typically with name, address or edge cases like mother's PHN.</li><li>Get Demographics - used when a user would like to find a Patient and has an identifier that Client Registry recognizes.</li><li>Revise Patient - used when a user is communicating a change or request for a new PHN to the Client Registry.</li>  <!-- <li>
+Update Patient - used when a user is communicating a change to the Client Registry and isn't capable of sending in the full Patient resource.  E.g. all Patient attributes are not locally persisted.
+</li> --><li>Merge Patient - used when a user is communicating that an individual has multiple Patient records and which record should survive and which record(s) should be marked as non-surviving.</li><li>Add Patient - used for newborns and 'force create' interactions</li></ul><p>There are several versions of some of the above services. The Client Registry has created FHIR Operations for each of the above and their variations.</p><ul><li>$FindCandidates</li><li>$GetDemographics</li><li>$AddPatient</li><li>$AddPatient.Async</li><li>$RevisePatient</li><li>$RevisePatient.Async</li><li>$UpdatePatient</li><li>$UpdatePatient.Async</li><li>$MergePatient</li><li>$MergePatient.Async</li></ul><p>RESTful interactions of any type, beyond the Operations listed above, are not supported. Client Registry users SHALL use only the above FHIR Operations.</p><h3>General Rules IN</h3><p>There are several rules that apply to all interactions with the Client Registry:</p><ul><li>When adding a newborn or using 'force create' Client Registry users SHALL use the$AddPatient FHIR Operation. This is different from V3, where the user can use Revise to create or update a record in there scenarios.</li><li>The Client Registry FHIR implementation only supports JSON format and the clients SHALL use JSON for all interactions. The MIME-type of application/fhir+json is the only one supported by the Client Registry.</li><li>All interactions with Patient resources SHALL use one of the following profiles: ClientRegistryPatient or PatientUpdate.</li><li>Any Parameters' profiles used SHALL be MetadataParametersIn or MetadataParametersOut.</li><li>Only the 'resource type' FHIR Operation is supported by the Client Registry, e.g. &quot;/Patient/$[Operation Name]&quot;; not system &quot;/$[Operation Name]&quot; and not resource instance &quot;/Patient/[id]/$[Operation Name]&quot;. Requesting users SHALL use only the resource type of FHIR Operation.</li><li>All of the profiles include elements that are marked as Must Support. For the purposes of this guide, Must Support is intended to represent those fields that will be exchanged between client applications and the Client Registry server. Client applications who are receiving information SHALL be able to receive all fields marked as Must Support without raising an exception. When sending information to the Client Registry server, client applications SHOULD be able to send any fields marked as Must Support.</li><li>The FHIR asynchronous pattern is not followed by this FHIR implementation. The existing pattern the Client Registry uses today will be mimicked. I.e.<ul><li>User sends request</li><li>Client Registry responds with HTTP 202 Accepted</li><li>Later, the Client Registry sends request with information regarding the initial request to user's end point</li><li>User system responds with 202 Accepted</li></ul>Users SHALL follow the above asynchronous pattern when invoking an asynchronous version of a Operation.</li></ul><h3>General Rules OUT</h3><p>Each Operation SHALL return a Bundle. The Bundles MAY be of type searchset or collection. The two searches, GetDemographics and FindCandidates SHALL return searchset bundles. The Add, Revise and Merge SHALL return collection Bundle resources. Each operation MAY use a unique Bundle profile in the response to enforce cardinalality rules.</p><p>In summary the response Bundles for every Operation SHALL be structured as follows:</p><ul><li>Entry of MetadataParametersOut</li><ul><li>If a search, the request Parameters are be echoed back in a MetadataParametersIn resource within the MetadataParametersOut resource</li></ul><li>One entry with OperationOutcome</li><li>Zero or more entries of ClientRegistryPatient</li><li>Zero or more entries of RelatedPerson</li></ul><h4>Data Absent Reason</h4><p>If the Data Absent extension is present onn a Patient attribute, then History, for that attribute, SHALL not be returned. If data is absent it is primarly because the record is restricted and therefore returning History isn't permitted.</p><h3>Error Handling</h3><p>The Client Registry users SHALL monitor the HTTP response codes returned with a response. If the code is not 2xx the user SHALL examine the errors in the OperationOutcome resource in the response Bundle.</p><h3>Search</h3><h4>Find Candidates</h4><p>The FindCandidates FHIR Operation search SHALL use the following Bundles. This search MAY return zero or more Patients using the ClientRegistryPatient profile. Wildcards are not permitted.</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>Find Candidates Request Bundle</td><td>1..1</td><td><a href="StructureDefinition-bc-find-candidates-request-bundle.html">FindCandidatesRequestBundle</a></td><td/><td><div><p>Request bundle.</p></div></td></tr><tr><td>OUT</td><td>Find Candidates Response Bundle</td><td>1..1</td><td><a href="StructureDefinition-bc-search-response-bundle.html">SearchResponseBundle</a></td><td/><td><div><p>Response bundle.</p></div></td></tr></table><h4>Get Demographics</h4><p>The GetDemographics FHIR Operation SHALL use the following Bundles. This search may return zero or one Patient using the Patient profile.</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>Get Demographics Request Bundle</td><td>1..1</td><td><a href="StructureDefinition-bc-get-demographics-request-bundle.html">GetDemographicsRequestBundle</a></td><td/><td><div><p>Request bundle.</p></div></td></tr><tr><td>OUT</td><td>Get Demographics Response Bundle</td><td>1..1</td><td><a href="StructureDefinition-bc-search-response-bundle.html">SearchResponseBundle</a></td><td/><td><div><p>Response bundle.</p></div></td></tr></table><h3>Revise Patient</h3><p>The RevisePatient FHIR Operation SHALL use the following Bundles.</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>Revise Request Bundle</td><td>1..1</td><td><a href="StructureDefinition-bc-revise-request-bundle.html">ReviseRequestBundle</a></td><td/><td><div><p>Request bundle.</p></div></td></tr><tr><td>OUT</td><td>Revise Response Bundle</td><td>1..1</td><td><a href="StructureDefinition-bc-revise-response-bundle.html">ReviseResponseBundle</a></td><td/><td><div><p>Response bundle.</p></div></td></tr></table><h3>Add Patient</h3><p>The AddPatient FHIR Operation SHALL use the following Bundles.</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>Add Request Bundle</td><td>1..1</td><td><a href="StructureDefinition-bc-add-request-bundle.html">AddRequestBundle</a></td><td/><td><div><p>Request bundle.</p></div></td></tr><tr><td>OUT</td><td>Add Response Bundle</td><td>1..1</td><td><a href="StructureDefinition-bc-add-response-bundle.html">AddResponseBundle</a></td><td/><td><div><p>Response bundle.</p></div></td></tr></table><h3>Update Patient</h3><p>The UpdatePatient FHIR Operation SHALL use the following Bundles.</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>Update Request Bundle</td><td>1..1</td><td><a href="StructureDefinition-bc-update-request-bundle.html">UpdateRequestBundle</a></td><td/><td><div><p>Request bundle.</p></div></td></tr><tr><td>OUT</td><td>Update Response Bundle</td><td>1..1</td><td><a href="StructureDefinition-bc-revise-response-bundle.html">ReviseResponseBundle</a></td><td/><td><div><p>Response bundle is a Revise Response Bundle.</p></div></td></tr></table><h3>Merge Patient</h3><p>The MergePatient FHIR Operation SHALL use the following Bundles.</p><p>The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>Merge Request Bundle</td><td>1..1</td><td><a href="StructureDefinition-bc-merge-request-bundle.html">MergeRequestBundle</a></td><td/><td><div><p>Request bundle.</p></div></td></tr><tr><td>OUT</td><td>Merge Response Bundle</td><td>1..1</td><td><a href="StructureDefinition-bc-merge-response-bundle.html">MergeResponseBundle</a></td><td/><td><div><p>Response bundle.</p></div></td></tr></table></div>
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 27, 2024 22:40+0000">2024-09-27</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="bc-patient-update"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: OperationDefinition bc-patient-update</b></p><a name="bc-patient-update"> </a><a name="hcbc-patient-update"> </a><a name="bc-patient-update-en-US"> </a><p>URL: [base]/Patient/$PartialUpdatePatient</p><p>Input parameters Profile:<a href="StructureDefinition-bc-update-request-bundle.html">PartialUpdateRequestBundle</a></p><p>Output parameters Profile:<a href="StructureDefinition-bc-revise-response-bundle.html">ReviseResponseBundle</a></p><h3>Parameters</h3><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>UpdatePatientRequestBundle</td><td/><td>1..1</td><td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td><td/><td><div><p>Update request Bundle.</p>
+</div></td></tr><tr><td>OUT</td><td>RevisePatientResponseBundle</td><td/><td>1..1</td><td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td><td/><td><div><p>Update response Bundle (which is the ReviseResponseBundle).</p>
+</div></td></tr></table></div>
+  </text>
+  <url value="http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-update"/>
+  <version value="1.0.0"/>
+  <name value="PartialUpdatePatient"/>
+  <title value="Partial Update Patient"/>
+  <status value="draft"/>
+  <kind value="operation"/>
+  <date value="2024-09-27T22:40:13+00:00"/>
+  <publisher value="BC Ministry of Health"/>
+  <contact>
+    <name value="BC Ministry of Health"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"/>
+    </telecom>
+  </contact>
+  <description value="This operation is used to update a patient's demographics, applied to only specific Patient attributes."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="CA"/>
+      <display value="Canada"/>
+    </coding>
+  </jurisdiction>
+  <code value="PartialUpdatePatient"/>
+  <resource value="Patient"/>
+  <system value="false"/>
+  <type value="true"/>
+  <instance value="false"/>
+  <inputProfile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-request-bundle"/>
+  <outputProfile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle"/>
+  <parameter>
+    <name value="UpdatePatientRequestBundle"/>
+    <use value="in"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="Update request Bundle."/>
+    <type value="Bundle"/>
+  </parameter>
+  <parameter>
+    <name value="RevisePatientResponseBundle"/>
+    <use value="out"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="Update response Bundle (which is the ReviseResponseBundle)."/>
+    <type value="Bundle"/>
+  </parameter>
+</OperationDefinition>

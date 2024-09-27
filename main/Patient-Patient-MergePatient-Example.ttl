@@ -1,0 +1,128 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Patient/Patient-MergePatient-Example> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Patient-MergePatient-Example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient Patient-MergePatient-Example</b></p><a name=\"Patient-MergePatient-Example\"> </a><a name=\"hcPatient-MergePatient-Example\"> </a><a name=\"Patient-MergePatient-Example-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient (no stated gender), DoB Unknown ( Account number (use: official, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>This record replaces: Identifier: Account number/123345654 (use: official, )</li><li>This record replaces: Identifier: Account number/123345654 (use: secondary, )</li><li>This record replaces: Identifier: Account number/123345654 (use: secondary, )</li><li>This record replaces: Identifier: Jurisdictional health number/9876543210 (use: official, )</li></ul></td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "active" ]
+     ] ) ;
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "AN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-iha-iha-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8375493847" ]
+  ] ) ; # 
+  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:link ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "cancelled" ]
+     ] ) ;
+     fhir:other [
+       fhir:identifier [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "active" ]
+         ] ) ;
+         fhir:use [ fhir:v "official" ] ;
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "AN" ]
+           ] )
+         ] ;
+         fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-iha-iha-source-patient-id"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "123345654" ]
+       ]
+     ] ;
+     fhir:type [ fhir:v "replaces" ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "cancelled" ]
+     ] ) ;
+     fhir:other [
+       fhir:identifier [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "active" ]
+         ] ) ;
+         fhir:use [ fhir:v "secondary" ] ;
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "AN" ]
+           ] )
+         ] ;
+         fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cw-source-patient-id"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "123345654" ]
+       ]
+     ] ;
+     fhir:type [ fhir:v "replaces" ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "obsolete" ]
+     ] ) ;
+     fhir:other [
+       fhir:identifier [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "active" ]
+         ] ) ;
+         fhir:use [ fhir:v "secondary" ] ;
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "AN" ]
+           ] )
+         ] ;
+         fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cw-source-patient-id"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "123345654" ]
+       ]
+     ] ;
+     fhir:type [ fhir:v "replaces" ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "obsolete" ]
+     ] ) ;
+     fhir:other [
+       fhir:identifier [
+         fhir:use [ fhir:v "official" ] ;
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "JHN" ]
+           ] )
+         ] ;
+         fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "9876543210" ]
+       ]
+     ] ;
+     fhir:type [ fhir:v "replaces" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

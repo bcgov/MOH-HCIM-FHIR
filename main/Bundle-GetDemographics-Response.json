@@ -1,0 +1,283 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "GetDemographics-Response",
+  "meta" : {
+    "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"]
+  },
+  "identifier" : {
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:uuid:9b9cb4b5-6845-4d6b-b71e-b0cb42f92da9"
+  },
+  "type" : "searchset",
+  "timestamp" : "2023-01-23T14:00:53.6840428-08:00",
+  "total" : 1,
+  "link" : [{
+    "relation" : "canonical",
+    "url" : "https://ig.cgi.com/Patient/$GetDemographics"
+  }],
+  "entry" : [{
+    "fullUrl" : "urn:uuid:289d85b9-43a4-4902-9b52-76cb1f02ea69",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "id" : "GetDemographics-Response-Parameters",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"]
+      },
+      "parameter" : [{
+        "name" : "messageId",
+        "valueString" : "7cd363f7-982c-43cb-85b1-024e567ad571"
+      },
+      {
+        "name" : "messageDateTime",
+        "valueDateTime" : "2023-01-23T14:00:53.5108118-08:00"
+      },
+      {
+        "name" : "sender",
+        "valueIdentifier" : {
+          "system" : "http://hlth.gov.bc.ca/fhir/client/bc-org",
+          "value" : "FHA"
+        }
+      },
+      {
+        "name" : "history",
+        "valueBoolean" : false
+      },
+      {
+        "name" : "identifiersOnly",
+        "valueBoolean" : false
+      },
+      {
+        "name" : "enterer",
+        "valueIdentifier" : {
+          "system" : "http://hlth.gov.bc.ca/fhir/client/bc-userid",
+          "value" : "ig.samples@cgi.com"
+        }
+      },
+      {
+        "name" : "requestMessageId",
+        "valueString" : "73b06e0b-8372-496e-83dc-796b42cf730f"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:f156cec9-77fe-40d2-a023-71f1442d4599",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "id" : "GetDemographics-Response-Outcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_GetDemographics-Response-Outcome\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome GetDemographics-Response-Outcome</b></p><a name=\"GetDemographics-Response-Outcome\"> </a><a name=\"hcGetDemographics-Response-Outcome\"> </a><a name=\"GetDemographics-Response-Outcome-en-US\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Information</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.GD.0.0013}\">The get demographics query completed successfully.</span></td></tr></table></div>"
+      },
+      "issue" : [{
+        "severity" : "information",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes",
+            "code" : "BCHCIM.GD.0.0013"
+          }],
+          "text" : "The get demographics query completed successfully."
+        }
+      }]
+    },
+    "search" : {
+      "mode" : "outcome"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:27fb3c46-a6ea-4986-8238-d94d6655cc1d",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "GetDemographics-Response-Patient",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_GetDemographics-Response-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient GetDemographics-Response-Patient</b></p><a name=\"GetDemographics-Response-Patient\"> </a><a name=\"hcGetDemographics-Response-Patient\"> </a><a name=\"GetDemographics-Response-Patient-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Benedetta Wuliton Ararinda Colpitts  Male, DoB: 2005-05-24 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-ab-patient-healthcare-id#4N2H10HY59EQ210Y5M098X0EPDM08I7KX38583O\u00a0(use:\u00a0official,\u00a0period:\u00a02023-01-23 14:00:53-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">2006-08-28</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999999\u00a0(use:\u00a0official,\u00a0)</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id</code>/8H1496LN8U1F17JP0H2VV\u00a0(use:\u00a0official,\u00a0period:\u00a02023-01-23 14:00:53-0800 --&gt; (ongoing))</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 2045588814(Mobile)</li><li>ph: 7705666584(Home)</li><li>ph: 8156366902(Work)</li><li><a href=\"mailto:Agapios.Nesmith@cgi.com\">Agapios.Nesmith@cgi.com</a></li><li><a href=\"mailto:Editta.Panchik@cgi.com\">Editta.Panchik@cgi.com</a></li><li><a href=\"mailto:Weayaya.Sharber@cgi.com\">Weayaya.Sharber@cgi.com</a></li><li>30729 Middleville road Signal mountain BC CA </li><li>47625 Colony street Benton township BC CA </li></ul></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode" : "active"
+        }],
+        "use" : "official",
+        "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+        "value" : "9999999999",
+        "assigner" : {
+          "display" : "MOH Client Registry - MOH_CRS"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode" : "active"
+        }],
+        "use" : "official",
+        "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id",
+        "value" : "8H1496LN8U1F17JP0H2VV",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        },
+        "assigner" : {
+          "display" : "FHA Meditech - Fraser Valley - FHA_MT"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode" : "active"
+        }],
+        "use" : "official",
+        "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-ab-patient-healthcare-id",
+        "value" : "4N2H10HY59EQ210Y5M098X0EPDM08I7KX38583O",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      }],
+      "active" : true,
+      "name" : [{
+        "use" : "usual",
+        "family" : "Colpitts",
+        "given" : ["Benedetta",
+        "Wuliton",
+        "Ararinda"],
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "use" : "official",
+        "given" : ["Ahanu",
+        "Bardo",
+        "Natalene"],
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "use" : "nickname",
+        "given" : ["Athanasia"],
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      }],
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "2045588814",
+        "use" : "mobile",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "system" : "phone",
+        "value" : "7705666584",
+        "use" : "home",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "system" : "phone",
+        "value" : "8156366902",
+        "use" : "work",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "system" : "email",
+        "value" : "Agapios.Nesmith@cgi.com",
+        "use" : "mobile",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "system" : "email",
+        "value" : "Editta.Panchik@cgi.com",
+        "use" : "home",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "system" : "email",
+        "value" : "Weayaya.Sharber@cgi.com",
+        "use" : "work",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      }],
+      "gender" : "male",
+      "_gender" : {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+          "valuePeriod" : {
+            "start" : "2023-01-23T14:00:53-08:00"
+          }
+        }]
+      },
+      "birthDate" : "2005-05-24",
+      "_birthDate" : {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+          "valuePeriod" : {
+            "start" : "2023-01-23T14:00:53-08:00"
+          }
+        }]
+      },
+      "deceasedDateTime" : "2006-08-28",
+      "_deceasedDateTime" : {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+          "valuePeriod" : {
+            "start" : "2023-01-23T14:00:53-08:00"
+          }
+        },
+        {
+          "extension" : [{
+            "url" : "deathVerifiedFlag",
+            "valueBoolean" : false
+          },
+          {
+            "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+            "valuePeriod" : {
+              "start" : "2023-01-23T14:00:53-08:00"
+            }
+          }],
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension"
+        }]
+      },
+      "address" : [{
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+          "valueCode" : "unknown"
+        }],
+        "type" : "physical",
+        "line" : ["30729 Middleville road"],
+        "city" : "Signal mountain",
+        "state" : "BC",
+        "country" : "CA",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+          "valueCode" : "unknown"
+        }],
+        "type" : "postal",
+        "line" : ["47625 Colony street"],
+        "city" : "Benton township",
+        "state" : "BC",
+        "country" : "CA",
+        "period" : {
+          "start" : "2023-01-23T14:00:53-08:00"
+        }
+      }]
+    }
+  }]
+}

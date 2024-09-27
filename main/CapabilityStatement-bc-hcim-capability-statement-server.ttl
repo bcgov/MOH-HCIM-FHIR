@@ -1,0 +1,132 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/CapabilityStatement/bc-hcim-capability-statement-server> a fhir:CapabilityStatement ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "bc-hcim-capability-statement-server"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a server.</p><ul><li>Find Candidates - used when a user would like to find a Patient, but without an identifier, typically with name, address or edge cases like mother's PHN.</li><li>Get Demographics - used when a user would like to find a Patient and has an identifier that Client Registry recognizes.</li><li>Revise Patient - used when a user is communicating a change or request for a new PHN to the Client Registry.</li>  <!-- <li>\nUpdate Patient - used when a user is communicating a change to the Client Registry and isn't capable of sending in the full Patient resource.  E.g. all Patient attributes are not locally persisted.\n</li> --><li>Merge Patient - used when a user is communicating that an individual has multiple Patient records and which record should survive and which record(s) should be marked as non-surviving.</li><li>Add Patient - used for newborns and 'force create' interactions</li></ul><p>There are several versions of some of the above services. The Client Registry has created FHIR Operations for each of the above and their variations.</p><ul><li>$FindCandidates</li><li>$GetDemographics</li><li>$AddPatient</li><li>$AddPatient.Async</li><li>$RevisePatient</li><li>$RevisePatient.Async</li><li>$UpdatePatient</li><li>$UpdatePatient.Async</li><li>$MergePatient</li><li>$MergePatient.Async</li></ul><p>RESTful interactions of any type, beyond the Operations listed above, are not supported. Client Registry users SHALL use only the above FHIR Operations.</p><h3>General Rules IN</h3><p>There are several rules that apply to all interactions with the Client Registry:</p><ul><li>When adding a newborn or using 'force create' Client Registry users SHALL use the$AddPatient FHIR Operation. This is different from V3, where the user can use Revise to create or update a record in there scenarios.</li><li>The Client Registry FHIR implementation only supports JSON format and the clients SHALL use JSON for all interactions. The MIME-type of application/fhir+json is the only one supported by the Client Registry.</li><li>All interactions with Patient resources SHALL use one of the following profiles: ClientRegistryPatient or PatientUpdate.</li><li>Any Parameters' profiles used SHALL be MetadataParametersIn or MetadataParametersOut.</li><li>Only the 'resource type' FHIR Operation is supported by the Client Registry, e.g. &quot;/Patient/$[Operation Name]&quot;; not system &quot;/$[Operation Name]&quot; and not resource instance &quot;/Patient/[id]/$[Operation Name]&quot;. Requesting users SHALL use only the resource type of FHIR Operation.</li><li>All of the profiles include elements that are marked as Must Support. For the purposes of this guide, Must Support is intended to represent those fields that will be exchanged between client applications and the Client Registry server. Client applications who are receiving information SHALL be able to receive all fields marked as Must Support without raising an exception. When sending information to the Client Registry server, client applications SHOULD be able to send any fields marked as Must Support.</li><li>The FHIR asynchronous pattern is not followed by this FHIR implementation. The existing pattern the Client Registry uses today will be mimicked. I.e.<ul><li>User sends request</li><li>Client Registry responds with HTTP 202 Accepted</li><li>Later, the Client Registry sends request with information regarding the initial request to user's end point</li><li>User system responds with 202 Accepted</li></ul>Users SHALL follow the above asynchronous pattern when invoking an asynchronous version of a Operation.</li></ul><h3>General Rules OUT</h3><p>Each Operation SHALL return a Bundle. The Bundles MAY be of type searchset or collection. The two searches, GetDemographics and FindCandidates SHALL return searchset bundles. The Add, Revise and Merge SHALL return collection Bundle resources. Each operation MAY use a unique Bundle profile in the response to enforce cardinalality rules.</p><p>In summary the response Bundles for every Operation SHALL be structured as follows:</p><ul><li>Entry of MetadataParametersOut</li><ul><li>If a search, the request Parameters are be echoed back in a MetadataParametersIn resource within the MetadataParametersOut resource</li></ul><li>One entry with OperationOutcome</li><li>Zero or more entries of ClientRegistryPatient</li><li>Zero or more entries of RelatedPerson</li></ul><h4>Data Absent Reason</h4><p>If the Data Absent extension is present onn a Patient attribute, then History, for that attribute, SHALL not be returned. If data is absent it is primarly because the record is restricted and therefore returning History isn't permitted.</p><h3>Error Handling</h3><p>The Client Registry users SHALL monitor the HTTP response codes returned with a response. If the code is not 2xx the user SHALL examine the errors in the OperationOutcome resource in the response Bundle.</p><h3>Search</h3><h4>Find Candidates</h4><p>The FindCandidates FHIR Operation search SHALL use the following Bundles. This search MAY return zero or more Patients using the ClientRegistryPatient profile. Wildcards are not permitted.</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>Find Candidates Request Bundle</td><td>1..1</td><td><a href=\"StructureDefinition-bc-find-candidates-request-bundle.html\">FindCandidatesRequestBundle</a></td><td/><td><div><p>Request bundle.</p></div></td></tr><tr><td>OUT</td><td>Find Candidates Response Bundle</td><td>1..1</td><td><a href=\"StructureDefinition-bc-search-response-bundle.html\">SearchResponseBundle</a></td><td/><td><div><p>Response bundle.</p></div></td></tr></table><h4>Get Demographics</h4><p>The GetDemographics FHIR Operation SHALL use the following Bundles. This search may return zero or one Patient using the Patient profile.</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>Get Demographics Request Bundle</td><td>1..1</td><td><a href=\"StructureDefinition-bc-get-demographics-request-bundle.html\">GetDemographicsRequestBundle</a></td><td/><td><div><p>Request bundle.</p></div></td></tr><tr><td>OUT</td><td>Get Demographics Response Bundle</td><td>1..1</td><td><a href=\"StructureDefinition-bc-search-response-bundle.html\">SearchResponseBundle</a></td><td/><td><div><p>Response bundle.</p></div></td></tr></table><h3>Revise Patient</h3><p>The RevisePatient FHIR Operation SHALL use the following Bundles.</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>Revise Request Bundle</td><td>1..1</td><td><a href=\"StructureDefinition-bc-revise-request-bundle.html\">ReviseRequestBundle</a></td><td/><td><div><p>Request bundle.</p></div></td></tr><tr><td>OUT</td><td>Revise Response Bundle</td><td>1..1</td><td><a href=\"StructureDefinition-bc-revise-response-bundle.html\">ReviseResponseBundle</a></td><td/><td><div><p>Response bundle.</p></div></td></tr></table><h3>Add Patient</h3><p>The AddPatient FHIR Operation SHALL use the following Bundles.</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>Add Request Bundle</td><td>1..1</td><td><a href=\"StructureDefinition-bc-add-request-bundle.html\">AddRequestBundle</a></td><td/><td><div><p>Request bundle.</p></div></td></tr><tr><td>OUT</td><td>Add Response Bundle</td><td>1..1</td><td><a href=\"StructureDefinition-bc-add-response-bundle.html\">AddResponseBundle</a></td><td/><td><div><p>Response bundle.</p></div></td></tr></table><h3>Update Patient</h3><p>The UpdatePatient FHIR Operation SHALL use the following Bundles.</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>Update Request Bundle</td><td>1..1</td><td><a href=\"StructureDefinition-bc-update-request-bundle.html\">UpdateRequestBundle</a></td><td/><td><div><p>Request bundle.</p></div></td></tr><tr><td>OUT</td><td>Update Response Bundle</td><td>1..1</td><td><a href=\"StructureDefinition-bc-revise-response-bundle.html\">ReviseResponseBundle</a></td><td/><td><div><p>Response bundle is a Revise Response Bundle.</p></div></td></tr></table><h3>Merge Patient</h3><p>The MergePatient FHIR Operation SHALL use the following Bundles.</p><p>The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>Merge Request Bundle</td><td>1..1</td><td><a href=\"StructureDefinition-bc-merge-request-bundle.html\">MergeRequestBundle</a></td><td/><td><div><p>Request bundle.</p></div></td></tr><tr><td>OUT</td><td>Merge Response Bundle</td><td>1..1</td><td><a href=\"StructureDefinition-bc-merge-response-bundle.html\">MergeResponseBundle</a></td><td/><td><div><p>Response bundle.</p></div></td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/CapabilityStatement/bc-hcim-capability-statement-server"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "HCIMServerCapabilityStatement"] ; # 
+  fhir:title [ fhir:v "BC HCIM Server Capability Statement"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2021-11-18"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "BC Ministry of Health"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "BC Ministry of Health" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a server."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CA" ] ;
+       fhir:display [ fhir:v "Canada" ]
+     ] )
+  ] ) ; # 
+  fhir:kind [ fhir:v "capability"] ; # 
+  fhir:software [
+     fhir:name [ fhir:v "BC HCIM FHIR Implementation" ]
+  ] ; # 
+  fhir:fhirVersion [ fhir:v "4.0.1"] ; # 
+  fhir:format ( [ fhir:v "json"] ) ; # 
+  fhir:rest ( [
+     fhir:mode [ fhir:v "server" ] ;
+     fhir:resource ( [
+       fhir:type [ fhir:v "Parameters" ] ;
+       fhir:operation ( [
+         fhir:name [ fhir:v "FindCandidates" ] ;
+         fhir:definition [
+           fhir:v "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-find-candidates"^^xsd:anyURI ;
+           fhir:link <http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-find-candidates>
+         ]
+       ] [
+         fhir:name [ fhir:v "GetDemographics" ] ;
+         fhir:definition [
+           fhir:v "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-get-demographics"^^xsd:anyURI ;
+           fhir:link <http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-get-demographics>
+         ]
+       ] [
+         fhir:name [ fhir:v "RevisePatient" ] ;
+         fhir:definition [
+           fhir:v "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-revise"^^xsd:anyURI ;
+           fhir:link <http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-revise>
+         ]
+       ] [
+         fhir:name [ fhir:v "PartialUpdatePatient" ] ;
+         fhir:definition [
+           fhir:v "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-update"^^xsd:anyURI ;
+           fhir:link <http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-update>
+         ]
+       ] [
+         fhir:name [ fhir:v "AddPatient" ] ;
+         fhir:definition [
+           fhir:v "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add"^^xsd:anyURI ;
+           fhir:link <http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add>
+         ]
+       ] [
+         fhir:name [ fhir:v "MergePatient" ] ;
+         fhir:definition [
+           fhir:v "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-merge"^^xsd:anyURI ;
+           fhir:link <http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-merge>
+         ]
+       ] [
+         fhir:name [ fhir:v "AddPatient.Async" ] ;
+         fhir:definition [
+           fhir:v "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add"^^xsd:anyURI ;
+           fhir:link <http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add>
+         ] ;
+         fhir:documentation [ fhir:v "Although this is an independent Operation the definition is the same as the [AddPatient](OperationDefinition-bc-patient-add.html)" ]
+       ] [
+         fhir:name [ fhir:v "RevisePatient.Async" ] ;
+         fhir:definition [
+           fhir:v "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-revise"^^xsd:anyURI ;
+           fhir:link <http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-revise>
+         ] ;
+         fhir:documentation [ fhir:v "Although this is an independent Operation the definition is the same as the [RevisePatient](OperationDefinition-bc-patient-revise.html)" ]
+       ] [
+         fhir:name [ fhir:v "PartialUpdatePatient.Async" ] ;
+         fhir:definition [
+           fhir:v "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-update"^^xsd:anyURI ;
+           fhir:link <http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-update>
+         ] ;
+         fhir:documentation [ fhir:v "Although this is an independent Operation the definition is the same as the [UpdatePatient](OperationDefinition-bc-patient-update.html)" ]
+       ] [
+         fhir:name [ fhir:v "MergePatient.Async" ] ;
+         fhir:definition [
+           fhir:v "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-merge"^^xsd:anyURI ;
+           fhir:link <http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-merge>
+         ] ;
+         fhir:documentation [ fhir:v "\nAlthough this is an independent Operation the definition is the same as the [MergePatient](OperationDefinition-bc-patient-merge.html)" ]
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/capabilitystatement-subscriptiontopic-canonical"^^xsd:anyURI ] ;
+         fhir:value [
+           fhir:v "http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution"^^xsd:anyURI ;
+           fhir:link <http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution>
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "Subscription" ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "create" ]
+       ] [
+         fhir:code [ fhir:v "update" ]
+       ] [
+         fhir:code [ fhir:v "delete" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

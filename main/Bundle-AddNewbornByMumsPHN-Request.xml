@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="AddNewbornByMumsPHN-Request"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle"/>
+  </meta>
+  <type value="collection"/>
+  <timestamp value="2023-01-23T13:46:28.0429798-08:00"/>
+  <link>
+    <relation value="self"/>
+    <url value="urn:uuid:977f1edc-04db-439e-9f84-7cda0082812a"/>
+  </link>
+  <entry>
+    <fullUrl value="urn:uuid:66fa3c28-1121-4305-bda2-4e834fcbc0f8"/>
+    <resource>
+      <Parameters>
+        <id value="AddNewbornByMumsPHN-Request-Parameters"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"/>
+        </meta>
+        <parameter>
+          <name value="messageId"/>
+          <valueString value="eac486dd-ffe1-4272-b1ae-1ae0b0707b92"/>
+        </parameter>
+        <parameter>
+          <name value="messageDateTime"/>
+          <valueDateTime value="2023-01-23T13:46:28.0428521-08:00"/>
+        </parameter>
+      </Parameters>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:66a90476-06d2-4e62-aba7-32d0566ecf41"/>
+    <resource>
+      <Patient>
+        <id value="AddNewbornByMumsPHN-Request-Patient"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Patient_AddNewbornByMumsPHN-Request-Patient"> </a><p class="res-header-id"><b>Generated Narrative: Patient AddNewbornByMumsPHN-Request-Patient</b></p><a name="AddNewbornByMumsPHN-Request-Patient"> </a><a name="hcAddNewbornByMumsPHN-Request-Patient"> </a><a name="AddNewbornByMumsPHN-Request-Patient-en-US"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Baby Boy Jaroscak  Male, DoB: 2023-01-22 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-north-source-patient-id#4PX0WI5WO23CZRYTQ4GZP6MUJ9R6P2N6MS8Z156 (use: official, ))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3">46005 Lake forest drive Mattice BC CA </td></tr></table></div>
+        </text>
+        <identifier>
+          <use value="official"/>
+          <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-north-source-patient-id"/>
+          <value value="4PX0WI5WO23CZRYTQ4GZP6MUJ9R6P2N6MS8Z156"/>
+        </identifier>
+        <name>
+          <use value="usual"/>
+          <family value="Jaroscak"/>
+          <given value="Baby Boy"/>
+        </name>
+        <gender value="male"/>
+        <birthDate value="2023-01-22"/>
+        <address>
+          <type value="physical"/>
+          <line value="46005 Lake forest drive"/>
+          <city value="Mattice"/>
+          <state value="BC"/>
+          <country value="CA"/>
+        </address>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:b8d7f4cb-94db-46f6-9a01-7023a292b649"/>
+    <resource>
+      <RelatedPerson>
+        <id value="AddNewbornByMumsPHN-Request-RelatedPerson"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="RelatedPerson_AddNewbornByMumsPHN-Request-RelatedPerson"> </a><p class="res-header-id"><b>Generated Narrative: RelatedPerson AddNewbornByMumsPHN-Request-RelatedPerson</b></p><a name="AddNewbornByMumsPHN-Request-RelatedPerson"> </a><a name="hcAddNewbornByMumsPHN-Request-RelatedPerson"> </a><a name="AddNewbornByMumsPHN-Request-RelatedPerson-en-US"> </a><p><b>identifier</b>: <code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9253484802 (use: official, period: 2023-01-23 13:46:27-0800 --&gt; (ongoing))</p><p><b>patient</b>: <a href="Bundle-AddNewbornByMumsPHN-Request.html#urn-uuid-66a90476-06d2-4e62-aba7-32d0566ecf41">Bundle: type = collection; timestamp = 2023-01-23 13:46:28-0800</a></p><p><b>relationship</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode NMTH}">natural mother</span></p></div>
+        </text>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="official"/>
+          <system value="https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"/>
+          <value value="9253484802"/>
+          <period>
+            <start value="2023-01-23T13:46:27-08:00"/>
+          </period>
+        </identifier>
+        <patient>
+          <reference value="urn:uuid:66a90476-06d2-4e62-aba7-32d0566ecf41"/>
+        </patient>
+        <relationship>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="NMTH"/>
+          </coding>
+        </relationship>
+      </RelatedPerson>
+    </resource>
+  </entry>
+</Bundle>

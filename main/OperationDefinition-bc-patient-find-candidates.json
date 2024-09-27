@@ -1,0 +1,54 @@
+{
+  "resourceType" : "OperationDefinition",
+  "id" : "bc-patient-find-candidates",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition bc-patient-find-candidates</b></p><a name=\"bc-patient-find-candidates\"> </a><a name=\"hcbc-patient-find-candidates\"> </a><a name=\"bc-patient-find-candidates-en-US\"> </a><p>URL: [base]/Patient/$FindCandidates</p><p>Input parameters Profile:<a href=\"StructureDefinition-bc-find-candidates-request-bundle.html\">FindCandidatesRequestBundle</a></p><p>Output parameters Profile:<a href=\"StructureDefinition-bc-search-response-bundle.html\">SearchResponseBundle</a></p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>FindCandidatesRequestBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The FindCandidates operation request Bundle.</p>\n</div></td></tr><tr><td>OUT</td><td>SearchResponseBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The FindCandidates operation response Bundle.</p>\n</div></td></tr></table></div>"
+  },
+  "url" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-find-candidates",
+  "version" : "1.0.0",
+  "name" : "FindCandidatesByExample",
+  "title" : "Find Candidates By Example",
+  "status" : "active",
+  "kind" : "query",
+  "date" : "2024-09-27T22:40:13+00:00",
+  "publisher" : "BC Ministry of Health",
+  "contact" : [{
+    "name" : "BC Ministry of Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+    }]
+  }],
+  "description" : "This operation is used to query for a patient.  The response can contain 0 or more Patients.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CA",
+      "display" : "Canada"
+    }]
+  }],
+  "code" : "FindCandidates",
+  "resource" : ["Patient"],
+  "system" : false,
+  "type" : true,
+  "instance" : false,
+  "inputProfile" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle",
+  "outputProfile" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
+  "parameter" : [{
+    "name" : "FindCandidatesRequestBundle",
+    "use" : "in",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "The FindCandidates operation request Bundle.",
+    "type" : "Bundle"
+  },
+  {
+    "name" : "SearchResponseBundle",
+    "use" : "out",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "The FindCandidates operation response Bundle.",
+    "type" : "Bundle"
+  }]
+}

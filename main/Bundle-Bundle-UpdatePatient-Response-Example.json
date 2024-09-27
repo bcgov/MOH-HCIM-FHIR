@@ -1,0 +1,79 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "Bundle-UpdatePatient-Response-Example",
+  "meta" : {
+    "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle"]
+  },
+  "identifier" : {
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f7a3b"
+  },
+  "type" : "collection",
+  "timestamp" : "2011-09-13T16:11:43.000-07:00",
+  "link" : [{
+    "relation" : "self",
+    "url" : "urn:uuid:98028b44-882a-4c72-8c92-b87d916147e1"
+  }],
+  "entry" : [{
+    "fullUrl" : "urn:uuid:61061501-9953-4fba-87fe-6ae30e79da33",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "id" : "Parameters-UpdatePatient-Response-Example",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"]
+      },
+      "parameter" : [{
+        "name" : "messageId",
+        "valueString" : "c087e71e-3e7e-4c22-a3ce-61523f600615"
+      },
+      {
+        "name" : "messageDateTime",
+        "valueDateTime" : "2015-02-07T13:29:17-08:00"
+      },
+      {
+        "name" : "sender",
+        "valueIdentifier" : {
+          "system" : "http://hlth.gov.bc.ca/fhir/client/bc-org",
+          "value" : "MOH_CRS"
+        }
+      },
+      {
+        "name" : "requestMessageId",
+        "valueString" : "98028b44-882a-4c72-8c92-b87d916147e1"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:2d028b44-882a-4c72-8c92-b87d916147e1",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "id" : "OperationOutcome-Example",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_OperationOutcome-Example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome OperationOutcome-Example</b></p><a name=\"OperationOutcome-Example\"> </a><a name=\"hcOperationOutcome-Example\"> </a><a name=\"OperationOutcome-Example-en-US\"> </a><blockquote><p><b>issue</b></p><p><b>severity</b>: Warning</p><p><b>code</b>: Business Rule Violation</p><p><b>details</b>: <span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes HCIM.RP.1.0017}\">Warning: The Revise Patient name has been modified to filter out invalid characters.</span></p></blockquote><blockquote><p><b>issue</b></p><p><b>severity</b>: Error</p><p><b>code</b>: Business Rule Violation</p><p><b>details</b>: <span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes HCIM.RP.1.0017}\">The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ...</span></p></blockquote></div>"
+      },
+      "issue" : [{
+        "severity" : "warning",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes",
+            "code" : "HCIM.RP.1.0017"
+          }],
+          "text" : "Warning: The Revise Patient name has been modified to filter out invalid characters."
+        }
+      },
+      {
+        "severity" : "error",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes",
+            "code" : "HCIM.RP.1.0017"
+          }],
+          "text" : "The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ..."
+        }
+      }]
+    }
+  }]
+}

@@ -1,0 +1,120 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "AddPatient-Response",
+  "meta" : {
+    "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-response-bundle"]
+  },
+  "identifier" : {
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:uuid:ab8f071d-07ed-479b-a6ed-472066d26815"
+  },
+  "type" : "collection",
+  "timestamp" : "2023-01-23T13:46:28.0255523-08:00",
+  "link" : [{
+    "relation" : "canonical",
+    "url" : "https://ig.cgi.com/Patient/Add.fhir"
+  }],
+  "entry" : [{
+    "fullUrl" : "urn:uuid:0185235c-f8ea-4107-8979-591ddc2df30b",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "id" : "AddPatient-Response-Parameters",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"]
+      },
+      "parameter" : [{
+        "name" : "messageId",
+        "valueString" : "b02fc643-e179-4c5f-8ac3-a8d955f9ce87"
+      },
+      {
+        "name" : "messageDateTime",
+        "valueDateTime" : "2023-01-23T13:46:27.8027717-08:00"
+      },
+      {
+        "name" : "sender",
+        "valueIdentifier" : {
+          "system" : "http://hlth.gov.bc.ca/fhir/client/bc-org",
+          "value" : "HIBC"
+        }
+      },
+      {
+        "name" : "enterer",
+        "valueIdentifier" : {
+          "system" : "http://hlth.gov.bc.ca/fhir/client/bc-userid",
+          "value" : "ig.samples@cgi.com"
+        }
+      },
+      {
+        "name" : "requestMessageId",
+        "valueString" : "b6e3eb80-b54b-4427-96ff-acfc512ec160"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:0185235c-f8ea-4107-8979-591ddc2d1234",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "id" : "AddPatient-Response-Outcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_AddPatient-Response-Outcome\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome AddPatient-Response-Outcome</b></p><a name=\"AddPatient-Response-Outcome\"> </a><a name=\"hcAddPatient-Response-Outcome\"> </a><a name=\"AddPatient-Response-Outcome-en-US\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Information</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.RP.0.0021}\">The Revise Person Request has been processed.</span></td></tr></table></div>"
+      },
+      "issue" : [{
+        "severity" : "information",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes",
+            "code" : "BCHCIM.RP.0.0021"
+          }],
+          "text" : "The Revise Person Request has been processed."
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:33f234d1-5781-45f2-8c8c-4b7cdd809078",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "AddPatient-Response-Patient",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_AddPatient-Response-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient AddPatient-Response-Patient</b></p><a name=\"AddPatient-Response-Patient\"> </a><a name=\"hcAddPatient-Response-Patient\"> </a><a name=\"AddPatient-Response-Patient-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient (no stated gender), DoB Unknown ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id#9455882493\u00a0(use:\u00a0official,\u00a0period:\u00a02023-01-23 13:46:27-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9253484802\u00a0(use:\u00a0official,\u00a0period:\u00a02023-01-23 13:46:27-0800 --&gt; (ongoing))</td></tr></table></div>"
+      },
+      "identifier" : [{
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode" : "active"
+        }],
+        "use" : "official",
+        "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+        "value" : "9253484802",
+        "period" : {
+          "start" : "2023-01-23T13:46:27-08:00"
+        },
+        "assigner" : {
+          "display" : "MOH Client Registry - MOH_CRS"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode" : "active"
+        }],
+        "use" : "official",
+        "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id",
+        "value" : "9455882493",
+        "period" : {
+          "start" : "2023-01-23T13:46:27-08:00"
+        },
+        "assigner" : {
+          "display" : "HIBC - Health Insurance British Columbia MSP"
+        }
+      }],
+      "active" : true
+    }
+  }]
+}

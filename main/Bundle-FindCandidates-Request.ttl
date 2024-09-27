@@ -1,0 +1,78 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Bundle/FindCandidates-Request> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "FindCandidates-Request"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:timestamp [ fhir:v "2023-01-23T13:58:38.7538206-08:00"^^xsd:dateTime] ; # 
+  fhir:link ( [
+     fhir:relation [ fhir:v "self" ] ;
+     fhir:url [ fhir:v "urn:uuid:92cbad6f-b07c-4288-88fc-884a8d4d50ec"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:c3e604ec-0917-41a8-9d90-1da8e66168d7"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:c3e604ec-0917-41a8-9d90-1da8e66168d7> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:f8ea5781-7772-4701-aabd-e86595f1487d"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:f8ea5781-7772-4701-aabd-e86595f1487d> )
+  ] ) . # 
+
+<urn:uuid:c3e604ec-0917-41a8-9d90-1da8e66168d7> a fhir:Parameters ;
+  fhir:id [ fhir:v "FindCandidates-Request-Parameters"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in>
+     ] )
+  ] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "messageId" ] ;
+     fhir:value [ fhir:v "f4a5d2f7-cbea-4f80-9804-b13b9be9f2b9" ]
+  ] [
+     fhir:name [ fhir:v "messageDateTime" ] ;
+     fhir:value [ fhir:v "2023-01-23T13:58:38.7402027-08:00"^^xsd:dateTime ]
+  ] [
+     fhir:name [ fhir:v "identifiersOnly" ] ;
+     fhir:value [ fhir:v "false"^^xsd:boolean ]
+  ] ) . # 
+
+<urn:uuid:f8ea5781-7772-4701-aabd-e86595f1487d> a fhir:Patient ;
+  fhir:id [ fhir:v "FindCandidates-Request-Patient"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_FindCandidates-Request-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient FindCandidates-Request-Patient</b></p><a name=\"FindCandidates-Request-Patient\"> </a><a name=\"hcFindCandidates-Request-Patient\"> </a><a name=\"FindCandidates-Request-Patient-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Apolo Frieson  Male, DoB: 1931-02-26</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\">16063 Star trek drive Evans-thomas BC CA </td></tr></table></div>"
+  ] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:family [ fhir:v "Frieson" ] ;
+     fhir:given ( [ fhir:v "Apolo" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1931-02-26"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:type [ fhir:v "physical" ] ;
+     fhir:line ( [ fhir:v "16063 Star trek drive" ] ) ;
+     fhir:city [ fhir:v "Evans-thomas" ] ;
+     fhir:state [ fhir:v "BC" ] ;
+     fhir:country [ fhir:v "CA" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

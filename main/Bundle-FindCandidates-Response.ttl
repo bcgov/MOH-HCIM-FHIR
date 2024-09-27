@@ -1,0 +1,480 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Bundle/FindCandidates-Response> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "FindCandidates-Response"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle>
+     ] )
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:uuid:1a6f9323-5c60-4f55-8210-9b4403c05014" ]
+  ] ; # 
+  fhir:type [ fhir:v "searchset"] ; # 
+  fhir:timestamp [ fhir:v "2023-01-23T13:58:38.9211651-08:00"^^xsd:dateTime] ; # 
+  fhir:total [ fhir:v "2"^^xsd:nonNegativeInteger] ; # 
+  fhir:link ( [
+     fhir:relation [ fhir:v "canonical" ] ;
+     fhir:url [ fhir:v "https://ig.cgi.com/Patient/Find.fhir"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:c3e604ec-0917-41a8-9d90-1da8e66168d7"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:c3e604ec-0917-41a8-9d90-1da8e66168d7> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:c3e604ec-0917-41a8-9d90-1da8e6615678"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:c3e604ec-0917-41a8-9d90-1da8e6615678> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "outcome" ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:b24a0288-a7b4-4219-8374-856b03a47715"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:b24a0288-a7b4-4219-8374-856b03a47715> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "match" ] ;
+       fhir:score [ fhir:v "159"^^xsd:decimal ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:db8b0c05-a81f-49ea-8110-92cc826ff09e"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:db8b0c05-a81f-49ea-8110-92cc826ff09e> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "match" ] ;
+       fhir:score [ fhir:v "91"^^xsd:decimal ]
+     ]
+  ] ) . # 
+
+<urn:uuid:c3e604ec-0917-41a8-9d90-1da8e66168d7> a fhir:Parameters ;
+  fhir:id [ fhir:v "FindCandidates-response-Parameters"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out>
+     ] )
+  ] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "messageId" ] ;
+     fhir:value [ fhir:v "f4a5d2f7-cbea-4f80-9804-b13b9be9f2b9" ]
+  ] [
+     fhir:name [ fhir:v "messageDateTime" ] ;
+     fhir:value [ fhir:v "2023-01-23T13:58:38.7402027-08:00"^^xsd:dateTime ]
+  ] [
+     fhir:name [ fhir:v "sender" ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/bc-org"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "VIHA" ]
+     ]
+  ] [
+     fhir:name [ fhir:v "identifiersOnly" ] ;
+     fhir:value [ fhir:v "false"^^xsd:boolean ]
+  ] [
+     fhir:name [ fhir:v "enterer" ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/bc-userid"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "ig.samples@cgi.com" ]
+     ]
+  ] [
+     fhir:name [ fhir:v "requestMessageId" ] ;
+     fhir:value [ fhir:v "f108bda7-fc0f-4cbe-8438-6981360dee82" ]
+  ] ) . # 
+
+<urn:uuid:c3e604ec-0917-41a8-9d90-1da8e6615678> a fhir:OperationOutcome ;
+  fhir:id [ fhir:v "FindCandidates-response-Outcome"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_FindCandidates-response-Outcome\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome FindCandidates-response-Outcome</b></p><a name=\"FindCandidates-response-Outcome\"> </a><a name=\"hcFindCandidates-response-Outcome\"> </a><a name=\"FindCandidates-response-Outcome-en-US\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Information</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.FC.0.0012}\">The search completed successfully.</span></td></tr></table></div>"
+  ] ; # 
+  fhir:issue ( [
+     fhir:severity [ fhir:v "information" ] ;
+     fhir:code [ fhir:v "business-rule" ] ;
+     fhir:details [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "BCHCIM.FC.0.0012" ]
+       ] ) ;
+       fhir:text [ fhir:v "The search completed successfully." ]
+     ]
+  ] ) . # 
+
+<urn:uuid:b24a0288-a7b4-4219-8374-856b03a47715> a fhir:Patient ;
+  fhir:id [ fhir:v "cd710a55-680e-4297-82bf-e4a396401d39"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_cd710a55-680e-4297-82bf-e4a396401d39\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient cd710a55-680e-4297-82bf-e4a396401d39</b></p><a name=\"cd710a55-680e-4297-82bf-e4a396401d39\"> </a><a name=\"hccd710a55-680e-4297-82bf-e4a396401d39\"> </a><a name=\"cd710a55-680e-4297-82bf-e4a396401d39-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Elefteria Aida Patxi Pinchock  Male, DoB: 1925-05-14 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-nl-patient-healthcare-id#EW4426MY2H20U5824HO4 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">1927-03-28</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999990 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-south-source-patient-id</code>/53I5HTA2R5RT9XB6R27R52L8OXT18M1MZW (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 5614353278(Mobile)</li><li>ph: 4509409511(Home)</li><li>ph: 3524387170(Work)</li><li><a href=\"mailto:Marianne.Huot@cgi.com\">Marianne.Huot@cgi.com</a></li><li><a href=\"mailto:Andoni.Schoninger@cgi.com\">Andoni.Schoninger@cgi.com</a></li><li><a href=\"mailto:Kord.Stavrides@cgi.com\">Kord.Stavrides@cgi.com</a></li><li>6140 Sharon lane Glasgow BC CA </li><li>42593 Rue saint-antoine East broughton BC CA </li></ul></td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "active" ]
+     ] ) ;
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "9999999990" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "MOH Client Registry - MOH_CRS" ]
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "active" ]
+     ] ) ;
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-south-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "53I5HTA2R5RT9XB6R27R52L8OXT18M1MZW" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "VIHA Cerner - VIHA_SOUTH" ]
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "active" ]
+     ] ) ;
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-nl-patient-healthcare-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "EW4426MY2H20U5824HO4" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] ) ; # 
+  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:family [ fhir:v "Pinchock" ] ;
+     fhir:given ( [ fhir:v "Elefteria" ] [ fhir:v "Aida" ] [ fhir:v "Patxi" ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:given ( [ fhir:v "Zachary" ] [ fhir:v "Irune" ] [ fhir:v "Adoette" ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:use [ fhir:v "nickname" ] ;
+     fhir:given ( [ fhir:v "Keriann" ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "5614353278" ] ;
+     fhir:use [ fhir:v "mobile" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "4509409511" ] ;
+     fhir:use [ fhir:v "home" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "3524387170" ] ;
+     fhir:use [ fhir:v "work" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Marianne.Huot@cgi.com" ] ;
+     fhir:use [ fhir:v "mobile" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Andoni.Schoninger@cgi.com" ] ;
+     fhir:use [ fhir:v "home" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Kord.Stavrides@cgi.com" ] ;
+     fhir:use [ fhir:v "work" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] ) ; # 
+  fhir:gender [
+     fhir:v "male" ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+       ]
+     ] )
+  ] ; # 
+  fhir:birthDate [
+     fhir:v "1925-05-14"^^xsd:date ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+       ]
+     ] )
+  ] ; # 
+  fhir:deceased [
+     fhir:v "1927-03-28"^^xsd:date ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "deathVerifiedFlag"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "false"^^xsd:boolean ]
+       ] [
+         fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Period ;
+           fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension"^^xsd:anyURI ]
+     ] )
+  ] ; # 
+  fhir:address ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "unknown" ]
+     ] ) ;
+     fhir:type [ fhir:v "physical" ] ;
+     fhir:line ( [ fhir:v "6140 Sharon lane" ] ) ;
+     fhir:city [ fhir:v "Glasgow" ] ;
+     fhir:state [ fhir:v "BC" ] ;
+     fhir:country [ fhir:v "CA" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "unknown" ]
+     ] ) ;
+     fhir:type [ fhir:v "postal" ] ;
+     fhir:line ( [ fhir:v "42593 Rue saint-antoine" ] ) ;
+     fhir:city [ fhir:v "East broughton" ] ;
+     fhir:state [ fhir:v "BC" ] ;
+     fhir:country [ fhir:v "CA" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] ) . # 
+
+<urn:uuid:db8b0c05-a81f-49ea-8110-92cc826ff09e> a fhir:Patient ;
+  fhir:id [ fhir:v "113c95fd-157a-46ee-a483-67059821b708"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_113c95fd-157a-46ee-a483-67059821b708\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient 113c95fd-157a-46ee-a483-67059821b708</b></p><a name=\"113c95fd-157a-46ee-a483-67059821b708\"> </a><a name=\"hc113c95fd-157a-46ee-a483-67059821b708\"> </a><a name=\"113c95fd-157a-46ee-a483-67059821b708-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Meriwa Tin Edwige Sanon  Female, DoB: 1968-08-07 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id#28XFXSJ8MTNRVKY7QR763H3U7 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">1981-04-10</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999991 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-south-source-patient-id</code>/188N1MV4JZ77LYP7LSQBLVG2W2F09J41XU3F5HU (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 4153118815(Mobile)</li><li>ph: 5059057048(Home)</li><li>ph: 5702742087(Work)</li><li><a href=\"mailto:Kennocha.Guitian@cgi.com\">Kennocha.Guitian@cgi.com</a></li><li><a href=\"mailto:Bellamy.Bakos@cgi.com\">Bellamy.Bakos@cgi.com</a></li><li><a href=\"mailto:Frantisek.Vonseggern@cgi.com\">Frantisek.Vonseggern@cgi.com</a></li><li>13934 Cimmaron road Cochranton BC CA </li><li>2296 Forest avenue Rocky harbour BC CA </li></ul></td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "active" ]
+     ] ) ;
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "9999999991" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "MOH Client Registry - MOH_CRS" ]
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "active" ]
+     ] ) ;
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-south-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "188N1MV4JZ77LYP7LSQBLVG2W2F09J41XU3F5HU" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "VIHA Cerner - VIHA_SOUTH" ]
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "active" ]
+     ] ) ;
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "28XFXSJ8MTNRVKY7QR763H3U7" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] ) ; # 
+  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:family [ fhir:v "Sanon" ] ;
+     fhir:given ( [ fhir:v "Meriwa" ] [ fhir:v "Tin" ] [ fhir:v "Edwige" ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:given ( [ fhir:v "Tanja" ] [ fhir:v "Donnelly" ] [ fhir:v "Cesare" ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:use [ fhir:v "nickname" ] ;
+     fhir:given ( [ fhir:v "Layton" ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "4153118815" ] ;
+     fhir:use [ fhir:v "mobile" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "5059057048" ] ;
+     fhir:use [ fhir:v "home" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "5702742087" ] ;
+     fhir:use [ fhir:v "work" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Kennocha.Guitian@cgi.com" ] ;
+     fhir:use [ fhir:v "mobile" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Bellamy.Bakos@cgi.com" ] ;
+     fhir:use [ fhir:v "home" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Frantisek.Vonseggern@cgi.com" ] ;
+     fhir:use [ fhir:v "work" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] ) ; # 
+  fhir:gender [
+     fhir:v "female" ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+       ]
+     ] )
+  ] ; # 
+  fhir:birthDate [
+     fhir:v "1968-08-07"^^xsd:date ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+       ]
+     ] )
+  ] ; # 
+  fhir:deceased [
+     fhir:v "1981-04-10"^^xsd:date ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "deathVerifiedFlag"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "false"^^xsd:boolean ]
+       ] [
+         fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Period ;
+           fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension"^^xsd:anyURI ]
+     ] )
+  ] ; # 
+  fhir:address ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "unknown" ]
+     ] ) ;
+     fhir:type [ fhir:v "physical" ] ;
+     fhir:line ( [ fhir:v "13934 Cimmaron road" ] ) ;
+     fhir:city [ fhir:v "Cochranton" ] ;
+     fhir:state [ fhir:v "BC" ] ;
+     fhir:country [ fhir:v "CA" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "unknown" ]
+     ] ) ;
+     fhir:type [ fhir:v "postal" ] ;
+     fhir:line ( [ fhir:v "2296 Forest avenue" ] ) ;
+     fhir:city [ fhir:v "Rocky harbour" ] ;
+     fhir:state [ fhir:v "BC" ] ;
+     fhir:country [ fhir:v "CA" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

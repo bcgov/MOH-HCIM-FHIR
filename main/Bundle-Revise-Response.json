@@ -1,0 +1,114 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "Revise-Response",
+  "meta" : {
+    "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle"]
+  },
+  "identifier" : {
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:uuid:db5d47ac-0323-4def-9d2f-97d84a6f341d"
+  },
+  "type" : "collection",
+  "timestamp" : "2023-01-23T14:02:15.9747697-08:00",
+  "link" : [{
+    "relation" : "canonical",
+    "url" : "Patient\\Revise"
+  }],
+  "entry" : [{
+    "fullUrl" : "urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "id" : "6426876c-8118-4020-8364-7021d0a1ec23",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"]
+      },
+      "parameter" : [{
+        "name" : "messageId",
+        "valueString" : "f95c3be0-b6ed-4aec-b969-7bc7da904315"
+      },
+      {
+        "name" : "messageDateTime",
+        "valueDateTime" : "2023-01-23T14:02:15.7581133-08:00"
+      },
+      {
+        "name" : "sender",
+        "valueIdentifier" : {
+          "system" : "http://hlth.gov.bc.ca/fhir/client/bc-org",
+          "value" : "VPP"
+        }
+      },
+      {
+        "name" : "enterer",
+        "valueIdentifier" : {
+          "system" : "http://hlth.gov.bc.ca/fhir/client/bc-userid",
+          "value" : "ig.samples@cgi.com"
+        }
+      },
+      {
+        "name" : "requestMessageId",
+        "valueString" : "823d7eb6-24d5-452f-b2d0-f86f2f6130e7"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:445c4b0d-95f7-4492-88ba-b491516b4567",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "id" : "Revise-Response-Outcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_Revise-Response-Outcome\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome Revise-Response-Outcome</b></p><a name=\"Revise-Response-Outcome\"> </a><a name=\"hcRevise-Response-Outcome\"> </a><a name=\"Revise-Response-Outcome-en-US\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Information</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.RP.0.0000}\">Transaction processed.A new PHN was assigned.</span></td></tr></table></div>"
+      },
+      "issue" : [{
+        "severity" : "information",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes",
+            "code" : "BCHCIM.RP.0.0000"
+          }],
+          "text" : "Transaction processed.A new PHN was assigned."
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:445c4b0d-95f7-4492-88ba-b491516b1508",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "Revise-Response-Patient",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_Revise-Response-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient Revise-Response-Patient</b></p><a name=\"Revise-Response-Patient\"> </a><a name=\"hcRevise-Response-Patient\"> </a><a name=\"Revise-Response-Patient-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient (no stated gender), DoB Unknown ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cer-source-patient-id#2B6F8GN410H1T27NPE\u00a0(use:\u00a0official,\u00a0period:\u00a02023-01-23 14:02:15-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999999\u00a0(use:\u00a0official,\u00a0period:\u00a02023-01-23 14:02:15-0800 --&gt; (ongoing))</td></tr></table></div>"
+      },
+      "identifier" : [{
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode" : "active"
+        }],
+        "use" : "official",
+        "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+        "value" : "9999999999",
+        "period" : {
+          "start" : "2023-01-23T14:02:15-08:00"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+          "valueCode" : "active"
+        }],
+        "use" : "official",
+        "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cer-source-patient-id",
+        "value" : "2B6F8GN410H1T27NPE",
+        "period" : {
+          "start" : "2023-01-23T14:02:15-08:00"
+        }
+      }],
+      "active" : true
+    }
+  }]
+}

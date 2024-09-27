@@ -1,0 +1,156 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Bundle/Merge-WithPayload-Request> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Merge-WithPayload-Request"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:timestamp [ fhir:v "2023-01-23T14:45:48.1500575-08:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a15d7b9"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a15d7b9> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:1bccd29a-9d71-4f25-b2b0-fbe7484dcef1"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:1bccd29a-9d71-4f25-b2b0-fbe7484dcef1> )
+  ] ) . # 
+
+<urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a15d7b9> a fhir:Parameters ;
+  fhir:id [ fhir:v "2329c77d-3c91-408c-9daf-c694a61c518a"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in>
+     ] )
+  ] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "messageId" ] ;
+     fhir:value [ fhir:v "44e8efbe-280c-4a1e-8dd7-839e16a426e5" ]
+  ] [
+     fhir:name [ fhir:v "messageDateTime" ] ;
+     fhir:value [ fhir:v "2023-01-23T14:45:48.1499176-08:00"^^xsd:dateTime ]
+  ] ) . # 
+
+<urn:uuid:1bccd29a-9d71-4f25-b2b0-fbe7484dcef1> a fhir:Patient ;
+  fhir:id [ fhir:v "Merge-WithPayload-Request-Patient"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_Merge-WithPayload-Request-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient Merge-WithPayload-Request-Patient</b></p><a name=\"Merge-WithPayload-Request-Patient\"> </a><a name=\"hcMerge-WithPayload-Request-Patient\"> </a><a name=\"Merge-WithPayload-Request-Patient-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Aloja Pati Didrika Szymanski  Male, DoB: 1986-07-07 ( Account number (use: official, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">2006-05-17</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Alternate names (see the one above)\">Alt. Name:</td><td colspan=\"3\">Virginie (Nickname)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 3028602164(Mobile)</li><li>ph: 9056871450(Home)</li><li>ph: 3182632722(Work)</li><li><a href=\"mailto:Hito.Schaffert@cgi.com\">Hito.Schaffert@cgi.com</a></li><li><a href=\"mailto:Lissandre.Svedine@cgi.com\">Lissandre.Svedine@cgi.com</a></li><li><a href=\"mailto:Aretha.Matsko@cgi.com\">Aretha.Matsko@cgi.com</a></li><li>9405 Dark hollow road Klemme BC CA </li><li>40138 Par drive Tobyhanna BC CA </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>This record replaces: Identifier: Account number/CS059OC9Z9MCLN3065382PG7P7JKM2 (use: official, )</li><li>This record replaces: Identifier: Account number/0035Z44HE5845 (use: official, )</li></ul></td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "AN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "601BXWJG9W9FB6L02W7ZIN0H66" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:family [ fhir:v "Szymanski" ] ;
+     fhir:given ( [ fhir:v "Aloja" ] [ fhir:v "Pati" ] [ fhir:v "Didrika" ] )
+  ] [
+     fhir:use [ fhir:v "nickname" ] ;
+     fhir:given ( [ fhir:v "Virginie" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "3028602164" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "9056871450" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "3182632722" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Hito.Schaffert@cgi.com" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Lissandre.Svedine@cgi.com" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Aretha.Matsko@cgi.com" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1986-07-07"^^xsd:date] ; # 
+  fhir:deceased [ fhir:v "2006-05-17"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:type [ fhir:v "physical" ] ;
+     fhir:line ( [ fhir:v "9405 Dark hollow road" ] ) ;
+     fhir:city [ fhir:v "Klemme" ] ;
+     fhir:state [ fhir:v "BC" ] ;
+     fhir:country [ fhir:v "CA" ]
+  ] [
+     fhir:type [ fhir:v "postal" ] ;
+     fhir:line ( [ fhir:v "40138 Par drive" ] ) ;
+     fhir:city [ fhir:v "Tobyhanna" ] ;
+     fhir:state [ fhir:v "BC" ] ;
+     fhir:country [ fhir:v "CA" ]
+  ] ) ; # 
+  fhir:link ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "obsolete" ]
+     ] ) ;
+     fhir:other [
+       fhir:identifier [
+         fhir:use [ fhir:v "official" ] ;
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "AN" ]
+           ] )
+         ] ;
+         fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CS059OC9Z9MCLN3065382PG7P7JKM2" ]
+       ]
+     ] ;
+     fhir:type [ fhir:v "replaces" ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "obsolete" ]
+     ] ) ;
+     fhir:other [
+       fhir:identifier [
+         fhir:use [ fhir:v "official" ] ;
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "AN" ]
+           ] )
+         ] ;
+         fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "0035Z44HE5845" ]
+       ]
+     ] ;
+     fhir:type [ fhir:v "replaces" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="GetDemographics-withHistory-Response"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
+  </meta>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:bb039f6f-3c18-4427-ad5e-d9de62dccf6b"/>
+  </identifier>
+  <type value="searchset"/>
+  <timestamp value="2023-01-23T14:00:54.4107299-08:00"/>
+  <total value="1"/>
+  <link>
+    <relation value="canonical"/>
+    <url value="https://ig.cgi.com/Patient/$GetDemographics"/>
+  </link>
+  <entry>
+    <fullUrl value="urn:uuid:fb5ed5fa-e08f-4b88-948a-d81cd26d3453"/>
+    <resource>
+      <Parameters>
+        <id value="GetDemographics-withHistory-Response-Parameters"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"/>
+        </meta>
+        <parameter>
+          <name value="messageId"/>
+          <valueString value="0cf19fde-0808-4ffe-b029-3aa06bc008a9"/>
+        </parameter>
+        <parameter>
+          <name value="messageDateTime"/>
+          <valueDateTime value="2023-01-23T14:00:53.7286055-08:00"/>
+        </parameter>
+        <parameter>
+          <name value="sender"/>
+          <valueIdentifier>
+            <system value="http://hlth.gov.bc.ca/fhir/client/bc-org"/>
+            <value value="FHA"/>
+          </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="history"/>
+          <valueBoolean value="true"/>
+        </parameter>
+        <parameter>
+          <name value="identifiersOnly"/>
+          <valueBoolean value="false"/>
+        </parameter>
+        <parameter>
+          <name value="enterer"/>
+          <valueIdentifier>
+            <system value="http://hlth.gov.bc.ca/fhir/client/bc-userid"/>
+            <value value="ig.samples@cgi.com"/>
+          </valueIdentifier>
+        </parameter>
+        <parameter>
+          <name value="requestMessageId"/>
+          <valueString value="62ac7557-95b4-42b0-acb1-dde7bc56c964"/>
+        </parameter>
+      </Parameters>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf74567"/>
+    <resource>
+      <OperationOutcome>
+        <id value="GetDemographics-withHistory-Response-Outcome"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="OperationOutcome_GetDemographics-withHistory-Response-Outcome"> </a><p class="res-header-id"><b>Generated Narrative: OperationOutcome GetDemographics-withHistory-Response-Outcome</b></p><a name="GetDemographics-withHistory-Response-Outcome"> </a><a name="hcGetDemographics-withHistory-Response-Outcome"> </a><a name="GetDemographics-withHistory-Response-Outcome-en-US"> </a><h3>Issues</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style="display: none">*</td><td>Information</td><td>Business Rule Violation</td><td><span title="Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.GD.0.0013}">The get demographics query completed successfully.</span></td></tr></table></div>
+        </text>
+        <issue>
+          <severity value="information"/>
+          <code value="business-rule"/>
+          <details>
+            <coding>
+              <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes"/>
+              <code value="BCHCIM.GD.0.0013"/>
+            </coding>
+            <text value="The get demographics query completed successfully."/>
+          </details>
+        </issue>
+      </OperationOutcome>
+    </resource>
+    <search>
+      <mode value="outcome"/>
+    </search>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf7f4ba"/>
+    <resource>
+      <Patient>
+        <id value="87d81314-eba2-4071-af5a-f2b98bf4c13a"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Patient_87d81314-eba2-4071-af5a-f2b98bf4c13a"> </a><p class="res-header-id"><b>Generated Narrative: Patient 87d81314-eba2-4071-af5a-f2b98bf4c13a</b></p><a name="87d81314-eba2-4071-af5a-f2b98bf4c13a"> </a><a name="hc87d81314-eba2-4071-af5a-f2b98bf4c13a"> </a><a name="87d81314-eba2-4071-af5a-f2b98bf4c13a-en-US"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Alithea Joacheim Aine Parthemore  Female, DoB: 1946-11-28 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id#3B022OESRB7W41F3511QJ9PDCE244509HWHH5J (use: official, period: 2018-01-23 14:00:53-0800 --&gt; 2023-01-23 14:00:53-0800))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td>true</td><td style="background-color: #f3f5da" title="Known status of Patient">Deceased:</td><td colspan="3">1950-07-16</td></tr><tr><td style="background-color: #f3f5da" title="Other Ids (see the one above)">Other Ids:</td><td colspan="3"><ul><li><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999999 (use: official, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing))</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id</code>/2701XI3IW2R95W87WH3H16082KJ2LEVENM0LNTW (use: official, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing))</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-arh-source-patient-id</code>/8FV66J82GPKBH83 (use: secondary, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing))</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-bh-source-patient-id</code>/UO9W191ASP6JN937P3H476IPHC0K83V4Q65 (use: secondary, period: 2018-01-23 14:00:53-0800 --&gt; 2023-01-23 14:00:53-0800)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li>ph: 6237064105(Mobile)</li><li>ph: 6304712096(Mobile)</li><li>ph: 7121011390(Home)</li><li>ph: 4163176376(Home)</li><li>ph: 9845613474(Work)</li><li>ph: 2054428883(Work)</li><li><a href="mailto:Berne.Aron@cgi.com">Berne.Aron@cgi.com</a></li><li><a href="mailto:Octavius.Megown@cgi.com">Octavius.Megown@cgi.com</a></li><li><a href="mailto:Claude.Abuel@cgi.com">Claude.Abuel@cgi.com</a></li><li><a href="mailto:Madailein.Ivins@cgi.com">Madailein.Ivins@cgi.com</a></li><li><a href="mailto:Akanni.Ehrler@cgi.com">Akanni.Ehrler@cgi.com</a></li><li><a href="mailto:Tereza.Bis@cgi.com">Tereza.Bis@cgi.com</a></li><li>1431 Riverwood drive Lake village BC CA </li><li>7597 Mahlon street Maple plain BC CA </li><li>1699 Brand road Hills BC CA </li><li>33031 Arrowood drive Mayfield heights BC CA </li></ul></td></tr></table></div>
+        </text>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="official"/>
+          <system value="https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"/>
+          <value value="9999999999"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+          <assigner>
+            <display value="MOH Client Registry - MOH_CRS"/>
+          </assigner>
+        </identifier>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="official"/>
+          <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id"/>
+          <value value="2701XI3IW2R95W87WH3H16082KJ2LEVENM0LNTW"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+          <assigner>
+            <display value="FHA Meditech - Fraser Valley - FHA_FV"/>
+          </assigner>
+        </identifier>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="merged"/>
+          </extension>
+          <use value="official"/>
+          <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id"/>
+          <value value="3B022OESRB7W41F3511QJ9PDCE244509HWHH5J"/>
+          <period>
+            <start value="2018-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+          <assigner>
+            <display value="FHA Meditech - Fraser Valley - FHA_FV"/>
+          </assigner>
+        </identifier>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="secondary"/>
+          <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-arh-source-patient-id"/>
+          <value value="8FV66J82GPKBH83"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+          <assigner>
+            <display value="Abbotsford Regional Hospital"/>
+          </assigner>
+        </identifier>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="merged"/>
+          </extension>
+          <use value="secondary"/>
+          <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-bh-source-patient-id"/>
+          <value value="UO9W191ASP6JN937P3H476IPHC0K83V4Q65"/>
+          <period>
+            <start value="2018-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+          <assigner>
+            <display value="Burnaby Hospital"/>
+          </assigner>
+        </identifier>
+        <active value="true"/>
+        <name>
+          <use value="usual"/>
+          <family value="Parthemore"/>
+          <given value="Alithea"/>
+          <given value="Joacheim"/>
+          <given value="Aine"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </name>
+        <name>
+          <use value="usual"/>
+          <family value="Kalscheuer"/>
+          <given value="Christina"/>
+          <given value="Matei"/>
+          <given value="Marlin"/>
+          <period>
+            <start value="2020-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </name>
+        <name>
+          <use value="official"/>
+          <given value="Abaigh"/>
+          <given value="Evangelia"/>
+          <given value="Wahchinksapa"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </name>
+        <name>
+          <use value="official"/>
+          <given value="Wilhelmus"/>
+          <given value="Galatea"/>
+          <given value="Olabisi"/>
+          <period>
+            <start value="2017-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </name>
+        <name>
+          <use value="nickname"/>
+          <given value="Mia"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </name>
+        <name>
+          <use value="nickname"/>
+          <given value="Jutta"/>
+          <period>
+            <start value="2020-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="6237064105"/>
+          <use value="mobile"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="6304712096"/>
+          <use value="mobile"/>
+          <period>
+            <start value="2021-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="7121011390"/>
+          <use value="home"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="4163176376"/>
+          <use value="home"/>
+          <period>
+            <start value="2017-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="9845613474"/>
+          <use value="work"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="2054428883"/>
+          <use value="work"/>
+          <period>
+            <start value="2017-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="Berne.Aron@cgi.com"/>
+          <use value="mobile"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="Octavius.Megown@cgi.com"/>
+          <use value="mobile"/>
+          <period>
+            <start value="2020-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="Claude.Abuel@cgi.com"/>
+          <use value="home"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="Madailein.Ivins@cgi.com"/>
+          <use value="home"/>
+          <period>
+            <start value="2019-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="Akanni.Ehrler@cgi.com"/>
+          <use value="work"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="Tereza.Bis@cgi.com"/>
+          <use value="work"/>
+          <period>
+            <start value="2017-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </telecom>
+        <gender value="female">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2023-01-23T14:00:53-08:00"/>
+            </valuePeriod>
+          </extension>
+        </gender>
+        <birthDate value="1946-11-28">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2023-01-23T14:00:53-08:00"/>
+            </valuePeriod>
+          </extension>
+        </birthDate>
+        <deceasedDateTime value="1950-07-16">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2023-01-23T14:00:53-08:00"/>
+            </valuePeriod>
+          </extension>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension">
+            <extension url="deathVerifiedFlag">
+              <valueBoolean value="false"/>
+            </extension>
+            <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+              <valuePeriod>
+                <start value="2023-01-23T14:00:53-08:00"/>
+              </valuePeriod>
+            </extension>
+          </extension>
+        </deceasedDateTime>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="unknown"/>
+          </extension>
+          <type value="physical"/>
+          <line value="1431 Riverwood drive"/>
+          <city value="Lake village"/>
+          <state value="BC"/>
+          <country value="CA"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </address>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="unknown"/>
+          </extension>
+          <type value="physical"/>
+          <line value="7597 Mahlon street"/>
+          <city value="Maple plain"/>
+          <state value="BC"/>
+          <country value="CA"/>
+          <period>
+            <start value="2017-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </address>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="unknown"/>
+          </extension>
+          <type value="postal"/>
+          <line value="1699 Brand road"/>
+          <city value="Hills"/>
+          <state value="BC"/>
+          <country value="CA"/>
+          <period>
+            <start value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </address>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="unknown"/>
+          </extension>
+          <type value="postal"/>
+          <line value="33031 Arrowood drive"/>
+          <city value="Mayfield heights"/>
+          <state value="BC"/>
+          <country value="CA"/>
+          <period>
+            <start value="2020-01-23T14:00:53-08:00"/>
+            <end value="2023-01-23T14:00:53-08:00"/>
+          </period>
+        </address>
+      </Patient>
+    </resource>
+  </entry>
+</Bundle>
