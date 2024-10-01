@@ -3,8 +3,8 @@ InstanceOf: MetadataParametersOut
 Usage: #inline
 * parameter[messageId].name = "messageId"
 * parameter[messageId].valueString = "b02fc643-e179-4c5f-8ac3-a8d955f9ce87"
-* parameter[messageDateTime].name = "messageDateTime"
-* parameter[messageDateTime].valueDateTime = "2023-01-23T13:46:27.8027717-08:00"
+// * parameter[messageDateTime].name = "messageDateTime"
+// * parameter[messageDateTime].valueDateTime = "2023-01-23T13:46:27.8027717-08:00"
 * parameter[sender].name = "sender"
 * parameter[sender].valueIdentifier.system = "http://hlth.gov.bc.ca/fhir/client/bc-org"
 * parameter[sender].valueIdentifier.value = "HIBC"
