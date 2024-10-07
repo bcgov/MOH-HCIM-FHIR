@@ -101,7 +101,7 @@
         <a href="design.html">Summary</a>
       </li>
       <li>
-        <a href="search.html">Search Patient</a>
+        <a href="search.html">Search Patient Operations</a>
       </li>
       <li>
         <a href="reviseAndMerge.html">Add, Revise, Update And Merge Patient</a>
@@ -114,6 +114,9 @@
       </li>
       <li>
         <a href="absentData.html">Data Absent</a>
+      </li>
+      <li>
+        <a href="restful.html">RESTful Services</a>
       </li>
     </ul>
   </li>
@@ -569,31 +572,74 @@ Namely:</p>
 
 <h4 id="fhir-restful">FHIR Restful</h4>
 
-<p>The surrogate PHN can be used to query for Patients.</p>
+<p>Restful services on the patient resource are also available, RESTful Get and RESTful Find.</p>
 
-<p>https://…./Patient/UUID</p>
+<p>The FHIR RESTful Get feature is a service that provides a RESTful interface to access the Get Demographics transaction, as opposed to a FHIR operation.</p>
 
-<p>Two operations related to UUID are also available</p>
+<p>Below are some of the various ways to RESTful Get can be used.</p>
 
 <table class="grid">
   <thead>
     <tr>
-      <th style="text-align: left">Restful</th>
+      <th style="text-align: left">GET</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">GET https://…./Patient/UUID/$HistoryPatient</td>
+      <td style="text-align: left">Search by PHN</td>
     </tr>
     <tr>
-      <td style="text-align: left">GET https://…./Patient/UUID/_elements=identifier</td>
+      <td style="text-align: left">Search by PHN With History</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Search by PHN Return Identifiers Only</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Search by SRI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Search by SSRI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Search by Resource ID</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Search by Resource ID with History</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Search by Resource ID Return Identifiers Only</td>
     </tr>
   </tbody>
 </table>
 
-<p>$HistoryPatient is equivalent to the <a href="OperationDefinition-bc-patient-get-demographics.html#metadata-in-parameters">$GetDemograhpics with the withHistory parameter</a>.</p>
+<p>With History is equivalent to the <a href="OperationDefinition-bc-patient-get-demographics.html#metadata-in-parameters">$GetDemograhpics with the withHistory parameter</a>.</p>
 
-<p>_elements=identifier is equivalent to the <a href="OperationDefinition-bc-patient-get-demographics.html#metadata-in-parameters">$GetDemographics with the idenifiersOnly parameter</a>.</p>
+<p>Identifiers Only is equivalent to the <a href="OperationDefinition-bc-patient-get-demographics.html#metadata-in-parameters">$GetDemographics with the idenifiersOnly parameter</a>.</p>
+
+<p>The FHIR RESTful Find feature is a service that provides a RESTful interface to access the Find Candidates transaction, as opposed to a FHIR operation.</p>
+
+<p>Below are some of the various ways to RESTful Find can be used.</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th style="text-align: left">FIND</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Search by Name and Address</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Search by Name and Phone</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Search by Name and Date of Birth</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Name is equalivent to the combination of both First Name and Surname.</p>
 
 <h3 id="design-outcomes---details">Design Outcomes - Details</h3>
 
@@ -780,7 +826,7 @@ Namely:</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 27, 2024 22:40+0000">2024-09-27</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Oct 7, 2024 22:34+0000">2024-10-07</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
