@@ -141,21 +141,40 @@ Response resources are wrapped in Bundles.  A search operation like Get Demograp
 
 #### FHIR Restful
 
-The surrogate PHN can be used to query for Patients.
+Restful services on the patient resource are also available, RESTful Get and RESTful Find.
 
-https://..../Patient/UUID
+The FHIR RESTful Get feature is a service that provides a RESTful interface to access the Get Demographics transaction, as opposed to a FHIR operation.
 
-Two operations related to UUID are also available
+Below are some of the various ways to RESTful Get can be used.
 
-Restful|
+GET|
 :--- |
-GET https://..../Patient/UUID/$HistoryPatient |
-GET https://..../Patient/UUID/_elements=identifier |
+Search by PHN |
+Search by PHN With History |
+Search by PHN Return Identifiers Only |
+Search by SRI |
+Search by SSRI |
+Search by Resource ID |
+Search by Resource ID with History |
+Search by Resource ID Return Identifiers Only |
 {:.grid}
 
-$HistoryPatient is equivalent to the [$GetDemograhpics with the withHistory parameter](OperationDefinition-bc-patient-get-demographics.html#metadata-in-parameters).
+With History is equivalent to the [$GetDemograhpics with the withHistory parameter](OperationDefinition-bc-patient-get-demographics.html#metadata-in-parameters).
 
-_elements=identifier is equivalent to the [$GetDemographics with the identifiersOnly parameter](OperationDefinition-bc-patient-get-demographics.html#metadata-in-parameters).
+Identifiers Only is equivalent to the [$GetDemographics with the identifiersOnly parameter](OperationDefinition-bc-patient-get-demographics.html#metadata-in-parameters).
+
+The FHIR RESTful Find feature is a service that provides a RESTful interface to access the Find Candidates transaction, as opposed to a FHIR operation.
+
+Below are some of the various ways to RESTful Find can be used.
+
+FIND|
+:--- |
+Search by Name and Address |
+Search by Name and Phone |
+Search by Name and Date of Birth |
+{:.grid}
+
+Name is equalivent to the combination of both First Name and Surname.
 
 ### Design Outcomes - Details
 
