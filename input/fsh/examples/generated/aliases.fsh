@@ -7,7 +7,6 @@ Alias: $bc-client-registry-merge-status-code-system = https://terminology.hlth.g
 Alias: $name-use = http://hl7.org/fhir/name-use
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
-Alias: $patient-genderIdentity = http://hl7.org/fhir/StructureDefinition/patient-genderIdentity
 Alias: $mcode-genetic-specimen-type-vs = http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs
 Alias: $mcode-laterality-vs = http://hl7.org/fhir/us/mcode/ValueSet/mcode-laterality-vs
 Alias: $bc-oo-codes = https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes

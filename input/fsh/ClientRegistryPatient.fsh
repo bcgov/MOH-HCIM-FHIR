@@ -3,7 +3,7 @@ Parent: http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient
 //Parent: Patient
 Id: bc-patient
 Description: "General constraints on the Patient resource for use in the BC Client Registry project."
-* extension contains BusinessPeriodExtension named patientEffectiveDates 0..1 MS and GenderIdentityExtension named genderIdentity 0..1 MS
+* extension contains BusinessPeriodExtension named patientEffectiveDates 0..1 MS 
 * identifier only http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 * identifier 0..* MS
 * identifier.extension contains SourceIDExtension named sourceID 0..1 MS and IdentifierStatusExtension named idStatus 0..1 MS
@@ -31,15 +31,6 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * birthDate.extension contains BusinessPeriodExtension named birthDateEffectiveDates 0..1 and SourceIDExtension named sourceID 0..1 MS and BirthDateHistoryExtension named history 0..* MS 
 * multipleBirth[x].extension contains BusinessPeriodExtension named multipleBirthEffectiveDates 0..1 MS and SourceIDExtension named sourceID 0..1 MS and MultipleBirthHistoryExtension named history 0..* MS 
 * link.extension contains MergeStatusExtension named mergeStatus 0..* MS
-
-
-Extension: GenderIdentityExtension
-Id: bc-gender-identity-extension
-Title: "BC Gender Identity with business dates."
-Description: "Gender Identity with business dates."
-* ^context.type = #element
-* ^context.expression = "Patient"
-* extension contains BusinessPeriodExtension named genderIdentityEffectiveDates 0..1 MS and http://hl7.org/fhir/StructureDefinition/patient-genderIdentity named genderIdentity 0..1 MS
 
 Extension: BusinessPeriodExtension
 Id: bc-business-period-extension
@@ -93,7 +84,7 @@ Title: "BC Gender History"
 Description: "This extension allows the Client Registry to include historical gender codes in a single Patient resource."
 * ^context[+].type = #element
 * ^context[=].expression = "Patient.gender"
-* extension contains gender 0..* MS and BusinessPeriodExtension named businessDates 1..1 MS and SourceIDExtension named sourceID 0..1 MS and http://hl7.org/fhir/StructureDefinition/patient-genderIdentity named genderIdentity 0..1 MS
+* extension contains gender 0..* MS and BusinessPeriodExtension named businessDates 1..1 MS and SourceIDExtension named sourceID 0..1 MS
 * extension[gender].value[x] 1..1 MS
 * extension[gender].value[x] only code
 * extension[gender].valueCode from AdministrativeGender (required)
