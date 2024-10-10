@@ -6,7 +6,7 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * obeys invariant-merge-patient-1 
 * obeys invariant-merge-patient-2 
 * obeys invariant-merge-patient-3 
-* extension contains BusinessPeriodExtension named effectiveDates 0..1 MS and GenderIdentityExtension named genderIdentity 0..1 MS
+* extension contains BusinessPeriodExtension named patientEffectiveDates 0..1 MS 
 * identifier only http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 * identifier 1..* MS
 /* identifier.extension contains /*SourceIDExtension named sourceID 0..1 MS and IdentifierStatusExtension named idStatus 0..1 MS*/
@@ -21,7 +21,6 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * name.use 0..1
 * name.use from NameUseVS (required)
 * name.use ^short = "usual | official | nickname"
-//* name.extension contains SourceIDExtension named sourceID 0..1 MS
 * address 0..*
 * address.type 1..1
 * telecom 0..* MS
@@ -31,7 +30,6 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * telecom.use ^short = "home | work | mobile"
 * telecom.system from ContactPointSystemVS (required)
 * telecom.system ^short = "phone | email"
-//* telecom.extension contains SourceIDExtension named sourceID 0..1 MS
 * gender 0..1 MS
 * gender.extension contains BusinessPeriodExtension named genderEffectiveDates 0..1 MS /*and SourceIDExtension named sourceID 0..1 MS and GenderHistoryExtension named history 0..* MS */
 * birthDate 0..1 MS

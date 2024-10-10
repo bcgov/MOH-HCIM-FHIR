@@ -1,7 +1,7 @@
 Profile: MetadataParametersIn
 Parent: Parameters
 Id: bc-metadata-parameters-in
-Description: "Parameters profile for BC meta data - incoming messages."
+Description: "Parameters profile for BC meta data - incoming messages. This profile is also intended to force the inclusion of specific parameters for the related Parameters."
 * parameter ^slicing.discriminator.type = #value
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #open
