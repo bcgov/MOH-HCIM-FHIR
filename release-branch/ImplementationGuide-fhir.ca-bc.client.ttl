@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "BCHealthClientIdentityManagement"] ; # 
   fhir:title [ fhir:v "BC Client Registry FHIR Implementation Guide"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-10-01T20:52:52+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-10-10T23:13:09+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "BC Ministry of Health"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "BC Ministry of Health" ] ;
@@ -1125,18 +1125,6 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:extension" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-identity-extension> ;
-         fhir:reference [ fhir:v "StructureDefinition/bc-gender-identity-extension" ]
-       ] ;
-       fhir:name [ fhir:v "BC Gender Identity with business dates." ] ;
-       fhir:description [ fhir:v "Gender Identity with business dates." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "CapabilityStatement" ]
        ] ) ;
        fhir:reference [
@@ -1676,7 +1664,7 @@
          fhir:reference [ fhir:v "StructureDefinition/bc-metadata-parameters-in" ]
        ] ;
        fhir:name [ fhir:v "MetadataParametersIn" ] ;
-       fhir:description [ fhir:v "Parameters profile for BC meta data - incoming messages." ] ;
+       fhir:description [ fhir:v "Parameters profile for BC meta data - incoming messages. This profile is also intended to force the inclusion of specific parameters for the related Parameters." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ] ;
        fhir:groupingId [ fhir:v "SupportingProfiles" ]
      ] [
