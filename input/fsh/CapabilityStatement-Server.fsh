@@ -16,11 +16,6 @@ Get Demographics - used when a user would like to find a Patient and has an iden
 <li>
 Revise Patient - used when a user is communicating a change or request for a new PHN to the Client Registry.
 </li>
-<!--
-<li>
-Update Patient - used when a user is communicating a change to the Client Registry and isn't capable of sending in the full Patient resource.  E.g. all Patient attributes are not locally persisted.
-</li>
--->
 <li>
 Merge Patient - used when a user is communicating that an individual has multiple Patient records and which record should survive and which record(s) should be marked as non-surviving.
 </li>
@@ -43,7 +38,7 @@ Add Patient - used for newborns and 'force create' interactions
 </ul>
 
 <p>
-RESTful interactions of any type, beyond the Operations listed above, are not supported.  Client Registry users SHALL use only the above FHIR Operations.
+GET RESTful interactions (Find Candidate and Get Demographics) are supported. However for this release, Client Registry users SHALL use only the above FHIR Operations for any CREATE/POST and UPDATE/PUT operations.
 </p>
 
 <h3>General Rules IN</h3>
