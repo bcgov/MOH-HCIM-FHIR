@@ -25,8 +25,6 @@
       <sch:assert test="count(f:part) &lt;= 0">part: maximum cardinality of 'part' is 0</sch:assert>
       <sch:assert test="count(f:resource) &lt;= 0">resource: maximum cardinality of 'resource' is 0</sch:assert>
       <sch:assert test="count(f:part) &lt;= 0">part: maximum cardinality of 'part' is 0</sch:assert>
-      <sch:assert test="count(f:resource) &lt;= 0">resource: maximum cardinality of 'resource' is 0</sch:assert>
-      <sch:assert test="count(f:part) &lt;= 0">part: maximum cardinality of 'part' is 0</sch:assert>
       <sch:assert test="count(f:value[x]) &lt;= 0">value[x]: maximum cardinality of 'value[x]' is 0</sch:assert>
       <sch:assert test="count(f:resource) &gt;= 1">resource: minimum cardinality of 'resource' is 1</sch:assert>
       <sch:assert test="count(f:part) &lt;= 0">part: maximum cardinality of 'part' is 0</sch:assert>

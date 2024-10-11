@@ -15,7 +15,6 @@
       <sch:assert test="count(f:extension[@url = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension']) &gt;= 1">extension with URL = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension': minimum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension']) &lt;= 1">extension with URL = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension']) &lt;= 1">extension with URL = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/patient-genderIdentity']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/patient-genderIdentity': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:value[x]) &lt;= 0">value[x]: maximum cardinality of 'value[x]' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>

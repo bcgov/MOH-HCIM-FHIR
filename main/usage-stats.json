@@ -483,13 +483,6 @@
       ]
     },
     {
-      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient-operation-extension",
-      "title": "A code the describes how a particular Patient attribute is to be changed",
-      "types": [
-        "CodeableConcept"
-      ]
-    },
-    {
       "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
       "title": "BC Address Validation Status Code",
       "types": [
@@ -506,14 +499,30 @@
     ],
     "Bundle": [
       {
-        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-request-bundle",
-        "title": "PartialUpdateRequestBundle"
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle",
+        "title": "ReviseRequestBundle"
+      },
+      {
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle",
+        "title": "ReviseResponseBundle"
+      },
+      {
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
+        "title": "SearchResponseBundle"
+      },
+      {
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle",
+        "title": "SubscriptionNotificationBundle"
       }
     ],
     "Patient": [
       {
-        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient",
-        "title": "PartialPatientUpdate"
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient",
+        "title": "ClientRegistryPatient"
+      },
+      {
+        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example",
+        "title": "PatientByExample"
       }
     ],
     "Parameters": [
@@ -721,17 +730,6 @@
       "Bundle.entry.resource.name",
       "Bundle.entry.resource.telecom",
       "Extension",
-      "Patient.address",
-      "Patient.birthDate",
-      "Patient.deceased[x]",
-      "Patient.gender",
-      "Patient.identifier",
-      "Patient.multipleBirth[x]",
-      "Patient.name",
-      "Patient.telecom"
-    ],
-    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-update-patient-operation-extension": [
-      "Bundle.entry.resource.address",
       "Patient.address",
       "Patient.birthDate",
       "Patient.deceased[x]",

@@ -200,9 +200,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<blockquote>
-  <p><span style="color:red">Note</span><br />This specification is currently published as a Draft Standard on the ministry GitHub and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.</p>
-</blockquote>
 
 <h3 id="design-approach">Design Approach</h3>
 <p>The approach to design a FHIR interface to the Client Registry was to keep the interactions as similar as possible to the current system.  Any necessary additions and improvements were also considered for inclusion.
@@ -262,10 +259,6 @@ Namely:</p>
       <td style="text-align: left">Some of the features normally done through the Revise Patient interaction are now part of Add Patient.  Specifically, 'force create' and newborn interactions are now done with Add Patient.</td>
     </tr>
     <tr>
-      <td style="text-align: left">Partial Update interaction</td>
-      <td style="text-align: left">A Partial Update interaction allows users to logically delete, add or change part of the Patient resource.  This is useful when a stakeholder doesn't need (or persist) certain Patient attributes, but today, must query and then echo back these attributes in a Revise Patient interaction.  The exact operations allowed by the Client Registry is to be determined.</td>
-    </tr>
-    <tr>
       <td style="text-align: left">Business dates feature</td>
       <td style="text-align: left">Attributes will have business dates that haven't been present in V3.</td>
     </tr>
@@ -276,11 +269,11 @@ Namely:</p>
 
 <p>All interactions will primarily use the Patient resource.  The Patient resource is ideal to represent clients as the Patient resource has many of the necessary attributes but will require some extensions.  Patients also are recommended for enterprise master patient indices by the HL7 group and is in a Normative state, i.e. stable and ready for implementation.  See <a href="http://hl7.org/fhir/versions.html#std-process">FHIR standards evolution</a> for a description of Normative.</p>
 
-<p>Four Patient profiles are used: the main profile <a href="StructureDefinition-bc-patient.html">ClientRegistryPatient</a> - used also the search profile in the search operation (GetDemographics and FindCandidates), the merge profile <a href="StructureDefinition-bc-merge-patient.html">MergePatient</a> and finally the <a href="StructureDefinition-bc-update-request-bundle.html">PatientUpdate</a> for partial updates, e.g. updating just address or just telephone.</p>
+<p>Two Patient profiles are used: the main profile <a href="StructureDefinition-bc-patient.html">ClientRegistryPatient</a> - used also the search profile in the search operation (GetDemographics and FindCandidates), the merge profile <a href="StructureDefinition-bc-merge-patient.html">MergePatient</a>.</p>
 
 <h5 id="patient-resource-logical-id">Patient Resource (Logical) Id</h5>
 
-<p>PHN is a sensitive Patient attribute and although considered for the Paitent Resource ID this idea was discarded.  A non-PII surrogate Resource ID has been created which this guide will call the surrogate PHN.  It is a universal uniuqe identifier (UUID) and Patient Resources will be populated with this UUID.</p>
+<p>PHN is a sensitive Patient attribute and although considered for the Paitent Resource ID this idea was discarded.  A non-PII surrogate Resource ID has been created which this guide will call the surrogate PHN.  It is a universal unique identifier (UUID) and Patient Resources will be populated with this UUID.</p>
 
 <h5 id="patient-extensions">Patient Extensions</h5>
 
@@ -468,12 +461,6 @@ Namely:</p>
       <td style="text-align: left">https://…./Patient/$RevisePatient.Async</td>
     </tr>
     <tr>
-      <td style="text-align: left">https://…./Patient/$PartialUpdatePatient</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">https://…./Patient/$PartialUpdatePatient.Async</td>
-    </tr>
-    <tr>
       <td style="text-align: left">https://…./Patient/$AddPatient</td>
     </tr>
     <tr>
@@ -527,16 +514,6 @@ Namely:</p>
       <td style="text-align: left">$RevisePatient.Async</td>
       <td style="text-align: left"><a href="StructureDefinition-bc-revise-request-bundle.html">Revise Patient request profile</a></td>
       <td style="text-align: left"><a href="StructureDefinition-bc-revise-response-bundle.html">Revise Patient response profile</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">$PartialUpdatePatient</td>
-      <td style="text-align: left"><a href="StructureDefinition-bc-update-request-bundle.html">Update Patient profile</a></td>
-      <td style="text-align: left"><a href="StructureDefinition-bc-revise-response-bundle.html">Update Patient response profile</a> (uses revise)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">$PartialUpdatePatient.Async</td>
-      <td style="text-align: left"><a href="StructureDefinition-bc-update-request-bundle.html">Update Patient profile</a></td>
-      <td style="text-align: left"><a href="StructureDefinition-bc-revise-response-bundle.html">Update Patient response profile</a> (uses revise)</td>
     </tr>
     <tr>
       <td style="text-align: left">$AddPatient</td>
@@ -639,7 +616,7 @@ Namely:</p>
   </tbody>
 </table>
 
-<p>Name is equalivent to the combination of both First Name and Surname.</p>
+<p>Name is equivalent to the combination of both First Name and Surname.</p>
 
 <h3 id="design-outcomes---details">Design Outcomes - Details</h3>
 
@@ -722,7 +699,7 @@ Namely:</p>
   </tbody>
 </table>
 
-<p>Find Candidates may return zero or more candidates, while Get Demographics is designed to return zero or a single matching Patient.  These searches are expected to provide the required information to confirm a person's identify.</p>
+<p>Find Candidates may return zero or more candidates, while Get Demographics is designed to return zero or a single matching Patient. These searches are expected to provide the required information to confirm a person's identify.</p>
 
 <p>More details can be found here, <a href="search.html" title="Find Candidates and Get Demographics">Search page</a>.</p>
 
@@ -745,14 +722,6 @@ Namely:</p>
     <tr>
       <td style="text-align: left">https://…./$RevisePatient.Async</td>
       <td style="text-align: left">Updating a Patient asynchronously</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">https://…./$PartialUpdatePatient</td>
-      <td style="text-align: left">Updating a specific Patient attribute</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">https://…./$PartialUpdatePatient.Async</td>
-      <td style="text-align: left">Updating a specific Patient attribute asynchronously</td>
     </tr>
     <tr>
       <td style="text-align: left">https://…./$AddPatient</td>
@@ -826,7 +795,7 @@ Namely:</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Oct 11, 2024 20:53+0000">2024-10-11</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Oct 11, 2024 23:14+0000">2024-10-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
