@@ -10,3 +10,4 @@ Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $mcode-genetic-specimen-type-vs = http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs
 Alias: $mcode-laterality-vs = http://hl7.org/fhir/us/mcode/ValueSet/mcode-laterality-vs
 Alias: $bc-oo-codes = https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes
+Alias: $patient-genderIdentity = http://hl7.org/fhir/StructureDefinition/patient-genderIdentity
