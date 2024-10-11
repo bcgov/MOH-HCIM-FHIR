@@ -458,7 +458,7 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 * name = "HCIMServerCapabilityStatement"
 * title = "BC HCIM Server Capability Statement"
 * status = #active
-* date = "2021-11-18"
+* date = "2024-05-28"
 * publisher = "BC Ministry of Health"
 * description = "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a server."
 * kind = #capability
