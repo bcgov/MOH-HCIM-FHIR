@@ -1,13 +1,9 @@
-<!-- get modelType -->
-
-
-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title> - BC Client Registry FHIR Implementation Guide v1.0.0</title>
+    <title>RESTful Services - BC Client Registry FHIR Implementation Guide v1.0.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -46,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:""}
-    h3,h4,h5,h6{--heading-prefix:""}</style>
+    <style type="text/css">h2{--heading-prefix:"8"}
+    h3,h4,h5,h6{--heading-prefix:"8"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Left logo - typically the publisher's logo - project or affiliate -->
@@ -157,7 +153,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>RESTful Services</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -169,8 +165,16 @@
         <div class="row">
           <div class="inner-wrapper">
 
-<div style="counter-reset: section 6" class="col-12">
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hlth.gov.bc.ca/fhir/client/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>RESTful Services</h2>
   
 
 
@@ -183,92 +187,153 @@
 
 
 
-<ul class="nav nav-tabs">
 
-  <li>
-    <a href="StructureDefinition-bc-patient.html">Content</a>
-  </li>
-
-
-
-  <li>
-    <a href="StructureDefinition-bc-patient-definitions.html">Detailed Descriptions</a>
-  </li>
-
-
-
-  
-    <li>
-      <a href="StructureDefinition-bc-patient-mappings.html">Mappings</a>
-    </li>
-  
-
-
-
-
-
-
-
-  
-    <li>
-      <a href="StructureDefinition-bc-patient.profile.xml.html">XML</a>
-    </li>
-  
-
-
-  
-    <li>
-      <a href="StructureDefinition-bc-patient.profile.json.html">JSON</a>
-    </li>
-  
-
-
-  
-    <li>
-      <a href="StructureDefinition-bc-patient.profile.ttl.html">TTL</a>
-    </li>
-  
-
-
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#restful-find" id="markdown-toc-restful-find">RESTful Find</a></li>
+  <li><a href="#restful-get" id="markdown-toc-restful-get">RESTful Get</a></li>
+  <li><a href="#restful-get-examples" id="markdown-toc-restful-get-examples">RESTful Get Examples</a></li>
+  <li><a href="#restful-find-examples" id="markdown-toc-restful-find-examples">RESTful Find Examples</a></li>
 </ul>
 
+</div>
 
-  <a name="root"> </a>
-  <h2 id="root">Resource Profile: ClientRegistryPatient - Examples</h2>
+<h3 id="restful-find">RESTful Find</h3>
+<p>The RESTful Find uses the name and other criteria (e.g. date of birth) to find the client’s record and PHN via a “probabilistic search” in the Client Registry. In a probabilistic search, the outcome of the search cannot be predicted.</p>
 
-  <table class="colsi">
+<p>RESTful Find can return many matches depending on the information provided.</p>
+
+<p>Specific search criteria include:</p>
+<ul>
+  <li>Name (Given <em>and</em> Surname);</li>
+  <li>Date of birth;</li>
+  <li>Phone number;</li>
+  <li>Street address; or</li>
+  <li>Postal code.</li>
+</ul>
+
+<p>Name is mandatory with at least one of date of birth, address number and street, postal code or phone number</p>
+
+<p>Find is a synchronous request-response transaction.</p>
+
+<p>Request-ID information is passed via HTTP headers for FHIR RESTful messaging.</p>
+
+<p>The following parameters are supported (all parameters must be URL encoded):</p>
+<ul>
+  <li>Family</li>
+  <li>Given</li>
+  <li>Gender</li>
+  <li>Birthdate</li>
+  <li>Address-line</li>
+  <li>Address-city</li>
+  <li>Address-province</li>
+  <li>Address-postalcode</li>
+  <li>Address-country</li>
+  <li>Phone</li>
+  <li>Email</li>
+</ul>
+
+<p>The RESTful API path incorporates the URN pattern "[baseURL]/Patient?family=[LastName]&amp;given=[FirstName]&amp;gender=[Gender]&amp;birthdate=[BirthDate]&amp;address-line=[AddressLine1]&amp;address-city=[City]&amp;address-province=[Province]&amp;address-country=[Country]&amp;phone=[Phone]&amp;email=[Email]".</p>
+
+<p>Note that Find by Mothers PHN, multiple given names and multiple address lines is not supported via RESTful.</p>
+
+<p>More details are in the <a href="StructureDefinition-bc-search-response-bundle.html">response Bundle</a> definitions.</p>
+
+<h3 id="restful-get">RESTful Get</h3>
+
+<p>RESTful Get retrieves the most current demographic information (i.e., name, address, gender, date of birth, and date of death if applicable) from the Client Registry if the PHN is known.</p>
+
+<p>If the patient has a PHN or other identifier, a ‘get’ is performed against the Client Registry and the demographics returned and displayed to the user.</p>
+
+<p>Using Get is referred to as performing a “deterministic search”. In a deterministic search, the outcome of the search can be predicted. Get will return only one client record because there is only one client record that corresponds to the provided Identifier.</p>
+
+<p>The Get Demographics is a synchronous request-response transaction.</p>
+
+<p>The RESTful API path incorporates the URN pattern /Patient/[phn]. RESTful Get supports the use of the identifier parameter for searches that do not use the resource locator. Identifier parameter is a token that passes both the source system and identifier in the format system|value. 
+The URN pattern [baseURL]/Patient?identifier=[Identifier].</p>
+
+<p>The resourceId mst be passed via HTTP headers for the FHIR RESTful messaging.</p>
+
+<p>The passing of the history and identifiers only interaction parameters is supported via the HTTP URL as a suffix using the format
+[baseURL]/Patient/[interaction]?identifier=[Identifier]. Where the valid interactions for a RESTful Get are "_history" and "_identifiersOnly".</p>
+
+<p>More details can be found in the <a href="StructureDefinition-bc-search-response-bundle.html">response Bundle</a> definitions.</p>
+
+<h3 id="restful-get-examples">RESTful Get Examples</h3>
+
+<table class="grid">
+  <thead>
     <tr>
-
-      <td colspan="2">
-        
-          Active
-          
-            as of 2024-10-11
-          
-        
-      </td>
-
+      <th style="text-align: left">GET</th>
+      <th style="text-align: left"> </th>
     </tr>
-  </table>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Search by PHN</td>
+      <td style="text-align: left">https://hd2broker.hcim.ehealth.gov.bc.ca/Patient/?identifier=https%3A%2F%2Ffhir.infoway-inforoute.ca%2FNamingSystem%2Fca-bc-patient-healthcare-id%7C[phn]</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Search by PHN With History</td>
+      <td style="text-align: left">https://hd2broker.hcim.ehealth.gov.bc.ca/Patient/?identifier=https%3A%2F%2Ffhir.infoway-inforoute.ca%2FNamingSystem%2Fca-bc-patient-healthcare-id%7C[phn]</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Search by PHN Return Identifiers Only</td>
+      <td style="text-align: left">https://hd2broker.hcim.ehealth.gov.bc.ca/Patient/?identifier=https%3A%2F%2Ffhir.infoway-inforoute.ca%2FNamingSystem%2Fca-bc-patient-healthcare-id%7C[phn]</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Search by SRI</td>
+      <td style="text-align: left">https://hd2broker.hcim.ehealth.gov.bc.ca/Patient/?identifier=https%3A%2F%2Fhealth.gov.bc.ca%2Ffhir%2FNamingSystem%2Fca-bc-fha-mt-source-patient-id%7C[sri]</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Search by SSRI</td>
+      <td style="text-align: left">https://hd2broker.hcim.ehealth.gov.bc.ca/Patient/?identifier=https%3A%2F%2Fhealth.gov.bc.ca%2Ffhir%2FNamingSystem%2Fca-bc-fha-arh-source-patient-id%7C[ssri]</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Search by Resource ID</td>
+      <td style="text-align: left">https://[baseURL]/Patient/[phn]</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Search by Resource ID with History</td>
+      <td style="text-align: left">https://[baseURL]/Patient/[phn]/_history</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Search by Resource ID Return Identifiers Only</td>
+      <td style="text-align: left">https://[baseURL]/Patient/[phn]/_history</td>
+    </tr>
+  </tbody>
+</table>
 
+<h3 id="restful-find-examples">RESTful Find Examples</h3>
 
-   <!-- insert intro if present -->
-    
-
-
-
-
-
-  <p><b>No examples are currently available for the  Profile.</b></p>
-
-
-<!-- insert notes if present -->
+<table class="grid">
+  <thead>
+    <tr>
+      <th style="text-align: left">FIND</th>
+      <th style="text-align: left"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Search by Name and Address</td>
+      <td style="text-align: left">https://[baseURL]/Patient/?family=[surname]&amp;given=[firstname]&amp;address-line=[addressLine1]</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Search by Name and Phone</td>
+      <td style="text-align: left">https://[baseURL]/Patient/?family=[surname]&amp;given=[firstname]&amp;phone=[phoneNumber]</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Search by Name and Date of Birth</td>
+      <td style="text-align: left">https://[baseURL]/Patient/?family=[surname]&amp;given=[firstname]&amp;birthdate=[birthDate]</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
 
 </div>
-
         </div>  <!-- /inner-wrapper -->
       </div>  <!-- /row -->
     </div>  <!-- /container -->
@@ -276,8 +341,6 @@
 
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
-
-  <script type="text/javascript" src="assets/js/tabs.js"> </script>
 
   <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
