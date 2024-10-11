@@ -9,8 +9,8 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "bc-hcim-capability-statement-client"] ; # 
   fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when acting as a client. I.e. when sending Patient change notifications.</p><p>A Patient change notification is accomplished by using Subscriptions. A client will register a Subscription with the Client Registry. When the Client Registry determines that a change to a Patient has occurred, it will notify all clients that have subscribed to changes of that specific type.</p><p>The outgoing response to the Subscription is a Bundle. The Bundle has two entries: One with MetadataParamtersIn for messageId, messageDate and sender, one for a ClientRegistryPatient (profile of Patient). The following table describes the request and the four parameters; all are mandatory. The Client Registry SHALL use the following IN parameters when sending a change notification.</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>ReviseRequestBundle</td><td>1..1</td><td><a href=\"StructureDefinition-bc-revise-request-bundle.html\">ReviseRequestBundle</a></td><td/><td><div><p>A Bundle with the Patient change.</p></div></td></tr><tr><td>OUT</td><td/><td/><td/><td/><td>Out is a 200 HTTP response code indicating the subscription response was recieved.</td></tr></table></div>"
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CapabilityStatement bc-hcim-capability-statement-client</b></p><a name=\"bc-hcim-capability-statement-client\"> </a><a name=\"hcbc-hcim-capability-statement-client\"> </a><a name=\"bc-hcim-capability-statement-client-en-US\"> </a><h2 id=\"title\">BC HCIM Client Capability Statement</h2><ul><li>Implementation Guide Version: 1.0.0 </li><li>FHIR Version: 4.0.1 </li><li>Supported Formats: <code>json</code></li><li>Supported Patch Formats: </li><li>Published on: 2021-11-18 </li><li>Published by: BC Ministry of Health </li></ul><blockquote class=\"impl-note\"><p><strong>Note to Implementers: FHIR Capabilities</strong></p><p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p></blockquote><h2 id=\"rest\">FHIR RESTful Capabilities</h2><div class=\"panel panel-default\"><div class=\"panel-heading\"><h3 id=\"mode1\" class=\"panel-title\">Mode: <code>client</code></h3></div><div class=\"panel-body\"><div class=\"lead\"><em>Summary of System-wide Interactions</em></div></div></div></div>"
   ] ; # 
   fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/CapabilityStatement/bc-hcim-capability-statement-client"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "1.0.0"] ; # 
@@ -26,7 +26,7 @@
        fhir:value [ fhir:v "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a client. I.e. sending notifications."] ; # 
+  fhir:description [ fhir:v "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a client. I.e. sending notifications - FUTURE work."] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
        fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
@@ -41,24 +41,7 @@
   fhir:fhirVersion [ fhir:v "4.0.1"] ; # 
   fhir:format ( [ fhir:v "json"] ) ; # 
   fhir:rest ( [
-     fhir:mode [ fhir:v "client" ] ;
-     fhir:resource ( [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/capabilitystatement-subscriptiontopic-canonical"^^xsd:anyURI ] ;
-         fhir:value [
-           fhir:v "http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution"^^xsd:anyURI ;
-           fhir:link <http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution>
-         ]
-       ] ) ;
-       fhir:type [ fhir:v "Subscription" ] ;
-       fhir:interaction ( [
-         fhir:code [ fhir:v "create" ]
-       ] [
-         fhir:code [ fhir:v "update" ]
-       ] [
-         fhir:code [ fhir:v "delete" ]
-       ] )
-     ] )
+     fhir:mode [ fhir:v "client" ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------
