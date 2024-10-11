@@ -210,30 +210,7 @@ Description:  "A Bundle that is used in the Client Registry response to Revise P
 // UPDATE
 ////////////////////////////////////
 
-/**  Profile: PartialUpdateRequestBundle
-Parent: Bundle
-Id: bc-update-request-bundle
-Description:  "A Bundle that is used in the Client Registry for Patient update requests."
-* ^status = #draft
-* obeys invariant-update-1
-* type 1..1 MS
-* type = #collection (exactly)
-* entry 2..2
-* entry.resource 1..1 MS
-* entry.fullUrl 1..1 MS
-* entry.search 0..1
-* entry.request 0..1 MS
-* entry.response 0..1
-* entry ^slicing.discriminator.type = #type
-* entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.rules = #open
-* entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is responding to a add request."
-* entry contains parameters 1..1 MS and patient 1..1 MS
-* entry[parameters].resource only MetadataParametersIn
-* entry[parameters] ^short = "Metadata in parameters"
-* entry[patient].resource only PartialPatientUpdate
-* entry[patient] ^short = "Updated Patient." */
-
+/**  Profile: PartialUpdateRequestBundle - Not going to be implemented*/
 
 
 ////////////////////////////////////

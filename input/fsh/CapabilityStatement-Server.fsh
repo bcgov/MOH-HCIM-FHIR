@@ -16,11 +16,6 @@ Get Demographics - used when a user would like to find a Patient and has an iden
 <li>
 Revise Patient - used when a user is communicating a change or request for a new PHN to the Client Registry.
 </li>
-<!--
-<li>
-Update Patient - used when a user is communicating a change to the Client Registry and isn't capable of sending in the full Patient resource.  E.g. all Patient attributes are not locally persisted.
-</li>
--->
 <li>
 Merge Patient - used when a user is communicating that an individual has multiple Patient records and which record should survive and which record(s) should be marked as non-surviving.
 </li>
@@ -43,7 +38,7 @@ Add Patient - used for newborns and 'force create' interactions
 </ul>
 
 <p>
-RESTful interactions of any type, beyond the Operations listed above, are not supported.  Client Registry users SHALL use only the above FHIR Operations.
+GET RESTful interactions (Find Candidate and Get Demographics) are supported. However for this release, Client Registry users SHALL use only the above FHIR Operations for any CREATE/POST and UPDATE/PUT operation.
 </p>
 
 <h3>General Rules IN</h3>
@@ -360,10 +355,6 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 			<b>Documentation</b>
 		</td>
 	</tr>
-
-
-
-
         <tr>
                 <td>IN</td>
                 <td>Merge Request Bundle</td>
@@ -399,7 +390,7 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 * name = "HCIMServerCapabilityStatement"
 * title = "BC HCIM Server Capability Statement"
 * status = #active
-* date = "2021-11-18"
+* date = "2024-10-11"
 * publisher = "BC Ministry of Health"
 * description = "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a server."
 * kind = #capability
@@ -415,8 +406,6 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 * rest[0].resource[0].operation[=].definition = Canonical(GetDemographics)
 * rest[0].resource[0].operation[+].name = "RevisePatient"
 * rest[0].resource[0].operation[=].definition = Canonical(RevisePatient)
-/* rest[0].resource[0].operation[+].name = "PartialUpdatePatient"
-* rest[0].resource[0].operation[=].definition = Canonical(PartialUpdatePatient)*/
 * rest[0].resource[0].operation[+].name = "AddPatient"
 * rest[0].resource[0].operation[=].definition = Canonical(AddPatient)
 * rest[0].resource[0].operation[+].name = "MergePatient"
@@ -429,21 +418,7 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 * rest[0].resource[0].operation[+].name = "RevisePatient.Async"
 * rest[0].resource[0].operation[=].definition = Canonical(RevisePatient)
 * rest[0].resource[0].operation[=].documentation = "Although this is an independent Operation the definition is the same as the [RevisePatient](OperationDefinition-bc-patient-revise.html)"
-/* rest[0].resource[0].operation[+].name = "PartialUpdatePatient.Async"
-* rest[0].resource[0].operation[=].definition = Canonical(PartialUpdatePatient)
-* rest[0].resource[0].operation[=].documentation = "Although this is an independent Operation the definition is the same as the [UpdatePatient](OperationDefinition-bc-patient-update.html)" */
 * rest[0].resource[0].operation[+].name = "MergePatient.Async"
 * rest[0].resource[0].operation[=].definition = Canonical(MergePatient)
 * rest[0].resource[0].operation[=].documentation = "Although this is an independent Operation the definition is the same as the [MergePatient](OperationDefinition-bc-patient-merge.html)"
 
-* rest[0].resource[1]
-  * extension[0]
-    * url = "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/capabilitystatement-subscriptiontopic-canonical"
-    * valueCanonical = "http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution"
-  * type = #Subscription
-  * interaction[0]
-    * code = #create
-  * interaction[1]
-    * code = #update
-  * interaction[2]
-    * code = #delete

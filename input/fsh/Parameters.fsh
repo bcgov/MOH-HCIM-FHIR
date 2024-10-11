@@ -13,13 +13,6 @@ Description: "Parameters profile for BC meta data - incoming messages. This prof
 * parameter[messageId].valueString 1..1 MS
 * parameter[messageId].resource 0..0
 * parameter[messageId].part 0..0
-// * parameter[messageDateTime].name MS
-// * parameter[messageDateTime].name = "messageDateTime"
-// * parameter[messageDateTime].valueDateTime 1..1 MS
-// * parameter[messageDateTime].value[x] only dateTime
-// * parameter[messageDateTime].resource 0..0
-// * parameter[messageDateTime].part 0..0
-// * parameter[messageDateTime] ^short = "The messageDateTime is deprecated. To be removed in future releases."
 * parameter[identifiersOnly].name MS
 * parameter[identifiersOnly].name = "identifiersOnly"
 * parameter[identifiersOnly].value[x] only boolean
@@ -119,12 +112,6 @@ Description: "Parameters profile for BC meta data when a subscription response i
 * parameter[messageId].valueString 1..1 MS
 * parameter[messageId].resource 0..0
 * parameter[messageId].part 0..0
-// * parameter[messageDateTime].name MS
-// * parameter[messageDateTime].name = "messageDateTime"
-// * parameter[messageDateTime].valueDateTime 1..1 MS
-// * parameter[messageDateTime].value[x] only dateTime
-// * parameter[messageDateTime].resource 0..0
-// * parameter[messageDateTime].part 0..0
 * parameter[eventType]
   * name MS
   * name = "eventType"
