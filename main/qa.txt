@@ -1,9 +1,9 @@
 BCHealthClientIdentityManagement : Validation Results
 =========================================
 
-err = 4, warn = 11, info = 3
-IG Publisher Version: 1.6.28
-Generated Mon Oct 07 22:36:08 UTC 2024. FHIR version 4.0.1 for fhir.ca-bc.client#1.0.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
+err = 4, warn = 12, info = 3
+IG Publisher Version: 1.6.30
+Generated Fri Oct 11 20:55:30 UTC 2024. FHIR version 4.0.1 for fhir.ca-bc.client#1.0.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
  Build Errors : 0 / 4 / 0
  /github/workspace/fsh-generated/resources/Bundle-AddNewbornByMumsPHN-Request : 0 / 0 / 9
  /github/workspace/fsh-generated/resources/Bundle-AddPatient-Request : 0 / 0 / 10
@@ -36,7 +36,7 @@ Generated Mon Oct 07 22:36:08 UTC 2024. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/CodeSystem-bc-client-registry-patient-change-notification-events : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-bc-client-registry-update-patient-operation-code-system : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-bc-identifier-status-code-system : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/CodeSystem-bc-operation-outcome-details-code-system : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-bc-operation-outcome-details-code-system : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/ImplementationGuide-fhir.ca-bc.client : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-add : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/OperationDefinition-bc-patient-find-candidates : 0 / 0 / 1
@@ -144,6 +144,7 @@ ERROR: Bundle/FindNewbornByMumsPHN-Response: Bundle.entry[6].resource/*RelatedPe
 == fsh-generated/resources/CodeSystem-bc-client-registry-update-patient-operation-code-system.json ==
 == fsh-generated/resources/CodeSystem-bc-identifier-status-code-system.json ==
 == fsh-generated/resources/CodeSystem-bc-operation-outcome-details-code-system.json ==
+WARNING: CodeSystem/bc-operation-outcome-details-code-system: CodeSystem: When a CodeSystem has content = 'complete', it doesnt make sense for there to be no concepts defined
 == fsh-generated/resources/ImplementationGuide-fhir.ca-bc.client.json ==
 ERROR: ImplementationGuide/fhir.ca-bc.client: ImplementationGuide.dependsOn[2].uri: Canonical URL 'http://hl7.org/fhir/ca/baseline/ImplementationGuide/hl7.fhir.ca.baseline' does not resolve
 == fsh-generated/resources/OperationDefinition-bc-patient-add.json ==
