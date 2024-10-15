@@ -10,7 +10,7 @@
   "name" : "BCHealthClientIdentityManagement",
   "title" : "BC Client Registry FHIR Implementation Guide",
   "status" : "active",
-  "date" : "2024-10-11T22:13:26+00:00",
+  "date" : "2024-10-15T18:43:47+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",
@@ -959,11 +959,6 @@
       "id" : "ResponseExamples",
       "name" : "Response Examples",
       "description" : "A set of operation response examples"
-    },
-    {
-      "id" : "Subscriptions",
-      "name" : "Supporting Profiles - Subscription / Notification",
-      "description" : "Artifacts that support Subscription Operations"
     }],
     "resource" : [{
       "extension" : [{
@@ -1155,42 +1150,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/bc-client-registry-patient-change-notification-events"
-      },
-      "name" : "BC Client Registry Patient Change Notification Events Code System",
-      "description" : "Codes used to indicate that type of patient changes that a subscriber is interested in receiving.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/bc-client-registry-patient-change-notification-events-value-set"
-      },
-      "name" : "BC Client Registry Patient Change Notification Events Value Set",
-      "description" : "Codes used to indicate that type of patient changes that a subscriber is interested in receiving.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/bc-client-registry-update-patient-operation-code-system"
-      },
-      "name" : "BC Code System Of Allowed Update Operations",
-      "description" : "BC Code System of allowed update patient operations.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -1368,18 +1327,6 @@
       },
       "name" : "BC SourceID and UserID",
       "description" : "Identifiers for the source and user that modified the specific element that this extension is on.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/bc-client-registry-update-patient-operation-value-set"
-      },
-      "name" : "BC Update Patient Operation Value Set",
-      "description" : "A Value Set of allowed update operations.",
       "exampleBoolean" : false
     },
     {
@@ -1591,32 +1538,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "SubscriptionTopic"
-      }],
-      "reference" : {
-        "reference" : "SubscriptionTopic/HCIMPatientChangeDistributionTopic"
-      },
-      "name" : "HCIM Patient Change Distributions Topic",
-      "description" : "This is the subscription topic used for subscribing to different change distributions.",
-      "exampleBoolean" : false,
-      "groupingId" : "Subscriptions"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/HCIMPatientChangeSubscription"
-      },
-      "name" : "HCIMPatientChangeSubscription",
-      "description" : "Profile on subscription for HCIM Patient Changes",
-      "exampleBoolean" : false,
-      "groupingId" : "Subscriptions"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "OperationDefinition"
       }],
       "reference" : {
@@ -1773,19 +1694,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-metadata-parameters-subscription"
-      },
-      "name" : "MetadataParametersSubscription",
-      "description" : "Parameters profile for BC meta data when a subscription response is sent.",
-      "exampleBoolean" : false,
-      "groupingId" : "Subscriptions"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "OperationOutcome"
       }],
       "reference" : {
@@ -1830,19 +1738,6 @@
       "name" : "Parameters-MergePatient-TwoNonSurvivors-Example",
       "description" : "Example of $MergePatient operation.",
       "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationDefinition"
-      }],
-      "reference" : {
-        "reference" : "OperationDefinition/bc-patient-notification"
-      },
-      "name" : "Patient Notification",
-      "description" : "This operation is used notify a user that a patient's record has changed.",
-      "exampleBoolean" : false,
-      "groupingId" : "Operations"
     },
     {
       "extension" : [{
@@ -1974,18 +1869,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Subscription"
-      }],
-      "reference" : {
-        "reference" : "Subscription/SampleCompositeSubscriptionRequest"
-      },
-      "name" : "SampleCompositeSubscriptionRequest",
-      "description" : "Sample subscription request for Composite View events",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/HCIMPatientChangeSubscription"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -1995,19 +1878,6 @@
       "description" : "A Bundle that is used in the Client Registry response to Find Candidates and Get Demographics queries.",
       "exampleBoolean" : false,
       "groupingId" : "Bundles"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-subscription-notification-bundle"
-      },
-      "name" : "SubscriptionNotificationBundle",
-      "description" : "A Bundle that is used in the Client Registry when sending subscription notifications.",
-      "exampleBoolean" : false,
-      "groupingId" : "Subscriptions"
     }],
     "page" : {
       "extension" : [{
@@ -2051,15 +1921,6 @@
         }],
         "nameUrl" : "reviseAndMerge.html",
         "title" : "Add, Revise and Merge Patient",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "distributions.html"
-        }],
-        "nameUrl" : "distributions.html",
-        "title" : "Patient Change Notification",
         "generation" : "markdown"
       },
       {

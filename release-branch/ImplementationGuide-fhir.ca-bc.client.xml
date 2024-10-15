@@ -11,7 +11,7 @@
   <name value="BCHealthClientIdentityManagement"/>
   <title value="BC Client Registry FHIR Implementation Guide"/>
   <status value="active"/>
-  <date value="2024-10-11T22:13:26+00:00"/>
+  <date value="2024-10-15T18:43:47+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -713,10 +713,6 @@
       <name value="Response Examples"/>
       <description value="A set of operation response examples"/>
     </grouping>
-    <grouping id="Subscriptions">
-      <name value="Supporting Profiles - Subscription / Notification"/>
-      <description value="Artifacts that support Subscription Operations"/>
-    </grouping>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Bundle"/>
@@ -891,39 +887,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/bc-client-registry-patient-change-notification-events"/>
-      </reference>
-      <name value="BC Client Registry Patient Change Notification Events Code System"/>
-      <description value="Codes used to indicate that type of patient changes that a subscriber is interested in receiving."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/bc-client-registry-patient-change-notification-events-value-set"/>
-      </reference>
-      <name value="BC Client Registry Patient Change Notification Events Value Set"/>
-      <description value="Codes used to indicate that type of patient changes that a subscriber is interested in receiving."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/bc-client-registry-update-patient-operation-code-system"/>
-      </reference>
-      <name value="BC Code System Of Allowed Update Operations"/>
-      <description value="BC Code System of allowed update patient operations."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -1087,17 +1050,6 @@
       </reference>
       <name value="BC SourceID and UserID"/>
       <description value="Identifiers for the source and user that modified the specific element that this extension is on."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/bc-client-registry-update-patient-operation-value-set"/>
-      </reference>
-      <name value="BC Update Patient Operation Value Set"/>
-      <description value="A Value Set of allowed update operations."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1292,30 +1244,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="SubscriptionTopic"/>
-      </extension>
-      <reference>
-        <reference value="SubscriptionTopic/HCIMPatientChangeDistributionTopic"/>
-      </reference>
-      <name value="HCIM Patient Change Distributions Topic"/>
-      <description value="This is the subscription topic used for subscribing to different change distributions."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Subscriptions"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/HCIMPatientChangeSubscription"/>
-      </reference>
-      <name value="HCIMPatientChangeSubscription"/>
-      <description value="Profile on subscription for HCIM Patient Changes"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Subscriptions"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="OperationDefinition"/>
       </extension>
       <reference>
@@ -1460,18 +1388,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/bc-metadata-parameters-subscription"/>
-      </reference>
-      <name value="MetadataParametersSubscription"/>
-      <description value="Parameters profile for BC meta data when a subscription response is sent."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Subscriptions"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="OperationOutcome"/>
       </extension>
       <reference>
@@ -1513,18 +1429,6 @@
       <name value="Parameters-MergePatient-TwoNonSurvivors-Example"/>
       <description value="Example of $MergePatient operation."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="OperationDefinition"/>
-      </extension>
-      <reference>
-        <reference value="OperationDefinition/bc-patient-notification"/>
-      </reference>
-      <name value="Patient Notification"/>
-      <description value="This operation is used notify a user that a patient's record has changed."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Operations"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1645,17 +1549,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Subscription"/>
-      </extension>
-      <reference>
-        <reference value="Subscription/SampleCompositeSubscriptionRequest"/>
-      </reference>
-      <name value="SampleCompositeSubscriptionRequest"/>
-      <description value="Sample subscription request for Composite View events"/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/HCIMPatientChangeSubscription"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -1665,18 +1558,6 @@
       <description value="A Bundle that is used in the Client Registry response to Find Candidates and Get Demographics queries."/>
       <exampleBoolean value="false"/>
       <groupingId value="Bundles"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/bc-subscription-notification-bundle"/>
-      </reference>
-      <name value="SubscriptionNotificationBundle"/>
-      <description value="A Bundle that is used in the Client Registry when sending subscription notifications."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Subscriptions"/>
     </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -1715,14 +1596,6 @@
         </extension>
         <nameUrl value="reviseAndMerge.html"/>
         <title value="Add, Revise and Merge Patient"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="distributions.html"/>
-        </extension>
-        <nameUrl value="distributions.html"/>
-        <title value="Patient Change Notification"/>
         <generation value="markdown"/>
       </page>
       <page>
