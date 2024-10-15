@@ -24,7 +24,6 @@ menu:
      Summary: design.html
      Search Patient Operations: search.html
      Add, Revise, Update And Merge Patient: reviseAndMerge.html
-     Patient Change Notifications: distributions.html
      Identifiers: identifiers.html
      Data Absent: absentData.html
      RESTful Services: restful.html
@@ -45,8 +44,6 @@ pages:
     title: Search Patient Operations
   reviseAndMerge.md:
     title: Add, Revise and Merge Patient
-  distributions.md:
-    title: Patient Change Notification
   identifiers.md:
     title: Identifiers
   absentData.md:
@@ -67,7 +64,6 @@ pages:
     title: Credits
 
 
-
 groups:
    CapabilityStatement:
       name: Capability Statement
@@ -83,9 +79,7 @@ groups:
          - OperationDefinition/bc-patient-get-demographics
          - OperationDefinition/bc-patient-add
          - OperationDefinition/bc-patient-revise
-         #- OperationDefinition/bc-patient-update
          - OperationDefinition/bc-patient-merge
-         - OperationDefinition/bc-patient-notification
          - OperationDefinition/bc-patient-history
    PatientProfile:
       name: Patient Profile
@@ -93,8 +87,6 @@ groups:
       resources:
          - StructureDefinition/bc-patient
          - StructureDefinition/bc-merge-patient
-         #- StructureDefinition/bc-update-patient
-         #- StructureDefinition/bc-patient-by-example
    Bundles:
       name: Supporting Profiles - Bundles
       description: Bundles that support Patient and Client Registry Operations - Request and Response
@@ -109,7 +101,6 @@ groups:
          - StructureDefinition/bc-revise-request-bundle 
          - StructureDefinition/bc-revise-response-bundle 
          - StructureDefinition/bc-async-ack-response-bundle
-         #- StructureDefinition/bc-update-request-bundle 
    SupportingProfiles:
       name: Supporting Profiles
       description: Artifacts associated with resources that support Patient and Client Registry Operations
@@ -131,13 +122,6 @@ groups:
          - Bundle/Merge-SSRI-Request
          - Bundle/Merge-WithPayload-Request
          - Bundle/Revise-withMaxData-Request
-         #- Bundle/Bundle-FindCandidatesByExample-Request-Example
-         #- Bundle/Bundle-FindCandidates-UsingMomsPHN-Request-Example
-         #- Bundle/Bundle-GetDemographics-Request-Example
-         #- Bundle/Bundle-AddPatient-Request-Example
-         #- Bundle/Bundle-MergePatient-Request-Example
-         #- Bundle/Bundle-RevisePatient-Request-Example
-         #- Bundle/Bundle-AddPatient-Newborn-Request-Example
    ResponseExamples:
       name: Response Examples
       description: A set of operation response examples
@@ -152,23 +136,6 @@ groups:
          - Bundle/Merge-WithPayload-Response
          - Bundle/Revise-Response
          - Bundle/Revise-Async-ACK
-
-         #- Bundle/Bundle-FindCandidates-Response-Example
-         #- Bundle/Bundle-FindCandidates-Response-MomsPHN-Example
-         #- Bundle/Bundle-GetDemographics-Response-Example
-         #- Bundle/Bundle-GetDemographicsWithEligibility-Response-Example
-         #- Bundle/Bundle-AddPatient-Response-Example
-         #- Bundle/Bundle-RevisePatient-Response-Example
-         #- Bundle/Bundle-UpdatePatient-Response-Example
-         #- Bundle/Bundle-MergePatient-Response-Example*/
-   Subscriptions:
-      name: Supporting Profiles - Subscription / Notification
-      description: Artifacts that support Subscription Operations
-      resources: 
-         - StructureDefinition/bc-subscription-notification-bundle
-         - StructureDefinition/HCIMPatientChangeSubscription
-         - StructureDefinition/bc-metadata-parameters-subscription
-         - SubscriptionTopic/HCIMPatientChangeDistributionTopic
 
 parameters:
   special-url:

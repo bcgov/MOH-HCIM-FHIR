@@ -38,7 +38,7 @@ Add Patient - used for newborns and 'force create' interactions
 </ul>
 
 <p>
-GET RESTful interactions (Find Candidate and Get Demographics) are supported. However for this release, Client Registry users SHALL use only the above FHIR Operations for any CREATE/POST and UPDATE/PUT operation.
+GET RESTful interactions (Find Candidate and Get Demographics) are supported. However for this release, Client Registry users SHALL use only the above FHIR Operations for any CREATE/POST and UPDATE/PUT operations.
 </p>
 
 <h3>General Rules IN</h3>

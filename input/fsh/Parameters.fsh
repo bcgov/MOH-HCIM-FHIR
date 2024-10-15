@@ -97,29 +97,8 @@ Description: "Parameters profile for BC meta data - async messages."
 * parameter[requestParameters].value[x] 0..0
 * parameter[requestParameters].part 0..0
 
-Profile: MetadataParametersSubscription
-Parent: Parameters
-Id: bc-metadata-parameters-subscription
-Description: "Parameters profile for BC meta data when a subscription response is sent."
-* parameter ^slicing.discriminator.type = #value
-* parameter ^slicing.discriminator.path = "name"
-* parameter ^slicing.rules = #open
-* parameter ^slicing.description = "The specific parameters to specify BC Subscription Metadata."
-* parameter contains messageId 1..1 MS and eventType 1..1 MS
-* parameter[messageId].name MS
-* parameter[messageId].name = "messageId"
-* parameter[messageId].value[x] only string
-* parameter[messageId].valueString 1..1 MS
-* parameter[messageId].resource 0..0
-* parameter[messageId].part 0..0
-* parameter[eventType]
-  * name MS
-  * name = "eventType"
-  * value[x] only CodeableConcept
-  * valueCodeableConcept 1..1 MS
-  * valueCodeableConcept from PatientChangeNotificationEventsValueSet
-  * resource 0..0
-  * part 0..0
+/** Profile: MetadataParametersSubscription - Future release */
+
   
 
 

@@ -1,5 +1,5 @@
 Alias: $bc-client-registry-address-validation-code-system = https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-address-validation-code-system
-Alias: $bc-client-registry-update-patient-operation-code-system = https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-update-patient-operation-code-system
+//Alias: $bc-client-registry-update-patient-operation-code-system = https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-update-patient-operation-code-system
 Alias: $contact-point-system = http://hl7.org/fhir/contact-point-system
 Alias: $contact-point-use = http://hl7.org/fhir/contact-point-use
 Alias: $bc-identifier-status-code-system = https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-identifier-status-code-system

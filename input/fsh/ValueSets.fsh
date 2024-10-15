@@ -16,7 +16,7 @@ Description: "BC Merge Status value set used to describe the merge status of a P
 * ^experimental = false
 * codes from system MergeStatusCS
 
-CodeSystem: UpdatePatientOperationCS
+/**CodeSystem: UpdatePatientOperationCS
 Id: bc-client-registry-update-patient-operation-code-system
 Title: "BC Code System Of Allowed Update Operations"
 Description: "BC Code System of allowed update patient operations."
@@ -33,7 +33,7 @@ Id: bc-client-registry-update-patient-operation-value-set
 Description: "A Value Set of allowed update operations."
 * ^url = "https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-client-registry-update-patient-operation-value-set"
 * ^experimental = false
-* codes from system UpdatePatientOperationCS
+* codes from system UpdatePatientOperationCS*/
 
 CodeSystem: AddressValidationCS
 Id: bc-client-registry-address-validation-code-system
@@ -115,20 +115,4 @@ Id: bc-contact-point-system-value-set
 * exclude http://hl7.org/fhir/contact-point-system#sms
 * exclude http://hl7.org/fhir/contact-point-system#other
 
-//ValueSet: AddressUse
-//Title: "BC Address Use Value Set"
-//Description: "BC Address Use value set, sliced to meet BC constraints."
-//Id: bc-address-use-value-set
-//* include codes from valueset AddressUse
-//* exclude http://hl7.org/fhir/address-use#work
-//* exclude http://hl7.org/fhir/address-use#temp
-//* exclude http://hl7.org/fhir/address-use#old
-//* exclude http://hl7.org/fhir/address-use#billing
-
-//ValueSet: AddressTypeVS
-//Title: "BC Address Type Value Set"
-//Description: "BC Address Type value set, sliced to meet BC constraints."
-//Id: bc-address-type-value-set
-//* include codes from valueset AddressType
-//* exclude http://hl7.org/fhir/address-type#both
 

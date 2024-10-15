@@ -61,7 +61,6 @@ bc-business-period-extension | A Period extension for the business effective dat
 bc-validation-status-extension | A code that represents the address validation status.  This will be part of every Patient.address
 bc-death-verified-flag-extension | An extension that indicates a verified death.
 bc-*-history-extension | The set of history extensions are necessary to add historical records to the Patient resource such as gender.
-bc-gender-identity-extension | An extension that houses the gender identity codeable concept.
 bc-sourceId-extension | The source identifier code.
 bc-identifier-status-extension | The status of an identifier, e.g. active, merged.
 
@@ -112,7 +111,6 @@ https://..../Patient/$AddPatient |
 https://..../Patient/$AddPatient.Async |
 https://..../Patient/$MergePatient |
 https://..../Patient/$MergePatient.Async |
-https://..../Patient/$PatientNotification |
 
 The Async suffix informs the Client Registry FHIR server to perform the operation in an asynchronous manner.  The profiles and examples used in the Async versions of the Operations are identical to the synchronous Operations.
 
@@ -132,7 +130,6 @@ $AddPatient | [Add Patient request profile](StructureDefinition-bc-add-request-b
 $AddPatient.Async | [Add Patient request profile](StructureDefinition-bc-add-request-bundle.html) | [Add Patient response profile](StructureDefinition-bc-add-response-bundle.html) |
 $MergePatient | [Merge Patient request profile](StructureDefinition-bc-merge-request-bundle.html) | [Merge Patient response profile](StructureDefinition-bc-merge-response-bundle.html) |
 $MergePatient.Async | [Merge Patient request profile](StructureDefinition-bc-merge-request-bundle.html) | [Merge Patient response profile](StructureDefinition-bc-merge-response-bundle.html) |
-$PatientNotification |  [Patient Notification request profile](StructureDefinition-bc-revise-request-bundle.html) |  N/A  |
 {:.grid}
 
 ##### Responses
@@ -189,7 +186,6 @@ The table below is only showing the standard parameters included in each Bundle;
 Parameter Name|Parameter Value|Comments|IN, OUT, both
 :---|:---|:---|:---
 message id|parameter.value[string]|Message (unique) id|both
-create time|parameter.value[dateTime]|Creation date of message|both
 request message id|parameter.value[string]|Message (unique) id from request message|OUT
 sender|parameter.value[Identifier]|Message sender|OUT
 enterer|parameter.value[Identifier]|UserId for message|OUT

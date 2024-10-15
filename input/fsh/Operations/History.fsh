@@ -13,7 +13,6 @@ Usage: #definition
 * system = false
 * type = false
 * instance = true
-//* inputProfile = Canonical(AddRequestBundle)
 * outputProfile = Canonical(Bundle)
 
 * parameter[0].name = #return
@@ -22,12 +21,4 @@ Usage: #definition
 * parameter[0].max = "1"
 * parameter[0].documentation = "The history operation response Bundle."
 * parameter[0].type = #Bundle
-
-//* parameter[1].name = #AddResponseBundle
-//* parameter[1].use = #out
-//* parameter[1].min = 1
-//* parameter[1].max = "1"
-//* parameter[1].documentation = "The AddPatient operation response Bundle."
-//* parameter[1].type = #Bundle
-
 

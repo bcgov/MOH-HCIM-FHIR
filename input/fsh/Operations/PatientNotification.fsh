@@ -1,4 +1,4 @@
-Instance: PatientNotification
+/**nstance: PatientNotification
 InstanceOf: OperationDefinition
 Description: "This operation is used notify a user that a patient's record has changed."
 Usage: #definition
@@ -14,11 +14,10 @@ Usage: #definition
 * type = true
 * instance = false
 * inputProfile = Canonical(ReviseRequestBundle)
-
 * parameter[0].name = #ReviseRequestBundle
 * parameter[0].use = #in
 * parameter[0].min = 1
 * parameter[0].max = "1"
 * parameter[0].documentation = "The request bundle."
-* parameter[0].type = #Bundle
+* parameter[0].type = #Bundle */
 
