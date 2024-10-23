@@ -68,7 +68,7 @@ Search by SRI|https://hd2broker.hcim.ehealth.gov.bc.ca/Patient/?identifier=https
 Search by SSRI|https://hd2broker.hcim.ehealth.gov.bc.ca/Patient/?identifier=https%3A%2F%2Fhealth.gov.bc.ca%2Ffhir%2FNamingSystem%2Fca-bc-fha-arh-source-patient-id%7C[ssri]
 Search by Resource ID|https://[baseURL]/Patient/[phn]
 Search by Resource ID with History|https://[baseURL]/Patient/[phn]/_history
-Search by Resource ID Return Identifiers Only|https://[baseURL]/Patient/[phn]/_history
+Search by Resource ID Return Identifiers Only|https://[baseURL]/Patient/[phn]/_identifiersOnly
 {:.grid}
 
 ### RESTful Find Examples
