@@ -7,7 +7,25 @@ The FHIR artifacts have been created according to the current understood expecta
 
 Although this guide is complete the implementation of the new FHIR Operations will be done in stages.  Priority to the most desired services, as indicated by Client Registry stakeholders, will be implemented first.  Currently the search services are highest priority and will be completed first.
 
-### Release 4.0 - 1 - HCIM release 7.6
+### Current and Past
+
+#### Current - HCIM Release 7.7.2 - FHIR 4.0-1
+
+This release may include the following Operations
+
+Operation |
+:--- |
+[Add](OperationDefinition-bc-patient-add.html) |
+[MergePatient](OperationDefinition-bc-patient-merge.html) |
+[RevisePatient](OperationDefinition-bc-patient-revise.html) |
+{:.grid}
+
+Restful |
+:--- |
+[Get Patient by ID](StructureDefinition-bc-patient.html) |
+{:.grid}
+
+#### Past - HCIM release 7.6 - FHIR 4.0-1 
 
 This section describes everything that is available in this release. Currently the search services are highest priority and will be completed first.
 
@@ -29,17 +47,6 @@ Restful |
 
 ### Future
 
-#### HCIM release 7.7 (Synchronous)
-
-This release may include the following Operations
-
-Operation |
-:--- |
-[Add](OperationDefinition-bc-patient-add.html) |
-[MergePatient](OperationDefinition-bc-patient-merge.html) |
-[RevisePatient](OperationDefinition-bc-patient-revise.html) |
-{:.grid}
-
 #### HCIM release 7.8 (Asynchronous)
 
 This release might include an asynchronous way to perform the Add, Merge and Update Operations
@@ -58,8 +65,8 @@ This release might include the following Operations and supporting profiles
 
 Operation |
 :--- |
-[Distribution](OperationDefinition-bc-patient-find-candidates.html) |
-[Subscription Bundle](StructureDefinition-bc-subscription-notification-bundle.html) |
+Distribution |
+Subscription Bundle |
 {:.grid}
 
 
