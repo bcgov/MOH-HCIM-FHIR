@@ -10,7 +10,7 @@
   "name" : "BCHealthClientIdentityManagement",
   "title" : "BC Client Registry FHIR Implementation Guide",
   "status" : "active",
-  "date" : "2024-12-09T22:59:04+00:00",
+  "date" : "2024-12-09T23:04:44+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",
@@ -959,6 +959,11 @@
       "id" : "ResponseExamples",
       "name" : "Response Examples",
       "description" : "A set of operation response examples"
+    },
+    {
+      "id" : "RestfulExamples",
+      "name" : "RESTful Examples",
+      "description" : "A set of RESTful request examples"
     }],
     "resource" : [{
       "extension" : [{
@@ -1447,6 +1452,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/Force-Create-Request"
+      },
+      "name" : "Force-Create-Request",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient",
+      "groupingId" : "RestfulExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "OperationDefinition"
       }],
       "reference" : {
@@ -1681,6 +1698,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/Newborn-Request"
+      },
+      "name" : "Newborn-Request",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient",
+      "groupingId" : "RestfulExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "OperationOutcome"
       }],
       "reference" : {
@@ -1800,6 +1829,30 @@
       "description" : "Example of an Asynchronous $Revise ACK message.",
       "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-async-ack-response-bundle",
       "groupingId" : "ResponseExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/Revise-Request"
+      },
+      "name" : "Revise-Request",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient",
+      "groupingId" : "RestfulExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/Revise-Request-No-SRI"
+      },
+      "name" : "Revise-Request-No-SRI",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient",
+      "groupingId" : "RestfulExamples"
     },
     {
       "extension" : [{

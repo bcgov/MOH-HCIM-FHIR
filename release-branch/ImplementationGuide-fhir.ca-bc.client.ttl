@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "BCHealthClientIdentityManagement"] ; # 
   fhir:title [ fhir:v "BC Client Registry FHIR Implementation Guide"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-12-09T22:59:04+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-09T23:04:44+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "BC Ministry of Health"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "BC Ministry of Health" ] ;
@@ -813,6 +813,10 @@
        fhir:id [ fhir:v "ResponseExamples" ] ;
        fhir:name [ fhir:v "Response Examples" ] ;
        fhir:description [ fhir:v "A set of operation response examples" ]
+     ] [
+       fhir:id [ fhir:v "RestfulExamples" ] ;
+       fhir:name [ fhir:v "RESTful Examples" ] ;
+       fhir:description [ fhir:v "A set of RESTful request examples" ]
      ] ) ;
      fhir:resource ( [
        fhir:extension ( [
@@ -1328,6 +1332,21 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/Patient/Force-Create-Request> ;
+         fhir:reference [ fhir:v "Patient/Force-Create-Request" ]
+       ] ;
+       fhir:name [ fhir:v "Force-Create-Request" ] ;
+       fhir:example [
+         fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"^^xsd:anyURI ;
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+       ] ;
+       fhir:groupingId [ fhir:v "RestfulExamples" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "OperationDefinition" ]
        ] ) ;
        fhir:reference [
@@ -1592,6 +1611,21 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/Patient/Newborn-Request> ;
+         fhir:reference [ fhir:v "Patient/Newborn-Request" ]
+       ] ;
+       fhir:name [ fhir:v "Newborn-Request" ] ;
+       fhir:example [
+         fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"^^xsd:anyURI ;
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+       ] ;
+       fhir:groupingId [ fhir:v "RestfulExamples" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "OperationOutcome" ]
        ] ) ;
        fhir:reference [
@@ -1727,6 +1761,36 @@
          fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-async-ack-response-bundle>
        ] ;
        fhir:groupingId [ fhir:v "ResponseExamples" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/Patient/Revise-Request> ;
+         fhir:reference [ fhir:v "Patient/Revise-Request" ]
+       ] ;
+       fhir:name [ fhir:v "Revise-Request" ] ;
+       fhir:example [
+         fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"^^xsd:anyURI ;
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+       ] ;
+       fhir:groupingId [ fhir:v "RestfulExamples" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/Patient/Revise-Request-No-SRI> ;
+         fhir:reference [ fhir:v "Patient/Revise-Request-No-SRI" ]
+       ] ;
+       fhir:name [ fhir:v "Revise-Request-No-SRI" ] ;
+       fhir:example [
+         fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"^^xsd:anyURI ;
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+       ] ;
+       fhir:groupingId [ fhir:v "RestfulExamples" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;

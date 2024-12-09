@@ -1,10 +1,10 @@
 BCHealthClientIdentityManagement : Validation Results
 =========================================
 
-err = 4, warn = 9, info = 6
+err = 9, warn = 13, info = 6
 $--
 Generated $--. FHIR version $-- for fhir.ca-bc.client#$-- (canonical = http://hlth.gov.bc.ca/fhir/client)
- Build Errors : 1 / 4 / 0
+ Build Errors : 1 / 8 / 0
  /github/workspace/fsh-generated/resources/Bundle-AddNewbornByMumsPHN-Request : 0 / 0 / 9
  /github/workspace/fsh-generated/resources/Bundle-AddPatient-Request : 0 / 0 / 10
  /github/workspace/fsh-generated/resources/Bundle-AddPatient-Response : 0 / 1 / 10
@@ -43,8 +43,12 @@ Generated $--. FHIR version $-- for fhir.ca-bc.client#$-- (canonical = http://hl
  /github/workspace/fsh-generated/resources/OperationOutcome-OperationOutcome-Search-Example : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/Parameters-Parameters-MergePatient-Response-Example : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Parameters-Parameters-MergePatient-TwoNonSurvivors-Example : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Patient-Force-Create-Request : 1 / 0 / 2
+ /github/workspace/fsh-generated/resources/Patient-Newborn-Request : 2 / 0 / 3
  /github/workspace/fsh-generated/resources/Patient-Patient-GetDemographics-Example : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Patient-Patient-MergePatient-Example : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Patient-Revise-Request : 1 / 0 / 4
+ /github/workspace/fsh-generated/resources/Patient-Revise-Request-No-SRI : 1 / 0 / 2
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-add-request-bundle : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-add-response-bundle : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-async-ack-response-bundle : 0 / 0 / 1
@@ -80,6 +84,10 @@ Generated $--. FHIR version $-- for fhir.ca-bc.client#$-- (canonical = http://hl
  /github/workspace/fsh-generated/resources/ValueSet-bc-name-use-value-set : 0 / 0 / 1
 </table>
 == n/a ==
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Patient/Force-Create-Request.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Patient/Newborn-Request.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Patient/Revise-Request.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Patient/Revise-Request-No-SRI.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: /github/workspace/output/design.html#/html/body/div/div/div/div/div/p/a at Line 777, column 9: The link 'distributions.html' for "Patient Notifications" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
@@ -132,8 +140,17 @@ ERROR: ImplementationGuide/fhir.ca-bc.client: ImplementationGuide.dependsOn[2].u
 == fsh-generated/resources/OperationOutcome-OperationOutcome-Search-Example.json ==
 == fsh-generated/resources/Parameters-Parameters-MergePatient-Response-Example.json ==
 == fsh-generated/resources/Parameters-Parameters-MergePatient-TwoNonSurvivors-Example.json ==
+== fsh-generated/resources/Patient-Force-Create-Request.json ==
+ERROR: Patient/Force-Create-Request: Patient: The extension http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension is not allowed to be used at this point (allowed = e:Extension, e:Patient.gender, e:Patient.birthDate, e:Patient.multipleBirth, e:Patient.deceased; this element is [Patient])
+== fsh-generated/resources/Patient-Newborn-Request.json ==
+ERROR: Patient/Newborn-Request: Patient: The extension http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension is not allowed to be used at this point (allowed = e:Extension, e:Patient.gender, e:Patient.birthDate, e:Patient.multipleBirth, e:Patient.deceased; this element is [Patient])
+ERROR: Patient/Newborn-Request: Patient.contained[0]: The contained resource 'Mother' is not referenced to from elsewhere in the containing resource nor does it refer to the containing resource (dom-3)
 == fsh-generated/resources/Patient-Patient-GetDemographics-Example.json ==
 == fsh-generated/resources/Patient-Patient-MergePatient-Example.json ==
+== fsh-generated/resources/Patient-Revise-Request.json ==
+ERROR: Patient/Revise-Request: Patient: The extension http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension is not allowed to be used at this point (allowed = e:Extension, e:Patient.gender, e:Patient.birthDate, e:Patient.multipleBirth, e:Patient.deceased; this element is [Patient])
+== fsh-generated/resources/Patient-Revise-Request-No-SRI.json ==
+ERROR: Patient/Revise-Request-No-SRI: Patient: The extension http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension is not allowed to be used at this point (allowed = e:Extension, e:Patient.gender, e:Patient.birthDate, e:Patient.multipleBirth, e:Patient.deceased; this element is [Patient])
 == fsh-generated/resources/StructureDefinition-bc-add-request-bundle.json ==
 == fsh-generated/resources/StructureDefinition-bc-add-response-bundle.json ==
 == fsh-generated/resources/StructureDefinition-bc-async-ack-response-bundle.json ==

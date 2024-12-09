@@ -11,7 +11,7 @@
   <name value="BCHealthClientIdentityManagement"/>
   <title value="BC Client Registry FHIR Implementation Guide"/>
   <status value="active"/>
-  <date value="2024-12-09T22:59:04+00:00"/>
+  <date value="2024-12-09T23:04:44+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -713,6 +713,10 @@
       <name value="Response Examples"/>
       <description value="A set of operation response examples"/>
     </grouping>
+    <grouping id="RestfulExamples">
+      <name value="RESTful Examples"/>
+      <description value="A set of RESTful request examples"/>
+    </grouping>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Bundle"/>
@@ -1160,6 +1164,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/Force-Create-Request"/>
+      </reference>
+      <name value="Force-Create-Request"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+      <groupingId value="RestfulExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="OperationDefinition"/>
       </extension>
       <reference>
@@ -1376,6 +1391,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/Newborn-Request"/>
+      </reference>
+      <name value="Newborn-Request"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+      <groupingId value="RestfulExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="OperationOutcome"/>
       </extension>
       <reference>
@@ -1486,6 +1512,28 @@
       <description value="Example of an Asynchronous $Revise ACK message."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-async-ack-response-bundle"/>
       <groupingId value="ResponseExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/Revise-Request"/>
+      </reference>
+      <name value="Revise-Request"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+      <groupingId value="RestfulExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/Revise-Request-No-SRI"/>
+      </reference>
+      <name value="Revise-Request-No-SRI"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+      <groupingId value="RestfulExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
