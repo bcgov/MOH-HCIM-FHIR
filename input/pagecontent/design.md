@@ -138,7 +138,7 @@ Response resources are wrapped in Bundles.  A search operation like Get Demograp
 
 #### FHIR Restful
 
-Restful services on the patient resource are also available, RESTful Get and RESTful Find.
+Restful services on the patient resource are also available, RESTful Get, RESTful Find and RESTful Revise Person.
 
 The FHIR RESTful Get feature is a service that provides a RESTful interface to access the Get Demographics transaction, as opposed to a FHIR operation.
 
@@ -172,6 +172,21 @@ Search by Name and Date of Birth |
 {:.grid}
 
 Name is equalivent to the combination of both First Name and Surname.
+
+The FHIR RESTful Revise Person feature is a service that provides a RESTful interface to access the Add Person and Update person transactions, as opposed to their FHIR operation equivalents.
+
+Revise Person Minimum Data|
+:--- |
+Purported PHN or Mother's PHN |
+Name - Name Type, First Name, Last Name |
+Date of Birth |
+Gender |
+**OR** |
+Name - Name Type, First Name, Last Name |
+Date of Birth |
+Gender |
+Address - Address Type (Mailing or Physical), Address Line 1, City, State if country is provided and is CA or US |
+{:.grid}
 
 ### Design Outcomes - Details
 
