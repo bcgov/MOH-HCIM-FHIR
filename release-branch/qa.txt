@@ -1,9 +1,9 @@
 BCHealthClientIdentityManagement : Validation Results
 =========================================
 
-err = 4, warn = 9, info = 3
-IG Publisher Version: 1.7.1
-Generated Thu Oct 31 18:34:15 UTC 2024. FHIR version 4.0.1 for fhir.ca-bc.client#1.0.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
+err = 4, warn = 9, info = 6
+IG Publisher Version: 1.7.5
+Generated Mon Dec 09 22:51:27 UTC 2024. FHIR version 4.0.1 for fhir.ca-bc.client#1.0.0 (canonical = http://hlth.gov.bc.ca/fhir/client)
  Build Errors : 1 / 4 / 0
  /github/workspace/fsh-generated/resources/Bundle-AddNewbornByMumsPHN-Request : 0 / 0 / 9
  /github/workspace/fsh-generated/resources/Bundle-AddPatient-Request : 0 / 0 / 10
@@ -57,7 +57,7 @@ Generated Thu Oct 31 18:34:15 UTC 2024. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-gender-history-extension : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-get-demographics-request-bundle : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-identifier-status-extension : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-bc-merge-patient : 0 / 1 / 6
+ /github/workspace/fsh-generated/resources/StructureDefinition-bc-merge-patient : 0 / 1 / 7
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-merge-request-bundle : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-merge-response-bundle : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-merge-status-extension : 0 / 0 / 1
@@ -65,8 +65,8 @@ Generated Thu Oct 31 18:34:15 UTC 2024. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-metadata-parameters-in : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-metadata-parameters-out : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-multiplebirth-history-extension : 0 / 1 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-bc-patient : 0 / 1 / 7
- /github/workspace/fsh-generated/resources/StructureDefinition-bc-patient-by-example : 0 / 2 / 6
+ /github/workspace/fsh-generated/resources/StructureDefinition-bc-patient : 0 / 1 / 8
+ /github/workspace/fsh-generated/resources/StructureDefinition-bc-patient-by-example : 0 / 2 / 7
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-revise-request-bundle : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-revise-response-bundle : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-search-response-bundle : 0 / 0 / 1
@@ -80,7 +80,7 @@ Generated Thu Oct 31 18:34:15 UTC 2024. FHIR version 4.0.1 for fhir.ca-bc.client
  /github/workspace/fsh-generated/resources/ValueSet-bc-name-use-value-set : 0 / 0 / 1
 </table>
 == n/a ==
-ERROR: /github/workspace/output/design.html#/html/body/div/div/div/div/div/p/a at Line 737, column 9: The link 'distributions.html' for "Patient Notifications" cannot be resolved
+ERROR: /github/workspace/output/design.html#/html/body/div/div/div/div/div/p/a at Line 777, column 9: The link 'distributions.html' for "Patient Notifications" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
@@ -147,6 +147,7 @@ ERROR: ImplementationGuide/fhir.ca-bc.client: ImplementationGuide.dependsOn[2].u
 == fsh-generated/resources/StructureDefinition-bc-get-demographics-request-bundle.json ==
 == fsh-generated/resources/StructureDefinition-bc-identifier-status-extension.json ==
 == fsh-generated/resources/StructureDefinition-bc-merge-patient.json ==
+INFORMATION: StructureDefinition/bc-merge-patient: StructureDefinition.snapshot.element[14].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 == fsh-generated/resources/StructureDefinition-bc-merge-request-bundle.json ==
 == fsh-generated/resources/StructureDefinition-bc-merge-response-bundle.json ==
 == fsh-generated/resources/StructureDefinition-bc-merge-status-extension.json ==
@@ -157,7 +158,9 @@ INFORMATION: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/
 == fsh-generated/resources/StructureDefinition-bc-multiplebirth-history-extension.json ==
 WARNING: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-multiplebirth-history-extension'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-bc-patient.json ==
+INFORMATION: StructureDefinition/bc-patient: StructureDefinition.snapshot.element[14].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 == fsh-generated/resources/StructureDefinition-bc-patient-by-example.json ==
+INFORMATION: StructureDefinition/bc-patient-by-example: StructureDefinition.snapshot.element[13].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 WARNING: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-bc-revise-request-bundle.json ==
 == fsh-generated/resources/StructureDefinition-bc-revise-response-bundle.json ==
