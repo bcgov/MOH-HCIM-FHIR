@@ -114,6 +114,7 @@ groups:
       resources:
          - Bundle/GetDemographics-Request
          - Bundle/GetDemographics-withHistory-Request
+         - Bundle/GetDemographics-Request-By-SSRI
          - Bundle/FindCandidates-Request
          - Bundle/FindNewbornByMumsPHN-Request
          - Bundle/AddPatient-Request
@@ -122,6 +123,7 @@ groups:
          - Bundle/Merge-SSRI-Request
          - Bundle/Merge-WithPayload-Request
          - Bundle/Revise-withMaxData-Request
+         - Bundle/Revise-Request-No-SRI
    ResponseExamples:
       name: Response Examples
       description: A set of operation response examples
@@ -129,10 +131,11 @@ groups:
          - Bundle/GetDemographics-Response
          - Bundle/GetDemographics-withHistory-Response
          - Bundle/GetDemographics-withPHNInfo-Response
+         - Bundle/GetDemographics-Response-Masked
          - Bundle/FindCandidates-Response
          - Bundle/FindNewbornByMumsPHN-Response
          - Bundle/AddPatient-Response
-         - Bundle/Merge-Response
+         - Parameters/Merge-Response
          - Bundle/Merge-WithPayload-Response
          - Bundle/Revise-Response
          - Bundle/Revise-Async-ACK
