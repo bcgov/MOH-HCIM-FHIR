@@ -11,7 +11,7 @@ Although this guide is complete the implementation of the new FHIR Operations wi
 
 #### Current - HCIM Release 7.7.2 - FHIR 4.0-1
 
-This release may include the following Operations
+This release includes the following Operations
 
 Operation |
 :--- |
@@ -22,7 +22,9 @@ Operation |
 
 Restful |
 :--- |
-[Get Patient by ID](StructureDefinition-bc-patient.html) |
+[Get](restful.html#restful-get) |
+[Find](restful.html#restful-find) |
+[Revise Person](restful.html#restful-revise-person) |
 {:.grid}
 
 #### Past - HCIM release 7.6 - FHIR 4.0-1 

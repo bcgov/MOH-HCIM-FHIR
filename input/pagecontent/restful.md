@@ -56,16 +56,32 @@ The passing of the history and identifiers only interaction parameters is suppor
 
 More details can be found in the [response Bundle](StructureDefinition-bc-search-response-bundle.html) definitions.
 
+### RESTful Revise Person
+
+RESTful Revise Person provides a RESTful interfact to acccess the Add Person and Update Person transactions.
+
+The system must provide the ability to accept PHNs created/issued by approved source like PharmaNet and HIBC.
+
+A revise person record will be rejected when:
+* the message contains forbidden special characters in the SRI field
+* the minimum data set has not been provided
+* PHN fails validation check
+* the message contains illegal characters in any of the name fields
+* no user id or effective date were provided
+*or if a Source Record Identifier was not provided if the source is not PHN Bound
+
+A Revise Person message with a date of death or death indicator must have a PHN.
+
 
 ### RESTful Get Examples
 
 GET|
 :---|:---
-Search by PHN|https://hd2broker.hcim.ehealth.gov.bc.ca/Patient/?identifier=https%3A%2F%2Ffhir.infoway-inforoute.ca%2FNamingSystem%2Fca-bc-patient-healthcare-id%7C[phn]
-Search by PHN With History|https://hd2broker.hcim.ehealth.gov.bc.ca/Patient/?identifier=https%3A%2F%2Ffhir.infoway-inforoute.ca%2FNamingSystem%2Fca-bc-patient-healthcare-id%7C[phn]
-Search by PHN Return Identifiers Only|https://hd2broker.hcim.ehealth.gov.bc.ca/Patient/?identifier=https%3A%2F%2Ffhir.infoway-inforoute.ca%2FNamingSystem%2Fca-bc-patient-healthcare-id%7C[phn]
-Search by SRI|https://hd2broker.hcim.ehealth.gov.bc.ca/Patient/?identifier=https%3A%2F%2Fhealth.gov.bc.ca%2Ffhir%2FNamingSystem%2Fca-bc-fha-mt-source-patient-id%7C[sri]
-Search by SSRI|https://hd2broker.hcim.ehealth.gov.bc.ca/Patient/?identifier=https%3A%2F%2Fhealth.gov.bc.ca%2Ffhir%2FNamingSystem%2Fca-bc-fha-arh-source-patient-id%7C[ssri]
+Search by PHN|https://[baseURL]/Patient/?identifier=[bc-phn-source-system]/&#124;[phn]
+Search by PHN With History|https://[baseURL]/Patient/_history?identifier=[bc-phn-source-system]/&#124;[phn]
+Search by PHN Return Identifiers Only|https://[baseURL]/Patient/_identifiersOnly?identifier=[bc-phn-source-system]&#124;[phn]
+Search by SRI|https://[baseURL]/Patient/?identifier=[bc-sri-source-system]/&#124;[sri]
+Search by SSRI|https://[baseURL]/Patient/?identifier=[bc-ssri-source-system]/&#124;[ssri]
 Search by Resource ID|https://[baseURL]/Patient/[phn]
 Search by Resource ID with History|https://[baseURL]/Patient/[phn]/_history
 Search by Resource ID Return Identifiers Only|https://[baseURL]/Patient/[phn]/_identifiersOnly
