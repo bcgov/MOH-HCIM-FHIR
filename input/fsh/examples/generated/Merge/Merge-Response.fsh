@@ -1,14 +1,95 @@
+//Alias: $bc-oo-codes = http://hlth.gov.bc.ca/fhir/client/bc-oo-codes
+
 Instance: Merge-Response
-InstanceOf: MergeResponseBundle
-Description: "Example of $Merge response."
+InstanceOf: Parameters
 Usage: #example
-* identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:5af209ac-343b-497c-8be3-7394b677318c"
-* type = #collection
-* timestamp = "2023-01-23T14:45:48.1142315-08:00"
-* link.relation = "canonical"
-* link.url = "https://ig.cgi.com/Patient/Merge.fhir"
-* entry[0].fullUrl = "urn:uuid:30f9e023-c3dc-43e3-bf91-b46da0836c16"
-* entry[=].resource = Merge-Response-Parameters
-* entry[+].resource = Merge-Response-Outcome
-* entry[=].fullUrl = "urn:uuid:30f9e023-c3dc-43e3-bf91-b46da0831234"
+* parameter[0].name = "input"
+* parameter[=].resource.resourceType = "Parameters"
+* parameter[=].resource.parameter[0].name = "target-patient-identifier"
+* parameter[=].resource.parameter[=].valueIdentifier.use = #official
+* parameter[=].resource.parameter[=].valueIdentifier.system = "https://fhir.infoway-inforoute.ca/NamingSystem/ca-mb-patient-healthcare-id"
+* parameter[=].resource.parameter[=].valueIdentifier.value = "G72EG8MY3GEI0TBBQH0R"
+* parameter[=].resource.parameter[+].name = "target-patient-identifier"
+* parameter[=].resource.parameter[=].valueIdentifier.use = #secondary
+* parameter[=].resource.parameter[=].valueIdentifier.system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-arh-source-patient-id"
+* parameter[=].resource.parameter[=].valueIdentifier.value = "RPK099H84SMN0T194NU5"
+* parameter[=].resource.parameter[+].name = "source-patient-identifier"
+* parameter[=].resource.parameter[=].valueIdentifier.use = #secondary
+* parameter[=].resource.parameter[=].valueIdentifier.system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-bh-source-patient-id"
+* parameter[=].resource.parameter[=].valueIdentifier.value = "RV4N7EW2EOX9949JI1O7"
+* parameter[=].resource.parameter[+].name = "source-patient-identifier"
+* parameter[=].resource.parameter[=].valueIdentifier.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"
+* parameter[=].resource.parameter[=].valueIdentifier.extension.valueCode = #cancelled
+* parameter[=].resource.parameter[=].valueIdentifier.use = #secondary
+* parameter[=].resource.parameter[=].valueIdentifier.system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-cac-source-patient-id"
+* parameter[=].resource.parameter[=].valueIdentifier.value = "JNH1X33053880ITLF2R4"
+* parameter[=].resource.parameter[+].name = "result-patient"
+* parameter[=].resource.parameter[=].resource.resourceType = "Patient"
+* parameter[=].resource.parameter[=].resource.id = "87675c19-1272-4633-afd0-f23c99f4fc5e"
+* parameter[=].resource.parameter[=].resource.meta.profile = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"
+* parameter[=].resource.parameter[=].resource.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
+* parameter[=].resource.parameter[=].resource.extension.valuePeriod.start = "2024-11-28T06:22:01.0974407-08:00"
+* parameter[=].resource.parameter[=].resource.identifier[0].use = #official
+* parameter[=].resource.parameter[=].resource.identifier[=].system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id"
+* parameter[=].resource.parameter[=].resource.identifier[=].value = "MB220FXR155686125TUN"
+* parameter[=].resource.parameter[=].resource.identifier[+].use = #old
+* parameter[=].resource.parameter[=].resource.identifier[=].system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id"
+* parameter[=].resource.parameter[=].resource.identifier[=].value = "Q22TG5814EVZTNPGUII5"
+* parameter[=].resource.parameter[=].resource.identifier[+].use = #old
+* parameter[=].resource.parameter[=].resource.identifier[=].system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id"
+* parameter[=].resource.parameter[=].resource.identifier[=].value = "VV2K6A68HKJH02N73354"
+* parameter[=].resource.parameter[=].resource.name[0].use = #usual
+* parameter[=].resource.parameter[=].resource.name[=].family = "Tabatabai"
+* parameter[=].resource.parameter[=].resource.name[=].given[0] = "Proinnsias"
+* parameter[=].resource.parameter[=].resource.name[=].given[+] = "Edmon"
+* parameter[=].resource.parameter[=].resource.name[=].given[+] = "Beartlaidh"
+* parameter[=].resource.parameter[=].resource.name[+].use = #nickname
+* parameter[=].resource.parameter[=].resource.name[=].given = "Victor"
+* parameter[=].resource.parameter[=].resource.telecom[0].system = #phone
+* parameter[=].resource.parameter[=].resource.telecom[=].value = "3104702526"
+* parameter[=].resource.parameter[=].resource.telecom[=].use = #mobile
+* parameter[=].resource.parameter[=].resource.telecom[+].system = #phone
+* parameter[=].resource.parameter[=].resource.telecom[=].value = "3366898069"
+* parameter[=].resource.parameter[=].resource.telecom[=].use = #home
+* parameter[=].resource.parameter[=].resource.telecom[+].system = #phone
+* parameter[=].resource.parameter[=].resource.telecom[=].value = "2544265519"
+* parameter[=].resource.parameter[=].resource.telecom[=].use = #work
+* parameter[=].resource.parameter[=].resource.telecom[+].system = #email
+* parameter[=].resource.parameter[=].resource.telecom[=].value = "Constance.Besarra@cgi.com"
+* parameter[=].resource.parameter[=].resource.telecom[=].use = #mobile
+* parameter[=].resource.parameter[=].resource.telecom[+].system = #email
+* parameter[=].resource.parameter[=].resource.telecom[=].value = "Hank.Avey@cgi.com"
+* parameter[=].resource.parameter[=].resource.telecom[=].use = #home
+* parameter[=].resource.parameter[=].resource.telecom[+].system = #email
+* parameter[=].resource.parameter[=].resource.telecom[=].value = "Nerissa.Friede@cgi.com"
+* parameter[=].resource.parameter[=].resource.telecom[=].use = #work
+* parameter[=].resource.parameter[=].resource.gender = #female
+* parameter[=].resource.parameter[=].resource.birthDate = "1996-02-18"
+* parameter[=].resource.parameter[=].resource.address[0].type = #physical
+* parameter[=].resource.parameter[=].resource.address[=].line = "7562 Railroad street"
+* parameter[=].resource.parameter[=].resource.address[=].city = "Calistoga"
+* parameter[=].resource.parameter[=].resource.address[=].state = "BC"
+* parameter[=].resource.parameter[=].resource.address[=].postalCode = "V5QOX7"
+* parameter[=].resource.parameter[=].resource.address[=].country = "CA"
+* parameter[=].resource.parameter[=].resource.address[+].type = #postal
+* parameter[=].resource.parameter[=].resource.address[=].line = "27523 Oak street"
+* parameter[=].resource.parameter[=].resource.address[=].city = "Topmost"
+* parameter[=].resource.parameter[=].resource.address[=].state = "BC"
+* parameter[=].resource.parameter[=].resource.address[=].postalCode = "V4IUH0"
+* parameter[=].resource.parameter[=].resource.address[=].country = "CA"
+* parameter[+].name = "outcome"
+* parameter[=].resource.resourceType = "OperationOutcome"
+* parameter[=].resource.issue.severity = #information
+* parameter[=].resource.issue.code = #business-rule
+* parameter[=].resource.issue.details = $bc-oo-codes#BCHCIM.PM.0.0008
+* parameter[=].resource.issue.details.text = "The Person Merge request has completed successfully."
+* parameter[+].name = "result"
+* parameter[=].resource.resourceType = "Patient"
+* parameter[=].resource.meta.profile = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+* parameter[=].resource.identifier.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
+* parameter[=].resource.identifier.extension.valueCode = #active
+* parameter[=].resource.identifier.use = #official
+* parameter[=].resource.identifier.system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id"
+* parameter[=].resource.identifier.value = "MB220FXR155686125TUN"
+* parameter[=].resource.identifier.period.start = "2024-11-28T06:22:01-08:00"
+* parameter[=].resource.identifier.assigner.display = "FHA Fraser Health Expanse - FHA_EXP"
