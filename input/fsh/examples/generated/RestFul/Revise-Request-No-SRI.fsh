@@ -1,4 +1,4 @@
-Instance: Revise-Request-No-SRI
+Instance: Revise-Request-No-SRI-RESTful
 InstanceOf: Patient
 Usage: #example
 * meta.profile = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
