@@ -79,14 +79,14 @@ groups:
          - OperationDefinition/bc-patient-get-demographics
          - OperationDefinition/bc-patient-add
          - OperationDefinition/bc-patient-revise
-         - OperationDefinition/bc-patient-merge
+        # - OperationDefinition/bc-patient-merge
         #  - OperationDefinition/bc-patient-history
    PatientProfile:
       name: Patient Profile
       description: The BC Patient profile
       resources:
          - StructureDefinition/bc-patient
-         - StructureDefinition/bc-merge-patient
+        # - StructureDefinition/bc-merge-patient
    Bundles:
       name: Supporting Profiles - Bundles
       description: Bundles that support Patient and Client Registry Operations - Request and Response
@@ -96,8 +96,8 @@ groups:
          - StructureDefinition/bc-search-response-bundle
          - StructureDefinition/bc-add-request-bundle 
          - StructureDefinition/bc-add-response-bundle 
-         - StructureDefinition/bc-merge-request-bundle 
-         - StructureDefinition/bc-merge-response-bundle 
+        # - StructureDefinition/bc-merge-request-bundle 
+        # - StructureDefinition/bc-merge-response-bundle 
          - StructureDefinition/bc-revise-request-bundle 
          - StructureDefinition/bc-revise-response-bundle 
          - StructureDefinition/bc-async-ack-response-bundle
@@ -119,9 +119,11 @@ groups:
          - Bundle/FindNewbornByMumsPHN-Request
          - Bundle/AddPatient-Request
          - Bundle/AddNewbornByMumsPHN-Request
-         - Bundle/Merge-Only-Request
-         - Bundle/Merge-SSRI-Request
-         - Bundle/Merge-WithPayload-Request
+        # - Bundle/Merge-Only-Request
+        # - Bundle/Merge-SSRI-Request
+        # - Bundle/Merge-WithPayload-Request
+         - Parameters/Merge-Request
+         - Parameters/Merge-Min-Request
          - Bundle/Revise-withMaxData-Request
          - Bundle/Revise-Request-No-SRI
    ResponseExamples:
@@ -136,7 +138,7 @@ groups:
          - Bundle/FindNewbornByMumsPHN-Response
          - Bundle/AddPatient-Response
          - Parameters/Merge-Response
-         - Bundle/Merge-WithPayload-Response
+        # - Bundle/Merge-WithPayload-Response
          - Bundle/Revise-Response
          - Bundle/Revise-Async-ACK
    RestfulExamples:
