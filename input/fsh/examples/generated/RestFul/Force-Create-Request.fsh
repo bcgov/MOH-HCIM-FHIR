@@ -1,5 +1,6 @@
 Instance: Force-Create-Request
 InstanceOf: Patient
+Description: "Example of RESTful force create request."
 Usage: #example
 * meta.profile = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"

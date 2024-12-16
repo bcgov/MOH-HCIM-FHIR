@@ -2,6 +2,7 @@
 
 Instance: Merge-Response
 InstanceOf: Parameters
+Description: "Example of $Merge response."
 Usage: #example
 * parameter[0].name = "outcome"
 * parameter[=].resource.resourceType = "OperationOutcome"

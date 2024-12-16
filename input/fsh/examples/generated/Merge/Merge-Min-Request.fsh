@@ -1,5 +1,6 @@
 Instance: Merge-Min-Request
 InstanceOf: Parameters
+Description: "Example of $Merge request with minimum data."
 Usage: #example
 * parameter[0].name = "target-patient"
 * parameter[=].valueReference = Reference(Patient/449a2449-4115-43b1-898c-41824b7a9486)

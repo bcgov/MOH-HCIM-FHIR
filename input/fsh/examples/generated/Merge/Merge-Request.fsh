@@ -1,5 +1,6 @@
 Instance: Merge-Request
 InstanceOf: Parameters
+Description: "Example of $Merge request."
 Usage: #example
 * parameter[0].name = "target-patient"
 * parameter[=].valueReference = Reference(Patient/5fa9ea0c-f328-4814-b74f-fded423a36b1)
