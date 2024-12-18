@@ -330,10 +330,11 @@ The AddPatient FHIR Operation SHALL use the following Bundles.
 
 <h3>Merge Patient</h3>
 <p>
-The MergePatient FHIR Operation SHALL use the following Bundles.</p>
+The MergePatient FHIR Operation R5 mimic does not use Bundles.</p>
 <p>   
-The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
+The non-surviving/source Patient(s) SHALL be listed in the link attribute of Patient.
 </p>
+
 <table class=\"grid\">
 	<tr>
 		<td>
@@ -341,9 +342,6 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 		</td>
 		<td>
 			<b>Name</b>
-		</td>
-		<td>
-			<b>Cardinality</b>
 		</td>
 		<td>
 			<b>Type</b>
@@ -357,32 +355,31 @@ The non-surviving Patient(s) SHALL be listed in the link attribute of Patient.
 	</tr>
         <tr>
                 <td>IN</td>
-                <td>Merge Request Bundle</td>
-                <td>1..1</td>
+                <td>Merge Request</td>
                 <td>
-                        <a href=\"StructureDefinition-bc-merge-request-bundle.html\">MergeRequestBundle</a></td>
+                        <a href=\"Parameters-Merge-Request.html\">MergeRequest</a></td>
                 <td></td>
                 <td>
                         <div>
-                                <p>Request bundle.</p>
+                                <p>Request</p>
                         </div>
                 </td>
         </tr>
         <tr>
                 <td>OUT</td>
-                <td>Merge Response Bundle</td>
-                <td>1..1</td>
+                <td>Merge Response</td>
                 <td>
-                        <a href=\"StructureDefinition-bc-merge-response-bundle.html\">MergeResponseBundle</a>
+                        <a href=\"Parameters-Merge-Response.html\">MergeResponse</a>
                 </td>
                 <td></td>
                 <td>
                         <div>
-                                <p>Response bundle.</p>
+                                <p>Response</p>
                         </div>
                 </td>
         </tr>
 </table>
+
 </div>"
 
 * id = "bc-hcim-capability-statement-server"

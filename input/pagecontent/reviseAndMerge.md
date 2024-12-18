@@ -11,7 +11,9 @@ The Client Registry treats the incoming Revise Patient as a complete snapshot of
 
 To prevent the termination of certain attributes in the composite view, the point of service application must first query the Client Registry and resend in a Revised Person message any attributes that were returned on the query that are not maintained in the local system.
 
-### Merge Patient - FUTURE
+### Merge Patient
+
+The FHIR Mimic R5 Merge Person feature is one that modifies the format of the existing R4 Merge Person interface so that it aligns closely with the R5 version of the FHIR specifications.
 
 The Merge Patient transaction is used to merge duplicate records in the Client Registry. 
 
@@ -19,7 +21,7 @@ If the records are merged on the point of service application, a ‘Merged Patie
 
 If the demographics are updated at the same time as the merge, the demographic update will be processed as a second ‘Revised Patient’ interaction was requested and will update the demographics once the merge is complete. 
 
-The patient record the point of service is keeping must be in the Client Registry prior to the merge or the Merge Person message will fail. This record is known as the ‘survivor’ record.
+The patient record the point of service is keeping must be in the Client Registry prior to the merge or the Merge Person message will fail. This record is known as the ‘survivor’ or 'target-patient' record.
 
 ### FHIR Structure for Add, Revise, Merge and Distributions - FUTURE
 
