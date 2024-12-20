@@ -13,7 +13,7 @@ To prevent the termination of certain attributes in the composite view, the poin
 
 ### Merge Patient
 
-The FHIR Mimic R5 Merge Person feature is one that modifies the format of the existing R4 Merge Person interface so that it aligns closely with the R5 version of the FHIR specifications.
+The FHIR Mimic R5 Merge Person feature is one that modifies the format of the existing R4 Merge Person interface so that it aligns closely with the [R5 version](https://www.hl7.org/fhir/R5/patient-operation-merge.html) of the FHIR specifications.
 
 The Merge Patient transaction is used to merge duplicate records in the Client Registry. 
 

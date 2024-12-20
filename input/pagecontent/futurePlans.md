@@ -16,7 +16,7 @@ This release includes the following Operations
 Operation |
 :--- |
 [Add](OperationDefinition-bc-patient-add.html) |
-[MergePatient](Parameters-Merge-Request.html) |
+[MergePatient](OperationDefinition-bc-patient-merge.html) |
 [RevisePatient](OperationDefinition-bc-patient-revise.html) |
 {:.grid}
 
