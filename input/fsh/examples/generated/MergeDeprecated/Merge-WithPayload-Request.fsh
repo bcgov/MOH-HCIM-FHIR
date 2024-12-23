@@ -1,4 +1,4 @@
-Instance: Merge-WithPayload-Request
+/*Instance: Merge-WithPayload-Request
 InstanceOf: MergeRequestBundle
 Description: "Example of $Merge with payload request."
 Usage: #example
@@ -8,3 +8,4 @@ Usage: #example
 * entry[=].resource = Merge-WithPayload-Request-Parameters
 * entry[+].fullUrl = "urn:uuid:1bccd29a-9d71-4f25-b2b0-fbe7484dcef1"
 * entry[=].resource = Merge-WithPayload-Request-Patient
+*/

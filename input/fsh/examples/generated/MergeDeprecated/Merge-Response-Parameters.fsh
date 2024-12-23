@@ -1,4 +1,4 @@
-Instance: Merge-Response-Parameters
+/*Instance: Merge-Response-Parameters
 InstanceOf: MetadataParametersOut
 Usage: #inline
 //* id = "601e87a1-d16e-4306-8414-d447a4d128ab"
@@ -14,3 +14,4 @@ Usage: #inline
 * parameter[enterer].valueIdentifier.value = "ig.samples@cgi.com"
 * parameter[requestMessageId].name = "requestMessageId"
 * parameter[requestMessageId].valueString = "0cb29b89-8329-4f10-ba40-5384da37d0c2"
+*/

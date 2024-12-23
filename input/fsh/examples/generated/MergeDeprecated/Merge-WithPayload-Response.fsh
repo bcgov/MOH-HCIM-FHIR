@@ -1,4 +1,4 @@
-Instance: Merge-WithPayload-Response
+/*Instance: Merge-WithPayload-Response
 InstanceOf: MergeResponseBundle
 Description: "Example of $Merge response with payload."
 Usage: #example
@@ -12,3 +12,4 @@ Usage: #example
 * entry[=].resource = Merge-WithPayload-Response-Parameters
 * entry[+].resource = Merge-WithPayload-Response-Outcome
 * entry[=].fullUrl = "urn:uuid:c82fbb43-a275-4a29-8b6c-319f0a154567"
+*/
