@@ -22,6 +22,7 @@ There are a number of assumptions that were made at the start of design:
 - Users can use a combination of V3 and FHIR to meet their needs
 - The Client Registry FHIR design will become a Provincial standard
 - Asynchronous interactions will follow the same pattern as V3 (not the FHIR asynchronous pattern)
+- FHIR/JSON is unordered and HCIM does not guarantee ordering of elements
 
 ### Design Outcomes - Overview
 The main outcomes from the design process were as follows:
