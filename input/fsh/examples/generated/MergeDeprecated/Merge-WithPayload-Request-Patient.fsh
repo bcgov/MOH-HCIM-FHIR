@@ -1,4 +1,4 @@
-Instance: Merge-WithPayload-Request-Patient
+/*Instance: Merge-WithPayload-Request-Patient
 InstanceOf: PatientMerge
 Usage: #inline
 * identifier.use = #official
@@ -57,3 +57,4 @@ Usage: #inline
 * link[=].other.identifier.system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
 * link[=].other.identifier.value = "0035Z44HE5845"
 * link[=].type = #replaces
+*/

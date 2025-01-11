@@ -86,7 +86,7 @@ groups:
       description: The BC Patient profile
       resources:
          - StructureDefinition/bc-patient
-         - StructureDefinition/bc-merge-patient
+        # - StructureDefinition/bc-merge-patient
    Bundles:
       name: Supporting Profiles - Bundles
       description: Bundles that support Patient and Client Registry Operations - Request and Response
@@ -96,8 +96,8 @@ groups:
          - StructureDefinition/bc-search-response-bundle
          - StructureDefinition/bc-add-request-bundle 
          - StructureDefinition/bc-add-response-bundle 
-         - StructureDefinition/bc-merge-request-bundle 
-         - StructureDefinition/bc-merge-response-bundle 
+        # - StructureDefinition/bc-merge-request-bundle 
+        # - StructureDefinition/bc-merge-response-bundle 
          - StructureDefinition/bc-revise-request-bundle 
          - StructureDefinition/bc-revise-response-bundle 
          - StructureDefinition/bc-async-ack-response-bundle
@@ -114,14 +114,18 @@ groups:
       resources:
          - Bundle/GetDemographics-Request
          - Bundle/GetDemographics-withHistory-Request
+         - Bundle/GetDemographics-Request-By-SSRI
          - Bundle/FindCandidates-Request
          - Bundle/FindNewbornByMumsPHN-Request
          - Bundle/AddPatient-Request
          - Bundle/AddNewbornByMumsPHN-Request
-         - Bundle/Merge-Only-Request
-         - Bundle/Merge-SSRI-Request
-         - Bundle/Merge-WithPayload-Request
+        # - Bundle/Merge-Only-Request
+        # - Bundle/Merge-SSRI-Request
+        # - Bundle/Merge-WithPayload-Request
+         - Parameters/Merge-Request
+         - Parameters/Merge-Min-Request
          - Bundle/Revise-withMaxData-Request
+         - Bundle/Revise-Request-No-SRI
    ResponseExamples:
       name: Response Examples
       description: A set of operation response examples
@@ -129,11 +133,12 @@ groups:
          - Bundle/GetDemographics-Response
          - Bundle/GetDemographics-withHistory-Response
          - Bundle/GetDemographics-withPHNInfo-Response
+         - Bundle/GetDemographics-Response-Masked
          - Bundle/FindCandidates-Response
          - Bundle/FindNewbornByMumsPHN-Response
          - Bundle/AddPatient-Response
-         - Bundle/Merge-Response
-         - Bundle/Merge-WithPayload-Response
+         - Parameters/Merge-Response
+        # - Bundle/Merge-WithPayload-Response
          - Bundle/Revise-Response
          - Bundle/Revise-Async-ACK
    RestfulExamples:
@@ -142,7 +147,7 @@ groups:
       resources:
          - Patient/Force-Create-Request
          - Patient/Newborn-Request
-         - Patient/Revise-Request-No-SRI
+         - Patient/Revise-Request-No-SRI-RESTful
          - Patient/Revise-Request
 
 parameters:

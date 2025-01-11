@@ -2,6 +2,7 @@ Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 
 Instance: Newborn-Request
 InstanceOf: Patient
+Description: "Example of RESTful newborn request."
 Usage: #example
 * meta.profile = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
 * contained = Mother

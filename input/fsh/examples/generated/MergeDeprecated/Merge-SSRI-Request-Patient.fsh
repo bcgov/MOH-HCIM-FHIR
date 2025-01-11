@@ -1,4 +1,4 @@
-Instance: Merge-SSRI-Request-Patient
+/*Instance: Merge-SSRI-Request-Patient
 InstanceOf: PatientMerge
 Usage: #inline
 * identifier[0].use = #official
@@ -37,3 +37,4 @@ Usage: #inline
 * link[=].other.identifier.system = "http://hlth.gov.bc.ca/fhir/client/id-issuer/SrcCode"
 * link[=].other.identifier.value = "VI7KR22LT7SW8GG8Y3TZTY4626MR54C8Q"
 * link[=].type = #replaces
+*/

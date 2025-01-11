@@ -1,4 +1,4 @@
-Instance: Merge-SSRI-Request
+/*Instance: Merge-SSRI-Request
 InstanceOf: MergeRequestBundle
 Description: "Example of $Merge request with SSRI."
 Usage: #example
@@ -8,3 +8,4 @@ Usage: #example
 * entry[=].resource = Merge-SSRI-Request-Parameters
 * entry[+].fullUrl = "urn:uuid:c476ddbe-f2f5-4a86-85f1-626b754a5f9b"
 * entry[=].resource = Merge-SSRI-Request-Patient
+*/

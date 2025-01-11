@@ -1,4 +1,4 @@
-Instance: Merge-Only-Request
+/*Instance: Merge-Only-Request
 InstanceOf: MergeRequestBundle
 Description: "Example of $Merge only request."
 Usage: #example
@@ -8,3 +8,4 @@ Usage: #example
 * entry[=].resource = Merge-Only-Request-Parameters 
 * entry[+].fullUrl = "urn:uuid:8fb558c8-1c16-4553-ba62-e165c580c337"
 * entry[=].resource = Merge-Only-Request-Patient 
+*/

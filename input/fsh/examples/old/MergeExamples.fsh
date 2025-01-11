@@ -1,3 +1,4 @@
+/*
 Instance: Bundle-MergePatient-Request-Example
 InstanceOf: MergeRequestBundle
 Description: "Example of $MergePatient operation."
@@ -77,3 +78,4 @@ Description: "Example of a merge patient Patient"
 * link[3].other.identifier = IdentifierExamplePHN2NoPeriod
 * link[3].extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"
 * link[3].extension.valueCode = #obsolete
+*/

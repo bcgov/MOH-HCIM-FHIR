@@ -1,5 +1,6 @@
-Instance: Revise-Request-No-SRI
+Instance: Revise-Request-No-SRI-RESTful
 InstanceOf: Patient
+Description: "Example of RESTful $Revise request with no SRI."
 Usage: #example
 * meta.profile = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
 * extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"

@@ -1,4 +1,4 @@
-Instance: Merge-Response
+/*Instance: Merge-Response-Deprecated
 InstanceOf: MergeResponseBundle
 Description: "Example of $Merge response."
 Usage: #example
@@ -12,3 +12,4 @@ Usage: #example
 * entry[=].resource = Merge-Response-Parameters
 * entry[+].resource = Merge-Response-Outcome
 * entry[=].fullUrl = "urn:uuid:30f9e023-c3dc-43e3-bf91-b46da0831234"
+*/
