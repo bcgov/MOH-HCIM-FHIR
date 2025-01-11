@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Parameters xmlns="http://hl7.org/fhir">
+  <id value="Merge-Response"/>
+  <parameter>
+    <name value="outcome"/>
+    <resource>
+      <OperationOutcome>
+        <issue>
+          <severity value="information"/>
+          <code value="business-rule"/>
+          <details>
+            <coding>
+              <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes"/>
+              <code value="BCHCIM.PM.0.0008"/>
+            </coding>
+            <text value="The Person Merge request has completed successfully."/>
+          </details>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </parameter>
+  <parameter>
+    <name value="result"/>
+    <resource>
+      <Patient>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+        </meta>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="official"/>
+          <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cer-source-patient-id"/>
+          <value value="72W771J7WC20CUUAPE92"/>
+          <period>
+            <start value="2024-12-11T09:01:59-08:00"/>
+          </period>
+          <assigner>
+            <display value="VPP Cerner"/>
+          </assigner>
+        </identifier>
+      </Patient>
+    </resource>
+  </parameter>
+</Parameters>

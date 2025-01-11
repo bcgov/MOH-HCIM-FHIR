@@ -1,0 +1,158 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Parameters/Merge-Request> a fhir:Parameters ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Merge-Request"] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "target-patient" ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/Patient/5fa9ea0c-f328-4814-b74f-fded423a36b1> ;
+       fhir:reference [ fhir:v "Patient/5fa9ea0c-f328-4814-b74f-fded423a36b1" ] ;
+       fhir:identifier [
+         fhir:use [ fhir:v "official" ] ;
+         fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cer-source-patient-id"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "72W771J7WC20CUUAPE92" ]
+       ]
+     ]
+  ] [
+     fhir:name [ fhir:v "source-patient" ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/Patient/dac629f2-e5e9-4a7a-ad74-ec4ea729c7ff> ;
+       fhir:reference [ fhir:v "Patient/dac629f2-e5e9-4a7a-ad74-ec4ea729c7ff" ] ;
+       fhir:identifier [
+         fhir:use [ fhir:v "official" ] ;
+         fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cer-source-patient-id"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "SIR366V4142XX8BR614N" ]
+       ]
+     ]
+  ] [
+     fhir:name [ fhir:v "source-patient-identifier" ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:use [ fhir:v "official" ] ;
+       fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cer-source-patient-id"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "9ZT34G1R80R9560D26FR" ]
+     ]
+  ] [
+     fhir:name [ fhir:v "target-patient-identifier" ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:use [ fhir:v "official" ] ;
+       fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-mb-patient-healthcare-id"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "T5CC0SKI2IF994496VDF" ]
+     ]
+  ] [
+     fhir:name [ fhir:v "target-patient-identifier" ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:use [ fhir:v "secondary" ] ;
+       fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-arh-source-patient-id"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "807021VQ7PBO3JW6RYN1" ]
+     ]
+  ] [
+     fhir:name [ fhir:v "source-patient-identifier" ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:use [ fhir:v "secondary" ] ;
+       fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-bh-source-patient-id"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "UZ7Q5625L7K8980Y0476" ]
+     ]
+  ] [
+     fhir:name [ fhir:v "source-patient-identifier" ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "cancelled" ]
+       ] ) ;
+       fhir:use [ fhir:v "secondary" ] ;
+       fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-cac-source-patient-id"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "3R9931Z6K12RTVW7S4F5" ]
+     ]
+  ] [
+     fhir:name [ fhir:v "result-patient" ] ;
+     fhir:Parameters.parameter.resource ( [
+       a fhir:Patient ;
+       fhir:id [ fhir:v "5fa9ea0c-f328-4814-b74f-fded423a36b1" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"^^xsd:anyURI ;
+           fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient>
+         ] )
+       ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Period ;
+           fhir:start [ fhir:v "2024-12-11T09:01:59.3890729-08:00"^^xsd:dateTime ]
+         ]
+       ] ) ;
+       fhir:name ( [
+         fhir:use [ fhir:v "usual" ] ;
+         fhir:family [ fhir:v "Gedris" ] ;
+         fhir:given ( [ fhir:v "Cyprian" ] [ fhir:v "Enea" ] [ fhir:v "Folami" ] )
+       ] [
+         fhir:use [ fhir:v "nickname" ] ;
+         fhir:given ( [ fhir:v "Thin" ] )
+       ] ) ;
+       fhir:telecom ( [
+         fhir:system [ fhir:v "phone" ] ;
+         fhir:value [ fhir:v "7541326401" ] ;
+         fhir:use [ fhir:v "mobile" ]
+       ] [
+         fhir:system [ fhir:v "phone" ] ;
+         fhir:value [ fhir:v "9729769249" ] ;
+         fhir:use [ fhir:v "home" ]
+       ] [
+         fhir:system [ fhir:v "phone" ] ;
+         fhir:value [ fhir:v "8431422495" ] ;
+         fhir:use [ fhir:v "work" ]
+       ] [
+         fhir:system [ fhir:v "email" ] ;
+         fhir:value [ fhir:v "Thilo.Malinchalk@cgi.com" ] ;
+         fhir:use [ fhir:v "mobile" ]
+       ] [
+         fhir:system [ fhir:v "email" ] ;
+         fhir:value [ fhir:v "Nikita.Pinal@cgi.com" ] ;
+         fhir:use [ fhir:v "home" ]
+       ] [
+         fhir:system [ fhir:v "email" ] ;
+         fhir:value [ fhir:v "Johan.Kottler@cgi.com" ] ;
+         fhir:use [ fhir:v "work" ]
+       ] ) ;
+       fhir:gender [ fhir:v "female" ] ;
+       fhir:birthDate [ fhir:v "1977-12-04"^^xsd:date ] ;
+       fhir:address ( [
+         fhir:type [ fhir:v "physical" ] ;
+         fhir:line ( [ fhir:v "8649 Pineview drive" ] ) ;
+         fhir:city [ fhir:v "Hyannis" ] ;
+         fhir:state [ fhir:v "BC" ] ;
+         fhir:postalCode [ fhir:v "V9RMC9" ] ;
+         fhir:country [ fhir:v "CA" ]
+       ] [
+         fhir:type [ fhir:v "postal" ] ;
+         fhir:line ( [ fhir:v "36169 Froe street" ] ) ;
+         fhir:city [ fhir:v "Scotland" ] ;
+         fhir:state [ fhir:v "BC" ] ;
+         fhir:postalCode [ fhir:v "V1YBN5" ] ;
+         fhir:country [ fhir:v "CA" ]
+       ] ) ;
+       fhir:link ( [
+         fhir:other [
+           fhir:link <http://hlth.gov.bc.ca/fhir/client/Patient/dac629f2-e5e9-4a7a-ad74-ec4ea729c7ff> ;
+           fhir:reference [ fhir:v "Patient/dac629f2-e5e9-4a7a-ad74-ec4ea729c7ff" ]
+         ] ;
+         fhir:type [ fhir:v "replaces" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

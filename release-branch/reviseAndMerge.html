@@ -47,6 +47,7 @@
     h3,h4,h5,h6{--heading-prefix:"4"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Left logo - typically the publisher's logo - project or affiliate -->
         <div id="project-nav">
           <a id="project-logo" no-external="true" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">
@@ -191,7 +192,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#add-patient---future" id="markdown-toc-add-patient---future">Add Patient - FUTURE</a></li>
   <li><a href="#revise-patient---future" id="markdown-toc-revise-patient---future">Revise Patient - FUTURE</a></li>
-  <li><a href="#merge-patient---future" id="markdown-toc-merge-patient---future">Merge Patient - FUTURE</a></li>
+  <li><a href="#merge-patient" id="markdown-toc-merge-patient">Merge Patient</a></li>
   <li><a href="#fhir-structure-for-add-revise-merge-and-distributions---future" id="markdown-toc-fhir-structure-for-add-revise-merge-and-distributions---future">FHIR Structure for Add, Revise, Merge and Distributions - FUTURE</a></li>
   <li><a href="#asynchronous-operations---future" id="markdown-toc-asynchronous-operations---future">Asynchronous Operations - FUTURE</a></li>
 </ul>
@@ -210,7 +211,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>To prevent the termination of certain attributes in the composite view, the point of service application must first query the Client Registry and resend in a Revised Person message any attributes that were returned on the query that are not maintained in the local system.</p>
 
-<h3 id="merge-patient---future">Merge Patient - FUTURE</h3>
+<h3 id="merge-patient">Merge Patient</h3>
+
+<p>The FHIR Mimic R5 Merge Person feature is one that modifies the format of the existing R4 Merge Person interface so that it aligns closely with the <a href="https://www.hl7.org/fhir/R5/patient-operation-merge.html">R5 version</a> of the FHIR specifications.</p>
 
 <p>The Merge Patient transaction is used to merge duplicate records in the Client Registry.</p>
 
@@ -218,7 +221,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>If the demographics are updated at the same time as the merge, the demographic update will be processed as a second ‘Revised Patient’ interaction was requested and will update the demographics once the merge is complete.</p>
 
-<p>The patient record the point of service is keeping must be in the Client Registry prior to the merge or the Merge Person message will fail. This record is known as the ‘survivor’ record.</p>
+<p>The patient record the point of service is keeping must be in the Client Registry prior to the merge or the Merge Person message will fail. This record is known as the ‘survivor’ or 'target-patient' record.</p>
 
 <h3 id="fhir-structure-for-add-revise-merge-and-distributions---future">FHIR Structure for Add, Revise, Merge and Distributions - FUTURE</h3>
 
@@ -257,7 +260,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 9, 2024 23:04+0000">2024-12-09</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Jan 11, 2025 00:36+0000">2025-01-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

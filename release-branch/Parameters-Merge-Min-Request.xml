@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Parameters xmlns="http://hl7.org/fhir">
+  <id value="Merge-Min-Request"/>
+  <parameter>
+    <name value="target-patient"/>
+    <valueReference>
+      <reference value="Patient/449a2449-4115-43b1-898c-41824b7a9486"/>
+      <identifier>
+        <use value="official"/>
+        <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cer-source-patient-id"/>
+        <value value="72W771J7WC20CUUAPE92"/>
+      </identifier>
+    </valueReference>
+  </parameter>
+  <parameter>
+    <name value="source-patient"/>
+    <valueReference>
+      <reference value="Patient/a2c95a23-b7ad-4bf1-b026-f9823e2d0eca"/>
+      <identifier>
+        <use value="official"/>
+        <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cer-source-patient-id"/>
+        <value value="SIR366V4142XX8BR614N"/>
+      </identifier>
+    </valueReference>
+  </parameter>
+  <parameter>
+    <name value="result-patient"/>
+    <resource>
+      <Patient>
+        <id value="449a2449-4115-43b1-898c-41824b7a9486"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"/>
+        </meta>
+        <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+          <valuePeriod>
+            <start value="2024-12-11T09:01:59.3890729-08:00"/>
+          </valuePeriod>
+        </extension>
+        <link>
+          <other>
+            <reference value="Patient/a2c95a23-b7ad-4bf1-b026-f9823e2d0eca"/>
+          </other>
+          <type value="replaces"/>
+        </link>
+      </Patient>
+    </resource>
+  </parameter>
+</Parameters>

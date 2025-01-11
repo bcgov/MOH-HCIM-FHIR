@@ -11,7 +11,7 @@
   <name value="BCHealthClientIdentityManagement"/>
   <title value="BC Client Registry FHIR Implementation Guide"/>
   <status value="active"/>
-  <date value="2024-12-09T23:04:44+00:00"/>
+  <date value="2025-01-11T00:36:26+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -1058,28 +1058,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/Bundle-MergePatient-Request-Example"/>
-      </reference>
-      <name value="Bundle-MergePatient-Request-Example"/>
-      <description value="Example of $MergePatient operation."/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/Bundle-MergePatient-Response-Example"/>
-      </reference>
-      <name value="Bundle-MergePatient-Response-Example"/>
-      <description value="A sample MergePatient Operation response."/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -1170,6 +1148,7 @@
         <reference value="Patient/Force-Create-Request"/>
       </reference>
       <name value="Force-Create-Request"/>
+      <description value="Example of RESTful force create request."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
       <groupingId value="RestfulExamples"/>
     </resource>
@@ -1202,10 +1181,34 @@
         <valueString value="Bundle"/>
       </extension>
       <reference>
+        <reference value="Bundle/GetDemographics-Request-By-SSRI"/>
+      </reference>
+      <name value="GetDemographics-Request-By-SSRI"/>
+      <description value="Example of $GetDemographics request by SSRI."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle"/>
+      <groupingId value="RequestExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
         <reference value="Bundle/GetDemographics-Response"/>
       </reference>
       <name value="GetDemographics-Response"/>
       <description value="Example of $GetDemographics response"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
+      <groupingId value="ResponseExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/GetDemographics-Response-Masked"/>
+      </reference>
+      <name value="GetDemographics-Response-Masked"/>
+      <description value="Example of $GetDemographics masked response."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
       <groupingId value="ResponseExamples"/>
     </resource>
@@ -1271,62 +1274,38 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
+        <valueString value="Parameters"/>
       </extension>
       <reference>
-        <reference value="Bundle/Merge-Only-Request"/>
+        <reference value="Parameters/Merge-Min-Request"/>
       </reference>
-      <name value="Merge-Only-Request"/>
-      <description value="Example of $Merge only request."/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle"/>
+      <name value="Merge-Min-Request"/>
+      <description value="Example of $Merge request with minimum data."/>
+      <exampleBoolean value="true"/>
       <groupingId value="RequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
+        <valueString value="Parameters"/>
       </extension>
       <reference>
-        <reference value="Bundle/Merge-Response"/>
+        <reference value="Parameters/Merge-Request"/>
+      </reference>
+      <name value="Merge-Request"/>
+      <description value="Example of $Merge request."/>
+      <exampleBoolean value="true"/>
+      <groupingId value="RequestExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/Merge-Response"/>
       </reference>
       <name value="Merge-Response"/>
       <description value="Example of $Merge response."/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle"/>
-      <groupingId value="ResponseExamples"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/Merge-SSRI-Request"/>
-      </reference>
-      <name value="Merge-SSRI-Request"/>
-      <description value="Example of $Merge request with SSRI."/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle"/>
-      <groupingId value="RequestExamples"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/Merge-WithPayload-Request"/>
-      </reference>
-      <name value="Merge-WithPayload-Request"/>
-      <description value="Example of $Merge with payload request."/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle"/>
-      <groupingId value="RequestExamples"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/Merge-WithPayload-Response"/>
-      </reference>
-      <name value="Merge-WithPayload-Response"/>
-      <description value="Example of $Merge response with payload."/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle"/>
+      <exampleBoolean value="true"/>
       <groupingId value="ResponseExamples"/>
     </resource>
     <resource>
@@ -1339,7 +1318,6 @@
       <name value="MergeRequestBundle"/>
       <description value="A Bundle that is used in the Client Registry for Add Patient requests."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Bundles"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1351,7 +1329,6 @@
       <name value="MergeResponseBundle"/>
       <description value="A Bundle that is used in the Client Registry response to Merge Patient requests."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Bundles"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1397,6 +1374,7 @@
         <reference value="Patient/Newborn-Request"/>
       </reference>
       <name value="Newborn-Request"/>
+      <description value="Example of RESTful newborn request."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
       <groupingId value="RestfulExamples"/>
     </resource>
@@ -1424,28 +1402,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Parameters"/>
-      </extension>
-      <reference>
-        <reference value="Parameters/Parameters-MergePatient-Response-Example"/>
-      </reference>
-      <name value="Parameters-MergePatient-Response-Example"/>
-      <description value="Example of Merge response Metadata parameters"/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Parameters"/>
-      </extension>
-      <reference>
-        <reference value="Parameters/Parameters-MergePatient-TwoNonSurvivors-Example"/>
-      </reference>
-      <name value="Parameters-MergePatient-TwoNonSurvivors-Example"/>
-      <description value="Example of $MergePatient operation."/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Patient"/>
       </extension>
       <reference>
@@ -1454,17 +1410,6 @@
       <name value="Patient-GetDemographics-Example"/>
       <description value="Example of Patient for $GetDemographics operation response"/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Patient"/>
-      </extension>
-      <reference>
-        <reference value="Patient/Patient-MergePatient-Example"/>
-      </reference>
-      <name value="Patient-MergePatient-Example"/>
-      <description value="Example of a merge patient Patient"/>
-      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1487,7 +1432,6 @@
       <name value="PatientMerge"/>
       <description value="General constraints on the Patient resource for use in the BC Client Registry project Merge Operation."/>
       <exampleBoolean value="false"/>
-      <groupingId value="PatientProfile"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1521,17 +1465,31 @@
         <reference value="Patient/Revise-Request"/>
       </reference>
       <name value="Revise-Request"/>
+      <description value="Example of RESTful $Revise request."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
       <groupingId value="RestfulExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Revise-Request-No-SRI"/>
+      </reference>
+      <name value="Revise-Request-No-SRI"/>
+      <description value="Example of $Revise request with no SRI."/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle"/>
+      <groupingId value="RequestExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Patient"/>
       </extension>
       <reference>
-        <reference value="Patient/Revise-Request-No-SRI"/>
+        <reference value="Patient/Revise-Request-No-SRI-RESTful"/>
       </reference>
-      <name value="Revise-Request-No-SRI"/>
+      <name value="Revise-Request-No-SRI-RESTful"/>
+      <description value="Example of RESTful $Revise request with no SRI."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
       <groupingId value="RestfulExamples"/>
     </resource>

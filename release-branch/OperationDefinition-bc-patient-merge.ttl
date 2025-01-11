@@ -10,7 +10,7 @@
   fhir:id [ fhir:v "bc-patient-merge"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition bc-patient-merge</b></p><a name=\"bc-patient-merge\"> </a><a name=\"hcbc-patient-merge\"> </a><a name=\"bc-patient-merge-en-US\"> </a><p>URL: [base]/Patient/$MergePatient</p><p>Input parameters Profile:<a href=\"StructureDefinition-bc-merge-request-bundle.html\">MergeRequestBundle</a></p><p>Output parameters Profile:<a href=\"StructureDefinition-bc-merge-response-bundle.html\">MergeResponseBundle</a></p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>MergeRequestBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The merge request Bundle.</p>\n</div></td></tr><tr><td>IN</td><td>MergeResponseBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The merge response Bundle.</p>\n</div></td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition bc-patient-merge</b></p><a name=\"bc-patient-merge\"> </a><a name=\"hcbc-patient-merge\"> </a><a name=\"bc-patient-merge-en-US\"> </a><p>URL: [base]/Patient/$Merge</p><p>Input parameters Profile:<a href=\"http://hl7.org/fhir/R4/parameters.html\">Parameters</a></p><p>Output parameters Profile:<a href=\"http://hl7.org/fhir/R4/parameters.html\">Parameters</a></p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>source-patient</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a></td><td/><td><div><p>A direct resource reference to the source patient resource (this may include an identifier).</p>\n</div></td></tr><tr><td>IN</td><td>source-patient-identifier</td><td/><td>0..*</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>When source-patient-identifiers are provided, the server is expected to perform an internal lookup to identify the source patient record. The server SHALL reject the request if the provided identifiers do not resolve to a single patient record. This resolution MAY occur asynchronously, for example, as a part of a review by a user.</p>\n</div></td></tr><tr><td>IN</td><td>target-patient</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a></td><td/><td><div><p>A direct resource reference to the target patient resource. This is the surviving patient resource, the target for the merge.</p>\n</div></td></tr><tr><td>IN</td><td>target-patient-identifier</td><td/><td>0..*</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>When target-patient-identifiers are provided, the server is expected to perform an internal lookup to identify the target patient record. The server SHALL reject the request if the provided identifiers do not resolve to a single patient record. This resolution MAY occur asynchronously, for example, as a part of a review by a user.</p>\n</div></td></tr><tr><td>IN</td><td>result-patient</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a></td><td/><td><div><p>The details of the Patient resource that is expected to be updated to complete with and must have the same patient.id and provided identifiers included. This resource MUST have the link property included referencing the source patient resource. It will be used to perform an update on the target patient resource. In the absence of this parameter the servers should copy all identifiers from the source patient into the target patient, and include the link property. This is often used when properties from the source patient are desired to be included in the target resource. The receiving system may also apply other internal business rules onto the merge which may make the resource different from what is provided here.</p>\n</div></td></tr><tr><td>OUT</td><td>return</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/parameters.html\">Parameters</a></td><td/><td><div><p>The Parameters resource will include: The Input parameters to the operation, An OperationOutcome containing errors, warnings, and information messages, The resulting merged Patient resource (or a patient reference if the patient is not committed), Optionally a Task resource to track any additional processing that was required.</p>\n</div></td></tr></table></div>"
   ] ; # 
   fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-merge"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "1.0.0"] ; # 
@@ -18,7 +18,7 @@
   fhir:title [ fhir:v "Merge Patient"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "operation"] ; # 
-  fhir:date [ fhir:v "2024-12-09T23:04:44+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-11T00:36:26+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "BC Ministry of Health"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "BC Ministry of Health" ] ;
@@ -35,33 +35,61 @@
        fhir:display [ fhir:v "Canada" ]
      ] )
   ] ) ; # 
-  fhir:code [ fhir:v "MergePatient"] ; # 
+  fhir:code [ fhir:v "Merge"] ; # 
   fhir:resource ( [ fhir:v "Patient"] ) ; # 
   fhir:system [ fhir:v "false"^^xsd:boolean] ; # 
   fhir:type [ fhir:v "true"^^xsd:boolean] ; # 
   fhir:instance [ fhir:v "false"^^xsd:boolean] ; # 
   fhir:inputProfile [
-     fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle"^^xsd:anyURI ;
-     fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle>
+     fhir:v "http://hl7.org/fhir/StructureDefinition/Parameters"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/StructureDefinition/Parameters>
   ] ; # 
   fhir:outputProfile [
-     fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle"^^xsd:anyURI ;
-     fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle>
+     fhir:v "http://hl7.org/fhir/StructureDefinition/Parameters"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/StructureDefinition/Parameters>
   ] ; # 
   fhir:parameter ( [
-     fhir:name [ fhir:v "MergeRequestBundle" ] ;
+     fhir:name [ fhir:v "source-patient" ] ;
      fhir:use [ fhir:v "in" ] ;
-     fhir:min [ fhir:v "1"^^xsd:integer ] ;
+     fhir:min [ fhir:v "0"^^xsd:integer ] ;
      fhir:max [ fhir:v "1" ] ;
-     fhir:documentation [ fhir:v "The merge request Bundle." ] ;
-     fhir:type [ fhir:v "Bundle" ]
+     fhir:documentation [ fhir:v "A direct resource reference to the source patient resource (this may include an identifier)." ] ;
+     fhir:type [ fhir:v "Patient" ]
   ] [
-     fhir:name [ fhir:v "MergeResponseBundle" ] ;
+     fhir:name [ fhir:v "source-patient-identifier" ] ;
      fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v "0"^^xsd:integer ] ;
+     fhir:max [ fhir:v "*" ] ;
+     fhir:documentation [ fhir:v "When source-patient-identifiers are provided, the server is expected to perform an internal lookup to identify the source patient record. The server SHALL reject the request if the provided identifiers do not resolve to a single patient record. This resolution MAY occur asynchronously, for example, as a part of a review by a user." ] ;
+     fhir:type [ fhir:v "Identifier" ]
+  ] [
+     fhir:name [ fhir:v "target-patient" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v "0"^^xsd:integer ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "A direct resource reference to the target patient resource. This is the surviving patient resource, the target for the merge." ] ;
+     fhir:type [ fhir:v "Patient" ]
+  ] [
+     fhir:name [ fhir:v "target-patient-identifier" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v "0"^^xsd:integer ] ;
+     fhir:max [ fhir:v "*" ] ;
+     fhir:documentation [ fhir:v "When target-patient-identifiers are provided, the server is expected to perform an internal lookup to identify the target patient record. The server SHALL reject the request if the provided identifiers do not resolve to a single patient record. This resolution MAY occur asynchronously, for example, as a part of a review by a user." ] ;
+     fhir:type [ fhir:v "Identifier" ]
+  ] [
+     fhir:name [ fhir:v "result-patient" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v "0"^^xsd:integer ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The details of the Patient resource that is expected to be updated to complete with and must have the same patient.id and provided identifiers included. This resource MUST have the link property included referencing the source patient resource. It will be used to perform an update on the target patient resource. In the absence of this parameter the servers should copy all identifiers from the source patient into the target patient, and include the link property. This is often used when properties from the source patient are desired to be included in the target resource. The receiving system may also apply other internal business rules onto the merge which may make the resource different from what is provided here." ] ;
+     fhir:type [ fhir:v "Patient" ]
+  ] [
+     fhir:name [ fhir:v "return" ] ;
+     fhir:use [ fhir:v "out" ] ;
      fhir:min [ fhir:v "1"^^xsd:integer ] ;
      fhir:max [ fhir:v "1" ] ;
-     fhir:documentation [ fhir:v "The merge response Bundle." ] ;
-     fhir:type [ fhir:v "Bundle" ]
+     fhir:documentation [ fhir:v "The Parameters resource will include: The Input parameters to the operation, An OperationOutcome containing errors, warnings, and information messages, The resulting merged Patient resource (or a patient reference if the patient is not committed), Optionally a Task resource to track any additional processing that was required." ] ;
+     fhir:type [ fhir:v "Parameters" ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

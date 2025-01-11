@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Parameters xmlns="http://hl7.org/fhir">
+  <id value="Merge-Request"/>
+  <parameter>
+    <name value="target-patient"/>
+    <valueReference>
+      <reference value="Patient/5fa9ea0c-f328-4814-b74f-fded423a36b1"/>
+      <identifier>
+        <use value="official"/>
+        <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cer-source-patient-id"/>
+        <value value="72W771J7WC20CUUAPE92"/>
+      </identifier>
+    </valueReference>
+  </parameter>
+  <parameter>
+    <name value="source-patient"/>
+    <valueReference>
+      <reference value="Patient/dac629f2-e5e9-4a7a-ad74-ec4ea729c7ff"/>
+      <identifier>
+        <use value="official"/>
+        <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cer-source-patient-id"/>
+        <value value="SIR366V4142XX8BR614N"/>
+      </identifier>
+    </valueReference>
+  </parameter>
+  <parameter>
+    <name value="source-patient-identifier"/>
+    <valueIdentifier>
+      <use value="official"/>
+      <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cer-source-patient-id"/>
+      <value value="9ZT34G1R80R9560D26FR"/>
+    </valueIdentifier>
+  </parameter>
+  <parameter>
+    <name value="target-patient-identifier"/>
+    <valueIdentifier>
+      <use value="official"/>
+      <system value="https://fhir.infoway-inforoute.ca/NamingSystem/ca-mb-patient-healthcare-id"/>
+      <value value="T5CC0SKI2IF994496VDF"/>
+    </valueIdentifier>
+  </parameter>
+  <parameter>
+    <name value="target-patient-identifier"/>
+    <valueIdentifier>
+      <use value="secondary"/>
+      <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-arh-source-patient-id"/>
+      <value value="807021VQ7PBO3JW6RYN1"/>
+    </valueIdentifier>
+  </parameter>
+  <parameter>
+    <name value="source-patient-identifier"/>
+    <valueIdentifier>
+      <use value="secondary"/>
+      <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-bh-source-patient-id"/>
+      <value value="UZ7Q5625L7K8980Y0476"/>
+    </valueIdentifier>
+  </parameter>
+  <parameter>
+    <name value="source-patient-identifier"/>
+    <valueIdentifier>
+      <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension">
+        <valueCode value="cancelled"/>
+      </extension>
+      <use value="secondary"/>
+      <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-cac-source-patient-id"/>
+      <value value="3R9931Z6K12RTVW7S4F5"/>
+    </valueIdentifier>
+  </parameter>
+  <parameter>
+    <name value="result-patient"/>
+    <resource>
+      <Patient>
+        <id value="5fa9ea0c-f328-4814-b74f-fded423a36b1"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"/>
+        </meta>
+        <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+          <valuePeriod>
+            <start value="2024-12-11T09:01:59.3890729-08:00"/>
+          </valuePeriod>
+        </extension>
+        <name>
+          <use value="usual"/>
+          <family value="Gedris"/>
+          <given value="Cyprian"/>
+          <given value="Enea"/>
+          <given value="Folami"/>
+        </name>
+        <name>
+          <use value="nickname"/>
+          <given value="Thin"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="7541326401"/>
+          <use value="mobile"/>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="9729769249"/>
+          <use value="home"/>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="8431422495"/>
+          <use value="work"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="Thilo.Malinchalk@cgi.com"/>
+          <use value="mobile"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="Nikita.Pinal@cgi.com"/>
+          <use value="home"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="Johan.Kottler@cgi.com"/>
+          <use value="work"/>
+        </telecom>
+        <gender value="female"/>
+        <birthDate value="1977-12-04"/>
+        <address>
+          <type value="physical"/>
+          <line value="8649 Pineview drive"/>
+          <city value="Hyannis"/>
+          <state value="BC"/>
+          <postalCode value="V9RMC9"/>
+          <country value="CA"/>
+        </address>
+        <address>
+          <type value="postal"/>
+          <line value="36169 Froe street"/>
+          <city value="Scotland"/>
+          <state value="BC"/>
+          <postalCode value="V1YBN5"/>
+          <country value="CA"/>
+        </address>
+        <link>
+          <other>
+            <reference value="Patient/dac629f2-e5e9-4a7a-ad74-ec4ea729c7ff"/>
+          </other>
+          <type value="replaces"/>
+        </link>
+      </Patient>
+    </resource>
+  </parameter>
+</Parameters>

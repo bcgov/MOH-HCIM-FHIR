@@ -1,0 +1,48 @@
+{
+  "resourceType" : "Parameters",
+  "id" : "Merge-Min-Request",
+  "parameter" : [{
+    "name" : "target-patient",
+    "valueReference" : {
+      "reference" : "Patient/449a2449-4115-43b1-898c-41824b7a9486",
+      "identifier" : {
+        "use" : "official",
+        "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cer-source-patient-id",
+        "value" : "72W771J7WC20CUUAPE92"
+      }
+    }
+  },
+  {
+    "name" : "source-patient",
+    "valueReference" : {
+      "reference" : "Patient/a2c95a23-b7ad-4bf1-b026-f9823e2d0eca",
+      "identifier" : {
+        "use" : "official",
+        "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cer-source-patient-id",
+        "value" : "SIR366V4142XX8BR614N"
+      }
+    }
+  },
+  {
+    "name" : "result-patient",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "449a2449-4115-43b1-898c-41824b7a9486",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"]
+      },
+      "extension" : [{
+        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+        "valuePeriod" : {
+          "start" : "2024-12-11T09:01:59.3890729-08:00"
+        }
+      }],
+      "link" : [{
+        "other" : {
+          "reference" : "Patient/a2c95a23-b7ad-4bf1-b026-f9823e2d0eca"
+        },
+        "type" : "replaces"
+      }]
+    }
+  }]
+}

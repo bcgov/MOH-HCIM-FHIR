@@ -1,0 +1,56 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Parameters/Merge-Response> a fhir:Parameters ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Merge-Response"] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "outcome" ] ;
+     fhir:Parameters.parameter.resource ( [
+       a fhir:OperationOutcome ;
+       fhir:issue ( [
+         fhir:severity [ fhir:v "information" ] ;
+         fhir:code [ fhir:v "business-rule" ] ;
+         fhir:details [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "BCHCIM.PM.0.0008" ]
+           ] ) ;
+           fhir:text [ fhir:v "The Person Merge request has completed successfully." ]
+         ]
+       ] )
+     ] )
+  ] [
+     fhir:name [ fhir:v "result" ] ;
+     fhir:Parameters.parameter.resource ( [
+       a fhir:Patient ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"^^xsd:anyURI ;
+           fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+         ] )
+       ] ;
+       fhir:identifier ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "active" ]
+         ] ) ;
+         fhir:use [ fhir:v "official" ] ;
+         fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cer-source-patient-id"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "72W771J7WC20CUUAPE92" ] ;
+         fhir:period [
+           fhir:start [ fhir:v "2024-12-11T09:01:59-08:00"^^xsd:dateTime ]
+         ] ;
+         fhir:assigner [
+           fhir:display [ fhir:v "VPP Cerner" ]
+         ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

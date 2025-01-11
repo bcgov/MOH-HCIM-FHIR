@@ -476,6 +476,12 @@
   },
   "usage": {
     "http://hl7.org/fhir/StructureDefinition/data-absent-reason": [
+      "Bundle.entry.resource.address",
+      "Bundle.entry.resource.birthDate",
+      "Bundle.entry.resource.gender",
+      "Bundle.entry.resource.identifier.value",
+      "Bundle.entry.resource.name",
+      "Bundle.entry.resource.telecom",
       "Patient.identifier.value"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
@@ -547,10 +553,12 @@
       "Patient.birthDate"
     ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension": [
+      "Bundle.entry.resource",
       "Bundle.entry.resource.birthDate",
       "Bundle.entry.resource.deceasedDateTime",
       "Bundle.entry.resource.gender",
       "Extension",
+      "Parameters.parameter.resource",
       "Patient",
       "Patient.birthDate",
       "Patient.deceased[x]",
@@ -574,12 +582,11 @@
     ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension": [
       "Bundle.entry.resource.identifier",
-      "Bundle.entry.resource.link.other.identifier",
-      "Patient.identifier",
-      "Patient.link.other.identifier"
+      "Parameters.parameter.resource.identifier",
+      "Patient.identifier"
     ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension": [
-      "Bundle.entry.resource.link",
+      "Parameters.parameter.valueIdentifier",
       "Patient.link"
     ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-multiplebirth-history-extension": [

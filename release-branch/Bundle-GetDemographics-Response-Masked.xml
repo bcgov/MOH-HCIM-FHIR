@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="GetDemographics-Response-Masked"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"/>
+  </meta>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:be0ea88b-cb92-46a5-8ae8-5aaa943d99c0"/>
+  </identifier>
+  <type value="searchset"/>
+  <timestamp value="2024-11-28T06:27:01.3305055-08:00"/>
+  <total value="1"/>
+  <link>
+    <relation value="canonical"/>
+    <url value="https://localhost/$GetDemographics"/>
+  </link>
+  <entry>
+    <fullUrl value="urn:uuid:a5aadea1-11ad-4428-a7d3-88a8e284c261"/>
+    <resource>
+      <Parameters>
+        <id value="GetDemographics-Response-Masked-Parameters"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"/>
+        </meta>
+        <parameter>
+          <name value="messageId"/>
+          <valueString value="76648f54-2dd3-40f4-b6bd-5c39386061b2"/>
+        </parameter>
+        <parameter>
+          <name value="history"/>
+          <valueBoolean value="false"/>
+        </parameter>
+        <parameter>
+          <name value="identifiersOnly"/>
+          <valueBoolean value="false"/>
+        </parameter>
+      </Parameters>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <id value="GetDemographics-Response-Masked-Outcome"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="OperationOutcome_GetDemographics-Response-Masked-Outcome"> </a><p class="res-header-id"><b>Generated Narrative: OperationOutcome GetDemographics-Response-Masked-Outcome</b></p><a name="GetDemographics-Response-Masked-Outcome"> </a><a name="hcGetDemographics-Response-Masked-Outcome"> </a><a name="GetDemographics-Response-Masked-Outcome-en-US"> </a><h3>Issues</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style="display: none">*</td><td>Information</td><td>Business Rule Violation</td><td><span title="Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.GD.0.0013}">The get demographics query completed successfully.</span></td></tr></table></div>
+        </text>
+        <issue>
+          <severity value="information"/>
+          <code value="business-rule"/>
+          <details>
+            <coding>
+              <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes"/>
+              <code value="BCHCIM.GD.0.0013"/>
+            </coding>
+            <text value="The get demographics query completed successfully."/>
+          </details>
+        </issue>
+      </OperationOutcome>
+    </resource>
+    <search>
+      <mode value="outcome"/>
+    </search>
+  </entry>
+  <entry>
+    <resource>
+      <Patient>
+        <id value="GetDemographics-Response-Masked-Patient"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Patient_GetDemographics-Response-Masked-Patient"> </a><p class="res-header-id"><b>Generated Narrative: Patient GetDemographics-Response-Masked-Patient</b></p><a name="GetDemographics-Response-Masked-Patient"> </a><a name="hcGetDemographics-Response-Masked-Patient"> </a><a name="GetDemographics-Response-Masked-Patient-en-US"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"> null, DoB: </p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Alternate names (see the one above)">Alt. Name:</td><td colspan="3">(Nickname)</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li>ph: -unknown-(Mobile)</li><li>ph: -unknown-(Home)</li><li>ph: -unknown-(Work)</li><li><a href="mailto:null"/></li><li><a href="mailto:null"/></li><li><a href="mailto:null"/></li><li></li><li></li></ul></td></tr></table></div>
+        </text>
+        <name>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="masked"/>
+          </extension>
+          <use value="usual"/>
+        </name>
+        <name>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="masked"/>
+          </extension>
+          <use value="nickname"/>
+        </name>
+        <telecom>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="masked"/>
+          </extension>
+          <system value="phone"/>
+          <use value="mobile"/>
+        </telecom>
+        <telecom>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="masked"/>
+          </extension>
+          <system value="phone"/>
+          <use value="home"/>
+        </telecom>
+        <telecom>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="masked"/>
+          </extension>
+          <system value="phone"/>
+          <use value="work"/>
+        </telecom>
+        <telecom>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="masked"/>
+          </extension>
+          <system value="email"/>
+          <use value="mobile"/>
+        </telecom>
+        <telecom>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="masked"/>
+          </extension>
+          <system value="email"/>
+          <use value="home"/>
+        </telecom>
+        <telecom>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="masked"/>
+          </extension>
+          <system value="email"/>
+          <use value="work"/>
+        </telecom>
+        <gender>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="masked"/>
+          </extension>
+        </gender>
+        <birthDate>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="masked"/>
+          </extension>
+        </birthDate>
+        <address>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="masked"/>
+          </extension>
+          <type value="physical"/>
+        </address>
+        <address>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="masked"/>
+          </extension>
+          <type value="postal"/>
+        </address>
+      </Patient>
+    </resource>
+  </entry>
+</Bundle>

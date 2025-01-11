@@ -1,0 +1,132 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Bundle/Revise-Request-No-SRI> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Revise-Request-No-SRI"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:timestamp [ fhir:v "2024-11-28T06:27:01.3453761-08:00"^^xsd:dateTime] ; # 
+  fhir:link ( [
+     fhir:relation [ fhir:v "self" ] ;
+     fhir:url [ fhir:v "urn:uuid:378954cb-6473-4399-b99c-1bd2988950ae"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:feece490-6a8b-48c3-bd35-6a16008c19ef"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:feece490-6a8b-48c3-bd35-6a16008c19ef> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:23d2b2f0-7724-4959-9007-302b26499633"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:23d2b2f0-7724-4959-9007-302b26499633> )
+  ] ) . # 
+
+<urn:uuid:feece490-6a8b-48c3-bd35-6a16008c19ef> a fhir:Parameters ;
+  fhir:id [ fhir:v "Revise-Request-No-SRI-Parameters"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in>
+     ] )
+  ] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "messageId" ] ;
+     fhir:value [ fhir:v "76648f54-2dd3-40f4-b6bd-5c39386061b2" ]
+  ] [
+     fhir:name [ fhir:v "sender" ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:system [ fhir:v "http://hlth.gov.bc.ca/fhir/client/bc-org"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "FHA" ]
+     ]
+  ] ) . # 
+
+<urn:uuid:23d2b2f0-7724-4959-9007-302b26499633> a fhir:Patient ;
+  fhir:id [ fhir:v "Revise-Request-No-SRI-Patient"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_Revise-Request-No-SRI-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient Revise-Request-No-SRI-Patient</b></p><a name=\"Revise-Request-No-SRI-Patient\"> </a><a name=\"hcRevise-Request-No-SRI-Patient\"> </a><a name=\"Revise-Request-No-SRI-Patient-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Proinnsias Edmon Beartlaidh Tabatabai  Female, DoB: 1996-02-18 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id#?ngen-9? (use: official, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Alternate names (see the one above)\">Alt. Name:</td><td colspan=\"3\">Victor (Nickname)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 3104702526(Mobile)</li><li>ph: 3366898069(Home)</li><li>ph: 2544265519(Work)</li><li><a href=\"mailto:Constance.Besarra@cgi.com\">Constance.Besarra@cgi.com</a></li><li><a href=\"mailto:Hank.Avey@cgi.com\">Hank.Avey@cgi.com</a></li><li><a href=\"mailto:Nerissa.Friede@cgi.com\">Nerissa.Friede@cgi.com</a></li><li>7562 Railroad street Calistoga BC V5QOX7 CA </li><li>27523 Oak street Topmost BC V4IUH0 CA </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The effective dates for the parent element.\"><a href=\"StructureDefinition-bc-business-period-extension.html\">BC Business Dates</a></td><td colspan=\"3\">2024-11-28 06:22:01-0800 --&gt; (ongoing)</td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Period ;
+       fhir:start [ fhir:v "2024-11-28T06:22:01.0974407-08:00"^^xsd:dateTime ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id"^^xsd:anyURI ] ;
+     fhir:value [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "unknown" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:family [ fhir:v "Tabatabai" ] ;
+     fhir:given ( [ fhir:v "Proinnsias" ] [ fhir:v "Edmon" ] [ fhir:v "Beartlaidh" ] )
+  ] [
+     fhir:use [ fhir:v "nickname" ] ;
+     fhir:given ( [ fhir:v "Victor" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "3104702526" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "3366898069" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "2544265519" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Constance.Besarra@cgi.com" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Hank.Avey@cgi.com" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Nerissa.Friede@cgi.com" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1996-02-18"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:type [ fhir:v "physical" ] ;
+     fhir:line ( [ fhir:v "7562 Railroad street" ] ) ;
+     fhir:city [ fhir:v "Calistoga" ] ;
+     fhir:state [ fhir:v "BC" ] ;
+     fhir:postalCode [ fhir:v "V5QOX7" ] ;
+     fhir:country [ fhir:v "CA" ]
+  ] [
+     fhir:type [ fhir:v "postal" ] ;
+     fhir:line ( [ fhir:v "27523 Oak street" ] ) ;
+     fhir:city [ fhir:v "Topmost" ] ;
+     fhir:state [ fhir:v "BC" ] ;
+     fhir:postalCode [ fhir:v "V4IUH0" ] ;
+     fhir:country [ fhir:v "CA" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
