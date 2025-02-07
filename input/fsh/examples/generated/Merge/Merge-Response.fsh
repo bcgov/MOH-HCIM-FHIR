@@ -1,5 +1,3 @@
-//Alias: $bc-oo-codes = http://hlth.gov.bc.ca/fhir/client/bc-oo-codes
-
 Instance: Merge-Response
 InstanceOf: Parameters
 Description: "Example of $Merge response."
@@ -16,7 +14,7 @@ Usage: #example
 * parameter[=].resource.identifier.extension.url = "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
 * parameter[=].resource.identifier.extension.valueCode = #active
 * parameter[=].resource.identifier.use = #official
-* parameter[=].resource.identifier.system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vpp-cer-source-patient-id"
-* parameter[=].resource.identifier.value = "72W771J7WC20CUUAPE92"
-* parameter[=].resource.identifier.period.start = "2024-12-11T09:01:59-08:00"
-* parameter[=].resource.identifier.assigner.display = "VPP Cerner"
+* parameter[=].resource.identifier.system = "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id"
+* parameter[=].resource.identifier.value = "U6UQG3285Z5NG23110E2"
+* parameter[=].resource.identifier.period.start = "2025-01-16T12:54:54-08:00"
+* parameter[=].resource.identifier.assigner.display = "FHA Fraser Health Expanse - FHA_EXP"
