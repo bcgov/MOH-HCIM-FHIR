@@ -22,7 +22,7 @@ Usage: #definition
 * parameter[0].min = 0
 * parameter[0].max = "1"
 * parameter[0].documentation = "A direct resource reference to the source patient resource (this may include an identifier)."
-* parameter[0].type = #Patient
+* parameter[0].type = #Reference
 
 * parameter[1].name = #source-patient-identifier
 * parameter[1].use = #in
@@ -36,7 +36,7 @@ Usage: #definition
 * parameter[2].min = 0
 * parameter[2].max = "1"
 * parameter[2].documentation = "A direct resource reference to the target patient resource. This is the surviving patient resource, the target for the merge."
-* parameter[2].type = #Patient
+* parameter[2].type = #Reference
 
 * parameter[3].name = #target-patient-identifier
 * parameter[3].use = #in
