@@ -8,7 +8,7 @@ Usage: #definition
 * title = "Merge Patient"
 * status = #draft
 * kind = #operation
-* code = #Merge
+* code = #merge
 * resource[0] = #Patient
 * system = false
 * type = true
