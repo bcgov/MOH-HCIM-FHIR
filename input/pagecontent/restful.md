@@ -1,4 +1,9 @@
 
+### FHIR Using RESTful APIs
+RESTful APIs assit with FHIR's data exhange using HTTP, URLS and JSON.
+Implementing FHIR practices using RESTful APIs gives developers the advantage of simplicity, interoperability, scalability and real-time data exchange.
+For more information regarding FHIR using RESTful APIs, please refer to the article [**FHIR Basics: A Beginner's Guide to Resources and RESTful APIs**](https://www.linkedin.com/pulse/fhir-basics-beginners-guide-resources-restful-apis-praveen-solanki-ekumf/) by Praveen Solanki.
+
 ### RESTful Find
 The RESTful Find uses the name and other criteria (e.g. date of birth) to find the client’s record and PHN via a “probabilistic search” in the Client Registry. In a probabilistic search, the outcome of the search cannot be predicted.
 
