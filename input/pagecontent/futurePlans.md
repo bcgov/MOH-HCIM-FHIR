@@ -68,7 +68,7 @@ This release might include the following Operations and supporting profiles
 Operation |
 :--- |
 Distribution |
-Subscription Bundle |
+[Subscription Bundle](StructureDefinition-bc-subscription-notification-bundle.html) |
 {:.grid}
 
 
