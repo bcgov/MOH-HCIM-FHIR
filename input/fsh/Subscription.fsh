@@ -35,6 +35,7 @@ Description: "Codes used to indicate that type of patient changes that a subscri
 * ^experimental = false
 * codes from system PatientChangeNotificationEvents
 
+
 Profile: HCIMPatientChangeSubscription
 Parent: http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription
 Description: "Profile on subscription for HCIM Patient Changes"
@@ -45,6 +46,7 @@ Description: "Profile on subscription for HCIM Patient Changes"
   * endpoint 1..1 MS
   * payload MS
     * extension[content].valueCode = #full-resource
+
 
 Instance: SampleCompositeSubscriptionRequest
 InstanceOf: HCIMPatientChangeSubscription

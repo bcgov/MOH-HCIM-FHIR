@@ -264,5 +264,27 @@ Description:  "A Bundle that is used in the Client Registry response to Merge Pa
 ////////////////////////////////////
 // SUBSCRIPTION NOTIFICATION
 ////////////////////////////////////
- /** Profile: SubscriptionNotificationBundle - future release */
+Profile: SubscriptionNotificationBundle
+Parent: Bundle
+Id: bc-subscription-notification-bundle
+Description:  "A Bundle that is used in the Client Registry when sending subscription notifications."
+* type 1..1 MS
+* type = #collection (exactly)
+* entry 2..3
+* entry.resource 1..1 MS
+* entry.fullUrl 1..1 MS
+* entry.search 0..1
+* entry.request 0..1 MS
+* entry.response 0..1
+* entry ^slicing.discriminator.type = #type
+* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.rules = #open
+* entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is sending a subscription notification."
+* entry contains patient 0..1 MS and parameters 1..1 MS and operationOutcome 1..1 MS
+* entry[parameters].resource only MetadataParametersSubscription
+* entry[parameters] ^short = "Subscription Metadata parameters"
+* entry[operationOutcome].resource only OperationOutcome
+* entry[operationOutcome] ^short = "Messages and codes returned by HCIM."
+* entry[patient].resource only ClientRegistryPatient
+* entry[patient] ^short = "Revised Patient."
 
