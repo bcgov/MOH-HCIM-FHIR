@@ -1,0 +1,129 @@
+{
+  "resourceType": "SubscriptionTopic",
+  "id": "HCIMPatientChangeDistributionTopic",
+  "url": "http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistributionTopic",
+  "status": "active",
+  "name": "HCIMPatientChangeDistributionsTopic",
+  "title": "HCIM Patient Change Distributions Topic",
+  "description": "This is the subscription topic used for subscribing to different change distributions.",
+  "experimental": false,
+  "eventTrigger": [
+    {
+      "event": {
+        "coding": [
+          {
+            "system": "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+            "code": "COMPOSITE"
+          }
+        ]
+      },
+      "resource": "http://hl7.org/fhir/StructureDefinition/Patient"
+    },
+    {
+      "event": {
+        "coding": [
+          {
+            "system": "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+            "code": "DEATH"
+          }
+        ]
+      },
+      "resource": "http://hl7.org/fhir/StructureDefinition/Patient"
+    },
+    {
+      "event": {
+        "coding": [
+          {
+            "system": "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+            "code": "EID"
+          }
+        ]
+      },
+      "resource": "http://hl7.org/fhir/StructureDefinition/Patient"
+    },
+    {
+      "event": {
+        "coding": [
+          {
+            "system": "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+            "code": "NEW"
+          }
+        ]
+      },
+      "resource": "http://hl7.org/fhir/StructureDefinition/Patient"
+    },
+    {
+      "event": {
+        "coding": [
+          {
+            "system": "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+            "code": "NEWBORN"
+          }
+        ]
+      },
+      "resource": "http://hl7.org/fhir/StructureDefinition/Patient"
+    },
+    {
+      "event": {
+        "coding": [
+          {
+            "system": "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+            "code": "NEWBORN_GENDER"
+          }
+        ]
+      },
+      "resource": "http://hl7.org/fhir/StructureDefinition/Patient"
+    },
+    {
+      "event": {
+        "coding": [
+          {
+            "system": "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+            "code": "PHN"
+          }
+        ]
+      },
+      "resource": "http://hl7.org/fhir/StructureDefinition/Patient"
+    },
+    {
+      "event": {
+        "coding": [
+          {
+            "system": "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+            "code": "PHNJOIN"
+          }
+        ]
+      },
+      "resource": "http://hl7.org/fhir/StructureDefinition/Patient"
+    },
+    {
+      "event": {
+        "coding": [
+          {
+            "system": "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+            "code": "PHNMERGE"
+          }
+        ]
+      },
+      "resource": "http://hl7.org/fhir/StructureDefinition/Patient"
+    },
+    {
+      "event": {
+        "coding": [
+          {
+            "system": "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+            "code": "SSRI"
+          }
+        ]
+      },
+      "resource": "http://hl7.org/fhir/StructureDefinition/Patient"
+    }
+  ],
+  "canFilterBy": [
+    {
+      "description": "The type of patient change events to be notified.",
+      "filterParameter": "eventCode",
+      "comparator": ["eq"] 
+    }
+  ]
+}

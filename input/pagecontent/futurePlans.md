@@ -67,7 +67,7 @@ This release might include the following Operations and supporting profiles
 
 Operation |
 :--- |
-Distribution |
+[Distribution](CodeSystem-bc-client-registry-patient-change-notification-events.html) |
 [Subscription Bundle](StructureDefinition-bc-subscription-notification-bundle.html) |
 {:.grid}
 
