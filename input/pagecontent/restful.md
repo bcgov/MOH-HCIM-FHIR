@@ -1,4 +1,9 @@
 
+### FHIR Using RESTful APIs
+RESTful APIs assit with FHIR's data exhange using HTTP, URLS and JSON.
+Implementing FHIR practices using RESTful APIs gives developers the advantage of simplicity, interoperability, scalability and real-time data exchange.
+For more information regarding FHIR using RESTful APIs, please refer to the article [**FHIR Basics: A Beginner's Guide to Resources and RESTful APIs**](https://www.linkedin.com/pulse/fhir-basics-beginners-guide-resources-restful-apis-praveen-solanki-ekumf/) by Praveen Solanki.
+
 ### RESTful Find
 The RESTful Find uses the name and other criteria (e.g. date of birth) to find the client’s record and PHN via a “probabilistic search” in the Client Registry. In a probabilistic search, the outcome of the search cannot be predicted.
 
@@ -58,7 +63,7 @@ More details can be found in the [response Bundle](StructureDefinition-bc-search
 
 ### RESTful Revise Person
 
-RESTful Revise Person provides a RESTful interfact to acccess the Add Person and Update Person transactions.
+RESTful Revise Person provides a RESTful interface to acccess the Add Person and Update Person transactions.
 
 The system must provide the ability to accept PHNs created/issued by approved source like PharmaNet and HIBC.
 
@@ -68,9 +73,29 @@ A revise person record will be rejected when:
 * PHN fails validation check
 * the message contains illegal characters in any of the name fields
 * no user id or effective date were provided
-*or if a Source Record Identifier was not provided if the source is not PHN Bound
+* the message contains a date of death or death indicator but no PHN
+* or if a Source Record Identifier was not provided if the source is not PHN-Bound
 
-A Revise Person message with a date of death or death indicator must have a PHN.
+The minimum data set for Revise Person is:
+* Purported PHN or Mother's PHN
+* Name
+  * Name Type
+  * First Name
+  * Last Name
+* Date of Birth
+* Gender
+* OR
+* Name
+  * Name Type
+  * First Name
+  * Last Name
+* Date of Birth
+* Gender
+* Address
+  * Address Type (Mailing or Physical)
+  * Address Line 1
+  * City
+  * State if country is provided and is CA or US
 
 
 ### RESTful Get Examples
