@@ -1,9 +1,9 @@
 
-### Add Patient - FUTURE
+### Add Patient
 
 An add is defined as an event where at least the minimum Client Registry data elements are gathered for the first time, validated using trusted identification provided by the client and a new PHN and client record is created. 
 
-### Revise Patient - FUTURE
+### Revise Patient
 
 A revise is defined as an event where at least the minimum Client Registry data elements of an existing client with a PHN are verified using trusted identification provided by the client and updated. 
 
@@ -23,7 +23,7 @@ If the demographics are updated at the same time as the merge, the demographic u
 
 The patient record the point of service is keeping must be in the Client Registry prior to the merge or the Merge Person message will fail. This record is known as the ‘survivor’ or 'target-patient' record.
 
-### FHIR Structure for Add, Revise, Merge and Distributions - FUTURE
+### FHIR Structure for Add, Revise, Merge and Distributions
 
 The FHIR structure is roughly the same for Add, Merge, Revise and Distributions. RelatedPerson is only required to AddPatient newborns.  Responses (if required) are wrapped in collection Bundles and include OperationOutcome, Operation Parameters, possible RelatedPerson resources and Patient resources.
 
@@ -32,7 +32,7 @@ The FHIR structure is roughly the same for Add, Merge, Revise and Distributions.
 </span>
 
 
-### Asynchronous Operations - FUTURE
+### Asynchronous Operations
 
 The asynchronous pattern for Revise and Merge Patient follow the same pattern as V3. The figure below shows a client requesting an operation from the Client Registry and the Client Registry responding, later, with the response.
 
