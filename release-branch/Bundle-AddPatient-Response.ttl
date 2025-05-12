@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -45,7 +46,10 @@
   ] ; # 
   fhir:parameter ( [
      fhir:name [ fhir:v "messageId" ] ;
-     fhir:value [ fhir:v "b02fc643-e179-4c5f-8ac3-a8d955f9ce87" ]
+     fhir:value [
+       a fhir:string ;
+       fhir:v "b02fc643-e179-4c5f-8ac3-a8d955f9ce87"
+     ]
   ] [
      fhir:name [ fhir:v "sender" ] ;
      fhir:value [
@@ -62,14 +66,17 @@
      ]
   ] [
      fhir:name [ fhir:v "requestMessageId" ] ;
-     fhir:value [ fhir:v "b6e3eb80-b54b-4427-96ff-acfc512ec160" ]
+     fhir:value [
+       a fhir:string ;
+       fhir:v "b6e3eb80-b54b-4427-96ff-acfc512ec160"
+     ]
   ] ) . # 
 
 <urn:uuid:0185235c-f8ea-4107-8979-591ddc2d1234> a fhir:OperationOutcome ;
   fhir:id [ fhir:v "AddPatient-Response-Outcome"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_AddPatient-Response-Outcome\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome AddPatient-Response-Outcome</b></p><a name=\"AddPatient-Response-Outcome\"> </a><a name=\"hcAddPatient-Response-Outcome\"> </a><a name=\"AddPatient-Response-Outcome-en-US\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Information</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.RP.0.0021}\">The Revise Person Request has been processed.</span></td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_AddPatient-Response-Outcome\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome AddPatient-Response-Outcome</b></p><a name=\"AddPatient-Response-Outcome\"> </a><a name=\"hcAddPatient-Response-Outcome\"> </a><a name=\"AddPatient-Response-Outcome-en-US\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Information</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.RP.0.0021}\">The Revise Person Request has been processed.</span></td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:issue ( [
      fhir:severity [ fhir:v "information" ] ;
@@ -93,12 +100,15 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_AddPatient-Response-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient AddPatient-Response-Patient</b></p><a name=\"AddPatient-Response-Patient\"> </a><a name=\"hcAddPatient-Response-Patient\"> </a><a name=\"AddPatient-Response-Patient-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient (no stated gender), DoB Unknown ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id#9455882493 (use: official, period: 2023-01-23 13:46:27-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9253484802 (use: official, period: 2023-01-23 13:46:27-0800 --&gt; (ongoing))</td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_AddPatient-Response-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient AddPatient-Response-Patient</b></p><a name=\"AddPatient-Response-Patient\"> </a><a name=\"hcAddPatient-Response-Patient\"> </a><a name=\"AddPatient-Response-Patient-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient (no stated gender), DoB Unknown ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id#9455882493 (use: official, period: 2023-01-23 13:46:27-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9253484802 (use: official, period: 2023-01-23 13:46:27-0800 --&gt; (ongoing))</td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:identifier ( [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
      fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"^^xsd:anyURI ] ;
@@ -112,7 +122,10 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
      fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id"^^xsd:anyURI ] ;
@@ -124,7 +137,7 @@
        fhir:display [ fhir:v "HIBC - Health Insurance British Columbia MSP" ]
      ]
   ] ) ; # 
-  fhir:active [ fhir:v "true"^^xsd:boolean] . # 
+  fhir:active [ fhir:v true] . # 
 
 # -------------------------------------------------------------------------------------
 

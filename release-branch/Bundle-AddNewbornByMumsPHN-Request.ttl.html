@@ -226,6 +226,7 @@
   <pre class="rdf" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
@@ -265,7 +266,9 @@
   ] ; # 
   <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter">fhir:parameter</a> ( [
 <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;messageId&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;eac486dd-ffe1-4272-b1ae-1ae0b0707b92&quot; ]
+<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;eac486dd-ffe1-4272-b1ae-1ae0b0707b92&quot;     ]
   ] ) . # 
 
 &lt;urn:uuid:66a90476-06d2-4e62-aba7-32d0566ecf41&gt; <a href="http://hl7.org/fhir/R4/patient.html">a</a> fhir:Patient ;
@@ -277,7 +280,7 @@
   ] ; # 
   <a href="http://hl7.org/fhir/R4/patient.html#Patient.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Patient_AddNewbornByMumsPHN-Request-Patient\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Patient AddNewbornByMumsPHN-Request-Patient&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;AddNewbornByMumsPHN-Request-Patient\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcAddNewbornByMumsPHN-Request-Patient\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;AddNewbornByMumsPHN-Request-Patient-en-US\&quot;&gt; &lt;/a&gt;&lt;p style=\&quot;border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\&quot;&gt;Baby Boy Jaroscak  Male, DoB: 2023-01-22 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-north-source-patient-id#4PX0WI5WO23CZRYTQ4GZP6MUJ9R6P2N6MS8Z156 (use: official, ))&lt;/p&gt;&lt;hr/&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;background-color: #f3f5da\&quot; title=\&quot;Ways to contact the Patient\&quot;&gt;Contact Detail&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;46005 Lake forest drive Mattice BC CA &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Patient_AddNewbornByMumsPHN-Request-Patient\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Patient AddNewbornByMumsPHN-Request-Patient&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;AddNewbornByMumsPHN-Request-Patient\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcAddNewbornByMumsPHN-Request-Patient\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;AddNewbornByMumsPHN-Request-Patient-en-US\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-bc-patient.html\&quot;&gt;ClientRegistryPatient&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p style=\&quot;border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\&quot;&gt;Baby Boy Jaroscak  Male, DoB: 2023-01-22 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-north-source-patient-id#4PX0WI5WO23CZRYTQ4GZP6MUJ9R6P2N6MS8Z156 (use: official, ))&lt;/p&gt;&lt;hr/&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;background-color: #f3f5da\&quot; title=\&quot;Ways to contact the Patient\&quot;&gt;Contact Detail&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;46005 Lake forest drive Mattice BC CA &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
   ] ; # 
   <a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">fhir:identifier</a> ( [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">fhir:use</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;official&quot; ] ;
@@ -303,12 +306,14 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a
   <a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;AddNewbornByMumsPHN-Request-RelatedPerson&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;RelatedPerson_AddNewbornByMumsPHN-Request-RelatedPerson\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: RelatedPerson AddNewbornByMumsPHN-Request-RelatedPerson&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;AddNewbornByMumsPHN-Request-RelatedPerson\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcAddNewbornByMumsPHN-Request-RelatedPerson\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;AddNewbornByMumsPHN-Request-RelatedPerson-en-US\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id&lt;/code&gt;/9253484802 (use: official, period: 2023-01-23 13:46:27-0800 --&amp;gt; (ongoing))&lt;/p&gt;&lt;p&gt;&lt;b&gt;patient&lt;/b&gt;: &lt;a href=\&quot;Bundle-AddNewbornByMumsPHN-Request.html#urn-uuid-66a90476-06d2-4e62-aba7-32d0566ecf41\&quot;&gt;Bundle: type = collection; timestamp = 2023-01-23 13:46:28-0800&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;relationship&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode NMTH}\&quot;&gt;natural mother&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;RelatedPerson_AddNewbornByMumsPHN-Request-RelatedPerson\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: RelatedPerson AddNewbornByMumsPHN-Request-RelatedPerson&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;AddNewbornByMumsPHN-Request-RelatedPerson\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcAddNewbornByMumsPHN-Request-RelatedPerson\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;AddNewbornByMumsPHN-Request-RelatedPerson-en-US\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id&lt;/code&gt;/9253484802 (use: official, period: 2023-01-23 13:46:27-0800 --&amp;gt; (ongoing))&lt;/p&gt;&lt;p&gt;&lt;b&gt;patient&lt;/b&gt;: &lt;a href=\&quot;Bundle-AddNewbornByMumsPHN-Request.html#urn-uuid-66a90476-06d2-4e62-aba7-32d0566ecf41\&quot;&gt;Bundle: type = collection; timestamp = 2023-01-23 13:46:28-0800&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;relationship&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode NMTH}\&quot;&gt;natural mother&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
   ] ; # 
   <a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson.identifier">fhir:identifier</a> ( [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;active&quot; ]     ] ) ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#code">a</a> fhir:code ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;active&quot;       ]     ] ) ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">fhir:use</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;official&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;9253484802&quot; ] ;
@@ -349,7 +354,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 7, 2025 23:01+0000">2025-02-07</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 12, 2025 18:41+0000">2025-05-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

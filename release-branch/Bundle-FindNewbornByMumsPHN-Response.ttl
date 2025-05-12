@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -67,7 +68,10 @@
   ] ; # 
   fhir:parameter ( [
      fhir:name [ fhir:v "messageId" ] ;
-     fhir:value [ fhir:v "9acccdc8-b4d0-4ac7-9f10-80d0c80136e4" ]
+     fhir:value [
+       a fhir:string ;
+       fhir:v "9acccdc8-b4d0-4ac7-9f10-80d0c80136e4"
+     ]
   ] [
      fhir:name [ fhir:v "sender" ] ;
      fhir:value [
@@ -77,7 +81,10 @@
      ]
   ] [
      fhir:name [ fhir:v "identifiersOnly" ] ;
-     fhir:value [ fhir:v "false"^^xsd:boolean ]
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v false
+     ]
   ] [
      fhir:name [ fhir:v "enterer" ] ;
      fhir:value [
@@ -87,14 +94,17 @@
      ]
   ] [
      fhir:name [ fhir:v "requestMessageId" ] ;
-     fhir:value [ fhir:v "2a956654-9d48-422b-ab23-ea708462760b" ]
+     fhir:value [
+       a fhir:string ;
+       fhir:v "2a956654-9d48-422b-ab23-ea708462760b"
+     ]
   ] ) . # 
 
 <urn:uuid:c3e604ec-0917-41a8-9d90-1da8e6611234> a fhir:OperationOutcome ;
   fhir:id [ fhir:v "FindNewbornByMumsPHN-Response-Outcome"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_FindNewbornByMumsPHN-Response-Outcome\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome FindNewbornByMumsPHN-Response-Outcome</b></p><a name=\"FindNewbornByMumsPHN-Response-Outcome\"> </a><a name=\"hcFindNewbornByMumsPHN-Response-Outcome\"> </a><a name=\"FindNewbornByMumsPHN-Response-Outcome-en-US\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Information</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.FC.0.0012}\">The search completed successfully.</span></td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_FindNewbornByMumsPHN-Response-Outcome\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome FindNewbornByMumsPHN-Response-Outcome</b></p><a name=\"FindNewbornByMumsPHN-Response-Outcome\"> </a><a name=\"hcFindNewbornByMumsPHN-Response-Outcome\"> </a><a name=\"FindNewbornByMumsPHN-Response-Outcome-en-US\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Information</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.FC.0.0012}\">The search completed successfully.</span></td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:issue ( [
      fhir:severity [ fhir:v "information" ] ;
@@ -118,12 +128,15 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_26a6dc2a-8bad-45f3-b8e2-8829f554e8a4\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient 26a6dc2a-8bad-45f3-b8e2-8829f554e8a4</b></p><a name=\"26a6dc2a-8bad-45f3-b8e2-8829f554e8a4\"> </a><a name=\"hc26a6dc2a-8bad-45f3-b8e2-8829f554e8a4\"> </a><a name=\"26a6dc2a-8bad-45f3-b8e2-8829f554e8a4-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Baby Girl Shawley  Female, DoB: 2023-01-22 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id#TCYS809BQAQS9323KO27C74502OZF714KM29 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999991 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>13719 Froe street Aylesford BC CA </li><li>24989 School street Thermal BC CA </li></ul></td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_26a6dc2a-8bad-45f3-b8e2-8829f554e8a4\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient 26a6dc2a-8bad-45f3-b8e2-8829f554e8a4</b></p><a name=\"26a6dc2a-8bad-45f3-b8e2-8829f554e8a4\"> </a><a name=\"hc26a6dc2a-8bad-45f3-b8e2-8829f554e8a4\"> </a><a name=\"26a6dc2a-8bad-45f3-b8e2-8829f554e8a4-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Baby Girl Shawley  Female, DoB: 2023-01-22 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id#TCYS809BQAQS9323KO27C74502OZF714KM29 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999991 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>13719 Froe street Aylesford BC CA </li><li>24989 School street Thermal BC CA </li></ul></td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:identifier ( [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
      fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"^^xsd:anyURI ] ;
@@ -137,7 +150,10 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
      fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id"^^xsd:anyURI ] ;
@@ -149,7 +165,7 @@
        fhir:display [ fhir:v "FHA Meditech - Fraser Valley - FHA_MT" ]
      ]
   ] ) ; # 
-  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:active [ fhir:v true] ; # 
   fhir:name ( [
      fhir:use [ fhir:v "usual" ] ;
      fhir:family [ fhir:v "Shawley" ] ;
@@ -181,7 +197,10 @@
   fhir:address ( [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "unknown" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
      ] ) ;
      fhir:type [ fhir:v "physical" ] ;
      fhir:line ( [ fhir:v "13719 Froe street" ] ) ;
@@ -194,7 +213,10 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "unknown" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
      ] ) ;
      fhir:type [ fhir:v "postal" ] ;
      fhir:line ( [ fhir:v "24989 School street" ] ) ;
@@ -216,12 +238,15 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_2e5169f0-7a01-49cc-8006-39d4c2bdc0ee\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient 2e5169f0-7a01-49cc-8006-39d4c2bdc0ee</b></p><a name=\"2e5169f0-7a01-49cc-8006-39d4c2bdc0ee\"> </a><a name=\"hc2e5169f0-7a01-49cc-8006-39d4c2bdc0ee\"> </a><a name=\"2e5169f0-7a01-49cc-8006-39d4c2bdc0ee-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Baby Girl Shawley  Female, DoB: 2023-01-22 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id#PC88F0F67VI3AJMI (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999992 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>13719 Froe street Aylesford BC CA </li><li>24989 School street Thermal BC CA </li></ul></td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_2e5169f0-7a01-49cc-8006-39d4c2bdc0ee\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient 2e5169f0-7a01-49cc-8006-39d4c2bdc0ee</b></p><a name=\"2e5169f0-7a01-49cc-8006-39d4c2bdc0ee\"> </a><a name=\"hc2e5169f0-7a01-49cc-8006-39d4c2bdc0ee\"> </a><a name=\"2e5169f0-7a01-49cc-8006-39d4c2bdc0ee-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Baby Girl Shawley  Female, DoB: 2023-01-22 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id#PC88F0F67VI3AJMI (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999992 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>13719 Froe street Aylesford BC CA </li><li>24989 School street Thermal BC CA </li></ul></td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:identifier ( [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
      fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"^^xsd:anyURI ] ;
@@ -235,7 +260,10 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
      fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id"^^xsd:anyURI ] ;
@@ -247,7 +275,7 @@
        fhir:display [ fhir:v "FHA Meditech - Fraser Valley - FHA_MT" ]
      ]
   ] ) ; # 
-  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:active [ fhir:v true] ; # 
   fhir:name ( [
      fhir:use [ fhir:v "usual" ] ;
      fhir:family [ fhir:v "Shawley" ] ;
@@ -279,7 +307,10 @@
   fhir:address ( [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "unknown" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
      ] ) ;
      fhir:type [ fhir:v "physical" ] ;
      fhir:line ( [ fhir:v "13719 Froe street" ] ) ;
@@ -292,7 +323,10 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "unknown" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
      ] ) ;
      fhir:type [ fhir:v "postal" ] ;
      fhir:line ( [ fhir:v "24989 School street" ] ) ;
@@ -314,12 +348,15 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_7668592e-2316-4ea8-bbab-bb601239e71e\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient 7668592e-2316-4ea8-bbab-bb601239e71e</b></p><a name=\"7668592e-2316-4ea8-bbab-bb601239e71e\"> </a><a name=\"hc7668592e-2316-4ea8-bbab-bb601239e71e\"> </a><a name=\"7668592e-2316-4ea8-bbab-bb601239e71e-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Dietrich Shawley  Female, DoB: 2022-12-17 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id#9ZJVK0Z8Y4QS232 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999999 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 3142487326(Home)</li><li>13719 Froe street Aylesford BC CA </li><li>24989 School street Thermal BC CA </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>Also see: <a href=\"Bundle-FindNewbornByMumsPHN-Response.html#urn-uuid-13cb4c36-102d-49c7-9f2e-f652ece39ecf\">Bundle: identifier = UUID:91dd7048-9bcc-405a-844b-47dc2656fd07; type = searchset; timestamp = 2023-01-23 13:58:38-0800; total = 3</a></li><li>Also see: <a href=\"Bundle-FindNewbornByMumsPHN-Response.html#urn-uuid-613f5d13-9753-4c0c-89f9-f2bce0622721\">Bundle: identifier = UUID:91dd7048-9bcc-405a-844b-47dc2656fd07; type = searchset; timestamp = 2023-01-23 13:58:38-0800; total = 3</a></li></ul></td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_7668592e-2316-4ea8-bbab-bb601239e71e\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient 7668592e-2316-4ea8-bbab-bb601239e71e</b></p><a name=\"7668592e-2316-4ea8-bbab-bb601239e71e\"> </a><a name=\"hc7668592e-2316-4ea8-bbab-bb601239e71e\"> </a><a name=\"7668592e-2316-4ea8-bbab-bb601239e71e-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Dietrich Shawley  Female, DoB: 2022-12-17 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id#9ZJVK0Z8Y4QS232 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999999 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 3142487326(Home)</li><li>13719 Froe street Aylesford BC CA </li><li>24989 School street Thermal BC CA </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>Also see: <a href=\"Bundle-FindNewbornByMumsPHN-Response.html#urn-uuid-13cb4c36-102d-49c7-9f2e-f652ece39ecf\">Bundle: identifier = UUID:91dd7048-9bcc-405a-844b-47dc2656fd07; type = searchset; timestamp = 2023-01-23 13:58:38-0800; total = 3</a></li><li>Also see: <a href=\"Bundle-FindNewbornByMumsPHN-Response.html#urn-uuid-613f5d13-9753-4c0c-89f9-f2bce0622721\">Bundle: identifier = UUID:91dd7048-9bcc-405a-844b-47dc2656fd07; type = searchset; timestamp = 2023-01-23 13:58:38-0800; total = 3</a></li></ul></td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:identifier ( [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
      fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"^^xsd:anyURI ] ;
@@ -333,7 +370,10 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
      fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id"^^xsd:anyURI ] ;
@@ -345,7 +385,7 @@
        fhir:display [ fhir:v "FHA Meditech - Fraser Valley - FHA_MT" ]
      ]
   ] ) ; # 
-  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:active [ fhir:v true] ; # 
   fhir:name ( [
      fhir:use [ fhir:v "usual" ] ;
      fhir:family [ fhir:v "Shawley" ] ;
@@ -385,7 +425,10 @@
   fhir:address ( [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "unknown" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
      ] ) ;
      fhir:type [ fhir:v "physical" ] ;
      fhir:line ( [ fhir:v "13719 Froe street" ] ) ;
@@ -398,7 +441,10 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "unknown" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
      ] ) ;
      fhir:type [ fhir:v "postal" ] ;
      fhir:line ( [ fhir:v "24989 School street" ] ) ;
@@ -425,7 +471,7 @@
   fhir:id [ fhir:v "FindNewbornByMumsPHN-Response-RelatedPerson1"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"RelatedPerson_FindNewbornByMumsPHN-Response-RelatedPerson1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson FindNewbornByMumsPHN-Response-RelatedPerson1</b></p><a name=\"FindNewbornByMumsPHN-Response-RelatedPerson1\"> </a><a name=\"hcFindNewbornByMumsPHN-Response-RelatedPerson1\"> </a><a name=\"FindNewbornByMumsPHN-Response-RelatedPerson1-en-US\"> </a><p><b>patient</b>: <a href=\"https://simplifier.net/resolve?scope=hl7.fhir.ca.baseline@1.1.7&amp;canonical=urn:uuid:71092811-55f9-4e1f-8754-a6828da1d51c\">urn:uuid:71092811-55f9-4e1f-8754-a6828da1d51c</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode NMTH}\">natural mother</span></p></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"RelatedPerson_FindNewbornByMumsPHN-Response-RelatedPerson1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson FindNewbornByMumsPHN-Response-RelatedPerson1</b></p><a name=\"FindNewbornByMumsPHN-Response-RelatedPerson1\"> </a><a name=\"hcFindNewbornByMumsPHN-Response-RelatedPerson1\"> </a><a name=\"FindNewbornByMumsPHN-Response-RelatedPerson1-en-US\"> </a><p><b>patient</b>: <a href=\"https://simplifier.net/resolve?scope=hl7.fhir.ca.baseline@1.2.0&amp;canonical=urn:uuid:71092811-55f9-4e1f-8754-a6828da1d51c\">urn:uuid:71092811-55f9-4e1f-8754-a6828da1d51c</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode NMTH}\">natural mother</span></p></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:patient [
      fhir:reference [ fhir:v "urn:uuid:71092811-55f9-4e1f-8754-a6828da1d51c" ]
@@ -441,7 +487,7 @@
   fhir:id [ fhir:v "FindNewbornByMumsPHN-Response-RelatedPerson2"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"RelatedPerson_FindNewbornByMumsPHN-Response-RelatedPerson2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson FindNewbornByMumsPHN-Response-RelatedPerson2</b></p><a name=\"FindNewbornByMumsPHN-Response-RelatedPerson2\"> </a><a name=\"hcFindNewbornByMumsPHN-Response-RelatedPerson2\"> </a><a name=\"FindNewbornByMumsPHN-Response-RelatedPerson2-en-US\"> </a><p><b>patient</b>: <a href=\"https://simplifier.net/resolve?scope=hl7.fhir.ca.baseline@1.1.7&amp;canonical=urn:uuid:69b91ae6-e147-4dd0-abe7-8912ec301fd9\">urn:uuid:69b91ae6-e147-4dd0-abe7-8912ec301fd9</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode NMTH}\">natural mother</span></p></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"RelatedPerson_FindNewbornByMumsPHN-Response-RelatedPerson2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson FindNewbornByMumsPHN-Response-RelatedPerson2</b></p><a name=\"FindNewbornByMumsPHN-Response-RelatedPerson2\"> </a><a name=\"hcFindNewbornByMumsPHN-Response-RelatedPerson2\"> </a><a name=\"FindNewbornByMumsPHN-Response-RelatedPerson2-en-US\"> </a><p><b>patient</b>: <a href=\"https://simplifier.net/resolve?scope=hl7.fhir.ca.baseline@1.2.0&amp;canonical=urn:uuid:69b91ae6-e147-4dd0-abe7-8912ec301fd9\">urn:uuid:69b91ae6-e147-4dd0-abe7-8912ec301fd9</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode NMTH}\">natural mother</span></p></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:patient [
      fhir:reference [ fhir:v "urn:uuid:69b91ae6-e147-4dd0-abe7-8912ec301fd9" ]

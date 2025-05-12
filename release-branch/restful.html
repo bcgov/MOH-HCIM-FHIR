@@ -190,6 +190,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#fhir-using-restful-apis" id="markdown-toc-fhir-using-restful-apis">FHIR Using RESTful APIs</a></li>
   <li><a href="#restful-find" id="markdown-toc-restful-find">RESTful Find</a></li>
   <li><a href="#restful-get" id="markdown-toc-restful-get">RESTful Get</a></li>
   <li><a href="#restful-revise-person" id="markdown-toc-restful-revise-person">RESTful Revise Person</a></li>
@@ -198,6 +199,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
+
+<h3 id="fhir-using-restful-apis">FHIR Using RESTful APIs</h3>
+<p>RESTful APIs assit with FHIR's data exhange using HTTP, URLS and JSON.
+Implementing FHIR practices using RESTful APIs gives developers the advantage of simplicity, interoperability, scalability and real-time data exchange.
+For more information regarding FHIR using RESTful APIs, please refer to the article <a href="https://www.linkedin.com/pulse/fhir-basics-beginners-guide-resources-restful-apis-praveen-solanki-ekumf/"><strong>FHIR Basics: A Beginner's Guide to Resources and RESTful APIs</strong></a> by Praveen Solanki.</p>
 
 <h3 id="restful-find">RESTful Find</h3>
 <p>The RESTful Find uses the name and other criteria (e.g. date of birth) to find the client’s record and PHN via a “probabilistic search” in the Client Registry. In a probabilistic search, the outcome of the search cannot be predicted.</p>
@@ -262,7 +268,7 @@ The URN pattern [baseURL]/Patient?identifier=[Identifier].</p>
 
 <h3 id="restful-revise-person">RESTful Revise Person</h3>
 
-<p>RESTful Revise Person provides a RESTful interfact to acccess the Add Person and Update Person transactions.</p>
+<p>RESTful Revise Person provides a RESTful interface to acccess the Add Person and Update Person transactions.</p>
 
 <p>The system must provide the ability to accept PHNs created/issued by approved source like PharmaNet and HIBC.</p>
 
@@ -272,11 +278,42 @@ The URN pattern [baseURL]/Patient?identifier=[Identifier].</p>
   <li>the minimum data set has not been provided</li>
   <li>PHN fails validation check</li>
   <li>the message contains illegal characters in any of the name fields</li>
-  <li>no user id or effective date were provided
-*or if a Source Record Identifier was not provided if the source is not PHN Bound</li>
+  <li>no user id or effective date were provided</li>
+  <li>the message contains a date of death or death indicator but no PHN</li>
+  <li>or if a Source Record Identifier was not provided if the source is not PHN-Bound</li>
 </ul>
 
-<p>A Revise Person message with a date of death or death indicator must have a PHN.</p>
+<p>The minimum data set for Revise Person is:</p>
+<ul>
+  <li>Purported PHN or Mother's PHN</li>
+  <li>Name
+    <ul>
+      <li>Name Type</li>
+      <li>First Name</li>
+      <li>Last Name</li>
+    </ul>
+  </li>
+  <li>Date of Birth</li>
+  <li>Gender</li>
+  <li>OR</li>
+  <li>Name
+    <ul>
+      <li>Name Type</li>
+      <li>First Name</li>
+      <li>Last Name</li>
+    </ul>
+  </li>
+  <li>Date of Birth</li>
+  <li>Gender</li>
+  <li>Address
+    <ul>
+      <li>Address Type (Mailing or Physical)</li>
+      <li>Address Line 1</li>
+      <li>City</li>
+      <li>State if country is provided and is CA or US</li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="restful-get-examples">RESTful Get Examples</h3>
 
@@ -367,7 +404,7 @@ The URN pattern [baseURL]/Patient?identifier=[Identifier].</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 7, 2025 23:01+0000">2025-02-07</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 12, 2025 18:41+0000">2025-05-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

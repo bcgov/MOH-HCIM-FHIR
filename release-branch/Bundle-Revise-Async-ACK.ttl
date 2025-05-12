@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -42,7 +43,10 @@
   ] ; # 
   fhir:parameter ( [
      fhir:name [ fhir:v "messageId" ] ;
-     fhir:value [ fhir:v "f95c3be0-b6ed-4aec-b969-7bc7da904315" ]
+     fhir:value [
+       a fhir:string ;
+       fhir:v "f95c3be0-b6ed-4aec-b969-7bc7da904315"
+     ]
   ] [
      fhir:name [ fhir:v "sender" ] ;
      fhir:value [
@@ -59,14 +63,17 @@
      ]
   ] [
      fhir:name [ fhir:v "requestMessageId" ] ;
-     fhir:value [ fhir:v "823d7eb6-24d5-452f-b2d0-f86f2f6130e7" ]
+     fhir:value [
+       a fhir:string ;
+       fhir:v "823d7eb6-24d5-452f-b2d0-f86f2f6130e7"
+     ]
   ] ) . # 
 
 <urn:uuid:e12213c8-9351-4a9b-94cb-54d3710b9876> a fhir:OperationOutcome ;
   fhir:id [ fhir:v "Revise-Async-ACK-Outcome"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_Revise-Async-ACK-Outcome\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome Revise-Async-ACK-Outcome</b></p><a name=\"Revise-Async-ACK-Outcome\"> </a><a name=\"hcRevise-Async-ACK-Outcome\"> </a><a name=\"Revise-Async-ACK-Outcome-en-US\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Information</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.RP.0.0007}\">The Revise Person request has been accepted for processing.</span></td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_Revise-Async-ACK-Outcome\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome Revise-Async-ACK-Outcome</b></p><a name=\"Revise-Async-ACK-Outcome\"> </a><a name=\"hcRevise-Async-ACK-Outcome\"> </a><a name=\"Revise-Async-ACK-Outcome-en-US\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Information</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.RP.0.0007}\">The Revise Person request has been accepted for processing.</span></td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:issue ( [
      fhir:severity [ fhir:v "information" ] ;

@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -49,7 +50,10 @@
   ] ; # 
   fhir:parameter ( [
      fhir:name [ fhir:v "messageId" ] ;
-     fhir:value [ fhir:v "0cf19fde-0808-4ffe-b029-3aa06bc008a9" ]
+     fhir:value [
+       a fhir:string ;
+       fhir:v "0cf19fde-0808-4ffe-b029-3aa06bc008a9"
+     ]
   ] [
      fhir:name [ fhir:v "sender" ] ;
      fhir:value [
@@ -59,10 +63,16 @@
      ]
   ] [
      fhir:name [ fhir:v "history" ] ;
-     fhir:value [ fhir:v "true"^^xsd:boolean ]
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v true
+     ]
   ] [
      fhir:name [ fhir:v "identifiersOnly" ] ;
-     fhir:value [ fhir:v "false"^^xsd:boolean ]
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v false
+     ]
   ] [
      fhir:name [ fhir:v "enterer" ] ;
      fhir:value [
@@ -72,14 +82,17 @@
      ]
   ] [
      fhir:name [ fhir:v "requestMessageId" ] ;
-     fhir:value [ fhir:v "62ac7557-95b4-42b0-acb1-dde7bc56c964" ]
+     fhir:value [
+       a fhir:string ;
+       fhir:v "62ac7557-95b4-42b0-acb1-dde7bc56c964"
+     ]
   ] ) . # 
 
 <urn:uuid:99982f86-4044-48a6-9e63-3d221f3a9876> a fhir:OperationOutcome ;
   fhir:id [ fhir:v "GetDemographics-withPHNInfo-Response-Outcome"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_GetDemographics-withPHNInfo-Response-Outcome\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome GetDemographics-withPHNInfo-Response-Outcome</b></p><a name=\"GetDemographics-withPHNInfo-Response-Outcome\"> </a><a name=\"hcGetDemographics-withPHNInfo-Response-Outcome\"> </a><a name=\"GetDemographics-withPHNInfo-Response-Outcome-en-US\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Information</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.GD.0.0013}\">The get demographics query completed successfully.</span></td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_GetDemographics-withPHNInfo-Response-Outcome\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome GetDemographics-withPHNInfo-Response-Outcome</b></p><a name=\"GetDemographics-withPHNInfo-Response-Outcome\"> </a><a name=\"hcGetDemographics-withPHNInfo-Response-Outcome\"> </a><a name=\"GetDemographics-withPHNInfo-Response-Outcome-en-US\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Information</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.GD.0.0013}\">The get demographics query completed successfully.</span></td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:issue ( [
      fhir:severity [ fhir:v "information" ] ;
@@ -103,19 +116,28 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_87d81314-eba2-4071-af5a-f2b98bf4c13a\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient 87d81314-eba2-4071-af5a-f2b98bf4c13a</b></p><a name=\"87d81314-eba2-4071-af5a-f2b98bf4c13a\"> </a><a name=\"hc87d81314-eba2-4071-af5a-f2b98bf4c13a\"> </a><a name=\"87d81314-eba2-4071-af5a-f2b98bf4c13a-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Alithea Joacheim Aine Parthemore  Female, DoB: 1946-11-28 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-ab-patient-healthcare-id#SL4I3I1512EF5KFN6S09E5 (use: official, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">1950-07-16</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999999 (use: official, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing))</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id</code>/2701XI3IW2R95W87WH3H16082KJ2LEVENM0LNTW (use: official, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing))</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id</code>/3B022OESRB7W41F3511QJ9PDCE244509HWHH5J (use: official, period: 2018-01-23 14:00:53-0800 --&gt; 2023-01-23 14:00:53-0800)</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-arh-source-patient-id</code>/8FV66J82GPKBH83 (use: secondary, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing))</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-bh-source-patient-id</code>/UO9W191ASP6JN937P3H476IPHC0K83V4Q65 (use: secondary, period: 2018-01-23 14:00:53-0800 --&gt; 2023-01-23 14:00:53-0800)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 6237064105(Mobile)</li><li>ph: 6304712096(Mobile)</li><li>ph: 7121011390(Home)</li><li>ph: 4163176376(Home)</li><li>ph: 9845613474(Work)</li><li>ph: 2054428883(Work)</li><li><a href=\"mailto:Berne.Aron@cgi.com\">Berne.Aron@cgi.com</a></li><li><a href=\"mailto:Octavius.Megown@cgi.com\">Octavius.Megown@cgi.com</a></li><li><a href=\"mailto:Claude.Abuel@cgi.com\">Claude.Abuel@cgi.com</a></li><li><a href=\"mailto:Madailein.Ivins@cgi.com\">Madailein.Ivins@cgi.com</a></li><li><a href=\"mailto:Akanni.Ehrler@cgi.com\">Akanni.Ehrler@cgi.com</a></li><li><a href=\"mailto:Tereza.Bis@cgi.com\">Tereza.Bis@cgi.com</a></li><li>1431 Riverwood drive Lake village BC CA </li><li>7597 Mahlon street Maple plain BC CA </li><li>1699 Brand road Hills BC CA </li><li>33031 Arrowood drive Mayfield heights BC CA </li></ul></td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_87d81314-eba2-4071-af5a-f2b98bf4c13a\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient 87d81314-eba2-4071-af5a-f2b98bf4c13a</b></p><a name=\"87d81314-eba2-4071-af5a-f2b98bf4c13a\"> </a><a name=\"hc87d81314-eba2-4071-af5a-f2b98bf4c13a\"> </a><a name=\"87d81314-eba2-4071-af5a-f2b98bf4c13a-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Alithea Joacheim Aine Parthemore  Female, DoB: 1946-11-28 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-ab-patient-healthcare-id#SL4I3I1512EF5KFN6S09E5 (use: official, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">1950-07-16</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999999 (use: official, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing))</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id</code>/2701XI3IW2R95W87WH3H16082KJ2LEVENM0LNTW (use: official, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing))</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id</code>/3B022OESRB7W41F3511QJ9PDCE244509HWHH5J (use: official, period: 2018-01-23 14:00:53-0800 --&gt; 2023-01-23 14:00:53-0800)</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-arh-source-patient-id</code>/8FV66J82GPKBH83 (use: secondary, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing))</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-bh-source-patient-id</code>/UO9W191ASP6JN937P3H476IPHC0K83V4Q65 (use: secondary, period: 2018-01-23 14:00:53-0800 --&gt; 2023-01-23 14:00:53-0800)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 6237064105(Mobile)</li><li>ph: 6304712096(Mobile)</li><li>ph: 7121011390(Home)</li><li>ph: 4163176376(Home)</li><li>ph: 9845613474(Work)</li><li>ph: 2054428883(Work)</li><li><a href=\"mailto:Berne.Aron@cgi.com\">Berne.Aron@cgi.com</a></li><li><a href=\"mailto:Octavius.Megown@cgi.com\">Octavius.Megown@cgi.com</a></li><li><a href=\"mailto:Claude.Abuel@cgi.com\">Claude.Abuel@cgi.com</a></li><li><a href=\"mailto:Madailein.Ivins@cgi.com\">Madailein.Ivins@cgi.com</a></li><li><a href=\"mailto:Akanni.Ehrler@cgi.com\">Akanni.Ehrler@cgi.com</a></li><li><a href=\"mailto:Tereza.Bis@cgi.com\">Tereza.Bis@cgi.com</a></li><li>1431 Riverwood drive Lake village BC CA </li><li>7597 Mahlon street Maple plain BC CA </li><li>1699 Brand road Hills BC CA </li><li>33031 Arrowood drive Mayfield heights BC CA </li></ul></td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:identifier ( [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "MEDP_EMR" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "MEDP_EMR"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Monica.Simmonds@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Monica.Simmonds@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -131,14 +153,23 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "VIHA_JOEADT" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "VIHA_JOEADT"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Dorthe.Rought@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Dorthe.Rought@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -154,14 +185,23 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "merged" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "merged"
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "VCHA_VGH" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "VCHA_VGH"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Uberto.Sow@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Uberto.Sow@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -178,14 +218,23 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "PHSA_A" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "PHSA_A"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Kennocha.Debreto@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Kennocha.Debreto@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -201,14 +250,23 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "merged" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "merged"
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "FHA_SF" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "FHA_SF"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Ivonne.Rustad@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Ivonne.Rustad@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -225,14 +283,23 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "VCHA_VGH" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "VCHA_VGH"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Kate.Kamin@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Kate.Kamin@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -243,15 +310,21 @@
        fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
      ]
   ] ) ; # 
-  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:active [ fhir:v true] ; # 
   fhir:name ( [
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "VCHA_VGH" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "VCHA_VGH"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Leo.Perler@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Leo.Perler@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -265,10 +338,16 @@
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "HIBC_MSP" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "HIBC_MSP"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Amandine.Norem@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Amandine.Norem@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -283,10 +362,16 @@
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "NHA_CER" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "NHA_CER"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Franchot.Depaolo@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Franchot.Depaolo@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -299,10 +384,16 @@
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "VIHA_JOELAB" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "VIHA_JOELAB"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Akono.Viscia@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Akono.Viscia@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -316,10 +407,16 @@
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "NHA_CER" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "NHA_CER"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Florentin.Klostermann@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Florentin.Klostermann@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -332,10 +429,16 @@
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "VCHA_RICH" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "VCHA_RICH"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Flora.Demeester@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Flora.Demeester@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -350,10 +453,16 @@
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "VIHA_SOUTH" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "VIHA_SOUTH"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Margaret.Wilkins@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Margaret.Wilkins@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -367,10 +476,16 @@
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "VCHA_PR" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "VCHA_PR"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Alissandre.Pfannenstiel@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Alissandre.Pfannenstiel@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -385,10 +500,16 @@
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "VIHA_SOUTH" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "VIHA_SOUTH"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Annunziata.Dronet@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Annunziata.Dronet@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -402,10 +523,16 @@
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "VIHA_CENT" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "VIHA_CENT"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Hesutu.Rohs@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Hesutu.Rohs@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -420,10 +547,16 @@
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "PHNBOUND_RX" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "PHNBOUND_RX"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Ngozi.Kinlin@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Ngozi.Kinlin@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -437,10 +570,16 @@
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "HIBC_MSP" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "HIBC_MSP"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Hjalmar.Mickonis@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Hjalmar.Mickonis@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -455,10 +594,16 @@
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "VIHA_NORTH" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "VIHA_NORTH"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Koren.Healy@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Koren.Healy@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -472,10 +617,16 @@
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "FHA_PARIS" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "FHA_PARIS"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Marcelle.Melton@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Marcelle.Melton@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -490,10 +641,16 @@
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "VIHA_JOEADT" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "VIHA_JOEADT"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Leslie.Villela@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Leslie.Villela@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -507,10 +664,16 @@
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "VIHA_JOELAB" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "VIHA_JOELAB"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Rhoda.Hergenroeder@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Rhoda.Hergenroeder@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -525,10 +688,16 @@
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "VIHA_NORTH" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "VIHA_NORTH"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Mana.Novielli@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Mana.Novielli@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -542,10 +711,16 @@
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "PHSA_P" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "PHSA_P"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Mary.Kirkpatrick@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Mary.Kirkpatrick@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -568,16 +743,25 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "FHA_SF" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "FHA_SF"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Irving.Desmarias@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Irving.Desmarias@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "gender"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "female" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "female"
+         ]
        ] [
          fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
          fhir:value [
@@ -588,10 +772,16 @@
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "VIHA_NORTH" ]
+           fhir:value [
+             a fhir:string ;
+             fhir:v "VIHA_NORTH"
+           ]
          ] [
            fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "Dougal.Stelle@samples.com" ]
+           fhir:value [
+             a fhir:string ;
+             fhir:v "Dougal.Stelle@samples.com"
+           ]
          ] ) ;
          fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
        ] ) ;
@@ -609,16 +799,25 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "FHA_FV" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "FHA_FV"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Maitena.Moulin@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Maitena.Moulin@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "birthDate"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "1995-07-05"^^xsd:date ]
+         fhir:value [
+           a fhir:date ;
+           fhir:v "1995-07-05"^^xsd:date
+         ]
        ] [
          fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
          fhir:value [
@@ -629,10 +828,16 @@
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "FHA_PRO" ]
+           fhir:value [
+             a fhir:string ;
+             fhir:v "FHA_PRO"
+           ]
          ] [
            fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "Ulrich.Degenhart@samples.com" ]
+           fhir:value [
+             a fhir:string ;
+             fhir:v "Ulrich.Degenhart@samples.com"
+           ]
          ] ) ;
          fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
        ] ) ;
@@ -640,6 +845,7 @@
      ] )
   ] ; # 
   fhir:deceased [
+     a fhir:dateTime ;
      fhir:v "1950-07-16"^^xsd:date ;
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
@@ -650,16 +856,25 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "VCHA_PR" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "VCHA_PR"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Ottavio.Glovier@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Ottavio.Glovier@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "deathVerifiedFlag"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "false"^^xsd:boolean ]
+         fhir:value [
+           a fhir:boolean ;
+           fhir:v false
+         ]
        ] [
          fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
          fhir:value [
@@ -669,16 +884,25 @@
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "PHNBOUND_RX" ]
+           fhir:value [
+             a fhir:string ;
+             fhir:v "PHNBOUND_RX"
+           ]
          ] [
            fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "Jose.Baranovic@samples.com" ]
+           fhir:value [
+             a fhir:string ;
+             fhir:v "Jose.Baranovic@samples.com"
+           ]
          ] ) ;
          fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "deathVerifiedFlag"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "false"^^xsd:boolean ]
+           fhir:value [
+             a fhir:boolean ;
+             fhir:v false
+           ]
          ] [
            fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
            fhir:value [
@@ -689,10 +913,16 @@
          ] [
            fhir:extension ( [
              fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-             fhir:value [ fhir:v "VCHA_VGH" ]
+             fhir:value [
+               a fhir:string ;
+               fhir:v "VCHA_VGH"
+             ]
            ] [
              fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-             fhir:value [ fhir:v "Aline.Otter@samples.com" ]
+             fhir:value [
+               a fhir:string ;
+               fhir:v "Aline.Otter@samples.com"
+             ]
            ] ) ;
            fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
          ] ) ;
@@ -702,7 +932,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "deathDate"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "2000-02-04"^^xsd:date ]
+         fhir:value [
+           a fhir:dateTime ;
+           fhir:v "2000-02-04"^^xsd:date
+         ]
        ] [
          fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
          fhir:value [
@@ -713,10 +946,16 @@
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "IHA_IHA" ]
+           fhir:value [
+             a fhir:string ;
+             fhir:v "IHA_IHA"
+           ]
          ] [
            fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "Deina.Deandrade@samples.com" ]
+           fhir:value [
+             a fhir:string ;
+             fhir:v "Deina.Deandrade@samples.com"
+           ]
          ] ) ;
          fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
        ] ) ;
@@ -726,14 +965,23 @@
   fhir:address ( [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "unknown" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "PHARM_RX" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "PHARM_RX"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Yuli.Raulston@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Yuli.Raulston@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -748,14 +996,23 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "unknown" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "VCHA_PHC" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "VCHA_PHC"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Clarence.Beloate@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Clarence.Beloate@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -771,14 +1028,23 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "unknown" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "VIHA_JOELAB" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "VIHA_JOELAB"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Jeannot.Buchinski@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Jeannot.Buchinski@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;
@@ -793,14 +1059,23 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "unknown" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "sourceID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "VCHA_VGH" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "VCHA_VGH"
+         ]
        ] [
          fhir:url [ fhir:v "userID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Cormac.Moor@samples.com" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Cormac.Moor@samples.com"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"^^xsd:anyURI ]
      ] ) ;

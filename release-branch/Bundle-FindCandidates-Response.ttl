@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -60,7 +61,10 @@
   ] ; # 
   fhir:parameter ( [
      fhir:name [ fhir:v "messageId" ] ;
-     fhir:value [ fhir:v "f4a5d2f7-cbea-4f80-9804-b13b9be9f2b9" ]
+     fhir:value [
+       a fhir:string ;
+       fhir:v "f4a5d2f7-cbea-4f80-9804-b13b9be9f2b9"
+     ]
   ] [
      fhir:name [ fhir:v "sender" ] ;
      fhir:value [
@@ -70,7 +74,10 @@
      ]
   ] [
      fhir:name [ fhir:v "identifiersOnly" ] ;
-     fhir:value [ fhir:v "false"^^xsd:boolean ]
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v false
+     ]
   ] [
      fhir:name [ fhir:v "enterer" ] ;
      fhir:value [
@@ -80,14 +87,17 @@
      ]
   ] [
      fhir:name [ fhir:v "requestMessageId" ] ;
-     fhir:value [ fhir:v "f108bda7-fc0f-4cbe-8438-6981360dee82" ]
+     fhir:value [
+       a fhir:string ;
+       fhir:v "f108bda7-fc0f-4cbe-8438-6981360dee82"
+     ]
   ] ) . # 
 
 <urn:uuid:c3e604ec-0917-41a8-9d90-1da8e6615678> a fhir:OperationOutcome ;
   fhir:id [ fhir:v "FindCandidates-response-Outcome"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_FindCandidates-response-Outcome\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome FindCandidates-response-Outcome</b></p><a name=\"FindCandidates-response-Outcome\"> </a><a name=\"hcFindCandidates-response-Outcome\"> </a><a name=\"FindCandidates-response-Outcome-en-US\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Information</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.FC.0.0012}\">The search completed successfully.</span></td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_FindCandidates-response-Outcome\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome FindCandidates-response-Outcome</b></p><a name=\"FindCandidates-response-Outcome\"> </a><a name=\"hcFindCandidates-response-Outcome\"> </a><a name=\"FindCandidates-response-Outcome-en-US\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Information</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.FC.0.0012}\">The search completed successfully.</span></td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:issue ( [
      fhir:severity [ fhir:v "information" ] ;
@@ -111,12 +121,15 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_cd710a55-680e-4297-82bf-e4a396401d39\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient cd710a55-680e-4297-82bf-e4a396401d39</b></p><a name=\"cd710a55-680e-4297-82bf-e4a396401d39\"> </a><a name=\"hccd710a55-680e-4297-82bf-e4a396401d39\"> </a><a name=\"cd710a55-680e-4297-82bf-e4a396401d39-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Elefteria Aida Patxi Pinchock  Male, DoB: 1925-05-14 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-nl-patient-healthcare-id#EW4426MY2H20U5824HO4 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">1927-03-28</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999990 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-south-source-patient-id</code>/53I5HTA2R5RT9XB6R27R52L8OXT18M1MZW (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 5614353278(Mobile)</li><li>ph: 4509409511(Home)</li><li>ph: 3524387170(Work)</li><li><a href=\"mailto:Marianne.Huot@cgi.com\">Marianne.Huot@cgi.com</a></li><li><a href=\"mailto:Andoni.Schoninger@cgi.com\">Andoni.Schoninger@cgi.com</a></li><li><a href=\"mailto:Kord.Stavrides@cgi.com\">Kord.Stavrides@cgi.com</a></li><li>6140 Sharon lane Glasgow BC CA </li><li>42593 Rue saint-antoine East broughton BC CA </li></ul></td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_cd710a55-680e-4297-82bf-e4a396401d39\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient cd710a55-680e-4297-82bf-e4a396401d39</b></p><a name=\"cd710a55-680e-4297-82bf-e4a396401d39\"> </a><a name=\"hccd710a55-680e-4297-82bf-e4a396401d39\"> </a><a name=\"cd710a55-680e-4297-82bf-e4a396401d39-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Elefteria Aida Patxi Pinchock  Male, DoB: 1925-05-14 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-nl-patient-healthcare-id#EW4426MY2H20U5824HO4 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">1927-03-28</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999990 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-south-source-patient-id</code>/53I5HTA2R5RT9XB6R27R52L8OXT18M1MZW (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 5614353278(Mobile)</li><li>ph: 4509409511(Home)</li><li>ph: 3524387170(Work)</li><li><a href=\"mailto:Marianne.Huot@cgi.com\">Marianne.Huot@cgi.com</a></li><li><a href=\"mailto:Andoni.Schoninger@cgi.com\">Andoni.Schoninger@cgi.com</a></li><li><a href=\"mailto:Kord.Stavrides@cgi.com\">Kord.Stavrides@cgi.com</a></li><li>6140 Sharon lane Glasgow BC CA </li><li>42593 Rue saint-antoine East broughton BC CA </li></ul></td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:identifier ( [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
      fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"^^xsd:anyURI ] ;
@@ -130,7 +143,10 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
      fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-south-source-patient-id"^^xsd:anyURI ] ;
@@ -144,7 +160,10 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
      fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-nl-patient-healthcare-id"^^xsd:anyURI ] ;
@@ -153,7 +172,7 @@
        fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
      ]
   ] ) ; # 
-  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:active [ fhir:v true] ; # 
   fhir:name ( [
      fhir:use [ fhir:v "usual" ] ;
      fhir:family [ fhir:v "Pinchock" ] ;
@@ -238,6 +257,7 @@
      ] )
   ] ; # 
   fhir:deceased [
+     a fhir:dateTime ;
      fhir:v "1927-03-28"^^xsd:date ;
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
@@ -248,7 +268,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "deathVerifiedFlag"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "false"^^xsd:boolean ]
+         fhir:value [
+           a fhir:boolean ;
+           fhir:v false
+         ]
        ] [
          fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
          fhir:value [
@@ -262,7 +285,10 @@
   fhir:address ( [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "unknown" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
      ] ) ;
      fhir:type [ fhir:v "physical" ] ;
      fhir:line ( [ fhir:v "6140 Sharon lane" ] ) ;
@@ -275,7 +301,10 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "unknown" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
      ] ) ;
      fhir:type [ fhir:v "postal" ] ;
      fhir:line ( [ fhir:v "42593 Rue saint-antoine" ] ) ;
@@ -297,12 +326,15 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_113c95fd-157a-46ee-a483-67059821b708\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient 113c95fd-157a-46ee-a483-67059821b708</b></p><a name=\"113c95fd-157a-46ee-a483-67059821b708\"> </a><a name=\"hc113c95fd-157a-46ee-a483-67059821b708\"> </a><a name=\"113c95fd-157a-46ee-a483-67059821b708-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Meriwa Tin Edwige Sanon  Female, DoB: 1968-08-07 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id#28XFXSJ8MTNRVKY7QR763H3U7 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">1981-04-10</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999991 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-south-source-patient-id</code>/188N1MV4JZ77LYP7LSQBLVG2W2F09J41XU3F5HU (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 4153118815(Mobile)</li><li>ph: 5059057048(Home)</li><li>ph: 5702742087(Work)</li><li><a href=\"mailto:Kennocha.Guitian@cgi.com\">Kennocha.Guitian@cgi.com</a></li><li><a href=\"mailto:Bellamy.Bakos@cgi.com\">Bellamy.Bakos@cgi.com</a></li><li><a href=\"mailto:Frantisek.Vonseggern@cgi.com\">Frantisek.Vonseggern@cgi.com</a></li><li>13934 Cimmaron road Cochranton BC CA </li><li>2296 Forest avenue Rocky harbour BC CA </li></ul></td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_113c95fd-157a-46ee-a483-67059821b708\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient 113c95fd-157a-46ee-a483-67059821b708</b></p><a name=\"113c95fd-157a-46ee-a483-67059821b708\"> </a><a name=\"hc113c95fd-157a-46ee-a483-67059821b708\"> </a><a name=\"113c95fd-157a-46ee-a483-67059821b708-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Meriwa Tin Edwige Sanon  Female, DoB: 1968-08-07 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id#28XFXSJ8MTNRVKY7QR763H3U7 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">1981-04-10</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999991 (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-south-source-patient-id</code>/188N1MV4JZ77LYP7LSQBLVG2W2F09J41XU3F5HU (use: official, period: 2023-01-23 13:58:38-0800 --&gt; (ongoing))</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 4153118815(Mobile)</li><li>ph: 5059057048(Home)</li><li>ph: 5702742087(Work)</li><li><a href=\"mailto:Kennocha.Guitian@cgi.com\">Kennocha.Guitian@cgi.com</a></li><li><a href=\"mailto:Bellamy.Bakos@cgi.com\">Bellamy.Bakos@cgi.com</a></li><li><a href=\"mailto:Frantisek.Vonseggern@cgi.com\">Frantisek.Vonseggern@cgi.com</a></li><li>13934 Cimmaron road Cochranton BC CA </li><li>2296 Forest avenue Rocky harbour BC CA </li></ul></td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:identifier ( [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
      fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"^^xsd:anyURI ] ;
@@ -316,7 +348,10 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
      fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-south-source-patient-id"^^xsd:anyURI ] ;
@@ -330,7 +365,10 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
      fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id"^^xsd:anyURI ] ;
@@ -339,7 +377,7 @@
        fhir:start [ fhir:v "2023-01-23T13:58:38-08:00"^^xsd:dateTime ]
      ]
   ] ) ; # 
-  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:active [ fhir:v true] ; # 
   fhir:name ( [
      fhir:use [ fhir:v "usual" ] ;
      fhir:family [ fhir:v "Sanon" ] ;
@@ -424,6 +462,7 @@
      ] )
   ] ; # 
   fhir:deceased [
+     a fhir:dateTime ;
      fhir:v "1981-04-10"^^xsd:date ;
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
@@ -434,7 +473,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "deathVerifiedFlag"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "false"^^xsd:boolean ]
+         fhir:value [
+           a fhir:boolean ;
+           fhir:v false
+         ]
        ] [
          fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
          fhir:value [
@@ -448,7 +490,10 @@
   fhir:address ( [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "unknown" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
      ] ) ;
      fhir:type [ fhir:v "physical" ] ;
      fhir:line ( [ fhir:v "13934 Cimmaron road" ] ) ;
@@ -461,7 +506,10 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "unknown" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
      ] ) ;
      fhir:type [ fhir:v "postal" ] ;
      fhir:line ( [ fhir:v "2296 Forest avenue" ] ) ;

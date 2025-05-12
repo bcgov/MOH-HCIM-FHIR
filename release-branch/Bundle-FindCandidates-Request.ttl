@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -38,10 +39,16 @@
   ] ; # 
   fhir:parameter ( [
      fhir:name [ fhir:v "messageId" ] ;
-     fhir:value [ fhir:v "f4a5d2f7-cbea-4f80-9804-b13b9be9f2b9" ]
+     fhir:value [
+       a fhir:string ;
+       fhir:v "f4a5d2f7-cbea-4f80-9804-b13b9be9f2b9"
+     ]
   ] [
      fhir:name [ fhir:v "identifiersOnly" ] ;
-     fhir:value [ fhir:v "false"^^xsd:boolean ]
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v false
+     ]
   ] ) . # 
 
 <urn:uuid:f8ea5781-7772-4701-aabd-e86595f1487d> a fhir:Patient ;
@@ -54,7 +61,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_FindCandidates-Request-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient FindCandidates-Request-Patient</b></p><a name=\"FindCandidates-Request-Patient\"> </a><a name=\"hcFindCandidates-Request-Patient\"> </a><a name=\"FindCandidates-Request-Patient-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Apolo Frieson  Male, DoB: 1931-02-26</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\">16063 Star trek drive Evans-thomas BC CA </td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_FindCandidates-Request-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient FindCandidates-Request-Patient</b></p><a name=\"FindCandidates-Request-Patient\"> </a><a name=\"hcFindCandidates-Request-Patient\"> </a><a name=\"FindCandidates-Request-Patient-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Apolo Frieson  Male, DoB: 1931-02-26</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\">16063 Star trek drive Evans-thomas BC CA </td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:name ( [
      fhir:use [ fhir:v "usual" ] ;

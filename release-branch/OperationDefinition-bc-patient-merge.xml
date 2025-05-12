@@ -3,9 +3,9 @@
 <OperationDefinition xmlns="http://hl7.org/fhir">
   <id value="bc-patient-merge"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: OperationDefinition bc-patient-merge</b></p><a name="bc-patient-merge"> </a><a name="hcbc-patient-merge"> </a><a name="bc-patient-merge-en-US"> </a><p>URL: [base]/Patient/$Merge</p><p>Input parameters Profile:<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></p><p>Output parameters Profile:<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></p><h3>Parameters</h3><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>source-patient</td><td/><td>0..1</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td/><td><div><p>A direct resource reference to the source patient resource (this may include an identifier).</p>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: OperationDefinition bc-patient-merge</b></p><a name="bc-patient-merge"> </a><a name="hcbc-patient-merge"> </a><a name="bc-patient-merge-en-US"> </a><p>URL: [base]/Patient/$merge</p><p>Input parameters Profile:<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></p><p>Output parameters Profile:<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></p><h3>Parameters</h3><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>source-patient</td><td/><td>0..1</td><td><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></td><td/><td><div><p>A direct resource reference to the source patient resource (this may include an identifier).</p>
 </div></td></tr><tr><td>IN</td><td>source-patient-identifier</td><td/><td>0..*</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>When source-patient-identifiers are provided, the server is expected to perform an internal lookup to identify the source patient record. The server SHALL reject the request if the provided identifiers do not resolve to a single patient record. This resolution MAY occur asynchronously, for example, as a part of a review by a user.</p>
-</div></td></tr><tr><td>IN</td><td>target-patient</td><td/><td>0..1</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td/><td><div><p>A direct resource reference to the target patient resource. This is the surviving patient resource, the target for the merge.</p>
+</div></td></tr><tr><td>IN</td><td>target-patient</td><td/><td>0..1</td><td><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></td><td/><td><div><p>A direct resource reference to the target patient resource. This is the surviving patient resource, the target for the merge.</p>
 </div></td></tr><tr><td>IN</td><td>target-patient-identifier</td><td/><td>0..*</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>When target-patient-identifiers are provided, the server is expected to perform an internal lookup to identify the target patient record. The server SHALL reject the request if the provided identifiers do not resolve to a single patient record. This resolution MAY occur asynchronously, for example, as a part of a review by a user.</p>
 </div></td></tr><tr><td>IN</td><td>result-patient</td><td/><td>0..1</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td/><td><div><p>The details of the Patient resource that is expected to be updated to complete with and must have the same patient.id and provided identifiers included. This resource MUST have the link property included referencing the source patient resource. It will be used to perform an update on the target patient resource. In the absence of this parameter the servers should copy all identifiers from the source patient into the target patient, and include the link property. This is often used when properties from the source patient are desired to be included in the target resource. The receiving system may also apply other internal business rules onto the merge which may make the resource different from what is provided here.</p>
 </div></td></tr><tr><td>OUT</td><td>return</td><td/><td>1..1</td><td><a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></td><td/><td><div><p>The Parameters resource will include: The Input parameters to the operation, An OperationOutcome containing errors, warnings, and information messages, The resulting merged Patient resource (or a patient reference if the patient is not committed), Optionally a Task resource to track any additional processing that was required.</p>
@@ -17,7 +17,7 @@
   <title value="Merge Patient"/>
   <status value="draft"/>
   <kind value="operation"/>
-  <date value="2025-02-07T23:01:35+00:00"/>
+  <date value="2025-05-12T18:40:48+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -34,7 +34,7 @@
       <display value="Canada"/>
     </coding>
   </jurisdiction>
-  <code value="Merge"/>
+  <code value="merge"/>
   <resource value="Patient"/>
   <system value="false"/>
   <type value="true"/>
@@ -47,7 +47,7 @@
     <min value="0"/>
     <max value="1"/>
     <documentation value="A direct resource reference to the source patient resource (this may include an identifier)."/>
-    <type value="Patient"/>
+    <type value="Reference"/>
   </parameter>
   <parameter>
     <name value="source-patient-identifier"/>
@@ -63,7 +63,7 @@
     <min value="0"/>
     <max value="1"/>
     <documentation value="A direct resource reference to the target patient resource. This is the surviving patient resource, the target for the merge."/>
-    <type value="Patient"/>
+    <type value="Reference"/>
   </parameter>
   <parameter>
     <name value="target-patient-identifier"/>

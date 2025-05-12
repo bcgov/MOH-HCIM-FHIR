@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -78,7 +79,10 @@
        a fhir:Identifier ;
        fhir:extension ( [
          fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "cancelled" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "cancelled"
+         ]
        ] ) ;
        fhir:use [ fhir:v "secondary" ] ;
        fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-cac-source-patient-id"^^xsd:anyURI ] ;

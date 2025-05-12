@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="5a93c78a-198c-4e39-a6aa-2400d39dbbba"/>
+  <id value="0cf9b87a-6984-4ce9-b455-6f047a11bb45"/>
   <meta>
-    <lastUpdated value="2025-02-07T23:01:35.311+00:00"/>
+    <lastUpdated value="2025-05-12T18:41:44.624+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -14,9 +14,9 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p class="res-header-id">
-              <b>Generated Narrative: ValueSet </b>
+              <b>ValueSet </b>
             </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion done internally based on 
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="CodeSystem-bc-client-registry-address-validation-code-system.html">codesystem BC Client Registry Address Validation Status Code v1.0.0 (CodeSystem)</a>
             </p>
             <p>This value set contains 3 concepts</p>
@@ -29,7 +29,7 @@
                   <b>System</b>
                 </td>
                 <td>
-                  <b>Display</b>
+                  <b>Display (en-US)</b>
                 </td>
                 <td>
                   <b>Definition</b>
@@ -86,7 +86,7 @@
         <title value="BC Address Validation Value Set"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2025-02-07T23:01:35+00:00"/>
+        <date value="2025-05-12T18:40:48+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -95,10 +95,14 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:94af6010-c9c1-4e28-b293-eedb734ae3d0"/>
-          <timestamp value="2025-02-07T23:02:21+00:00"/>
+          <identifier value="urn:uuid:f1823848-bd5b-4b3b-93f6-3863258257ca"/>
+          <timestamp value="2025-05-12T18:42:32+00:00"/>
           <total value="3"/>
           <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en-US"/>
+          </parameter>
           <parameter>
             <name value="count"/>
             <valueInteger value="1000"/>
@@ -135,6 +139,290 @@
     </resource>
   </entry>
   <entry>
+    <fullUrl value="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-client-registry-patient-change-notification-events"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html">codesystem BC Client Registry Patient Change Notification Events Code System v1.0.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 11 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display (en-US)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events-COMP"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-COMP">COMP</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>Composite View</td>
+                <td>
+                  <div>
+                    <p>COMP distributions inform a subscribing source system that their records are out-of-sync with the Composite View. For non-source system, the Composite View distribution informs a subscriber when a data attribute has been modified on a specific source.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events-DEATH"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-DEATH">DEATH</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>Death</td>
+                <td>
+                  <div>
+                    <p>DEATH distributions inform a source system subscriber that they have a record that is out-of-sync with the Date of Death, or the Deceased indicator is added to the Composite View. For non-source systems the DEATH distribution informs a subscribing system there is a Date of Death, or the Deceased indicator is added.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events-EID"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-EID">EID</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>EID</td>
+                <td>
+                  <div>
+                    <p>EID distributions work for subscribers that are source systems and informs them when one of their source records has changed entity sets and/or is out-of-sync with the Composite View.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events-NEW"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-NEW">NEW</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>New</td>
+                <td>
+                  <div>
+                    <p>The NEW distribution is a non-source distribution that informs subscribers of all new records. Any source can trigger a NEW distribution, and subscribers can limit the source they subscribe to.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events-NEWBORN"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-NEWBORN">NEWBORN</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>Newborn</td>
+                <td>
+                  <div>
+                    <p>This is a non-source distribution that informs subscribers that a newborn record has been created in the EMPI and has been assigned a PHN. Typically, subscribers would limit their source subscription to MOH_CRS for this distribution.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events-NEWBORN_GENDER_CHANGE"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-NEWBORN_GENDER_CHANGE">NEWBORN_GENDER_CHANGE</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>Newborn Gender Change</td>
+                <td>
+                  <div>
+                    <p>A non-source distribution and informs subscribers when the gender on a newborn record changes from unknown or undifferentiated to any other gender value. This distribution is used to ensure that pre-registered newborns (where the gender is frequently unknown) are registered for MSP benefits. MSP does not allow the registration of newborns with an unknown gender value. The NEWBOR_GENDER_CHANGE distribution is sent out as a Newborn distribution; however, it has a different triggered mechanism. As such, while the distribution message is mapped and delivered as a NEWBORN distribution, it is logged as a NEWBORN_GENDER_CHANGE in the transaction tables.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events-PHN"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-PHN">PHN</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>PHN</td>
+                <td>
+                  <div>
+                    <p>PHN distributions only work for subscribers that are source systems. This distribution informs source systems that their purported PHN is out-of-sync with the PHN in the Composite View. The purported PHN is the PHN sent on the last update by the source system, while the PHN in the Composite View is the MOH_CRS source PHN.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events-PHNJOIN"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-PHNJOIN">PHNJOIN</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>PHN Join</td>
+                <td>
+                  <div>
+                    <p>A PHNJOIN distribution only works for subscribers that are source systems and informs source systems that their record has joined an entity with a PHN, or a PHN has joined its entity.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events-MERGE"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-MERGE">MERGE</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>Merge</td>
+                <td>
+                  <div>
+                    <p>MERGE is a non-source distribution and informs subscribers of merged PHNs or SRIs. MERGE distributions can be triggered by any source. All distribution profiles can limit the sources they subscribe to; therefore, if a subscriber only wants to be notified of a PHN merge, they subscribe to the MOH_CRS source. If they want to be notified of a SRI merge, they subscribe to the require source.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events-SSRISYNC"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-SSRISYNC">SSRISYNC</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>SSRI Sync</td>
+                <td>
+                  <div>
+                    <p>SSRISYNC distributions apply only to subscribers that are source systems and are used to notify a parent source system when one of its child system’s records has joined or changed within an entity set. SSRISYNC distributions support PHSA and the Clinical and Systems Transformation project (CST). In this project, multiple sources (VCHA, PHC, and PHSA) are implementing a single Cerner CIS (VPP Cerner) accross all their facilities and replacing multiple existing systems. As part of this effort, all patients are issued a new SRI; existing SRIs are recorded and stored for historical use only. The new Cerner CIS is loading the SRI from the old system as the SSRI in the new system. The new CIS will be deployed to facilities over several years and the patients will be migrated from their existing systems to the new CIS as their facilities go live and the legacy system is decommissioned.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events-CRS"> </a>  
+                  <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html#bc-client-registry-patient-change-notification-events-CRS">CRS</a>
+                </td>
+                <td>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</td>
+                <td>CRS</td>
+                <td>
+                  <div>
+                    <p>CRS distributions are a special case and have different business objectives for their respective events compared to normal distributions. CRS distributions create an maintain a Composite View History in the EMPI and synchronize the CRS record with the Composite View. The MDM is updated, and no messages (FHIR or HL7v3) are sent out to the connected partner.</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-client-registry-patient-change-notification-events"/>
+        <version value="1.0.0"/>
+        <name value="PatientChangeNotificationEventsValueSet"/>
+        <title value="BC Client Registry Patient Change Notification Events Value Set"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2025-05-12T18:40:48+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="CA"/>
+            <display value="Canada"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:0e5f4f98-b494-4d13-8219-2fdb22129190"/>
+          <timestamp value="2025-05-12T18:42:32+00:00"/>
+          <total value="11"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en-US"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events|1.0.0"/>
+          </parameter>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="COMP"/>
+            <display value="Composite View"/>
+          </contains>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="DEATH"/>
+            <display value="Death"/>
+          </contains>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="EID"/>
+            <display value="EID"/>
+          </contains>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="NEW"/>
+            <display value="New"/>
+          </contains>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="NEWBORN"/>
+            <display value="Newborn"/>
+          </contains>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="NEWBORN_GENDER_CHANGE"/>
+            <display value="Newborn Gender Change"/>
+          </contains>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="PHN"/>
+            <display value="PHN"/>
+          </contains>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="PHNJOIN"/>
+            <display value="PHN Join"/>
+          </contains>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="MERGE"/>
+            <display value="Merge"/>
+          </contains>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="SSRISYNC"/>
+            <display value="SSRI Sync"/>
+          </contains>
+          <contains>
+            <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+            <code value="CRS"/>
+            <display value="CRS"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
     <fullUrl value="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-system-value-set"/>
     <resource>
       <ValueSet>
@@ -142,10 +430,10 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p class="res-header-id">
-              <b>Generated Narrative: ValueSet </b>
+              <b>ValueSet </b>
             </p>
             <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
-              <p>Expansion done internally based on:</p>
+              <p>Expansion performed internally based on:</p>
               <ul>
                 <li>
                   <a href="http://hl7.org/fhir/R4/codesystem-contact-point-system.html">codesystem ContactPointSystem v4.0.1 (CodeSystem)</a>
@@ -165,7 +453,7 @@
                   <b>System</b>
                 </td>
                 <td>
-                  <b>Display</b>
+                  <b>Display (en-US)</b>
                 </td>
                 <td>
                   <b>Definition</b>
@@ -208,7 +496,7 @@
         <title value="BC Contact Point System Value Set"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2025-02-07T23:01:35+00:00"/>
+        <date value="2025-05-12T18:40:48+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -217,10 +505,14 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:226e2936-eff6-4dc0-84a8-8fabcdb87aa6"/>
-          <timestamp value="2025-02-07T23:02:21+00:00"/>
+          <identifier value="urn:uuid:e361ac8a-ce3a-4388-b381-6621d855817d"/>
+          <timestamp value="2025-05-12T18:42:32+00:00"/>
           <total value="2"/>
           <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en-US"/>
+          </parameter>
           <parameter>
             <name value="count"/>
             <valueInteger value="1000"/>
@@ -263,10 +555,10 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p class="res-header-id">
-              <b>Generated Narrative: ValueSet </b>
+              <b>ValueSet </b>
             </p>
             <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
-              <p>Expansion done internally based on:</p>
+              <p>Expansion performed internally based on:</p>
               <ul>
                 <li>
                   <a href="http://hl7.org/fhir/R4/codesystem-contact-point-use.html">codesystem ContactPointUse v4.0.1 (CodeSystem)</a>
@@ -286,7 +578,7 @@
                   <b>System</b>
                 </td>
                 <td>
-                  <b>Display</b>
+                  <b>Display (en-US)</b>
                 </td>
                 <td>
                   <b>Definition</b>
@@ -343,7 +635,7 @@
         <title value="BC Contact Point Use Value Set"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2025-02-07T23:01:35+00:00"/>
+        <date value="2025-05-12T18:40:48+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -352,10 +644,14 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:fc92e302-239e-4500-aa4c-5d603484a0c7"/>
-          <timestamp value="2025-02-07T23:02:21+00:00"/>
+          <identifier value="urn:uuid:71e4f775-d078-4370-92ae-498d1bb1289e"/>
+          <timestamp value="2025-05-12T18:42:32+00:00"/>
           <total value="3"/>
           <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en-US"/>
+          </parameter>
           <parameter>
             <name value="count"/>
             <valueInteger value="1000"/>
@@ -403,9 +699,9 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p class="res-header-id">
-              <b>Generated Narrative: ValueSet </b>
+              <b>ValueSet </b>
             </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion done internally based on 
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="CodeSystem-bc-identifier-status-code-system.html">codesystem BC Client registry identifier status code system v1.0.0 (CodeSystem)</a>
             </p>
             <p>This value set contains 2 concepts</p>
@@ -418,7 +714,7 @@
                   <b>System</b>
                 </td>
                 <td>
-                  <b>Display</b>
+                  <b>Display (en-US)</b>
                 </td>
                 <td>
                   <b>Definition</b>
@@ -461,7 +757,7 @@
         <title value="BC Identifier Status Value Set"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2025-02-07T23:01:35+00:00"/>
+        <date value="2025-05-12T18:40:48+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -470,10 +766,14 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:45121b88-3f12-48c4-9acb-41b173d139d4"/>
-          <timestamp value="2025-02-07T23:02:21+00:00"/>
+          <identifier value="urn:uuid:52000b9c-04c6-426d-897a-16d9728d2b61"/>
+          <timestamp value="2025-05-12T18:42:32+00:00"/>
           <total value="2"/>
           <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en-US"/>
+          </parameter>
           <parameter>
             <name value="count"/>
             <valueInteger value="1000"/>
@@ -512,9 +812,9 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p class="res-header-id">
-              <b>Generated Narrative: ValueSet </b>
+              <b>ValueSet </b>
             </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion done internally based on 
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="CodeSystem-bc-client-registry-merge-status-code-system.html">codesystem BC Client Registry merge status. v1.0.0 (CodeSystem)</a>
             </p>
             <p>This value set contains 2 concepts</p>
@@ -527,7 +827,7 @@
                   <b>System</b>
                 </td>
                 <td>
-                  <b>Display</b>
+                  <b>Display (en-US)</b>
                 </td>
                 <td>
                   <b>Definition</b>
@@ -570,7 +870,7 @@
         <title value="BC Merge Status Value Set"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2025-02-07T23:01:35+00:00"/>
+        <date value="2025-05-12T18:40:48+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -579,10 +879,14 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:708c9631-728b-4770-88b4-6c0b1914e873"/>
-          <timestamp value="2025-02-07T23:02:21+00:00"/>
+          <identifier value="urn:uuid:f2c6f2a5-1745-46af-a804-b4a50500cddd"/>
+          <timestamp value="2025-05-12T18:42:32+00:00"/>
           <total value="2"/>
           <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en-US"/>
+          </parameter>
           <parameter>
             <name value="count"/>
             <valueInteger value="1000"/>
@@ -621,10 +925,10 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p class="res-header-id">
-              <b>Generated Narrative: ValueSet </b>
+              <b>ValueSet </b>
             </p>
             <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
-              <p>Expansion done internally based on:</p>
+              <p>Expansion performed internally based on:</p>
               <ul>
                 <li>
                   <a href="http://hl7.org/fhir/R4/codesystem-name-use.html">codesystem NameUse v4.0.1 (CodeSystem)</a>
@@ -644,7 +948,7 @@
                   <b>System</b>
                 </td>
                 <td>
-                  <b>Display</b>
+                  <b>Display (en-US)</b>
                 </td>
                 <td>
                   <b>Definition</b>
@@ -701,7 +1005,7 @@
         <title value="BC Name Use value set."/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2025-02-07T23:01:35+00:00"/>
+        <date value="2025-05-12T18:40:48+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -710,10 +1014,14 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:71b7ed8b-71f4-473b-9caa-a8359e5a36de"/>
-          <timestamp value="2025-02-07T23:02:21+00:00"/>
+          <identifier value="urn:uuid:0068a45e-de04-4cb3-8c83-03bf381fd424"/>
+          <timestamp value="2025-05-12T18:42:32+00:00"/>
           <total value="3"/>
           <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en-US"/>
+          </parameter>
           <parameter>
             <name value="count"/>
             <valueInteger value="1000"/>

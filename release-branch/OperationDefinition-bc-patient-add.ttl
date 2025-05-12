@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -10,7 +11,7 @@
   fhir:id [ fhir:v "bc-patient-add"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition bc-patient-add</b></p><a name=\"bc-patient-add\"> </a><a name=\"hcbc-patient-add\"> </a><a name=\"bc-patient-add-en-US\"> </a><p>URL: [base]/Patient/$AddPatient</p><p>Input parameters Profile:<a href=\"StructureDefinition-bc-add-request-bundle.html\">AddRequestBundle</a></p><p>Output parameters Profile:<a href=\"StructureDefinition-bc-add-response-bundle.html\">AddResponseBundle</a></p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>AddRequestBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The AddPatient operation request Bundle.</p>\n</div></td></tr><tr><td>OUT</td><td>AddResponseBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The AddPatient operation response Bundle.</p>\n</div></td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition bc-patient-add</b></p><a name=\"bc-patient-add\"> </a><a name=\"hcbc-patient-add\"> </a><a name=\"bc-patient-add-en-US\"> </a><p>URL: [base]/Patient/$AddPatient</p><p>Input parameters Profile:<a href=\"StructureDefinition-bc-add-request-bundle.html\">AddRequestBundle</a></p><p>Output parameters Profile:<a href=\"StructureDefinition-bc-add-response-bundle.html\">AddResponseBundle</a></p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>AddRequestBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The AddPatient operation request Bundle.</p>\n</div></td></tr><tr><td>OUT</td><td>AddResponseBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The AddPatient operation response Bundle.</p>\n</div></td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "1.0.0"] ; # 
@@ -18,7 +19,7 @@
   fhir:title [ fhir:v "AddPatient"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "operation"] ; # 
-  fhir:date [ fhir:v "2025-02-07T23:01:35+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-05-12T18:40:48+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "BC Ministry of Health"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "BC Ministry of Health" ] ;
@@ -37,9 +38,9 @@
   ] ) ; # 
   fhir:code [ fhir:v "AddPatient"] ; # 
   fhir:resource ( [ fhir:v "Patient"] ) ; # 
-  fhir:system [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:type [ fhir:v "true"^^xsd:boolean] ; # 
-  fhir:instance [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:system [ fhir:v false] ; # 
+  fhir:type [ fhir:v true] ; # 
+  fhir:instance [ fhir:v false] ; # 
   fhir:inputProfile [
      fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle"^^xsd:anyURI ;
      fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle>
@@ -51,14 +52,14 @@
   fhir:parameter ( [
      fhir:name [ fhir:v "AddRequestBundle" ] ;
      fhir:use [ fhir:v "in" ] ;
-     fhir:min [ fhir:v "1"^^xsd:integer ] ;
+     fhir:min [ fhir:v 1 ] ;
      fhir:max [ fhir:v "1" ] ;
      fhir:documentation [ fhir:v "The AddPatient operation request Bundle." ] ;
      fhir:type [ fhir:v "Bundle" ]
   ] [
      fhir:name [ fhir:v "AddResponseBundle" ] ;
      fhir:use [ fhir:v "out" ] ;
-     fhir:min [ fhir:v "1"^^xsd:integer ] ;
+     fhir:min [ fhir:v 1 ] ;
      fhir:max [ fhir:v "1" ] ;
      fhir:documentation [ fhir:v "The AddPatient operation response Bundle." ] ;
      fhir:type [ fhir:v "Bundle" ]

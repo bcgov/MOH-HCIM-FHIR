@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -49,7 +50,10 @@
   ] ; # 
   fhir:parameter ( [
      fhir:name [ fhir:v "messageId" ] ;
-     fhir:value [ fhir:v "7cd363f7-982c-43cb-85b1-024e567ad571" ]
+     fhir:value [
+       a fhir:string ;
+       fhir:v "7cd363f7-982c-43cb-85b1-024e567ad571"
+     ]
   ] [
      fhir:name [ fhir:v "sender" ] ;
      fhir:value [
@@ -59,10 +63,16 @@
      ]
   ] [
      fhir:name [ fhir:v "history" ] ;
-     fhir:value [ fhir:v "false"^^xsd:boolean ]
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v false
+     ]
   ] [
      fhir:name [ fhir:v "identifiersOnly" ] ;
-     fhir:value [ fhir:v "false"^^xsd:boolean ]
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v false
+     ]
   ] [
      fhir:name [ fhir:v "enterer" ] ;
      fhir:value [
@@ -72,14 +82,17 @@
      ]
   ] [
      fhir:name [ fhir:v "requestMessageId" ] ;
-     fhir:value [ fhir:v "73b06e0b-8372-496e-83dc-796b42cf730f" ]
+     fhir:value [
+       a fhir:string ;
+       fhir:v "73b06e0b-8372-496e-83dc-796b42cf730f"
+     ]
   ] ) . # 
 
 <urn:uuid:f156cec9-77fe-40d2-a023-71f1442d4599> a fhir:OperationOutcome ;
   fhir:id [ fhir:v "GetDemographics-Response-Outcome"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_GetDemographics-Response-Outcome\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome GetDemographics-Response-Outcome</b></p><a name=\"GetDemographics-Response-Outcome\"> </a><a name=\"hcGetDemographics-Response-Outcome\"> </a><a name=\"GetDemographics-Response-Outcome-en-US\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Information</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.GD.0.0013}\">The get demographics query completed successfully.</span></td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_GetDemographics-Response-Outcome\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome GetDemographics-Response-Outcome</b></p><a name=\"GetDemographics-Response-Outcome\"> </a><a name=\"hcGetDemographics-Response-Outcome\"> </a><a name=\"GetDemographics-Response-Outcome-en-US\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Information</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.GD.0.0013}\">The get demographics query completed successfully.</span></td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:issue ( [
      fhir:severity [ fhir:v "information" ] ;
@@ -103,12 +116,15 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_GetDemographics-Response-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient GetDemographics-Response-Patient</b></p><a name=\"GetDemographics-Response-Patient\"> </a><a name=\"hcGetDemographics-Response-Patient\"> </a><a name=\"GetDemographics-Response-Patient-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Benedetta Wuliton Ararinda Colpitts  Male, DoB: 2005-05-24 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-ab-patient-healthcare-id#4N2H10HY59EQ210Y5M098X0EPDM08I7KX38583O (use: official, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">2006-08-28</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999999 (use: official, )</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id</code>/8H1496LN8U1F17JP0H2VV (use: official, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing))</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 2045588814(Mobile)</li><li>ph: 7705666584(Home)</li><li>ph: 8156366902(Work)</li><li><a href=\"mailto:Agapios.Nesmith@cgi.com\">Agapios.Nesmith@cgi.com</a></li><li><a href=\"mailto:Editta.Panchik@cgi.com\">Editta.Panchik@cgi.com</a></li><li><a href=\"mailto:Weayaya.Sharber@cgi.com\">Weayaya.Sharber@cgi.com</a></li><li>30729 Middleville road Signal mountain BC CA </li><li>47625 Colony street Benton township BC CA </li></ul></td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_GetDemographics-Response-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient GetDemographics-Response-Patient</b></p><a name=\"GetDemographics-Response-Patient\"> </a><a name=\"hcGetDemographics-Response-Patient\"> </a><a name=\"GetDemographics-Response-Patient-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Benedetta Wuliton Ararinda Colpitts  Male, DoB: 2005-05-24 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-ab-patient-healthcare-id#4N2H10HY59EQ210Y5M098X0EPDM08I7KX38583O (use: official, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">2006-08-28</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999999 (use: official, )</li><li><code>https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id</code>/8H1496LN8U1F17JP0H2VV (use: official, period: 2023-01-23 14:00:53-0800 --&gt; (ongoing))</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 2045588814(Mobile)</li><li>ph: 7705666584(Home)</li><li>ph: 8156366902(Work)</li><li><a href=\"mailto:Agapios.Nesmith@cgi.com\">Agapios.Nesmith@cgi.com</a></li><li><a href=\"mailto:Editta.Panchik@cgi.com\">Editta.Panchik@cgi.com</a></li><li><a href=\"mailto:Weayaya.Sharber@cgi.com\">Weayaya.Sharber@cgi.com</a></li><li>30729 Middleville road Signal mountain BC CA </li><li>47625 Colony street Benton township BC CA </li></ul></td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:identifier ( [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
      fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"^^xsd:anyURI ] ;
@@ -119,7 +135,10 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
      fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id"^^xsd:anyURI ] ;
@@ -133,7 +152,10 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] ) ;
      fhir:use [ fhir:v "official" ] ;
      fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-ab-patient-healthcare-id"^^xsd:anyURI ] ;
@@ -142,7 +164,7 @@
        fhir:start [ fhir:v "2023-01-23T14:00:53-08:00"^^xsd:dateTime ]
      ]
   ] ) ; # 
-  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:active [ fhir:v true] ; # 
   fhir:name ( [
      fhir:use [ fhir:v "usual" ] ;
      fhir:family [ fhir:v "Colpitts" ] ;
@@ -227,6 +249,7 @@
      ] )
   ] ; # 
   fhir:deceased [
+     a fhir:dateTime ;
      fhir:v "2006-08-28"^^xsd:date ;
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
@@ -237,7 +260,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "deathVerifiedFlag"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "false"^^xsd:boolean ]
+         fhir:value [
+           a fhir:boolean ;
+           fhir:v false
+         ]
        ] [
          fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
          fhir:value [
@@ -251,7 +277,10 @@
   fhir:address ( [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "unknown" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
      ] ) ;
      fhir:type [ fhir:v "physical" ] ;
      fhir:line ( [ fhir:v "30729 Middleville road" ] ) ;
@@ -264,7 +293,10 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "unknown" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
      ] ) ;
      fhir:type [ fhir:v "postal" ] ;
      fhir:line ( [ fhir:v "47625 Colony street" ] ) ;
