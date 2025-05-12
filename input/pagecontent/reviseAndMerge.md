@@ -11,6 +11,37 @@ The Client Registry treats the incoming Revise Patient as a complete snapshot of
 
 To prevent the termination of certain attributes in the composite view, the point of service application must first query the Client Registry and resend in a Revised Person message any attributes that were returned on the query that are not maintained in the local system.
 
+A revise person record will be rejected when:
+- The minimum data set has not been provided
+- PHN fials validation check
+- Illegal characters are found in any of the name fields
+- No user id or effective date has been provided
+- A Source Record Identifier (SRI) has not been provided (If the source is not PHN Bound)
+
+**For Revise Person the minimum data set is:**
+- Purported PHN or Mother's PHN
+- Name
+  - Name Type
+  - First Name
+  - Last Name
+- Date of Birth
+- Gender
+
+Or
+
+- Name
+  - Name Type
+  - First Name
+  - Last Name
+- Date of Birth
+- Gender
+- Address
+  - Address Type (Mailing or Physical)
+  - Address Line 1
+  - City
+  - State if country is provided and is CA or US
+
+
 ### Merge Patient
 
 The FHIR Mimic R5 Merge Person feature is one that modifies the format of the existing R4 Merge Person interface so that it aligns closely with the [R5 version](https://www.hl7.org/fhir/R5/patient-operation-merge.html) of the FHIR specifications.
@@ -22,6 +53,21 @@ If the records are merged on the point of service application, a ‘Merged Patie
 If the demographics are updated at the same time as the merge, the demographic update will be processed as a second ‘Revised Patient’ interaction was requested and will update the demographics once the merge is complete. 
 
 The patient record the point of service is keeping must be in the Client Registry prior to the merge or the Merge Person message will fail. This record is known as the ‘survivor’ or 'target-patient' record.
+
+**The input rules for Person Merge are:**
+- SRIs on the merge request must be from the same source
+
+Survivor
+- Only one SRI may be marked as the survivor
+- SRI must be active
+- SRI must not have an overlay task present
+
+Non survivor
+- One or more records may be marked as non survivors
+- Non-survivor SRIs must be active
+- Non-survivor SRIs must not have an overlay task present
+
+Note: After the merge transaction succeeds the demographic information sent in the merge message is copied into a 'Revised Person from Merge' message and sent to the system to update the Survivor.
 
 ### FHIR Structure for Add, Revise, Merge and Distributions
 
