@@ -3,6 +3,8 @@
 
 An add is defined as an event where at least the minimum Client Registry data elements are gathered for the first time, validated using trusted identification provided by the client and a new PHN and client record is created. 
 
+More details are in the [request Bundle](StructureDefinition-bc-add-request-bundle.html) and [response Bundle](StructureDefinition-bc-add-response-bundle.html) definitions.
+
 ### Revise Patient
 
 A revise is defined as an event where at least the minimum Client Registry data elements of an existing client with a PHN are verified using trusted identification provided by the client and updated. 
@@ -41,6 +43,8 @@ Or
   - City
   - State if country is provided and is CA or US
 
+  More details are in the [request Bundle](StructureDefinition-bc-revise-request-bundle.html) and [response Bundle](StructureDefinition-bc-revise-response-bundle.html) definitions.
+
 
 ### Merge Patient
 
@@ -68,6 +72,8 @@ Non survivor
 - Non-survivor SRIs must not have an overlay task present
 
 Note: After the merge transaction succeeds the demographic information sent in the merge message is copied into a 'Revised Person from Merge' message and sent to the system to update the Survivor.
+
+More details can be found [here](OperationDefinition-bc-patient-merge.html).
 
 ### FHIR Structure for Add, Revise, Merge and Distributions
 
