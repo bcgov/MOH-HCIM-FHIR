@@ -1,15 +1,50 @@
 
-### Add Patient - FUTURE
+### Add Patient
 
 An add is defined as an event where at least the minimum Client Registry data elements are gathered for the first time, validated using trusted identification provided by the client and a new PHN and client record is created. 
 
-### Revise Patient - FUTURE
+More details are in the [request Bundle](StructureDefinition-bc-add-request-bundle.html) and [response Bundle](StructureDefinition-bc-add-response-bundle.html) definitions.
+
+### Revise Patient
 
 A revise is defined as an event where at least the minimum Client Registry data elements of an existing client with a PHN are verified using trusted identification provided by the client and updated. 
 
 The Client Registry treats the incoming Revise Patient as a complete snapshot of the source record. If the point of service application sends a blank attribute to the Client Registry, that attribute in the source’s record in the Client Registry will be terminated. 
 
 To prevent the termination of certain attributes in the composite view, the point of service application must first query the Client Registry and resend in a Revised Person message any attributes that were returned on the query that are not maintained in the local system.
+
+A revise person record will be rejected when:
+- The minimum data set has not been provided
+- PHN fials validation check
+- Illegal characters are found in any of the name fields
+- No user id or effective date has been provided
+- A Source Record Identifier (SRI) has not been provided (If the source is not PHN Bound)
+
+**For Revise Person the minimum data set is:**
+- Purported PHN or Mother's PHN
+- Name
+  - Name Type
+  - First Name
+  - Last Name
+- Date of Birth
+- Gender
+
+Or
+
+- Name
+  - Name Type
+  - First Name
+  - Last Name
+- Date of Birth
+- Gender
+- Address
+  - Address Type (Mailing or Physical)
+  - Address Line 1
+  - City
+  - State if country is provided and is CA or US
+
+  More details are in the [request Bundle](StructureDefinition-bc-revise-request-bundle.html) and [response Bundle](StructureDefinition-bc-revise-response-bundle.html) definitions.
+
 
 ### Merge Patient
 
@@ -23,7 +58,24 @@ If the demographics are updated at the same time as the merge, the demographic u
 
 The patient record the point of service is keeping must be in the Client Registry prior to the merge or the Merge Person message will fail. This record is known as the ‘survivor’ or 'target-patient' record.
 
-### FHIR Structure for Add, Revise, Merge and Distributions - FUTURE
+**The input rules for Person Merge are:**
+- SRIs on the merge request must be from the same source
+
+Survivor
+- Only one SRI may be marked as the survivor
+- SRI must be active
+- SRI must not have an overlay task present
+
+Non survivor
+- One or more records may be marked as non survivors
+- Non-survivor SRIs must be active
+- Non-survivor SRIs must not have an overlay task present
+
+Note: After the merge transaction succeeds the demographic information sent in the merge message is copied into a 'Revised Person from Merge' message and sent to the system to update the Survivor.
+
+More details can be found [here](OperationDefinition-bc-patient-merge.html).
+
+### FHIR Structure for Add, Revise, Merge and Distributions
 
 The FHIR structure is roughly the same for Add, Merge, Revise and Distributions. RelatedPerson is only required to AddPatient newborns.  Responses (if required) are wrapped in collection Bundles and include OperationOutcome, Operation Parameters, possible RelatedPerson resources and Patient resources.
 
@@ -32,7 +84,7 @@ The FHIR structure is roughly the same for Add, Merge, Revise and Distributions.
 </span>
 
 
-### Asynchronous Operations - FUTURE
+### Asynchronous Operations
 
 The asynchronous pattern for Revise and Merge Patient follow the same pattern as V3. The figure below shows a client requesting an operation from the Client Registry and the Client Registry responding, later, with the response.
 
