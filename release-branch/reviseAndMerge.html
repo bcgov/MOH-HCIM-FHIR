@@ -172,7 +172,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hlth.gov.bc.ca/fhir/client/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hlth.gov.bc.ca/fhir/client/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Add, Revise and Merge Patient</h2>
   
 
@@ -190,26 +190,75 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#add-patient---future" id="markdown-toc-add-patient---future">Add Patient - FUTURE</a></li>
-  <li><a href="#revise-patient---future" id="markdown-toc-revise-patient---future">Revise Patient - FUTURE</a></li>
+  <li><a href="#add-patient" id="markdown-toc-add-patient">Add Patient</a></li>
+  <li><a href="#revise-patient" id="markdown-toc-revise-patient">Revise Patient</a></li>
   <li><a href="#merge-patient" id="markdown-toc-merge-patient">Merge Patient</a></li>
-  <li><a href="#fhir-structure-for-add-revise-merge-and-distributions---future" id="markdown-toc-fhir-structure-for-add-revise-merge-and-distributions---future">FHIR Structure for Add, Revise, Merge and Distributions - FUTURE</a></li>
-  <li><a href="#asynchronous-operations---future" id="markdown-toc-asynchronous-operations---future">Asynchronous Operations - FUTURE</a></li>
+  <li><a href="#fhir-structure-for-add-revise-merge-and-distributions" id="markdown-toc-fhir-structure-for-add-revise-merge-and-distributions">FHIR Structure for Add, Revise, Merge and Distributions</a></li>
+  <li><a href="#asynchronous-operations" id="markdown-toc-asynchronous-operations">Asynchronous Operations</a></li>
 </ul>
 
 </div>
 
-<h3 id="add-patient---future">Add Patient - FUTURE</h3>
+<h3 id="add-patient">Add Patient</h3>
 
 <p>An add is defined as an event where at least the minimum Client Registry data elements are gathered for the first time, validated using trusted identification provided by the client and a new PHN and client record is created.</p>
 
-<h3 id="revise-patient---future">Revise Patient - FUTURE</h3>
+<p>More details are in the <a href="StructureDefinition-bc-add-request-bundle.html">request Bundle</a> and <a href="StructureDefinition-bc-add-response-bundle.html">response Bundle</a> definitions.</p>
+
+<h3 id="revise-patient">Revise Patient</h3>
 
 <p>A revise is defined as an event where at least the minimum Client Registry data elements of an existing client with a PHN are verified using trusted identification provided by the client and updated.</p>
 
 <p>The Client Registry treats the incoming Revise Patient as a complete snapshot of the source record. If the point of service application sends a blank attribute to the Client Registry, that attribute in the source’s record in the Client Registry will be terminated.</p>
 
 <p>To prevent the termination of certain attributes in the composite view, the point of service application must first query the Client Registry and resend in a Revised Person message any attributes that were returned on the query that are not maintained in the local system.</p>
+
+<p>A revise person record will be rejected when:</p>
+<ul>
+  <li>The minimum data set has not been provided</li>
+  <li>PHN fials validation check</li>
+  <li>Illegal characters are found in any of the name fields</li>
+  <li>No user id or effective date has been provided</li>
+  <li>A Source Record Identifier (SRI) has not been provided (If the source is not PHN Bound)</li>
+</ul>
+
+<p><strong>For Revise Person the minimum data set is:</strong></p>
+<ul>
+  <li>Purported PHN or Mother's PHN</li>
+  <li>Name
+    <ul>
+      <li>Name Type</li>
+      <li>First Name</li>
+      <li>Last Name</li>
+    </ul>
+  </li>
+  <li>Date of Birth</li>
+  <li>Gender</li>
+</ul>
+
+<p>Or</p>
+
+<ul>
+  <li>Name
+    <ul>
+      <li>Name Type</li>
+      <li>First Name</li>
+      <li>Last Name</li>
+    </ul>
+  </li>
+  <li>Date of Birth</li>
+  <li>Gender</li>
+  <li>Address
+    <ul>
+      <li>Address Type (Mailing or Physical)</li>
+      <li>Address Line 1</li>
+      <li>City</li>
+      <li>State if country is provided and is CA or US</li>
+    </ul>
+
+    <p>More details are in the <a href="StructureDefinition-bc-revise-request-bundle.html">request Bundle</a> and <a href="StructureDefinition-bc-revise-response-bundle.html">response Bundle</a> definitions.</p>
+  </li>
+</ul>
 
 <h3 id="merge-patient">Merge Patient</h3>
 
@@ -223,7 +272,30 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>The patient record the point of service is keeping must be in the Client Registry prior to the merge or the Merge Person message will fail. This record is known as the ‘survivor’ or 'target-patient' record.</p>
 
-<h3 id="fhir-structure-for-add-revise-merge-and-distributions---future">FHIR Structure for Add, Revise, Merge and Distributions - FUTURE</h3>
+<p><strong>The input rules for Person Merge are:</strong></p>
+<ul>
+  <li>SRIs on the merge request must be from the same source</li>
+</ul>
+
+<p>Survivor</p>
+<ul>
+  <li>Only one SRI may be marked as the survivor</li>
+  <li>SRI must be active</li>
+  <li>SRI must not have an overlay task present</li>
+</ul>
+
+<p>Non survivor</p>
+<ul>
+  <li>One or more records may be marked as non survivors</li>
+  <li>Non-survivor SRIs must be active</li>
+  <li>Non-survivor SRIs must not have an overlay task present</li>
+</ul>
+
+<p>Note: After the merge transaction succeeds the demographic information sent in the merge message is copied into a 'Revised Person from Merge' message and sent to the system to update the Survivor.</p>
+
+<p>More details can be found <a href="OperationDefinition-bc-patient-merge.html">here</a>.</p>
+
+<h3 id="fhir-structure-for-add-revise-merge-and-distributions">FHIR Structure for Add, Revise, Merge and Distributions</h3>
 
 <p>The FHIR structure is roughly the same for Add, Merge, Revise and Distributions. RelatedPerson is only required to AddPatient newborns.  Responses (if required) are wrapped in collection Bundles and include OperationOutcome, Operation Parameters, possible RelatedPerson resources and Patient resources.</p>
 
@@ -231,7 +303,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 	<img src="revise_merge_fhir.png" height="300" />
 </span></p>
 
-<h3 id="asynchronous-operations---future">Asynchronous Operations - FUTURE</h3>
+<h3 id="asynchronous-operations">Asynchronous Operations</h3>
 
 <p>The asynchronous pattern for Revise and Merge Patient follow the same pattern as V3. The figure below shows a client requesting an operation from the Client Registry and the Client Registry responding, later, with the response.</p>
 
@@ -260,7 +332,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 12, 2025 18:41+0000">2025-05-12</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 29, 2025 22:31+0000">2025-05-29</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
