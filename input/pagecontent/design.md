@@ -249,7 +249,7 @@ More details can be found here, [Add, Revise, Update and Merge page](reviseAndMe
 
 Distributions will use a stakeholder client endpoint for the $PatientNotification operation.  The FHIR structure of the interaction is the same as RevisePatient.
 
-See [Patient Notifications](distributions.html) for more details.
+See [Patient Notifications](CodeSystem-bc-client-registry-patient-change-notification-events.html) for more details.
 
 ##### Asynchronous Operations
 The asynchronous versions of Add, Revise, Update and Merge Operations share the same request and response profile as the synchronous version.
