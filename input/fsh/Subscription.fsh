@@ -3,9 +3,6 @@ Id: bc-client-registry-patient-change-notification-events
 Title: "BC Client Registry Patient Change Notification Events Code System"
 Description: """
 Codes used to indicate that type of patient changes that a subscriber is interested in receiving.
-
-- *Non-source* = you don't have to have a record in the set/entity.
-- *Source* = you have a record in the set/entity.
 """
 * ^url = "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"
 * ^caseSensitive = true
