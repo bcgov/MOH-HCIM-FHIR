@@ -59,8 +59,21 @@ The Provincial Client Registry Onboardings is the process to onboard Organizatio
     - HL7v3 specs
     - FHIR specs
 
-####Process Flow
+#### Process Flow
 The following diagram shows the process flow for the Provincial Client Registry Onboarding process.
+<span>
+	<img src="flowdiagram.png" height="900"/>
+</span>
+
+#### Process Activities
+**Start Event:** Initiate the Integration process
+
+**Initiate Integration process:** To initiate the Integration process for Oranizations developing interfaces to the ministry's Health Information Exchange (HIE) systems, the Organization should follow steps outlined through the HIE [website](https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/software):
+- Contact the Conformance and Integration Services team.
+- Review the *Getting Started Guide*
+- Review the [*Conformance Standards for Provincial Client Registry*](https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/software/conformance-standards)
+- Fill out the mandatory *Request for Integrated Services form* and provide to Conformance and Integration Services [link](https://www2.gov.bc.ca/assets/gov/health/forms/4637fil.pdf)
+Note: MoH may have other requirements for a new Organization that are not detailed here.
 
 ### Becoming a Connected Partner
 
