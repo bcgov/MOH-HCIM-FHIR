@@ -27,6 +27,18 @@ Restful |
 [Revise Person](restful.html#restful-revise-person) |
 {:.grid}
 
+#### HCIM release 7.8 (Asynchronous)
+
+This release might include an asynchronous way to perform the Add, Merge and Update Operations
+
+See following Supporting Profiles
+
+Supporting Profile |
+:--- |
+[Bundle](StructureDefinition-bc-async-ack-response-bundle.html) |
+[Parameters](StructureDefinition-bc-metadata-parameter-async-response.html) |
+{:.grid}
+
 #### Past - HCIM release 7.6 - FHIR 4.0-1 
 
 This section describes everything that is available in this release. Currently the search services are highest priority and will be completed first.
@@ -49,21 +61,9 @@ Restful |
 
 ### Future
 
-#### HCIM release 7.8 (Asynchronous)
-
-This release might include an asynchronous way to perform the Add, Merge and Update Operations
-
-See following Supporting Profiles
-
-Supporting Profile |
-:--- |
-[Bundle](StructureDefinition-bc-async-ack-response-bundle.html) |
-[Parameters](StructureDefinition-bc-metadata-parameter-async-response.html) |
-{:.grid}
-
 #### HCIM release 8.0
 
-This release might include the following Operations and supporting profiles
+This release might include the following Operations and supporting profiles<br>This will be released in a phased approach
 
 Operation |
 :--- |
