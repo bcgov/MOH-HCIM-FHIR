@@ -34,10 +34,10 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -235,9 +235,9 @@
         &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>
                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;U6UQG3285Z5NG23110E2&quot;/&gt;
-      &lt;/identifier&gt;
-    &lt;/valueReference&gt;
-  &lt;/parameter&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">identifier</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueReference</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter">parameter</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter">parameter</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;source-patient&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueReference</a>&gt;
@@ -247,9 +247,9 @@
         &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>
                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;YR4E0OMAP2364ZX58222&quot;/&gt;
-      &lt;/identifier&gt;
-    &lt;/valueReference&gt;
-  &lt;/parameter&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">identifier</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueReference</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter">parameter</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter">parameter</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;source-patient-identifier&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueIdentifier</a>&gt;
@@ -257,8 +257,8 @@
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>
               <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;9ICFAEF1A716U78HKR51&quot;/&gt;
-    &lt;/valueIdentifier&gt;
-  &lt;/parameter&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueIdentifier</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter">parameter</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter">parameter</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;result-patient&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient">resource</a>&gt;
@@ -267,23 +267,23 @@
         &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.meta">meta</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
                    <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient&quot;/&gt;
-        &lt;/meta&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/patient.html#Patient.meta">meta</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.extension">extension</a>
                    <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension&quot;&gt;
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valuePeriod</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2025-01-16T12:54:54.7488769-08:00&quot;/&gt;
-          &lt;/valuePeriod&gt;
-        &lt;/extension&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valuePeriod</a>&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/patient.html#Patient.extension">extension</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.link">link</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.link.other">other</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/95aef996-3bf9-4ccf-8584-96299735689a&quot;/&gt;
-          &lt;/other&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/patient.html#Patient.link.other">other</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.link.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;replaces&quot;/&gt;
-        &lt;/link&gt;
-      &lt;/Patient&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/patient.html#Patient.link">link</a>&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/patient.html#Patient">Patient</a>&gt;
     &lt;/resource&gt;
-  &lt;/parameter&gt;
-&lt;/Parameters&gt;</code></pre>
+  &lt;/<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter">parameter</a>&gt;
+&lt;/<a href="http://hl7.org/fhir/R4/parameters.html#Parameters">Parameters</a>&gt;</code></pre>
 
 
   <!-- insert notes if present -->
@@ -307,7 +307,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 29, 2025 22:31+0000">2025-05-29</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 19, 2025 23:39+0000">2025-08-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
