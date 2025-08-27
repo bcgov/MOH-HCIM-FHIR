@@ -20,6 +20,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 <link href="assets/css/bc-fhir.css" rel="stylesheet"/>
 
@@ -33,10 +34,10 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -44,10 +45,11 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"15.74"}
-    h3,h4,h5,h6{--heading-prefix:"15.74"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.74"}
+    h3,h4,h5,h6{--heading-prefix:"14.74"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Left logo - typically the publisher's logo - project or affiliate -->
         <div id="project-nav">
           <a id="project-logo" no-external="true" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">
@@ -109,9 +111,6 @@
         <a href="reviseAndMerge.html">Add, Revise, Update And Merge Patient</a>
       </li>
       <li>
-        <a href="distributions.html">Patient Change Notifications</a>
-      </li>
-      <li>
         <a href="identifiers.html">Identifiers</a>
       </li>
       <li>
@@ -168,7 +167,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 7" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hlth.gov.bc.ca/fhir/client/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hlth.gov.bc.ca/fhir/client/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -223,7 +222,7 @@
         
           Active
           
-            as of 2024-10-11
+            as of 2025-08-27
           
         
       </td>
@@ -244,8 +243,8 @@
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;bc-client-registry-patient-change-notification-events&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: CodeSystem bc-client-registry-patient-change-notification-events&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;bc-client-registry-patient-change-notification-events&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcbc-client-registry-patient-change-notification-events&quot;&gt; &lt;/a&gt;&lt;a name=&quot;bc-client-registry-patient-change-notification-events-en-US&quot;&gt; &lt;/a&gt;&lt;p&gt;This case-sensitive code system &lt;code&gt;https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events&lt;/code&gt; defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;COMPOSITE&lt;a name=&quot;bc-client-registry-patient-change-notification-events-COMPOSITE&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;composite&lt;/td&gt;&lt;td&gt;Composite view distributions inform a subscribing system that their records are out-of-sync with the composite view and a subscriber that a data attribute has been modified on a specific source.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;DEATH&lt;a name=&quot;bc-client-registry-patient-change-notification-events-DEATH&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;death&lt;/td&gt;&lt;td&gt;DEATH distributions inform a subscriber that they have a record that is out of sync with the Date of Death, or the Deceased indicator is present and a change to the composite view has occurred and a subscribing system there is a Date of Death, or the Deceased indicator is present and a change to the composite view has occurred.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;EID&lt;a name=&quot;bc-client-registry-patient-change-notification-events-EID&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;eid&lt;/td&gt;&lt;td&gt;EID distributions inform subscribers when one of their source records has changed entity sets and/or is out-of-sync with the composite view.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;NEW&lt;a name=&quot;bc-client-registry-patient-change-notification-events-NEW&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;new PHN&lt;/td&gt;&lt;td&gt;The New PHN (NEW) distribution is a non-source distribution and informs subscribers of all new PHNs.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;NEWBORN&lt;a name=&quot;bc-client-registry-patient-change-notification-events-NEWBORN&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;newborn&lt;/td&gt;&lt;td&gt;This distribution informs subscribers that a newborn record has been created in the EMPI, and has been assigned a PHN.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;NEWBORN_GENDER&lt;a name=&quot;bc-client-registry-patient-change-notification-events-NEWBORN_GENDER&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;newborn gender&lt;/td&gt;&lt;td&gt;A non-source distribution and informs subscribers when the gender on a newborn record changes from unknown or undifferentiated to any other gender value.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;PHN&lt;a name=&quot;bc-client-registry-patient-change-notification-events-PHN&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;PHN change&lt;/td&gt;&lt;td&gt;PHN Change distributions inform source systems that their purported PHN is out-of-sync with the PHN in the composite view.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;PHNJOIN&lt;a name=&quot;bc-client-registry-patient-change-notification-events-PHNJOIN&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;PHN Join&lt;/td&gt;&lt;td&gt;PHN Join distributions inform source systems that their record has joined an entity with a PHN.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;PHNMERGE&lt;a name=&quot;bc-client-registry-patient-change-notification-events-PHNMERGE&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;PHN Merge&lt;/td&gt;&lt;td&gt;PHN merge is a non-source distribution and informs subscribers of merged PHNs.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;SSRI&lt;a name=&quot;bc-client-registry-patient-change-notification-events-SSRI&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;SSRI Sync&lt;/td&gt;&lt;td&gt;SSRI Sync distributions notify a parent system that one of its child system’s records has joined the set.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
-  &lt;/text&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: CodeSystem bc-client-registry-patient-change-notification-events&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;bc-client-registry-patient-change-notification-events&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcbc-client-registry-patient-change-notification-events&quot;&gt; &lt;/a&gt;&lt;p&gt;This case-sensitive code system &lt;code&gt;https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events&lt;/code&gt; defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;COMP&lt;a name=&quot;bc-client-registry-patient-change-notification-events-COMP&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Composite View&lt;/td&gt;&lt;td&gt;The Composite View distribution serves different business purposes depending on whether or not the subscriber is a source system. For a source system, Composite View distributions inform a subscribing system that its records are out-of-sync with the composite view. For a non-source system, Composite View distributions inform a subscriber when a data attribute has been modified on a specific source.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;DEATH&lt;a name=&quot;bc-client-registry-patient-change-notification-events-DEATH&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Death&lt;/td&gt;&lt;td&gt;A Death Distributions notifications inform subscribers of both confirmed and unconfirmed deaths. This occurs when just the Date of Death is present, or both the Date of Death and Deceased indicator are present in the Composite View. There are some behavior differences depending on whether or not the subscriber is a source system. For a source system, Death distributions inform a subscriber that they have a record that is out-of-sync with the Date of Death, or the Deceased indicator is added to the Composite View. For a non-source system, Death distributions inform a subscribing system that there is a Date of Death, or the Deceased indicator is added.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;NEW&lt;a name=&quot;bc-client-registry-patient-change-notification-events-NEW&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;New&lt;/td&gt;&lt;td&gt;The NEW distribution is a non-source distribution that informs subscribers of all new records. Any source can trigger a NEW distribution, and subscribers can limit the sources they subscribe to. For instnce, if a subscriber wants to be notified of new PHNs, they subscribe to the MOH_CRS source.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;NEWBORN&lt;a name=&quot;bc-client-registry-patient-change-notification-events-NEWBORN&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Newborn&lt;/td&gt;&lt;td&gt;A Newborn distribution is a non-source distribution that informs subscribers that a newborn record has been created and has been assigned a PHN. Typically, subscribers would limit their source subscription to MOH_CRS for this distribution.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;NEWBORN_GENDER&lt;a name=&quot;bc-client-registry-patient-change-notification-events-NEWBORN_GENDER&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Newborn Gender&lt;/td&gt;&lt;td&gt;The Newborn Gender distribution is a non-source distribution and informs subscribers when the gender on a newborn record changes from unknown or undifferentiated to Male or Female. This distribution is used to ensure that pre-registered newborns (where the gender is frequently unknown) are registered for MSP benefits. MSP does not allow the registration of newborns with an unknown gender value.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;PHN&lt;a name=&quot;bc-client-registry-patient-change-notification-events-PHN&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;PHN&lt;/td&gt;&lt;td&gt;PHN distributions only work for subscribers that are source systems. This distribution informs source systems that their purported PHN is out-of-sync with the PHN in the Composite View. The purported PHN is the PHN sent on the last update by the source system, while the PHN in the Composite View is the MOH_CRS source PHN.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;PHNJOIN&lt;a name=&quot;bc-client-registry-patient-change-notification-events-PHNJOIN&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;PHN Join&lt;/td&gt;&lt;td&gt;A PHNJOIN distribution works for subscribers that are source and non-source systems and informs them that their record has joined an entity with a PHN, or a PHN has joined its entity. For source systems, PHNJOIN distribution informs a subscriber that one of the following has occured: their record has created a PHN, their record has joined the set of an existing PHN, their record moved from a non-survivor PHN to a survivor PHN when the PHNs were merged. For non-source systems, PHNJOIN distribution informs non-source subscribers that a specific source they are listening to has joined a set with a PHN.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;MERGE&lt;a name=&quot;bc-client-registry-patient-change-notification-events-MERGE&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Merge&lt;/td&gt;&lt;td&gt;MERGE is a non-source distribution and informs subscribers of merged PHNs or Source Record Identifiers (SRIs). Merge distributions can be triggered by any source. All distribution profiles can limit the sources they subscribe to; therefore, if a subscriber only wants to be notified of a PHN merge, they subscribe to the MOH_CRS source. If they want to be notified of a SRI merge, they subscribe to the required source.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;SSRISYNC&lt;a name=&quot;bc-client-registry-patient-change-notification-events-SSRISYNC&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;SSRI Sync&lt;/td&gt;&lt;td&gt;An SSRI Sync distribution applies only to subscribers that are source systems and are used to notify a parent source system when one of its child systems' records has joined or changed within an entity set. SSRI Sync distributions support PHSA and the Clinical and Systems Transformation project (CST). In this project, multiple sources (VCHA, PHC, and PHSA) are implementing a single Cerner CIS (VPP Cerner) across all their facilities and replacing multiple existing systems. As part of this effort, all patients are issued a new SRI; existing SRIs are recorded and stored for historical use only. The new Cerner CIS is loading the SRI from the old system as the SSRI in the new system. The new CIS will be deployed to facilities over several years, and the patients will be migrated from their existing systems to the new CIS as their facility goes live and the legacy system is decommissioned.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.text">text</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.url">url</a>
        <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1.0.0&quot;/&gt;
@@ -254,7 +253,7 @@
          <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;BC Client Registry Patient Change Notification Events Code System&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.experimental">experimental</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-10-11T23:26:29+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2025-08-27T22:33:33+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;BC Ministry of Health&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;BC Ministry of Health&quot;/&gt;
@@ -262,8 +261,8 @@
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;url&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health&quot;/&gt;
-    &lt;/telecom&gt;
-  &lt;/contact&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.contact">contact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.description">description</a>
                <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Codes used to indicate that type of patient changes that a subscriber is interested in receiving.&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.jurisdiction">jurisdiction</a>&gt;
@@ -271,72 +270,66 @@
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:iso:std:iso:3166&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;CA&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Canada&quot;/&gt;
-    &lt;/coding&gt;
-  &lt;/jurisdiction&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.jurisdiction">jurisdiction</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.content">content</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;complete&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.count">count</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;10&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.count">count</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;9&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;COMPOSITE&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;composite&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;COMP&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Composite View&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Composite view distributions inform a subscribing system that their records are out-of-sync with the composite view and a subscriber that a data attribute has been modified on a specific source.&quot;/&gt;
-  &lt;/concept&gt;
+                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;The Composite View distribution serves different business purposes depending on whether or not the subscriber is a source system. For a source system, Composite View distributions inform a subscribing system that its records are out-of-sync with the composite view. For a non-source system, Composite View distributions inform a subscriber when a data attribute has been modified on a specific source.&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;DEATH&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;death&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Death&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;DEATH distributions inform a subscriber that they have a record that is out of sync with the Date of Death, or the Deceased indicator is present and a change to the composite view has occurred and a subscribing system there is a Date of Death, or the Deceased indicator is present and a change to the composite view has occurred.&quot;/&gt;
-  &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;EID&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;eid&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;EID distributions inform subscribers when one of their source records has changed entity sets and/or is out-of-sync with the composite view.&quot;/&gt;
-  &lt;/concept&gt;
+                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;A Death Distributions notifications inform subscribers of both confirmed and unconfirmed deaths. This occurs when just the Date of Death is present, or both the Date of Death and Deceased indicator are present in the Composite View. There are some behavior differences depending on whether or not the subscriber is a source system. For a source system, Death distributions inform a subscriber that they have a record that is out-of-sync with the Date of Death, or the Deceased indicator is added to the Composite View. For a non-source system, Death distributions inform a subscribing system that there is a Date of Death, or the Deceased indicator is added.&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;NEW&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;new PHN&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;New&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;The New PHN (NEW) distribution is a non-source distribution and informs subscribers of all new PHNs.&quot;/&gt;
-  &lt;/concept&gt;
+                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;The NEW distribution is a non-source distribution that informs subscribers of all new records. Any source can trigger a NEW distribution, and subscribers can limit the sources they subscribe to. For instnce, if a subscriber wants to be notified of new PHNs, they subscribe to the MOH_CRS source.&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;NEWBORN&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;newborn&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Newborn&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;This distribution informs subscribers that a newborn record has been created in the EMPI, and has been assigned a PHN.&quot;/&gt;
-  &lt;/concept&gt;
+                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;A Newborn distribution is a non-source distribution that informs subscribers that a newborn record has been created and has been assigned a PHN. Typically, subscribers would limit their source subscription to MOH_CRS for this distribution.&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;NEWBORN_GENDER&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;newborn gender&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Newborn Gender&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;A non-source distribution and informs subscribers when the gender on a newborn record changes from unknown or undifferentiated to any other gender value.&quot;/&gt;
-  &lt;/concept&gt;
+                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;The Newborn Gender distribution is a non-source distribution and informs subscribers when the gender on a newborn record changes from unknown or undifferentiated to Male or Female. This distribution is used to ensure that pre-registered newborns (where the gender is frequently unknown) are registered for MSP benefits. MSP does not allow the registration of newborns with an unknown gender value.&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;PHN&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PHN change&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PHN&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PHN Change distributions inform source systems that their purported PHN is out-of-sync with the PHN in the composite view.&quot;/&gt;
-  &lt;/concept&gt;
+                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PHN distributions only work for subscribers that are source systems. This distribution informs source systems that their purported PHN is out-of-sync with the PHN in the Composite View. The purported PHN is the PHN sent on the last update by the source system, while the PHN in the Composite View is the MOH_CRS source PHN.&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;PHNJOIN&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PHN Join&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PHN Join distributions inform source systems that their record has joined an entity with a PHN.&quot;/&gt;
-  &lt;/concept&gt;
+                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;A PHNJOIN distribution works for subscribers that are source and non-source systems and informs them that their record has joined an entity with a PHN, or a PHN has joined its entity. For source systems, PHNJOIN distribution informs a subscriber that one of the following has occured: their record has created a PHN, their record has joined the set of an existing PHN, their record moved from a non-survivor PHN to a survivor PHN when the PHNs were merged. For non-source systems, PHNJOIN distribution informs non-source subscribers that a specific source they are listening to has joined a set with a PHN.&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;PHNMERGE&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PHN Merge&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MERGE&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Merge&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PHN merge is a non-source distribution and informs subscribers of merged PHNs.&quot;/&gt;
-  &lt;/concept&gt;
+                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MERGE is a non-source distribution and informs subscribers of merged PHNs or Source Record Identifiers (SRIs). Merge distributions can be triggered by any source. All distribution profiles can limit the sources they subscribe to; therefore, if a subscriber only wants to be notified of a PHN merge, they subscribe to the MOH_CRS source. If they want to be notified of a SRI merge, they subscribe to the required source.&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SSRI&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SSRISYNC&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;SSRI Sync&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;SSRI Sync distributions notify a parent system that one of its child system’s records has joined the set.&quot;/&gt;
-  &lt;/concept&gt;
-&lt;/CodeSystem&gt;</code></pre>
+                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;An SSRI Sync distribution applies only to subscribers that are source systems and are used to notify a parent source system when one of its child systems' records has joined or changed within an entity set. SSRI Sync distributions support PHSA and the Clinical and Systems Transformation project (CST). In this project, multiple sources (VCHA, PHC, and PHSA) are implementing a single Cerner CIS (VPP Cerner) across all their facilities and replacing multiple existing systems. As part of this effort, all patients are issued a new SRI; existing SRIs are recorded and stored for historical use only. The new Cerner CIS is loading the SRI from the old system as the SSRI in the new system. The new CIS will be deployed to facilities over several years, and the patients will be migrated from their existing systems to the new CIS as their facility goes live and the legacy system is decommissioned.&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+&lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem">CodeSystem</a>&gt;</code></pre>
 
 
   <!-- insert notes if present -->
@@ -360,7 +353,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Oct 11, 2024 23:26+0000">2024-10-11</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 27, 2025 22:34+0000">2025-08-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

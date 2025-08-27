@@ -1,0 +1,106 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hlth.gov.bc.ca/fhir/client/Patient/Newborn-Request> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Newborn-Request"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"^^xsd:anyURI ;
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient Newborn-Request</b></p><a name=\"Newborn-Request\"> </a><a name=\"hcNewborn-Request\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Proinnsias Edmon Beartlaidh Tabatabai  Female, DoB: 1996-02-18 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id#MB220FXR155686125TUN (use: official, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Alternate names (see the one above)\">Alt. Name:</td><td colspan=\"3\">Victor (Nickname)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 3104702526(Mobile)</li><li>ph: 3366898069(Home)</li><li>ph: 2544265519(Work)</li><li><a href=\"mailto:Constance.Besarra@cgi.com\">Constance.Besarra@cgi.com</a></li><li><a href=\"mailto:Hank.Avey@cgi.com\">Hank.Avey@cgi.com</a></li><li><a href=\"mailto:Nerissa.Friede@cgi.com\">Nerissa.Friede@cgi.com</a></li><li>7562 Railroad street Calistoga BC V5QOX7 CA </li><li>27523 Oak street Topmost BC V4IUH0 CA </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The effective dates for the parent element.\"><a href=\"StructureDefinition-bc-business-period-extension.html\">BC Business Dates</a></td><td colspan=\"3\">2024-11-28 06:22:01-0800 --&gt; (ongoing)</td></tr></table><hr/><p><b>Contained Resource</b></p><hr/><a name=\"Newborn-Request/Mother\"> </a><p class=\"res-header-id\"><b>RelatedPerson #Mother</b></p><a name=\"hcNewborn-Request/Mother\"> </a><p><b>identifier</b>: <code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999999 (use: official, )</p><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"Patient-Newborn-Request.html\">Proinnsias Edmon Beartlaidh Tabatabai  Female, DoB: 1996-02-18 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id#MB220FXR155686125TUN (use: official, ))</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode NMTH}\">natural mother</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:contained ( [
+     a fhir:RelatedPerson ;
+     fhir:id [ fhir:v "Mother" ] ;
+     fhir:identifier ( [
+       fhir:use [ fhir:v "official" ] ;
+       fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "9999999999" ]
+     ] ) ;
+     fhir:active [ fhir:v true ] ;
+     fhir:patient [
+       fhir:link <http://hlth.gov.bc.ca/fhir/client/Patient/Newborn-Request> ;
+       fhir:reference [ fhir:v "Patient/Newborn-Request" ]
+     ] ;
+     fhir:relationship ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NMTH" ]
+       ] )
+     ] )
+  ] ) ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Period ;
+       fhir:start [ fhir:v "2024-11-28T06:22:01.0974407-08:00"^^xsd:dateTime ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "MB220FXR155686125TUN" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:family [ fhir:v "Tabatabai" ] ;
+     fhir:given ( [ fhir:v "Proinnsias" ] [ fhir:v "Edmon" ] [ fhir:v "Beartlaidh" ] )
+  ] [
+     fhir:use [ fhir:v "nickname" ] ;
+     fhir:given ( [ fhir:v "Victor" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "3104702526" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "3366898069" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "2544265519" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Constance.Besarra@cgi.com" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Hank.Avey@cgi.com" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Nerissa.Friede@cgi.com" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1996-02-18"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:type [ fhir:v "physical" ] ;
+     fhir:line ( [ fhir:v "7562 Railroad street" ] ) ;
+     fhir:city [ fhir:v "Calistoga" ] ;
+     fhir:state [ fhir:v "BC" ] ;
+     fhir:postalCode [ fhir:v "V5QOX7" ] ;
+     fhir:country [ fhir:v "CA" ]
+  ] [
+     fhir:type [ fhir:v "postal" ] ;
+     fhir:line ( [ fhir:v "27523 Oak street" ] ) ;
+     fhir:city [ fhir:v "Topmost" ] ;
+     fhir:state [ fhir:v "BC" ] ;
+     fhir:postalCode [ fhir:v "V4IUH0" ] ;
+     fhir:country [ fhir:v "CA" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

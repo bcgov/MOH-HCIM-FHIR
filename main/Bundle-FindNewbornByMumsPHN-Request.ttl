@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -38,22 +39,31 @@
   ] ; # 
   fhir:parameter ( [
      fhir:name [ fhir:v "messageId" ] ;
-     fhir:value [ fhir:v "9acccdc8-b4d0-4ac7-9f10-80d0c80136e4" ]
+     fhir:value [
+       a fhir:string ;
+       fhir:v "9acccdc8-b4d0-4ac7-9f10-80d0c80136e4"
+     ]
   ] [
      fhir:name [ fhir:v "identifiersOnly" ] ;
-     fhir:value [ fhir:v "false"^^xsd:boolean ]
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v false
+     ]
   ] ) . # 
 
 <urn:uuid:e7ae452f-9076-4cd6-958f-1d1c55d34c38> a fhir:RelatedPerson ;
   fhir:id [ fhir:v "FindBabiesByMumsPHN-RelatedPerson"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"RelatedPerson_FindBabiesByMumsPHN-RelatedPerson\"> </a><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson FindBabiesByMumsPHN-RelatedPerson</b></p><a name=\"FindBabiesByMumsPHN-RelatedPerson\"> </a><a name=\"hcFindBabiesByMumsPHN-RelatedPerson\"> </a><a name=\"FindBabiesByMumsPHN-RelatedPerson-en-US\"> </a><p><b>identifier</b>: <code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999999</p><p><b>patient</b>: <a href=\"https://simplifier.net/resolve?scope=hl7.fhir.ca.baseline@1.1.7&amp;canonical=http://hl7.org/fhir/ca/baseline/Patient/e418862f-1759-42de-98a9-00433a779e9b\">??</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode NMTH}\">natural mother</span></p></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"RelatedPerson_FindBabiesByMumsPHN-RelatedPerson\"> </a><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson FindBabiesByMumsPHN-RelatedPerson</b></p><a name=\"FindBabiesByMumsPHN-RelatedPerson\"> </a><a name=\"hcFindBabiesByMumsPHN-RelatedPerson\"> </a><p><b>identifier</b>: <code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/9999999999</p><p><b>patient</b>: <a href=\"https://simplifier.net/resolve?scope=hl7.fhir.ca.baseline@1.2.0&amp;canonical=http://hl7.org/fhir/ca/baseline/Patient/e418862f-1759-42de-98a9-00433a779e9b\">Patient/e418862f-1759-42de-98a9-00433a779e9b</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode NMTH}\">natural mother</span></p></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:identifier ( [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "active" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "active"
+       ]
      ] ) ;
      fhir:system [ fhir:v "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "9999999999" ]

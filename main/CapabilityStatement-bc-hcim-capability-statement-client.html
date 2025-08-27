@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 <link href="assets/css/bc-fhir.css" rel="stylesheet"/>
 
@@ -31,10 +32,10 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -42,10 +43,11 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"15.1"}
-    h3,h4,h5,h6{--heading-prefix:"15.1"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.1"}
+    h3,h4,h5,h6{--heading-prefix:"14.1"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Left logo - typically the publisher's logo - project or affiliate -->
         <div id="project-nav">
           <a id="project-logo" no-external="true" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">
@@ -107,9 +109,6 @@
         <a href="reviseAndMerge.html">Add, Revise, Update And Merge Patient</a>
       </li>
       <li>
-        <a href="distributions.html">Patient Change Notifications</a>
-      </li>
-      <li>
         <a href="identifiers.html">Identifiers</a>
       </li>
       <li>
@@ -166,7 +165,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hlth.gov.bc.ca/fhir/client/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hlth.gov.bc.ca/fhir/client/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -274,7 +273,7 @@
   
 
 
-  <div><p class="res-header-id"><b>Generated Narrative: CapabilityStatement bc-hcim-capability-statement-client</b></p><a name="bc-hcim-capability-statement-client"> </a><a name="hcbc-hcim-capability-statement-client"> </a><a name="bc-hcim-capability-statement-client-en-US"> </a><h2 id="title">BC HCIM Client Capability Statement</h2><ul><li>Implementation Guide Version: 1.0.0 </li><li>FHIR Version: 4.0.1 </li><li>Supported Formats: <code>json</code></li><li>Supported Patch Formats: </li><li>Published on: 2021-11-18 </li><li>Published by: BC Ministry of Health </li></ul><blockquote class="impl-note"><p><strong>Note to Implementers: FHIR Capabilities</strong></p><p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p></blockquote><h2 id="rest">FHIR RESTful Capabilities</h2><div class="panel panel-default"><div class="panel-heading"><h3 id="mode1" class="panel-title">Mode: <code>client</code></h3></div><div class="panel-body"><div class="lead"><em>Summary of System-wide Interactions</em></div></div></div><h3 id="resourcesCap1">Capabilities by Resource/Profile</h3><h4 id="resourcesSummary1">Summary</h4><p>The summary table lists the resources that are part of this configuration, and for each resource it lists:</p><ul><li>The relevant profiles (if any)</li><li>The interactions supported by each resource (<b><span class="bg-info">R</span></b>ead, <b><span class="bg-info">S</span></b>earch, <b><span class="bg-info">U</span></b>pdate, and <b><span class="bg-info">C</span></b>reate, are always shown, while <b><span class="bg-info">VR</span></b>ead, <b><span class="bg-info">P</span></b>atch, <b><span class="bg-info">D</span></b>elete, <b><span class="bg-info">H</span></b>istory on <b><span class="bg-info">I</span></b>nstance, or <b><span class="bg-info">H</span></b>istory on <b><span class="bg-info">T</span></b>ype are only present if at least one of the resources has support for them.</li><li><span>The required, recommended, and some optional search parameters (if any). </span></li><li>The linked resources enabled for <code>_include</code></li><li>The other resources enabled for <code>_revinclude</code></li><li>The operations on the resource (if any)</li></ul><div class="table-responsive"><table class="table table-condensed table-hover"><thead><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th class="text-center"><b title="GET a resource (read interaction)">R</b></th><th class="text-center"><b title="GET all set of resources of the type (search interaction)">S</b></th><th class="text-center"><b title="PUT a new resource version (update interaction)">U</b></th><th class="text-center"><b title="POST a new resource (create interaction)">C</b></th><th class="text-center"><b title="DELETE a resource (delete interaction)">D</b></th><th><b title="Required and recommended search parameters">Searches</b></th><th><code><b>_include</b></code></th><th><code><b>_revinclude</b></code></th><th><b>Operations</b></th></tr></thead><tbody><tr><td><a href="#Subscription1-1">Subscription</a></td><td> </td><td class="text-center"></td><td class="text-center"></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td></td><td/><td/><td/></tr></tbody></table></div><hr/><div class="panel panel-default"><div role="tab" id="heading1-1" class="panel-heading"><h4 id="Subscription1-1" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-1" aria-expanded="true" href="#collapse1-1"><span style="float: right;">Resource Conformance: supported</span>Subscription</a></h4></div><div role="tabpanel" aria-labelledby="heading1-1" id="collapse1-1" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="http://hl7.org/fhir/R4/subscription.html">Subscription</a></div><div class="col-lg-4"><span class="lead">Reference Policy</span><br/></div><div class="col-lg-4"><span class="lead">Interaction summary</span><br/><ul><li>Supports <code>create</code>, <code>update</code>, <code>delete</code>.</li></ul></div></div><p/><p/></div></div></div></div></div>
+  <div xmlns="http://www.w3.org/1999/xhtml"><a name="bc-hcim-capability-statement-client"> </a><a name="hcbc-hcim-capability-statement-client"> </a><h2 id="title">BC HCIM Client Capability Statement</h2><ul><li>Implementation Guide Version: 1.0.0 </li><li>FHIR Version: 4.0.1 </li><li>Supported Formats: <code>json</code></li><li>Published on: 2021-11-18 </li><li>Published by: BC Ministry of Health </li></ul><blockquote class="impl-note"><p><strong>Note to Implementers: FHIR Capabilities</strong></p><p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p></blockquote><h2 id="rest">FHIR RESTful Capabilities</h2><div class="panel panel-default"><div class="panel-heading"><h3 id="mode1" class="panel-title">Mode: <code>client</code></h3></div><div class="panel-body"/></div></div>
 
   <!-- insert notes if present -->
   
@@ -299,7 +298,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Oct 11, 2024 23:26+0000">2024-10-11</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 27, 2025 22:34+0000">2025-08-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

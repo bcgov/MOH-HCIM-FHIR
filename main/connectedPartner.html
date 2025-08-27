@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 <link href="assets/css/bc-fhir.css" rel="stylesheet"/>
 
@@ -31,10 +32,10 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -42,10 +43,11 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"10"}
-    h3,h4,h5,h6{--heading-prefix:"10"}</style>
+    <style type="text/css">h2{--heading-prefix:"9"}
+    h3,h4,h5,h6{--heading-prefix:"9"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Left logo - typically the publisher's logo - project or affiliate -->
         <div id="project-nav">
           <a id="project-logo" no-external="true" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">
@@ -105,9 +107,6 @@
       </li>
       <li>
         <a href="reviseAndMerge.html">Add, Revise, Update And Merge Patient</a>
-      </li>
-      <li>
-        <a href="distributions.html">Patient Change Notifications</a>
       </li>
       <li>
         <a href="identifiers.html">Identifiers</a>
@@ -173,7 +172,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hlth.gov.bc.ca/fhir/client/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hlth.gov.bc.ca/fhir/client/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Connected Partners</h2>
   
 
@@ -189,16 +188,284 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#provincial-client-registry-onboarding-process-summary" id="markdown-toc-provincial-client-registry-onboarding-process-summary">Provincial Client Registry Onboarding Process Summary</a></li>
+  <li><a href="#provincial-client-registry-onboarding-process" id="markdown-toc-provincial-client-registry-onboarding-process">Provincial Client Registry Onboarding Process</a></li>
+  <li><a href="#provincial-client-registry-onboarding-package" id="markdown-toc-provincial-client-registry-onboarding-package">Provincial Client Registry Onboarding Package</a></li>
+  <li><a href="#glossary" id="markdown-toc-glossary">Glossary</a></li>
+  <li><a href="#policies-and-procedures" id="markdown-toc-policies-and-procedures">Policies and Procedures</a></li>
+  <li><a href="#becoming-a-connected-partner" id="markdown-toc-becoming-a-connected-partner">Becoming a Connected Partner</a></li>
+</ul>
+
 </div>
+<h3 id="provincial-client-registry-onboarding-process-summary">Provincial Client Registry Onboarding Process Summary</h3>
+<p>The Provincial Client Registry Onboardings is the process to onboard Organizations interested in integrating their applications with the Provincial Client Registry (PCR) system. The purpose of this process is to guide the organizations on the necessary activities, procedures, and technical requirements to become a Provincial Client Registry's Connected Partner. This process starts with the Ministry Conformance and Integration Services (CIS) team, who connects the organization with the Ministry of Health (HLTH) Registries team. The process is organized by the following phases.</p>
+
+<ul>
+  <li><strong>Intake</strong>: The goal of the Intake phase is to familiarize the new Organization on the required policies and procedures to integrate with Provincial Client Registry as well as for MoH and CGI Health Registry. Teams to gather the requirements of the new organization.</li>
+  <li><strong>Implementation</strong>: The implementation phase is all about understanding the Connected Partner business goals and requirements, designing and developing the integrated solution that meets their goals and ensuring the Conformance testing is successfully done.</li>
+  <li><strong>Deployment</strong>: The deployment phase includes all the necessary steps to fulfill other Ministry integration requirements such as Audit, Security, etc.; obtaining the interface approval from CIS team and deploying the solution in Production environment.</li>
+</ul>
+
+<p><span>
+	<img src="Picture1.png" height="500" />
+</span></p>
+
+<p><em>Note</em>: Connected partner will need to complete privacy &amp; security volume 2 gap analysis. The questionnaire will be provided by CIS after the kick-off meeting. The gap analysis will occur in parallel to the process above.</p>
+
+<h3 id="provincial-client-registry-onboarding-process">Provincial Client Registry Onboarding Process</h3>
+<h4 id="process-overview">Process Overview</h4>
+<ul>
+  <li><strong>Process Name</strong>: Provincial Client Registry Onboarding Process</li>
+  <li><strong>Process Purpose</strong>: Onboard Organizations interested in becoming Connected Partners and integrating their applications with the Provincial Client Registry (PCR) application.</li>
+  <li><strong>Process Objectives</strong>:
+    <ul>
+      <li>Identify Connected Partner integration needs.</li>
+      <li>Meet MoH Conformance standards and other Ministry requirements.</li>
+      <li>Integrate Connected Partner systems with Provincial Client Registry system.</li>
+    </ul>
+  </li>
+  <li><strong>Process Scope</strong>: Provincial Client Registry application (HCIM)</li>
+  <li><strong>Primary Business Process Areas</strong>:
+    <ul>
+      <li>MoH - Health Registries</li>
+      <li>CGI - Health Registries</li>
+      <li>MoH - Conformance and Integration Services (CIS)</li>
+    </ul>
+  </li>
+  <li><strong>Key Activities</strong>:
+    <ul>
+      <li>Kick-off meeting</li>
+      <li>Analysis and Design</li>
+      <li>Develop Integration (if required)</li>
+      <li>Set-up Test environment</li>
+      <li>Perform DQ process (if required)</li>
+      <li>Pass Conformance testing</li>
+      <li>Fulfill other Ministry's requirements</li>
+      <li>Plan deployment in Prod</li>
+      <li>Go-live</li>
+    </ul>
+  </li>
+  <li><strong>Start Events</strong>:
+    <ul>
+      <li>Connected Partner (CP) submits Integration Request</li>
+      <li>Conformance and Integration services teams connects CP with MoH Health Registries team</li>
+    </ul>
+  </li>
+  <li><strong>Inputs</strong>:
+    <ul>
+      <li>Request for Integration Form</li>
+      <li>Provincial Client Registry Onboarding Form</li>
+    </ul>
+  </li>
+  <li><strong>Outputs</strong>: Connected Partner system integrated with MoH Health Registry</li>
+  <li><strong>End Events</strong>: Onboarding complete</li>
+  <li><strong>Process Participants</strong>:
+    <ul>
+      <li>Connected Partner (CP)</li>
+      <li>MoH Health Registries Manager</li>
+      <li>MoH Health Registries Admin</li>
+      <li>MoH Health Registries DQ team</li>
+      <li>CGI Health Registries Business Support Lead</li>
+      <li>CGI Health Registries Technical Team</li>
+      <li>CGI Health Registries Ops Team</li>
+    </ul>
+  </li>
+  <li><strong>Primary Policies and Procedures</strong>:
+    <ul>
+      <li>Conformance and Integration Services</li>
+      <li>Conformance Standards</li>
+      <li>HL7 and FHIR standards</li>
+    </ul>
+  </li>
+  <li><strong>Information Systems and Tools</strong>: HCIM</li>
+  <li><strong>Supporting Documentation</strong>:
+    <ul>
+      <li>HL7v3 specs</li>
+      <li>FHIR specs</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="process-flow">Process Flow</h4>
+<p>The following diagram shows the process flow for the Provincial Client Registry Onboarding process.
+<span>
+	<img src="flowdiagram.png" height="900" />
+</span></p>
+
+<h4 id="process-activities">Process Activities</h4>
+<p><strong>Start Event:</strong> Initiate the Integration process</p>
+
+<p><strong>Initiate Integration process:</strong> To initiate the Integration process for Oranizations developing interfaces to the ministry's Health Information Exchange (HIE) systems, the Organization should follow steps outlined through the HIE <a href="https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/software">website</a>:</p>
+<ul>
+  <li>Contact the Conformance and Integration Services team.</li>
+  <li>Review the <em>Getting Started Guide</em></li>
+  <li>Review the <a href="https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/software/conformance-standards"><em>Conformance Standards for Provincial Client Registry</em></a></li>
+  <li>Fill out the mandatory <em>Request for Integrated Services form</em> and provide to Conformance and Integration Services <a href="https://www2.gov.bc.ca/assets/gov/health/forms/4637fil.pdf">link</a>
+Note: MoH may have other requirements for a new Organization that are not detailed here.</li>
+</ul>
+
+<p><strong>Connect with Provincial Client Registry team:</strong> The <em>Conformance and Integration Services team</em> is responsible for the initial Intake process and then introduces the Connected Partner to the <em>MoH Health Registries Manager</em> to start the onboarding process for the Provincial Client Registry.</p>
+
+<p><strong>Kick-off meeting with new Org. and CGI:</strong> The <em>MoH Health Registries Manager</em> arranges a Kick-off meeting with the new organization, and <em>CGI Health Registries Team</em> to discuss the following topics:</p>
+<ul>
+  <li>Determine the needs of the Organization.</li>
+  <li>Identify the timeline for go-live.</li>
+  <li>Explain the Conformance Standards and the Conformance testing.</li>
+  <li>Provide an overview of the Technical requirements.</li>
+  <li>Exchange contact information and set up email distribution list.</li>
+</ul>
+
+<p><strong>Send onboarding package:</strong> The <em>CGI Health Registries Business Support Lead</em> sends the onboarding package to the Connected Partner by email. The Onboarding package includes:</p>
+<ul>
+  <li>1.Provincial Client Registry - Onboarding Process Overview</li>
+  <li>2.Provincial Client Registry - Onboarding Form</li>
+  <li>3.Provincial Client Registry - Active Integration Guide</li>
+  <li>4.Provincial Client Registry - Quick Start Environments</li>
+  <li>5.Provincial Client Registry - Technical documents</li>
+</ul>
+
+<p><strong>Complete Provincial Client Registry onboarding form:</strong> The <em>Connected Partner</em> completes the <em>Provincial Client Registry Onboarding form</em> and sends it back to <em>MoH Health Registries Manager</em> and <em>CGI Health Registries Business Support Lead</em> for their review.</p>
+
+<p><strong>Review/Understand onboarding purpose:</strong> The <em>MoH Health Registries Team</em> and the <em>CGI Health Registries Team</em> review the onboarding form and identify the type of integration requested by the Connected Partner. For example:</p>
+<ul>
+  <li>Web application access only</li>
+  <li>Active/Passive Integration</li>
+</ul>
+
+<p><strong>Analyze and design solution:</strong> The <em>CGI Health Registries Team</em> in collaboration with the <em>MoH Health Registries Team</em> analyzes and designs the solution to meet the requirements of the Connected Partner integration. They also identify if any development is required for the Connected Partner's applications to integrate with Provincial Client Registry system.</p>
+
+<p><strong>Develop and test integration programs (if required):</strong> The <em>CGI Health Registries Team</em> plan and initiates the efforts to set-up the integration, development and test of the integration programs (if required). If the new organization will be updating records in Provincial Client Registry system then they will need a 'source' within MDM which involves development of related algorithms.</p>
+
+<p><strong>Perform Data Quality (DQ) process (if required):</strong> The <em>MoH Health Registries Data Quality (DQ) Team</em> starts the Data Quality process to provide further details on the Data Quality requirements for Active Integrations with the Provincial Client Registry system (if required).</p>
+
+<p><strong>Develop CP system integration (if applicable):</strong> The <em>Connected Partner</em> identifies the integration and development required from their systems.</p>
+<ul>
+  <li>If the Connected Partner is only requesting access to the HCIM Web Application, they do not require any development on their systems.</li>
+  <li>If the Connected Partner is requesting active integration, they need to develop the integration in their system, and related integration may need to be developed in Provincial Client Registry system.</li>
+</ul>
+
+<p><strong>Set up Test environment:</strong> The <em>CGI Health Registries Team</em> sets up the Test environment which includes the following:</p>
+<ul>
+  <li>Set up the new org in the test environment</li>
+  <li>SSL Certificate</li>
+  <li>Network access (Add IP to ACL)</li>
+</ul>
+
+<p><strong>Perform Conformance testing:</strong> When the development and testing is complete, the <em>Connected Partner</em> performs the Conformance Testing with the support and guidance from <em>MoH Health Registries Team</em>.</p>
+
+<p><strong>Validate Conformance testing:</strong> The <em>MoH Health Registries Team</em> validate the results of the Conformance testing.</p>
+
+<p><strong>Decision: Conformance testing passed?:</strong> The <em>MoH Health Registries Team</em> decides if the Conformance Testing has been successfully passed.</p>
+<ul>
+  <li>Yes: Go to next activity</li>
+  <li>No: Go back to Performance Conformance Testing</li>
+</ul>
+
+<p><strong>Fulfill other Ministry requirements:</strong> The <em>Connected Partner</em> confirms if the integration requirements of all Ministry areas have been met for integrating with Provincial Client Registry.<br />Note: This includes privacy and security gap analysis (volume 2).<br />If they do, CIS issues an Interface Approval Notice, providing the final approval to connect to production.</p>
+
+<p><strong>Plan deployment in Prod:</strong> The <em>MoH Health Registries</em> and <em>CGI Health Registries Team</em> plan the details of the deployment of the new Connected Partner integration with Provincial Client Registry system. Then they review the deployment plan with CAB.</p>
+
+<p><strong>Set up Prod environment:</strong> The <em>CGI Health Registries Team</em> sets up the Prod environment and deploys the integration solution which includes the following:</p>
+<ul>
+  <li>Configure Prod environment</li>
+  <li>Deploy integration solution</li>
+  <li>SSL Certificate</li>
+  <li>Network access (Add IP to ACL)</li>
+</ul>
+
+<p><strong>Go-live (Prod):</strong> The <em>CGI Health Registries Team</em> activates the integration between the Connected Partner system and Provincial Client Registry system.</p>
+
+<p><strong>End Event:</strong> Onboarding complete</p>
+
+<h3 id="provincial-client-registry-onboarding-package">Provincial Client Registry Onboarding Package</h3>
+<p>The following is the list of Onboarding documents that are part of the Provincial Client Registry Onboarding process.</p>
+<ol>
+  <li>Provincial Client Registry - Onboarding Overview
+    <ul>
+      <li>Document purpose: Provide a general overview of the onboarding process and the steps involved.</li>
+      <li>Document name: 3-Provincial Client Registry Onboarding Overview</li>
+    </ul>
+  </li>
+  <li>Provincial Client Registry - Onboarding Form
+    <ul>
+      <li>Document purpose: Information required by the operations team to set up and configure the onboarding organization according to their requirements.</li>
+      <li>Document name: SOURCE_NAME Information - Return to AMS Support</li>
+    </ul>
+  </li>
+  <li>Provincial Client Registry - Active Integration Guide
+    <ul>
+      <li>Document(s) purpose: Technical guides for specific aspects of the application.</li>
+      <li>Document(s) name:
+        <ul>
+          <li>Active Integration Guide - Distribution Lists v1.0</li>
+          <li>Active Integration Guide - HCIM Warning and Error Messages v1.0</li>
+          <li>Active Integration Guide - MoH SharePoint Site Instructions</li>
+          <li>Active Integration Guide - Onboarding Steps</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Provincial Client Registry - Quick Start Environments
+    <ul>
+      <li>Document(s) purpose: Endpoint URLs for the various services provided by the application. One document for each environment.</li>
+      <li>Document(s) name:
+        <ul>
+          <li>Quick Start - Development Environment (HD4)</li>
+          <li>Quick Start - EMR Conformance Environment (HT2)</li>
+          <li>Quick Start - Health Production Environment (HP1)</li>
+          <li>Quick Start - Health Staging Environment (HS1)</li>
+          <li>BCHCIM Quick Overview HIAT1</li>
+          <li>BCHCIM Quick Overview HIAT2</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Provincial Client Registry - Technical documents
+    <ul>
+      <li>Document purpose: Technical documentation for building a connecting system. Includes messaging specs and examples.</li>
+      <li>Document name: Technical specs will be provided during onboarding process.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="glossary">Glossary</h3>
+<p>The following terms, acronyms, and abbreviations are used throughout this document.</p>
+<ul>
+  <li>CAB: Change Advisory Board</li>
+  <li>CIS: Conformance and Integration Services</li>
+  <li>CP: Connected Partner</li>
+  <li>PCR: Provincial Client Registry</li>
+  <li>DQ: Data Quality</li>
+  <li>EMPI: Enterprise Master Patient Index (IBM) - Master Data Management tool (Golden record)</li>
+  <li>HA: Health Authorities</li>
+  <li>HCIM: HealthCare Client Identity Management system</li>
+  <li>HIE: Health Information Exchange</li>
+  <li>PHN: Personal Health Number</li>
+  <li>PLR: Provider and Location Registry</li>
+  <li>MDM: Master Data Management</li>
+  <li>MoH: Ministry of Health</li>
+  <li>SFTP: Secure File Transfer Protocol</li>
+</ul>
+
+<h3 id="policies-and-procedures">Policies and Procedures</h3>
+<ul>
+  <li><a href="https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/software">Conformance and Integration Services link</a></li>
+  <li><a href="https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/software/conformance-standards">Conformance Standards link</a></li>
+</ul>
+
+<h4 id="onboarding-forms">Onboarding Forms</h4>
+<p><a href="https://www2.gov.bc.ca/assets/gov/health/forms/4637fil.pdf">Request for Integration Services Form link</a></p>
+
+<p><a href="ORGANIZATION.pdf">Provincial Client Registry Onboarding form</a></p>
 
 <h3 id="becoming-a-connected-partner">Becoming a Connected Partner</h3>
 
-<p>All the information regarding conformance standards can be found on the <a href="https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/software/getting-started" title="BC Government Health Information Exchange">Client Registry conformance</a> website.</p>
-
-<p>For any related Conformance, Integration, please email: HLTH.CISSupport@gov.bc.ca</p>
-
+<ul>
+  <li>To book a Vendor Discovery Session (Kick-off meeting), please email <strong>CIS Support</strong> (HLTH.CISSupport@gov.bc.ca) and cc <strong>RegConnection</strong></li>
+  <li>For any questions related to the Provincial Client Registry, please email <strong>RegConnections</strong> (hlth.registriesconnections@gov.bc.ca)</li>
+</ul>
 
 
 
@@ -218,7 +485,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Oct 11, 2024 23:26+0000">2024-10-11</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 27, 2025 22:34+0000">2025-08-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

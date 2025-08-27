@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 <link href="assets/css/bc-fhir.css" rel="stylesheet"/>
 
@@ -31,10 +32,10 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -42,10 +43,11 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"15.68"}
-    h3,h4,h5,h6{--heading-prefix:"15.68"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.69"}
+    h3,h4,h5,h6{--heading-prefix:"14.69"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Left logo - typically the publisher's logo - project or affiliate -->
         <div id="project-nav">
           <a id="project-logo" no-external="true" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">
@@ -107,9 +109,6 @@
         <a href="reviseAndMerge.html">Add, Revise, Update And Merge Patient</a>
       </li>
       <li>
-        <a href="distributions.html">Patient Change Notifications</a>
-      </li>
-      <li>
         <a href="identifiers.html">Identifiers</a>
       </li>
       <li>
@@ -166,7 +165,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hlth.gov.bc.ca/fhir/client/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hlth.gov.bc.ca/fhir/client/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -234,7 +233,7 @@
         
           Active
           
-            as of 2024-10-11
+            as of 2025-08-27
           
         
       </td>
@@ -275,7 +274,7 @@
 
 <!-- Content Logical Definition heading in the fragment -->
   <h3>Logical Definition (CLD)</h3>
-<div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet bc-name-use-value-set</b></p><a name="bc-name-use-value-set"> </a><a name="hcbc-name-use-value-set"> </a><a name="bc-name-use-value-set-en-US"> </a><p>This value set includes codes based on the following rules:</p>
+<div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"></p><a name="bc-name-use-value-set"> </a><a name="hcbc-name-use-value-set"> </a><p>This value set includes codes based on the following rules:</p>
 <ul><li>Import all the codes that are contained in <a href="http://hl7.org/fhir/R4/valueset-name-use.html">NameUse</a></li></ul><p>This value set excludes codes based on the following rules:</p>
 <ul><li>Exclude these codes as defined in <a href="http://hl7.org/fhir/R4/codesystem-name-use.html"><code>http://hl7.org/fhir/name-use</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-temp">temp</a></td><td style="color: #cccccc">Temp</td><td>A temporary name. Name.period can provide more detailed information. This may also be used for temporary names assigned at birth or in emergency situations.</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-anonymous">anonymous</a></td><td style="color: #cccccc">Anonymous</td><td>Anonymous assigned name, alias, or pseudonym (used to protect a person's identity for privacy reasons).</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-old">old</a></td><td style="color: #cccccc">Old</td><td>This name is no longer in use (or was never correct, but retained for records).</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-maiden">maiden</a></td><td style="color: #cccccc">Name changed for Marriage</td><td>A name used prior to changing name because of marriage. This name use is for use by applications that collect and store names that were used prior to a marriage. Marriage naming customs vary greatly around the world, and are constantly changing. This term is not gender specific. The use of this term does not imply any particular history for a person's name.</td></tr></table></li></ul></div>
 
@@ -283,10 +282,7 @@
   <a name="expansion"> </a>
   <h3 id="expansion">Expansion</h3>
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet </b></p><div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px"><p>Expansion based on:</p><ul><li><a href="http://hl7.org/fhir/R4/codesystem-name-use.html">codesystem NameUse v4.0.1 (CodeSystem)</a></li><li><a href="http://hl7.org/fhir/R4/valueset-name-use.html">valueset NameUse v4.0.1 (ValueSet)</a></li></ul></div><p>This value set contains 3 concepts</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap"><a name="x-http://hl7.org/fhir/name-use-usual"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-usual">usual</a></td><td>http://hl7.org/fhir/name-use</td><td>Usual</td><td><div><p>Known as/conventional/the one you normally use.</p>
-</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://hl7.org/fhir/name-use-official"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-official">official</a></td><td>http://hl7.org/fhir/name-use</td><td>Official</td><td><div><p>The formal name as registered in an official (government) registry, but which name might not be commonly used. May be called &quot;legal name&quot;.</p>
-</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://hl7.org/fhir/name-use-nickname"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-nickname">nickname</a></td><td>http://hl7.org/fhir/name-use</td><td>Nickname</td><td><div><p>A name that is used to address the person in an informal manner, but is not part of their formal or usual name.</p>
-</div></td></tr></table></div>
+  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"/><div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px"><p>Expansion performed internally based on:</p><ul><li><a href="http://hl7.org/fhir/R4/codesystem-name-use.html">codesystem NameUse v4.0.1 (CodeSystem)</a></li><li><a href="http://hl7.org/fhir/R4/valueset-name-use.html">valueset NameUse v4.0.1 (ValueSet)</a></li></ul></div><p>This value set contains 3 concepts</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap"><a name="x-http://hl7.org/fhir/name-use-usual"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-usual">usual</a></td><td>http://hl7.org/fhir/name-use</td><td>Usual</td><td>Known as/conventional/the one you normally use.</td></tr><tr><td style="white-space:nowrap"><a name="x-http://hl7.org/fhir/name-use-official"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-official">official</a></td><td>http://hl7.org/fhir/name-use</td><td>Official</td><td>The formal name as registered in an official (government) registry, but which name might not be commonly used. May be called &quot;legal name&quot;.</td></tr><tr><td style="white-space:nowrap"><a name="x-http://hl7.org/fhir/name-use-nickname"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-name-use.html#name-use-nickname">nickname</a></td><td>http://hl7.org/fhir/name-use</td><td>Nickname</td><td>A name that is used to address the person in an informal manner, but is not part of their formal or usual name.</td></tr></table></div>
 
   <hr/>
   <p>
@@ -345,7 +341,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Oct 11, 2024 23:26+0000">2024-10-11</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 27, 2025 22:34+0000">2025-08-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

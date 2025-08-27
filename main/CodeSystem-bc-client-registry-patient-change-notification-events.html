@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 <link href="assets/css/bc-fhir.css" rel="stylesheet"/>
 
@@ -31,10 +32,10 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -42,10 +43,11 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"15.74"}
-    h3,h4,h5,h6{--heading-prefix:"15.74"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.74"}
+    h3,h4,h5,h6{--heading-prefix:"14.74"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Left logo - typically the publisher's logo - project or affiliate -->
         <div id="project-nav">
           <a id="project-logo" no-external="true" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">
@@ -107,9 +109,6 @@
         <a href="reviseAndMerge.html">Add, Revise, Update And Merge Patient</a>
       </li>
       <li>
-        <a href="distributions.html">Patient Change Notifications</a>
-      </li>
-      <li>
         <a href="identifiers.html">Identifiers</a>
       </li>
       <li>
@@ -166,7 +165,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hlth.gov.bc.ca/fhir/client/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hlth.gov.bc.ca/fhir/client/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -235,7 +234,7 @@
         
           Active
           
-            as of 2024-10-11
+            as of 2025-08-27
           
         
       </td>
@@ -260,6 +259,56 @@
 
 
 
+<div style="display:inline-block" markdown="1">
+
+<h2 id="business-objective">Business Objective</h2>
+<p>This page outlines the objectives of each distribution profile and describes how the distribution service fulfills those objectives. A distribution profile consists of a collection of configurable options that allow a subscriber to customize how and when they will receive a distribution message. There is no limit to the number of distribution profiles for an organization.</p>
+
+<h3 id="distribution-profile-configuration-options">Distribution Profile Configuration Options</h3>
+<p>Each distribution profile has a number of options for its configuration.</p>
+
+<p><strong>Organization</strong>
+The Organization that this profile belongs to.</p>
+
+<p><strong>Distribution Type</strong>
+The distribution type that this profile subscribes to.</p>
+
+<p><strong>Source Subscriptions</strong>
+This option allows a source to limit the source systems that can trigger a notification. This means that changes to a source not in the subscription list will be ignored and not trigger a notification. The default setting is all sources.</p>
+
+<p><strong>Source/Non-Source</strong>
+<strong>Source:</strong> These require source context and are applicable when comparisons are made against records within EMPI and require the subscriber to be a source system in the EMPI. Subscribers will be notified that their data is out-of-sync with the composite view. These types of distributions will only notify the subscriber if they have a record in the affected entity.
+<strong>Non-Source:</strong> These do not require subscribers to have a record in the EMPI; instead, they are constrained to listening to all events that occur to a specific source in the EMPI. Note that it is possible to subscribe to multiple source systems.</p>
+
+<p><strong>Data Permissions</strong>
+A list of Source Identifiers that the subscribing organization has permission to view. Each organization has permission to see the MOH_CRS source (the source of the PHN) by default. The distribution service will filter out any Identifiers not in the permissions list. Currently, this permission list lives in the HCIM security settings for the organization and is applied to all services, not just the distribution service.</p>
+
+<p><strong>Message Format</strong>
+This is a new option for the profiles. The goal of this feature is to allow support for multiple messaging formats (such as HL7v3 and HL7 FHIR).</p>
+
+<p><strong>Backwards Compatibility</strong>
+One of the options would be a backward compatibility mode for HL7v3. If this project makes changes to the message structure or contents, there is a chance that existing systems will be incompatible; therefore, this mode will ensure that the distribution messages appear the same as prior to the distribution rewrite.</p>
+
+<p><strong>Subscribed Regions</strong>
+This new option would allow a subscriber to limit distributions by region. The distribution service would look at the home or mailing address for the affected record and send a notification if they are within a subscribed area. Filters would include:</p>
+<ul>
+  <li>Region (i.e., postal code ranges)</li>
+  <li>Province</li>
+  <li>Country</li>
+</ul>
+
+<h2 id="distribution-types">Distribution Types</h2>
+<p>The following tables describe each type of distribution and include a description with the following information:</p>
+<ul>
+  <li><strong>Conditions</strong>: Conditions that must be met for a distribution notification to occur; all conditions must apply</li>
+  <li><strong>Contents</strong>: Data attributes that will be populated in the distribution message</li>
+</ul>
+
+</div>
+
+
+
+
   <p>
   This Code system is referenced in the content logical definition of the following value sets:
   </p>
@@ -270,43 +319,273 @@
 </ul>
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem bc-client-registry-patient-change-notification-events</b></p><a name="bc-client-registry-patient-change-notification-events"> </a><a name="hcbc-client-registry-patient-change-notification-events"> </a><a name="bc-client-registry-patient-change-notification-events-en-US"> </a><p>This case-sensitive code system <code>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</code> defines the following codes:</p>
+  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"></p><a name="bc-client-registry-patient-change-notification-events"> </a><a name="hcbc-client-registry-patient-change-notification-events"> </a><p>This case-sensitive code system <code>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</code> defines the following codes:</p>
 <table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr>
-<tr><td style="white-space:nowrap">COMPOSITE<a name="bc-client-registry-patient-change-notification-events-COMPOSITE"> </a></td>
-<td>composite</td>
-<td>Composite view distributions inform a subscribing system that their records are out-of-sync with the composite view and a subscriber that a data attribute has been modified on a specific source.</td></tr>
+<tr><td style="white-space:nowrap">COMP<a name="bc-client-registry-patient-change-notification-events-COMP"> </a></td>
+<td>Composite View</td>
+<td>The Composite View distribution serves different business purposes depending on whether or not the subscriber is a source system. For a source system, Composite View distributions inform a subscribing system that its records are out-of-sync with the composite view. For a non-source system, Composite View distributions inform a subscriber when a data attribute has been modified on a specific source.</td></tr>
 <tr><td style="white-space:nowrap">DEATH<a name="bc-client-registry-patient-change-notification-events-DEATH"> </a></td>
-<td>death</td>
-<td>DEATH distributions inform a subscriber that they have a record that is out of sync with the Date of Death, or the Deceased indicator is present and a change to the composite view has occurred and a subscribing system there is a Date of Death, or the Deceased indicator is present and a change to the composite view has occurred.</td></tr>
-<tr><td style="white-space:nowrap">EID<a name="bc-client-registry-patient-change-notification-events-EID"> </a></td>
-<td>eid</td>
-<td>EID distributions inform subscribers when one of their source records has changed entity sets and/or is out-of-sync with the composite view.</td></tr>
+<td>Death</td>
+<td>A Death Distributions notifications inform subscribers of both confirmed and unconfirmed deaths. This occurs when just the Date of Death is present, or both the Date of Death and Deceased indicator are present in the Composite View. There are some behavior differences depending on whether or not the subscriber is a source system. For a source system, Death distributions inform a subscriber that they have a record that is out-of-sync with the Date of Death, or the Deceased indicator is added to the Composite View. For a non-source system, Death distributions inform a subscribing system that there is a Date of Death, or the Deceased indicator is added.</td></tr>
 <tr><td style="white-space:nowrap">NEW<a name="bc-client-registry-patient-change-notification-events-NEW"> </a></td>
-<td>new PHN</td>
-<td>The New PHN (NEW) distribution is a non-source distribution and informs subscribers of all new PHNs.</td></tr>
+<td>New</td>
+<td>The NEW distribution is a non-source distribution that informs subscribers of all new records. Any source can trigger a NEW distribution, and subscribers can limit the sources they subscribe to. For instnce, if a subscriber wants to be notified of new PHNs, they subscribe to the MOH_CRS source.</td></tr>
 <tr><td style="white-space:nowrap">NEWBORN<a name="bc-client-registry-patient-change-notification-events-NEWBORN"> </a></td>
-<td>newborn</td>
-<td>This distribution informs subscribers that a newborn record has been created in the EMPI, and has been assigned a PHN.</td></tr>
+<td>Newborn</td>
+<td>A Newborn distribution is a non-source distribution that informs subscribers that a newborn record has been created and has been assigned a PHN. Typically, subscribers would limit their source subscription to MOH_CRS for this distribution.</td></tr>
 <tr><td style="white-space:nowrap">NEWBORN_GENDER<a name="bc-client-registry-patient-change-notification-events-NEWBORN_GENDER"> </a></td>
-<td>newborn gender</td>
-<td>A non-source distribution and informs subscribers when the gender on a newborn record changes from unknown or undifferentiated to any other gender value.</td></tr>
+<td>Newborn Gender</td>
+<td>The Newborn Gender distribution is a non-source distribution and informs subscribers when the gender on a newborn record changes from unknown or undifferentiated to Male or Female. This distribution is used to ensure that pre-registered newborns (where the gender is frequently unknown) are registered for MSP benefits. MSP does not allow the registration of newborns with an unknown gender value.</td></tr>
 <tr><td style="white-space:nowrap">PHN<a name="bc-client-registry-patient-change-notification-events-PHN"> </a></td>
-<td>PHN change</td>
-<td>PHN Change distributions inform source systems that their purported PHN is out-of-sync with the PHN in the composite view.</td></tr>
+<td>PHN</td>
+<td>PHN distributions only work for subscribers that are source systems. This distribution informs source systems that their purported PHN is out-of-sync with the PHN in the Composite View. The purported PHN is the PHN sent on the last update by the source system, while the PHN in the Composite View is the MOH_CRS source PHN.</td></tr>
 <tr><td style="white-space:nowrap">PHNJOIN<a name="bc-client-registry-patient-change-notification-events-PHNJOIN"> </a></td>
 <td>PHN Join</td>
-<td>PHN Join distributions inform source systems that their record has joined an entity with a PHN.</td></tr>
-<tr><td style="white-space:nowrap">PHNMERGE<a name="bc-client-registry-patient-change-notification-events-PHNMERGE"> </a></td>
-<td>PHN Merge</td>
-<td>PHN merge is a non-source distribution and informs subscribers of merged PHNs.</td></tr>
-<tr><td style="white-space:nowrap">SSRI<a name="bc-client-registry-patient-change-notification-events-SSRI"> </a></td>
+<td>A PHNJOIN distribution works for subscribers that are source and non-source systems and informs them that their record has joined an entity with a PHN, or a PHN has joined its entity. For source systems, PHNJOIN distribution informs a subscriber that one of the following has occured: their record has created a PHN, their record has joined the set of an existing PHN, their record moved from a non-survivor PHN to a survivor PHN when the PHNs were merged. For non-source systems, PHNJOIN distribution informs non-source subscribers that a specific source they are listening to has joined a set with a PHN.</td></tr>
+<tr><td style="white-space:nowrap">MERGE<a name="bc-client-registry-patient-change-notification-events-MERGE"> </a></td>
+<td>Merge</td>
+<td>MERGE is a non-source distribution and informs subscribers of merged PHNs or Source Record Identifiers (SRIs). Merge distributions can be triggered by any source. All distribution profiles can limit the sources they subscribe to; therefore, if a subscriber only wants to be notified of a PHN merge, they subscribe to the MOH_CRS source. If they want to be notified of a SRI merge, they subscribe to the required source.</td></tr>
+<tr><td style="white-space:nowrap">SSRISYNC<a name="bc-client-registry-patient-change-notification-events-SSRISYNC"> </a></td>
 <td>SSRI Sync</td>
-<td>SSRI Sync distributions notify a parent system that one of its child system’s records has joined the set.</td></tr></table></div>
+<td>An SSRI Sync distribution applies only to subscribers that are source systems and are used to notify a parent source system when one of its child systems' records has joined or changed within an entity set. SSRI Sync distributions support PHSA and the Clinical and Systems Transformation project (CST). In this project, multiple sources (VCHA, PHC, and PHSA) are implementing a single Cerner CIS (VPP Cerner) across all their facilities and replacing multiple existing systems. As part of this effort, all patients are issued a new SRI; existing SRIs are recorded and stored for historical use only. The new Cerner CIS is loading the SRI from the old system as the SSRI in the new system. The new CIS will be deployed to facilities over several years, and the patients will be migrated from their existing systems to the new CIS as their facility goes live and the legacy system is decommissioned.</td></tr></table></div>
 
   
 
   <!-- insert notes if present -->
   
+
+<h3>Notes:</h3>
+
+
+<div style="display:inline-block" markdown="1">
+
+<table border="1" cellspacing="0" cellpadding="6">
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Conditions</th>
+      <th>Content</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>COMP</td>
+      <td>
+        <ul>
+            <li>An active (not merged or in an overlay task) MOH_CRS record exists in the entity set</li>
+            <li>The source record must be active (not merged or in an overlay task)</li>
+            <li>There are no source records in the entity with an overlay task</li>
+            <li>The modified record that triggered the event is NOT new</li>
+            <li>Source Distributions: The data attribute on the subscriber's source record is out-of-sync with the Composite View</li>
+            <li>Non-Source Distributions: A data attribute has changed on a subscribed source system record</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+            <li>All composite view Data Attributes: Name, Gender, Date of Birth, Date of Death, Deceased Indicator, Address, Phone Number, Email Address, and PHN</li>
+            <li>Active and Merged SSRIs</li>
+            <li>Last Modified Business Date</li>
+            <li>Source: SRI of Source Record that is out-of-sync with the Composite View</li>
+            <li>Non-Source: SRI of the modified Source Record</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>DEATH</td>
+      <td>
+        <ul>
+            <li>An active (not merged or in an overlay task) MOH_CRS record exists in the entity set</li>
+            <li>There are no source records in the entity with an overlay task</li>
+            <li>Source Distributions:</li>
+                <ul>
+                    <li>The subscriber has a source record in the entity</li>
+                    <li>The source record must be active (not merged or in an overlay task)</li>
+                    <li>The death indicator is set to true in the Composite View, OR the source record is out-of-sync with either the date of death or the death indicator</li>
+                </ul>
+            <li>Non-Source Distributions:</li>
+                <ul>
+                    <li>A data attribute has changed on a subscribed source system record</li>
+                </ul>
+            <li>Subscribe to one of the following:</li>
+                <ul>
+                    <li>Date of Death only: subscribe to MOH and MOH_VSA</li>
+                    <li>Date of Death &amp; Indicator "Y": subscribe to MOH_VSA only</li>
+                </ul>
+            <li>If the source has permission to provide the date of death to the composite view, the record cannot be a singleton; the member must be in an entity with a MOH_CRS record</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+            <li>All composite view Data Attributes: Name, Gender, Date of Birth, Date of Death, Deceased Indicator, Address, Phone Number, Email Address, and PHN</li>
+            <li>Active and Merged SSRIs</li>
+            <li>Last Modified Business Date</li>
+            <li>Source: SRI of Source Record in the entity set</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>NEW</td>
+      <td>
+        <ul>
+          <li>An active (not merged or in an overlay task) MOH_CRS record exists in the entity set</li>
+          <li>There are no source records in the entity with an overlay task</li>
+          <li>The event was generated by the creation of a new record</li>
+          <li>The new record belongs to one of the source subscriptions from the profile</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>All composite view Data Attributes: Name, Gender, Date of Birth, Date of Death, Deceased Indicator, Address, Phone Number, Email Address, and PHN</li>
+          <li>Active and Merged Sub Source Record Identifiers (SSRIs)</li>
+          <li>Mother's PHN</li>
+            <ul>
+                <li>HL7v3: Mother's PHN is only visible to certain sources based on permission; otherwise, the mother's PHN is masked</li>
+                <li>FHIR: Mother's PHN is only present based on permissions</li>
+            </ul>
+          <li>Last Modified Business Date</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>NEWBORN</td>
+      <td>
+        <ul>
+            <li>An active (not merged or in an overlay task) MOH_CRS record exists in the entity set</li>
+            <li>There are no source records in the entity with an overlay task</li>
+            <li>The newborn record is new</li>
+            <li>The declared name value is a Newborn Name</li>
+            <li>The newborn record has a mother's PHN</li>
+            <li>No death date and death indicator are present</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+            <li>All composite view data attributes: Name, Gender, Date of Birth, Address, Phone Number, Email Address, and PHN</li>
+                <ul>
+                    <li>Note: If the newborn does not have an address, the mother's address will be applied</li>
+                </ul>
+            <li>Mother's PHN</li>
+                <ul>
+                    <li>HL7v3: Mother's PHN is only visible to certain sources based on permission; otherwise, the mother's PHN is masked</li>
+                    <li>FHIR: Mother's PHN is only present based on permissions</li>
+                </ul>
+            <li>All SSRIs (Active and Merged)</li>
+            <li>All Source Record Identifers (SRIs)</li>
+            <li>Last Modified Business Date</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>NEWBORN_GENDER</td>
+      <td>
+        <ul>
+            <li>An active (not merged or in an overlay task) MOH_CRS record exists in the entity set</li>
+            <li>There are no source records in the entity with an overlay task</li>
+            <li>The newborn record is NOT new</li>
+            <li>The declared name value is (or was) a Newborn Name</li>
+            <li>The old gender value is Unknown</li>
+            <li>The new gender value is NOT Uknown or Undifferentiated</li>
+            <li>The intial newborn record must have a date of birth within the change window (5 days)</li>
+            <li>No death date or death indicator is present</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+            <li>All composite view Data Attributes: Name, Gender, Date of Birth, Address, Phone Number, Email Address, and PHN</li>
+            <li>All SSRIs (Active and Merged)</li>
+            <li>Mother's PHN</li>
+                <ul>
+                    <li>HL7v3: Mother's PHN is only visible to certain sources based on permission; otherwise, the mother's PHN is masked</li>
+                    <li>FHIR: Mother's PHN is only present based on permissions</li>
+                </ul>
+            <li>Last Modified Business Date</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>PHN</td>
+      <td>
+        <ul>
+            <li>An active (not merged or in an overlay task) MOH_CRS record exists in the entity set</li>
+            <li>There are no source records in the entity with an overlay task</li>
+            <li>The source record must be an active (not merged or in an overlay task)</li>
+            <li>The modified record that triggered the event is NOT new</li>
+            <li>The PHN attribute on the subscriber's source record is out-of-sync with the composite view</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+            <li>All composite view Data Attributes: Name, Gender, Date of Birth, Date of Death, Deceased Indicator, Address, Phone Number, Email Address, and PHN</li>
+            <li>All SSRIs (Active and Merged)</li>
+            <li>SRI of the source record that is out-of-sync with the PHN</li>
+            <li>Last Modified Business Date</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>PHNJOIN</td>
+      <td>
+        <ul>
+            <li>An active (not merged or in an overlay task) MOH_CRS record exists in the entity set</li>
+            <li>There are no source records in the entity with an overlay task</li>
+            <li>The source record must be active (not merged or in an overlay task)</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+            <li>All composite view Data Attributes: Name, Gender, Date of Birth, Date of Death, Deceased Indicator, Address, Phone Number, Email Address, or PHN</li>
+            <li>All SSRIs (Active and Merged)</li>
+            <li>SRI has joined the entity, or a PHN has joined the entity</li>
+            <li>Last Modified Business Date</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>MERGE</td>
+      <td>
+        <ul>
+            <li> An active (not merged or in an overlay task) MOH_CRS record exists in the entity set</li>
+            <li>There are no source records in the entity with an overlay task</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+            <li>All composite view Data Attributes: Name, Gender, Date of Birth, Date of Death, Deceased Indicator, Address, Phone Number, Email Address, and PHN</li>
+            <li>All SSRIs (Active and Merged)</li>
+            <li>All Merged identifiers (i.e., SRI, SSRI)</li>
+            <li>Last Modified Business Date</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>SSRSISYNC</td>
+      <td>
+        <ul>
+            <li>There are no source records in the entity with an overlay task</li>
+            <li>The source record that triggered the event is either Active or Merged</li>
+            <li>A Parent Source Record is in the entity</li>
+            <li>One or more child source systems are in the entity</li>
+            <li>The parent source systems' list of SSRIs does not match the SRIs of the children source systems</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+            <li>All composite view Data Attributes: Name, Gender, Date of Birth, Date of Death, Deceased Indicator, Address, Phone Number, Email Address, and PHN</li>
+            <ul>
+                <li>Note: This is subject to identifier filtering and masking</li>
+            </ul>
+            <li>All SSRIs (Active and Merged)</li>
+            <li>All SRIs (Active and Merged)</li>
+            <li>Last Modified Business Date</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
+
 
 
 
@@ -328,7 +607,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Oct 11, 2024 23:26+0000">2024-10-11</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 27, 2025 22:34+0000">2025-08-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

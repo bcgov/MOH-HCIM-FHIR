@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -38,13 +39,22 @@
   ] ; # 
   fhir:parameter ( [
      fhir:name [ fhir:v "messageId" ] ;
-     fhir:value [ fhir:v "0cf19fde-0808-4ffe-b029-3aa06bc008a9" ]
+     fhir:value [
+       a fhir:string ;
+       fhir:v "0cf19fde-0808-4ffe-b029-3aa06bc008a9"
+     ]
   ] [
      fhir:name [ fhir:v "history" ] ;
-     fhir:value [ fhir:v "true"^^xsd:boolean ]
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v true
+     ]
   ] [
      fhir:name [ fhir:v "identifiersOnly" ] ;
-     fhir:value [ fhir:v "false"^^xsd:boolean ]
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v false
+     ]
   ] ) . # 
 
 <urn:uuid:c83ebe98-0a68-42f1-b390-67323d4b5ce4> a fhir:Patient ;
@@ -57,7 +67,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_GetDemographics-withHistory-Request-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient GetDemographics-withHistory-Request-Patient</b></p><a name=\"GetDemographics-withHistory-Request-Patient\"> </a><a name=\"hcGetDemographics-withHistory-Request-Patient\"> </a><a name=\"GetDemographics-withHistory-Request-Patient-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient (no stated gender), DoB Unknown ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id#2701XI3IW2R95W87WH3H16082KJ2LEVENM0LNTW)</p><hr/></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_GetDemographics-withHistory-Request-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient GetDemographics-withHistory-Request-Patient</b></p><a name=\"GetDemographics-withHistory-Request-Patient\"> </a><a name=\"hcGetDemographics-withHistory-Request-Patient\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient (no stated gender), DoB Unknown ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id#2701XI3IW2R95W87WH3H16082KJ2LEVENM0LNTW)</p><hr/></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:identifier ( [
      fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id"^^xsd:anyURI ] ;

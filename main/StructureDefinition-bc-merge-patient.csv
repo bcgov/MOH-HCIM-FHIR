@@ -55,10 +55,6 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","BC Business Dates","The effective dates for the parent element.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.extension:genderIdentity","Patient.extension","genderIdentity","","",0,1,"Y","","","Extension {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-identity-extension]]} {[]}
-","BC Gender Identity with business dates.","Gender Identity with business dates.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.modifierExtension","Patient.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
@@ -72,10 +68,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","",,"open","Patient.identifier",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a","II - The Identifier class is a little looser than the v3 type II because it allows URIs as well as registered OIDs or GUIDs.  Also maps to Role[classCode=IDENT]","id",".id","FiveWs.identifier","CX / EI (occasionally, more often EI maps to a resource id or a URL)","PID-3"
-"Patient.identifier:JHN","Patient.identifier","JHN","","",0,*,"","","","Identifier {[CanonicalType[http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier]]} {[]}
-","An identifier intended for computation","An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers.","","Patients are almost always assigned specific numerical identifiers.","","","","","","","",,,,,"",,,,"Patient.identifier",0,*,"ele-1
+"Patient.identifier:JHN","Patient.identifier","JHN","","",0,*,"","","Y","Identifier {[CanonicalType[http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier]]} {[]}
+","Jurisdictional Health Number","Federal patient and person health numbers used by all jurisdictions across Canada","","Patients are almost always assigned specific numerical identifiers.","","","","","","","",,,,,"",,,,"Patient.identifier",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","II - The Identifier class is a little looser than the v3 type II because it allows URIs as well as registered OIDs or GUIDs.  Also maps to Role[classCode=IDENT]","CX / EI (occasionally, more often EI maps to a resource id or a URL)"
+","n/a","II - The Identifier class is a little looser than the v3 type II because it allows URIs as well as registered OIDs or GUIDs.  Also maps to Role[classCode=IDENT]","id",".id","FiveWs.identifier","CX / EI (occasionally, more often EI maps to a resource id or a URL)","PID-3"
 "Patient.identifier:JHN.id","Patient.identifier.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Patient.identifier:JHN.extension","Patient.identifier.extension","","extensions
@@ -94,12 +90,12 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a","Role.code or implied by context","N/A"
 "Patient.identifier:JHN.type","Patient.identifier.type","","","",1,1,"","","Y","CodeableConcept {[]} {[]}
-","Description of identifier","A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.","This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type.","Allows users to make use of identifiers when the identifier system is not known.","","","<valueCodeableConcept xmlns=""http://hl7.org/fhir"">
+","Description of identifier","A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.","This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type.","Allows users to make use of identifiers when the identifier system is not known.","","","","<valueCodeableConcept xmlns=""http://hl7.org/fhir"">
   <coding>
     <system value=""http://terminology.hl7.org/CodeSystem/v2-0203""/>
     <code value=""JHN""/>
   </coding>
-</valueCodeableConcept>","","","","",,"extensible","A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.","http://hl7.org/fhir/ValueSet/identifier-type","",,,,"Identifier.type",0,1,"ele-1
+</valueCodeableConcept>","","","",,"extensible","A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.","http://hl7.org/fhir/ValueSet/identifier-type","",,,,"Identifier.type",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a","CD","Role.code or implied by context","CE/CNE/CWE","CX.5"
 "Patient.identifier:JHN.system","Patient.identifier.system","","","",1,1,"","","Y","uri {[]} {[]}
@@ -132,7 +128,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
 "Patient.name","Patient.name","","","",0,*,"Y","","Y","HumanName {[]} {[]}
 ","A name associated with the patient","A name associated with the individual.","A patient may have multiple names with different uses or applicable periods. For animals, the name is a ""HumanName"" in the sense that is assigned and used by humans and has the same patterns.","Need to be able to track the patient by multiple names. Examples are your official name and a partner name.","","","","","","","",,,,,"",,,,"Patient.name",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ca-baseline-name:Patient.name.given  or Patient.name.family or both SHALL be present {family.exists() or given.exists()}","n/a","EN (actually, PN)","name",".patient.name","XPN","PID-5, PID-9"
+ipa-pat-2:Either Patient.name.given and/or Patient.name.family and/or Patient.name.text SHALL be present or a Data Absent Reason Extension SHALL be present. {(family.exists() or given.exists() or text.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()}","n/a","EN (actually, PN)","name",".patient.name","XPN","PID-5, PID-9"
 "Patient.name.id","Patient.name.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Patient.name.extension","Patient.name.extension","","extensions

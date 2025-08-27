@@ -3,7 +3,7 @@
   "id" : "bc-patient-merge",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition bc-patient-merge</b></p><a name=\"bc-patient-merge\"> </a><a name=\"hcbc-patient-merge\"> </a><a name=\"bc-patient-merge-en-US\"> </a><p>URL: [base]/Patient/$MergePatient</p><p>Input parameters Profile:<a href=\"StructureDefinition-bc-merge-request-bundle.html\">MergeRequestBundle</a></p><p>Output parameters Profile:<a href=\"StructureDefinition-bc-merge-response-bundle.html\">MergeResponseBundle</a></p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>MergeRequestBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The merge request Bundle.</p>\n</div></td></tr><tr><td>IN</td><td>MergeResponseBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The merge response Bundle.</p>\n</div></td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition bc-patient-merge</b></p><a name=\"bc-patient-merge\"> </a><a name=\"hcbc-patient-merge\"> </a><p>URL: [base]/Patient/$merge</p><p>Input parameters Profile:<a href=\"http://hl7.org/fhir/R4/parameters.html\">Parameters</a></p><p>Output parameters Profile:<a href=\"http://hl7.org/fhir/R4/parameters.html\">Parameters</a></p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>source-patient</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/references.html#Reference\">Reference</a></td><td/><td><div><p>A direct resource reference to the source patient resource (this may include an identifier).</p>\n</div></td></tr><tr><td>IN</td><td>source-patient-identifier</td><td/><td>0..*</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>When source-patient-identifiers are provided, the server is expected to perform an internal lookup to identify the source patient record. The server SHALL reject the request if the provided identifiers do not resolve to a single patient record. This resolution MAY occur asynchronously, for example, as a part of a review by a user.</p>\n</div></td></tr><tr><td>IN</td><td>target-patient</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/references.html#Reference\">Reference</a></td><td/><td><div><p>A direct resource reference to the target patient resource. This is the surviving patient resource, the target for the merge.</p>\n</div></td></tr><tr><td>IN</td><td>target-patient-identifier</td><td/><td>0..*</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>When target-patient-identifiers are provided, the server is expected to perform an internal lookup to identify the target patient record. The server SHALL reject the request if the provided identifiers do not resolve to a single patient record. This resolution MAY occur asynchronously, for example, as a part of a review by a user.</p>\n</div></td></tr><tr><td>IN</td><td>result-patient</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a></td><td/><td><div><p>The details of the Patient resource that is expected to be updated to complete with and must have the same patient.id and provided identifiers included. This resource MUST have the link property included referencing the source patient resource. It will be used to perform an update on the target patient resource. In the absence of this parameter the servers should copy all identifiers from the source patient into the target patient, and include the link property. This is often used when properties from the source patient are desired to be included in the target resource. The receiving system may also apply other internal business rules onto the merge which may make the resource different from what is provided here.</p>\n</div></td></tr><tr><td>OUT</td><td>return</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/parameters.html\">Parameters</a></td><td/><td><div><p>The Parameters resource will include: The Input parameters to the operation, An OperationOutcome containing errors, warnings, and information messages, The resulting merged Patient resource (or a patient reference if the patient is not committed), Optionally a Task resource to track any additional processing that was required.</p>\n</div></td></tr></table></div>"
   },
   "url" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-merge",
   "version" : "1.0.0",
@@ -11,7 +11,7 @@
   "title" : "Merge Patient",
   "status" : "draft",
   "kind" : "operation",
-  "date" : "2024-10-11T23:26:29+00:00",
+  "date" : "2025-08-27T22:33:33+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",
@@ -28,27 +28,59 @@
       "display" : "Canada"
     }]
   }],
-  "code" : "MergePatient",
+  "code" : "merge",
   "resource" : ["Patient"],
   "system" : false,
   "type" : true,
   "instance" : false,
-  "inputProfile" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle",
-  "outputProfile" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle",
+  "inputProfile" : "http://hl7.org/fhir/StructureDefinition/Parameters",
+  "outputProfile" : "http://hl7.org/fhir/StructureDefinition/Parameters",
   "parameter" : [{
-    "name" : "MergeRequestBundle",
+    "name" : "source-patient",
     "use" : "in",
-    "min" : 1,
+    "min" : 0,
     "max" : "1",
-    "documentation" : "The merge request Bundle.",
-    "type" : "Bundle"
+    "documentation" : "A direct resource reference to the source patient resource (this may include an identifier).",
+    "type" : "Reference"
   },
   {
-    "name" : "MergeResponseBundle",
+    "name" : "source-patient-identifier",
     "use" : "in",
+    "min" : 0,
+    "max" : "*",
+    "documentation" : "When source-patient-identifiers are provided, the server is expected to perform an internal lookup to identify the source patient record. The server SHALL reject the request if the provided identifiers do not resolve to a single patient record. This resolution MAY occur asynchronously, for example, as a part of a review by a user.",
+    "type" : "Identifier"
+  },
+  {
+    "name" : "target-patient",
+    "use" : "in",
+    "min" : 0,
+    "max" : "1",
+    "documentation" : "A direct resource reference to the target patient resource. This is the surviving patient resource, the target for the merge.",
+    "type" : "Reference"
+  },
+  {
+    "name" : "target-patient-identifier",
+    "use" : "in",
+    "min" : 0,
+    "max" : "*",
+    "documentation" : "When target-patient-identifiers are provided, the server is expected to perform an internal lookup to identify the target patient record. The server SHALL reject the request if the provided identifiers do not resolve to a single patient record. This resolution MAY occur asynchronously, for example, as a part of a review by a user.",
+    "type" : "Identifier"
+  },
+  {
+    "name" : "result-patient",
+    "use" : "in",
+    "min" : 0,
+    "max" : "1",
+    "documentation" : "The details of the Patient resource that is expected to be updated to complete with and must have the same patient.id and provided identifiers included. This resource MUST have the link property included referencing the source patient resource. It will be used to perform an update on the target patient resource. In the absence of this parameter the servers should copy all identifiers from the source patient into the target patient, and include the link property. This is often used when properties from the source patient are desired to be included in the target resource. The receiving system may also apply other internal business rules onto the merge which may make the resource different from what is provided here.",
+    "type" : "Patient"
+  },
+  {
+    "name" : "return",
+    "use" : "out",
     "min" : 1,
     "max" : "1",
-    "documentation" : "The merge response Bundle.",
-    "type" : "Bundle"
+    "documentation" : "The Parameters resource will include: The Input parameters to the operation, An OperationOutcome containing errors, warnings, and information messages, The resulting merged Patient resource (or a patient reference if the patient is not committed), Optionally a Task resource to track any additional processing that was required.",
+    "type" : "Parameters"
   }]
 }

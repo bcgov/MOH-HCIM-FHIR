@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -10,15 +11,15 @@
   fhir:id [ fhir:v "bc-client-registry-patient-change-notification-events"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem bc-client-registry-patient-change-notification-events</b></p><a name=\"bc-client-registry-patient-change-notification-events\"> </a><a name=\"hcbc-client-registry-patient-change-notification-events\"> </a><a name=\"bc-client-registry-patient-change-notification-events-en-US\"> </a><p>This case-sensitive code system <code>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">COMPOSITE<a name=\"bc-client-registry-patient-change-notification-events-COMPOSITE\"> </a></td><td>composite</td><td>Composite view distributions inform a subscribing system that their records are out-of-sync with the composite view and a subscriber that a data attribute has been modified on a specific source.</td></tr><tr><td style=\"white-space:nowrap\">DEATH<a name=\"bc-client-registry-patient-change-notification-events-DEATH\"> </a></td><td>death</td><td>DEATH distributions inform a subscriber that they have a record that is out of sync with the Date of Death, or the Deceased indicator is present and a change to the composite view has occurred and a subscribing system there is a Date of Death, or the Deceased indicator is present and a change to the composite view has occurred.</td></tr><tr><td style=\"white-space:nowrap\">EID<a name=\"bc-client-registry-patient-change-notification-events-EID\"> </a></td><td>eid</td><td>EID distributions inform subscribers when one of their source records has changed entity sets and/or is out-of-sync with the composite view.</td></tr><tr><td style=\"white-space:nowrap\">NEW<a name=\"bc-client-registry-patient-change-notification-events-NEW\"> </a></td><td>new PHN</td><td>The New PHN (NEW) distribution is a non-source distribution and informs subscribers of all new PHNs.</td></tr><tr><td style=\"white-space:nowrap\">NEWBORN<a name=\"bc-client-registry-patient-change-notification-events-NEWBORN\"> </a></td><td>newborn</td><td>This distribution informs subscribers that a newborn record has been created in the EMPI, and has been assigned a PHN.</td></tr><tr><td style=\"white-space:nowrap\">NEWBORN_GENDER<a name=\"bc-client-registry-patient-change-notification-events-NEWBORN_GENDER\"> </a></td><td>newborn gender</td><td>A non-source distribution and informs subscribers when the gender on a newborn record changes from unknown or undifferentiated to any other gender value.</td></tr><tr><td style=\"white-space:nowrap\">PHN<a name=\"bc-client-registry-patient-change-notification-events-PHN\"> </a></td><td>PHN change</td><td>PHN Change distributions inform source systems that their purported PHN is out-of-sync with the PHN in the composite view.</td></tr><tr><td style=\"white-space:nowrap\">PHNJOIN<a name=\"bc-client-registry-patient-change-notification-events-PHNJOIN\"> </a></td><td>PHN Join</td><td>PHN Join distributions inform source systems that their record has joined an entity with a PHN.</td></tr><tr><td style=\"white-space:nowrap\">PHNMERGE<a name=\"bc-client-registry-patient-change-notification-events-PHNMERGE\"> </a></td><td>PHN Merge</td><td>PHN merge is a non-source distribution and informs subscribers of merged PHNs.</td></tr><tr><td style=\"white-space:nowrap\">SSRI<a name=\"bc-client-registry-patient-change-notification-events-SSRI\"> </a></td><td>SSRI Sync</td><td>SSRI Sync distributions notify a parent system that one of its child system’s records has joined the set.</td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem bc-client-registry-patient-change-notification-events</b></p><a name=\"bc-client-registry-patient-change-notification-events\"> </a><a name=\"hcbc-client-registry-patient-change-notification-events\"> </a><p>This case-sensitive code system <code>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">COMP<a name=\"bc-client-registry-patient-change-notification-events-COMP\"> </a></td><td>Composite View</td><td>The Composite View distribution serves different business purposes depending on whether or not the subscriber is a source system. For a source system, Composite View distributions inform a subscribing system that its records are out-of-sync with the composite view. For a non-source system, Composite View distributions inform a subscriber when a data attribute has been modified on a specific source.</td></tr><tr><td style=\"white-space:nowrap\">DEATH<a name=\"bc-client-registry-patient-change-notification-events-DEATH\"> </a></td><td>Death</td><td>A Death Distributions notifications inform subscribers of both confirmed and unconfirmed deaths. This occurs when just the Date of Death is present, or both the Date of Death and Deceased indicator are present in the Composite View. There are some behavior differences depending on whether or not the subscriber is a source system. For a source system, Death distributions inform a subscriber that they have a record that is out-of-sync with the Date of Death, or the Deceased indicator is added to the Composite View. For a non-source system, Death distributions inform a subscribing system that there is a Date of Death, or the Deceased indicator is added.</td></tr><tr><td style=\"white-space:nowrap\">NEW<a name=\"bc-client-registry-patient-change-notification-events-NEW\"> </a></td><td>New</td><td>The NEW distribution is a non-source distribution that informs subscribers of all new records. Any source can trigger a NEW distribution, and subscribers can limit the sources they subscribe to. For instnce, if a subscriber wants to be notified of new PHNs, they subscribe to the MOH_CRS source.</td></tr><tr><td style=\"white-space:nowrap\">NEWBORN<a name=\"bc-client-registry-patient-change-notification-events-NEWBORN\"> </a></td><td>Newborn</td><td>A Newborn distribution is a non-source distribution that informs subscribers that a newborn record has been created and has been assigned a PHN. Typically, subscribers would limit their source subscription to MOH_CRS for this distribution.</td></tr><tr><td style=\"white-space:nowrap\">NEWBORN_GENDER<a name=\"bc-client-registry-patient-change-notification-events-NEWBORN_GENDER\"> </a></td><td>Newborn Gender</td><td>The Newborn Gender distribution is a non-source distribution and informs subscribers when the gender on a newborn record changes from unknown or undifferentiated to Male or Female. This distribution is used to ensure that pre-registered newborns (where the gender is frequently unknown) are registered for MSP benefits. MSP does not allow the registration of newborns with an unknown gender value.</td></tr><tr><td style=\"white-space:nowrap\">PHN<a name=\"bc-client-registry-patient-change-notification-events-PHN\"> </a></td><td>PHN</td><td>PHN distributions only work for subscribers that are source systems. This distribution informs source systems that their purported PHN is out-of-sync with the PHN in the Composite View. The purported PHN is the PHN sent on the last update by the source system, while the PHN in the Composite View is the MOH_CRS source PHN.</td></tr><tr><td style=\"white-space:nowrap\">PHNJOIN<a name=\"bc-client-registry-patient-change-notification-events-PHNJOIN\"> </a></td><td>PHN Join</td><td>A PHNJOIN distribution works for subscribers that are source and non-source systems and informs them that their record has joined an entity with a PHN, or a PHN has joined its entity. For source systems, PHNJOIN distribution informs a subscriber that one of the following has occured: their record has created a PHN, their record has joined the set of an existing PHN, their record moved from a non-survivor PHN to a survivor PHN when the PHNs were merged. For non-source systems, PHNJOIN distribution informs non-source subscribers that a specific source they are listening to has joined a set with a PHN.</td></tr><tr><td style=\"white-space:nowrap\">MERGE<a name=\"bc-client-registry-patient-change-notification-events-MERGE\"> </a></td><td>Merge</td><td>MERGE is a non-source distribution and informs subscribers of merged PHNs or Source Record Identifiers (SRIs). Merge distributions can be triggered by any source. All distribution profiles can limit the sources they subscribe to; therefore, if a subscriber only wants to be notified of a PHN merge, they subscribe to the MOH_CRS source. If they want to be notified of a SRI merge, they subscribe to the required source.</td></tr><tr><td style=\"white-space:nowrap\">SSRISYNC<a name=\"bc-client-registry-patient-change-notification-events-SSRISYNC\"> </a></td><td>SSRI Sync</td><td>An SSRI Sync distribution applies only to subscribers that are source systems and are used to notify a parent source system when one of its child systems' records has joined or changed within an entity set. SSRI Sync distributions support PHSA and the Clinical and Systems Transformation project (CST). In this project, multiple sources (VCHA, PHC, and PHSA) are implementing a single Cerner CIS (VPP Cerner) across all their facilities and replacing multiple existing systems. As part of this effort, all patients are issued a new SRI; existing SRIs are recorded and stored for historical use only. The new Cerner CIS is loading the SRI from the old system as the SSRI in the new system. The new CIS will be deployed to facilities over several years, and the patients will be migrated from their existing systems to the new CIS as their facility goes live and the legacy system is decommissioned.</td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:url [ fhir:v "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "1.0.0"] ; # 
   fhir:name [ fhir:v "PatientChangeNotificationEvents"] ; # 
   fhir:title [ fhir:v "BC Client Registry Patient Change Notification Events Code System"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2024-10-11T23:26:29+00:00"^^xsd:dateTime] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-08-27T22:33:33+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "BC Ministry of Health"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "BC Ministry of Health" ] ;
@@ -35,49 +36,45 @@
        fhir:display [ fhir:v "Canada" ]
      ] )
   ] ) ; # 
-  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
   fhir:content [ fhir:v "complete"] ; # 
-  fhir:count [ fhir:v "10"^^xsd:nonNegativeInteger] ; # 
+  fhir:count [ fhir:v "9"^^xsd:nonNegativeInteger] ; # 
   fhir:concept ( [
-     fhir:code [ fhir:v "COMPOSITE" ] ;
-     fhir:display [ fhir:v "composite" ] ;
-     fhir:definition [ fhir:v "Composite view distributions inform a subscribing system that their records are out-of-sync with the composite view and a subscriber that a data attribute has been modified on a specific source." ]
+     fhir:code [ fhir:v "COMP" ] ;
+     fhir:display [ fhir:v "Composite View" ] ;
+     fhir:definition [ fhir:v "The Composite View distribution serves different business purposes depending on whether or not the subscriber is a source system. For a source system, Composite View distributions inform a subscribing system that its records are out-of-sync with the composite view. For a non-source system, Composite View distributions inform a subscriber when a data attribute has been modified on a specific source." ]
   ] [
      fhir:code [ fhir:v "DEATH" ] ;
-     fhir:display [ fhir:v "death" ] ;
-     fhir:definition [ fhir:v "DEATH distributions inform a subscriber that they have a record that is out of sync with the Date of Death, or the Deceased indicator is present and a change to the composite view has occurred and a subscribing system there is a Date of Death, or the Deceased indicator is present and a change to the composite view has occurred." ]
-  ] [
-     fhir:code [ fhir:v "EID" ] ;
-     fhir:display [ fhir:v "eid" ] ;
-     fhir:definition [ fhir:v "EID distributions inform subscribers when one of their source records has changed entity sets and/or is out-of-sync with the composite view." ]
+     fhir:display [ fhir:v "Death" ] ;
+     fhir:definition [ fhir:v "A Death Distributions notifications inform subscribers of both confirmed and unconfirmed deaths. This occurs when just the Date of Death is present, or both the Date of Death and Deceased indicator are present in the Composite View. There are some behavior differences depending on whether or not the subscriber is a source system. For a source system, Death distributions inform a subscriber that they have a record that is out-of-sync with the Date of Death, or the Deceased indicator is added to the Composite View. For a non-source system, Death distributions inform a subscribing system that there is a Date of Death, or the Deceased indicator is added." ]
   ] [
      fhir:code [ fhir:v "NEW" ] ;
-     fhir:display [ fhir:v "new PHN" ] ;
-     fhir:definition [ fhir:v "The New PHN (NEW) distribution is a non-source distribution and informs subscribers of all new PHNs." ]
+     fhir:display [ fhir:v "New" ] ;
+     fhir:definition [ fhir:v "The NEW distribution is a non-source distribution that informs subscribers of all new records. Any source can trigger a NEW distribution, and subscribers can limit the sources they subscribe to. For instnce, if a subscriber wants to be notified of new PHNs, they subscribe to the MOH_CRS source." ]
   ] [
      fhir:code [ fhir:v "NEWBORN" ] ;
-     fhir:display [ fhir:v "newborn" ] ;
-     fhir:definition [ fhir:v "This distribution informs subscribers that a newborn record has been created in the EMPI, and has been assigned a PHN." ]
+     fhir:display [ fhir:v "Newborn" ] ;
+     fhir:definition [ fhir:v "A Newborn distribution is a non-source distribution that informs subscribers that a newborn record has been created and has been assigned a PHN. Typically, subscribers would limit their source subscription to MOH_CRS for this distribution." ]
   ] [
      fhir:code [ fhir:v "NEWBORN_GENDER" ] ;
-     fhir:display [ fhir:v "newborn gender" ] ;
-     fhir:definition [ fhir:v "A non-source distribution and informs subscribers when the gender on a newborn record changes from unknown or undifferentiated to any other gender value." ]
+     fhir:display [ fhir:v "Newborn Gender" ] ;
+     fhir:definition [ fhir:v "The Newborn Gender distribution is a non-source distribution and informs subscribers when the gender on a newborn record changes from unknown or undifferentiated to Male or Female. This distribution is used to ensure that pre-registered newborns (where the gender is frequently unknown) are registered for MSP benefits. MSP does not allow the registration of newborns with an unknown gender value." ]
   ] [
      fhir:code [ fhir:v "PHN" ] ;
-     fhir:display [ fhir:v "PHN change" ] ;
-     fhir:definition [ fhir:v "PHN Change distributions inform source systems that their purported PHN is out-of-sync with the PHN in the composite view." ]
+     fhir:display [ fhir:v "PHN" ] ;
+     fhir:definition [ fhir:v "PHN distributions only work for subscribers that are source systems. This distribution informs source systems that their purported PHN is out-of-sync with the PHN in the Composite View. The purported PHN is the PHN sent on the last update by the source system, while the PHN in the Composite View is the MOH_CRS source PHN." ]
   ] [
      fhir:code [ fhir:v "PHNJOIN" ] ;
      fhir:display [ fhir:v "PHN Join" ] ;
-     fhir:definition [ fhir:v "PHN Join distributions inform source systems that their record has joined an entity with a PHN." ]
+     fhir:definition [ fhir:v "A PHNJOIN distribution works for subscribers that are source and non-source systems and informs them that their record has joined an entity with a PHN, or a PHN has joined its entity. For source systems, PHNJOIN distribution informs a subscriber that one of the following has occured: their record has created a PHN, their record has joined the set of an existing PHN, their record moved from a non-survivor PHN to a survivor PHN when the PHNs were merged. For non-source systems, PHNJOIN distribution informs non-source subscribers that a specific source they are listening to has joined a set with a PHN." ]
   ] [
-     fhir:code [ fhir:v "PHNMERGE" ] ;
-     fhir:display [ fhir:v "PHN Merge" ] ;
-     fhir:definition [ fhir:v "PHN merge is a non-source distribution and informs subscribers of merged PHNs." ]
+     fhir:code [ fhir:v "MERGE" ] ;
+     fhir:display [ fhir:v "Merge" ] ;
+     fhir:definition [ fhir:v "MERGE is a non-source distribution and informs subscribers of merged PHNs or Source Record Identifiers (SRIs). Merge distributions can be triggered by any source. All distribution profiles can limit the sources they subscribe to; therefore, if a subscriber only wants to be notified of a PHN merge, they subscribe to the MOH_CRS source. If they want to be notified of a SRI merge, they subscribe to the required source." ]
   ] [
-     fhir:code [ fhir:v "SSRI" ] ;
+     fhir:code [ fhir:v "SSRISYNC" ] ;
      fhir:display [ fhir:v "SSRI Sync" ] ;
-     fhir:definition [ fhir:v "SSRI Sync distributions notify a parent system that one of its child system’s records has joined the set." ]
+     fhir:definition [ fhir:v "An SSRI Sync distribution applies only to subscribers that are source systems and are used to notify a parent source system when one of its child systems' records has joined or changed within an entity set. SSRI Sync distributions support PHSA and the Clinical and Systems Transformation project (CST). In this project, multiple sources (VCHA, PHC, and PHSA) are implementing a single Cerner CIS (VPP Cerner) across all their facilities and replacing multiple existing systems. As part of this effort, all patients are issued a new SRI; existing SRIs are recorded and stored for historical use only. The new Cerner CIS is loading the SRI from the old system as the SSRI in the new system. The new CIS will be deployed to facilities over several years, and the patients will be migrated from their existing systems to the new CIS as their facility goes live and the legacy system is decommissioned." ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

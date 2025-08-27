@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -38,7 +39,10 @@
   ] ; # 
   fhir:parameter ( [
      fhir:name [ fhir:v "messageId" ] ;
-     fhir:value [ fhir:v "b02fc643-e179-4c5f-8ac3-a8d955f9ce87" ]
+     fhir:value [
+       a fhir:string ;
+       fhir:v "b02fc643-e179-4c5f-8ac3-a8d955f9ce87"
+     ]
   ] ) . # 
 
 <urn:uuid:951b9e8e-5c78-44d5-91b1-ad6fb748de4b> a fhir:Patient ;
@@ -51,7 +55,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_AddPatient-Request-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient AddPatient-Request-Patient</b></p><a name=\"AddPatient-Request-Patient\"> </a><a name=\"hcAddPatient-Request-Patient\"> </a><a name=\"AddPatient-Request-Patient-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Legarra Antonin Cecily Gillette  Female, DoB: 1971-01-09 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id#9253484802 (use: official, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">1974-05-08</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id</code>/9455882493 (use: official, )</li><li><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-veterans-affairs-health-id</code>/3EP14D12Y8Q618LPKH04QW28 (use: official, )</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 4018764201(Mobile)</li><li>ph: 9183556793(Home)</li><li>ph: 5185828695(Work)</li><li><a href=\"mailto:Kolab.Mancher@cgi.com\">Kolab.Mancher@cgi.com</a></li><li><a href=\"mailto:Gabriele.Minas@cgi.com\">Gabriele.Minas@cgi.com</a></li><li><a href=\"mailto:Rolande.Jerald@cgi.com\">Rolande.Jerald@cgi.com</a></li><li>28813 Eden drive Mattice BC CA </li><li>38708 Heritage road Epping BC CA </li></ul></td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_AddPatient-Request-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient AddPatient-Request-Patient</b></p><a name=\"AddPatient-Request-Patient\"> </a><a name=\"hcAddPatient-Request-Patient\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Legarra Antonin Cecily Gillette  Female, DoB: 1971-01-09 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id#9253484802 (use: official, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">1974-05-08</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id</code>/9455882493 (use: official, )</li><li><code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-veterans-affairs-health-id</code>/3EP14D12Y8Q618LPKH04QW28 (use: official, )</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 4018764201(Mobile)</li><li>ph: 9183556793(Home)</li><li>ph: 5185828695(Work)</li><li><a href=\"mailto:Kolab.Mancher@cgi.com\">Kolab.Mancher@cgi.com</a></li><li><a href=\"mailto:Gabriele.Minas@cgi.com\">Gabriele.Minas@cgi.com</a></li><li><a href=\"mailto:Rolande.Jerald@cgi.com\">Rolande.Jerald@cgi.com</a></li><li>28813 Eden drive Mattice BC CA </li><li>38708 Heritage road Epping BC CA </li></ul></td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;
@@ -106,11 +110,15 @@
   fhir:gender [ fhir:v "female"] ; # 
   fhir:birthDate [ fhir:v "1971-01-09"^^xsd:date] ; # 
   fhir:deceased [
+     a fhir:dateTime ;
      fhir:v "1974-05-08"^^xsd:date ;
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "deathVerifiedFlag"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true"^^xsd:boolean ]
+         fhir:value [
+           a fhir:boolean ;
+           fhir:v true
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension"^^xsd:anyURI ]
      ] )

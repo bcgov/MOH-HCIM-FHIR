@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 <link href="assets/css/bc-fhir.css" rel="stylesheet"/>
 
@@ -31,10 +32,10 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -42,10 +43,11 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"15.7"}
-    h3,h4,h5,h6{--heading-prefix:"15.7"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.6"}
+    h3,h4,h5,h6{--heading-prefix:"14.6"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Left logo - typically the publisher's logo - project or affiliate -->
         <div id="project-nav">
           <a id="project-logo" no-external="true" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">
@@ -107,9 +109,6 @@
         <a href="reviseAndMerge.html">Add, Revise, Update And Merge Patient</a>
       </li>
       <li>
-        <a href="distributions.html">Patient Change Notifications</a>
-      </li>
-      <li>
         <a href="identifiers.html">Identifiers</a>
       </li>
       <li>
@@ -166,7 +165,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hlth.gov.bc.ca/fhir/client/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hlth.gov.bc.ca/fhir/client/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -236,7 +235,7 @@
         
           Draft
           
-            as of 2024-10-11
+            as of 2025-08-27
           
         
       </td>
@@ -265,9 +264,11 @@
 
 <div style="display:inline-block" markdown="1">
 
-<p>Merge Patient is a FHIR Operation.</p>
+<p>The merge operation is used to request two patient resources be merged. One of the two patients is identified as the source (non-survivor) and on as the target (survivor). The data from the source patient will be merged with the data of the target patient.</p>
 
-<p>This operation needs the Patient.link.other field populated with an Identifier so the non-survivor Patients can be located.  There may be more than one set of Identifiers and each will be merged (if they represent more than a single non-surviving Patient).  See an example of linking the non-survivors <a href="Bundle-Bundle-MergePatient-Request-Example.html">here</a>.</p>
+<p>The source Patient resource will be updated to add a new Patient.link reference to the target Patient resource with a link-type of replaced-by. The source Patient will also be updated to have a status of inactive, unless the source Patient resource was deleted.</p>
+
+<p>The target Patient resource will be updated to add a new Patient.link reference to the source Patient resource with a link-type of replaces unless the source Patient resource is deleted. The target Patient resource must be included in the result-patient paramter if used.</p>
 
 
 </div>
@@ -282,8 +283,12 @@
   
 
 
-  <div><p class="res-header-id"><b>Generated Narrative: OperationDefinition bc-patient-merge</b></p><a name="bc-patient-merge"> </a><a name="hcbc-patient-merge"> </a><a name="bc-patient-merge-en-US"> </a><p>URL: [base]/Patient/$MergePatient</p><p>Input parameters Profile:<a href="StructureDefinition-bc-merge-request-bundle.html">MergeRequestBundle</a></p><p>Output parameters Profile:<a href="StructureDefinition-bc-merge-response-bundle.html">MergeResponseBundle</a></p><h3>Parameters</h3><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>MergeRequestBundle</td><td/><td>1..1</td><td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td><td/><td><div><p>The merge request Bundle.</p>
-</div></td></tr><tr><td>IN</td><td>MergeResponseBundle</td><td/><td>1..1</td><td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td><td/><td><div><p>The merge response Bundle.</p>
+  <div xmlns="http://www.w3.org/1999/xhtml"><a name="bc-patient-merge"> </a><a name="hcbc-patient-merge"> </a><p>URL: [base]/Patient/$merge</p><p>Input parameters Profile:<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></p><p>Output parameters Profile:<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></p><h3>Parameters</h3><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>source-patient</td><td/><td>0..1</td><td><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></td><td/><td><div><p>A direct resource reference to the source patient resource (this may include an identifier).</p>
+</div></td></tr><tr><td>IN</td><td>source-patient-identifier</td><td/><td>0..*</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>When source-patient-identifiers are provided, the server is expected to perform an internal lookup to identify the source patient record. The server SHALL reject the request if the provided identifiers do not resolve to a single patient record. This resolution MAY occur asynchronously, for example, as a part of a review by a user.</p>
+</div></td></tr><tr><td>IN</td><td>target-patient</td><td/><td>0..1</td><td><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></td><td/><td><div><p>A direct resource reference to the target patient resource. This is the surviving patient resource, the target for the merge.</p>
+</div></td></tr><tr><td>IN</td><td>target-patient-identifier</td><td/><td>0..*</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td/><td><div><p>When target-patient-identifiers are provided, the server is expected to perform an internal lookup to identify the target patient record. The server SHALL reject the request if the provided identifiers do not resolve to a single patient record. This resolution MAY occur asynchronously, for example, as a part of a review by a user.</p>
+</div></td></tr><tr><td>IN</td><td>result-patient</td><td/><td>0..1</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td><td/><td><div><p>The details of the Patient resource that is expected to be updated to complete with and must have the same patient.id and provided identifiers included. This resource MUST have the link property included referencing the source patient resource. It will be used to perform an update on the target patient resource. In the absence of this parameter the servers should copy all identifiers from the source patient into the target patient, and include the link property. This is often used when properties from the source patient are desired to be included in the target resource. The receiving system may also apply other internal business rules onto the merge which may make the resource different from what is provided here.</p>
+</div></td></tr><tr><td>OUT</td><td>return</td><td/><td>1..1</td><td><a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></td><td/><td><div><p>The Parameters resource will include: The Input parameters to the operation, An OperationOutcome containing errors, warnings, and information messages, The resulting merged Patient resource (or a patient reference if the patient is not committed), Optionally a Task resource to track any additional processing that was required.</p>
 </div></td></tr></table></div>
 
   <!-- insert notes if present -->
@@ -294,70 +299,19 @@
 
 <div style="display:inline-block" markdown="1">
 
-<h4 id="in-bundle-entries">In Bundle Entries</h4>
+<p>The FHIR Mimic R5 Merge Person feature is one that modifies the format of the existing R4 Merge Person interface so that it aligns closely with the R5 version of the FHIR specifications.</p>
 
-<table class="grid">
-  <thead>
-    <tr>
-      <th style="text-align: left">Cardinality</th>
-      <th style="text-align: left">Resource Type</th>
-      <th style="text-align: left">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">1..1</td>
-      <td style="text-align: left">MetadataParametersIn</td>
-      <td style="text-align: left">See <a href="StructureDefinition-bc-metadata-parameters-in.html">profile</a>.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">0..1</td>
-      <td style="text-align: left">MergePatient</td>
-      <td style="text-align: left">See <a href="StructureDefinition-bc-merge-patient.html">profile</a>.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="out-bundle-entries">Out Bundle Entries</h4>
-
-<table class="grid">
-  <thead>
-    <tr>
-      <th style="text-align: left">Cardinality</th>
-      <th style="text-align: left">Resource Type</th>
-      <th style="text-align: left">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">1..1</td>
-      <td style="text-align: left">MetadataParametersOut</td>
-      <td style="text-align: left">See <a href="StructureDefinition-bc-metadata-parameters-out.html">profile</a>.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">1,,1</td>
-      <td style="text-align: left">OperationOutcome</td>
-      <td style="text-align: left">An OperationOutcome resource that has warnings and errors regarding the operation requested.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="metadata-in-parameters">Metadata In Parameters</h4>
-
-<p>Besides the two mandatory name-value pairs, none.</p>
-
-<h4 id="metadata-out-parameters">Metadata Out Parameters</h4>
-
-<p>Besides the mandatory parameters, none.</p>
+<p>Some of the differences include:</p>
+<ul>
+  <li>Identifier in the Parameters (source-patient-identifier) needs to include the <a href="StructureDefinition-bc-merge-status-extension.html">merge-status-extension</a></li>
+  <li>Preview parameter is not allowed</li>
+  <li>Merge Patient identifiers its own value set that allows official, secondary and old. Old will indicate non-survivors in the patient in the result-patient and only for merge patients.</li>
+</ul>
 
 <h4 id="examples">Examples</h4>
 
-<p>See <a href="Bundle-Merge-Only-Request.html">Merge Patient only request</a> example.<br />
-See <a href="Bundle-Merge-WithPayload-Request.html">Merge Patient with Payload request</a> example.<br />
-See <a href="Bundle-Merge-SSRI-Request.html">Merge Patient SSRI request</a> example.<br />
-See <a href="Bundle-Merge-Response.html">Merge Patient response</a> example.<br />
-See <a href="Bundle-Bundle-MergePatient-Request-Example.html">Merge Patient request</a> example.<br />
-See <a href="Bundle-Bundle-MergePatient-Response-Example.html">Merge Patient response</a> example.</p>
+<p>See <a href="Parameters-Merge-Request.html">Merge Patient request</a> example.
+See <a href="Parameters-Merge-Response.html">Merge Patient response</a> example.</p>
 
 
 </div>
@@ -383,7 +337,7 @@ See <a href="Bundle-Bundle-MergePatient-Response-Example.html">Merge Patient res
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Oct 11, 2024 23:26+0000">2024-10-11</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 27, 2025 22:34+0000">2025-08-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

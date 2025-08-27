@@ -297,62 +297,6 @@
       ]
     },
     {
-      "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-identity-extension",
-      "title": "BC Gender Identity with business dates.",
-      "types": [
-        "base64Binary",
-        "boolean",
-        "canonical",
-        "code",
-        "date",
-        "dateTime",
-        "decimal",
-        "id",
-        "instant",
-        "integer",
-        "markdown",
-        "oid",
-        "positiveInt",
-        "string",
-        "time",
-        "unsignedInt",
-        "uri",
-        "url",
-        "uuid",
-        "Address",
-        "Age",
-        "Annotation",
-        "Attachment",
-        "CodeableConcept",
-        "Coding",
-        "ContactPoint",
-        "Count",
-        "Distance",
-        "Duration",
-        "HumanName",
-        "Identifier",
-        "Money",
-        "Period",
-        "Quantity",
-        "Range",
-        "Ratio",
-        "Reference",
-        "SampledData",
-        "Signature",
-        "Timing",
-        "ContactDetail",
-        "Contributor",
-        "DataRequirement",
-        "Expression",
-        "ParameterDefinition",
-        "RelatedArtifact",
-        "TriggerDefinition",
-        "UsageContext",
-        "Dosage",
-        "Meta"
-      ]
-    },
-    {
       "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
       "title": "BC Identifier Status",
       "types": [
@@ -585,6 +529,12 @@
       "Basic"
     ],
     "http://hl7.org/fhir/StructureDefinition/data-absent-reason": [
+      "Bundle.entry.resource.address",
+      "Bundle.entry.resource.birthDate",
+      "Bundle.entry.resource.gender",
+      "Bundle.entry.resource.identifier.value",
+      "Bundle.entry.resource.name",
+      "Bundle.entry.resource.telecom",
       "Patient.identifier.value"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
@@ -601,9 +551,6 @@
     ],
     "http://hl7.org/fhir/StructureDefinition/iso21090-preferred": [
       "Patient.address"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/patient-genderIdentity": [
-      "Extension"
     ],
     "http://hl7.org/fhir/StructureDefinition/regex": [
       "StructureDefinition.snapshot.element.type"
@@ -654,6 +601,9 @@
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
     ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
+    ],
     "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-channel-type": [
       "Subscription.channel.type"
     ],
@@ -672,18 +622,17 @@
     "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-timeout": [
       "Subscription.channel"
     ],
-    "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/capabilitystatement-subscriptiontopic-canonical": [
-      "CapabilityStatement.rest.resource"
-    ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birthdate-history-extension": [
       "Bundle.entry.resource.birthDate",
       "Patient.birthDate"
     ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension": [
+      "Bundle.entry.resource",
       "Bundle.entry.resource.birthDate",
       "Bundle.entry.resource.deceasedDateTime",
       "Bundle.entry.resource.gender",
       "Extension",
+      "Parameters.parameter.resource",
       "Patient",
       "Patient.birthDate",
       "Patient.deceased[x]",
@@ -705,17 +654,13 @@
       "Bundle.entry.resource.gender",
       "Patient.gender"
     ],
-    "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-gender-identity-extension": [
-      "Patient"
-    ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension": [
       "Bundle.entry.resource.identifier",
-      "Bundle.entry.resource.link.other.identifier",
-      "Patient.identifier",
-      "Patient.link.other.identifier"
+      "Parameters.parameter.resource.identifier",
+      "Patient.identifier"
     ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension": [
-      "Bundle.entry.resource.link",
+      "Parameters.parameter.valueIdentifier",
       "Patient.link"
     ],
     "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-multiplebirth-history-extension": [

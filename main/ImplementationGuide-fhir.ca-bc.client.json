@@ -3,14 +3,14 @@
   "id" : "fhir.ca-bc.client",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide fhir.ca-bc.client</b></p><a name=\"fhir.ca-bc.client\"> </a><a name=\"hcfhir.ca-bc.client\"> </a><a name=\"fhir.ca-bc.client-en-US\"> </a><h2>BCHealthClientIdentityManagement</h2><p>The official URL for this implementation guide is: </p><pre>http://hlth.gov.bc.ca/fhir/client/ImplementationGuide/fhir.ca-bc.client</pre><div><p>FHIR Implementation Guide for BC MOH Client Registry</p>\n</div></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide fhir.ca-bc.client</b></p><a name=\"fhir.ca-bc.client\"> </a><a name=\"hcfhir.ca-bc.client\"> </a><h2>BCHealthClientIdentityManagement</h2><p>The official URL for this implementation guide is: </p><pre>http://hlth.gov.bc.ca/fhir/client/ImplementationGuide/fhir.ca-bc.client</pre><div><p>FHIR Implementation Guide for BC MOH Client Registry</p>\n</div></div>"
   },
   "url" : "http://hlth.gov.bc.ca/fhir/client/ImplementationGuide/fhir.ca-bc.client",
   "version" : "1.0.0",
   "name" : "BCHealthClientIdentityManagement",
   "title" : "BC Client Registry FHIR Implementation Guide",
   "status" : "active",
-  "date" : "2024-10-11T23:26:29+00:00",
+  "date" : "2025-08-27T22:33:33+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",
@@ -38,7 +38,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "6.0.2"
+    "version" : "6.5.0"
   },
   {
     "id" : "hl7ext",
@@ -48,13 +48,13 @@
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.1.0"
+    "version" : "5.2.0"
   },
   {
     "id" : "hl7_fhir_ca_baseline",
     "uri" : "http://hl7.org/fhir/ca/baseline/ImplementationGuide/hl7.fhir.ca.baseline",
     "packageId" : "hl7.fhir.ca.baseline",
-    "version" : "1.1.7"
+    "version" : "1.2.0"
   },
   {
     "id" : "hl7_fhir_uv_subscriptions_backport_r4",
@@ -494,7 +494,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools#0.2.0"
+      "valueCode" : "hl7.fhir.uv.tools.r4#0.7.1"
     },
     {
       "extension" : [{
@@ -961,9 +961,9 @@
       "description" : "A set of operation response examples"
     },
     {
-      "id" : "Subscriptions",
-      "name" : "Supporting Profiles - Subscription / Notification",
-      "description" : "Artifacts that support Subscription Operations"
+      "id" : "RestfulExamples",
+      "name" : "RESTful Examples",
+      "description" : "A set of RESTful request examples"
     }],
     "resource" : [{
       "extension" : [{
@@ -1179,18 +1179,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/bc-client-registry-update-patient-operation-code-system"
-      },
-      "name" : "BC Code System Of Allowed Update Operations",
-      "description" : "BC Code System of allowed update patient operations.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -1258,18 +1246,6 @@
       },
       "name" : "BC Gender History",
       "description" : "This extension allows the Client Registry to include historical gender codes in a single Patient resource.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/bc-gender-identity-extension"
-      },
-      "name" : "BC Gender Identity with business dates.",
-      "description" : "Gender Identity with business dates.",
       "exampleBoolean" : false
     },
     {
@@ -1385,42 +1361,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/bc-client-registry-update-patient-operation-value-set"
-      },
-      "name" : "BC Update Patient Operation Value Set",
-      "description" : "A Value Set of allowed update operations.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/Bundle-MergePatient-Request-Example"
-      },
-      "name" : "Bundle-MergePatient-Request-Example",
-      "description" : "Example of $MergePatient operation.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/Bundle-MergePatient-Response-Example"
-      },
-      "name" : "Bundle-MergePatient-Response-Example",
-      "description" : "A sample MergePatient Operation response.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -1512,6 +1452,19 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/Force-Create-Request"
+      },
+      "name" : "Force-Create-Request",
+      "description" : "Example of RESTful force create request.",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient",
+      "groupingId" : "RestfulExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "OperationDefinition"
       }],
       "reference" : {
@@ -1541,10 +1494,36 @@
         "valueString" : "Bundle"
       }],
       "reference" : {
+        "reference" : "Bundle/GetDemographics-Request-By-SSRI"
+      },
+      "name" : "GetDemographics-Request-By-SSRI",
+      "description" : "Example of $GetDemographics request by SSRI.",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle",
+      "groupingId" : "RequestExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
         "reference" : "Bundle/GetDemographics-Response"
       },
       "name" : "GetDemographics-Response",
       "description" : "Example of $GetDemographics response",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
+      "groupingId" : "ResponseExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/GetDemographics-Response-Masked"
+      },
+      "name" : "GetDemographics-Response-Masked",
+      "description" : "Example of $GetDemographics masked response.",
       "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
       "groupingId" : "ResponseExamples"
     },
@@ -1610,8 +1589,7 @@
       },
       "name" : "HCIM Patient Change Distributions Topic",
       "description" : "This is the subscription topic used for subscribing to different change distributions.",
-      "exampleBoolean" : false,
-      "groupingId" : "Subscriptions"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1623,21 +1601,7 @@
       },
       "name" : "HCIMPatientChangeSubscription",
       "description" : "Profile on subscription for HCIM Patient Changes",
-      "exampleBoolean" : false,
-      "groupingId" : "Subscriptions"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationDefinition"
-      }],
-      "reference" : {
-        "reference" : "OperationDefinition/bc-patient-history"
-      },
-      "name" : "HistoryPatient",
-      "description" : "This operation is used to return the historical attributes of a patient.",
-      "exampleBoolean" : false,
-      "groupingId" : "Operations"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1655,66 +1619,40 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
+        "valueString" : "Parameters"
       }],
       "reference" : {
-        "reference" : "Bundle/Merge-Only-Request"
+        "reference" : "Parameters/Merge-Min-Request"
       },
-      "name" : "Merge-Only-Request",
-      "description" : "Example of $Merge only request.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle",
+      "name" : "Merge-Min-Request",
+      "description" : "Example of $Merge request with minimum data.",
+      "exampleBoolean" : true,
       "groupingId" : "RequestExamples"
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
+        "valueString" : "Parameters"
       }],
       "reference" : {
-        "reference" : "Bundle/Merge-Response"
+        "reference" : "Parameters/Merge-Request"
+      },
+      "name" : "Merge-Request",
+      "description" : "Example of $Merge request.",
+      "exampleBoolean" : true,
+      "groupingId" : "RequestExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Parameters"
+      }],
+      "reference" : {
+        "reference" : "Parameters/Merge-Response"
       },
       "name" : "Merge-Response",
       "description" : "Example of $Merge response.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle",
-      "groupingId" : "ResponseExamples"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/Merge-SSRI-Request"
-      },
-      "name" : "Merge-SSRI-Request",
-      "description" : "Example of $Merge request with SSRI.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle",
-      "groupingId" : "RequestExamples"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/Merge-WithPayload-Request"
-      },
-      "name" : "Merge-WithPayload-Request",
-      "description" : "Example of $Merge with payload request.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle",
-      "groupingId" : "RequestExamples"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/Merge-WithPayload-Response"
-      },
-      "name" : "Merge-WithPayload-Response",
-      "description" : "Example of $Merge response with payload.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle",
+      "exampleBoolean" : true,
       "groupingId" : "ResponseExamples"
     },
     {
@@ -1727,8 +1665,7 @@
       },
       "name" : "MergeRequestBundle",
       "description" : "A Bundle that is used in the Client Registry for Add Patient requests.",
-      "exampleBoolean" : false,
-      "groupingId" : "Bundles"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1740,8 +1677,7 @@
       },
       "name" : "MergeResponseBundle",
       "description" : "A Bundle that is used in the Client Registry response to Merge Patient requests.",
-      "exampleBoolean" : false,
-      "groupingId" : "Bundles"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1792,8 +1728,20 @@
       },
       "name" : "MetadataParametersSubscription",
       "description" : "Parameters profile for BC meta data when a subscription response is sent.",
-      "exampleBoolean" : false,
-      "groupingId" : "Subscriptions"
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/Newborn-Request"
+      },
+      "name" : "Newborn-Request",
+      "description" : "Example of RESTful newborn request.",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient",
+      "groupingId" : "RestfulExamples"
     },
     {
       "extension" : [{
@@ -1822,43 +1770,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Parameters"
-      }],
-      "reference" : {
-        "reference" : "Parameters/Parameters-MergePatient-Response-Example"
-      },
-      "name" : "Parameters-MergePatient-Response-Example",
-      "description" : "Example of Merge response Metadata parameters",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Parameters"
-      }],
-      "reference" : {
-        "reference" : "Parameters/Parameters-MergePatient-TwoNonSurvivors-Example"
-      },
-      "name" : "Parameters-MergePatient-TwoNonSurvivors-Example",
-      "description" : "Example of $MergePatient operation.",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationDefinition"
-      }],
-      "reference" : {
-        "reference" : "OperationDefinition/bc-patient-notification"
-      },
-      "name" : "Patient Notification",
-      "description" : "This operation is used notify a user that a patient's record has changed.",
-      "exampleBoolean" : false,
-      "groupingId" : "Operations"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
       }],
       "reference" : {
@@ -1867,18 +1778,6 @@
       "name" : "Patient-GetDemographics-Example",
       "description" : "Example of Patient for $GetDemographics operation response",
       "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/Patient-MergePatient-Example"
-      },
-      "name" : "Patient-MergePatient-Example",
-      "description" : "Example of a merge patient Patient",
-      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"
     },
     {
       "extension" : [{
@@ -1930,6 +1829,45 @@
       "description" : "Example of an Asynchronous $Revise ACK message.",
       "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-async-ack-response-bundle",
       "groupingId" : "ResponseExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/Revise-Request"
+      },
+      "name" : "Revise-Request",
+      "description" : "Example of RESTful $Revise request.",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient",
+      "groupingId" : "RestfulExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/Revise-Request-No-SRI"
+      },
+      "name" : "Revise-Request-No-SRI",
+      "description" : "Example of $Revise request with no SRI.",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle",
+      "groupingId" : "RequestExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/Revise-Request-No-SRI-RESTful"
+      },
+      "name" : "Revise-Request-No-SRI-RESTful",
+      "description" : "Example of RESTful $Revise request with no SRI.",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient",
+      "groupingId" : "RestfulExamples"
     },
     {
       "extension" : [{
@@ -2018,8 +1956,7 @@
       },
       "name" : "SubscriptionNotificationBundle",
       "description" : "A Bundle that is used in the Client Registry when sending subscription notifications.",
-      "exampleBoolean" : false,
-      "groupingId" : "Subscriptions"
+      "exampleBoolean" : false
     }],
     "page" : {
       "extension" : [{
@@ -2063,15 +2000,6 @@
         }],
         "nameUrl" : "reviseAndMerge.html",
         "title" : "Add, Revise and Merge Patient",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "distributions.html"
-        }],
-        "nameUrl" : "distributions.html",
-        "title" : "Patient Change Notification",
         "generation" : "markdown"
       },
       {

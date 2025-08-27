@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 <link href="assets/css/bc-fhir.css" rel="stylesheet"/>
 
@@ -31,10 +32,10 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -46,6 +47,7 @@
     h3,h4,h5,h6{--heading-prefix:"2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Left logo - typically the publisher's logo - project or affiliate -->
         <div id="project-nav">
           <a id="project-logo" no-external="true" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">
@@ -105,9 +107,6 @@
       </li>
       <li>
         <a href="reviseAndMerge.html">Add, Revise, Update And Merge Patient</a>
-      </li>
-      <li>
-        <a href="distributions.html">Patient Change Notifications</a>
       </li>
       <li>
         <a href="identifiers.html">Identifiers</a>
@@ -173,7 +172,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hlth.gov.bc.ca/fhir/client/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">BC Client Registry FHIR Implementation Guide - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hlth.gov.bc.ca/fhir/client/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>FHIR Design</h2>
   
 
@@ -229,6 +228,7 @@ Namely:</p>
   <li>Users can use a combination of V3 and FHIR to meet their needs</li>
   <li>The Client Registry FHIR design will become a Provincial standard</li>
   <li>Asynchronous interactions will follow the same pattern as V3 (not the FHIR asynchronous pattern)</li>
+  <li>FHIR/JSON is unordered and HCIM does not guarantee ordering of elements</li>
 </ul>
 
 <h3 id="design-outcomes---overview">Design Outcomes - Overview</h3>
@@ -302,10 +302,6 @@ Namely:</p>
     <tr>
       <td style="text-align: left">bc-*-history-extension</td>
       <td style="text-align: left">The set of history extensions are necessary to add historical records to the Patient resource such as gender.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">bc-gender-identity-extension</td>
-      <td style="text-align: left">An extension that houses the gender identity codeable concept.</td>
     </tr>
     <tr>
       <td style="text-align: left">bc-sourceId-extension</td>
@@ -472,9 +468,6 @@ Namely:</p>
     <tr>
       <td style="text-align: left">https://…./Patient/$MergePatient.Async</td>
     </tr>
-    <tr>
-      <td style="text-align: left">https://…./Patient/$PatientNotification</td>
-    </tr>
   </tbody>
 </table>
 
@@ -525,23 +518,12 @@ Namely:</p>
       <td style="text-align: left"><a href="StructureDefinition-bc-add-request-bundle.html">Add Patient request profile</a></td>
       <td style="text-align: left"><a href="StructureDefinition-bc-add-response-bundle.html">Add Patient response profile</a></td>
     </tr>
-    <tr>
-      <td style="text-align: left">$MergePatient</td>
-      <td style="text-align: left"><a href="StructureDefinition-bc-merge-request-bundle.html">Merge Patient request profile</a></td>
-      <td style="text-align: left"><a href="StructureDefinition-bc-merge-response-bundle.html">Merge Patient response profile</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">$MergePatient.Async</td>
-      <td style="text-align: left"><a href="StructureDefinition-bc-merge-request-bundle.html">Merge Patient request profile</a></td>
-      <td style="text-align: left"><a href="StructureDefinition-bc-merge-response-bundle.html">Merge Patient response profile</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">$PatientNotification</td>
-      <td style="text-align: left"><a href="StructureDefinition-bc-revise-request-bundle.html">Patient Notification request profile</a></td>
-      <td style="text-align: left">N/A</td>
-    </tr>
   </tbody>
 </table>
+<!---
+$MergePatient | [Merge Patient request profile](StructureDefinition-bc-merge-request-bundle.html) | [Merge Patient response profile](StructureDefinition-bc-merge-response-bundle.html) |
+$MergePatient.Async | [Merge Patient request profile](StructureDefinition-bc-merge-request-bundle.html) | [Merge Patient response profile](StructureDefinition-bc-merge-response-bundle.html) |
+-->
 
 <h5 id="responses">Responses</h5>
 
@@ -549,7 +531,7 @@ Namely:</p>
 
 <h4 id="fhir-restful">FHIR Restful</h4>
 
-<p>Restful services on the patient resource are also available, RESTful Get and RESTful Find.</p>
+<p>Restful services on the patient resource are also available, RESTful Get, RESTful Find and RESTful Revise Person.</p>
 
 <p>The FHIR RESTful Get feature is a service that provides a RESTful interface to access the Get Demographics transaction, as opposed to a FHIR operation.</p>
 
@@ -591,7 +573,7 @@ Namely:</p>
 
 <p>With History is equivalent to the <a href="OperationDefinition-bc-patient-get-demographics.html#metadata-in-parameters">$GetDemograhpics with the withHistory parameter</a>.</p>
 
-<p>Identifiers Only is equivalent to the <a href="OperationDefinition-bc-patient-get-demographics.html#metadata-in-parameters">$GetDemographics with the idenifiersOnly parameter</a>.</p>
+<p>Identifiers Only is equivalent to the <a href="OperationDefinition-bc-patient-get-demographics.html#metadata-in-parameters">$GetDemographics with the identifiersOnly parameter</a>.</p>
 
 <p>The FHIR RESTful Find feature is a service that provides a RESTful interface to access the Find Candidates transaction, as opposed to a FHIR operation.</p>
 
@@ -616,7 +598,46 @@ Namely:</p>
   </tbody>
 </table>
 
-<p>Name is equivalent to the combination of both First Name and Surname.</p>
+<p>Name is equalivent to the combination of both First Name and Surname.</p>
+
+<p>The FHIR RESTful Revise Person feature is a service that provides a RESTful interface to access the Add Person and Update person transactions, as opposed to their FHIR operation equivalents.</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th style="text-align: left">Revise Person Minimum Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Purported PHN or Mother's PHN</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Name - Name Type, First Name, Last Name</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Date of Birth</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Gender</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>OR</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Name - Name Type, First Name, Last Name</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Date of Birth</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Gender</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Address - Address Type (Mailing or Physical), Address Line 1, City, State if country is provided and is CA or US</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="design-outcomes---details">Design Outcomes - Details</h3>
 
@@ -642,12 +663,6 @@ Namely:</p>
       <td style="text-align: left">message id</td>
       <td style="text-align: left">parameter.value[string]</td>
       <td style="text-align: left">Message (unique) id</td>
-      <td style="text-align: left">both</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">create time</td>
-      <td style="text-align: left">parameter.value[dateTime]</td>
-      <td style="text-align: left">Creation date of message</td>
       <td style="text-align: left">both</td>
     </tr>
     <tr>
@@ -755,7 +770,7 @@ Namely:</p>
 
 <p>Distributions will use a stakeholder client endpoint for the $PatientNotification operation.  The FHIR structure of the interaction is the same as RevisePatient.</p>
 
-<p>See <a href="distributions.html">Patient Notifications</a> for more details.</p>
+<p>See <a href="CodeSystem-bc-client-registry-patient-change-notification-events.html">Patient Notifications</a> for more details.</p>
 
 <h5 id="asynchronous-operations">Asynchronous Operations</h5>
 <p>The asynchronous versions of Add, Revise, Update and Merge Operations share the same request and response profile as the synchronous version.</p>
@@ -795,7 +810,7 @@ Namely:</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Oct 11, 2024 23:26+0000">2024-10-11</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 27, 2025 22:34+0000">2025-08-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

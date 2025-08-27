@@ -197,14 +197,14 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Bundle.entry:operationOutcome.link","Bundle.entry.link","","","",0,*,"","","Y","null {[]} {[]}
 ","Links related to this entry","A series of links that provide context to this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.link",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Bundle.entry:operationOutcome.fullUrl","Bundle.entry.fullUrl","","","",0,1,"","","Y","uri {[]} {[]}
+"Bundle.entry:operationOutcome.fullUrl","Bundle.entry.fullUrl","","","",1,1,"Y","","Y","uri {[]} {[]}
 ","URI for resource (Absolute URL server address or URI for UUID/OID)","The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: 
 * fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)
 * Results from operations might involve resources that are not identified.","fullUrl might not be [unique in the context of a resource](http://hl7.org/fhir/R4/bundle.html#bundle-unique). Note that since [FHIR resources do not need to be served through the FHIR API](http://hl7.org/fhir/R4/references.html), the fullURL might be a URN or an absolute URL that does not end with the logical id of the resource (Resource.id). However, but if the fullUrl does look like a RESTful server URL (e.g. meets the [regex](http://hl7.org/fhir/R4/references.html#regex), then the 'id' portion of the fullUrl SHALL end with the Resource.id.
 
 Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).","","","","","","","","",,,,,"",,,,"Bundle.entry.fullUrl",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Bundle.entry:operationOutcome.resource","Bundle.entry.resource","","","",0,1,"","","Y","OperationOutcome {[]} {[]}
+"Bundle.entry:operationOutcome.resource","Bundle.entry.resource","","","",1,1,"Y","","Y","OperationOutcome {[]} {[]}
 ","A resource in the bundle","The Resource for the entry. The purpose/meaning of the resource is determined by the Bundle.type.","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"",""
 "Bundle.entry:operationOutcome.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"bdl-2
@@ -230,7 +230,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 
 See [Patient Match](http://hl7.org/fhir/R4/patient-operation-match.html) for the EMPI search which relates to this element.","","","","","","","","",,,,,"",,,,"Bundle.entry.search.score",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Bundle.entry:operationOutcome.request","Bundle.entry.request","","","",0,1,"","","Y","BackboneElement {[]} {[]}
+"Bundle.entry:operationOutcome.request","Bundle.entry.request","","","",0,1,"Y","","Y","BackboneElement {[]} {[]}
 ","Additional execution information (transaction/batch/history)","Additional information about how this entry should be processed as part of a transaction or batch.  For history, it shows how the entry was processed to create the version contained in the entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.request",0,1,"bdl-3
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
@@ -314,14 +314,14 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Bundle.entry:parameters.link","Bundle.entry.link","","","",0,*,"","","Y","null {[]} {[]}
 ","Links related to this entry","A series of links that provide context to this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.link",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Bundle.entry:parameters.fullUrl","Bundle.entry.fullUrl","","","",0,1,"","","Y","uri {[]} {[]}
+"Bundle.entry:parameters.fullUrl","Bundle.entry.fullUrl","","","",1,1,"Y","","Y","uri {[]} {[]}
 ","URI for resource (Absolute URL server address or URI for UUID/OID)","The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: 
 * fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)
 * Results from operations might involve resources that are not identified.","fullUrl might not be [unique in the context of a resource](http://hl7.org/fhir/R4/bundle.html#bundle-unique). Note that since [FHIR resources do not need to be served through the FHIR API](http://hl7.org/fhir/R4/references.html), the fullURL might be a URN or an absolute URL that does not end with the logical id of the resource (Resource.id). However, but if the fullUrl does look like a RESTful server URL (e.g. meets the [regex](http://hl7.org/fhir/R4/references.html#regex), then the 'id' portion of the fullUrl SHALL end with the Resource.id.
 
 Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).","","","","","","","","",,,,,"",,,,"Bundle.entry.fullUrl",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Bundle.entry:parameters.resource","Bundle.entry.resource","","","",0,1,"","","","Parameters {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameter-async-response]]} {[]}
+"Bundle.entry:parameters.resource","Bundle.entry.resource","","","",1,1,"Y","","","Parameters {[CanonicalType[http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameter-async-response]]} {[]}
 ","Operation Request or Response","This resource is a non-persisted resource used to pass information into and back from an [operation](http://hl7.org/fhir/R4/operations.html). It has no other use, and there is no RESTful endpoint associated with it.","The parameters that may be used are defined by the OperationDefinition resource.","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"","","n/a","Entity. Role, or Act","n/a"
 "Bundle.entry:parameters.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"bdl-2
@@ -347,7 +347,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 
 See [Patient Match](http://hl7.org/fhir/R4/patient-operation-match.html) for the EMPI search which relates to this element.","","","","","","","","",,,,,"",,,,"Bundle.entry.search.score",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Bundle.entry:parameters.request","Bundle.entry.request","","","",0,1,"","","Y","BackboneElement {[]} {[]}
+"Bundle.entry:parameters.request","Bundle.entry.request","","","",0,1,"Y","","Y","BackboneElement {[]} {[]}
 ","Additional execution information (transaction/batch/history)","Additional information about how this entry should be processed as part of a transaction or batch.  For history, it shows how the entry was processed to create the version contained in the entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.request",0,1,"bdl-3
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
