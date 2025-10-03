@@ -25,6 +25,7 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * telecom.system from ContactPointSystemVS (required)
 * telecom.system ^short = "phone | email"
 * telecom.extension contains SourceIDExtension named sourceID 0..1 MS
+* telecom.value ^short = "International: +ICC<space>areacode<space>phonenumber Example: +1 302 1234567, National: areacode<space>phonenumber Example: 2501234567, Email: email@domain"
 * gender 0..1 MS
 * gender.extension contains BusinessPeriodExtension named genderEffectiveDates 0..1 MS and SourceIDExtension named sourceID 0..1 MS and GenderHistoryExtension named history 0..* MS
 * birthDate 0..1 MS
