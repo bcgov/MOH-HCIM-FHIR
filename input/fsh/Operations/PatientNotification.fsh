@@ -1,4 +1,4 @@
-/**nstance: PatientNotification
+Instance: PatientNotification
 InstanceOf: OperationDefinition
 Description: "This operation is used notify a user that a patient's record has changed."
 Usage: #definition
@@ -19,5 +19,5 @@ Usage: #definition
 * parameter[0].min = 1
 * parameter[0].max = "1"
 * parameter[0].documentation = "The request bundle."
-* parameter[0].type = #Bundle */
+* parameter[0].type = #Bundle 
 
