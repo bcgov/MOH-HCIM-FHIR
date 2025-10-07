@@ -10,7 +10,7 @@
   "name" : "BCHealthClientIdentityManagement",
   "title" : "BC Client Registry FHIR Implementation Guide",
   "status" : "active",
-  "date" : "2025-08-27T22:30:17+00:00",
+  "date" : "2025-10-07T21:05:34+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",
@@ -494,7 +494,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools.r4#0.7.1"
+      "valueCode" : "hl7.fhir.uv.tools.r4#0.8.0"
     },
     {
       "extension" : [{
@@ -1766,6 +1766,18 @@
       "name" : "OperationOutcome-Search-Example",
       "description" : "Example OperationOutcome for a Client Registry Search",
       "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "OperationDefinition"
+      }],
+      "reference" : {
+        "reference" : "OperationDefinition/bc-patient-notification"
+      },
+      "name" : "Patient Notification",
+      "description" : "This operation is used notify a user that a patient's record has changed.",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{

@@ -265,7 +265,7 @@
         
           Active
           
-            as of 2025-08-27
+            as of 2025-10-07
           
         
       </td>
@@ -671,7 +671,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">replaced-by | replaces | refer | seealso<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-link-type.html" title="http://hl7.org/fhir/ValueSet/link-type" class="binding">LinkType</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">The type of link between this patient resource and another patient resource.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d8b3aeb5-bc76-4538-8c7b-4636f7fcb25a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 05d332d7-4121-4f69-9e29-9fc8abba9f77
 document.getElementById('cbbc-merge-patientK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('bc-merge-patientK'), 'binding', document.getElementById('cbbc-merge-patientK-binding').checked, document.getElementById('ppbc-merge-patientK'));
 document.getElementById('cbbc-merge-patientK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -681,17 +681,156 @@ filterDesc(document.getElementById('bc-merge-patientK'), 'obligation', document.
 </script></table>
           <!--Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
-<table class="list">
-<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet / Code</b></td><td><b>URI</b></td></tr>
-<tr><td>Patient.identifier:JHN.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.identifier:JHN.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.">Pattern Value: <a title="identifierType" href="http://terminology.hl7.org/6.5.0/CodeSystem-v2-0203.html#v2-0203-JHN">JHN</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-bc-name-use-value-set.html">NameUseVS</a><div><code>https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set"></button></div><div>From this IG</div></td></tr>
-<tr><td>Patient.telecom.system</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-bc-contact-point-system-value-set.html">ContactPointSystemVS</a><div><code>https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-system-value-set</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-system-value-set"></button></div><div>From this IG</div></td></tr>
-<tr><td>Patient.telecom.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-bc-contact-point-use-value-set.html">ContactPointUseVS</a><div><code>https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-use-value-set</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-use-value-set"></button></div><div>From this IG</div></td></tr>
-<tr><td>Patient.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The gender of a person used for administrative purposes."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.address.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The use of an address."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-use.html">AddressUse</a><div><code>http://hl7.org/fhir/ValueSet/address-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/address-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.address.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The type of an address (physical / postal)."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-type.html">AddressType</a><div><code>http://hl7.org/fhir/ValueSet/address-type|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/address-type|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.link.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The type of link between this patient resource and another patient resource."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-link-type.html">LinkType</a><div><code>http://hl7.org/fhir/ValueSet/link-type|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
+<table class="list" data-fhir="generated-heirarchy">
+  <tr>
+    <td>
+      <b>Path</b>
+    </td>
+    <td>
+      <b>Status</b>
+    </td>
+    <td>
+      <b>Usage</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Version</b>
+    </td>
+    <td>
+      <b>Source</b>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.identifier:JHN.​use</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td title="Identifies the purpose for this identifier, if known .">
+      <a href="http://hl7.org/fhir/R4/valueset-identifier-use.html" opacity="1.0">IdentifierUse</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.identifier:JHN.​type</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]" opacity="1.0">extensible</a>
+    </td>
+    <td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.">
+      <a href="http://hl7.org/fhir/R4/valueset-identifier-type.html" opacity="1.0">IdentifierType</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.name.use</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-bc-name-use-value-set.html" opacity="1.0">BC Name Use value set.</a>
+      <button data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>Patient.telecom.system</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-bc-contact-point-system-value-set.html" opacity="1.0">BC Contact Point System Value Set</a>
+      <button data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-system-value-set" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>Patient.telecom.use</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-bc-contact-point-use-value-set.html" opacity="1.0">BC Contact Point Use Value Set</a>
+      <button data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-use-value-set" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>Patient.gender</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td title="The gender of a person used for administrative purposes.">
+      <a href="http://hl7.org/fhir/R4/valueset-administrative-gender.html" opacity="1.0">AdministrativeGender</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.address.use</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td title="The use of an address.">
+      <a href="http://hl7.org/fhir/R4/valueset-address-use.html" opacity="1.0">AddressUse</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/address-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.address.type</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td title="The type of an address (physical / postal).">
+      <a href="http://hl7.org/fhir/R4/valueset-address-type.html" opacity="1.0">AddressType</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/address-type|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.link.type</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td title="The type of link between this patient resource and another patient resource.">
+      <a href="http://hl7.org/fhir/R4/valueset-link-type.html" opacity="1.0">LinkType</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
 </table>
 
         
@@ -701,21 +840,145 @@ filterDesc(document.getElementById('bc-merge-patientK'), 'obligation', document.
             <a name="inv-key"> </a>
             <!--Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>cpt-2</td><td>error</td><td>Patient.telecom</td><td>A system is required if a value is provided.<br/>: value.empty() or system.exists()</td><td></td></tr>
-<tr><td>dom-2</td><td>error</td><td>Patient</td><td>If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>: contained.contained.empty()</td><td></td></tr>
-<tr><td>dom-3</td><td>error</td><td>Patient</td><td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource<br/>: contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</td><td></td></tr>
-<tr><td>dom-4</td><td>error</td><td>Patient</td><td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>: contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</td><td></td></tr>
-<tr><td>dom-5</td><td>error</td><td>Patient</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
-<tr><td>dom-6</td><td>best practice</td><td>Patient</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td><b>**ALL** elements</b></td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td><b>**ALL** extensions</b></td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>invariant-merge-patient-1</td><td>error</td><td>Patient</td><td>In a PatientMerge resource, all link.other.identifier must have a value<br/>: Patient.link.other.identifier.where(value.empty() or value ='').empty()</td><td></td></tr>
-<tr><td>invariant-merge-patient-2</td><td>error</td><td>Patient</td><td>In a PatientMerge resource, identifier.extension shall not be present<br/>: Patient.identifier.value.extension.empty()</td><td></td></tr>
-<tr><td>invariant-merge-patient-3</td><td>error</td><td>Patient</td><td>In a PatientMerge resource, link.other.identifier.extension shall never be present<br/>: Patient.link.other.identifier.value.extension.empty()</td><td></td></tr>
-<tr><td>ipa-pat-2</td><td>error</td><td>Patient.name</td><td>Either Patient.name.given and/or Patient.name.family and/or Patient.name.text SHALL be present or a Data Absent Reason Extension SHALL be present.<br/>: (family.exists() or given.exists() or text.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()</td><td></td></tr>
-<tr><td>ref-1</td><td>error</td><td>Patient.link.other</td><td>SHALL have a contained resource if a local reference is provided<br/>: reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>cpt-2</td>
+    <td>error</td>
+    <td>Patient.telecom</td>
+    <td>A system is required if a value is provided.</td>
+    <td>
+      <code>value.empty() or system.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-2</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>If the resource is contained in another resource, it SHALL NOT contain nested Resources</td>
+    <td>
+      <code>contained.contained.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-3</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource</td>
+    <td>
+      <code>contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-4</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated</td>
+    <td>
+      <code>contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-5</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a security label</td>
+    <td>
+      <code>contained.meta.security.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-6</td>
+    <td>best practice</td>
+    <td>Patient</td>
+    <td>A resource should have narrative for robust management</td>
+    <td>
+      <code>text.`div`.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ele-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** elements</b>
+    </td>
+    <td>All FHIR elements must have a @value or children</td>
+    <td>
+      <code>hasValue() or (children().count() &gt; id.count())</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ext-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** extensions</b>
+    </td>
+    <td>Must have either extensions or value[x], not both</td>
+    <td>
+      <code>extension.exists() != value.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>invariant-merge-patient-1</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>In a PatientMerge resource, all link.other.identifier must have a value</td>
+    <td>
+      <code>Patient.link.other.identifier.where(value.empty() or value ='').empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>invariant-merge-patient-2</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>In a PatientMerge resource, identifier.extension shall not be present</td>
+    <td>
+      <code>Patient.identifier.value.extension.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>invariant-merge-patient-3</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>In a PatientMerge resource, link.other.identifier.extension shall never be present</td>
+    <td>
+      <code>Patient.link.other.identifier.value.extension.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ipa-pat-2</td>
+    <td>error</td>
+    <td>Patient.name</td>
+    <td>Either Patient.name.given and/or Patient.name.family and/or Patient.name.text SHALL be present or a Data Absent Reason Extension SHALL be present.</td>
+    <td>
+      <code>(family.exists() or given.exists() or text.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ref-1</td>
+    <td>error</td>
+    <td>Patient.link.other</td>
+    <td>SHALL have a contained resource if a local reference is provided</td>
+    <td>
+      <code>reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -884,7 +1147,7 @@ filterDesc(document.getElementById('bc-merge-patientK'), 'obligation', document.
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">BC Merge Status Code</span><br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-bc-merge-status-extension.html">http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension</a><br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-bc-merge-status-value-set.html" title="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-merge-status-value-set" class="binding">BC Merge Status Value Set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d8b3aeb5-bc76-4538-8c7b-4636f7fcb25a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 05d332d7-4121-4f69-9e29-9fc8abba9f77
 document.getElementById('cbbc-merge-patientD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('bc-merge-patientD'), 'binding', document.getElementById('cbbc-merge-patientD-binding').checked, document.getElementById('ppbc-merge-patientD'));
 document.getElementById('cbbc-merge-patientD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -895,11 +1158,66 @@ filterDesc(document.getElementById('bc-merge-patientD'), 'obligation', document.
           <a name="tx"> </a>
           <!--Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings (Differential)</h4>
-<table class="list">
-<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td><td><b>URI</b></td></tr>
-<tr><td>Patient.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-bc-name-use-value-set.html">NameUseVS</a><div><code>https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set"></button></div><div>From this IG</div></td></tr>
-<tr><td>Patient.telecom.system</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-bc-contact-point-system-value-set.html">ContactPointSystemVS</a><div><code>https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-system-value-set</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-system-value-set"></button></div><div>From this IG</div></td></tr>
-<tr><td>Patient.telecom.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-bc-contact-point-use-value-set.html">ContactPointUseVS</a><div><code>https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-use-value-set</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-use-value-set"></button></div><div>From this IG</div></td></tr>
+<table class="list" data-fhir="generated-heirarchy">
+  <tr>
+    <td>
+      <b>Path</b>
+    </td>
+    <td>
+      <b>Status</b>
+    </td>
+    <td>
+      <b>Usage</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Version</b>
+    </td>
+    <td>
+      <b>Source</b>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.name.use</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-bc-name-use-value-set.html" opacity="0.5">BC Name Use value set.</a>
+      <button data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>Patient.telecom.system</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-bc-contact-point-system-value-set.html" opacity="0.5">BC Contact Point System Value Set</a>
+      <button data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-system-value-set" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>Patient.telecom.use</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-bc-contact-point-use-value-set.html" opacity="0.5">BC Contact Point Use Value Set</a>
+      <button data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-use-value-set" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
+    <td>This IG</td>
+  </tr>
 </table>
 
         
@@ -909,11 +1227,51 @@ filterDesc(document.getElementById('bc-merge-patientD'), 'obligation', document.
             <a name="inv-diff"> </a>
             <!--Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>invariant-merge-patient-1</td><td>error</td><td>Patient</td><td>In a PatientMerge resource, all link.other.identifier must have a value<br/>: Patient.link.other.identifier.where(value.empty() or value ='').empty()</td><td></td></tr>
-<tr><td>invariant-merge-patient-2</td><td>error</td><td>Patient</td><td>In a PatientMerge resource, identifier.extension shall not be present<br/>: Patient.identifier.value.extension.empty()</td><td></td></tr>
-<tr><td>invariant-merge-patient-3</td><td>error</td><td>Patient</td><td>In a PatientMerge resource, link.other.identifier.extension shall never be present<br/>: Patient.link.other.identifier.value.extension.empty()</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>invariant-merge-patient-1</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>In a PatientMerge resource, all link.other.identifier must have a value</td>
+    <td>
+      <code>Patient.link.other.identifier.where(value.empty() or value ='').empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>invariant-merge-patient-2</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>In a PatientMerge resource, identifier.extension shall not be present</td>
+    <td>
+      <code>Patient.identifier.value.extension.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>invariant-merge-patient-3</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>In a PatientMerge resource, link.other.identifier.extension shall never be present</td>
+    <td>
+      <code>Patient.link.other.identifier.value.extension.empty()</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -1554,7 +1912,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">replaced-by | replaces | refer | seealso<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-link-type.html" title="http://hl7.org/fhir/ValueSet/link-type" class="binding">LinkType</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">The type of link between this patient resource and another patient resource.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d8b3aeb5-bc76-4538-8c7b-4636f7fcb25a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 05d332d7-4121-4f69-9e29-9fc8abba9f77
 document.getElementById('cbbc-merge-patientS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('bc-merge-patientS'), 'binding', document.getElementById('cbbc-merge-patientS-binding').checked, document.getElementById('ppbc-merge-patientS'));
 document.getElementById('cbbc-merge-patientS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1564,54 +1922,231 @@ filterDesc(document.getElementById('bc-merge-patientS'), 'obligation', document.
 </script></table>
           <!--Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
-<table class="list">
-<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet / Code</b></td><td><b>URI</b></td></tr>
-<tr><td>Patient.language</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="A human language."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a><div><code>http://hl7.org/fhir/ValueSet/languages</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/languages"></button></div><div>From the FHIR Standard</div><table class="grid">
+<table class="list" data-fhir="generated-heirarchy">
   <tr>
-    <td style="font-size: 11px">
-      <b>Additional Bindings</b>
+    <td>
+      <b>Path</b>
     </td>
-    <td style="font-size: 11px">Purpose</td>
+    <td>
+      <b>Status</b>
+    </td>
+    <td>
+      <b>Usage</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Version</b>
+    </td>
+    <td>
+      <b>Source</b>
+    </td>
   </tr>
   <tr>
-    <td style="font-size: 11px">
-      <a href="http://hl7.org/fhir/R4/valueset-all-languages.html" title="http://hl7.org/fhir/ValueSet/all-languages">AllLanguages</a>
+    <td>Patient.language</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]" opacity="1.0">preferred</a>
     </td>
-    <td style="font-size: 11px">
-      <a href="http://hl7.org/fhir/R4/extension-elementdefinition-maxvalueset.html" title="A required binding, for use when the binding strength is 'extensible' or 'preferred'">Max Binding</a>
+    <td title="A human language.">
+      <a href="http://hl7.org/fhir/R4/valueset-languages.html" opacity="1.0">Common Languages</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages" title="Click to copy URL" class="btn-copy"></button>
     </td>
-  </tr>
-</table>
-</td></tr>
-<tr><td>Patient.identifier:JHN.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.identifier:JHN.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.">Pattern Value: <a title="identifierType" href="http://terminology.hl7.org/6.5.0/CodeSystem-v2-0203.html#v2-0203-JHN">JHN</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-bc-name-use-value-set.html">NameUseVS</a><div><code>https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set"></button></div><div>From this IG</div></td></tr>
-<tr><td>Patient.telecom.system</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-bc-contact-point-system-value-set.html">ContactPointSystemVS</a><div><code>https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-system-value-set</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-system-value-set"></button></div><div>From this IG</div></td></tr>
-<tr><td>Patient.telecom.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-bc-contact-point-use-value-set.html">ContactPointUseVS</a><div><code>https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-use-value-set</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-use-value-set"></button></div><div>From this IG</div></td></tr>
-<tr><td>Patient.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The gender of a person used for administrative purposes."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.address.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The use of an address."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-use.html">AddressUse</a><div><code>http://hl7.org/fhir/ValueSet/address-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/address-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.address.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The type of an address (physical / postal)."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-type.html">AddressType</a><div><code>http://hl7.org/fhir/ValueSet/address-type|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/address-type|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.maritalStatus</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="The domestic partnership status of a person."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-marital-status.html">Marital Status Codes</a><div><code>http://hl7.org/fhir/ValueSet/marital-status</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/marital-status"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.contact.relationship</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="The nature of the relationship between a patient and a contact person for that patient."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-patient-contactrelationship.html">PatientContactRelationship</a><div><code>http://hl7.org/fhir/ValueSet/patient-contactrelationship</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/patient-contactrelationship"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.contact.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The gender of a person used for administrative purposes."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.communication.language</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="A human language."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a><div><code>http://hl7.org/fhir/ValueSet/languages</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/languages"></button></div><div>From the FHIR Standard</div><table class="grid">
-  <tr>
-    <td style="font-size: 11px">
-      <b>Additional Bindings</b>
+    <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
     </td>
-    <td style="font-size: 11px">Purpose</td>
   </tr>
   <tr>
-    <td style="font-size: 11px">
-      <a href="http://hl7.org/fhir/R4/valueset-all-languages.html" title="http://hl7.org/fhir/ValueSet/all-languages">AllLanguages</a>
+    <td>Patient.identifier:JHN.​use</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
     </td>
-    <td style="font-size: 11px">
-      <a href="http://hl7.org/fhir/R4/extension-elementdefinition-maxvalueset.html" title="A required binding, for use when the binding strength is 'extensible' or 'preferred'">Max Binding</a>
+    <td title="Identifies the purpose for this identifier, if known .">
+      <a href="http://hl7.org/fhir/R4/valueset-identifier-use.html" opacity="1.0">IdentifierUse</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
     </td>
   </tr>
-</table>
-</td></tr>
-<tr><td>Patient.link.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The type of link between this patient resource and another patient resource."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-link-type.html">LinkType</a><div><code>http://hl7.org/fhir/ValueSet/link-type|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
+  <tr>
+    <td>Patient.identifier:JHN.​type</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]" opacity="1.0">extensible</a>
+    </td>
+    <td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.">
+      <a href="http://hl7.org/fhir/R4/valueset-identifier-type.html" opacity="1.0">IdentifierType</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.name.use</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-bc-name-use-value-set.html" opacity="1.0">BC Name Use value set.</a>
+      <button data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>Patient.telecom.system</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-bc-contact-point-system-value-set.html" opacity="1.0">BC Contact Point System Value Set</a>
+      <button data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-system-value-set" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>Patient.telecom.use</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-bc-contact-point-use-value-set.html" opacity="1.0">BC Contact Point Use Value Set</a>
+      <button data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-use-value-set" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>Patient.gender</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td title="The gender of a person used for administrative purposes.">
+      <a href="http://hl7.org/fhir/R4/valueset-administrative-gender.html" opacity="1.0">AdministrativeGender</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.address.use</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td title="The use of an address.">
+      <a href="http://hl7.org/fhir/R4/valueset-address-use.html" opacity="1.0">AddressUse</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/address-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.address.type</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td title="The type of an address (physical / postal).">
+      <a href="http://hl7.org/fhir/R4/valueset-address-type.html" opacity="1.0">AddressType</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/address-type|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.maritalStatus</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]" opacity="1.0">extensible</a>
+    </td>
+    <td title="The domestic partnership status of a person.">
+      <a href="http://hl7.org/fhir/R4/valueset-marital-status.html" opacity="1.0">MaritalStatus</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/marital-status" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.contact.relationship</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]" opacity="1.0">extensible</a>
+    </td>
+    <td title="The nature of the relationship between a patient and a contact person for that patient.">
+      <a href="http://hl7.org/fhir/R4/valueset-patient-contactrelationship.html" opacity="1.0">Patient Contact Relationship </a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/patient-contactrelationship" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.contact.gender</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td title="The gender of a person used for administrative purposes.">
+      <a href="http://hl7.org/fhir/R4/valueset-administrative-gender.html" opacity="1.0">AdministrativeGender</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.communication.​language</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]" opacity="1.0">preferred</a>
+    </td>
+    <td title="A human language.">
+      <a href="http://hl7.org/fhir/R4/valueset-languages.html" opacity="1.0">Common Languages</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.link.type</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td title="The type of link between this patient resource and another patient resource.">
+      <a href="http://hl7.org/fhir/R4/valueset-link-type.html" opacity="1.0">LinkType</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
 </table>
 
         
@@ -1621,24 +2156,172 @@ filterDesc(document.getElementById('bc-merge-patientS'), 'obligation', document.
             <a name="inv-snap"> </a>
             <!--Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>att-1</td><td>error</td><td>Patient.photo</td><td>If the Attachment has data, it SHALL have a contentType<br/>: data.empty() or contentType.exists()</td><td></td></tr>
-<tr><td>cpt-2</td><td>error</td><td>Patient.telecom, Patient.contact.telecom</td><td>A system is required if a value is provided.<br/>: value.empty() or system.exists()</td><td></td></tr>
-<tr><td>dom-2</td><td>error</td><td>Patient</td><td>If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>: contained.contained.empty()</td><td></td></tr>
-<tr><td>dom-3</td><td>error</td><td>Patient</td><td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource<br/>: contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</td><td></td></tr>
-<tr><td>dom-4</td><td>error</td><td>Patient</td><td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>: contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</td><td></td></tr>
-<tr><td>dom-5</td><td>error</td><td>Patient</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
-<tr><td>dom-6</td><td>best practice</td><td>Patient</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td><b>**ALL** elements</b></td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td><b>**ALL** extensions</b></td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>invariant-merge-patient-1</td><td>error</td><td>Patient</td><td>In a PatientMerge resource, all link.other.identifier must have a value<br/>: Patient.link.other.identifier.where(value.empty() or value ='').empty()</td><td></td></tr>
-<tr><td>invariant-merge-patient-2</td><td>error</td><td>Patient</td><td>In a PatientMerge resource, identifier.extension shall not be present<br/>: Patient.identifier.value.extension.empty()</td><td></td></tr>
-<tr><td>invariant-merge-patient-3</td><td>error</td><td>Patient</td><td>In a PatientMerge resource, link.other.identifier.extension shall never be present<br/>: Patient.link.other.identifier.value.extension.empty()</td><td></td></tr>
-<tr><td>ipa-pat-2</td><td>error</td><td>Patient.name</td><td>Either Patient.name.given and/or Patient.name.family and/or Patient.name.text SHALL be present or a Data Absent Reason Extension SHALL be present.<br/>: (family.exists() or given.exists() or text.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()</td><td></td></tr>
-<tr><td>pat-1</td><td>error</td><td>Patient.contact</td><td>SHALL at least contain a contact's details or a reference to an organization<br/>: name.exists() or telecom.exists() or address.exists() or organization.exists()</td><td></td></tr>
-<tr><td>per-1</td><td>error</td><td>Patient.identifier:JHN.period, Patient.name.period, Patient.telecom.period, Patient.address.period, Patient.contact.period</td><td>If present, start SHALL have a lower value than end<br/>: start.hasValue().not() or end.hasValue().not() or (start &lt;= end)</td><td></td></tr>
-<tr><td>ref-1</td><td>error</td><td>Patient.identifier:JHN.assigner, Patient.contact.organization, Patient.generalPractitioner, Patient.managingOrganization, Patient.link.other</td><td>SHALL have a contained resource if a local reference is provided<br/>: reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>att-1</td>
+    <td>error</td>
+    <td>Patient.photo</td>
+    <td>If the Attachment has data, it SHALL have a contentType</td>
+    <td>
+      <code>data.empty() or contentType.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>cpt-2</td>
+    <td>error</td>
+    <td>Patient.telecom, Patient.contact.telecom</td>
+    <td>A system is required if a value is provided.</td>
+    <td>
+      <code>value.empty() or system.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-2</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>If the resource is contained in another resource, it SHALL NOT contain nested Resources</td>
+    <td>
+      <code>contained.contained.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-3</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource</td>
+    <td>
+      <code>contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-4</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated</td>
+    <td>
+      <code>contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-5</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a security label</td>
+    <td>
+      <code>contained.meta.security.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-6</td>
+    <td>best practice</td>
+    <td>Patient</td>
+    <td>A resource should have narrative for robust management</td>
+    <td>
+      <code>text.`div`.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ele-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** elements</b>
+    </td>
+    <td>All FHIR elements must have a @value or children</td>
+    <td>
+      <code>hasValue() or (children().count() &gt; id.count())</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ext-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** extensions</b>
+    </td>
+    <td>Must have either extensions or value[x], not both</td>
+    <td>
+      <code>extension.exists() != value.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>invariant-merge-patient-1</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>In a PatientMerge resource, all link.other.identifier must have a value</td>
+    <td>
+      <code>Patient.link.other.identifier.where(value.empty() or value ='').empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>invariant-merge-patient-2</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>In a PatientMerge resource, identifier.extension shall not be present</td>
+    <td>
+      <code>Patient.identifier.value.extension.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>invariant-merge-patient-3</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>In a PatientMerge resource, link.other.identifier.extension shall never be present</td>
+    <td>
+      <code>Patient.link.other.identifier.value.extension.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ipa-pat-2</td>
+    <td>error</td>
+    <td>Patient.name</td>
+    <td>Either Patient.name.given and/or Patient.name.family and/or Patient.name.text SHALL be present or a Data Absent Reason Extension SHALL be present.</td>
+    <td>
+      <code>(family.exists() or given.exists() or text.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>pat-1</td>
+    <td>error</td>
+    <td>Patient.contact</td>
+    <td>SHALL at least contain a contact's details or a reference to an organization</td>
+    <td>
+      <code>name.exists() or telecom.exists() or address.exists() or organization.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>per-1</td>
+    <td>error</td>
+    <td>Patient.identifier:JHN.period, Patient.name.period, Patient.telecom.period, Patient.address.period, Patient.contact.period</td>
+    <td>If present, start SHALL have a lower value than end</td>
+    <td>
+      <code>start.hasValue().not() or end.hasValue().not() or (start &lt;= end)</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ref-1</td>
+    <td>error</td>
+    <td>Patient.identifier:JHN.assigner, Patient.contact.organization, Patient.generalPractitioner, Patient.managingOrganization, Patient.link.other</td>
+    <td>SHALL have a contained resource if a local reference is provided</td>
+    <td>
+      <code>reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -2221,7 +2904,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">replaced-by | replaces | refer | seealso<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-link-type.html" title="http://hl7.org/fhir/ValueSet/link-type" class="binding">LinkType</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">The type of link between this patient resource and another patient resource.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d8b3aeb5-bc76-4538-8c7b-4636f7fcb25a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 05d332d7-4121-4f69-9e29-9fc8abba9f77
 document.getElementById('cbbc-merge-patientKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('bc-merge-patientKA'), 'binding', document.getElementById('cbbc-merge-patientKA-binding').checked, document.getElementById('ppbc-merge-patientKA'));
 document.getElementById('cbbc-merge-patientKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2231,17 +2914,156 @@ filterDesc(document.getElementById('bc-merge-patientKA'), 'obligation', document
 </script></table>
           <!--Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
-<table class="list">
-<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet / Code</b></td><td><b>URI</b></td></tr>
-<tr><td>Patient.identifier:JHN.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.identifier:JHN.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.">Pattern Value: <a title="identifierType" href="http://terminology.hl7.org/6.5.0/CodeSystem-v2-0203.html#v2-0203-JHN">JHN</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-bc-name-use-value-set.html">NameUseVS</a><div><code>https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set"></button></div><div>From this IG</div></td></tr>
-<tr><td>Patient.telecom.system</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-bc-contact-point-system-value-set.html">ContactPointSystemVS</a><div><code>https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-system-value-set</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-system-value-set"></button></div><div>From this IG</div></td></tr>
-<tr><td>Patient.telecom.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-bc-contact-point-use-value-set.html">ContactPointUseVS</a><div><code>https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-use-value-set</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-use-value-set"></button></div><div>From this IG</div></td></tr>
-<tr><td>Patient.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The gender of a person used for administrative purposes."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.address.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The use of an address."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-use.html">AddressUse</a><div><code>http://hl7.org/fhir/ValueSet/address-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/address-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.address.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The type of an address (physical / postal)."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-type.html">AddressType</a><div><code>http://hl7.org/fhir/ValueSet/address-type|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/address-type|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.link.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The type of link between this patient resource and another patient resource."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-link-type.html">LinkType</a><div><code>http://hl7.org/fhir/ValueSet/link-type|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
+<table class="list" data-fhir="generated-heirarchy">
+  <tr>
+    <td>
+      <b>Path</b>
+    </td>
+    <td>
+      <b>Status</b>
+    </td>
+    <td>
+      <b>Usage</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Version</b>
+    </td>
+    <td>
+      <b>Source</b>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.identifier:JHN.​use</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td title="Identifies the purpose for this identifier, if known .">
+      <a href="http://hl7.org/fhir/R4/valueset-identifier-use.html" opacity="1.0">IdentifierUse</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.identifier:JHN.​type</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]" opacity="1.0">extensible</a>
+    </td>
+    <td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.">
+      <a href="http://hl7.org/fhir/R4/valueset-identifier-type.html" opacity="1.0">IdentifierType</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.name.use</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-bc-name-use-value-set.html" opacity="1.0">BC Name Use value set.</a>
+      <button data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>Patient.telecom.system</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-bc-contact-point-system-value-set.html" opacity="1.0">BC Contact Point System Value Set</a>
+      <button data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-system-value-set" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>Patient.telecom.use</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-bc-contact-point-use-value-set.html" opacity="1.0">BC Contact Point Use Value Set</a>
+      <button data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-use-value-set" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>Patient.gender</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td title="The gender of a person used for administrative purposes.">
+      <a href="http://hl7.org/fhir/R4/valueset-administrative-gender.html" opacity="1.0">AdministrativeGender</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.address.use</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td title="The use of an address.">
+      <a href="http://hl7.org/fhir/R4/valueset-address-use.html" opacity="1.0">AddressUse</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/address-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.address.type</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td title="The type of an address (physical / postal).">
+      <a href="http://hl7.org/fhir/R4/valueset-address-type.html" opacity="1.0">AddressType</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/address-type|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.link.type</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td title="The type of link between this patient resource and another patient resource.">
+      <a href="http://hl7.org/fhir/R4/valueset-link-type.html" opacity="1.0">LinkType</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
 </table>
 
         
@@ -2251,21 +3073,145 @@ filterDesc(document.getElementById('bc-merge-patientKA'), 'obligation', document
             <a name="inv-all-key"> </a>
             <!--Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>cpt-2</td><td>error</td><td>Patient.telecom</td><td>A system is required if a value is provided.<br/>: value.empty() or system.exists()</td><td></td></tr>
-<tr><td>dom-2</td><td>error</td><td>Patient</td><td>If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>: contained.contained.empty()</td><td></td></tr>
-<tr><td>dom-3</td><td>error</td><td>Patient</td><td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource<br/>: contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</td><td></td></tr>
-<tr><td>dom-4</td><td>error</td><td>Patient</td><td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>: contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</td><td></td></tr>
-<tr><td>dom-5</td><td>error</td><td>Patient</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
-<tr><td>dom-6</td><td>best practice</td><td>Patient</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td><b>**ALL** elements</b></td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td><b>**ALL** extensions</b></td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>invariant-merge-patient-1</td><td>error</td><td>Patient</td><td>In a PatientMerge resource, all link.other.identifier must have a value<br/>: Patient.link.other.identifier.where(value.empty() or value ='').empty()</td><td></td></tr>
-<tr><td>invariant-merge-patient-2</td><td>error</td><td>Patient</td><td>In a PatientMerge resource, identifier.extension shall not be present<br/>: Patient.identifier.value.extension.empty()</td><td></td></tr>
-<tr><td>invariant-merge-patient-3</td><td>error</td><td>Patient</td><td>In a PatientMerge resource, link.other.identifier.extension shall never be present<br/>: Patient.link.other.identifier.value.extension.empty()</td><td></td></tr>
-<tr><td>ipa-pat-2</td><td>error</td><td>Patient.name</td><td>Either Patient.name.given and/or Patient.name.family and/or Patient.name.text SHALL be present or a Data Absent Reason Extension SHALL be present.<br/>: (family.exists() or given.exists() or text.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()</td><td></td></tr>
-<tr><td>ref-1</td><td>error</td><td>Patient.link.other</td><td>SHALL have a contained resource if a local reference is provided<br/>: reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>cpt-2</td>
+    <td>error</td>
+    <td>Patient.telecom</td>
+    <td>A system is required if a value is provided.</td>
+    <td>
+      <code>value.empty() or system.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-2</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>If the resource is contained in another resource, it SHALL NOT contain nested Resources</td>
+    <td>
+      <code>contained.contained.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-3</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource</td>
+    <td>
+      <code>contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-4</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated</td>
+    <td>
+      <code>contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-5</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a security label</td>
+    <td>
+      <code>contained.meta.security.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-6</td>
+    <td>best practice</td>
+    <td>Patient</td>
+    <td>A resource should have narrative for robust management</td>
+    <td>
+      <code>text.`div`.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ele-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** elements</b>
+    </td>
+    <td>All FHIR elements must have a @value or children</td>
+    <td>
+      <code>hasValue() or (children().count() &gt; id.count())</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ext-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** extensions</b>
+    </td>
+    <td>Must have either extensions or value[x], not both</td>
+    <td>
+      <code>extension.exists() != value.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>invariant-merge-patient-1</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>In a PatientMerge resource, all link.other.identifier must have a value</td>
+    <td>
+      <code>Patient.link.other.identifier.where(value.empty() or value ='').empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>invariant-merge-patient-2</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>In a PatientMerge resource, identifier.extension shall not be present</td>
+    <td>
+      <code>Patient.identifier.value.extension.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>invariant-merge-patient-3</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>In a PatientMerge resource, link.other.identifier.extension shall never be present</td>
+    <td>
+      <code>Patient.link.other.identifier.value.extension.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ipa-pat-2</td>
+    <td>error</td>
+    <td>Patient.name</td>
+    <td>Either Patient.name.given and/or Patient.name.family and/or Patient.name.text SHALL be present or a Data Absent Reason Extension SHALL be present.</td>
+    <td>
+      <code>(family.exists() or given.exists() or text.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ref-1</td>
+    <td>error</td>
+    <td>Patient.link.other</td>
+    <td>SHALL have a contained resource if a local reference is provided</td>
+    <td>
+      <code>reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -2434,7 +3380,7 @@ filterDesc(document.getElementById('bc-merge-patientKA'), 'obligation', document
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">BC Merge Status Code</span><br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-bc-merge-status-extension.html">http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension</a><br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-bc-merge-status-value-set.html" title="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-merge-status-value-set" class="binding">BC Merge Status Value Set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d8b3aeb5-bc76-4538-8c7b-4636f7fcb25a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 05d332d7-4121-4f69-9e29-9fc8abba9f77
 document.getElementById('cbbc-merge-patientDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('bc-merge-patientDA'), 'binding', document.getElementById('cbbc-merge-patientDA-binding').checked, document.getElementById('ppbc-merge-patientDA'));
 document.getElementById('cbbc-merge-patientDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2444,11 +3390,66 @@ filterDesc(document.getElementById('bc-merge-patientDA'), 'obligation', document
 </script></table>
           <!--Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings (Differential)</h4>
-<table class="list">
-<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td><td><b>URI</b></td></tr>
-<tr><td>Patient.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-bc-name-use-value-set.html">NameUseVS</a><div><code>https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set"></button></div><div>From this IG</div></td></tr>
-<tr><td>Patient.telecom.system</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-bc-contact-point-system-value-set.html">ContactPointSystemVS</a><div><code>https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-system-value-set</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-system-value-set"></button></div><div>From this IG</div></td></tr>
-<tr><td>Patient.telecom.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-bc-contact-point-use-value-set.html">ContactPointUseVS</a><div><code>https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-use-value-set</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-use-value-set"></button></div><div>From this IG</div></td></tr>
+<table class="list" data-fhir="generated-heirarchy">
+  <tr>
+    <td>
+      <b>Path</b>
+    </td>
+    <td>
+      <b>Status</b>
+    </td>
+    <td>
+      <b>Usage</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Version</b>
+    </td>
+    <td>
+      <b>Source</b>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.name.use</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-bc-name-use-value-set.html" opacity="0.5">BC Name Use value set.</a>
+      <button data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>Patient.telecom.system</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-bc-contact-point-system-value-set.html" opacity="0.5">BC Contact Point System Value Set</a>
+      <button data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-system-value-set" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>Patient.telecom.use</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-bc-contact-point-use-value-set.html" opacity="0.5">BC Contact Point Use Value Set</a>
+      <button data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-use-value-set" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
+    <td>This IG</td>
+  </tr>
 </table>
 
         
@@ -2458,11 +3459,51 @@ filterDesc(document.getElementById('bc-merge-patientDA'), 'obligation', document
             <a name="inv-all-diff"> </a>
             <!--Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>invariant-merge-patient-1</td><td>error</td><td>Patient</td><td>In a PatientMerge resource, all link.other.identifier must have a value<br/>: Patient.link.other.identifier.where(value.empty() or value ='').empty()</td><td></td></tr>
-<tr><td>invariant-merge-patient-2</td><td>error</td><td>Patient</td><td>In a PatientMerge resource, identifier.extension shall not be present<br/>: Patient.identifier.value.extension.empty()</td><td></td></tr>
-<tr><td>invariant-merge-patient-3</td><td>error</td><td>Patient</td><td>In a PatientMerge resource, link.other.identifier.extension shall never be present<br/>: Patient.link.other.identifier.value.extension.empty()</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>invariant-merge-patient-1</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>In a PatientMerge resource, all link.other.identifier must have a value</td>
+    <td>
+      <code>Patient.link.other.identifier.where(value.empty() or value ='').empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>invariant-merge-patient-2</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>In a PatientMerge resource, identifier.extension shall not be present</td>
+    <td>
+      <code>Patient.identifier.value.extension.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>invariant-merge-patient-3</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>In a PatientMerge resource, link.other.identifier.extension shall never be present</td>
+    <td>
+      <code>Patient.link.other.identifier.value.extension.empty()</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -3103,7 +4144,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">replaced-by | replaces | refer | seealso<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-link-type.html" title="http://hl7.org/fhir/ValueSet/link-type" class="binding">LinkType</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">The type of link between this patient resource and another patient resource.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d8b3aeb5-bc76-4538-8c7b-4636f7fcb25a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 05d332d7-4121-4f69-9e29-9fc8abba9f77
 document.getElementById('cbbc-merge-patientSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('bc-merge-patientSA'), 'binding', document.getElementById('cbbc-merge-patientSA-binding').checked, document.getElementById('ppbc-merge-patientSA'));
 document.getElementById('cbbc-merge-patientSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3113,54 +4154,231 @@ filterDesc(document.getElementById('bc-merge-patientSA'), 'obligation', document
 </script></table>
           <!--Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
-<table class="list">
-<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet / Code</b></td><td><b>URI</b></td></tr>
-<tr><td>Patient.language</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="A human language."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a><div><code>http://hl7.org/fhir/ValueSet/languages</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/languages"></button></div><div>From the FHIR Standard</div><table class="grid">
+<table class="list" data-fhir="generated-heirarchy">
   <tr>
-    <td style="font-size: 11px">
-      <b>Additional Bindings</b>
+    <td>
+      <b>Path</b>
     </td>
-    <td style="font-size: 11px">Purpose</td>
+    <td>
+      <b>Status</b>
+    </td>
+    <td>
+      <b>Usage</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Version</b>
+    </td>
+    <td>
+      <b>Source</b>
+    </td>
   </tr>
   <tr>
-    <td style="font-size: 11px">
-      <a href="http://hl7.org/fhir/R4/valueset-all-languages.html" title="http://hl7.org/fhir/ValueSet/all-languages">AllLanguages</a>
+    <td>Patient.language</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]" opacity="1.0">preferred</a>
     </td>
-    <td style="font-size: 11px">
-      <a href="http://hl7.org/fhir/R4/extension-elementdefinition-maxvalueset.html" title="A required binding, for use when the binding strength is 'extensible' or 'preferred'">Max Binding</a>
+    <td title="A human language.">
+      <a href="http://hl7.org/fhir/R4/valueset-languages.html" opacity="1.0">Common Languages</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages" title="Click to copy URL" class="btn-copy"></button>
     </td>
-  </tr>
-</table>
-</td></tr>
-<tr><td>Patient.identifier:JHN.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.identifier:JHN.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.">Pattern Value: <a title="identifierType" href="http://terminology.hl7.org/6.5.0/CodeSystem-v2-0203.html#v2-0203-JHN">JHN</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-bc-name-use-value-set.html">NameUseVS</a><div><code>https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set"></button></div><div>From this IG</div></td></tr>
-<tr><td>Patient.telecom.system</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-bc-contact-point-system-value-set.html">ContactPointSystemVS</a><div><code>https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-system-value-set</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-system-value-set"></button></div><div>From this IG</div></td></tr>
-<tr><td>Patient.telecom.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-bc-contact-point-use-value-set.html">ContactPointUseVS</a><div><code>https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-use-value-set</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-use-value-set"></button></div><div>From this IG</div></td></tr>
-<tr><td>Patient.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The gender of a person used for administrative purposes."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.address.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The use of an address."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-use.html">AddressUse</a><div><code>http://hl7.org/fhir/ValueSet/address-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/address-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.address.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The type of an address (physical / postal)."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-type.html">AddressType</a><div><code>http://hl7.org/fhir/ValueSet/address-type|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/address-type|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.maritalStatus</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="The domestic partnership status of a person."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-marital-status.html">Marital Status Codes</a><div><code>http://hl7.org/fhir/ValueSet/marital-status</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/marital-status"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.contact.relationship</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="The nature of the relationship between a patient and a contact person for that patient."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-patient-contactrelationship.html">PatientContactRelationship</a><div><code>http://hl7.org/fhir/ValueSet/patient-contactrelationship</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/patient-contactrelationship"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.contact.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The gender of a person used for administrative purposes."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Patient.communication.language</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="A human language."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a><div><code>http://hl7.org/fhir/ValueSet/languages</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/languages"></button></div><div>From the FHIR Standard</div><table class="grid">
-  <tr>
-    <td style="font-size: 11px">
-      <b>Additional Bindings</b>
+    <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
     </td>
-    <td style="font-size: 11px">Purpose</td>
   </tr>
   <tr>
-    <td style="font-size: 11px">
-      <a href="http://hl7.org/fhir/R4/valueset-all-languages.html" title="http://hl7.org/fhir/ValueSet/all-languages">AllLanguages</a>
+    <td>Patient.identifier:JHN.​use</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
     </td>
-    <td style="font-size: 11px">
-      <a href="http://hl7.org/fhir/R4/extension-elementdefinition-maxvalueset.html" title="A required binding, for use when the binding strength is 'extensible' or 'preferred'">Max Binding</a>
+    <td title="Identifies the purpose for this identifier, if known .">
+      <a href="http://hl7.org/fhir/R4/valueset-identifier-use.html" opacity="1.0">IdentifierUse</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
     </td>
   </tr>
-</table>
-</td></tr>
-<tr><td>Patient.link.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The type of link between this patient resource and another patient resource."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-link-type.html">LinkType</a><div><code>http://hl7.org/fhir/ValueSet/link-type|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
+  <tr>
+    <td>Patient.identifier:JHN.​type</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]" opacity="1.0">extensible</a>
+    </td>
+    <td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.">
+      <a href="http://hl7.org/fhir/R4/valueset-identifier-type.html" opacity="1.0">IdentifierType</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.name.use</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-bc-name-use-value-set.html" opacity="1.0">BC Name Use value set.</a>
+      <button data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>Patient.telecom.system</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-bc-contact-point-system-value-set.html" opacity="1.0">BC Contact Point System Value Set</a>
+      <button data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-system-value-set" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>Patient.telecom.use</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-bc-contact-point-use-value-set.html" opacity="1.0">BC Contact Point Use Value Set</a>
+      <button data-clipboard-text="https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-use-value-set" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>Patient.gender</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td title="The gender of a person used for administrative purposes.">
+      <a href="http://hl7.org/fhir/R4/valueset-administrative-gender.html" opacity="1.0">AdministrativeGender</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.address.use</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td title="The use of an address.">
+      <a href="http://hl7.org/fhir/R4/valueset-address-use.html" opacity="1.0">AddressUse</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/address-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.address.type</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td title="The type of an address (physical / postal).">
+      <a href="http://hl7.org/fhir/R4/valueset-address-type.html" opacity="1.0">AddressType</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/address-type|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.maritalStatus</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]" opacity="1.0">extensible</a>
+    </td>
+    <td title="The domestic partnership status of a person.">
+      <a href="http://hl7.org/fhir/R4/valueset-marital-status.html" opacity="1.0">MaritalStatus</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/marital-status" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.contact.relationship</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]" opacity="1.0">extensible</a>
+    </td>
+    <td title="The nature of the relationship between a patient and a contact person for that patient.">
+      <a href="http://hl7.org/fhir/R4/valueset-patient-contactrelationship.html" opacity="1.0">Patient Contact Relationship </a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/patient-contactrelationship" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.contact.gender</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td title="The gender of a person used for administrative purposes.">
+      <a href="http://hl7.org/fhir/R4/valueset-administrative-gender.html" opacity="1.0">AdministrativeGender</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.communication.​language</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]" opacity="1.0">preferred</a>
+    </td>
+    <td title="A human language.">
+      <a href="http://hl7.org/fhir/R4/valueset-languages.html" opacity="1.0">Common Languages</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient.link.type</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td title="The type of link between this patient resource and another patient resource.">
+      <a href="http://hl7.org/fhir/R4/valueset-link-type.html" opacity="1.0">LinkType</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
 </table>
 
         
@@ -3170,24 +4388,172 @@ filterDesc(document.getElementById('bc-merge-patientSA'), 'obligation', document
             <a name="inv-all-snap"> </a>
             <!--Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>att-1</td><td>error</td><td>Patient.photo</td><td>If the Attachment has data, it SHALL have a contentType<br/>: data.empty() or contentType.exists()</td><td></td></tr>
-<tr><td>cpt-2</td><td>error</td><td>Patient.telecom, Patient.contact.telecom</td><td>A system is required if a value is provided.<br/>: value.empty() or system.exists()</td><td></td></tr>
-<tr><td>dom-2</td><td>error</td><td>Patient</td><td>If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>: contained.contained.empty()</td><td></td></tr>
-<tr><td>dom-3</td><td>error</td><td>Patient</td><td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource<br/>: contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</td><td></td></tr>
-<tr><td>dom-4</td><td>error</td><td>Patient</td><td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>: contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</td><td></td></tr>
-<tr><td>dom-5</td><td>error</td><td>Patient</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
-<tr><td>dom-6</td><td>best practice</td><td>Patient</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td><b>**ALL** elements</b></td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td><b>**ALL** extensions</b></td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>invariant-merge-patient-1</td><td>error</td><td>Patient</td><td>In a PatientMerge resource, all link.other.identifier must have a value<br/>: Patient.link.other.identifier.where(value.empty() or value ='').empty()</td><td></td></tr>
-<tr><td>invariant-merge-patient-2</td><td>error</td><td>Patient</td><td>In a PatientMerge resource, identifier.extension shall not be present<br/>: Patient.identifier.value.extension.empty()</td><td></td></tr>
-<tr><td>invariant-merge-patient-3</td><td>error</td><td>Patient</td><td>In a PatientMerge resource, link.other.identifier.extension shall never be present<br/>: Patient.link.other.identifier.value.extension.empty()</td><td></td></tr>
-<tr><td>ipa-pat-2</td><td>error</td><td>Patient.name</td><td>Either Patient.name.given and/or Patient.name.family and/or Patient.name.text SHALL be present or a Data Absent Reason Extension SHALL be present.<br/>: (family.exists() or given.exists() or text.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()</td><td></td></tr>
-<tr><td>pat-1</td><td>error</td><td>Patient.contact</td><td>SHALL at least contain a contact's details or a reference to an organization<br/>: name.exists() or telecom.exists() or address.exists() or organization.exists()</td><td></td></tr>
-<tr><td>per-1</td><td>error</td><td>Patient.identifier:JHN.period, Patient.name.period, Patient.telecom.period, Patient.address.period, Patient.contact.period</td><td>If present, start SHALL have a lower value than end<br/>: start.hasValue().not() or end.hasValue().not() or (start &lt;= end)</td><td></td></tr>
-<tr><td>ref-1</td><td>error</td><td>Patient.identifier:JHN.assigner, Patient.contact.organization, Patient.generalPractitioner, Patient.managingOrganization, Patient.link.other</td><td>SHALL have a contained resource if a local reference is provided<br/>: reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>att-1</td>
+    <td>error</td>
+    <td>Patient.photo</td>
+    <td>If the Attachment has data, it SHALL have a contentType</td>
+    <td>
+      <code>data.empty() or contentType.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>cpt-2</td>
+    <td>error</td>
+    <td>Patient.telecom, Patient.contact.telecom</td>
+    <td>A system is required if a value is provided.</td>
+    <td>
+      <code>value.empty() or system.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-2</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>If the resource is contained in another resource, it SHALL NOT contain nested Resources</td>
+    <td>
+      <code>contained.contained.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-3</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource</td>
+    <td>
+      <code>contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-4</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated</td>
+    <td>
+      <code>contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-5</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a security label</td>
+    <td>
+      <code>contained.meta.security.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-6</td>
+    <td>best practice</td>
+    <td>Patient</td>
+    <td>A resource should have narrative for robust management</td>
+    <td>
+      <code>text.`div`.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ele-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** elements</b>
+    </td>
+    <td>All FHIR elements must have a @value or children</td>
+    <td>
+      <code>hasValue() or (children().count() &gt; id.count())</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ext-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** extensions</b>
+    </td>
+    <td>Must have either extensions or value[x], not both</td>
+    <td>
+      <code>extension.exists() != value.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>invariant-merge-patient-1</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>In a PatientMerge resource, all link.other.identifier must have a value</td>
+    <td>
+      <code>Patient.link.other.identifier.where(value.empty() or value ='').empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>invariant-merge-patient-2</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>In a PatientMerge resource, identifier.extension shall not be present</td>
+    <td>
+      <code>Patient.identifier.value.extension.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>invariant-merge-patient-3</td>
+    <td>error</td>
+    <td>Patient</td>
+    <td>In a PatientMerge resource, link.other.identifier.extension shall never be present</td>
+    <td>
+      <code>Patient.link.other.identifier.value.extension.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ipa-pat-2</td>
+    <td>error</td>
+    <td>Patient.name</td>
+    <td>Either Patient.name.given and/or Patient.name.family and/or Patient.name.text SHALL be present or a Data Absent Reason Extension SHALL be present.</td>
+    <td>
+      <code>(family.exists() or given.exists() or text.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>pat-1</td>
+    <td>error</td>
+    <td>Patient.contact</td>
+    <td>SHALL at least contain a contact's details or a reference to an organization</td>
+    <td>
+      <code>name.exists() or telecom.exists() or address.exists() or organization.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>per-1</td>
+    <td>error</td>
+    <td>Patient.identifier:JHN.period, Patient.name.period, Patient.telecom.period, Patient.address.period, Patient.contact.period</td>
+    <td>If present, start SHALL have a lower value than end</td>
+    <td>
+      <code>start.hasValue().not() or end.hasValue().not() or (start &lt;= end)</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ref-1</td>
+    <td>error</td>
+    <td>Patient.identifier:JHN.assigner, Patient.contact.organization, Patient.generalPractitioner, Patient.managingOrganization, Patient.link.other</td>
+    <td>SHALL have a contained resource if a local reference is provided</td>
+    <td>
+      <code>reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -3461,7 +4827,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 27, 2025 22:31+0000">2025-08-27</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 7, 2025 21:06+0000">2025-10-07</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "BCHealthClientIdentityManagement"] ; # 
   fhir:title [ fhir:v "BC Client Registry FHIR Implementation Guide"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-08-27T22:30:17+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-07T21:05:34+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "BC Ministry of Health"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "BC Ministry of Health" ] ;
@@ -675,7 +675,7 @@
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
        fhir:value [
          a fhir:code ;
-         fhir:v "hl7.fhir.uv.tools.r4#0.7.1"
+         fhir:v "hl7.fhir.uv.tools.r4#0.8.0"
        ]
      ] [
        fhir:extension ( [
@@ -2497,6 +2497,24 @@
        fhir:example [
          a fhir:boolean ;
          fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "OperationDefinition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-notification> ;
+         fhir:reference [ fhir:v "OperationDefinition/bc-patient-notification" ]
+       ] ;
+       fhir:name [ fhir:v "Patient Notification" ] ;
+       fhir:description [ fhir:v "This operation is used notify a user that a patient's record has changed." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
        ]
      ] [
        fhir:extension ( [
