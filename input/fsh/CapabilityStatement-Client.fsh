@@ -22,7 +22,7 @@ Instance: NotificationsClient-OperationsOnly
 InstanceOf: CapabilityStatement
 Usage: #definition
 Title: "Notifications Distributor (Client) — Operations Only"
-Description: "PCR as a client posts notifications/distributions via a patient-level operation. This is not a RESTful create."
+Description: "PCR as a client posts notifications/distributions via a patient-level operation."
 * id = "bc-hcim-capability-statement-client"
 * version = "1.0"
 * name = "HCIMClientCapabilityStatement"
@@ -30,7 +30,7 @@ Description: "PCR as a client posts notifications/distributions via a patient-le
 * status = #active
 * date = "2025-10-10"
 * publisher = "BC Ministry of Health"
-* description = "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a client, sending distributions (notifications)."
+* description = "PCR as a client posts notifications/distributions via a patient-level operation. This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a client, sending distributions (notifications)."
 * kind = #capability
 * software.name = "BC HCIM FHIR Implementation"
 * fhirVersion = #4.0.1
