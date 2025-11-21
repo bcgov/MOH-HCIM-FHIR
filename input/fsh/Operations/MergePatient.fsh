@@ -6,7 +6,7 @@ Usage: #definition
 * url = "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-merge"
 * name = "MergePatient"
 * title = "Merge Patient"
-* status = #draft
+* status = #active
 * kind = #operation
 * code = #merge
 * resource[0] = #Patient

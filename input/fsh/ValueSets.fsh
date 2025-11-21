@@ -80,6 +80,17 @@ Description: "BC Identifier Status value set used to describe the status of an i
 * ^experimental = false
 * codes from system IdentifierStatusCS
 
+ValueSet: IdentifierUseVS
+Title: "BC Identifier Use Value Set"
+Description: "BC Identifier Use value set, sliced to meet BC constraints."
+Id: bc-identifier-use-value-set
+* ^url = "https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-identifier-use-value-set"
+* ^experimental = false
+* include codes from valueset IdentifierUse
+* exclude http://hl7.org/fhir/identifier-use#usual
+* exclude http://hl7.org/fhir/identifier-use#temp
+* exclude http://hl7.org/fhir/identifier-use#old
+
 ValueSet: NameUseVS
 Title: "BC Name Use value set."
 Description: "BC Name Use value set, sliced to meet BC constraints."
@@ -114,5 +125,3 @@ Id: bc-contact-point-system-value-set
 * exclude http://hl7.org/fhir/contact-point-system#url
 * exclude http://hl7.org/fhir/contact-point-system#sms
 * exclude http://hl7.org/fhir/contact-point-system#other
-
-

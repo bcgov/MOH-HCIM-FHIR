@@ -396,7 +396,7 @@ The non-surviving/source Patient(s) SHALL be listed in the link attribute of Pat
 * format[0] = #json
 
 * rest[0].mode = #server
-* rest[0].resource[0].type = #Parameters
+* rest[0].resource[0].type = #Patient
 * rest[0].resource[0].operation[+].name = "FindCandidates"
 * rest[0].resource[0].operation[=].definition = Canonical(FindCandidates)
 * rest[0].resource[0].operation[+].name = "GetDemographics"
