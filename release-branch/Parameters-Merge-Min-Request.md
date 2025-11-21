@@ -1,0 +1,81 @@
+# Merge-Min-Request - BC Client Registry FHIR Implementation Guide v1.0.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Merge-Min-Request**
+
+## Example Parameters: Merge-Min-Request
+
+## Parameters
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Parameters",
+  "id" : "Merge-Min-Request",
+  "parameter" : [
+    {
+      "name" : "target-patient",
+      "valueReference" : {
+        "reference" : "Patient/89f6e0c5-b3e8-4ebe-9886-34f3a1b932b8",
+        "identifier" : {
+          "use" : "official",
+          "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id",
+          "value" : "U6UQG3285Z5NG23110E2"
+        }
+      }
+    },
+    {
+      "name" : "source-patient",
+      "valueReference" : {
+        "reference" : "Patient/95aef996-3bf9-4ccf-8584-96299735689a",
+        "identifier" : {
+          "use" : "official",
+          "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id",
+          "value" : "YR4E0OMAP2364ZX58222"
+        }
+      }
+    },
+    {
+      "name" : "source-patient-identifier",
+      "valueIdentifier" : {
+        "use" : "official",
+        "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id",
+        "value" : "9ICFAEF1A716U78HKR51"
+      }
+    },
+    {
+      "name" : "result-patient",
+      "resource" : {
+        "resourceType" : "Patient",
+        "id" : "89f6e0c5-b3e8-4ebe-9886-34f3a1b932b8",
+        "meta" : {
+          "profile" : [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"
+          ]
+        },
+        "extension" : [
+          {
+            "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+            "valuePeriod" : {
+              "start" : "2025-01-16T12:54:54.7488769-08:00"
+            }
+          }
+        ],
+        "link" : [
+          {
+            "other" : {
+              "reference" : "Patient/95aef996-3bf9-4ccf-8584-96299735689a"
+            },
+            "type" : "replaces"
+          }
+        ]
+      }
+    }
+  ]
+}
+
+```

@@ -1,0 +1,112 @@
+# GetDemographics-Request - BC Client Registry FHIR Implementation Guide v1.0.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **GetDemographics-Request**
+
+## Example Bundle: GetDemographics-Request
+
+Profile: [GetDemographicsRequestBundle](StructureDefinition-bc-get-demographics-request-bundle.md)
+
+Bundle GetDemographics-Request of type collection
+
+-------
+
+Entry 1 - fullUrl = urn:uuid:289d85b9-43a4-4902-9b52-76cb1f02ea69
+
+Resource Parameters:
+
+> 
+
+Profile: [MetadataParametersIn](StructureDefinition-bc-metadata-parameters-in.md)
+
+## Parameters
+
+
+-------
+
+Entry 2 - fullUrl = urn:uuid:72729b26-5d18-42e3-871a-ccfa9ba6ad06
+
+Resource Patient:
+
+> 
+
+Profile: [ClientRegistryPatient](StructureDefinition-bc-patient.md)
+
+Anonymous Patient (no stated gender), DoB Unknown ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id#8H1496LN8U1F17JP0H2VV)
+-------
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Bundle",
+  "id" : "GetDemographics-Request",
+  "meta" : {
+    "profile" : [
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle"
+    ]
+  },
+  "type" : "collection",
+  "timestamp" : "2023-01-23T14:00:53.5204931-08:00",
+  "link" : [
+    {
+      "relation" : "self",
+      "url" : "urn:uuid:96d44ba7-5ca3-48ad-930e-771d9f1f2428"
+    }
+  ],
+  "entry" : [
+    {
+      "fullUrl" : "urn:uuid:289d85b9-43a4-4902-9b52-76cb1f02ea69",
+      "resource" : {
+        "resourceType" : "Parameters",
+        "id" : "GetDemographics-Request-Parameters",
+        "meta" : {
+          "profile" : [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"
+          ]
+        },
+        "parameter" : [
+          {
+            "name" : "messageId",
+            "valueString" : "7cd363f7-982c-43cb-85b1-024e567ad571"
+          },
+          {
+            "name" : "history",
+            "valueBoolean" : false
+          },
+          {
+            "name" : "identifiersOnly",
+            "valueBoolean" : false
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl" : "urn:uuid:72729b26-5d18-42e3-871a-ccfa9ba6ad06",
+      "resource" : {
+        "resourceType" : "Patient",
+        "id" : "GetDemographics-Request-Patient",
+        "meta" : {
+          "profile" : [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_GetDemographics-Request-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient GetDemographics-Request-Patient</b></p><a name=\"GetDemographics-Request-Patient\"> </a><a name=\"hcGetDemographics-Request-Patient\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient (no stated gender), DoB Unknown ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id#8H1496LN8U1F17JP0H2VV)</p><hr/></div>"
+        },
+        "identifier" : [
+          {
+            "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id",
+            "value" : "8H1496LN8U1F17JP0H2VV"
+          }
+        ]
+      }
+    }
+  ]
+}
+
+```

@@ -1,0 +1,283 @@
+# NEWBORN-Distribution-Notification-Masked-MumPHN - BC Client Registry FHIR Implementation Guide v1.0.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **NEWBORN-Distribution-Notification-Masked-MumPHN**
+
+## Example Bundle: NEWBORN-Distribution-Notification-Masked-MumPHN
+
+Profile: [SubscriptionNotificationBundle](StructureDefinition-bc-subscription-notification-bundle.md)
+
+Bundle NEWBORN-Distribution-Notification-Masked-MumPHN of type collection
+
+-------
+
+Entry 1 - fullUrl = urn:uuid:bb122554-dd6b-4c3a-a162-c80c388a637b
+
+Resource Parameters:
+
+> 
+
+Profile: [MetadataParametersSubscription](StructureDefinition-bc-metadata-parameters-subscription.md)
+
+## Parameters
+
+
+-------
+
+Entry 2 - fullUrl = https://hd4.hcim.ehealth.gov.bc.ca/Patient/PHNHere
+
+Resource Patient:
+
+> 
+
+Profile: [ClientRegistryPatient](StructureDefinition-bc-patient.md)
+
+Baby Wilmore Unknown, DoB: 2025-10-10 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id#PHNHere (use: official, period: 2025-10-10 07:50:31-0700 --> (ongoing)))
+-------
+
+-------
+**Contained Resource**
+-------
+**identifier**:`https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id`/?ngen-9? (use: official, )**active**: true**relationship**:natural mother
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Bundle",
+  "id" : "NEWBORN-Distribution-Notification-Masked-MumPHN",
+  "meta" : {
+    "profile" : [
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle"
+    ]
+  },
+  "identifier" : {
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:uuid:7305f123-d3c1-45be-8417-f5a13bb767fc"
+  },
+  "type" : "collection",
+  "timestamp" : "2025-10-10T08:03:00.3381027-07:00",
+  "link" : [
+    {
+      "relation" : "self",
+      "url" : "urn:uuid:bb122554-dd6b-4c3a-a162-c80c388a637b"
+    }
+  ],
+  "entry" : [
+    {
+      "fullUrl" : "urn:uuid:bb122554-dd6b-4c3a-a162-c80c388a637b",
+      "resource" : {
+        "resourceType" : "Parameters",
+        "id" : "Inline-Instance-for-NEWBORN-Distribution-Masked-MumPHN",
+        "meta" : {
+          "profile" : [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-subscription"
+          ]
+        },
+        "parameter" : [
+          {
+            "name" : "messageId",
+            "valueString" : "bb122554-dd6b-4c3a-a162-c80c388a637b"
+          },
+          {
+            "name" : "messageDateTime",
+            "valueDateTime" : "2025-10-10T07:50:31-07:00"
+          },
+          {
+            "name" : "eventType",
+            "valueCode" : "NEWBORN"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl" : "https://hd4.hcim.ehealth.gov.bc.ca/Patient/PHNHere",
+      "resource" : {
+        "resourceType" : "Patient",
+        "id" : "NEWBORNPatient",
+        "meta" : {
+          "profile" : [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_NEWBORNPatient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient NEWBORNPatient</b></p><a name=\"NEWBORNPatient\"> </a><a name=\"hcNEWBORNPatient\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Baby Wilmore  Unknown, DoB: 2025-10-10 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id#PHNHere (use: official, period: 2025-10-10 07:50:31-0700 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 2197208370(Mobile)</li><li>ph: 5399043795(Home)</li><li>ph: 6513957301(Work)</li><li><a href=\"mailto:Houston7830@Stravenue.com\">Houston7830@Stravenue.com</a></li><li><a href=\"mailto:Wilmore569@Stravenue.com\">Wilmore569@Stravenue.com</a></li><li><a href=\"mailto:Errol9948@Stravenue.com\">Errol9948@Stravenue.com</a></li><li>5049 Wright Close Suite 8953 PO Box 8801 View Royal BC V7G 1J7 CA </li><li>6346 Stanley Stravenue Apt 8782 PO Box 8813 Winter Harbour BC V1M 2E1 CA </li></ul></td></tr></table><hr/><p><b>Contained Resource</b></p><hr/><a name=\"NEWBORNPatient/null\"> </a><p class=\"res-header-id\"><b>RelatedPerson </b></p><p><b>identifier</b>: <code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/?ngen-9? (use: official, )</p><p><b>active</b>: true</p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode NMTH}\">natural mother</span></p></div>"
+        },
+        "contained" : [
+          {
+            "resourceType" : "RelatedPerson",
+            "identifier" : [
+              {
+                "use" : "official",
+                "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+                "_value" : {
+                  "extension" : [
+                    {
+                      "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                      "valueCode" : "masked"
+                    }
+                  ]
+                }
+              }
+            ],
+            "active" : true,
+            "relationship" : [
+              {
+                "coding" : [
+                  {
+                    "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                    "code" : "NMTH"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "identifier" : [
+          {
+            "extension" : [
+              {
+                "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                "valueCode" : "active"
+              }
+            ],
+            "use" : "official",
+            "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+            "value" : "PHNHere",
+            "period" : {
+              "start" : "2025-10-10T07:50:31-07:00"
+            },
+            "assigner" : {
+              "display" : "MOH Client Registry - MOH_CRS"
+            }
+          }
+        ],
+        "active" : true,
+        "name" : [
+          {
+            "use" : "usual",
+            "family" : "Wilmore",
+            "given" : ["Baby"],
+            "period" : {
+              "start" : "2025-10-10T07:50:31-07:00"
+            }
+          }
+        ],
+        "telecom" : [
+          {
+            "system" : "phone",
+            "value" : "2197208370",
+            "use" : "mobile",
+            "period" : {
+              "start" : "2025-10-10T07:50:31-07:00"
+            }
+          },
+          {
+            "system" : "phone",
+            "value" : "5399043795",
+            "use" : "home",
+            "period" : {
+              "start" : "2025-10-10T07:50:31-07:00"
+            }
+          },
+          {
+            "system" : "phone",
+            "value" : "6513957301",
+            "use" : "work",
+            "period" : {
+              "start" : "2025-10-10T07:50:31-07:00"
+            }
+          },
+          {
+            "system" : "email",
+            "value" : "Houston7830@Stravenue.com",
+            "use" : "mobile",
+            "period" : {
+              "start" : "2025-10-10T07:50:31-07:00"
+            }
+          },
+          {
+            "system" : "email",
+            "value" : "Wilmore569@Stravenue.com",
+            "use" : "home",
+            "period" : {
+              "start" : "2025-10-10T07:50:31-07:00"
+            }
+          },
+          {
+            "system" : "email",
+            "value" : "Errol9948@Stravenue.com",
+            "use" : "work",
+            "period" : {
+              "start" : "2025-10-10T07:50:31-07:00"
+            }
+          }
+        ],
+        "gender" : "unknown",
+        "_gender" : {
+          "extension" : [
+            {
+              "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+              "valuePeriod" : {
+                "start" : "2025-10-10T07:50:31-07:00"
+              }
+            }
+          ]
+        },
+        "birthDate" : "2025-10-10",
+        "_birthDate" : {
+          "extension" : [
+            {
+              "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+              "valuePeriod" : {
+                "start" : "2025-10-10T07:50:31-07:00"
+              }
+            }
+          ]
+        },
+        "address" : [
+          {
+            "extension" : [
+              {
+                "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                "valueCode" : "unknown"
+              }
+            ],
+            "type" : "physical",
+            "line" : ["5049 Wright Close", "Suite 8953", "PO Box 8801"],
+            "city" : "View Royal",
+            "state" : "BC",
+            "postalCode" : "V7G 1J7",
+            "country" : "CA",
+            "period" : {
+              "start" : "2025-10-10T07:50:31-07:00"
+            }
+          },
+          {
+            "extension" : [
+              {
+                "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                "valueCode" : "unknown"
+              }
+            ],
+            "type" : "postal",
+            "line" : ["6346 Stanley Stravenue", "Apt 8782", "PO Box 8813"],
+            "city" : "Winter Harbour",
+            "state" : "BC",
+            "postalCode" : "V1M 2E1",
+            "country" : "CA",
+            "period" : {
+              "start" : "2025-10-10T07:50:31-07:00"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+
+```

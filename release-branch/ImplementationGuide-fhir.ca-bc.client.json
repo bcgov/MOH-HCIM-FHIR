@@ -10,7 +10,7 @@
   "name" : "BCHealthClientIdentityManagement",
   "title" : "BC Client Registry FHIR Implementation Guide",
   "status" : "active",
-  "date" : "2025-10-07T21:05:34+00:00",
+  "date" : "2025-11-21T23:55:27+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",
@@ -38,7 +38,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "6.5.0"
+    "version" : "7.0.0"
   },
   {
     "id" : "hl7ext",
@@ -964,6 +964,11 @@
       "id" : "RestfulExamples",
       "name" : "RESTful Examples",
       "description" : "A set of RESTful request examples"
+    },
+    {
+      "id" : "DistributionExamples",
+      "name" : "Distribution Examples",
+      "description" : "A set of Distribution examples"
     }],
     "resource" : [{
       "extension" : [{
@@ -1254,19 +1259,6 @@
         "valueString" : "CapabilityStatement"
       }],
       "reference" : {
-        "reference" : "CapabilityStatement/bc-hcim-capability-statement-client"
-      },
-      "name" : "BC HCIM Client Capability Statement",
-      "description" : "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a client. I.e. sending notifications - FUTURE work.",
-      "exampleBoolean" : false,
-      "groupingId" : "CapabilityStatement"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CapabilityStatement"
-      }],
-      "reference" : {
         "reference" : "CapabilityStatement/bc-hcim-capability-statement-server"
       },
       "name" : "BC HCIM Server Capability Statement",
@@ -1296,6 +1288,18 @@
       },
       "name" : "BC Identifier Status Value Set",
       "description" : "BC Identifier Status value set used to describe the status of an identifier.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/bc-identifier-use-value-set"
+      },
+      "name" : "BC Identifier Use Value Set",
+      "description" : "BC Identifier Use value set, sliced to meet BC constraints.",
       "exampleBoolean" : false
     },
     {
@@ -1370,6 +1374,18 @@
       "description" : "General constraints on the Patient resource for use in the BC Client Registry project.",
       "exampleBoolean" : false,
       "groupingId" : "PatientProfile"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/COMP-Distribution-Notification"
+      },
+      "name" : "COMP-Distribution-Notification",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle",
+      "groupingId" : "DistributionExamples"
     },
     {
       "extension" : [{
@@ -1733,6 +1749,30 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/NEW-Distribution-Notification"
+      },
+      "name" : "NEW-Distribution-Notification",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle",
+      "groupingId" : "DistributionExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/NEWBORN-Distribution-Notification-Masked-MumPHN"
+      },
+      "name" : "NEWBORN-Distribution-Notification-Masked-MumPHN",
+      "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle",
+      "groupingId" : "DistributionExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
       }],
       "reference" : {
@@ -1742,6 +1782,19 @@
       "description" : "Example of RESTful newborn request.",
       "exampleCanonical" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient",
       "groupingId" : "RestfulExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CapabilityStatement"
+      }],
+      "reference" : {
+        "reference" : "CapabilityStatement/bc-hcim-capability-statement-client"
+      },
+      "name" : "Notifications Distributor (Client) — Operations Only",
+      "description" : "PCR as a client posts notifications/distributions via a patient-level operation.",
+      "exampleBoolean" : false,
+      "groupingId" : "CapabilityStatement"
     },
     {
       "extension" : [{
@@ -2039,6 +2092,24 @@
         }],
         "nameUrl" : "restful.html",
         "title" : "RESTful Services",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "distributions.html"
+        }],
+        "nameUrl" : "distributions.html",
+        "title" : "Distributions",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "techdetails.html"
+        }],
+        "nameUrl" : "techdetails.html",
+        "title" : "Technical Details",
         "generation" : "markdown"
       },
       {

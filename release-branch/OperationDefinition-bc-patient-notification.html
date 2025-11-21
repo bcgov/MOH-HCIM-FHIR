@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"14.46"}
-    h3,h4,h5,h6{--heading-prefix:"14.46"}</style>
+    <style type="text/css">h2{--heading-prefix:"16.49"}
+    h3,h4,h5,h6{--heading-prefix:"16.49"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -116,6 +116,18 @@
       </li>
       <li>
         <a href="restful.html">RESTful Services</a>
+      </li>
+      <li>
+        <a href="techdetails.html">Technical Details</a>
+      </li>
+      <li>
+        <a href="distributions.html">Distributions</a>
+      </li>
+      <li>
+        <a href="v3Transition.html">Transition</a>
+      </li>
+      <li>
+        <a href="connectedPartner.html">Connected Partners</a>
       </li>
     </ul>
   </li>
@@ -213,7 +225,7 @@
 
   </h2>
 
-  <table class="colsd">
+  <table class="colsi">
 
     <tr>
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-notification<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-notification"/></span>
@@ -233,9 +245,9 @@
 
       <td colspan="4">
         
-          Draft
+          Active
           
-            as of 2025-10-07
+            as of 2025-11-21
           
         
       </td>
@@ -264,13 +276,9 @@
 
 <div style="display:inline-block" markdown="1">
 
-<blockquote>
-  <p><span style="color:red">Note</span><br />This specification is currently published as a Draft Standard on the ministry GitHub and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. For more information, please see the Future Plans page in this guide.</p>
-</blockquote>
-
 <p>This is the Patient Notification operation, aka Distribution.</p>
 
-<p>A Patient resource is required to notify that a patient record has changed.  This interaction is similar to RevisePatient, but the Client Registry is acting as the client.</p>
+<p>The Client Registry is acting as the client and is sending distributions when a patient record is created or changed.</p>
 
 
 </div>
@@ -285,63 +293,11 @@
   
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><a name="bc-patient-notification"> </a><a name="hcbc-patient-notification"> </a><p>URL: [base]/Patient/$PatientNotification</p><p>Input parameters Profile:<a href="StructureDefinition-bc-revise-request-bundle.html">ReviseRequestBundle</a></p><h3>Parameters</h3><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>ReviseRequestBundle</td><td/><td>1..1</td><td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td><td/><td><div><p>The request bundle.</p>
+  <div xmlns="http://www.w3.org/1999/xhtml"><a name="bc-patient-notification"> </a><a name="hcbc-patient-notification"> </a><p>URL: [base]/Patient/$PatientNotification</p><p>Input parameters Profile:<a href="StructureDefinition-bc-subscription-notification-bundle.html">SubscriptionNotificationBundle</a></p><h3>Parameters</h3><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>OUT</td><td>SubscriptionNotificationBundle</td><td/><td>1..1</td><td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td><td/><td><div><p>The specific bundle entries that are needed when the Client Registry is sending a distribution (notification).</p>
 </div></td></tr></table></div>
 
   <!-- insert notes if present -->
   
-
-<h3>Notes:</h3>
-
-
-<div style="display:inline-block" markdown="1">
-
-<p>The response to a Patient Notification Operation is a HTTP status code 200 on success without a body..</p>
-
-<h4 id="in-bundle-entries">In Bundle Entries</h4>
-
-<table class="grid">
-  <thead>
-    <tr>
-      <th style="text-align: left">Cardinality</th>
-      <th style="text-align: left">Resource Type</th>
-      <th style="text-align: left">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">1..1</td>
-      <td style="text-align: left">MetadataParametersIn</td>
-      <td style="text-align: left">See <a href="StructureDefinition-bc-metadata-parameters-in.html">profile</a>.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">1..1</td>
-      <td style="text-align: left">ClientRegistryPatient</td>
-      <td style="text-align: left">See <a href="StructureDefinition-bc-patient.html">profile</a>.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="out-bundle-entries">Out Bundle Entries</h4>
-
-<p>N/A</p>
-
-<h4 id="metadata-in-parameters">Metadata In Parameters</h4>
-
-<p>Besides the two mandatory name-value pairs, none.</p>
-
-<h4 id="metadata-out-parameters">Metadata Out Parameters</h4>
-
-<p>N/A</p>
-
-<h4 id="examples">Examples</h4>
-
-<p>The following example is actually the revise patient example as it is identical to the notification request.
-See <a href="Bundle-Revise-withMaxData-Request.html">Patient Notification request</a> example.</p>
-
-
-</div>
-
 
 
 
@@ -363,7 +319,7 @@ See <a href="Bundle-Revise-withMaxData-Request.html">Patient Notification reques
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 7, 2025 21:06+0000">2025-10-07</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Nov 21, 2025 23:55+0000">2025-11-21</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

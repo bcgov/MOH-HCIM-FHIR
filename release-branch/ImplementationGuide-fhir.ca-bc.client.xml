@@ -11,7 +11,7 @@
   <name value="BCHealthClientIdentityManagement"/>
   <title value="BC Client Registry FHIR Implementation Guide"/>
   <status value="active"/>
-  <date value="2025-10-07T21:05:34+00:00"/>
+  <date value="2025-11-21T23:55:27+00:00"/>
   <publisher value="BC Ministry of Health"/>
   <contact>
     <name value="BC Ministry of Health"/>
@@ -37,7 +37,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="6.5.0"/>
+    <version value="7.0.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -717,6 +717,10 @@
       <name value="RESTful Examples"/>
       <description value="A set of RESTful request examples"/>
     </grouping>
+    <grouping id="DistributionExamples">
+      <name value="Distribution Examples"/>
+      <description value="A set of Distribution examples"/>
+    </grouping>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Bundle"/>
@@ -982,18 +986,6 @@
         <valueString value="CapabilityStatement"/>
       </extension>
       <reference>
-        <reference value="CapabilityStatement/bc-hcim-capability-statement-client"/>
-      </reference>
-      <name value="BC HCIM Client Capability Statement"/>
-      <description value="This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a client. I.e. sending notifications - FUTURE work."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="CapabilityStatement"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CapabilityStatement"/>
-      </extension>
-      <reference>
         <reference value="CapabilityStatement/bc-hcim-capability-statement-server"/>
       </reference>
       <name value="BC HCIM Server Capability Statement"/>
@@ -1021,6 +1013,17 @@
       </reference>
       <name value="BC Identifier Status Value Set"/>
       <description value="BC Identifier Status value set used to describe the status of an identifier."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/bc-identifier-use-value-set"/>
+      </reference>
+      <name value="BC Identifier Use Value Set"/>
+      <description value="BC Identifier Use value set, sliced to meet BC constraints."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1089,6 +1092,17 @@
       <description value="General constraints on the Patient resource for use in the BC Client Registry project."/>
       <exampleBoolean value="false"/>
       <groupingId value="PatientProfile"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/COMP-Distribution-Notification"/>
+      </reference>
+      <name value="COMP-Distribution-Notification"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle"/>
+      <groupingId value="DistributionExamples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1423,6 +1437,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/NEW-Distribution-Notification"/>
+      </reference>
+      <name value="NEW-Distribution-Notification"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle"/>
+      <groupingId value="DistributionExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/NEWBORN-Distribution-Notification-Masked-MumPHN"/>
+      </reference>
+      <name value="NEWBORN-Distribution-Notification-Masked-MumPHN"/>
+      <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle"/>
+      <groupingId value="DistributionExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Patient"/>
       </extension>
       <reference>
@@ -1432,6 +1468,18 @@
       <description value="Example of RESTful newborn request."/>
       <exampleCanonical value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
       <groupingId value="RestfulExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/bc-hcim-capability-statement-client"/>
+      </reference>
+      <name value="Notifications Distributor (Client) — Operations Only"/>
+      <description value="PCR as a client posts notifications/distributions via a patient-level operation."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CapabilityStatement"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1703,6 +1751,22 @@
         </extension>
         <nameUrl value="restful.html"/>
         <title value="RESTful Services"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="distributions.html"/>
+        </extension>
+        <nameUrl value="distributions.html"/>
+        <title value="Distributions"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="techdetails.html"/>
+        </extension>
+        <nameUrl value="techdetails.html"/>
+        <title value="Technical Details"/>
         <generation value="markdown"/>
       </page>
       <page>

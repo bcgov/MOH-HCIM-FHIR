@@ -1,13 +1,14 @@
 BCHealthClientIdentityManagement : Validation Results
 =========================================
 
-err = 52, warn = 135, info = 13
+err = 69, warn = 143, info = 14
 $--
 Generated $--. FHIR version $-- for fhir.ca-bc.client#$-- (canonical = http://hlth.gov.bc.ca/fhir/client)
- Build Errors : 1 / 4 / 0
+ Build Errors : 1 / 7 / 0
  /github/workspace/fsh-generated/resources/Bundle-AddNewbornByMumsPHN-Request : 0 / 3 / 9
  /github/workspace/fsh-generated/resources/Bundle-AddPatient-Request : 0 / 4 / 10
  /github/workspace/fsh-generated/resources/Bundle-AddPatient-Response : 0 / 6 / 10
+ /github/workspace/fsh-generated/resources/Bundle-COMP-Distribution-Notification : 4 / 2 / 8
  /github/workspace/fsh-generated/resources/Bundle-FindCandidates-Request : 0 / 1 / 7
  /github/workspace/fsh-generated/resources/Bundle-FindCandidates-Response : 0 / 12 / 17
  /github/workspace/fsh-generated/resources/Bundle-FindNewbornByMumsPHN-Request : 1 / 2 / 5
@@ -19,6 +20,8 @@ Generated $--. FHIR version $-- for fhir.ca-bc.client#$-- (canonical = http://hl
  /github/workspace/fsh-generated/resources/Bundle-GetDemographics-withHistory-Request : 0 / 2 / 8
  /github/workspace/fsh-generated/resources/Bundle-GetDemographics-withHistory-Response : 0 / 12 / 13
  /github/workspace/fsh-generated/resources/Bundle-GetDemographics-withPHNInfo-Response : 0 / 13 / 14
+ /github/workspace/fsh-generated/resources/Bundle-NEW-Distribution-Notification : 4 / 2 / 8
+ /github/workspace/fsh-generated/resources/Bundle-NEWBORN-Distribution-Notification-Masked-MumPHN : 7 / 3 / 9
  /github/workspace/fsh-generated/resources/Bundle-Revise-Async-ACK : 0 / 4 / 5
  /github/workspace/fsh-generated/resources/Bundle-Revise-Request-No-SRI : 1 / 3 / 9
  /github/workspace/fsh-generated/resources/Bundle-Revise-Response : 0 / 6 / 10
@@ -67,7 +70,7 @@ Generated $--. FHIR version $-- for fhir.ca-bc.client#$-- (canonical = http://hl
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-metadata-parameter-async-response : 0 / 0 / 2
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-metadata-parameters-in : 0 / 0 / 2
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-metadata-parameters-out : 0 / 0 / 2
- /github/workspace/fsh-generated/resources/StructureDefinition-bc-metadata-parameters-subscription : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-bc-metadata-parameters-subscription : 0 / 0 / 2
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-multiplebirth-history-extension : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-patient : 0 / 2 / 10
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-patient-by-example : 0 / 3 / 7
@@ -75,7 +78,7 @@ Generated $--. FHIR version $-- for fhir.ca-bc.client#$-- (canonical = http://hl
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-revise-response-bundle : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-search-response-bundle : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-sourceId-extension : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-bc-subscription-notification-bundle : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-bc-subscription-notification-bundle : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-bc-validation-status-extension : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Subscription-SampleCompositeSubscriptionRequest : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-bc-address-validation-value-set : 0 / 0 / 1
@@ -83,12 +86,16 @@ Generated $--. FHIR version $-- for fhir.ca-bc.client#$-- (canonical = http://hl
  /github/workspace/fsh-generated/resources/ValueSet-bc-contact-point-system-value-set : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-bc-contact-point-use-value-set : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-bc-identifier-status-value-set : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-bc-identifier-use-value-set : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-bc-merge-status-value-set : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-bc-name-use-value-set : 0 / 0 / 1
  /github/workspace/input/resources/SubscriptionTopic : 4 / 0 / 2
 </table>
 == n/a ==
 ERROR: ImplementationGuide/fhir.ca-bc.client: This IG is version 4.0.1, while the IG 'hl7.fhir.uv.subscriptions-backport.r4' is from version 4.0.0
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/COMP-Distribution-Notification.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/NEW-Distribution-Notification.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/NEWBORN-Distribution-Notification-Masked-MumPHN.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
@@ -108,6 +115,13 @@ WARNING: Bundle/AddPatient-Response: Bundle.entry[0].resource/*Parameters/AddPat
 WARNING: Bundle/AddPatient-Response: Bundle.entry[0].resource/*Parameters/AddPatient-Response-Parameters*/.parameter[2].value.ofType(Identifier).system: No definition could be found for URL value 'http://hlth.gov.bc.ca/fhir/client/bc-userid'
 WARNING: Bundle/AddPatient-Response: Bundle.entry[2].resource/*Patient/AddPatient-Response-Patient*/.identifier[0].system: No definition could be found for URL value 'https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id'
 WARNING: Bundle/AddPatient-Response: Bundle.entry[2].resource/*Patient/AddPatient-Response-Patient*/.identifier[1].system: No definition could be found for URL value 'https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id'
+== fsh-generated/resources/Bundle-COMP-Distribution-Notification.json ==
+ERROR: Bundle/COMP-Distribution-Notification: Bundle: Slice 'Bundle.entry:operationOutcome': a matching slice is required, but not found (from http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle|1.0.0). Note that other slices are allowed in addition to this required slice
+WARNING: Bundle/COMP-Distribution-Notification: Bundle.link[0].url: No definition could be found for URL value 'urn:uuid:0c19a592-9835-4039-a1f7-a9bcc050671f'
+ERROR: Bundle/COMP-Distribution-Notification: Bundle.entry[0].resource/*Parameters/Inline-Instance-for-COMP-Distribution*/.parameter[2].value.ofType(code): The Profile 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-subscription|1.0.0' definition allows for the type CodeableConcept but found type code
+ERROR: Bundle/COMP-Distribution-Notification: Bundle.entry[0].resource/*Parameters/Inline-Instance-for-COMP-Distribution*/.parameter[2].value.ofType(code): No code provided, and a code is required from the value set 'BC Client Registry Patient Change Notification Events Value Set' (https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-client-registry-patient-change-notification-events|1.0.0)
+WARNING: Bundle/COMP-Distribution-Notification: Bundle.entry[1].resource/*Patient/COMPPatient*/.identifier[0].system: No definition could be found for URL value 'https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id'
+ERROR: Bundle/COMP-Distribution-Notification: Bundle.entry[0]: The fullUrl 'https://hd4.hcim.ehealth.gov.bc.ca/Patient/PHNHere' looks like a RESTful server URL, so it must end with the correct type and id (/Patient/COMPPatient)
 == fsh-generated/resources/Bundle-FindCandidates-Request.json ==
 WARNING: Bundle/FindCandidates-Request: Bundle.link[0].url: No definition could be found for URL value 'urn:uuid:92cbad6f-b07c-4288-88fc-884a8d4d50ec'
 == fsh-generated/resources/Bundle-FindCandidates-Response.json ==
@@ -192,6 +206,24 @@ WARNING: Bundle/GetDemographics-withPHNInfo-Response: Bundle.entry[2].resource/*
 WARNING: Bundle/GetDemographics-withPHNInfo-Response: Bundle.entry[2].resource/*Patient/87d81314-eba2-4071-af5a-f2b98bf4c13a*/.identifier[3].system: No definition could be found for URL value 'https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-arh-source-patient-id'
 WARNING: Bundle/GetDemographics-withPHNInfo-Response: Bundle.entry[2].resource/*Patient/87d81314-eba2-4071-af5a-f2b98bf4c13a*/.identifier[4].system: No definition could be found for URL value 'https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-bh-source-patient-id'
 WARNING: Bundle/GetDemographics-withPHNInfo-Response: Bundle.entry[2].resource/*Patient/87d81314-eba2-4071-af5a-f2b98bf4c13a*/.identifier[5].system: No definition could be found for URL value 'https://fhir.infoway-inforoute.ca/NamingSystem/ca-ab-patient-healthcare-id'
+== fsh-generated/resources/Bundle-NEW-Distribution-Notification.json ==
+ERROR: Bundle/NEW-Distribution-Notification: Bundle: Slice 'Bundle.entry:operationOutcome': a matching slice is required, but not found (from http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle|1.0.0). Note that other slices are allowed in addition to this required slice
+WARNING: Bundle/NEW-Distribution-Notification: Bundle.link[0].url: No definition could be found for URL value 'urn:uuid:356859ba-983b-40d6-a03c-5a99f05c96b5'
+ERROR: Bundle/NEW-Distribution-Notification: Bundle.entry[0].resource/*Parameters/Inline-Instance-for-NEW-Distribution*/.parameter[2].value.ofType(code): The Profile 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-subscription|1.0.0' definition allows for the type CodeableConcept but found type code
+ERROR: Bundle/NEW-Distribution-Notification: Bundle.entry[0].resource/*Parameters/Inline-Instance-for-NEW-Distribution*/.parameter[2].value.ofType(code): No code provided, and a code is required from the value set 'BC Client Registry Patient Change Notification Events Value Set' (https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-client-registry-patient-change-notification-events|1.0.0)
+WARNING: Bundle/NEW-Distribution-Notification: Bundle.entry[1].resource/*Patient/NEWPatient*/.identifier[0].system: No definition could be found for URL value 'https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id'
+ERROR: Bundle/NEW-Distribution-Notification: Bundle.entry[0]: The fullUrl 'https://hd4.hcim.ehealth.gov.bc.ca/Patient/PHNHere' looks like a RESTful server URL, so it must end with the correct type and id (/Patient/NEWPatient)
+== fsh-generated/resources/Bundle-NEWBORN-Distribution-Notification-Masked-MumPHN.json ==
+ERROR: Bundle/NEWBORN-Distribution-Notification-Masked-MumPHN: Bundle: Slice 'Bundle.entry:operationOutcome': a matching slice is required, but not found (from http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle|1.0.0). Note that other slices are allowed in addition to this required slice
+WARNING: Bundle/NEWBORN-Distribution-Notification-Masked-MumPHN: Bundle.link[0].url: No definition could be found for URL value 'urn:uuid:bb122554-dd6b-4c3a-a162-c80c388a637b'
+ERROR: Bundle/NEWBORN-Distribution-Notification-Masked-MumPHN: Bundle.entry[0].resource/*Parameters/Inline-Instance-for-NEWBORN-Distribution-Masked-MumPHN*/.parameter[2].value.ofType(code): The Profile 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-subscription|1.0.0' definition allows for the type CodeableConcept but found type code
+ERROR: Bundle/NEWBORN-Distribution-Notification-Masked-MumPHN: Bundle.entry[0].resource/*Parameters/Inline-Instance-for-NEWBORN-Distribution-Masked-MumPHN*/.parameter[2].value.ofType(code): No code provided, and a code is required from the value set 'BC Client Registry Patient Change Notification Events Value Set' (https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-client-registry-patient-change-notification-events|1.0.0)
+ERROR: Bundle/NEWBORN-Distribution-Notification-Masked-MumPHN: Bundle.entry[1].resource/*Patient/NEWBORNPatient*/.contained[0]/*RelatedPerson/null*/: Resource requires an id, but none is present
+ERROR: Bundle/NEWBORN-Distribution-Notification-Masked-MumPHN: Bundle.entry[1].resource/*Patient/NEWBORNPatient*/.contained[0]/*RelatedPerson/null*/: RelatedPerson.patient: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1)
+WARNING: Bundle/NEWBORN-Distribution-Notification-Masked-MumPHN: Bundle.entry[1].resource/*Patient/NEWBORNPatient*/.contained[0]/*RelatedPerson/null*/.identifier[0].system: No definition could be found for URL value 'https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id'
+WARNING: Bundle/NEWBORN-Distribution-Notification-Masked-MumPHN: Bundle.entry[1].resource/*Patient/NEWBORNPatient*/.identifier[0].system: No definition could be found for URL value 'https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id'
+ERROR: Bundle/NEWBORN-Distribution-Notification-Masked-MumPHN: Bundle.entry[1].resource/*Patient/NEWBORNPatient*/.contained[0]: The contained resource 'null' is not referenced to from elsewhere in the containing resource nor does it refer to the containing resource (dom-3)
+ERROR: Bundle/NEWBORN-Distribution-Notification-Masked-MumPHN: Bundle.entry[0]: The fullUrl 'https://hd4.hcim.ehealth.gov.bc.ca/Patient/PHNHere' looks like a RESTful server URL, so it must end with the correct type and id (/Patient/NEWBORNPatient)
 == fsh-generated/resources/Bundle-Revise-Async-ACK.json ==
 WARNING: Bundle/Revise-Async-ACK: Bundle.link[0].url: No definition could be found for URL value 'Patient\Revise'
 WARNING: Bundle/Revise-Async-ACK: Bundle.entry[0].resource/*Parameters/6426876c-8118-4020-8364-7021d0a1ec23*/.parameter[1].value.ofType(Identifier).system: No definition could be found for URL value 'http://hlth.gov.bc.ca/fhir/client/bc-org'
@@ -248,7 +280,7 @@ WARNING: OperationDefinition/bc-patient-merge: OperationDefinition.inputProfile.
 WARNING: OperationDefinition/bc-patient-merge: OperationDefinition.inputProfile.parameter[4]: The 'in' profile does not have a parameter 'result-patient' but it is in the parameters list in the operation definition
 WARNING: OperationDefinition/bc-patient-merge: OperationDefinition.outputProfile.parameter[5]: The 'out' profile does not have a parameter 'return' but it is in the parameters list in the operation definition
 == fsh-generated/resources/OperationDefinition-bc-patient-notification.json ==
-ERROR: OperationDefinition/bc-patient-notification: OperationDefinition.inputProfile: The 'in' profile 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle' is not a profile on the 'Parameters' resource
+ERROR: OperationDefinition/bc-patient-notification: OperationDefinition.inputProfile: The 'in' profile 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle' is not a profile on the 'Parameters' resource
 == fsh-generated/resources/OperationDefinition-bc-patient-revise.json ==
 ERROR: OperationDefinition/bc-patient-revise: OperationDefinition.inputProfile: The 'in' profile 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle' is not a profile on the 'Parameters' resource
 ERROR: OperationDefinition/bc-patient-revise: OperationDefinition.outputProfile: The 'out' profile 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle' is not a profile on the 'Parameters' resource
@@ -336,7 +368,7 @@ INFORMATION: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/
 == fsh-generated/resources/StructureDefinition-bc-metadata-parameters-out.json ==
 INFORMATION: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out'): The Implementation Guide contains no explicitly linked examples for this profile
 == fsh-generated/resources/StructureDefinition-bc-metadata-parameters-subscription.json ==
-WARNING: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-subscription'): The Implementation Guide contains no examples for this profile
+INFORMATION: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-subscription'): The Implementation Guide contains no explicitly linked examples for this profile
 == fsh-generated/resources/StructureDefinition-bc-multiplebirth-history-extension.json ==
 WARNING: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-multiplebirth-history-extension'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-bc-patient.json ==
@@ -353,7 +385,6 @@ WARNING: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/Stru
 == fsh-generated/resources/StructureDefinition-bc-search-response-bundle.json ==
 == fsh-generated/resources/StructureDefinition-bc-sourceId-extension.json ==
 == fsh-generated/resources/StructureDefinition-bc-subscription-notification-bundle.json ==
-WARNING: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-bc-validation-status-extension.json ==
 == fsh-generated/resources/Subscription-SampleCompositeSubscriptionRequest.json ==
 == fsh-generated/resources/ValueSet-bc-address-validation-value-set.json ==
@@ -361,6 +392,9 @@ WARNING: StructureDefinition.where(url = 'http://hlth.gov.bc.ca/fhir/client/Stru
 == fsh-generated/resources/ValueSet-bc-contact-point-system-value-set.json ==
 == fsh-generated/resources/ValueSet-bc-contact-point-use-value-set.json ==
 == fsh-generated/resources/ValueSet-bc-identifier-status-value-set.json ==
+== fsh-generated/resources/ValueSet-bc-identifier-use-value-set.json ==
+ERROR: ValueSet.where(url = 'https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-identifier-use-value-set'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-bc-identifier-use-value-set.json - the canonical URL (http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-identifier-use-value-set) does not match the URL (https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-identifier-use-value-set). Use the special-url parameter if you really mean for it not to match
+ERROR: /github/workspace/fsh-generated/resources/ValueSet-bc-identifier-use-value-set: URL Mismatch http://hlth.gov.bc.ca/fhir/client/ValueSet/bc-identifier-use-value-set vs https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-identifier-use-value-set
 == fsh-generated/resources/ValueSet-bc-merge-status-value-set.json ==
 == fsh-generated/resources/ValueSet-bc-name-use-value-set.json ==
 == input/resources/SubscriptionTopic.json ==

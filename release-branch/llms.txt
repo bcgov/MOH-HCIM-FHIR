@@ -1,0 +1,139 @@
+# fhir.ca-bc.client#1.0.0: BC Client Registry FHIR Implementation Guide
+
+## Pages
+
+* [Client Registry Overview](index.md)
+* [Connected Partners](connectedPartner.md)
+* [Distributions](distributions.md)
+* [Identifiers](identifiers.md)
+* [Future Plans](futurePlans.md)
+* [](SubscriptionTopic-HCIMPatientChangeDistributionTopic.change.history.md)
+* [Artifacts Summary](artifacts.md)
+* [FHIR Design](design.md)
+* [Transition from V3 Provider to FHIR](v3Transition.md)
+* [Data Absent Reason](absentData.md)
+* [Glossary](terminology.md)
+* [RESTful Services](restful.md)
+* [Credits](credits.md)
+* [Technical Details](techdetails.md)
+* [HCIM Patient Change Distributions Topic](SubscriptionTopic-HCIMPatientChangeDistributionTopic.md)
+* [Search Patient Operations](search.md)
+* [HCIM Patient Change Distributions Topic - XML Representation](SubscriptionTopic-HCIMPatientChangeDistributionTopic.xml.md)
+* [Capability Statement](capabilityStatement.md)
+* [HCIM Patient Change Distributions Topic - TTL Representation](SubscriptionTopic-HCIMPatientChangeDistributionTopic.ttl.md)
+* [HCIM Patient Change Distributions Topic - JSON Representation](SubscriptionTopic-HCIMPatientChangeDistributionTopic.json.md)
+* [Add, Revise and Merge Patient](reviseAndMerge.md)
+
+## Resources
+
+### CodeSystems
+
+* [BC Client Registry Address Validation Status Code](CodeSystem-bc-client-registry-address-validation-code-system.md)
+* [BC Client Registry merge status.](CodeSystem-bc-client-registry-merge-status-code-system.md)
+* [BC Client Registry Patient Change Notification Events Code System](CodeSystem-bc-client-registry-patient-change-notification-events.md)
+* [BC Client registry identifier status code system](CodeSystem-bc-identifier-status-code-system.md)
+* [BC Client Registry Operation Outcome details code system](CodeSystem-bc-operation-outcome-details-code-system.md)
+
+### ValueSets
+
+* [BC Address Validation Value Set](ValueSet-bc-address-validation-value-set.md)
+* [BC Client Registry Patient Change Notification Events Value Set](ValueSet-bc-client-registry-patient-change-notification-events-value-set.md)
+* [BC Contact Point System Value Set](ValueSet-bc-contact-point-system-value-set.md)
+* [BC Contact Point Use Value Set](ValueSet-bc-contact-point-use-value-set.md)
+* [BC Identifier Status Value Set](ValueSet-bc-identifier-status-value-set.md)
+* [BC Identifier Use Value Set](ValueSet-bc-identifier-use-value-set.md)
+* [BC Merge Status Value Set](ValueSet-bc-merge-status-value-set.md)
+* [BC Name Use value set.](ValueSet-bc-name-use-value-set.md)
+
+### Resource Profiles
+
+* [HCIMPatientChangeSubscription](StructureDefinition-HCIMPatientChangeSubscription.md)
+* [AddRequestBundle](StructureDefinition-bc-add-request-bundle.md)
+* [AddResponseBundle](StructureDefinition-bc-add-response-bundle.md)
+* [AsyncAckBundle](StructureDefinition-bc-async-ack-response-bundle.md)
+* [FindCandidatesRequestBundle](StructureDefinition-bc-find-candidates-request-bundle.md)
+* [GetDemographicsRequestBundle](StructureDefinition-bc-get-demographics-request-bundle.md)
+* [PatientMerge](StructureDefinition-bc-merge-patient.md)
+* [MergeRequestBundle](StructureDefinition-bc-merge-request-bundle.md)
+* [MergeResponseBundle](StructureDefinition-bc-merge-response-bundle.md)
+* [MetadataParametersAsync](StructureDefinition-bc-metadata-parameter-async-response.md)
+* [MetadataParametersIn](StructureDefinition-bc-metadata-parameters-in.md)
+* [MetadataParametersOut](StructureDefinition-bc-metadata-parameters-out.md)
+* [MetadataParametersSubscription](StructureDefinition-bc-metadata-parameters-subscription.md)
+* [PatientByExample](StructureDefinition-bc-patient-by-example.md)
+* [ClientRegistryPatient](StructureDefinition-bc-patient.md)
+* [ReviseRequestBundle](StructureDefinition-bc-revise-request-bundle.md)
+* [ReviseResponseBundle](StructureDefinition-bc-revise-response-bundle.md)
+* [SearchResponseBundle](StructureDefinition-bc-search-response-bundle.md)
+* [SubscriptionNotificationBundle](StructureDefinition-bc-subscription-notification-bundle.md)
+
+### Extensions
+
+* [BC Birth Date History](StructureDefinition-bc-birthdate-history-extension.md)
+* [BC Business Dates](StructureDefinition-bc-business-period-extension.md)
+* [BC Death Date History](StructureDefinition-bc-death-date-history-extension.md)
+* [BC Death Verified Flag](StructureDefinition-bc-death-verified-flag-extension.md)
+* [BC Death Verified Flag History](StructureDefinition-bc-death-verified-flag-history-extension.md)
+* [BC Gender History](StructureDefinition-bc-gender-history-extension.md)
+* [BC Identifier Status](StructureDefinition-bc-identifier-status-extension.md)
+* [BC Merge Status Code](StructureDefinition-bc-merge-status-extension.md)
+* [BC Multiple Birth History](StructureDefinition-bc-multiplebirth-history-extension.md)
+* [BC SourceID and UserID](StructureDefinition-bc-sourceId-extension.md)
+* [BC Address Validation Status Code](StructureDefinition-bc-validation-status-extension.md)
+
+### Basics
+
+* [HCIMPatientChangeDistributionTopic](Basic-HCIMPatientChangeDistributionTopic.md)
+
+### CapabilityStatements
+
+* [BC HCIM Client Capability Statement](CapabilityStatement-bc-hcim-capability-statement-client.md)
+* [BC HCIM Server Capability Statement](CapabilityStatement-bc-hcim-capability-statement-server.md)
+
+### ImplementationGuides
+
+* [BC Client Registry FHIR Implementation Guide](index.md)
+
+### OperationDefinitions
+
+* [AddPatient](OperationDefinition-bc-patient-add.md)
+* [Find Candidates By Example](OperationDefinition-bc-patient-find-candidates.md)
+* [GetDemographics](OperationDefinition-bc-patient-get-demographics.md)
+* [Merge Patient](OperationDefinition-bc-patient-merge.md)
+* [Patient Notification](OperationDefinition-bc-patient-notification.md)
+* [Revise Patient](OperationDefinition-bc-patient-revise.md)
+
+### Examples
+
+* [AddNewbornByMumsPHN-Request (Bundle)](Bundle-AddNewbornByMumsPHN-Request.md)
+* [AddPatient-Request (Bundle)](Bundle-AddPatient-Request.md)
+* [AddPatient-Response (Bundle)](Bundle-AddPatient-Response.md)
+* [COMP-Distribution-Notification (Bundle)](Bundle-COMP-Distribution-Notification.md)
+* [FindCandidates-Request (Bundle)](Bundle-FindCandidates-Request.md)
+* [FindCandidates-Response (Bundle)](Bundle-FindCandidates-Response.md)
+* [FindNewbornByMumsPHN-Request (Bundle)](Bundle-FindNewbornByMumsPHN-Request.md)
+* [FindNewbornByMumsPHN-Response (Bundle)](Bundle-FindNewbornByMumsPHN-Response.md)
+* [GetDemographics-Request-By-SSRI (Bundle)](Bundle-GetDemographics-Request-By-SSRI.md)
+* [GetDemographics-Request (Bundle)](Bundle-GetDemographics-Request.md)
+* [GetDemographics-Response-Masked (Bundle)](Bundle-GetDemographics-Response-Masked.md)
+* [GetDemographics-Response (Bundle)](Bundle-GetDemographics-Response.md)
+* [GetDemographics-withHistory-Request (Bundle)](Bundle-GetDemographics-withHistory-Request.md)
+* [GetDemographics-withHistory-Response (Bundle)](Bundle-GetDemographics-withHistory-Response.md)
+* [GetDemographics-withPHNInfo-Response (Bundle)](Bundle-GetDemographics-withPHNInfo-Response.md)
+* [NEW-Distribution-Notification (Bundle)](Bundle-NEW-Distribution-Notification.md)
+* [NEWBORN-Distribution-Notification-Masked-MumPHN (Bundle)](Bundle-NEWBORN-Distribution-Notification-Masked-MumPHN.md)
+* [Revise-Async-ACK (Bundle)](Bundle-Revise-Async-ACK.md)
+* [Revise-Request-No-SRI (Bundle)](Bundle-Revise-Request-No-SRI.md)
+* [Revise-Response (Bundle)](Bundle-Revise-Response.md)
+* [Revise-withMaxData-Request (Bundle)](Bundle-Revise-withMaxData-Request.md)
+* [OperationOutcome-Example (OperationOutcome)](OperationOutcome-OperationOutcome-Example.md)
+* [OperationOutcome-Search-Example (OperationOutcome)](OperationOutcome-OperationOutcome-Search-Example.md)
+* [Merge-Min-Request (Parameters)](Parameters-Merge-Min-Request.md)
+* [Merge-Request (Parameters)](Parameters-Merge-Request.md)
+* [Merge-Response (Parameters)](Parameters-Merge-Response.md)
+* [Force-Create-Request (Patient)](Patient-Force-Create-Request.md)
+* [Newborn-Request (Patient)](Patient-Newborn-Request.md)
+* [Patient-GetDemographics-Example (Patient)](Patient-Patient-GetDemographics-Example.md)
+* [Revise-Request-No-SRI-RESTful (Patient)](Patient-Revise-Request-No-SRI-RESTful.md)
+* [Revise-Request (Patient)](Patient-Revise-Request.md)
+* [SampleCompositeSubscriptionRequest (Subscription)](Subscription-SampleCompositeSubscriptionRequest.md)

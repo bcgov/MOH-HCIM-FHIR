@@ -11,15 +11,18 @@
   fhir:id [ fhir:v "bc-patient-find-candidates"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition bc-patient-find-candidates</b></p><a name=\"bc-patient-find-candidates\"> </a><a name=\"hcbc-patient-find-candidates\"> </a><p>URL: [base]/Patient?_query=FindCandidates&amp;...</p><p>Input parameters Profile:<a href=\"StructureDefinition-bc-find-candidates-request-bundle.html\">FindCandidatesRequestBundle</a></p><p>Output parameters Profile:<a href=\"StructureDefinition-bc-search-response-bundle.html\">SearchResponseBundle</a></p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>FindCandidatesRequestBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The FindCandidates operation request Bundle.</p>\n</div></td></tr><tr><td>OUT</td><td>SearchResponseBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The FindCandidates operation response Bundle.</p>\n</div></td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition bc-patient-find-candidates</b></p><a name=\"bc-patient-find-candidates\"> </a><a name=\"hcbc-patient-find-candidates\"> </a><p>URL: [base]/Patient?_query=FindCandidates&amp;...</p><p>Input parameters Profile:<a href=\"StructureDefinition-bc-find-candidates-request-bundle.html\">FindCandidatesRequestBundle</a></p><p>Output parameters Profile:<a href=\"StructureDefinition-bc-search-response-bundle.html\">SearchResponseBundle</a></p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>FindCandidatesRequestBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The FindCandidates operation request Bundle.</p>\n</div></td></tr><tr><td>OUT</td><td>SearchResponseBundle</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The FindCandidates operation response Bundle.</p>\n</div></td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-find-candidates"^^xsd:anyURI] ; # 
+  fhir:url [
+     fhir:v "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-find-candidates"^^xsd:anyURI ;
+     fhir:l <http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-find-candidates>
+  ] ; # 
   fhir:version [ fhir:v "1.0.0"] ; # 
   fhir:name [ fhir:v "FindCandidatesByExample"] ; # 
   fhir:title [ fhir:v "Find Candidates By Example"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "query"] ; # 
-  fhir:date [ fhir:v "2025-10-07T21:05:34+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-11-21T23:55:27+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "BC Ministry of Health"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "BC Ministry of Health" ] ;
@@ -31,7 +34,10 @@
   fhir:description [ fhir:v "This operation is used to query for a patient.  The response can contain 0 or more Patients."] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
-       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
        fhir:code [ fhir:v "CA" ] ;
        fhir:display [ fhir:v "Canada" ]
      ] )
@@ -43,11 +49,11 @@
   fhir:instance [ fhir:v false] ; # 
   fhir:inputProfile [
      fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle"^^xsd:anyURI ;
-     fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle>
+     fhir:l <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle>
   ] ; # 
   fhir:outputProfile [
      fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"^^xsd:anyURI ;
-     fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle>
+     fhir:l <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle>
   ] ; # 
   fhir:parameter ( [
      fhir:name [ fhir:v "FindCandidatesRequestBundle" ] ;
