@@ -7,6 +7,8 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * identifier only http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 * identifier 0..* MS
 * identifier.extension contains SourceIDExtension named sourceID 0..1 MS and IdentifierStatusExtension named idStatus 0..1 MS
+* identifier.use from IdentifierUseVS (required)
+* identifier.use ^short = "official | secondary"
 * deceased[x] 0..1 MS
 * deceased[x] only dateTime
 * deceased[x].extension contains BusinessPeriodExtension named deathDateEffectiveDates 0..1 MS and SourceIDExtension named sourceID 0..1 MS and DeathDateHistoryExtension named deathDateHistory 0..* MS and DeathVerifiedFlagExtension named verifiedDeathFlag 0..1 MS
@@ -172,4 +174,3 @@ Description: "Identifier status."
 * value[x] only code
 * valueCode from IdentifierStatusVS (required)
 * value[x] ^short = "merged | active"
-
