@@ -22,7 +22,9 @@ Usage: #inline
 * parameter[+].name = "messageDateTime"
 * parameter[=].valueDateTime = "2025-10-10T13:17:47-07:00"
 * parameter[+].name = "eventType"
-* parameter[=].valueCode = #COMP
+* parameter[=].valueCodeableConcept.coding.system = "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"
+* parameter[=].valueCodeableConcept.coding.code = #COMP
+//* parameter[=].valueCodeableConcept.coding.display = "Composite View"
 
 Instance: COMPPatient
 InstanceOf: Patient

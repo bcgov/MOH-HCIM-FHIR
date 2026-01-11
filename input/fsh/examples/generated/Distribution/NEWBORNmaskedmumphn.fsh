@@ -24,7 +24,9 @@ Usage: #inline
 * parameter[+].name = "messageDateTime"
 * parameter[=].valueDateTime = "2025-10-10T07:50:31-07:00"
 * parameter[+].name = "eventType"
-* parameter[=].valueCode = #NEWBORN
+* parameter[=].valueCodeableConcept.coding.system = "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"
+* parameter[=].valueCodeableConcept.coding.code = #NEWBORN
+//* parameter[=].valueCodeableConcept.coding.display = "Newborn"
 
 Instance: NEWBORNPatient
 InstanceOf: Patient
