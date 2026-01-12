@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-get-demographics | *Version*:1.0.0 |
-| Active as of 2025-11-21 | *Computable Name*:GetDemographics |
+| Active as of 2026-01-12 | *Computable Name*:GetDemographics |
 
  
 This operation is used to query for a patient. The response can contain 0 or 1 Patient. 
@@ -18,29 +18,6 @@ The Get Demographics query is a FHIR Operation.
 
 The request is a Bundle with Resources for search parameters and a Patient, i.e. [ClientRegistryClient](StructureDefinition-bc-patient.md), to match against. The Patient resource must have an identifier for this search to succeed.
  Please refer also to the [Identifiers](identifiers.md) page to find more details regarding how to use Identifier in your query.
-
-URL: [base]/Patient?_query=GetDemographics&...
-
-Input parameters Profile:[GetDemographicsRequestBundle](StructureDefinition-bc-get-demographics-request-bundle.md)
-
-Output parameters Profile:[SearchResponseBundle](StructureDefinition-bc-search-response-bundle.md)
-
-### Parameters
-
-* **Use**: IN
-  * **Name**: GetDemographicsRequestBundle
-  * **Scope**: 
-  * **Cardinality**: 1..1
-  * **Type**: [Bundle](http://hl7.org/fhir/R4/bundle.html)
-  * **Binding**: 
-  * **Documentation**: GetDemographics request Bundle.
-* **Use**: OUT
-  * **Name**: SearchResponseBundle
-  * **Scope**: 
-  * **Cardinality**: 1..1
-  * **Type**: [Bundle](http://hl7.org/fhir/R4/bundle.html)
-  * **Binding**: 
-  * **Documentation**: GetDemograponics response Bundle.
 
 ### Notes:
 
@@ -101,7 +78,7 @@ See [Get Demographics request](Bundle-GetDemographics-Request.md) example.
   "title" : "GetDemographics",
   "status" : "active",
   "kind" : "query",
-  "date" : "2025-11-21T23:55:27+00:00",
+  "date" : "2026-01-12T21:43:07+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

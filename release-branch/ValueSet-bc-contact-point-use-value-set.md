@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-use-value-set | *Version*:1.0.0 |
-| Active as of 2025-11-21 | *Computable Name*:ContactPointUseVS |
+| Active as of 2026-01-12 | *Computable Name*:ContactPointUseVS |
 
  
 BC Contact Point Use value set, sliced to meet BC constraints. 
@@ -21,19 +21,9 @@ BC Contact Point Use value set, sliced to meet BC constraints.
 
 ### Logical Definition (CLD)
 
-This value set includes codes based on the following rules:
-
-* Import all the codes that are contained in [ContactPointUse](http://hl7.org/fhir/R4/valueset-contact-point-use.html)
-
-This value set excludes codes based on the following rules:
-
-* Exclude these codes as defined in [`http://hl7.org/fhir/contact-point-use`](http://hl7.org/fhir/R4/codesystem-contact-point-use.html)version 📦4.0.1
-
  
 
 ### Expansion
-
-This value set contains 3 concepts
 
 -------
 
@@ -62,7 +52,7 @@ This value set contains 3 concepts
   "title" : "BC Contact Point Use Value Set",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-11-21T23:55:27+00:00",
+  "date" : "2026-01-12T21:43:07+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

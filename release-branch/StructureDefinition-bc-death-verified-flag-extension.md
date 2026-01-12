@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension | *Version*:1.0.0 |
-| Active as of 2025-11-21 | *Computable Name*:DeathVerifiedFlagExtension |
+| Active as of 2026-01-12 | *Computable Name*:DeathVerifiedFlagExtension |
 
 The Patients death is verified and as recorded in the Client Registry as a flag. This also includes death verified flag history as required.
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-death-verified-fl
   "name" : "DeathVerifiedFlagExtension",
   "title" : "BC Death Verified Flag",
   "status" : "active",
-  "date" : "2025-11-21T23:55:27+00:00",
+  "date" : "2026-01-12T21:43:07+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

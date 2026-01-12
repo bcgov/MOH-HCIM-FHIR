@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-identifier-use-value-set | *Version*:1.0.0 |
-| Active as of 2025-11-21 | *Computable Name*:IdentifierUseVS |
+| Active as of 2026-01-12 | *Computable Name*:IdentifierUseVS |
 
  
 BC Identifier Use value set, sliced to meet BC constraints. 
@@ -20,19 +20,9 @@ BC Identifier Use value set, sliced to meet BC constraints.
 
 ### Logical Definition (CLD)
 
-This value set includes codes based on the following rules:
-
-* Import all the codes that are contained in [IdentifierUse](http://hl7.org/fhir/R4/valueset-identifier-use.html)
-
-This value set excludes codes based on the following rules:
-
-* Exclude these codes as defined in [`http://hl7.org/fhir/identifier-use`](http://hl7.org/fhir/R4/codesystem-identifier-use.html)version 📦4.0.1
-
  
 
 ### Expansion
-
-This value set contains 2 concepts
 
 -------
 
@@ -61,7 +51,7 @@ This value set contains 2 concepts
   "title" : "BC Identifier Use Value Set",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-11-21T23:55:27+00:00",
+  "date" : "2026-01-12T21:43:07+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

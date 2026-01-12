@@ -6,36 +6,6 @@
 
 ## Example Bundle: Revise-withMaxData-Request
 
-Profile: [ReviseRequestBundle](StructureDefinition-bc-revise-request-bundle.md)
-
-Bundle Revise-withMaxData-Request of type collection
-
--------
-
-Entry 1 - fullUrl = urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4
-
-Resource Parameters:
-
-> 
-
-Profile: [MetadataParametersIn](StructureDefinition-bc-metadata-parameters-in.md)
-
-## Parameters
-
-
--------
-
-Entry 2 - fullUrl = urn:uuid:112a2ba8-c3c9-4b08-8cfd-f025b85b3e0c
-
-Resource Patient:
-
-> 
-
-Profile: [ClientRegistryPatient](StructureDefinition-bc-patient.md)
-
-Geraldine Celestine Iye Banek Female, DoB: 1956-12-17 ( Account number (use: official, ))
--------
-
 
 
 ## Resource Content

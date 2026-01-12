@@ -68,8 +68,14 @@
   ] [
      fhir:name [ fhir:v "eventType" ] ;
      fhir:value [
-       a fhir:Code ;
-       fhir:v "NEW"
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"^^xsd:anyURI ;
+           fhir:l <https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events>
+         ] ;
+         fhir:code [ fhir:v "NEW" ]
+       ] )
      ]
   ] ) . # 
 

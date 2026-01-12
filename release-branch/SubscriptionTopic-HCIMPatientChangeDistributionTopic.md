@@ -8,23 +8,5 @@
 
 | |
 | :--- |
-| Active as of 2025-11-21 |
-
-
-* **Event Triggers**: **Resource**
-* **Event Triggers**: [http://hl7.org/fhir/StructureDefinition/Patient](http://hl7.org/fhir/R4/patient.html)
-* **Event Triggers**: [http://hl7.org/fhir/StructureDefinition/Patient](http://hl7.org/fhir/R4/patient.html)
-* **Event Triggers**: [http://hl7.org/fhir/StructureDefinition/Patient](http://hl7.org/fhir/R4/patient.html)
-* **Event Triggers**: [http://hl7.org/fhir/StructureDefinition/Patient](http://hl7.org/fhir/R4/patient.html)
-* **Event Triggers**: [http://hl7.org/fhir/StructureDefinition/Patient](http://hl7.org/fhir/R4/patient.html)
-* **Event Triggers**: [http://hl7.org/fhir/StructureDefinition/Patient](http://hl7.org/fhir/R4/patient.html)
-* **Event Triggers**: [http://hl7.org/fhir/StructureDefinition/Patient](http://hl7.org/fhir/R4/patient.html)
-* **Event Triggers**: [http://hl7.org/fhir/StructureDefinition/Patient](http://hl7.org/fhir/R4/patient.html)
-* **Event Triggers**: [http://hl7.org/fhir/StructureDefinition/Patient](http://hl7.org/fhir/R4/patient.html)
-* **Event Triggers**: [http://hl7.org/fhir/StructureDefinition/Patient](http://hl7.org/fhir/R4/patient.html)
-
-* **Can Filter By**: **Filter Parameter**
-  * ?: **Comparators**
-* **Can Filter By**: eventCode
-  * ?: Equals
+| Active as of 2026-01-12 |
 

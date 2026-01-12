@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-address-validation-code-system | *Version*:1.0.0 |
-| Active as of 2025-11-21 | *Computable Name*:AddressValidationCS |
+| Active as of 2026-01-12 | *Computable Name*:AddressValidationCS |
 
  
 Codes used to define the address validation status. 
@@ -32,7 +32,7 @@ Codes used to define the address validation status.
   "title" : "BC Client Registry Address Validation Status Code",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-11-21T23:55:27+00:00",
+  "date" : "2026-01-12T21:43:07+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

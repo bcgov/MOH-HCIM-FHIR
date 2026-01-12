@@ -6,36 +6,6 @@
 
 ## Example Bundle: FindCandidates-Request
 
-Profile: [FindCandidatesRequestBundle](StructureDefinition-bc-find-candidates-request-bundle.md)
-
-Bundle FindCandidates-Request of type collection
-
--------
-
-Entry 1 - fullUrl = urn:uuid:c3e604ec-0917-41a8-9d90-1da8e66168d7
-
-Resource Parameters:
-
-> 
-
-Profile: [MetadataParametersIn](StructureDefinition-bc-metadata-parameters-in.md)
-
-## Parameters
-
-
--------
-
-Entry 2 - fullUrl = urn:uuid:f8ea5781-7772-4701-aabd-e86595f1487d
-
-Resource Patient:
-
-> 
-
-Profile: [ClientRegistryPatient](StructureDefinition-bc-patient.md)
-
-Apolo Frieson Male, DoB: 1931-02-26
--------
-
 
 
 ## Resource Content

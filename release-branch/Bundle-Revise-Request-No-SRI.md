@@ -6,36 +6,6 @@
 
 ## Example Bundle: Revise-Request-No-SRI
 
-Profile: [ReviseRequestBundle](StructureDefinition-bc-revise-request-bundle.md)
-
-Bundle Revise-Request-No-SRI of type collection
-
--------
-
-Entry 1 - fullUrl = urn:uuid:feece490-6a8b-48c3-bd35-6a16008c19ef
-
-Resource Parameters:
-
-> 
-
-Profile: [MetadataParametersIn](StructureDefinition-bc-metadata-parameters-in.md)
-
-## Parameters
-
-
--------
-
-Entry 2 - fullUrl = urn:uuid:23d2b2f0-7724-4959-9007-302b26499633
-
-Resource Patient:
-
-> 
-
-Profile: [ClientRegistryPatient](StructureDefinition-bc-patient.md)
-
-Proinnsias Edmon Beartlaidh Tabatabai Female, DoB: 1996-02-18 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id#?ngen-9? (use: official, ))
--------
-
 
 
 ## Resource Content

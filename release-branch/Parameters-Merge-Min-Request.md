@@ -6,8 +6,6 @@
 
 ## Example Parameters: Merge-Min-Request
 
-## Parameters
-
 
 
 ## Resource Content

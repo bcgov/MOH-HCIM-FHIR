@@ -6,36 +6,6 @@
 
 ## Example Bundle: NEW-Distribution-Notification
 
-Profile: [SubscriptionNotificationBundle](StructureDefinition-bc-subscription-notification-bundle.md)
-
-Bundle NEW-Distribution-Notification of type collection
-
--------
-
-Entry 1 - fullUrl = urn:uuid:356859ba-983b-40d6-a03c-5a99f05c96b5
-
-Resource Parameters:
-
-> 
-
-Profile: [MetadataParametersSubscription](StructureDefinition-bc-metadata-parameters-subscription.md)
-
-## Parameters
-
-
--------
-
-Entry 2 - fullUrl = https://hd4.hcim.ehealth.gov.bc.ca/Patient/PHNHere
-
-Resource Patient:
-
-> 
-
-Profile: [ClientRegistryPatient](StructureDefinition-bc-patient.md)
-
-Nigel Kleiber Male, DoB: 2004-03-28 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id#PHNHere (use: official, period: 2025-10-10 15:06:59-0700 --> (ongoing)))
--------
-
 
 
 ## Resource Content
@@ -83,7 +53,14 @@ Nigel Kleiber Male, DoB: 2004-03-28 ( https://fhir.infoway-inforoute.ca/NamingSy
           },
           {
             "name" : "eventType",
-            "valueCode" : "NEW"
+            "valueCodeableConcept" : {
+              "coding" : [
+                {
+                  "system" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+                  "code" : "NEW"
+                }
+              ]
+            }
           }
         ]
       }

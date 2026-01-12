@@ -6,36 +6,6 @@
 
 ## Example Bundle: GetDemographics-Request-By-SSRI
 
-Profile: [GetDemographicsRequestBundle](StructureDefinition-bc-get-demographics-request-bundle.md)
-
-Bundle GetDemographics-Request-By-SSRI of type collection
-
--------
-
-Entry 1 - fullUrl = urn:uuid:f38e3ec9-9b39-4d2a-b8e5-0471ae234dda
-
-Resource Parameters:
-
-> 
-
-Profile: [MetadataParametersIn](StructureDefinition-bc-metadata-parameters-in.md)
-
-## Parameters
-
-
--------
-
-Entry 2 - fullUrl = urn:uuid:8ef35b62-3ed8-4caa-8bed-c0cff5b72738
-
-Resource Patient:
-
-> 
-
-Profile: [ClientRegistryPatient](StructureDefinition-bc-patient.md)
-
-Anonymous Patient (no stated gender), DoB Unknown ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id#MB220FXR155686125TUN (use: official, ))
--------
-
 
 
 ## Resource Content

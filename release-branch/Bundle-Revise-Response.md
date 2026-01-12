@@ -6,44 +6,6 @@
 
 ## Example Bundle: Revise-Response
 
-Profile: [ReviseResponseBundle](StructureDefinition-bc-revise-response-bundle.md)
-
-Bundle Revise-Response of type collection
-
--------
-
-Entry 1 - fullUrl = urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4
-
-Resource Parameters:
-
-> 
-
-Profile: [MetadataParametersOut](StructureDefinition-bc-metadata-parameters-out.md)
-
-## Parameters
-
-
--------
-
-Entry 2 - fullUrl = urn:uuid:445c4b0d-95f7-4492-88ba-b491516b4567
-
-Resource OperationOutcome:
-
-> All OK
-
--------
-
-Entry 3 - fullUrl = urn:uuid:445c4b0d-95f7-4492-88ba-b491516b1508
-
-Resource Patient:
-
-> 
-
-Profile: [ClientRegistryPatient](StructureDefinition-bc-patient.md)
-
-Anonymous Patient (no stated gender), DoB Unknown ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id#9999999999 (use: official, period: 2023-01-23 14:02:15-0800 --> (ongoing)))
--------
-
 
 
 ## Resource Content

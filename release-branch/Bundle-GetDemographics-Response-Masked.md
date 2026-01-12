@@ -6,46 +6,6 @@
 
 ## Example Bundle: GetDemographics-Response-Masked
 
-Profile: [SearchResponseBundle](StructureDefinition-bc-search-response-bundle.md)
-
-Bundle GetDemographics-Response-Masked of type searchset
-
--------
-
-Entry 1 - fullUrl = urn:uuid:a5aadea1-11ad-4428-a7d3-88a8e284c261
-
-Resource Parameters:
-
-> 
-
-Profile: [MetadataParametersOut](StructureDefinition-bc-metadata-parameters-out.md)
-
-## Parameters
-
-
--------
-
-Entry 2
-
-Search:Mode = outcome
-
-Resource OperationOutcome:
-
-> All OK
-
--------
-
-Entry 3
-
-Resource Patient:
-
-> 
-
-Profile: [ClientRegistryPatient](StructureDefinition-bc-patient.md)
-
-null, DoB:
--------
-
 
 
 ## Resource Content

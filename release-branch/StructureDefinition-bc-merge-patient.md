@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient | *Version*:1.0.0 |
-| Active as of 2025-11-21 | *Computable Name*:PatientMerge |
+| Active as of 2026-01-12 | *Computable Name*:PatientMerge |
 
  
 General constraints on the Patient resource for use in the BC Client Registry project Merge Operation. 
@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-merge-patient.csv
   "version" : "1.0.0",
   "name" : "PatientMerge",
   "status" : "active",
-  "date" : "2025-11-21T23:55:27+00:00",
+  "date" : "2026-01-12T21:43:07+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

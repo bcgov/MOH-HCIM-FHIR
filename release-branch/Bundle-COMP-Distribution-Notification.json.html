@@ -237,8 +237,8 @@
 
   <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle">resourceType</a>" : "Bundle",
-  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.id">id</a>" : "COMP-Distribution-Notification",
-  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.meta">meta</a>" : {
+  "<a href="http://hl7.org/fhir/R4/resource.html#Bundle.id">id</a>" : "COMP-Distribution-Notification",
+  "<a href="http://hl7.org/fhir/R4/resource.html#Bundle.meta">meta</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
       <a href="StructureDefinition-bc-subscription-notification-bundle.html" style="color: Maroon">&#x1F517;</a> "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle"
     ]
@@ -260,8 +260,8 @@
       "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:0c19a592-9835-4039-a1f7-a9bcc050671f",
       "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/parameters.html">resourceType</a>" : "Parameters",
-        "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.id">id</a>" : "Inline-Instance-for-COMP-Distribution",
-        "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.meta">meta</a>" : {
+        "<a href="http://hl7.org/fhir/R4/resource.html#Parameters.id">id</a>" : "Inline-Instance-for-COMP-Distribution",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Parameters.meta">meta</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
             <a href="StructureDefinition-bc-metadata-parameters-subscription.html" style="color: Maroon">&#x1F517;</a> "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-subscription"
           ]
@@ -269,15 +269,22 @@
         "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter">parameter</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "messageId",
-            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueString</a>" : "0c19a592-9835-4039-a1f7-a9bcc050671f"
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">valueString</a>" : "0c19a592-9835-4039-a1f7-a9bcc050671f"
           },
           {
             "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "messageDateTime",
-            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueDateTime</a>" : "2025-10-10T13:17:47-07:00"
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">valueDateTime</a>" : "2025-10-10T13:17:47-07:00"
           },
           {
             "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "eventType",
-            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueCode</a>" : "COMP"
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">valueCodeableConcept</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "COMP"
+                }
+              ]
+            }
           }
         ]
       }
@@ -286,22 +293,22 @@
       "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://hd4.hcim.ehealth.gov.bc.ca/Patient/PHNHere",
       "<a href="http://hl7.org/fhir/R4/patient.html#Patient">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/patient.html">resourceType</a>" : "Patient",
-        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.id">id</a>" : "COMPPatient",
-        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.meta">meta</a>" : {
+        "<a href="http://hl7.org/fhir/R4/resource.html#Patient.id">id</a>" : "COMPPatient",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Patient.meta">meta</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
             <a href="StructureDefinition-bc-patient.html" style="color: Maroon">&#x1F517;</a> "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
           ]
         },
-        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.text">text</a>" : {
+        "<a href="http://hl7.org/fhir/R4/domainresource.html#Patient.text">text</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Patient_COMPPatient\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Patient COMPPatient&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;COMPPatient\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcCOMPPatient\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-bc-patient.html\&quot;&gt;ClientRegistryPatient&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p style=\&quot;border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\&quot;&gt;Preston Wilfredo Ward Hui  Male, DoB: 2006-06-05 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id#PHNHere\u00a0(use:\u00a0official,\u00a0period:\u00a02025-10-10 13:03:31-0700 --&amp;gt; (ongoing)))&lt;/p&gt;&lt;hr/&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;background-color: #f3f5da\&quot; title=\&quot;Record is active\&quot;&gt;Active:&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;true&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;background-color: #f3f5da\&quot; title=\&quot;Alternate names (see the one above)\&quot;&gt;Alt. Name:&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;Nicolas (Nickname)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;background-color: #f3f5da\&quot; title=\&quot;Ways to contact the Patient\&quot;&gt;Contact Detail&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;&lt;ul&gt;&lt;li&gt;ph: 644-569-9236(Mobile)&lt;/li&gt;&lt;li&gt;ph: 886-839-9045(Home)&lt;/li&gt;&lt;li&gt;ph: 875-281-5886(Work)&lt;/li&gt;&lt;li&gt;&lt;a href=\&quot;mailto:Wilfredo5205@Grove.com\&quot;&gt;Wilfredo5205@Grove.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=\&quot;mailto:Hui6193@Grove.com\&quot;&gt;Hui6193@Grove.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=\&quot;mailto:Preston6559@Grove.com\&quot;&gt;Preston6559@Grove.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;7992 Wentworth Autoroute Suite 6161 PO Box 3681 Holberg BC V3R 0T2 CA &lt;/li&gt;&lt;li&gt;5870 Silliman Grove Rural Route 3233 PO Box 1510 Winter Harbour BC V8N 1B7 CA &lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
         },
         "<a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">identifier</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Identifier.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "active"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "active"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "official",
@@ -391,10 +398,10 @@
         ],
         "<a href="http://hl7.org/fhir/R4/patient.html#Patient.gender">gender</a>" : "male",
         "<a href="http://hl7.org/fhir/R4/patient.html#Patient.gender">_gender</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#code#code.extension">extension</a>" : [
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#code.extension">extension</a>" : [
             {
               "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valuePeriod</a>" : {
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valuePeriod</a>" : {
                 "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2025-10-10T13:03:31-07:00"
               }
             }
@@ -402,10 +409,10 @@
         },
         "<a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">birthDate</a>" : "2006-06-05",
         "<a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">_birthDate</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#date#date.extension">extension</a>" : [
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#date.extension">extension</a>" : [
             {
               "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valuePeriod</a>" : {
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valuePeriod</a>" : {
                 "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2025-10-10T13:03:31-07:00"
               }
             }
@@ -413,10 +420,10 @@
         },
         "<a href="http://hl7.org/fhir/R4/patient.html#Patient.address">address</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Address.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "invalid"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "invalid"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.type">type</a>" : "physical",
@@ -434,10 +441,10 @@
             }
           },
           {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Address.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "invalid"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "invalid"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.type">type</a>" : "postal",
@@ -482,7 +489,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Nov 21, 2025 23:55+0000">2025-11-21</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 12, 2026 21:43+0000">2026-01-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -6,8 +6,6 @@
 
 ## Example Parameters: Merge-Response
 
-## Parameters
-
 
 
 ## Resource Content

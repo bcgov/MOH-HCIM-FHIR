@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-identifier-status-value-set | *Version*:1.0.0 |
-| Active as of 2025-11-21 | *Computable Name*:IdentifierStatusVS |
+| Active as of 2026-01-12 | *Computable Name*:IdentifierStatusVS |
 
  
 BC Identifier Status value set used to describe the status of an identifier. 
@@ -19,8 +19,6 @@ BC Identifier Status value set used to describe the status of an identifier.
 * [BC Identifier Status](StructureDefinition-bc-identifier-status-extension.md)
 
 ### Logical Definition (CLD)
-
-* Include all codes defined in [`https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-identifier-status-code-system`](CodeSystem-bc-identifier-status-code-system.md)version 📦1.0.0
 
  
 
@@ -53,7 +51,7 @@ BC Identifier Status value set used to describe the status of an identifier.
   "title" : "BC Identifier Status Value Set",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-11-21T23:55:27+00:00",
+  "date" : "2026-01-12T21:43:07+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

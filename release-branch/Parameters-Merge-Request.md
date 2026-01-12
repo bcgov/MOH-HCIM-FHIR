@@ -6,8 +6,6 @@
 
 ## Example Parameters: Merge-Request
 
-## Parameters
-
 
 
 ## Resource Content

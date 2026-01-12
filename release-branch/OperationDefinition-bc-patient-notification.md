@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-notification | *Version*:1.0.0 |
-| Active as of 2025-11-21 | *Computable Name*:PatientNotification |
+| Active as of 2026-01-12 | *Computable Name*:PatientNotification |
 
  
 This operation is used notify a user that a patient's record has changed. 
@@ -17,20 +17,6 @@ This operation is used notify a user that a patient's record has changed.
 This is the Patient Notification operation, aka Distribution.
 
 The Client Registry is acting as the client and is sending distributions when a patient record is created or changed.
-
-URL: [base]/Patient/$PatientNotification
-
-Input parameters Profile:[SubscriptionNotificationBundle](StructureDefinition-bc-subscription-notification-bundle.md)
-
-### Parameters
-
-* **Use**: OUT
-  * **Name**: SubscriptionNotificationBundle
-  * **Scope**: 
-  * **Cardinality**: 1..1
-  * **Type**: [Bundle](http://hl7.org/fhir/R4/bundle.html)
-  * **Binding**: 
-  * **Documentation**: The specific bundle entries that are needed when the Client Registry is sending a distribution (notification).
 
 
 
@@ -46,7 +32,7 @@ Input parameters Profile:[SubscriptionNotificationBundle](StructureDefinition-bc
   "title" : "Patient Notification",
   "status" : "active",
   "kind" : "operation",
-  "date" : "2025-11-21T23:55:27+00:00",
+  "date" : "2026-01-12T21:43:07+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

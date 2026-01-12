@@ -6,41 +6,6 @@
 
 ## Example Bundle: NEWBORN-Distribution-Notification-Masked-MumPHN
 
-Profile: [SubscriptionNotificationBundle](StructureDefinition-bc-subscription-notification-bundle.md)
-
-Bundle NEWBORN-Distribution-Notification-Masked-MumPHN of type collection
-
--------
-
-Entry 1 - fullUrl = urn:uuid:bb122554-dd6b-4c3a-a162-c80c388a637b
-
-Resource Parameters:
-
-> 
-
-Profile: [MetadataParametersSubscription](StructureDefinition-bc-metadata-parameters-subscription.md)
-
-## Parameters
-
-
--------
-
-Entry 2 - fullUrl = https://hd4.hcim.ehealth.gov.bc.ca/Patient/PHNHere
-
-Resource Patient:
-
-> 
-
-Profile: [ClientRegistryPatient](StructureDefinition-bc-patient.md)
-
-Baby Wilmore Unknown, DoB: 2025-10-10 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id#PHNHere (use: official, period: 2025-10-10 07:50:31-0700 --> (ongoing)))
--------
-
--------
-**Contained Resource**
--------
-**identifier**:`https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id`/?ngen-9? (use: official, )**active**: true**relationship**:natural mother
-
 
 
 ## Resource Content
@@ -88,7 +53,14 @@ Baby Wilmore Unknown, DoB: 2025-10-10 ( https://fhir.infoway-inforoute.ca/Naming
           },
           {
             "name" : "eventType",
-            "valueCode" : "NEWBORN"
+            "valueCodeableConcept" : {
+              "coding" : [
+                {
+                  "system" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+                  "code" : "NEWBORN"
+                }
+              ]
+            }
           }
         ]
       }

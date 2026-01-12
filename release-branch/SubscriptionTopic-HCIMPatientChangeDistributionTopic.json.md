@@ -8,7 +8,7 @@
 
 | |
 | :--- |
-| Active as of 2025-11-21 |
+| Active as of 2026-01-12 |
 
 [Raw json](SubscriptionTopic-HCIMPatientChangeDistributionTopic.json) | [Download](SubscriptionTopic-HCIMPatientChangeDistributionTopic.json)
 

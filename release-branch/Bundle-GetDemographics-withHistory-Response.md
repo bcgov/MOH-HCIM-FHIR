@@ -6,46 +6,6 @@
 
 ## Example Bundle: GetDemographics-withHistory-Response
 
-Profile: [SearchResponseBundle](StructureDefinition-bc-search-response-bundle.md)
-
-Bundle GetDemographics-withHistory-Response of type searchset
-
--------
-
-Entry 1 - fullUrl = urn:uuid:fb5ed5fa-e08f-4b88-948a-d81cd26d3453
-
-Resource Parameters:
-
-> 
-
-Profile: [MetadataParametersOut](StructureDefinition-bc-metadata-parameters-out.md)
-
-## Parameters
-
-
--------
-
-Entry 2 - fullUrl = urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf74567
-
-Search:Mode = outcome
-
-Resource OperationOutcome:
-
-> All OK
-
--------
-
-Entry 3 - fullUrl = urn:uuid:68e9d4a1-2be0-4fcb-991f-1d503cf7f4ba
-
-Resource Patient:
-
-> 
-
-Profile: [ClientRegistryPatient](StructureDefinition-bc-patient.md)
-
-Alithea Joacheim Aine Parthemore Female, DoB: 1946-11-28 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id#9999999999 (use: official, period: 2023-01-23 14:00:53-0800 --> (ongoing)))
--------
-
 
 
 ## Resource Content

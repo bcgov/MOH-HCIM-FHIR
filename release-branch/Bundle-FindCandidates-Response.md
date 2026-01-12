@@ -6,63 +6,6 @@
 
 ## Example Bundle: FindCandidates-Response
 
-Profile: [SearchResponseBundle](StructureDefinition-bc-search-response-bundle.md)
-
-Bundle FindCandidates-Response of type searchset
-
--------
-
-Entry 1 - fullUrl = urn:uuid:c3e604ec-0917-41a8-9d90-1da8e66168d7
-
-Resource Parameters:
-
-> 
-
-Profile: [MetadataParametersOut](StructureDefinition-bc-metadata-parameters-out.md)
-
-## Parameters
-
-
--------
-
-Entry 2 - fullUrl = urn:uuid:c3e604ec-0917-41a8-9d90-1da8e6615678
-
-Search:Mode = outcome
-
-Resource OperationOutcome:
-
-> All OK
-
--------
-
-Entry 3 - fullUrl = urn:uuid:b24a0288-a7b4-4219-8374-856b03a47715
-
-Search:Mode = match,Score = 159
-
-Resource Patient:
-
-> 
-
-Profile: [ClientRegistryPatient](StructureDefinition-bc-patient.md)
-
-Elefteria Aida Patxi Pinchock Male, DoB: 1925-05-14 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id#9999999990 (use: official, period: 2023-01-23 13:58:38-0800 --> (ongoing)))
--------
-
--------
-
-Entry 4 - fullUrl = urn:uuid:db8b0c05-a81f-49ea-8110-92cc826ff09e
-
-Search:Mode = match,Score = 91
-
-Resource Patient:
-
-> 
-
-Profile: [ClientRegistryPatient](StructureDefinition-bc-patient.md)
-
-Meriwa Tin Edwige Sanon Female, DoB: 1968-08-07 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id#9999999991 (use: official, period: 2023-01-23 13:58:38-0800 --> (ongoing)))
--------
-
 
 
 ## Resource Content

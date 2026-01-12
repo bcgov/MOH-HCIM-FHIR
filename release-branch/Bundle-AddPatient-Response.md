@@ -6,44 +6,6 @@
 
 ## Example Bundle: AddPatient-Response
 
-Profile: [AddResponseBundle](StructureDefinition-bc-add-response-bundle.md)
-
-Bundle AddPatient-Response of type collection
-
--------
-
-Entry 1 - fullUrl = urn:uuid:0185235c-f8ea-4107-8979-591ddc2df30b
-
-Resource Parameters:
-
-> 
-
-Profile: [MetadataParametersOut](StructureDefinition-bc-metadata-parameters-out.md)
-
-## Parameters
-
-
--------
-
-Entry 2 - fullUrl = urn:uuid:0185235c-f8ea-4107-8979-591ddc2d1234
-
-Resource OperationOutcome:
-
-> All OK
-
--------
-
-Entry 3 - fullUrl = urn:uuid:33f234d1-5781-45f2-8c8c-4b7cdd809078
-
-Resource Patient:
-
-> 
-
-Profile: [ClientRegistryPatient](StructureDefinition-bc-patient.md)
-
-Anonymous Patient (no stated gender), DoB Unknown ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id#9253484802 (use: official, period: 2023-01-23 13:46:27-0800 --> (ongoing)))
--------
-
 
 
 ## Resource Content

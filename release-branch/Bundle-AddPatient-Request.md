@@ -12,36 +12,6 @@ The **first** resource is a Parameters (MetadataParametersIn) with message ID an
 
 The **second** resource is the Patient (ClientRegistryPatient) with the patient's information.
 
-Profile: [AddRequestBundle](StructureDefinition-bc-add-request-bundle.md)
-
-Bundle AddPatient-Request of type collection
-
--------
-
-Entry 1 - fullUrl = urn:uuid:0185235c-f8ea-4107-8979-591ddc2df30b
-
-Resource Parameters:
-
-> 
-
-Profile: [MetadataParametersIn](StructureDefinition-bc-metadata-parameters-in.md)
-
-## Parameters
-
-
--------
-
-Entry 2 - fullUrl = urn:uuid:951b9e8e-5c78-44d5-91b1-ad6fb748de4b
-
-Resource Patient:
-
-> 
-
-Profile: [ClientRegistryPatient](StructureDefinition-bc-patient.md)
-
-Legarra Antonin Cecily Gillette Female, DoB: 1971-01-09 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id#9455882493 (use: official, ))
--------
-
 
 
 ## Resource Content

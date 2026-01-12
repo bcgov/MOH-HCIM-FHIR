@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-revise | *Version*:1.0.0 |
-| Draft as of 2025-11-21 | *Computable Name*:RevisePatient |
+| Draft as of 2026-01-12 | *Computable Name*:RevisePatient |
 
  
 This operation is used to revise a patient's demographics. 
@@ -19,29 +19,6 @@ This is the Revise Patient operation. The request is a Bundle and is used for in
 A Patient resource is required to update or add a patient. If updating, the empty attributes in the Patient resource will be deleted by the Client Registry.
 
 Please refer also to the [Identifiers](identifiers.md) page to find more details regarding how to use Identifier in your query.
-
-URL: [base]/Patient/$RevisePatient
-
-Input parameters Profile:[ReviseRequestBundle](StructureDefinition-bc-revise-request-bundle.md)
-
-Output parameters Profile:[ReviseResponseBundle](StructureDefinition-bc-revise-response-bundle.md)
-
-### Parameters
-
-* **Use**: IN
-  * **Name**: ReviseRequestBundle
-  * **Scope**: 
-  * **Cardinality**: 1..1
-  * **Type**: [Bundle](http://hl7.org/fhir/R4/bundle.html)
-  * **Binding**: 
-  * **Documentation**: The RevisePatient operation request Bundle.
-* **Use**: OUT
-  * **Name**: ReviseResponseBundle
-  * **Scope**: 
-  * **Cardinality**: 1..1
-  * **Type**: [Bundle](http://hl7.org/fhir/R4/bundle.html)
-  * **Binding**: 
-  * **Documentation**: The RevisePatient operation response Bundle.
 
 ### Notes:
 
@@ -87,7 +64,7 @@ See [Revise Patient request](Bundle-Revise-withMaxData-Request.md) example.
   "title" : "Revise Patient",
   "status" : "draft",
   "kind" : "operation",
-  "date" : "2025-11-21T23:55:27+00:00",
+  "date" : "2026-01-12T21:43:07+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

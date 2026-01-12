@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-find-candidates | *Version*:1.0.0 |
-| Active as of 2025-11-21 | *Computable Name*:FindCandidatesByExample |
+| Active as of 2026-01-12 | *Computable Name*:FindCandidatesByExample |
 
  
 This operation is used to query for a patient. The response can contain 0 or more Patients. 
@@ -23,29 +23,6 @@ This is a 'search by example' and the Patient resource may be populated with var
 Please refer also to the [Identifiers](identifiers.md) page to find more details regarding how to use Identifier in your query.
 
 For optimal searching and to be conformant with Health Information Exchange standards please review the Client Registry conformance standards found [here](https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/software/conformance-standards). Those documents specify combinations of values that are best suited to find your Patients.
-
-URL: [base]/Patient?_query=FindCandidates&...
-
-Input parameters Profile:[FindCandidatesRequestBundle](StructureDefinition-bc-find-candidates-request-bundle.md)
-
-Output parameters Profile:[SearchResponseBundle](StructureDefinition-bc-search-response-bundle.md)
-
-### Parameters
-
-* **Use**: IN
-  * **Name**: FindCandidatesRequestBundle
-  * **Scope**: 
-  * **Cardinality**: 1..1
-  * **Type**: [Bundle](http://hl7.org/fhir/R4/bundle.html)
-  * **Binding**: 
-  * **Documentation**: The FindCandidates operation request Bundle.
-* **Use**: OUT
-  * **Name**: SearchResponseBundle
-  * **Scope**: 
-  * **Cardinality**: 1..1
-  * **Type**: [Bundle](http://hl7.org/fhir/R4/bundle.html)
-  * **Binding**: 
-  * **Documentation**: The FindCandidates operation response Bundle.
 
 ### Notes:
 
@@ -117,7 +94,7 @@ See [Find Candidates request](Bundle-FindCandidates-Request.md) example.
   "title" : "Find Candidates By Example",
   "status" : "active",
   "kind" : "query",
-  "date" : "2025-11-21T23:55:27+00:00",
+  "date" : "2026-01-12T21:43:07+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

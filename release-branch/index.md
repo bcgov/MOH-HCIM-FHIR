@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/ImplementationGuide/fhir.ca-bc.client | *Version*:1.0.0 |
-| Active as of 2025-11-21 | *Computable Name*:BCHealthClientIdentityManagement |
+| Active as of 2026-01-12 | *Computable Name*:BCHealthClientIdentityManagement |
 
 The Client Registry is the authoritative registry of health care client demographics information in British Columbia. The purpose of the Provincial Client Registry is to:
 
@@ -52,7 +52,7 @@ Releases are described [here](futurePlans.md).
   "name" : "BCHealthClientIdentityManagement",
   "title" : "BC Client Registry FHIR Implementation Guide",
   "status" : "active",
-  "date" : "2025-11-21T23:55:27+00:00",
+  "date" : "2026-01-12T21:43:07+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {
@@ -91,7 +91,7 @@ Releases are described [here](futurePlans.md).
       ],
       "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "packageId" : "hl7.terminology.r4",
-      "version" : "7.0.0"
+      "version" : "7.0.1"
     },
     {
       "id" : "hl7ext",
@@ -629,7 +629,7 @@ Releases are described [here](futurePlans.md).
       },
       {
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-        "valueCode" : "hl7.fhir.uv.tools.r4#0.8.0"
+        "valueCode" : "hl7.fhir.uv.tools.r4#0.9.0"
       },
       {
         "extension" : [

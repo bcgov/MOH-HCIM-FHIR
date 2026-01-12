@@ -6,36 +6,6 @@
 
 ## Example Bundle: COMP-Distribution-Notification
 
-Profile: [SubscriptionNotificationBundle](StructureDefinition-bc-subscription-notification-bundle.md)
-
-Bundle COMP-Distribution-Notification of type collection
-
--------
-
-Entry 1 - fullUrl = urn:uuid:0c19a592-9835-4039-a1f7-a9bcc050671f
-
-Resource Parameters:
-
-> 
-
-Profile: [MetadataParametersSubscription](StructureDefinition-bc-metadata-parameters-subscription.md)
-
-## Parameters
-
-
--------
-
-Entry 2 - fullUrl = https://hd4.hcim.ehealth.gov.bc.ca/Patient/PHNHere
-
-Resource Patient:
-
-> 
-
-Profile: [ClientRegistryPatient](StructureDefinition-bc-patient.md)
-
-Preston Wilfredo Ward Hui Male, DoB: 2006-06-05 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id#PHNHere (use: official, period: 2025-10-10 13:03:31-0700 --> (ongoing)))
--------
-
 
 
 ## Resource Content
@@ -83,7 +53,14 @@ Preston Wilfredo Ward Hui Male, DoB: 2006-06-05 ( https://fhir.infoway-inforoute
           },
           {
             "name" : "eventType",
-            "valueCode" : "COMP"
+            "valueCodeableConcept" : {
+              "coding" : [
+                {
+                  "system" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+                  "code" : "COMP"
+                }
+              ]
+            }
           }
         ]
       }

@@ -6,31 +6,6 @@
 
 ## Example Bundle: Revise-Async-ACK
 
-Profile: [AsyncAckBundle](StructureDefinition-bc-async-ack-response-bundle.md)
-
-Bundle Revise-Async-ACK of type collection
-
--------
-
-Entry 1 - fullUrl = urn:uuid:e12213c8-9351-4a9b-94cb-54d3710be5b4
-
-Resource Parameters:
-
-> 
-
-Profile: [MetadataParametersAsync](StructureDefinition-bc-metadata-parameter-async-response.md)
-
-## Parameters
-
-
--------
-
-Entry 2 - fullUrl = urn:uuid:e12213c8-9351-4a9b-94cb-54d3710b9876
-
-Resource OperationOutcome:
-
-> All OK
-
 
 
 ## Resource Content

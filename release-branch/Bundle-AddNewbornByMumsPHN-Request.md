@@ -14,44 +14,6 @@ The **second** resource is a Patient (ClientRegistryPatient) which represents th
 
 The **third** resource is a RelatedPerson. This resource represents the mother and the mother's PHN is in the Identifier. The patient.reference is the fullUrl of the newborn Patient resource (see **second** resource above) within this Bundle. Lastly the relationship code is NMTH.
 
-Profile: [AddRequestBundle](StructureDefinition-bc-add-request-bundle.md)
-
-Bundle AddNewbornByMumsPHN-Request of type collection
-
--------
-
-Entry 1 - fullUrl = urn:uuid:66fa3c28-1121-4305-bda2-4e834fcbc0f8
-
-Resource Parameters:
-
-> 
-
-Profile: [MetadataParametersIn](StructureDefinition-bc-metadata-parameters-in.md)
-
-## Parameters
-
-
--------
-
-Entry 2 - fullUrl = urn:uuid:66a90476-06d2-4e62-aba7-32d0566ecf41
-
-Resource Patient:
-
-> 
-
-Profile: [ClientRegistryPatient](StructureDefinition-bc-patient.md)
-
-Baby Boy Jaroscak Male, DoB: 2023-01-22 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-north-source-patient-id#4PX0WI5WO23CZRYTQ4GZP6MUJ9R6P2N6MS8Z156 (use: official, ))
--------
-
--------
-
-Entry 3 - fullUrl = urn:uuid:b8d7f4cb-94db-46f6-9a01-7023a292b649
-
-Resource RelatedPerson:
-
-> **identifier**:`https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id`/9253484802 (use: official, period: 2023-01-23 13:46:27-0800 --> (ongoing))**patient**:[Baby Boy Jaroscak Male, DoB: 2023-01-22 ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-north-source-patient-id#4PX0WI5WO23CZRYTQ4GZP6MUJ9R6P2N6MS8Z156 (use: official, ))](Bundle-AddNewbornByMumsPHN-Request.md#urn-uuid-66a90476-06d2-4e62-aba7-32d0566ecf41)**relationship**:natural mother
-
 
 
 ## Resource Content

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add | *Version*:1.0.0 |
-| Draft as of 2025-11-21 | *Computable Name*:AddPatient |
+| Draft as of 2026-01-12 | *Computable Name*:AddPatient |
 
  
 This operation is used for newborns or to 'force create' a patient. 
@@ -17,29 +17,6 @@ This operation is used for newborns or to 'force create' a patient.
 Add Patient is a FHIR Operation. ‘force create’ and newborn interactions can be done with Add Patient Operation.
 
 When adding a newborn the child's PHN is unknown (unassigned) and thus a RelatedPersion which identifies the mother is needed to process the request.
-
-URL: [base]/Patient/$AddPatient
-
-Input parameters Profile:[AddRequestBundle](StructureDefinition-bc-add-request-bundle.md)
-
-Output parameters Profile:[AddResponseBundle](StructureDefinition-bc-add-response-bundle.md)
-
-### Parameters
-
-* **Use**: IN
-  * **Name**: AddRequestBundle
-  * **Scope**: 
-  * **Cardinality**: 1..1
-  * **Type**: [Bundle](http://hl7.org/fhir/R4/bundle.html)
-  * **Binding**: 
-  * **Documentation**: The AddPatient operation request Bundle.
-* **Use**: OUT
-  * **Name**: AddResponseBundle
-  * **Scope**: 
-  * **Cardinality**: 1..1
-  * **Type**: [Bundle](http://hl7.org/fhir/R4/bundle.html)
-  * **Binding**: 
-  * **Documentation**: The AddPatient operation response Bundle.
 
 ### Notes:
 
@@ -95,7 +72,7 @@ See [Add Patient request](Bundle-AddPatient-Request.md) example.
   "title" : "AddPatient",
   "status" : "draft",
   "kind" : "operation",
-  "date" : "2025-11-21T23:55:27+00:00",
+  "date" : "2026-01-12T21:43:07+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

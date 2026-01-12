@@ -6,31 +6,6 @@
 
 ## Example Bundle: FindNewbornByMumsPHN-Request
 
-Profile: [FindCandidatesRequestBundle](StructureDefinition-bc-find-candidates-request-bundle.md)
-
-Bundle FindNewbornByMumsPHN-Request of type collection
-
--------
-
-Entry 1 - fullUrl = urn:uuid:b46f78e1-cfa1-41a6-ba9c-fafe6822791a
-
-Resource Parameters:
-
-> 
-
-Profile: [MetadataParametersIn](StructureDefinition-bc-metadata-parameters-in.md)
-
-## Parameters
-
-
--------
-
-Entry 2 - fullUrl = urn:uuid:e7ae452f-9076-4cd6-958f-1d1c55d34c38
-
-Resource RelatedPerson:
-
-> **identifier**:`https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id`/9999999999**patient**:[Patient/e418862f-1759-42de-98a9-00433a779e9b](https://simplifier.net/resolve?scope=hl7.fhir.ca.baseline@1.2.0&canonical=http://hl7.org/fhir/ca/baseline/Patient/e418862f-1759-42de-98a9-00433a779e9b)**relationship**:natural mother
-
 
 
 ## Resource Content

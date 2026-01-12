@@ -6,46 +6,6 @@
 
 ## Example Bundle: GetDemographics-Response
 
-Profile: [SearchResponseBundle](StructureDefinition-bc-search-response-bundle.md)
-
-Bundle GetDemographics-Response of type searchset
-
--------
-
-Entry 1 - fullUrl = urn:uuid:289d85b9-43a4-4902-9b52-76cb1f02ea69
-
-Resource Parameters:
-
-> 
-
-Profile: [MetadataParametersOut](StructureDefinition-bc-metadata-parameters-out.md)
-
-## Parameters
-
-
--------
-
-Entry 2 - fullUrl = urn:uuid:f156cec9-77fe-40d2-a023-71f1442d4599
-
-Search:Mode = outcome
-
-Resource OperationOutcome:
-
-> All OK
-
--------
-
-Entry 3 - fullUrl = urn:uuid:27fb3c46-a6ea-4986-8238-d94d6655cc1d
-
-Resource Patient:
-
-> 
-
-Profile: [ClientRegistryPatient](StructureDefinition-bc-patient.md)
-
-Benedetta Wuliton Ararinda Colpitts Male, DoB: 2005-05-24 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id#9999999999 (use: official, ))
--------
-
 
 
 ## Resource Content

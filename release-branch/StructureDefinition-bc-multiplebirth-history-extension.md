@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-multiplebirth-history-extension | *Version*:1.0.0 |
-| Active as of 2025-11-21 | *Computable Name*:MultipleBirthHistoryExtension |
+| Active as of 2026-01-12 | *Computable Name*:MultipleBirthHistoryExtension |
 
 This extension allows the Client Registry to include historical multiple birth values in a single Patient resource.
 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-multiplebirth-his
   "name" : "MultipleBirthHistoryExtension",
   "title" : "BC Multiple Birth History",
   "status" : "active",
-  "date" : "2025-11-21T23:55:27+00:00",
+  "date" : "2026-01-12T21:43:07+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

@@ -6,36 +6,6 @@
 
 ## Example Bundle: GetDemographics-Request
 
-Profile: [GetDemographicsRequestBundle](StructureDefinition-bc-get-demographics-request-bundle.md)
-
-Bundle GetDemographics-Request of type collection
-
--------
-
-Entry 1 - fullUrl = urn:uuid:289d85b9-43a4-4902-9b52-76cb1f02ea69
-
-Resource Parameters:
-
-> 
-
-Profile: [MetadataParametersIn](StructureDefinition-bc-metadata-parameters-in.md)
-
-## Parameters
-
-
--------
-
-Entry 2 - fullUrl = urn:uuid:72729b26-5d18-42e3-871a-ccfa9ba6ad06
-
-Resource Patient:
-
-> 
-
-Profile: [ClientRegistryPatient](StructureDefinition-bc-patient.md)
-
-Anonymous Patient (no stated gender), DoB Unknown ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id#8H1496LN8U1F17JP0H2VV)
--------
-
 
 
 ## Resource Content
