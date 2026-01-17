@@ -39,8 +39,10 @@ Extension: BusinessPeriodExtension
 Id: bc-business-period-extension
 Title: "BC Business Dates"
 Description: "The effective dates for the parent element."
-* ^context.type = #element
-* ^context.expression = "Extension"
+* ^context[+].type = #element
+* ^context[=].expression = "Extension"
+* ^context[+].type = #element
+* ^context[=].expression = "Patient"
 * ^context[+].type = #element
 * ^context[=].expression = "Patient.gender"
 * ^context[+].type = #element
