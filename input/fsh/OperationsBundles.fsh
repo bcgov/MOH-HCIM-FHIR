@@ -280,11 +280,9 @@ Description:  "A Bundle that is used in the Client Registry when sending subscri
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "The specific bundle entries that are needed when the Client Registry is sending a subscription notification."
-* entry contains patient 1..1 MS and parameters 1..1 MS and operationOutcome 0..1 MS
+* entry contains patient 0..1 MS and parameters 1..1 MS
 * entry[parameters].resource only MetadataParametersSubscription
 * entry[parameters] ^short = "Subscription Metadata parameters"
-* entry[operationOutcome].resource only OperationOutcome
-* entry[operationOutcome] ^short = "Messages and codes returned by HCIM."
 * entry[patient].resource only ClientRegistryPatient
 * entry[patient] ^short = "Revised Patient."
 
