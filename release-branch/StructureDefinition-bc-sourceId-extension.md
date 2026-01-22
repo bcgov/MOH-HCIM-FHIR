@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension | *Version*:1.0.0 |
-| Active as of 2026-01-12 | *Computable Name*:SourceIDExtension |
+| Active as of 2026-01-22 | *Computable Name*:SourceIDExtension |
 
 Identifiers for the source and user that modified the specific element that this extension is on.
 
@@ -19,7 +19,7 @@ Identifiers for the source and user that modified the specific element that this
 
 **Usages:**
 
-* Use this Extension: [BC Birth Date History](StructureDefinition-bc-birthdate-history-extension.md), [BC Death Date History](StructureDefinition-bc-death-date-history-extension.md), [BC Death Verified Flag](StructureDefinition-bc-death-verified-flag-extension.md), [BC Death Verified Flag History](StructureDefinition-bc-death-verified-flag-history-extension.md)...Show 3 more,[BC Gender History](StructureDefinition-bc-gender-history-extension.md),[BC Multiple Birth History](StructureDefinition-bc-multiplebirth-history-extension.md)and[ClientRegistryPatient](StructureDefinition-bc-patient.md)
+* Use this Extension: [BC Birth Date History](StructureDefinition-bc-birthdate-history-extension.md), [BC Death Date History](StructureDefinition-bc-death-date-history-extension.md), [BC Death Verified Flag](StructureDefinition-bc-death-verified-flag-extension.md), [BC Death Verified Flag History](StructureDefinition-bc-death-verified-flag-history-extension.md)... Show 3 more, [BC Gender History](StructureDefinition-bc-gender-history-extension.md), [BC Multiple Birth History](StructureDefinition-bc-multiplebirth-history-extension.md) and [ClientRegistryPatient](StructureDefinition-bc-patient.md)
 * Examples for this Extension: [Bundle/GetDemographics-withPHNInfo-Response](Bundle-GetDemographics-withPHNInfo-Response.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ca-bc.client|current/StructureDefinition/bc-sourceId-extension)
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-sourceId-extensio
   "name" : "SourceIDExtension",
   "title" : "BC SourceID and UserID",
   "status" : "active",
-  "date" : "2026-01-12T21:43:07+00:00",
+  "date" : "2026-01-22T19:20:19+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

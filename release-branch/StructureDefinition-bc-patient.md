@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient | *Version*:1.0.0 |
-| Active as of 2026-01-12 | *Computable Name*:ClientRegistryPatient |
+| Active as of 2026-01-22 | *Computable Name*:ClientRegistryPatient |
 
  
 General constraints on the Patient resource for use in the BC Client Registry project. 
@@ -22,7 +22,7 @@ In the context of the Revise Person and Merge request message, the Patient resou
 
 **Usages:**
 
-* Use this Profile: [AddRequestBundle](StructureDefinition-bc-add-request-bundle.md), [AddResponseBundle](StructureDefinition-bc-add-response-bundle.md), [FindCandidatesRequestBundle](StructureDefinition-bc-find-candidates-request-bundle.md), [GetDemographicsRequestBundle](StructureDefinition-bc-get-demographics-request-bundle.md)...Show 4 more,[ReviseRequestBundle](StructureDefinition-bc-revise-request-bundle.md),[ReviseResponseBundle](StructureDefinition-bc-revise-response-bundle.md),[SearchResponseBundle](StructureDefinition-bc-search-response-bundle.md)and[SubscriptionNotificationBundle](StructureDefinition-bc-subscription-notification-bundle.md)
+* Use this Profile: [AddRequestBundle](StructureDefinition-bc-add-request-bundle.md), [AddResponseBundle](StructureDefinition-bc-add-response-bundle.md), [FindCandidatesRequestBundle](StructureDefinition-bc-find-candidates-request-bundle.md), [GetDemographicsRequestBundle](StructureDefinition-bc-get-demographics-request-bundle.md)... Show 4 more, [ReviseRequestBundle](StructureDefinition-bc-revise-request-bundle.md), [ReviseResponseBundle](StructureDefinition-bc-revise-response-bundle.md), [SearchResponseBundle](StructureDefinition-bc-search-response-bundle.md) and [SubscriptionNotificationBundle](StructureDefinition-bc-subscription-notification-bundle.md)
 * Examples for this Profile: [Patient/Force-Create-Request](Patient-Force-Create-Request.md), [Patient/Newborn-Request](Patient-Newborn-Request.md), [Patient/Patient-GetDemographics-Example](Patient-Patient-GetDemographics-Example.md), [Patient/Revise-Request-No-SRI-RESTful](Patient-Revise-Request-No-SRI-RESTful.md) and [Patient/Revise-Request](Patient-Revise-Request.md)
 * CapabilityStatements using this Profile: [BC HCIM Client Capability Statement](CapabilityStatement-bc-hcim-capability-statement-client.md)
 
@@ -48,7 +48,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-patient.csv), [Ex
   "version" : "1.0.0",
   "name" : "ClientRegistryPatient",
   "status" : "active",
-  "date" : "2026-01-12T21:43:07+00:00",
+  "date" : "2026-01-22T19:20:19+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

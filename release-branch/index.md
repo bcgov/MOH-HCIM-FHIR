@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/ImplementationGuide/fhir.ca-bc.client | *Version*:1.0.0 |
-| Active as of 2026-01-12 | *Computable Name*:BCHealthClientIdentityManagement |
+| Active as of 2026-01-22 | *Computable Name*:BCHealthClientIdentityManagement |
 
 The Client Registry is the authoritative registry of health care client demographics information in British Columbia. The purpose of the Provincial Client Registry is to:
 
@@ -52,7 +52,7 @@ Releases are described [here](futurePlans.md).
   "name" : "BCHealthClientIdentityManagement",
   "title" : "BC Client Registry FHIR Implementation Guide",
   "status" : "active",
-  "date" : "2026-01-12T21:43:07+00:00",
+  "date" : "2026-01-22T19:20:19+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

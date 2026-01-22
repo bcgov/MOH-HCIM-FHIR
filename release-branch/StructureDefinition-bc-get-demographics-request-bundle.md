@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle | *Version*:1.0.0 |
-| Active as of 2026-01-12 | *Computable Name*:GetDemographicsRequestBundle |
+| Active as of 2026-01-22 | *Computable Name*:GetDemographicsRequestBundle |
 
  
 A Bundle that is used in the Get Demographics Operation request. 
@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-get-demographics-
   "version" : "1.0.0",
   "name" : "GetDemographicsRequestBundle",
   "status" : "active",
-  "date" : "2026-01-12T21:43:07+00:00",
+  "date" : "2026-01-22T19:20:19+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

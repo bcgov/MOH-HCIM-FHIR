@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension | *Version*:1.0.0 |
-| Active as of 2026-01-12 | *Computable Name*:IdentifierStatusExtension |
+| Active as of 2026-01-22 | *Computable Name*:IdentifierStatusExtension |
 
 Identifier status.
 
@@ -20,7 +20,7 @@ Identifier status.
 **Usages:**
 
 * Use this Extension: [ClientRegistryPatient](StructureDefinition-bc-patient.md)
-* Examples for this Extension: [Bundle/AddNewbornByMumsPHN-Request](Bundle-AddNewbornByMumsPHN-Request.md), [Bundle/AddPatient-Response](Bundle-AddPatient-Response.md), [Bundle/COMP-Distribution-Notification](Bundle-COMP-Distribution-Notification.md), [Bundle/FindCandidates-Response](Bundle-FindCandidates-Response.md)...Show 9 more,[Bundle/FindNewbornByMumsPHN-Request](Bundle-FindNewbornByMumsPHN-Request.md),[Bundle/FindNewbornByMumsPHN-Response](Bundle-FindNewbornByMumsPHN-Response.md),[Bundle/GetDemographics-Response](Bundle-GetDemographics-Response.md),[Bundle/GetDemographics-withHistory-Response](Bundle-GetDemographics-withHistory-Response.md),[Bundle/GetDemographics-withPHNInfo-Response](Bundle-GetDemographics-withPHNInfo-Response.md),[Bundle/NEW-Distribution-Notification](Bundle-NEW-Distribution-Notification.md),[Bundle/NEWBORN-Distribution-Notification-Masked-MumPHN](Bundle-NEWBORN-Distribution-Notification-Masked-MumPHN.md),[Bundle/Revise-Response](Bundle-Revise-Response.md)and[Parameters/Merge-Response](Parameters-Merge-Response.md)
+* Examples for this Extension: [Bundle/AddNewbornByMumsPHN-Request](Bundle-AddNewbornByMumsPHN-Request.md), [Bundle/AddPatient-Response](Bundle-AddPatient-Response.md), [Bundle/COMP-Distribution-Notification](Bundle-COMP-Distribution-Notification.md), [Bundle/FindCandidates-Response](Bundle-FindCandidates-Response.md)... Show 9 more, [Bundle/FindNewbornByMumsPHN-Request](Bundle-FindNewbornByMumsPHN-Request.md), [Bundle/FindNewbornByMumsPHN-Response](Bundle-FindNewbornByMumsPHN-Response.md), [Bundle/GetDemographics-Response](Bundle-GetDemographics-Response.md), [Bundle/GetDemographics-withHistory-Response](Bundle-GetDemographics-withHistory-Response.md), [Bundle/GetDemographics-withPHNInfo-Response](Bundle-GetDemographics-withPHNInfo-Response.md), [Bundle/NEW-Distribution-Notification](Bundle-NEW-Distribution-Notification.md), [Bundle/NEWBORN-Distribution-Notification-Masked-MumPHN](Bundle-NEWBORN-Distribution-Notification-Masked-MumPHN.md), [Bundle/Revise-Response](Bundle-Revise-Response.md) and [Parameters/Merge-Response](Parameters-Merge-Response.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ca-bc.client|current/StructureDefinition/bc-identifier-status-extension)
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-identifier-status
   "name" : "IdentifierStatusExtension",
   "title" : "BC Identifier Status",
   "status" : "active",
-  "date" : "2026-01-12T21:43:07+00:00",
+  "date" : "2026-01-22T19:20:19+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

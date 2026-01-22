@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-get-demographics | *Version*:1.0.0 |
-| Active as of 2026-01-12 | *Computable Name*:GetDemographics |
+| Active as of 2026-01-22 | *Computable Name*:GetDemographics |
 
  
 This operation is used to query for a patient. The response can contain 0 or 1 Patient. 
@@ -78,7 +78,7 @@ See [Get Demographics request](Bundle-GetDemographics-Request.md) example.
   "title" : "GetDemographics",
   "status" : "active",
   "kind" : "query",
-  "date" : "2026-01-12T21:43:07+00:00",
+  "date" : "2026-01-22T19:20:19+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

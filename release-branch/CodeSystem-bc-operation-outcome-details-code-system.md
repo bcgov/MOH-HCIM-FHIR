@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-operation-outcome-details-code-system | *Version*:1.0.0 |
-| Active as of 2026-01-12 | *Computable Name*:OperationOutcomeDetailsCS |
+| Active as of 2026-01-22 | *Computable Name*:OperationOutcomeDetailsCS |
 
  
 BC Client Registry Operation Outcome details code system 
@@ -32,7 +32,7 @@ BC Client Registry Operation Outcome details code system
   "title" : "BC Client Registry Operation Outcome details code system",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-01-12T21:43:07+00:00",
+  "date" : "2026-01-22T19:20:19+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

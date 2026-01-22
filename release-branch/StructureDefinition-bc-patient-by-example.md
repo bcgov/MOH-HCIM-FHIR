@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient-by-example | *Version*:1.0.0 |
-| Active as of 2026-01-12 | *Computable Name*:PatientByExample |
+| Active as of 2026-01-22 | *Computable Name*:PatientByExample |
 
  
 Will get removed. General constraints on the Patient resource for use in the BC Client Registry project for queries. PatientByExample is a resource of the Client Registry FHIR implementation use only by Get Demographics and Find Candidates 
@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-patient-by-exampl
   "version" : "1.0.0",
   "name" : "PatientByExample",
   "status" : "active",
-  "date" : "2026-01-12T21:43:07+00:00",
+  "date" : "2026-01-22T19:20:19+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

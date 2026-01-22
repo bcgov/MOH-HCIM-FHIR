@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add | *Version*:1.0.0 |
-| Draft as of 2026-01-12 | *Computable Name*:AddPatient |
+| Draft as of 2026-01-22 | *Computable Name*:AddPatient |
 
  
 This operation is used for newborns or to 'force create' a patient. 
@@ -72,7 +72,7 @@ See [Add Patient request](Bundle-AddPatient-Request.md) example.
   "title" : "AddPatient",
   "status" : "draft",
   "kind" : "operation",
-  "date" : "2026-01-12T21:43:07+00:00",
+  "date" : "2026-01-22T19:20:19+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

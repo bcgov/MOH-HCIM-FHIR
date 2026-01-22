@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension | *Version*:1.0.0 |
-| Active as of 2026-01-12 | *Computable Name*:BusinessPeriodExtension |
+| Active as of 2026-01-22 | *Computable Name*:BusinessPeriodExtension |
 
 The effective dates for the parent element.
 
@@ -19,8 +19,8 @@ The effective dates for the parent element.
 
 **Usages:**
 
-* Use this Extension: [BC Birth Date History](StructureDefinition-bc-birthdate-history-extension.md), [BC Death Date History](StructureDefinition-bc-death-date-history-extension.md), [BC Death Verified Flag](StructureDefinition-bc-death-verified-flag-extension.md), [BC Death Verified Flag History](StructureDefinition-bc-death-verified-flag-history-extension.md)...Show 4 more,[BC Gender History](StructureDefinition-bc-gender-history-extension.md),[PatientMerge](StructureDefinition-bc-merge-patient.md),[BC Multiple Birth History](StructureDefinition-bc-multiplebirth-history-extension.md)and[ClientRegistryPatient](StructureDefinition-bc-patient.md)
-* Examples for this Extension: [Bundle/COMP-Distribution-Notification](Bundle-COMP-Distribution-Notification.md), [Bundle/FindCandidates-Response](Bundle-FindCandidates-Response.md), [Bundle/FindNewbornByMumsPHN-Response](Bundle-FindNewbornByMumsPHN-Response.md), [Bundle/GetDemographics-Request-By-SSRI](Bundle-GetDemographics-Request-By-SSRI.md)...Show 13 more,[Bundle/GetDemographics-Response](Bundle-GetDemographics-Response.md),[Bundle/GetDemographics-withHistory-Response](Bundle-GetDemographics-withHistory-Response.md),[Bundle/GetDemographics-withPHNInfo-Response](Bundle-GetDemographics-withPHNInfo-Response.md),[Bundle/NEW-Distribution-Notification](Bundle-NEW-Distribution-Notification.md),[Bundle/NEWBORN-Distribution-Notification-Masked-MumPHN](Bundle-NEWBORN-Distribution-Notification-Masked-MumPHN.md),[Bundle/Revise-Request-No-SRI](Bundle-Revise-Request-No-SRI.md),[Parameters/Merge-Min-Request](Parameters-Merge-Min-Request.md),[Parameters/Merge-Request](Parameters-Merge-Request.md),[Patient/Force-Create-Request](Patient-Force-Create-Request.md),[Patient/Newborn-Request](Patient-Newborn-Request.md),[Patient/Patient-GetDemographics-Example](Patient-Patient-GetDemographics-Example.md),[Patient/Revise-Request-No-SRI-RESTful](Patient-Revise-Request-No-SRI-RESTful.md)and[Patient/Revise-Request](Patient-Revise-Request.md)
+* Use this Extension: [BC Birth Date History](StructureDefinition-bc-birthdate-history-extension.md), [BC Death Date History](StructureDefinition-bc-death-date-history-extension.md), [BC Death Verified Flag](StructureDefinition-bc-death-verified-flag-extension.md), [BC Death Verified Flag History](StructureDefinition-bc-death-verified-flag-history-extension.md)... Show 4 more, [BC Gender History](StructureDefinition-bc-gender-history-extension.md), [PatientMerge](StructureDefinition-bc-merge-patient.md), [BC Multiple Birth History](StructureDefinition-bc-multiplebirth-history-extension.md) and [ClientRegistryPatient](StructureDefinition-bc-patient.md)
+* Examples for this Extension: [Bundle/COMP-Distribution-Notification](Bundle-COMP-Distribution-Notification.md), [Bundle/FindCandidates-Response](Bundle-FindCandidates-Response.md), [Bundle/FindNewbornByMumsPHN-Response](Bundle-FindNewbornByMumsPHN-Response.md), [Bundle/GetDemographics-Request-By-SSRI](Bundle-GetDemographics-Request-By-SSRI.md)... Show 13 more, [Bundle/GetDemographics-Response](Bundle-GetDemographics-Response.md), [Bundle/GetDemographics-withHistory-Response](Bundle-GetDemographics-withHistory-Response.md), [Bundle/GetDemographics-withPHNInfo-Response](Bundle-GetDemographics-withPHNInfo-Response.md), [Bundle/NEW-Distribution-Notification](Bundle-NEW-Distribution-Notification.md), [Bundle/NEWBORN-Distribution-Notification-Masked-MumPHN](Bundle-NEWBORN-Distribution-Notification-Masked-MumPHN.md), [Bundle/Revise-Request-No-SRI](Bundle-Revise-Request-No-SRI.md), [Parameters/Merge-Min-Request](Parameters-Merge-Min-Request.md), [Parameters/Merge-Request](Parameters-Merge-Request.md), [Patient/Force-Create-Request](Patient-Force-Create-Request.md), [Patient/Newborn-Request](Patient-Newborn-Request.md), [Patient/Patient-GetDemographics-Example](Patient-Patient-GetDemographics-Example.md), [Patient/Revise-Request-No-SRI-RESTful](Patient-Revise-Request-No-SRI-RESTful.md) and [Patient/Revise-Request](Patient-Revise-Request.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ca-bc.client|current/StructureDefinition/bc-business-period-extension)
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-business-period-e
   "name" : "BusinessPeriodExtension",
   "title" : "BC Business Dates",
   "status" : "active",
-  "date" : "2026-01-12T21:43:07+00:00",
+  "date" : "2026-01-22T19:20:19+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {
@@ -86,6 +86,10 @@ Other representations of profile: [CSV](StructureDefinition-bc-business-period-e
     {
       "type" : "element",
       "expression" : "Extension"
+    },
+    {
+      "type" : "element",
+      "expression" : "Patient"
     },
     {
       "type" : "element",

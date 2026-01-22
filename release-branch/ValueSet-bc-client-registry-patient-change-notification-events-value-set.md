@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-client-registry-patient-change-notification-events | *Version*:1.0.0 |
-| Active as of 2026-01-12 | *Computable Name*:PatientChangeNotificationEventsValueSet |
+| Active as of 2026-01-22 | *Computable Name*:PatientChangeNotificationEventsValueSet |
 
  
 Codes used to indicate that type of patient changes that a subscriber is interested in receiving. 
@@ -51,7 +51,7 @@ Codes used to indicate that type of patient changes that a subscriber is interes
   "title" : "BC Client Registry Patient Change Notification Events Value Set",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-01-12T21:43:07+00:00",
+  "date" : "2026-01-22T19:20:19+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

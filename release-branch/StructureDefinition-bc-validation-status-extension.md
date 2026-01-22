@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension | *Version*:1.0.0 |
-| Active as of 2026-01-12 | *Computable Name*:ValidationStatusExtension |
+| Active as of 2026-01-22 | *Computable Name*:ValidationStatusExtension |
 
 A code that represents the validation status of the address
 
@@ -20,7 +20,7 @@ A code that represents the validation status of the address
 **Usages:**
 
 * Use this Extension: [PatientMerge](StructureDefinition-bc-merge-patient.md) and [ClientRegistryPatient](StructureDefinition-bc-patient.md)
-* Examples for this Extension: [Bundle/COMP-Distribution-Notification](Bundle-COMP-Distribution-Notification.md), [Bundle/FindCandidates-Response](Bundle-FindCandidates-Response.md), [Bundle/FindNewbornByMumsPHN-Response](Bundle-FindNewbornByMumsPHN-Response.md), [Bundle/GetDemographics-Response](Bundle-GetDemographics-Response.md)...Show 4 more,[Bundle/GetDemographics-withHistory-Response](Bundle-GetDemographics-withHistory-Response.md),[Bundle/GetDemographics-withPHNInfo-Response](Bundle-GetDemographics-withPHNInfo-Response.md),[Bundle/NEW-Distribution-Notification](Bundle-NEW-Distribution-Notification.md)and[Bundle/NEWBORN-Distribution-Notification-Masked-MumPHN](Bundle-NEWBORN-Distribution-Notification-Masked-MumPHN.md)
+* Examples for this Extension: [Bundle/COMP-Distribution-Notification](Bundle-COMP-Distribution-Notification.md), [Bundle/FindCandidates-Response](Bundle-FindCandidates-Response.md), [Bundle/FindNewbornByMumsPHN-Response](Bundle-FindNewbornByMumsPHN-Response.md), [Bundle/GetDemographics-Response](Bundle-GetDemographics-Response.md)... Show 4 more, [Bundle/GetDemographics-withHistory-Response](Bundle-GetDemographics-withHistory-Response.md), [Bundle/GetDemographics-withPHNInfo-Response](Bundle-GetDemographics-withPHNInfo-Response.md), [Bundle/NEW-Distribution-Notification](Bundle-NEW-Distribution-Notification.md) and [Bundle/NEWBORN-Distribution-Notification-Masked-MumPHN](Bundle-NEWBORN-Distribution-Notification-Masked-MumPHN.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ca-bc.client|current/StructureDefinition/bc-validation-status-extension)
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-validation-status
   "name" : "ValidationStatusExtension",
   "title" : "BC Address Validation Status Code",
   "status" : "active",
-  "date" : "2026-01-12T21:43:07+00:00",
+  "date" : "2026-01-22T19:20:19+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

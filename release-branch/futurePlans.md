@@ -45,7 +45,7 @@ See following Supporting Profiles
 
 This section describes everything that is available in this release. Currently the search services are highest priority and will be completed first.
 
-To access this release through messaging, in the HTTP Accept header, update the versions to: **fhirVersion=4.0;BCFhirVersion=1**
+To access this release through messaging, in the HTTP Accept header, update the versions to: ** fhirVersion=4.0;BCFhirVersion=1 **
 
 This release includes the following Operations and restful queries
 

@@ -13,7 +13,7 @@ The Provincial Client Registry Onboardings is the process to onboard Organizatio
 * **Implementation**: The implementation phase is all about understanding the Connected Partner business goals and requirements, designing and developing the integrated solution that meets their goals and ensuring the Conformance testing is successfully done.
 * **Deployment**: The deployment phase includes all the necessary steps to fulfill other Ministry integration requirements such as Audit, Security, etc.; obtaining the interface approval from CIS team and deploying the solution in Production environment.
 
-![](Picture1.png)
+ ![](Picture1.png) 
 
 **Note**: Connected partner will need to complete privacy & security volume 2 gap analysis. The questionnaire will be provided by CIS after the kick-off meeting. The gap analysis will occur in parallel to the process above.
 
@@ -77,7 +77,7 @@ The Provincial Client Registry Onboardings is the process to onboard Organizatio
 
 #### Process Flow
 
-The following diagram shows the process flow for the Provincial Client Registry Onboarding process. ![](flowdiagram.png)
+The following diagram shows the process flow for the Provincial Client Registry Onboarding process.  ![](flowdiagram.png) 
 
 #### Process Activities
 

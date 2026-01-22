@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-verified-flag-extension | *Version*:1.0.0 |
-| Active as of 2026-01-12 | *Computable Name*:DeathVerifiedFlagExtension |
+| Active as of 2026-01-22 | *Computable Name*:DeathVerifiedFlagExtension |
 
 The Patients death is verified and as recorded in the Client Registry as a flag. This also includes death verified flag history as required.
 
@@ -20,7 +20,7 @@ The Patients death is verified and as recorded in the Client Registry as a flag.
 **Usages:**
 
 * Use this Extension: [PatientMerge](StructureDefinition-bc-merge-patient.md) and [ClientRegistryPatient](StructureDefinition-bc-patient.md)
-* Examples for this Extension: [Bundle/AddPatient-Request](Bundle-AddPatient-Request.md), [Bundle/FindCandidates-Response](Bundle-FindCandidates-Response.md), [Bundle/GetDemographics-Response](Bundle-GetDemographics-Response.md), [Bundle/GetDemographics-withHistory-Response](Bundle-GetDemographics-withHistory-Response.md)...Show 2 more,[Bundle/GetDemographics-withPHNInfo-Response](Bundle-GetDemographics-withPHNInfo-Response.md)and[Bundle/Revise-withMaxData-Request](Bundle-Revise-withMaxData-Request.md)
+* Examples for this Extension: [Bundle/AddPatient-Request](Bundle-AddPatient-Request.md), [Bundle/FindCandidates-Response](Bundle-FindCandidates-Response.md), [Bundle/GetDemographics-Response](Bundle-GetDemographics-Response.md), [Bundle/GetDemographics-withHistory-Response](Bundle-GetDemographics-withHistory-Response.md)... Show 2 more, [Bundle/GetDemographics-withPHNInfo-Response](Bundle-GetDemographics-withPHNInfo-Response.md) and [Bundle/Revise-withMaxData-Request](Bundle-Revise-withMaxData-Request.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ca-bc.client|current/StructureDefinition/bc-death-verified-flag-extension)
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-death-verified-fl
   "name" : "DeathVerifiedFlagExtension",
   "title" : "BC Death Verified Flag",
   "status" : "active",
-  "date" : "2026-01-12T21:43:07+00:00",
+  "date" : "2026-01-22T19:20:19+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

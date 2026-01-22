@@ -6,9 +6,9 @@
 
 ## Example OperationOutcome: OperationOutcome-Example
 
-> **issue****severity**: Warning**code**: Business Rule Violation**details**:Warning: The Revise Patient name has been modified to filter out invalid characters.
+> **issue****severity**: Warning**code**: Business Rule Violation**details**: Warning: The Revise Patient name has been modified to filter out invalid characters.
 
-> **issue****severity**: Error**code**: Business Rule Violation**details**:The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ...
+> **issue****severity**: Error**code**: Business Rule Violation**details**: The HL7 message is invalid. Please correct the HL7 message, and resubmit it. (System.Exception: Results from Schematron validation: ...
 
 
 

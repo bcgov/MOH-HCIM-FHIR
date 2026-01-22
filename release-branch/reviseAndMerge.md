@@ -85,13 +85,13 @@ More details can be found [here](OperationDefinition-bc-patient-merge.md).
 
 The FHIR structure is roughly the same for Add, Merge, Revise and Distributions. RelatedPerson is only required to AddPatient newborns. Responses (if required) are wrapped in collection Bundles and include OperationOutcome, Operation Parameters, possible RelatedPerson resources and Patient resources.
 
-![](revise_merge_fhir.png)
+ ![](revise_merge_fhir.png) 
 
 ### Asynchronous Operations
 
 The asynchronous pattern for Revise and Merge Patient follow the same pattern as V3. The figure below shows a client requesting an operation from the Client Registry and the Client Registry responding, later, with the response.
 
-![](asyncSequence.png)
+ ![](asyncSequence.png) 
 
 The request/responses are associated by the unique message id in the Parameters resource. The client must create a FHIR Operation end point to receive the responses at a later time. Specifically the response will be a Bundle, as documented in the [RevisePatient](OperationDefinition-bc-patient-revise.md) and [MergePatient](OperationDefinition-bc-patient-merge.md) operations. The response contains the IN parameters requestMessageId to link the messageId in the request to the asynchronous response.
 

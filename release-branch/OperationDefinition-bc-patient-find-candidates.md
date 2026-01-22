@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-find-candidates | *Version*:1.0.0 |
-| Active as of 2026-01-12 | *Computable Name*:FindCandidatesByExample |
+| Active as of 2026-01-22 | *Computable Name*:FindCandidatesByExample |
 
  
 This operation is used to query for a patient. The response can contain 0 or more Patients. 
@@ -94,7 +94,7 @@ See [Find Candidates request](Bundle-FindCandidates-Request.md) example.
   "title" : "Find Candidates By Example",
   "status" : "active",
   "kind" : "query",
-  "date" : "2026-01-12T21:43:07+00:00",
+  "date" : "2026-01-22T19:20:19+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension | *Version*:1.0.0 |
-| Active as of 2026-01-12 | *Computable Name*:MergeStatusExtension |
+| Active as of 2026-01-22 | *Computable Name*:MergeStatusExtension |
 
 A code that represents the Merge status of the Patient.
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-merge-status-exte
   "name" : "MergeStatusExtension",
   "title" : "BC Merge Status Code",
   "status" : "active",
-  "date" : "2026-01-12T21:43:07+00:00",
+  "date" : "2026-01-22T19:20:19+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

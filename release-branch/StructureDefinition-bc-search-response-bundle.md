@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle | *Version*:1.0.0 |
-| Active as of 2026-01-12 | *Computable Name*:SearchResponseBundle |
+| Active as of 2026-01-22 | *Computable Name*:SearchResponseBundle |
 
  
 A Bundle that is used in the Client Registry response to Find Candidates and Get Demographics queries. 
@@ -25,7 +25,7 @@ If the search criteria used mother's PHN then RelatedPerson resources may be ret
 
 **Usages:**
 
-* Examples for this Profile: [Bundle/FindCandidates-Response](Bundle-FindCandidates-Response.md), [Bundle/FindNewbornByMumsPHN-Response](Bundle-FindNewbornByMumsPHN-Response.md), [Bundle/GetDemographics-Response-Masked](Bundle-GetDemographics-Response-Masked.md), [Bundle/GetDemographics-Response](Bundle-GetDemographics-Response.md)...Show 2 more,[Bundle/GetDemographics-withHistory-Response](Bundle-GetDemographics-withHistory-Response.md)and[Bundle/GetDemographics-withPHNInfo-Response](Bundle-GetDemographics-withPHNInfo-Response.md)
+* Examples for this Profile: [Bundle/FindCandidates-Response](Bundle-FindCandidates-Response.md), [Bundle/FindNewbornByMumsPHN-Response](Bundle-FindNewbornByMumsPHN-Response.md), [Bundle/GetDemographics-Response-Masked](Bundle-GetDemographics-Response-Masked.md), [Bundle/GetDemographics-Response](Bundle-GetDemographics-Response.md)... Show 2 more, [Bundle/GetDemographics-withHistory-Response](Bundle-GetDemographics-withHistory-Response.md) and [Bundle/GetDemographics-withPHNInfo-Response](Bundle-GetDemographics-withPHNInfo-Response.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ca-bc.client|current/StructureDefinition/bc-search-response-bundle)
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-search-response-b
   "version" : "1.0.0",
   "name" : "SearchResponseBundle",
   "status" : "active",
-  "date" : "2026-01-12T21:43:07+00:00",
+  "date" : "2026-01-22T19:20:19+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

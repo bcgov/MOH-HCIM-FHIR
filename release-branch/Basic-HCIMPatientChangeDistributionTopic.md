@@ -35,7 +35,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.date",
-      "valueDateTime" : "2026-01-12T21:43:07+00:00"
+      "valueDateTime" : "2026-01-22T19:20:19+00:00"
     },
     {
       "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.publisher",
@@ -81,7 +81,7 @@
             "coding" : [
               {
                 "system" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
-                "code" : "COMPOSITE"
+                "code" : "COMP"
               }
             ]
           }
@@ -181,7 +181,7 @@
             "coding" : [
               {
                 "system" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
-                "code" : "NEWBORN_GENDER"
+                "code" : "NEWBORNGENDER"
               }
             ]
           }
@@ -241,7 +241,7 @@
             "coding" : [
               {
                 "system" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
-                "code" : "PHNMERGE"
+                "code" : "MERGE"
               }
             ]
           }
@@ -261,7 +261,7 @@
             "coding" : [
               {
                 "system" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
-                "code" : "SSRI"
+                "code" : "SSRISYNC"
               }
             ]
           }

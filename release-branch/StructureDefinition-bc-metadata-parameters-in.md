@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in | *Version*:1.0.0 |
-| Active as of 2026-01-12 | *Computable Name*:MetadataParametersIn |
+| Active as of 2026-01-22 | *Computable Name*:MetadataParametersIn |
 
  
 Parameters profile for BC meta data - incoming messages. This profile is also intended to force the inclusion of specific parameters for the related Parameters. 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-metadata-paramete
   "version" : "1.0.0",
   "name" : "MetadataParametersIn",
   "status" : "active",
-  "date" : "2026-01-12T21:43:07+00:00",
+  "date" : "2026-01-22T19:20:19+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {
