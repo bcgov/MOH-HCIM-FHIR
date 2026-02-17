@@ -115,7 +115,7 @@
       </td>
     </tr>
     <tr>
-      <td>NEWBORN_GENDER</td>
+      <td>NEWBORNGENDER</td>
       <td>
         <ul>
             <li>An active (not merged or in an overlay task) MOH_CRS record exists in the entity set</li>
