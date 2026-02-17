@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-async-ack-response-bundle | *Version*:1.0.0 |
-| Draft as of 2026-01-22 | *Computable Name*:AsyncAckBundle |
+| Draft as of 2026-02-17 | *Computable Name*:AsyncAckBundle |
 
  
 A Bundle that is used for the ACK response to an aynchronous operation request. 
@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-async-ack-respons
   "version" : "1.0.0",
   "name" : "AsyncAckBundle",
   "status" : "draft",
-  "date" : "2026-01-22T19:20:19+00:00",
+  "date" : "2026-02-17T21:23:45+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

@@ -8,7 +8,7 @@
 
 | |
 | :--- |
-| Active as of 2026-01-22 |
+| Active as of 2026-02-17 |
 
 [Raw xml](SubscriptionTopic-HCIMPatientChangeDistributionTopic.xml) | [Download](SubscriptionTopic-HCIMPatientChangeDistributionTopic.xml)
 

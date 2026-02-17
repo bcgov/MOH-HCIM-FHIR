@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events | *Version*:1.0.0 |
-| Active as of 2026-01-22 | *Computable Name*:PatientChangeNotificationEvents |
+| Active as of 2026-02-17 | *Computable Name*:PatientChangeNotificationEvents |
 
  
 Codes used to indicate that type of patient changes that a subscriber is interested in receiving. 
@@ -101,7 +101,7 @@ The following tables describe each type of distribution and include a descriptio
 * All Source Record Identifers (SRIs)
 * Last Modified Business Date
  |
-| NEWBORN_GENDER | * An active (not merged or in an overlay task) MOH_CRS record exists in the entity set
+| NEWBORNGENDER | * An active (not merged or in an overlay task) MOH_CRS record exists in the entity set
 * There are no source records in the entity with an overlay task
 * The newborn record is NOT new
 * The declared name value is (or was) a Newborn Name
@@ -164,7 +164,7 @@ The following tables describe each type of distribution and include a descriptio
   "title" : "BC Client Registry Patient Change Notification Events Code System",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-01-22T19:20:19+00:00",
+  "date" : "2026-02-17T21:23:45+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {
@@ -214,7 +214,7 @@ The following tables describe each type of distribution and include a descriptio
       "definition" : "A Newborn distribution is a non-source distribution that informs subscribers that a newborn record has been created and has been assigned a PHN. Typically, subscribers would limit their source subscription to MOH_CRS for this distribution."
     },
     {
-      "code" : "NEWBORN_GENDER",
+      "code" : "NEWBORNGENDER",
       "display" : "Newborn Gender",
       "definition" : "The Newborn Gender distribution is a non-source distribution and informs subscribers when the gender on a newborn record changes from unknown or undifferentiated to Male or Female. This distribution is used to ensure that pre-registered newborns (where the gender is frequently unknown) are registered for MSP benefits. MSP does not allow the registration of newborns with an unknown gender value."
     },

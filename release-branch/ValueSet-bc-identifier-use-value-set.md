@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-identifier-use-value-set | *Version*:1.0.0 |
-| Active as of 2026-01-22 | *Computable Name*:IdentifierUseVS |
+| Active as of 2026-02-17 | *Computable Name*:IdentifierUseVS |
 
  
 BC Identifier Use value set, sliced to meet BC constraints. 
@@ -51,7 +51,7 @@ BC Identifier Use value set, sliced to meet BC constraints.
   "title" : "BC Identifier Use Value Set",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-01-22T19:20:19+00:00",
+  "date" : "2026-02-17T21:23:45+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-contact-point-system-value-set | *Version*:1.0.0 |
-| Active as of 2026-01-22 | *Computable Name*:ContactPointSystemVS |
+| Active as of 2026-02-17 | *Computable Name*:ContactPointSystemVS |
 
  
 BC Contact Point System value set, sliced to meet BC constraints. 
@@ -52,7 +52,7 @@ BC Contact Point System value set, sliced to meet BC constraints.
   "title" : "BC Contact Point System Value Set",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-01-22T19:20:19+00:00",
+  "date" : "2026-02-17T21:23:45+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [
     {
