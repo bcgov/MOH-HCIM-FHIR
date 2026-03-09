@@ -15,7 +15,7 @@ Usage: #definition
 * instance = false
 * inputProfile = Canonical(SubscriptionNotificationBundle)
 * parameter[0].name = #SubscriptionNotificationBundle
-* parameter[0].use = #out
+* parameter[0].use = #in
 * parameter[0].min = 1
 * parameter[0].max = "1"
 * parameter[0].documentation = "The specific bundle entries that are needed when the Client Registry is sending a distribution (notification)."
