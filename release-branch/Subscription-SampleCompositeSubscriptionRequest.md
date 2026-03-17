@@ -30,32 +30,26 @@ Profile: [HCIMPatientChangeSubscription](StructureDefinition-HCIMPatientChangeSu
   "resourceType" : "Subscription",
   "id" : "SampleCompositeSubscriptionRequest",
   "meta" : {
-    "profile" : [
-      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/HCIMPatientChangeSubscription"
-    ]
+    "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/HCIMPatientChangeSubscription"]
   },
   "status" : "active",
   "reason" : "Want to receive composite view notifications",
   "criteria" : "http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution",
   "_criteria" : {
-    "extension" : [
-      {
-        "url" : "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria",
-        "valueString" : "eventCode=COMPOSITE"
-      }
-    ]
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria",
+      "valueString" : "eventCode=COMPOSITE"
+    }]
   },
   "channel" : {
     "type" : "rest-hook",
     "endpoint" : "http://example.org/subscription-response-channel",
     "payload" : "application/fhir+json",
     "_payload" : {
-      "extension" : [
-        {
-          "url" : "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-payload-content",
-          "valueCode" : "full-resource"
-        }
-      ]
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-payload-content",
+        "valueCode" : "full-resource"
+      }]
     }
   }
 }

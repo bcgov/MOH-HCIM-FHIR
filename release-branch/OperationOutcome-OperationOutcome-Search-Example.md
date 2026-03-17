@@ -21,21 +21,17 @@
 {
   "resourceType" : "OperationOutcome",
   "id" : "OperationOutcome-Search-Example",
-  "issue" : [
-    {
-      "severity" : "warning",
-      "code" : "business-rule",
-      "details" : {
-        "coding" : [
-          {
-            "system" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes",
-            "code" : "BCHIM.GD.0.0015"
-          }
-        ],
-        "text" : "Warning: The identifier you used in the query has been merged. The surviving identifier was returned."
-      }
+  "issue" : [{
+    "severity" : "warning",
+    "code" : "business-rule",
+    "details" : {
+      "coding" : [{
+        "system" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes",
+        "code" : "BCHIM.GD.0.0015"
+      }],
+      "text" : "Warning: The identifier you used in the query has been merged. The surviving identifier was returned."
     }
-  ]
+  }]
 }
 
 ```

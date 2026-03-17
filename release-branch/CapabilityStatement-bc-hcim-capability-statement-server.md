@@ -175,82 +175,68 @@ The non-surviving/source Patient(s) SHALL be listed in the link attribute of Pat
   "status" : "active",
   "date" : "2024-10-11",
   "publisher" : "BC Ministry of Health",
-  "contact" : [
-    {
-      "name" : "BC Ministry of Health",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "BC Ministry of Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+    }]
+  }],
   "description" : "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a server.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "CA",
-          "display" : "Canada"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CA",
+      "display" : "Canada"
+    }]
+  }],
   "kind" : "capability",
   "software" : {
     "name" : "BC HCIM FHIR Implementation"
   },
   "fhirVersion" : "4.0.1",
   "format" : ["json"],
-  "rest" : [
-    {
-      "mode" : "server",
-      "resource" : [
-        {
-          "type" : "Patient",
-          "operation" : [
-            {
-              "name" : "FindCandidates",
-              "definition" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-find-candidates"
-            },
-            {
-              "name" : "GetDemographics",
-              "definition" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-get-demographics"
-            },
-            {
-              "name" : "RevisePatient",
-              "definition" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-revise"
-            },
-            {
-              "name" : "AddPatient",
-              "definition" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add"
-            },
-            {
-              "name" : "Merge",
-              "definition" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-merge"
-            },
-            {
-              "name" : "AddPatient.Async",
-              "definition" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add",
-              "documentation" : "Although this is an independent Operation the definition is the same as the [AddPatient](OperationDefinition-bc-patient-add.html)"
-            },
-            {
-              "name" : "RevisePatient.Async",
-              "definition" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-revise",
-              "documentation" : "Although this is an independent Operation the definition is the same as the [RevisePatient](OperationDefinition-bc-patient-revise.html)"
-            },
-            {
-              "name" : "MergePatient.Async",
-              "definition" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-merge",
-              "documentation" : "Although this is an independent Operation the definition is the same as the [MergePatient](OperationDefinition-bc-patient-merge.html)"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  "rest" : [{
+    "mode" : "server",
+    "resource" : [{
+      "type" : "Patient",
+      "operation" : [{
+        "name" : "FindCandidates",
+        "definition" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-find-candidates"
+      },
+      {
+        "name" : "GetDemographics",
+        "definition" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-get-demographics"
+      },
+      {
+        "name" : "RevisePatient",
+        "definition" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-revise"
+      },
+      {
+        "name" : "AddPatient",
+        "definition" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add"
+      },
+      {
+        "name" : "Merge",
+        "definition" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-merge"
+      },
+      {
+        "name" : "AddPatient.Async",
+        "definition" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add",
+        "documentation" : "Although this is an independent Operation the definition is the same as the [AddPatient](OperationDefinition-bc-patient-add.html)"
+      },
+      {
+        "name" : "RevisePatient.Async",
+        "definition" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-revise",
+        "documentation" : "Although this is an independent Operation the definition is the same as the [RevisePatient](OperationDefinition-bc-patient-revise.html)"
+      },
+      {
+        "name" : "MergePatient.Async",
+        "definition" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-merge",
+        "documentation" : "Although this is an independent Operation the definition is the same as the [MergePatient](OperationDefinition-bc-patient-merge.html)"
+      }]
+    }]
+  }]
 }
 
 ```

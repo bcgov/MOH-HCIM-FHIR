@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-revise | *Version*:1.0.0 |
-| Draft as of 2026-02-17 | *Computable Name*:RevisePatient |
+| Draft as of 2026-03-17 | *Computable Name*:RevisePatient |
 
  
 This operation is used to revise a patient's demographics. 
@@ -64,31 +64,23 @@ See [Revise Patient request](Bundle-Revise-withMaxData-Request.md) example.
   "title" : "Revise Patient",
   "status" : "draft",
   "kind" : "operation",
-  "date" : "2026-02-17T21:23:45+00:00",
+  "date" : "2026-03-17T18:19:20+00:00",
   "publisher" : "BC Ministry of Health",
-  "contact" : [
-    {
-      "name" : "BC Ministry of Health",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "BC Ministry of Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+    }]
+  }],
   "description" : "This operation is used to revise a patient's demographics.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "CA",
-          "display" : "Canada"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CA",
+      "display" : "Canada"
+    }]
+  }],
   "code" : "RevisePatient",
   "resource" : ["Patient"],
   "system" : false,
@@ -96,24 +88,22 @@ See [Revise Patient request](Bundle-Revise-withMaxData-Request.md) example.
   "instance" : false,
   "inputProfile" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle",
   "outputProfile" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle",
-  "parameter" : [
-    {
-      "name" : "ReviseRequestBundle",
-      "use" : "in",
-      "min" : 1,
-      "max" : "1",
-      "documentation" : "The RevisePatient operation request Bundle.",
-      "type" : "Bundle"
-    },
-    {
-      "name" : "ReviseResponseBundle",
-      "use" : "out",
-      "min" : 1,
-      "max" : "1",
-      "documentation" : "The RevisePatient operation response Bundle.",
-      "type" : "Bundle"
-    }
-  ]
+  "parameter" : [{
+    "name" : "ReviseRequestBundle",
+    "use" : "in",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "The RevisePatient operation request Bundle.",
+    "type" : "Bundle"
+  },
+  {
+    "name" : "ReviseResponseBundle",
+    "use" : "out",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "The RevisePatient operation response Bundle.",
+    "type" : "Bundle"
+  }]
 }
 
 ```

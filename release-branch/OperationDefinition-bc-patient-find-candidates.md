@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-find-candidates | *Version*:1.0.0 |
-| Active as of 2026-02-17 | *Computable Name*:FindCandidatesByExample |
+| Active as of 2026-03-17 | *Computable Name*:FindCandidatesByExample |
 
  
 This operation is used to query for a patient. The response can contain 0 or more Patients. 
@@ -94,31 +94,23 @@ See [Find Candidates request](Bundle-FindCandidates-Request.md) example.
   "title" : "Find Candidates By Example",
   "status" : "active",
   "kind" : "query",
-  "date" : "2026-02-17T21:23:45+00:00",
+  "date" : "2026-03-17T18:19:20+00:00",
   "publisher" : "BC Ministry of Health",
-  "contact" : [
-    {
-      "name" : "BC Ministry of Health",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "BC Ministry of Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+    }]
+  }],
   "description" : "This operation is used to query for a patient.  The response can contain 0 or more Patients.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "CA",
-          "display" : "Canada"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CA",
+      "display" : "Canada"
+    }]
+  }],
   "code" : "FindCandidates",
   "resource" : ["Patient"],
   "system" : false,
@@ -126,24 +118,22 @@ See [Find Candidates request](Bundle-FindCandidates-Request.md) example.
   "instance" : false,
   "inputProfile" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle",
   "outputProfile" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
-  "parameter" : [
-    {
-      "name" : "FindCandidatesRequestBundle",
-      "use" : "in",
-      "min" : 1,
-      "max" : "1",
-      "documentation" : "The FindCandidates operation request Bundle.",
-      "type" : "Bundle"
-    },
-    {
-      "name" : "SearchResponseBundle",
-      "use" : "out",
-      "min" : 1,
-      "max" : "1",
-      "documentation" : "The FindCandidates operation response Bundle.",
-      "type" : "Bundle"
-    }
-  ]
+  "parameter" : [{
+    "name" : "FindCandidatesRequestBundle",
+    "use" : "in",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "The FindCandidates operation request Bundle.",
+    "type" : "Bundle"
+  },
+  {
+    "name" : "SearchResponseBundle",
+    "use" : "out",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "The FindCandidates operation response Bundle.",
+    "type" : "Bundle"
+  }]
 }
 
 ```

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-add | *Version*:1.0.0 |
-| Draft as of 2026-02-17 | *Computable Name*:AddPatient |
+| Draft as of 2026-03-17 | *Computable Name*:AddPatient |
 
  
 This operation is used for newborns or to 'force create' a patient. 
@@ -72,31 +72,23 @@ See [Add Patient request](Bundle-AddPatient-Request.md) example.
   "title" : "AddPatient",
   "status" : "draft",
   "kind" : "operation",
-  "date" : "2026-02-17T21:23:45+00:00",
+  "date" : "2026-03-17T18:19:20+00:00",
   "publisher" : "BC Ministry of Health",
-  "contact" : [
-    {
-      "name" : "BC Ministry of Health",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "BC Ministry of Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+    }]
+  }],
   "description" : "This operation is used for newborns or to 'force create' a patient.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "CA",
-          "display" : "Canada"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CA",
+      "display" : "Canada"
+    }]
+  }],
   "code" : "AddPatient",
   "resource" : ["Patient"],
   "system" : false,
@@ -104,24 +96,22 @@ See [Add Patient request](Bundle-AddPatient-Request.md) example.
   "instance" : false,
   "inputProfile" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle",
   "outputProfile" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-response-bundle",
-  "parameter" : [
-    {
-      "name" : "AddRequestBundle",
-      "use" : "in",
-      "min" : 1,
-      "max" : "1",
-      "documentation" : "The AddPatient operation request Bundle.",
-      "type" : "Bundle"
-    },
-    {
-      "name" : "AddResponseBundle",
-      "use" : "out",
-      "min" : 1,
-      "max" : "1",
-      "documentation" : "The AddPatient operation response Bundle.",
-      "type" : "Bundle"
-    }
-  ]
+  "parameter" : [{
+    "name" : "AddRequestBundle",
+    "use" : "in",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "The AddPatient operation request Bundle.",
+    "type" : "Bundle"
+  },
+  {
+    "name" : "AddResponseBundle",
+    "use" : "out",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "The AddPatient operation response Bundle.",
+    "type" : "Bundle"
+  }]
 }
 
 ```

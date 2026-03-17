@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension | *Version*:1.0.0 |
-| Active as of 2026-02-17 | *Computable Name*:BusinessPeriodExtension |
+| Active as of 2026-03-17 | *Computable Name*:BusinessPeriodExtension |
 
 The effective dates for the parent element.
 
@@ -47,98 +47,82 @@ Other representations of profile: [CSV](StructureDefinition-bc-business-period-e
   "name" : "BusinessPeriodExtension",
   "title" : "BC Business Dates",
   "status" : "active",
-  "date" : "2026-02-17T21:23:45+00:00",
+  "date" : "2026-03-17T18:19:20+00:00",
   "publisher" : "BC Ministry of Health",
-  "contact" : [
-    {
-      "name" : "BC Ministry of Health",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "BC Ministry of Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+    }]
+  }],
   "description" : "The effective dates for the parent element.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "CA",
-          "display" : "Canada"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CA",
+      "display" : "Canada"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
   "kind" : "complex-type",
   "abstract" : false,
-  "context" : [
-    {
-      "type" : "element",
-      "expression" : "Extension"
-    },
-    {
-      "type" : "element",
-      "expression" : "Patient"
-    },
-    {
-      "type" : "element",
-      "expression" : "Patient.gender"
-    },
-    {
-      "type" : "element",
-      "expression" : "Patient.birthDate"
-    },
-    {
-      "type" : "element",
-      "expression" : "Patient.multipleBirth"
-    },
-    {
-      "type" : "element",
-      "expression" : "Patient.deceased"
-    }
-  ],
+  "context" : [{
+    "type" : "element",
+    "expression" : "Extension"
+  },
+  {
+    "type" : "element",
+    "expression" : "Patient"
+  },
+  {
+    "type" : "element",
+    "expression" : "Patient.gender"
+  },
+  {
+    "type" : "element",
+    "expression" : "Patient.birthDate"
+  },
+  {
+    "type" : "element",
+    "expression" : "Patient.multipleBirth"
+  },
+  {
+    "type" : "element",
+    "expression" : "Patient.deceased"
+  }],
   "type" : "Extension",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Extension",
-        "path" : "Extension",
-        "short" : "BC Business Dates",
-        "definition" : "The effective dates for the parent element."
-      },
-      {
-        "id" : "Extension.extension",
-        "path" : "Extension.extension",
-        "max" : "0"
-      },
-      {
-        "id" : "Extension.url",
-        "path" : "Extension.url",
-        "fixedUri" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
-      },
-      {
-        "id" : "Extension.value[x]",
-        "path" : "Extension.value[x]",
-        "type" : [
-          {
-            "code" : "Period"
-          }
-        ]
-      }
-    ]
+    "element" : [{
+      "id" : "Extension",
+      "path" : "Extension",
+      "short" : "BC Business Dates",
+      "definition" : "The effective dates for the parent element."
+    },
+    {
+      "id" : "Extension.extension",
+      "path" : "Extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.url",
+      "path" : "Extension.url",
+      "fixedUri" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension"
+    },
+    {
+      "id" : "Extension.value[x]",
+      "path" : "Extension.value[x]",
+      "type" : [{
+        "code" : "Period"
+      }]
+    }]
   }
 }
 

@@ -49,115 +49,95 @@ Proinnsias Edmon Beartlaidh Tabatabai Female, DoB: 1996-02-18 ( https://health.g
   "resourceType" : "Patient",
   "id" : "Newborn-Request",
   "meta" : {
-    "profile" : [
-      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
-    ]
+    "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"]
   },
-  "contained" : [
-    {
-      "resourceType" : "RelatedPerson",
-      "id" : "Mother",
-      "identifier" : [
-        {
-          "use" : "official",
-          "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
-          "value" : "9999999999"
-        }
-      ],
-      "active" : true,
-      "patient" : {
-        "reference" : "Patient/Newborn-Request"
-      },
-      "relationship" : [
-        {
-          "coding" : [
-            {
-              "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-              "code" : "NMTH"
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "extension" : [
-    {
-      "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
-      "valuePeriod" : {
-        "start" : "2024-11-28T06:22:01.0974407-08:00"
-      }
-    }
-  ],
-  "identifier" : [
-    {
+  "contained" : [{
+    "resourceType" : "RelatedPerson",
+    "id" : "Mother",
+    "identifier" : [{
       "use" : "official",
-      "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id",
-      "value" : "MB220FXR155686125TUN"
+      "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+      "value" : "9999999999"
+    }],
+    "active" : true,
+    "patient" : {
+      "reference" : "Patient/Newborn-Request"
+    },
+    "relationship" : [{
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+        "code" : "NMTH"
+      }]
+    }]
+  }],
+  "extension" : [{
+    "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+    "valuePeriod" : {
+      "start" : "2024-11-28T06:22:01.0974407-08:00"
     }
-  ],
-  "name" : [
-    {
-      "use" : "usual",
-      "family" : "Tabatabai",
-      "given" : ["Proinnsias", "Edmon", "Beartlaidh"]
-    },
-    {
-      "use" : "nickname",
-      "given" : ["Victor"]
-    }
-  ],
-  "telecom" : [
-    {
-      "system" : "phone",
-      "value" : "3104702526",
-      "use" : "mobile"
-    },
-    {
-      "system" : "phone",
-      "value" : "3366898069",
-      "use" : "home"
-    },
-    {
-      "system" : "phone",
-      "value" : "2544265519",
-      "use" : "work"
-    },
-    {
-      "system" : "email",
-      "value" : "Constance.Besarra@cgi.com",
-      "use" : "mobile"
-    },
-    {
-      "system" : "email",
-      "value" : "Hank.Avey@cgi.com",
-      "use" : "home"
-    },
-    {
-      "system" : "email",
-      "value" : "Nerissa.Friede@cgi.com",
-      "use" : "work"
-    }
-  ],
+  }],
+  "identifier" : [{
+    "use" : "official",
+    "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id",
+    "value" : "MB220FXR155686125TUN"
+  }],
+  "name" : [{
+    "use" : "usual",
+    "family" : "Tabatabai",
+    "given" : ["Proinnsias", "Edmon", "Beartlaidh"]
+  },
+  {
+    "use" : "nickname",
+    "given" : ["Victor"]
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "3104702526",
+    "use" : "mobile"
+  },
+  {
+    "system" : "phone",
+    "value" : "3366898069",
+    "use" : "home"
+  },
+  {
+    "system" : "phone",
+    "value" : "2544265519",
+    "use" : "work"
+  },
+  {
+    "system" : "email",
+    "value" : "Constance.Besarra@cgi.com",
+    "use" : "mobile"
+  },
+  {
+    "system" : "email",
+    "value" : "Hank.Avey@cgi.com",
+    "use" : "home"
+  },
+  {
+    "system" : "email",
+    "value" : "Nerissa.Friede@cgi.com",
+    "use" : "work"
+  }],
   "gender" : "female",
   "birthDate" : "1996-02-18",
-  "address" : [
-    {
-      "type" : "physical",
-      "line" : ["7562 Railroad street"],
-      "city" : "Calistoga",
-      "state" : "BC",
-      "postalCode" : "V5QOX7",
-      "country" : "CA"
-    },
-    {
-      "type" : "postal",
-      "line" : ["27523 Oak street"],
-      "city" : "Topmost",
-      "state" : "BC",
-      "postalCode" : "V4IUH0",
-      "country" : "CA"
-    }
-  ]
+  "address" : [{
+    "type" : "physical",
+    "line" : ["7562 Railroad street"],
+    "city" : "Calistoga",
+    "state" : "BC",
+    "postalCode" : "V5QOX7",
+    "country" : "CA"
+  },
+  {
+    "type" : "postal",
+    "line" : ["27523 Oak street"],
+    "city" : "Topmost",
+    "state" : "BC",
+    "postalCode" : "V4IUH0",
+    "country" : "CA"
+  }]
 }
 
 ```

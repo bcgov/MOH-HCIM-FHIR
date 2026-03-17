@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-identifier-status-value-set | *Version*:1.0.0 |
-| Active as of 2026-02-17 | *Computable Name*:IdentifierStatusVS |
+| Active as of 2026-03-17 | *Computable Name*:IdentifierStatusVS |
 
  
 BC Identifier Status value set used to describe the status of an identifier. 
@@ -51,37 +51,27 @@ BC Identifier Status value set used to describe the status of an identifier.
   "title" : "BC Identifier Status Value Set",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-02-17T21:23:45+00:00",
+  "date" : "2026-03-17T18:19:20+00:00",
   "publisher" : "BC Ministry of Health",
-  "contact" : [
-    {
-      "name" : "BC Ministry of Health",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "BC Ministry of Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+    }]
+  }],
   "description" : "BC Identifier Status value set used to describe the status of an identifier.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "CA",
-          "display" : "Canada"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CA",
+      "display" : "Canada"
+    }]
+  }],
   "compose" : {
-    "include" : [
-      {
-        "system" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-identifier-status-code-system"
-      }
-    ]
+    "include" : [{
+      "system" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-identifier-status-code-system"
+    }]
   }
 }
 

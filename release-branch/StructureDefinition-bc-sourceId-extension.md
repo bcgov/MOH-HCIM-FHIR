@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension | *Version*:1.0.0 |
-| Active as of 2026-02-17 | *Computable Name*:SourceIDExtension |
+| Active as of 2026-03-17 | *Computable Name*:SourceIDExtension |
 
 Identifiers for the source and user that modified the specific element that this extension is on.
 
@@ -47,157 +47,139 @@ Other representations of profile: [CSV](StructureDefinition-bc-sourceId-extensio
   "name" : "SourceIDExtension",
   "title" : "BC SourceID and UserID",
   "status" : "active",
-  "date" : "2026-02-17T21:23:45+00:00",
+  "date" : "2026-03-17T18:19:20+00:00",
   "publisher" : "BC Ministry of Health",
-  "contact" : [
-    {
-      "name" : "BC Ministry of Health",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "BC Ministry of Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+    }]
+  }],
   "description" : "Identifiers for the source and user that modified the specific element that this extension is on.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "CA",
-          "display" : "Canada"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CA",
+      "display" : "Canada"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
   "kind" : "complex-type",
   "abstract" : false,
-  "context" : [
-    {
-      "type" : "element",
-      "expression" : "Extension"
-    },
-    {
-      "type" : "element",
-      "expression" : "Patient.identifier"
-    },
-    {
-      "type" : "element",
-      "expression" : "Patient.deceased"
-    },
-    {
-      "type" : "element",
-      "expression" : "Patient.address"
-    },
-    {
-      "type" : "element",
-      "expression" : "Patient.name"
-    },
-    {
-      "type" : "element",
-      "expression" : "Patient.telecom"
-    },
-    {
-      "type" : "element",
-      "expression" : "Patient.gender"
-    },
-    {
-      "type" : "element",
-      "expression" : "Patient.birthDate"
-    },
-    {
-      "type" : "element",
-      "expression" : "Patient.multipleBirth[x]"
-    }
-  ],
+  "context" : [{
+    "type" : "element",
+    "expression" : "Extension"
+  },
+  {
+    "type" : "element",
+    "expression" : "Patient.identifier"
+  },
+  {
+    "type" : "element",
+    "expression" : "Patient.deceased"
+  },
+  {
+    "type" : "element",
+    "expression" : "Patient.address"
+  },
+  {
+    "type" : "element",
+    "expression" : "Patient.name"
+  },
+  {
+    "type" : "element",
+    "expression" : "Patient.telecom"
+  },
+  {
+    "type" : "element",
+    "expression" : "Patient.gender"
+  },
+  {
+    "type" : "element",
+    "expression" : "Patient.birthDate"
+  },
+  {
+    "type" : "element",
+    "expression" : "Patient.multipleBirth[x]"
+  }],
   "type" : "Extension",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Extension",
-        "path" : "Extension",
-        "short" : "BC SourceID and UserID",
-        "definition" : "Identifiers for the source and user that modified the specific element that this extension is on."
-      },
-      {
-        "id" : "Extension.extension:sourceID",
-        "path" : "Extension.extension",
-        "sliceName" : "sourceID",
-        "min" : 0,
-        "max" : "1",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Extension.extension:sourceID.extension",
-        "path" : "Extension.extension.extension",
-        "max" : "0"
-      },
-      {
-        "id" : "Extension.extension:sourceID.url",
-        "path" : "Extension.extension.url",
-        "fixedUri" : "sourceID"
-      },
-      {
-        "id" : "Extension.extension:sourceID.value[x]",
-        "path" : "Extension.extension.value[x]",
-        "type" : [
-          {
-            "code" : "string"
-          }
-        ],
-        "mustSupport" : true
-      },
-      {
-        "id" : "Extension.extension:userID",
-        "path" : "Extension.extension",
-        "sliceName" : "userID",
-        "min" : 0,
-        "max" : "1",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Extension.extension:userID.extension",
-        "path" : "Extension.extension.extension",
-        "max" : "0"
-      },
-      {
-        "id" : "Extension.extension:userID.url",
-        "path" : "Extension.extension.url",
-        "fixedUri" : "userID"
-      },
-      {
-        "id" : "Extension.extension:userID.value[x]",
-        "path" : "Extension.extension.value[x]",
-        "type" : [
-          {
-            "code" : "string"
-          }
-        ],
-        "mustSupport" : true
-      },
-      {
-        "id" : "Extension.url",
-        "path" : "Extension.url",
-        "fixedUri" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
-      },
-      {
-        "id" : "Extension.value[x]",
-        "path" : "Extension.value[x]",
-        "max" : "0"
-      }
-    ]
+    "element" : [{
+      "id" : "Extension",
+      "path" : "Extension",
+      "short" : "BC SourceID and UserID",
+      "definition" : "Identifiers for the source and user that modified the specific element that this extension is on."
+    },
+    {
+      "id" : "Extension.extension:sourceID",
+      "path" : "Extension.extension",
+      "sliceName" : "sourceID",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Extension.extension:sourceID.extension",
+      "path" : "Extension.extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.extension:sourceID.url",
+      "path" : "Extension.extension.url",
+      "fixedUri" : "sourceID"
+    },
+    {
+      "id" : "Extension.extension:sourceID.value[x]",
+      "path" : "Extension.extension.value[x]",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Extension.extension:userID",
+      "path" : "Extension.extension",
+      "sliceName" : "userID",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Extension.extension:userID.extension",
+      "path" : "Extension.extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.extension:userID.url",
+      "path" : "Extension.extension.url",
+      "fixedUri" : "userID"
+    },
+    {
+      "id" : "Extension.extension:userID.value[x]",
+      "path" : "Extension.extension.value[x]",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Extension.url",
+      "path" : "Extension.url",
+      "fixedUri" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension"
+    },
+    {
+      "id" : "Extension.value[x]",
+      "path" : "Extension.value[x]",
+      "max" : "0"
+    }]
   }
 }
 

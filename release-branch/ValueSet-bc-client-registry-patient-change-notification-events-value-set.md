@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-client-registry-patient-change-notification-events | *Version*:1.0.0 |
-| Active as of 2026-02-17 | *Computable Name*:PatientChangeNotificationEventsValueSet |
+| Active as of 2026-03-17 | *Computable Name*:PatientChangeNotificationEventsValueSet |
 
  
 Codes used to indicate that type of patient changes that a subscriber is interested in receiving. 
@@ -51,37 +51,27 @@ Codes used to indicate that type of patient changes that a subscriber is interes
   "title" : "BC Client Registry Patient Change Notification Events Value Set",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-02-17T21:23:45+00:00",
+  "date" : "2026-03-17T18:19:20+00:00",
   "publisher" : "BC Ministry of Health",
-  "contact" : [
-    {
-      "name" : "BC Ministry of Health",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "BC Ministry of Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+    }]
+  }],
   "description" : "Codes used to indicate that type of patient changes that a subscriber is interested in receiving.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "CA",
-          "display" : "Canada"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CA",
+      "display" : "Canada"
+    }]
+  }],
   "compose" : {
-    "include" : [
-      {
-        "system" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"
-      }
-    ]
+    "include" : [{
+      "system" : "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"
+    }]
   }
 }
 

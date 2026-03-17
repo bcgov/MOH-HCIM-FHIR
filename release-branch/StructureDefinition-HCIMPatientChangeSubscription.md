@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/HCIMPatientChangeSubscription | *Version*:1.0.0 |
-| Active as of 2026-02-17 | *Computable Name*:HCIMPatientChangeSubscription |
+| Active as of 2026-03-17 | *Computable Name*:HCIMPatientChangeSubscription |
 
  
 Profile on subscription for HCIM Patient Changes 
@@ -40,99 +40,85 @@ Other representations of profile: [CSV](StructureDefinition-HCIMPatientChangeSub
   "version" : "1.0.0",
   "name" : "HCIMPatientChangeSubscription",
   "status" : "active",
-  "date" : "2026-02-17T21:23:45+00:00",
+  "date" : "2026-03-17T18:19:20+00:00",
   "publisher" : "BC Ministry of Health",
-  "contact" : [
-    {
-      "name" : "BC Ministry of Health",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "BC Ministry of Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+    }]
+  }],
   "description" : "Profile on subscription for HCIM Patient Changes",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "CA",
-          "display" : "Canada"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CA",
+      "display" : "Canada"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    },
-    {
-      "identity" : "w5",
-      "uri" : "http://hl7.org/fhir/fivews",
-      "name" : "FiveWs Pattern Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Subscription",
   "baseDefinition" : "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Subscription",
-        "path" : "Subscription"
-      },
-      {
-        "id" : "Subscription.criteria",
-        "path" : "Subscription.criteria",
-        "patternString" : "http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution"
-      },
-      {
-        "id" : "Subscription.channel",
-        "path" : "Subscription.channel",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Subscription.channel.type",
-        "path" : "Subscription.channel.type",
-        "patternCode" : "rest-hook",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Subscription.channel.endpoint",
-        "path" : "Subscription.channel.endpoint",
-        "min" : 1,
-        "mustSupport" : true
-      },
-      {
-        "id" : "Subscription.channel.payload",
-        "path" : "Subscription.channel.payload",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Subscription.channel.payload.extension:content",
-        "path" : "Subscription.channel.payload.extension",
-        "sliceName" : "content"
-      },
-      {
-        "id" : "Subscription.channel.payload.extension:content.value[x]:valueCode",
-        "path" : "Subscription.channel.payload.extension.value[x]",
-        "sliceName" : "valueCode",
-        "type" : [
-          {
-            "code" : "code"
-          }
-        ],
-        "patternCode" : "full-resource"
-      }
-    ]
+    "element" : [{
+      "id" : "Subscription",
+      "path" : "Subscription"
+    },
+    {
+      "id" : "Subscription.criteria",
+      "path" : "Subscription.criteria",
+      "patternString" : "http://hlth.gov.bc.ca/fhir/client/SubscriptionTopic/HCIMPatientChangeDistribution"
+    },
+    {
+      "id" : "Subscription.channel",
+      "path" : "Subscription.channel",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Subscription.channel.type",
+      "path" : "Subscription.channel.type",
+      "patternCode" : "rest-hook",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Subscription.channel.endpoint",
+      "path" : "Subscription.channel.endpoint",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Subscription.channel.payload",
+      "path" : "Subscription.channel.payload",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Subscription.channel.payload.extension:content",
+      "path" : "Subscription.channel.payload.extension",
+      "sliceName" : "content"
+    },
+    {
+      "id" : "Subscription.channel.payload.extension:content.value[x]:valueCode",
+      "path" : "Subscription.channel.payload.extension.value[x]",
+      "sliceName" : "valueCode",
+      "type" : [{
+        "code" : "code"
+      }],
+      "patternCode" : "full-resource"
+    }]
   }
 }
 

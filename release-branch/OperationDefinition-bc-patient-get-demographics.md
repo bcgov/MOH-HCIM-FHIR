@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-get-demographics | *Version*:1.0.0 |
-| Active as of 2026-02-17 | *Computable Name*:GetDemographics |
+| Active as of 2026-03-17 | *Computable Name*:GetDemographics |
 
  
 This operation is used to query for a patient. The response can contain 0 or 1 Patient. 
@@ -78,31 +78,23 @@ See [Get Demographics request](Bundle-GetDemographics-Request.md) example.
   "title" : "GetDemographics",
   "status" : "active",
   "kind" : "query",
-  "date" : "2026-02-17T21:23:45+00:00",
+  "date" : "2026-03-17T18:19:20+00:00",
   "publisher" : "BC Ministry of Health",
-  "contact" : [
-    {
-      "name" : "BC Ministry of Health",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "BC Ministry of Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+    }]
+  }],
   "description" : "This operation is used to query for a patient.  The response can contain 0 or 1 Patient.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "CA",
-          "display" : "Canada"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CA",
+      "display" : "Canada"
+    }]
+  }],
   "code" : "GetDemographics",
   "resource" : ["Patient"],
   "system" : false,
@@ -110,24 +102,22 @@ See [Get Demographics request](Bundle-GetDemographics-Request.md) example.
   "instance" : false,
   "inputProfile" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle",
   "outputProfile" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle",
-  "parameter" : [
-    {
-      "name" : "GetDemographicsRequestBundle",
-      "use" : "in",
-      "min" : 1,
-      "max" : "1",
-      "documentation" : "GetDemographics request Bundle.",
-      "type" : "Bundle"
-    },
-    {
-      "name" : "SearchResponseBundle",
-      "use" : "out",
-      "min" : 1,
-      "max" : "1",
-      "documentation" : "GetDemograponics response Bundle.",
-      "type" : "Bundle"
-    }
-  ]
+  "parameter" : [{
+    "name" : "GetDemographicsRequestBundle",
+    "use" : "in",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "GetDemographics request Bundle.",
+    "type" : "Bundle"
+  },
+  {
+    "name" : "SearchResponseBundle",
+    "use" : "out",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "GetDemograponics response Bundle.",
+    "type" : "Bundle"
+  }]
 }
 
 ```

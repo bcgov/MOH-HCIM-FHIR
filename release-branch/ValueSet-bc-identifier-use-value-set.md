@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-identifier-use-value-set | *Version*:1.0.0 |
-| Active as of 2026-02-17 | *Computable Name*:IdentifierUseVS |
+| Active as of 2026-03-17 | *Computable Name*:IdentifierUseVS |
 
  
 BC Identifier Use value set, sliced to meet BC constraints. 
@@ -51,53 +51,39 @@ BC Identifier Use value set, sliced to meet BC constraints.
   "title" : "BC Identifier Use Value Set",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-02-17T21:23:45+00:00",
+  "date" : "2026-03-17T18:19:20+00:00",
   "publisher" : "BC Ministry of Health",
-  "contact" : [
-    {
-      "name" : "BC Ministry of Health",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "BC Ministry of Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+    }]
+  }],
   "description" : "BC Identifier Use value set, sliced to meet BC constraints.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "CA",
-          "display" : "Canada"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CA",
+      "display" : "Canada"
+    }]
+  }],
   "compose" : {
-    "include" : [
+    "include" : [{
+      "valueSet" : ["http://hl7.org/fhir/ValueSet/identifier-use"]
+    }],
+    "exclude" : [{
+      "system" : "http://hl7.org/fhir/identifier-use",
+      "concept" : [{
+        "code" : "usual"
+      },
       {
-        "valueSet" : ["http://hl7.org/fhir/ValueSet/identifier-use"]
-      }
-    ],
-    "exclude" : [
+        "code" : "temp"
+      },
       {
-        "system" : "http://hl7.org/fhir/identifier-use",
-        "concept" : [
-          {
-            "code" : "usual"
-          },
-          {
-            "code" : "temp"
-          },
-          {
-            "code" : "old"
-          }
-        ]
-      }
-    ]
+        "code" : "old"
+      }]
+    }]
   }
 }
 

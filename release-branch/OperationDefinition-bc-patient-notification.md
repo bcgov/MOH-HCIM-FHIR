@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-notification | *Version*:1.0.0 |
-| Active as of 2026-02-17 | *Computable Name*:PatientNotification |
+| Active as of 2026-03-17 | *Computable Name*:PatientNotification |
 
  
 This operation is used notify a user that a patient's record has changed. 
@@ -32,47 +32,37 @@ The Client Registry is acting as the client and is sending distributions when a 
   "title" : "Patient Notification",
   "status" : "active",
   "kind" : "operation",
-  "date" : "2026-02-17T21:23:45+00:00",
+  "date" : "2026-03-17T18:19:20+00:00",
   "publisher" : "BC Ministry of Health",
-  "contact" : [
-    {
-      "name" : "BC Ministry of Health",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "BC Ministry of Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+    }]
+  }],
   "description" : "This operation is used notify a user that a patient's record has changed.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "CA",
-          "display" : "Canada"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CA",
+      "display" : "Canada"
+    }]
+  }],
   "code" : "PatientNotification",
   "resource" : ["Patient"],
   "system" : false,
   "type" : true,
   "instance" : false,
   "inputProfile" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle",
-  "parameter" : [
-    {
-      "name" : "SubscriptionNotificationBundle",
-      "use" : "out",
-      "min" : 1,
-      "max" : "1",
-      "documentation" : "The specific bundle entries that are needed when the Client Registry is sending a distribution (notification).",
-      "type" : "Bundle"
-    }
-  ]
+  "parameter" : [{
+    "name" : "SubscriptionNotificationBundle",
+    "use" : "in",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "The specific bundle entries that are needed when the Client Registry is sending a distribution (notification).",
+    "type" : "Bundle"
+  }]
 }
 
 ```

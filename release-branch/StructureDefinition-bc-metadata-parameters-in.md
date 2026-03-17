@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in | *Version*:1.0.0 |
-| Active as of 2026-02-17 | *Computable Name*:MetadataParametersIn |
+| Active as of 2026-03-17 | *Computable Name*:MetadataParametersIn |
 
  
 Parameters profile for BC meta data - incoming messages. This profile is also intended to force the inclusion of specific parameters for the related Parameters. 
@@ -51,168 +51,148 @@ Other representations of profile: [CSV](StructureDefinition-bc-metadata-paramete
   "version" : "1.0.0",
   "name" : "MetadataParametersIn",
   "status" : "active",
-  "date" : "2026-02-17T21:23:45+00:00",
+  "date" : "2026-03-17T18:19:20+00:00",
   "publisher" : "BC Ministry of Health",
-  "contact" : [
-    {
-      "name" : "BC Ministry of Health",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "BC Ministry of Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+    }]
+  }],
   "description" : "Parameters profile for BC meta data - incoming messages. This profile is also intended to force the inclusion of specific parameters for the related Parameters.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "CA",
-          "display" : "Canada"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CA",
+      "display" : "Canada"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "v2",
-      "uri" : "http://hl7.org/v2",
-      "name" : "HL7 v2 Mapping"
-    },
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Parameters",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Parameters",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Parameters.parameter",
-        "path" : "Parameters.parameter",
-        "slicing" : {
-          "discriminator" : [
-            {
-              "type" : "value",
-              "path" : "name"
-            }
-          ],
-          "description" : "The specific parameters to specify BC Metadata.",
-          "rules" : "open"
-        },
-        "min" : 1
+    "element" : [{
+      "id" : "Parameters.parameter",
+      "path" : "Parameters.parameter",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "name"
+        }],
+        "description" : "The specific parameters to specify BC Metadata.",
+        "rules" : "open"
       },
-      {
-        "id" : "Parameters.parameter:messageId",
-        "path" : "Parameters.parameter",
-        "sliceName" : "messageId",
-        "min" : 1,
-        "max" : "1",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Parameters.parameter:messageId.name",
-        "path" : "Parameters.parameter.name",
-        "patternString" : "messageId",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Parameters.parameter:messageId.value[x]",
-        "path" : "Parameters.parameter.value[x]",
-        "min" : 1,
-        "type" : [
-          {
-            "code" : "string"
-          }
-        ],
-        "mustSupport" : true
-      },
-      {
-        "id" : "Parameters.parameter:messageId.resource",
-        "path" : "Parameters.parameter.resource",
-        "max" : "0"
-      },
-      {
-        "id" : "Parameters.parameter:messageId.part",
-        "path" : "Parameters.parameter.part",
-        "max" : "0"
-      },
-      {
-        "id" : "Parameters.parameter:identifiersOnly",
-        "path" : "Parameters.parameter",
-        "sliceName" : "identifiersOnly",
-        "min" : 0,
-        "max" : "1",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Parameters.parameter:identifiersOnly.name",
-        "path" : "Parameters.parameter.name",
-        "patternString" : "identifiersOnly",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Parameters.parameter:identifiersOnly.value[x]",
-        "path" : "Parameters.parameter.value[x]",
-        "type" : [
-          {
-            "code" : "boolean"
-          }
-        ]
-      },
-      {
-        "id" : "Parameters.parameter:identifiersOnly.resource",
-        "path" : "Parameters.parameter.resource",
-        "max" : "0"
-      },
-      {
-        "id" : "Parameters.parameter:identifiersOnly.part",
-        "path" : "Parameters.parameter.part",
-        "max" : "0"
-      },
-      {
-        "id" : "Parameters.parameter:history",
-        "path" : "Parameters.parameter",
-        "sliceName" : "history",
-        "min" : 0,
-        "max" : "1",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Parameters.parameter:history.name",
-        "path" : "Parameters.parameter.name",
-        "patternString" : "history",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Parameters.parameter:history.value[x]",
-        "path" : "Parameters.parameter.value[x]",
-        "type" : [
-          {
-            "code" : "boolean"
-          }
-        ]
-      },
-      {
-        "id" : "Parameters.parameter:history.resource",
-        "path" : "Parameters.parameter.resource",
-        "max" : "0"
-      },
-      {
-        "id" : "Parameters.parameter:history.part",
-        "path" : "Parameters.parameter.part",
-        "max" : "0"
-      }
-    ]
+      "min" : 1
+    },
+    {
+      "id" : "Parameters.parameter:messageId",
+      "path" : "Parameters.parameter",
+      "sliceName" : "messageId",
+      "min" : 1,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Parameters.parameter:messageId.name",
+      "path" : "Parameters.parameter.name",
+      "patternString" : "messageId",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Parameters.parameter:messageId.value[x]",
+      "path" : "Parameters.parameter.value[x]",
+      "min" : 1,
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Parameters.parameter:messageId.resource",
+      "path" : "Parameters.parameter.resource",
+      "max" : "0"
+    },
+    {
+      "id" : "Parameters.parameter:messageId.part",
+      "path" : "Parameters.parameter.part",
+      "max" : "0"
+    },
+    {
+      "id" : "Parameters.parameter:identifiersOnly",
+      "path" : "Parameters.parameter",
+      "sliceName" : "identifiersOnly",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Parameters.parameter:identifiersOnly.name",
+      "path" : "Parameters.parameter.name",
+      "patternString" : "identifiersOnly",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Parameters.parameter:identifiersOnly.value[x]",
+      "path" : "Parameters.parameter.value[x]",
+      "type" : [{
+        "code" : "boolean"
+      }]
+    },
+    {
+      "id" : "Parameters.parameter:identifiersOnly.resource",
+      "path" : "Parameters.parameter.resource",
+      "max" : "0"
+    },
+    {
+      "id" : "Parameters.parameter:identifiersOnly.part",
+      "path" : "Parameters.parameter.part",
+      "max" : "0"
+    },
+    {
+      "id" : "Parameters.parameter:history",
+      "path" : "Parameters.parameter",
+      "sliceName" : "history",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Parameters.parameter:history.name",
+      "path" : "Parameters.parameter.name",
+      "patternString" : "history",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Parameters.parameter:history.value[x]",
+      "path" : "Parameters.parameter.value[x]",
+      "type" : [{
+        "code" : "boolean"
+      }]
+    },
+    {
+      "id" : "Parameters.parameter:history.resource",
+      "path" : "Parameters.parameter.resource",
+      "max" : "0"
+    },
+    {
+      "id" : "Parameters.parameter:history.part",
+      "path" : "Parameters.parameter.part",
+      "max" : "0"
+    }]
   }
 }
 

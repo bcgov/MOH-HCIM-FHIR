@@ -31,68 +31,48 @@ PCR as a client posts notifications/distributions via a patient-level operation.
   "status" : "active",
   "date" : "2025-10-10",
   "publisher" : "BC Ministry of Health",
-  "contact" : [
-    {
-      "name" : "BC Ministry of Health",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "BC Ministry of Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health"
+    }]
+  }],
   "description" : "PCR as a client posts notifications/distributions via a patient-level operation. This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a client, sending distributions (notifications).",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "CA",
-          "display" : "Canada"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CA",
+      "display" : "Canada"
+    }]
+  }],
   "kind" : "capability",
   "software" : {
     "name" : "BC HCIM FHIR Implementation"
   },
   "fhirVersion" : "4.0.1",
   "format" : ["json"],
-  "rest" : [
-    {
-      "mode" : "client",
-      "security" : {
-        "service" : [
-          {
-            "coding" : [
-              {
-                "system" : "http://terminology.hl7.org/CodeSystem/restful-security-service",
-                "code" : "OAuth"
-              }
-            ]
-          }
-        ]
-      },
-      "resource" : [
-        {
-          "type" : "Patient",
-          "profile" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient",
-          "supportedProfile" : [
-            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle"
-          ],
-          "operation" : [
-            {
-              "name" : "PatientNotification",
-              "definition" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-notification",
-              "documentation" : "POST [base]/Patient/$PatientNotification with a bc-subscription-notification-bundle."
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  "rest" : [{
+    "mode" : "client",
+    "security" : {
+      "service" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/restful-security-service",
+          "code" : "OAuth"
+        }]
+      }]
+    },
+    "resource" : [{
+      "type" : "Patient",
+      "profile" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient",
+      "supportedProfile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle"],
+      "operation" : [{
+        "name" : "PatientNotification",
+        "definition" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-notification",
+        "documentation" : "POST [base]/Patient/$PatientNotification with a bc-subscription-notification-bundle."
+      }]
+    }]
+  }]
 }
 
 ```
