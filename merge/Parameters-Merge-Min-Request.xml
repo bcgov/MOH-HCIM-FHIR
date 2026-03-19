@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Parameters xmlns="http://hl7.org/fhir">
+  <id value="Merge-Min-Request"/>
+  <parameter>
+    <name value="target-patient"/>
+    <valueReference>
+      <reference value="Patient/89f6e0c5-b3e8-4ebe-9886-34f3a1b932b8"/>
+      <identifier>
+        <use value="official"/>
+        <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id"/>
+        <value value="U6UQG3285Z5NG23110E2"/>
+      </identifier>
+    </valueReference>
+  </parameter>
+  <parameter>
+    <name value="source-patient"/>
+    <valueReference>
+      <reference value="Patient/95aef996-3bf9-4ccf-8584-96299735689a"/>
+      <identifier>
+        <use value="official"/>
+        <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id"/>
+        <value value="YR4E0OMAP2364ZX58222"/>
+      </identifier>
+    </valueReference>
+  </parameter>
+  <parameter>
+    <name value="source-patient-identifier"/>
+    <valueIdentifier>
+      <use value="official"/>
+      <system value="https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id"/>
+      <value value="9ICFAEF1A716U78HKR51"/>
+    </valueIdentifier>
+  </parameter>
+  <parameter>
+    <name value="result-patient"/>
+    <resource>
+      <Patient>
+        <id value="89f6e0c5-b3e8-4ebe-9886-34f3a1b932b8"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"/>
+        </meta>
+        <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+          <valuePeriod>
+            <start value="2025-01-16T12:54:54.7488769-08:00"/>
+          </valuePeriod>
+        </extension>
+        <link>
+          <other>
+            <reference value="Patient/95aef996-3bf9-4ccf-8584-96299735689a"/>
+          </other>
+          <type value="replaces"/>
+        </link>
+      </Patient>
+    </resource>
+  </parameter>
+</Parameters>

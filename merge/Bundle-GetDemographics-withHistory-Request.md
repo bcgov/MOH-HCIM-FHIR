@@ -1,0 +1,68 @@
+# GetDemographics-withHistory-Request - BC Client Registry FHIR Implementation Guide v1.0.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **GetDemographics-withHistory-Request**
+
+## Example Bundle: GetDemographics-withHistory-Request
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Bundle",
+  "id" : "GetDemographics-withHistory-Request",
+  "meta" : {
+    "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle"]
+  },
+  "type" : "collection",
+  "timestamp" : "2023-01-23T14:00:53.7288084-08:00",
+  "link" : [{
+    "relation" : "self",
+    "url" : "urn:uuid:3cfa83ab-d8c9-4536-9d02-cdc15f795ff0"
+  }],
+  "entry" : [{
+    "fullUrl" : "urn:uuid:fb5ed5fa-e08f-4b88-948a-d81cd26d3453",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "id" : "GetDemographics-withHistory-Request-Parameters",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"]
+      },
+      "parameter" : [{
+        "name" : "messageId",
+        "valueString" : "0cf19fde-0808-4ffe-b029-3aa06bc008a9"
+      },
+      {
+        "name" : "history",
+        "valueBoolean" : true
+      },
+      {
+        "name" : "identifiersOnly",
+        "valueBoolean" : false
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:c83ebe98-0a68-42f1-b390-67323d4b5ce4",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "GetDemographics-withHistory-Request-Patient",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_GetDemographics-withHistory-Request-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient GetDemographics-withHistory-Request-Patient</b></p><a name=\"GetDemographics-withHistory-Request-Patient\"> </a><a name=\"hcGetDemographics-withHistory-Request-Patient\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient (no stated gender), DoB Unknown ( https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id#2701XI3IW2R95W87WH3H16082KJ2LEVENM0LNTW)</p><hr/></div>"
+      },
+      "identifier" : [{
+        "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-fv-source-patient-id",
+        "value" : "2701XI3IW2R95W87WH3H16082KJ2LEVENM0LNTW"
+      }]
+    }
+  }]
+}
+
+```

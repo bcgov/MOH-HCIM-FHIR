@@ -1,0 +1,159 @@
+{
+  "resourceType" : "Parameters",
+  "id" : "Merge-Request",
+  "parameter" : [{
+    "name" : "target-patient",
+    "valueReference" : {
+      "reference" : "Patient/5d7aef4c-8df8-4b3b-9fb9-56684973057d",
+      "identifier" : {
+        "use" : "official",
+        "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id",
+        "value" : "U6UQG3285Z5NG23110E2"
+      }
+    }
+  },
+  {
+    "name" : "source-patient",
+    "valueReference" : {
+      "reference" : "Patient/9b56c75b-92be-427c-ab3f-53554bf3339a",
+      "identifier" : {
+        "use" : "official",
+        "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id",
+        "value" : "YR4E0OMAP2364ZX58222"
+      }
+    }
+  },
+  {
+    "name" : "source-patient-identifier",
+    "valueIdentifier" : {
+      "use" : "official",
+      "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id",
+      "value" : "9ICFAEF1A716U78HKR51"
+    }
+  },
+  {
+    "name" : "source-patient-identifier",
+    "valueIdentifier" : {
+      "use" : "official",
+      "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id",
+      "value" : "K11S731WJ155LE60Y9OR"
+    }
+  },
+  {
+    "name" : "target-patient-identifier",
+    "valueIdentifier" : {
+      "use" : "official",
+      "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-mb-patient-healthcare-id",
+      "value" : "L79SQH68T1I4E829PW57"
+    }
+  },
+  {
+    "name" : "target-patient-identifier",
+    "valueIdentifier" : {
+      "use" : "secondary",
+      "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-arh-source-patient-id",
+      "value" : "4MR5R6RH6W01128QG22O"
+    }
+  },
+  {
+    "name" : "source-patient-identifier",
+    "valueIdentifier" : {
+      "use" : "secondary",
+      "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-bh-source-patient-id",
+      "value" : "9UPCEFV7B98S20CCA6S4"
+    }
+  },
+  {
+    "name" : "source-patient-identifier",
+    "valueIdentifier" : {
+      "extension" : [{
+        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-status-extension",
+        "valueCode" : "cancelled"
+      }],
+      "use" : "secondary",
+      "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-cac-source-patient-id",
+      "value" : "MEJK6DNU0O4PO9X460FU"
+    }
+  },
+  {
+    "name" : "result-patient",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "5d7aef4c-8df8-4b3b-9fb9-56684973057d",
+      "meta" : {
+        "profile" : ["http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"]
+      },
+      "extension" : [{
+        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+        "valuePeriod" : {
+          "start" : "2025-01-16T12:54:54.7488769-08:00"
+        }
+      }],
+      "name" : [{
+        "use" : "usual",
+        "family" : "Ogden",
+        "given" : ["Donnchadh",
+        "Xarles",
+        "Careen"]
+      },
+      {
+        "use" : "nickname",
+        "given" : ["Bartholomaus"]
+      }],
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "3013554636",
+        "use" : "mobile"
+      },
+      {
+        "system" : "phone",
+        "value" : "3515401811",
+        "use" : "home"
+      },
+      {
+        "system" : "phone",
+        "value" : "5044019252",
+        "use" : "work"
+      },
+      {
+        "system" : "email",
+        "value" : "Adamma.Pennigton@cgi.com",
+        "use" : "mobile"
+      },
+      {
+        "system" : "email",
+        "value" : "Bernot.Arne@cgi.com",
+        "use" : "home"
+      },
+      {
+        "system" : "email",
+        "value" : "Wallace.Rentar@cgi.com",
+        "use" : "work"
+      }],
+      "gender" : "male",
+      "birthDate" : "1978-03-14",
+      "address" : [{
+        "type" : "physical",
+        "line" : ["28014 Rodney street"],
+        "city" : "Williamsville",
+        "state" : "BC",
+        "postalCode" : "V6NIJ6",
+        "country" : "CA"
+      },
+      {
+        "type" : "postal",
+        "line" : ["14230 Charleton ave"],
+        "city" : "Bruie",
+        "state" : "BC",
+        "postalCode" : "V1OZN4",
+        "country" : "CA"
+      }],
+      "link" : [{
+        "other" : {
+          "reference" : "Patient/9b56c75b-92be-427c-ab3f-53554bf3339a"
+        },
+        "type" : "replaces"
+      }]
+    }
+  }]
+}
