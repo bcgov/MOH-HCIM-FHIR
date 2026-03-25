@@ -12,11 +12,14 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"^^xsd:anyURI ;
-       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle>
+       fhir:l <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle>
      ] )
   ] ; # 
   fhir:identifier [
-     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:system [
+       fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+       fhir:l <urn:ietf:rfc:3986>
+     ] ;
      fhir:value [ fhir:v "urn:uuid:be0ea88b-cb92-46a5-8ae8-5aaa943d99c0" ]
   ] ; # 
   fhir:type [ fhir:v "searchset"] ; # 
@@ -24,10 +27,16 @@
   fhir:total [ fhir:v "1"^^xsd:nonNegativeInteger] ; # 
   fhir:link ( [
      fhir:relation [ fhir:v "canonical" ] ;
-     fhir:url [ fhir:v "https://localhost/$GetDemographics"^^xsd:anyURI ]
+     fhir:url [
+       fhir:v "https://localhost/$GetDemographics"^^xsd:anyURI ;
+       fhir:l <https://localhost/$GetDemographics>
+     ]
   ] ) ; # 
   fhir:entry ( [
-     fhir:fullUrl [ fhir:v "urn:uuid:a5aadea1-11ad-4428-a7d3-88a8e284c261"^^xsd:anyURI ] ;
+     fhir:fullUrl [
+       fhir:v "urn:uuid:a5aadea1-11ad-4428-a7d3-88a8e284c261"^^xsd:anyURI ;
+       fhir:l <urn:uuid:a5aadea1-11ad-4428-a7d3-88a8e284c261>
+     ] ;
      fhir:resource ( <urn:uuid:a5aadea1-11ad-4428-a7d3-88a8e284c261> )
   ] [
      fhir:resource ( [
@@ -35,14 +44,17 @@
        fhir:id [ fhir:v "GetDemographics-Response-Masked-Outcome" ] ;
        fhir:text [
          fhir:status [ fhir:v "generated" ] ;
-         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_GetDemographics-Response-Masked-Outcome\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome GetDemographics-Response-Masked-Outcome</b></p><a name=\"GetDemographics-Response-Masked-Outcome\"> </a><a name=\"hcGetDemographics-Response-Masked-Outcome\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Information</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.GD.0.0013}\">The get demographics query completed successfully.</span></td></tr></table></div>"^^rdf:XMLLiteral
+         fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"OperationOutcome_GetDemographics-Response-Masked-Outcome\"> </a><p class=\"res-header-id\"><b>Generated Narrative: OperationOutcome GetDemographics-Response-Masked-Outcome</b></p><a name=\"GetDemographics-Response-Masked-Outcome\"> </a><a name=\"hcGetDemographics-Response-Masked-Outcome\"> </a><h3>Issues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Severity</b></td><td><b>Code</b></td><td><b>Details</b></td></tr><tr><td style=\"display: none\">*</td><td>Information</td><td>Business Rule Violation</td><td><span title=\"Codes:{https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes BCHCIM.GD.0.0013}\">The get demographics query completed successfully.</span></td></tr></table></div>"^^rdf:XMLLiteral ]
        ] ;
        fhir:issue ( [
          fhir:severity [ fhir:v "information" ] ;
          fhir:code [ fhir:v "business-rule" ] ;
          fhir:details [
            fhir:coding ( [
-             fhir:system [ fhir:v "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes"^^xsd:anyURI ] ;
+             fhir:system [
+               fhir:v "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes"^^xsd:anyURI ;
+               fhir:l <https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes>
+             ] ;
              fhir:code [ fhir:v "BCHCIM.GD.0.0013" ]
            ] ) ;
            fhir:text [ fhir:v "The get demographics query completed successfully." ]
@@ -59,27 +71,33 @@
        fhir:meta [
          fhir:profile ( [
            fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"^^xsd:anyURI ;
-           fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+           fhir:l <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
          ] )
        ] ;
        fhir:text [
          fhir:status [ fhir:v "generated" ] ;
-         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_GetDemographics-Response-Masked-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient GetDemographics-Response-Masked-Patient</b></p><a name=\"GetDemographics-Response-Masked-Patient\"> </a><a name=\"hcGetDemographics-Response-Masked-Patient\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"> null, DoB: </p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Alternate names (see the one above)\">Alt. Name:</td><td colspan=\"3\">(Nickname)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: -unknown-(Mobile)</li><li>ph: -unknown-(Home)</li><li>ph: -unknown-(Work)</li><li><a href=\"mailto:null\"/></li><li><a href=\"mailto:null\"/></li><li><a href=\"mailto:null\"/></li><li></li><li></li></ul></td></tr></table></div>"^^rdf:XMLLiteral
+         fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_GetDemographics-Response-Masked-Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient GetDemographics-Response-Masked-Patient</b></p><a name=\"GetDemographics-Response-Masked-Patient\"> </a><a name=\"hcGetDemographics-Response-Masked-Patient\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bc-patient.html\">ClientRegistryPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"> null, DoB: </p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Alternate names (see the one above)\">Alt. Name:</td><td colspan=\"3\">(Nickname)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: -unknown-(Mobile)</li><li>ph: -unknown-(Home)</li><li>ph: -unknown-(Work)</li><li><a href=\"mailto:null\"/></li><li><a href=\"mailto:null\"/></li><li><a href=\"mailto:null\"/></li><li></li><li></li></ul></td></tr></table></div>"^^rdf:XMLLiteral ]
        ] ;
        fhir:name ( [
          fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/data-absent-reason>
+           ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "masked"
            ]
          ] ) ;
          fhir:use [ fhir:v "usual" ]
        ] [
          fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/data-absent-reason>
+           ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "masked"
            ]
          ] ) ;
@@ -87,9 +105,12 @@
        ] ) ;
        fhir:telecom ( [
          fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/data-absent-reason>
+           ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "masked"
            ]
          ] ) ;
@@ -97,9 +118,12 @@
          fhir:use [ fhir:v "mobile" ]
        ] [
          fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/data-absent-reason>
+           ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "masked"
            ]
          ] ) ;
@@ -107,9 +131,12 @@
          fhir:use [ fhir:v "home" ]
        ] [
          fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/data-absent-reason>
+           ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "masked"
            ]
          ] ) ;
@@ -117,9 +144,12 @@
          fhir:use [ fhir:v "work" ]
        ] [
          fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/data-absent-reason>
+           ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "masked"
            ]
          ] ) ;
@@ -127,9 +157,12 @@
          fhir:use [ fhir:v "mobile" ]
        ] [
          fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/data-absent-reason>
+           ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "masked"
            ]
          ] ) ;
@@ -137,9 +170,12 @@
          fhir:use [ fhir:v "home" ]
        ] [
          fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/data-absent-reason>
+           ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "masked"
            ]
          ] ) ;
@@ -148,36 +184,48 @@
        ] ) ;
        fhir:gender [
          fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/data-absent-reason>
+           ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "masked"
            ]
          ] )
        ] ;
        fhir:birthDate [
          fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/data-absent-reason>
+           ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "masked"
            ]
          ] )
        ] ;
        fhir:address ( [
          fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/data-absent-reason>
+           ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "masked"
            ]
          ] ) ;
          fhir:type [ fhir:v "physical" ]
        ] [
          fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/data-absent-reason>
+           ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "masked"
            ]
          ] ) ;
@@ -191,25 +239,25 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"^^xsd:anyURI ;
-       fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out>
+       fhir:l <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out>
      ] )
   ] ; # 
   fhir:parameter ( [
      fhir:name [ fhir:v "messageId" ] ;
      fhir:value [
-       a fhir:string ;
+       a fhir:String ;
        fhir:v "76648f54-2dd3-40f4-b6bd-5c39386061b2"
      ]
   ] [
      fhir:name [ fhir:v "history" ] ;
      fhir:value [
-       a fhir:boolean ;
+       a fhir:Boolean ;
        fhir:v false
      ]
   ] [
      fhir:name [ fhir:v "identifiersOnly" ] ;
      fhir:value [
-       a fhir:boolean ;
+       a fhir:Boolean ;
        fhir:v false
      ]
   ] ) . # 

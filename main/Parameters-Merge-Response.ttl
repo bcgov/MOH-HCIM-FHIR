@@ -18,7 +18,10 @@
          fhir:code [ fhir:v "business-rule" ] ;
          fhir:details [
            fhir:coding ( [
-             fhir:system [ fhir:v "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes"^^xsd:anyURI ] ;
+             fhir:system [
+               fhir:v "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes"^^xsd:anyURI ;
+               fhir:l <https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-oo-codes>
+             ] ;
              fhir:code [ fhir:v "BCHCIM.PM.0.0008" ]
            ] ) ;
            fhir:text [ fhir:v "The Person Merge request has completed successfully." ]
@@ -32,19 +35,25 @@
        fhir:meta [
          fhir:profile ( [
            fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"^^xsd:anyURI ;
-           fhir:link <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
+           fhir:l <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient>
          ] )
        ] ;
        fhir:identifier ( [
          fhir:extension ( [
-           fhir:url [ fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ] ;
+           fhir:url [
+             fhir:v "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"^^xsd:anyURI ;
+             fhir:l <http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension>
+           ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "active"
            ]
          ] ) ;
          fhir:use [ fhir:v "official" ] ;
-         fhir:system [ fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id"^^xsd:anyURI ] ;
+         fhir:system [
+           fhir:v "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id"^^xsd:anyURI ;
+           fhir:l <https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-exp-source-patient-id>
+         ] ;
          fhir:value [ fhir:v "U6UQG3285Z5NG23110E2" ] ;
          fhir:period [
            fhir:start [ fhir:v "2025-01-16T12:54:54-08:00"^^xsd:dateTime ]

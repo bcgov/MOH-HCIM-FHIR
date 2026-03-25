@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"14.74"}
-    h3,h4,h5,h6{--heading-prefix:"14.74"}</style>
+    <style type="text/css">h2{--heading-prefix:"16.79"}
+    h3,h4,h5,h6{--heading-prefix:"16.79"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -116,6 +116,18 @@
       </li>
       <li>
         <a href="restful.html">RESTful Services</a>
+      </li>
+      <li>
+        <a href="techdetails.html">Technical Details</a>
+      </li>
+      <li>
+        <a href="distributions.html">Distributions</a>
+      </li>
+      <li>
+        <a href="v3Transition.html">Transition</a>
+      </li>
+      <li>
+        <a href="connectedPartner.html">Connected Partners</a>
       </li>
     </ul>
   </li>
@@ -234,7 +246,7 @@
         
           Active
           
-            as of 2025-08-27
+            as of 2026-03-25
           
         
       </td>
@@ -319,8 +331,8 @@ This new option would allow a subscriber to limit distributions by region. The d
 </ul>
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"></p><a name="bc-client-registry-patient-change-notification-events"> </a><a name="hcbc-client-registry-patient-change-notification-events"> </a><p>This case-sensitive code system <code>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</code> defines the following codes:</p>
-<table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr>
+  <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"></p><a name="bc-client-registry-patient-change-notification-events"> </a><a name="hcbc-client-registry-patient-change-notification-events"> </a><p>This case-sensitive code system <code>https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events</code> defines the following codes:</p>
+<table class="codes" data-fhir="generated"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr>
 <tr><td style="white-space:nowrap">COMP<a name="bc-client-registry-patient-change-notification-events-COMP"> </a></td>
 <td>Composite View</td>
 <td>The Composite View distribution serves different business purposes depending on whether or not the subscriber is a source system. For a source system, Composite View distributions inform a subscribing system that its records are out-of-sync with the composite view. For a non-source system, Composite View distributions inform a subscriber when a data attribute has been modified on a specific source.</td></tr>
@@ -333,7 +345,7 @@ This new option would allow a subscriber to limit distributions by region. The d
 <tr><td style="white-space:nowrap">NEWBORN<a name="bc-client-registry-patient-change-notification-events-NEWBORN"> </a></td>
 <td>Newborn</td>
 <td>A Newborn distribution is a non-source distribution that informs subscribers that a newborn record has been created and has been assigned a PHN. Typically, subscribers would limit their source subscription to MOH_CRS for this distribution.</td></tr>
-<tr><td style="white-space:nowrap">NEWBORN_GENDER<a name="bc-client-registry-patient-change-notification-events-NEWBORN_GENDER"> </a></td>
+<tr><td style="white-space:nowrap">NEWBORNGENDER<a name="bc-client-registry-patient-change-notification-events-NEWBORNGENDER"> </a></td>
 <td>Newborn Gender</td>
 <td>The Newborn Gender distribution is a non-source distribution and informs subscribers when the gender on a newborn record changes from unknown or undifferentiated to Male or Female. This distribution is used to ensure that pre-registered newborns (where the gender is frequently unknown) are registered for MSP benefits. MSP does not allow the registration of newborns with an unknown gender value.</td></tr>
 <tr><td style="white-space:nowrap">PHN<a name="bc-client-registry-patient-change-notification-events-PHN"> </a></td>
@@ -476,7 +488,7 @@ This new option would allow a subscriber to limit distributions by region. The d
       </td>
     </tr>
     <tr>
-      <td>NEWBORN_GENDER</td>
+      <td>NEWBORNGENDER</td>
       <td>
         <ul>
             <li>An active (not merged or in an overlay task) MOH_CRS record exists in the entity set</li>
@@ -607,7 +619,7 @@ This new option would allow a subscriber to limit distributions by region. The d
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 27, 2025 22:34+0000">2025-08-27</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2026 22:00+0000">2026-03-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

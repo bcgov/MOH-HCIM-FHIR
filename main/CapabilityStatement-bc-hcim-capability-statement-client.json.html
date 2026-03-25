@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>BC HCIM Client Capability Statement - JSON Representation - BC Client Registry FHIR Implementation Guide v1.0.0</title>
+    <title>Notifications Distributor (Client) — Operations Only - JSON Representation - BC Client Registry FHIR Implementation Guide v1.0.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -45,8 +45,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"14.1"}
-    h3,h4,h5,h6{--heading-prefix:"14.1"}</style>
+    <style type="text/css">h2{--heading-prefix:"16.2"}
+    h3,h4,h5,h6{--heading-prefix:"16.2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -119,6 +119,18 @@
       <li>
         <a href="restful.html">RESTful Services</a>
       </li>
+      <li>
+        <a href="techdetails.html">Technical Details</a>
+      </li>
+      <li>
+        <a href="distributions.html">Distributions</a>
+      </li>
+      <li>
+        <a href="v3Transition.html">Transition</a>
+      </li>
+      <li>
+        <a href="connectedPartner.html">Connected Partners</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -154,7 +166,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>BC HCIM Client Capability Statement</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Notifications Distributor (Client) — Operations Only</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -213,16 +225,16 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: BC HCIM Client Capability Statement - JSON Representation</h2>
+<h2 id="root">: Notifications Distributor (Client) — Operations Only - JSON Representation</h2>
 
-  <table class="colsd">
+  <table class="colsi">
     <tr>
 
       <td colspan="2">
         
-          Draft
+          Active
           
-            as of 2021-11-18
+            as of 2025-10-10
           
         
       </td>
@@ -238,19 +250,19 @@
 
 
 
-  <pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+  <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement">resourceType</a>" : "CapabilityStatement",
-  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.id">id</a>" : "bc-hcim-capability-statement-client",
-  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.text">text</a>" : {
+  "<a href="http://hl7.org/fhir/R4/resource.html#CapabilityStatement.id">id</a>" : "bc-hcim-capability-statement-client",
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#CapabilityStatement.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: CapabilityStatement bc-hcim-capability-statement-client&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;bc-hcim-capability-statement-client\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcbc-hcim-capability-statement-client\&quot;&gt; &lt;/a&gt;&lt;h2 id=\&quot;title\&quot;&gt;BC HCIM Client Capability Statement&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Implementation Guide Version: 1.0.0 &lt;/li&gt;&lt;li&gt;FHIR Version: 4.0.1 &lt;/li&gt;&lt;li&gt;Supported Formats: &lt;code&gt;json&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Published on: 2021-11-18 &lt;/li&gt;&lt;li&gt;Published by: BC Ministry of Health &lt;/li&gt;&lt;/ul&gt;&lt;blockquote class=\&quot;impl-note\&quot;&gt;&lt;p&gt;&lt;strong&gt;Note to Implementers: FHIR Capabilities&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.&lt;/p&gt;&lt;/blockquote&gt;&lt;h2 id=\&quot;rest\&quot;&gt;FHIR RESTful Capabilities&lt;/h2&gt;&lt;div class=\&quot;panel panel-default\&quot;&gt;&lt;div class=\&quot;panel-heading\&quot;&gt;&lt;h3 id=\&quot;mode1\&quot; class=\&quot;panel-title\&quot;&gt;Mode: &lt;code&gt;client&lt;/code&gt;&lt;/h3&gt;&lt;/div&gt;&lt;div class=\&quot;panel-body\&quot;/&gt;&lt;/div&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: CapabilityStatement bc-hcim-capability-statement-client&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;bc-hcim-capability-statement-client\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcbc-hcim-capability-statement-client\&quot;&gt; &lt;/a&gt;&lt;h2 id=\&quot;title\&quot;&gt;BC HCIM Client Capability Statement&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Implementation Guide Version: 1.0.0 &lt;/li&gt;&lt;li&gt;FHIR Version: 4.0.1 &lt;/li&gt;&lt;li&gt;Supported Formats: &lt;code&gt;json&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Published on: 2025-10-10 &lt;/li&gt;&lt;li&gt;Published by: BC Ministry of Health &lt;/li&gt;&lt;/ul&gt;&lt;blockquote class=\&quot;impl-note\&quot;&gt;&lt;p&gt;&lt;strong&gt;Note to Implementers: FHIR Capabilities&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.&lt;/p&gt;&lt;/blockquote&gt;&lt;h2 id=\&quot;rest\&quot;&gt;FHIR RESTful Capabilities&lt;/h2&gt;&lt;div class=\&quot;panel panel-default\&quot;&gt;&lt;div class=\&quot;panel-heading\&quot;&gt;&lt;h3 id=\&quot;mode1\&quot; class=\&quot;panel-title\&quot;&gt;Mode: &lt;code&gt;client&lt;/code&gt;&lt;/h3&gt;&lt;/div&gt;&lt;div class=\&quot;panel-body\&quot;&gt;&lt;div class=\&quot;lead\&quot;&gt;&lt;em&gt;Security&lt;/em&gt;&lt;/div&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;Enable CORS: no&lt;/div&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;Security services supported: &lt;code&gt;OAuth&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;h3 id=\&quot;resourcesCap1\&quot;&gt;Capabilities by Resource/Profile&lt;/h3&gt;&lt;h4 id=\&quot;resourcesSummary1\&quot;&gt;Summary&lt;/h4&gt;&lt;p&gt;The summary table lists the resources that are part of this configuration, and for each resource it lists:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;The relevant profiles (if any)&lt;/li&gt;&lt;li&gt;The interactions supported by each resource (&lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;R&lt;/span&gt;&lt;/b&gt;ead, &lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;S&lt;/span&gt;&lt;/b&gt;earch, &lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;U&lt;/span&gt;&lt;/b&gt;pdate, and &lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;C&lt;/span&gt;&lt;/b&gt;reate, are always shown, while &lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;VR&lt;/span&gt;&lt;/b&gt;ead, &lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;P&lt;/span&gt;&lt;/b&gt;atch, &lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;D&lt;/span&gt;&lt;/b&gt;elete, &lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;H&lt;/span&gt;&lt;/b&gt;istory on &lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;I&lt;/span&gt;&lt;/b&gt;nstance, or &lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;H&lt;/span&gt;&lt;/b&gt;istory on &lt;b&gt;&lt;span class=\&quot;bg-info\&quot;&gt;T&lt;/span&gt;&lt;/b&gt;ype are only present if at least one of the resources has support for them.&lt;/li&gt;&lt;li&gt;&lt;span&gt;The required, recommended, and some optional search parameters (if any). &lt;/span&gt;&lt;/li&gt;&lt;li&gt;The linked resources enabled for &lt;code&gt;_include&lt;/code&gt;&lt;/li&gt;&lt;li&gt;The other resources enabled for &lt;code&gt;_revinclude&lt;/code&gt;&lt;/li&gt;&lt;li&gt;The operations on the resource (if any)&lt;/li&gt;&lt;/ul&gt;&lt;div class=\&quot;table-responsive\&quot;&gt;&lt;table class=\&quot;table table-condensed table-hover\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;b&gt;Resource Type&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Profile&lt;/b&gt;&lt;/th&gt;&lt;th class=\&quot;text-center\&quot;&gt;&lt;b title=\&quot;GET a resource (read interaction)\&quot;&gt;R&lt;/b&gt;&lt;/th&gt;&lt;th class=\&quot;text-center\&quot;&gt;&lt;b title=\&quot;GET all set of resources of the type (search interaction)\&quot;&gt;S&lt;/b&gt;&lt;/th&gt;&lt;th class=\&quot;text-center\&quot;&gt;&lt;b title=\&quot;PUT a new resource version (update interaction)\&quot;&gt;U&lt;/b&gt;&lt;/th&gt;&lt;th class=\&quot;text-center\&quot;&gt;&lt;b title=\&quot;POST a new resource (create interaction)\&quot;&gt;C&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b title=\&quot;Required and recommended search parameters\&quot;&gt;Searches&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;code&gt;&lt;b&gt;_include&lt;/b&gt;&lt;/code&gt;&lt;/th&gt;&lt;th&gt;&lt;code&gt;&lt;b&gt;_revinclude&lt;/b&gt;&lt;/code&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Operations&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;#Patient1-1\&quot;&gt;Patient&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-bc-patient.html\&quot;&gt;http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient&lt;/a&gt;&lt;br/&gt;&lt;em&gt;Additional supported profiles:&lt;/em&gt;&lt;br/&gt;\u00a0\u00a0&lt;a href=\&quot;StructureDefinition-bc-subscription-notification-bundle.html\&quot;&gt;SubscriptionNotificationBundle&lt;/a&gt;&lt;/td&gt;&lt;td class=\&quot;text-center\&quot;/&gt;&lt;td class=\&quot;text-center\&quot;/&gt;&lt;td class=\&quot;text-center\&quot;/&gt;&lt;td class=\&quot;text-center\&quot;/&gt;&lt;td/&gt;&lt;td/&gt;&lt;td/&gt;&lt;td&gt;&lt;code&gt;$PatientNotification&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;hr/&gt;&lt;div class=\&quot;panel panel-default\&quot;&gt;&lt;div class=\&quot;panel-heading\&quot;&gt;&lt;h4 id=\&quot;Patient1-1\&quot; class=\&quot;panel-title\&quot;&gt;&lt;span style=\&quot;float: right;\&quot;&gt;Resource Conformance: unspecified &lt;/span&gt;Patient&lt;/h4&gt;&lt;/div&gt;&lt;div class=\&quot;panel-body\&quot;&gt;&lt;div class=\&quot;container\&quot;&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Base System Profile&lt;/span&gt;&lt;br/&gt;&lt;a href=\&quot;StructureDefinition-bc-patient.html\&quot;&gt;ClientRegistryPatient&lt;/a&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Profile Conformance&lt;/span&gt;&lt;br/&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-3\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Reference Policy&lt;/span&gt;&lt;br/&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Supported Profiles&lt;/span&gt;&lt;p&gt;&lt;a href=\&quot;StructureDefinition-bc-subscription-notification-bundle.html\&quot;&gt;SubscriptionNotificationBundle&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class=\&quot;col-lg-6\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Interaction summary&lt;/span&gt;&lt;br/&gt;&lt;ul/&gt;&lt;/div&gt;&lt;/div&gt;&lt;p/&gt;&lt;div class=\&quot;row\&quot;&gt;&lt;div class=\&quot;col-12\&quot;&gt;&lt;span class=\&quot;lead\&quot;&gt;Extended Operations&lt;/span&gt;&lt;table class=\&quot;table table-condensed table-hover\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Conformance&lt;/th&gt;&lt;th&gt;Operation&lt;/th&gt;&lt;th&gt;Documentation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;SHALL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;OperationDefinition-bc-patient-notification.html\&quot;&gt;$PatientNotification&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;POST [base]/Patient/$PatientNotification with a bc-subscription-notification-bundle.&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.url">url</a>" : "http://hlth.gov.bc.ca/fhir/client/CapabilityStatement/bc-hcim-capability-statement-client",
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.version">version</a>" : "1.0.0",
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.name">name</a>" : "HCIMClientCapabilityStatement",
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.title">title</a>" : "BC HCIM Client Capability Statement",
-  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.status">status</a>" : "draft",
-  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.date">date</a>" : "2021-11-18",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.date">date</a>" : "2025-10-10",
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.publisher">publisher</a>" : "BC Ministry of Health",
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.contact">contact</a>" : [
     {
@@ -263,7 +275,7 @@
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.description">description</a>" : "This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a client. I.e. sending notifications - FUTURE work.",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.description">description</a>" : "PCR as a client posts notifications/distributions via a patient-level operation. This capability statement describes the use cases that are supported by the BC FHIR implementation of the Client Registry when it is acting as a client, sending distributions (notifications).",
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.jurisdiction">jurisdiction</a>" : [
     {
       "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
@@ -285,7 +297,35 @@
   ],
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest">rest</a>" : [
     {
-      "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.mode">mode</a>" : "client"
+      "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.mode">mode</a>" : "client",
+      "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.security">security</a>" : {
+        "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.security.service">service</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/restful-security-service",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "OAuth"
+              }
+            ]
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a>" : "Patient",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.profile">profile</a>" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>" : [
+            <a href="StructureDefinition-bc-subscription-notification-bundle.html" style="color: Maroon">&#x1F517;</a> "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle"
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.operation">operation</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.operation.name">name</a>" : "PatientNotification",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.operation.definition">definition</a>" : "http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-notification",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.operation.documentation">documentation</a>" : "POST [base]/Patient/$PatientNotification with a bc-subscription-notification-bundle."
+            }
+          ]
+        }
+      ]
     }
   ]
 }</code></pre>
@@ -312,7 +352,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 27, 2025 22:34+0000">2025-08-27</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health">BC Ministry of Health</a>.  Package fhir.ca-bc.client#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2026 22:00+0000">2026-03-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

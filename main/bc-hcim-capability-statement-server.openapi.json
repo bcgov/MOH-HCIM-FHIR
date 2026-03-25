@@ -61,6 +61,161 @@
           }
         ]
       }
+    },
+    "/Patient/$FindCandidates": {
+      "summary": "Operation $FindCandidates on type Patient",
+      "description": "Operation $FindCandidates on type Patient",
+      "get": {
+        "summary": "$FindCandidates on type Patient",
+        "description": "This operation is used to query for a patient.  The response can contain 0 or more Patients.",
+        "operationId": "op-FindCandidates-Patient",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation response",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Parameters"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Patient/$GetDemographics": {
+      "summary": "Operation $GetDemographics on type Patient",
+      "description": "Operation $GetDemographics on type Patient",
+      "get": {
+        "summary": "$GetDemographics on type Patient",
+        "description": "This operation is used to query for a patient.  The response can contain 0 or 1 Patient.",
+        "operationId": "op-GetDemographics-Patient",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation response",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Parameters"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Patient/$RevisePatient": {
+      "summary": "Operation $RevisePatient on type Patient",
+      "description": "Operation $RevisePatient on type Patient",
+      "get": {
+        "summary": "$RevisePatient on type Patient",
+        "description": "This operation is used to revise a patient\u0027s demographics.",
+        "operationId": "op-RevisePatient-Patient",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation response",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Parameters"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Patient/$AddPatient": {
+      "summary": "Operation $AddPatient on type Patient",
+      "description": "Operation $AddPatient on type Patient",
+      "get": {
+        "summary": "$AddPatient on type Patient",
+        "description": "This operation is used for newborns or to \u0027force create\u0027 a patient.",
+        "operationId": "op-AddPatient-Patient",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation response",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Parameters"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Patient/$merge": {
+      "summary": "Operation $merge on type Patient",
+      "description": "Operation $merge on type Patient",
+      "get": {
+        "summary": "$merge on type Patient",
+        "description": "This operation is used to merge patients.",
+        "operationId": "op-merge-Patient",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation response",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Parameters"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {

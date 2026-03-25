@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="NEWBORN-Distribution-Notification-Masked-MumPHN"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle"/>
+  </meta>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:7305f123-d3c1-45be-8417-f5a13bb767fc"/>
+  </identifier>
+  <type value="collection"/>
+  <timestamp value="2025-10-10T08:03:00.3381027-07:00"/>
+  <link>
+    <relation value="self"/>
+    <url value="urn:uuid:bb122554-dd6b-4c3a-a162-c80c388a637b"/>
+  </link>
+  <entry>
+    <fullUrl value="urn:uuid:bb122554-dd6b-4c3a-a162-c80c388a637b"/>
+    <resource>
+      <Parameters>
+        <id value="Inline-Instance-for-NEWBORN-Distribution-Masked-MumPHN"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-subscription"/>
+        </meta>
+        <parameter>
+          <name value="messageId"/>
+          <valueString value="bb122554-dd6b-4c3a-a162-c80c388a637b"/>
+        </parameter>
+        <parameter>
+          <name value="messageDateTime"/>
+          <valueDateTime value="2025-10-10T07:50:31-07:00"/>
+        </parameter>
+        <parameter>
+          <name value="eventType"/>
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+              <code value="NEWBORN"/>
+            </coding>
+          </valueCodeableConcept>
+        </parameter>
+      </Parameters>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://hd4.hcim.ehealth.gov.bc.ca/Patient/PHNHere"/>
+    <resource>
+      <Patient>
+        <id value="NEWBORNPatient"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Patient_NEWBORNPatient"> </a><p class="res-header-id"><b>Generated Narrative: Patient NEWBORNPatient</b></p><a name="NEWBORNPatient"> </a><a name="hcNEWBORNPatient"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">ClientRegistryPatient</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Baby Wilmore  Unknown, DoB: 2025-10-10 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id#PHNHere (use: official, period: 2025-10-10 07:50:31-0700 --&gt; (ongoing)))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li>ph: 2197208370(Mobile)</li><li>ph: 5399043795(Home)</li><li>ph: 6513957301(Work)</li><li><a href="mailto:Houston7830@Stravenue.com">Houston7830@Stravenue.com</a></li><li><a href="mailto:Wilmore569@Stravenue.com">Wilmore569@Stravenue.com</a></li><li><a href="mailto:Errol9948@Stravenue.com">Errol9948@Stravenue.com</a></li><li>5049 Wright Close Suite 8953 PO Box 8801 View Royal BC V7G 1J7 CA </li><li>6346 Stanley Stravenue Apt 8782 PO Box 8813 Winter Harbour BC V1M 2E1 CA </li></ul></td></tr></table><hr/><p><b>Contained Resource</b></p><hr/><a name="NEWBORNPatient/null"> </a><p class="res-header-id"><b>RelatedPerson </b></p><p><b>identifier</b>: <code>https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id</code>/?ngen-9? (use: official, )</p><p><b>active</b>: true</p><p><b>relationship</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode NMTH}">natural mother</span></p></div>
+        </text>
+        <contained>
+          <RelatedPerson>
+            <identifier>
+              <use value="official"/>
+              <system value="https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"/>
+              <value>
+                <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+                  <valueCode value="masked"/>
+                </extension>
+              </value>
+            </identifier>
+            <active value="true"/>
+            <relationship>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+                <code value="NMTH"/>
+              </coding>
+            </relationship>
+          </RelatedPerson>
+        </contained>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="official"/>
+          <system value="https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"/>
+          <value value="PHNHere"/>
+          <period>
+            <start value="2025-10-10T07:50:31-07:00"/>
+          </period>
+          <assigner>
+            <display value="MOH Client Registry - MOH_CRS"/>
+          </assigner>
+        </identifier>
+        <active value="true"/>
+        <name>
+          <use value="usual"/>
+          <family value="Wilmore"/>
+          <given value="Baby"/>
+          <period>
+            <start value="2025-10-10T07:50:31-07:00"/>
+          </period>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="2197208370"/>
+          <use value="mobile"/>
+          <period>
+            <start value="2025-10-10T07:50:31-07:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="5399043795"/>
+          <use value="home"/>
+          <period>
+            <start value="2025-10-10T07:50:31-07:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="6513957301"/>
+          <use value="work"/>
+          <period>
+            <start value="2025-10-10T07:50:31-07:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="Houston7830@Stravenue.com"/>
+          <use value="mobile"/>
+          <period>
+            <start value="2025-10-10T07:50:31-07:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="Wilmore569@Stravenue.com"/>
+          <use value="home"/>
+          <period>
+            <start value="2025-10-10T07:50:31-07:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="Errol9948@Stravenue.com"/>
+          <use value="work"/>
+          <period>
+            <start value="2025-10-10T07:50:31-07:00"/>
+          </period>
+        </telecom>
+        <gender value="unknown">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2025-10-10T07:50:31-07:00"/>
+            </valuePeriod>
+          </extension>
+        </gender>
+        <birthDate value="2025-10-10">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2025-10-10T07:50:31-07:00"/>
+            </valuePeriod>
+          </extension>
+        </birthDate>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="unknown"/>
+          </extension>
+          <type value="physical"/>
+          <line value="5049 Wright Close"/>
+          <line value="Suite 8953"/>
+          <line value="PO Box 8801"/>
+          <city value="View Royal"/>
+          <state value="BC"/>
+          <postalCode value="V7G 1J7"/>
+          <country value="CA"/>
+          <period>
+            <start value="2025-10-10T07:50:31-07:00"/>
+          </period>
+        </address>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="unknown"/>
+          </extension>
+          <type value="postal"/>
+          <line value="6346 Stanley Stravenue"/>
+          <line value="Apt 8782"/>
+          <line value="PO Box 8813"/>
+          <city value="Winter Harbour"/>
+          <state value="BC"/>
+          <postalCode value="V1M 2E1"/>
+          <country value="CA"/>
+          <period>
+            <start value="2025-10-10T07:50:31-07:00"/>
+          </period>
+        </address>
+      </Patient>
+    </resource>
+  </entry>
+</Bundle>

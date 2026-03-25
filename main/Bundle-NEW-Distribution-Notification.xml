@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="NEW-Distribution-Notification"/>
+  <meta>
+    <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle"/>
+  </meta>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:6eaf44d4-4bb6-4518-9daa-ab4de8a397a8"/>
+  </identifier>
+  <type value="collection"/>
+  <timestamp value="2025-10-10T14:21:13.2932894-07:00"/>
+  <link>
+    <relation value="self"/>
+    <url value="urn:uuid:356859ba-983b-40d6-a03c-5a99f05c96b5"/>
+  </link>
+  <entry>
+    <fullUrl value="urn:uuid:356859ba-983b-40d6-a03c-5a99f05c96b5"/>
+    <resource>
+      <Parameters>
+        <id value="Inline-Instance-for-NEW-Distribution"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-subscription"/>
+        </meta>
+        <parameter>
+          <name value="messageId"/>
+          <valueString value="356859ba-983b-40d6-a03c-5a99f05c96b5"/>
+        </parameter>
+        <parameter>
+          <name value="messageDateTime"/>
+          <valueDateTime value="2025-10-10T15:06:59-07:00"/>
+        </parameter>
+        <parameter>
+          <name value="eventType"/>
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events"/>
+              <code value="NEW"/>
+            </coding>
+          </valueCodeableConcept>
+        </parameter>
+      </Parameters>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://hd4.hcim.ehealth.gov.bc.ca/Patient/PHNHere"/>
+    <resource>
+      <Patient>
+        <id value="NEWPatient"/>
+        <meta>
+          <profile value="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Patient_NEWPatient"> </a><p class="res-header-id"><b>Generated Narrative: Patient NEWPatient</b></p><a name="NEWPatient"> </a><a name="hcNEWPatient"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bc-patient.html">ClientRegistryPatient</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Nigel Kleiber  Male, DoB: 2004-03-28 ( https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id#PHNHere (use: official, period: 2025-10-10 15:06:59-0700 --&gt; (ongoing)))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li>ph: 305-501-8219(Home)</li><li><a href="mailto:Kleiber9140@Lawn.com">Kleiber9140@Lawn.com</a></li><li>4852 Catalina Expressway Pender Harbour BC V3R 1L4 CA </li></ul></td></tr></table></div>
+        </text>
+        <identifier>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension">
+            <valueCode value="active"/>
+          </extension>
+          <use value="official"/>
+          <system value="https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id"/>
+          <value value="PHNHere"/>
+          <period>
+            <start value="2025-10-10T15:06:59-07:00"/>
+          </period>
+          <assigner>
+            <display value="MOH Client Registry - MOH_CRS"/>
+          </assigner>
+        </identifier>
+        <active value="true"/>
+        <name>
+          <use value="usual"/>
+          <family value="Kleiber"/>
+          <given value="Nigel"/>
+          <period>
+            <start value="2025-10-10T15:06:59-07:00"/>
+          </period>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="305-501-8219"/>
+          <use value="home"/>
+          <period>
+            <start value="2025-10-10T15:06:59-07:00"/>
+          </period>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="Kleiber9140@Lawn.com"/>
+          <use value="home"/>
+          <period>
+            <start value="2025-10-10T15:06:59-07:00"/>
+          </period>
+        </telecom>
+        <gender value="male">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2025-10-10T15:06:59-07:00"/>
+            </valuePeriod>
+          </extension>
+        </gender>
+        <birthDate value="2004-03-28">
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension">
+            <valuePeriod>
+              <start value="2025-10-10T15:06:59-07:00"/>
+            </valuePeriod>
+          </extension>
+        </birthDate>
+        <address>
+          <extension url="http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension">
+            <valueCode value="unknown"/>
+          </extension>
+          <type value="physical"/>
+          <line value="4852 Catalina Expressway"/>
+          <city value="Pender Harbour"/>
+          <state value="BC"/>
+          <postalCode value="V3R 1L4"/>
+          <country value="CA"/>
+          <period>
+            <start value="2025-10-10T15:06:59-07:00"/>
+          </period>
+        </address>
+      </Patient>
+    </resource>
+  </entry>
+</Bundle>
