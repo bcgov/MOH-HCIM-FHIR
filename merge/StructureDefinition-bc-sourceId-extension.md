@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-sourceId-extension | *Version*:1.0.0 |
-| Active as of 2026-03-19 | *Computable Name*:SourceIDExtension |
+| Active as of 2026-03-25 | *Computable Name*:SourceIDExtension |
 
 Identifiers for the source and user that modified the specific element that this extension is on.
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-sourceId-extensio
   "name" : "SourceIDExtension",
   "title" : "BC SourceID and UserID",
   "status" : "active",
-  "date" : "2026-03-19T00:47:30+00:00",
+  "date" : "2026-03-25T21:32:51+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",

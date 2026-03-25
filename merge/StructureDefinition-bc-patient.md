@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient | *Version*:1.0.0 |
-| Active as of 2026-03-19 | *Computable Name*:ClientRegistryPatient |
+| Active as of 2026-03-25 | *Computable Name*:ClientRegistryPatient |
 
  
 General constraints on the Patient resource for use in the BC Client Registry project. 
@@ -48,7 +48,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-patient.csv), [Ex
   "version" : "1.0.0",
   "name" : "ClientRegistryPatient",
   "status" : "active",
-  "date" : "2026-03-19T00:47:30+00:00",
+  "date" : "2026-03-25T21:32:51+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",

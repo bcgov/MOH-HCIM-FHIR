@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set | *Version*:1.0.0 |
-| Active as of 2026-03-19 | *Computable Name*:NameUseVS |
+| Active as of 2026-03-25 | *Computable Name*:NameUseVS |
 
  
 BC Name Use value set, sliced to meet BC constraints. 
@@ -56,7 +56,7 @@ BC Name Use value set, sliced to meet BC constraints.
   "title" : "BC Name Use value set.",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-03-19T00:47:30+00:00",
+  "date" : "2026-03-25T21:32:51+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",

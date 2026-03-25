@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle | *Version*:1.0.0 |
-| Active as of 2026-03-19 | *Computable Name*:SubscriptionNotificationBundle |
+| Active as of 2026-03-25 | *Computable Name*:SubscriptionNotificationBundle |
 
  
 A Bundle that is used in the Client Registry when sending subscription notifications. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-subscription-noti
   "version" : "1.0.0",
   "name" : "SubscriptionNotificationBundle",
   "status" : "active",
-  "date" : "2026-03-19T00:47:30+00:00",
+  "date" : "2026-03-25T21:32:51+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",
@@ -131,7 +131,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-subscription-noti
       "path" : "Bundle.entry",
       "sliceName" : "patient",
       "short" : "Revised Patient.",
-      "min" : 0,
+      "min" : 1,
       "max" : "1",
       "mustSupport" : true
     },

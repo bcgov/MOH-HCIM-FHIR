@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-merge-status-code-system | *Version*:1.0.0 |
-| Active as of 2026-03-19 | *Computable Name*:MergeStatusCS |
+| Active as of 2026-03-25 | *Computable Name*:MergeStatusCS |
 
  
 Codes used to describe the merge status. 
@@ -32,7 +32,7 @@ Codes used to describe the merge status.
   "title" : "BC Client Registry merge status.",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-03-19T00:47:30+00:00",
+  "date" : "2026-03-25T21:32:51+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",

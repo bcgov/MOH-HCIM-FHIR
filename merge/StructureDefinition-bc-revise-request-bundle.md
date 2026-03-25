@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle | *Version*:1.0.0 |
-| Active as of 2026-03-19 | *Computable Name*:ReviseRequestBundle |
+| Active as of 2026-03-25 | *Computable Name*:ReviseRequestBundle |
 
  
 A Bundle that is used in the Client Registry for Revise Patient requests. This is also used by Patient Notitifications. 
@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-revise-request-bu
   "version" : "1.0.0",
   "name" : "ReviseRequestBundle",
   "status" : "active",
-  "date" : "2026-03-19T00:47:30+00:00",
+  "date" : "2026-03-25T21:32:51+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",

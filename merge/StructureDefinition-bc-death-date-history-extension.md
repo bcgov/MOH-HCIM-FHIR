@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-death-date-history-extension | *Version*:1.0.0 |
-| Active as of 2026-03-19 | *Computable Name*:DeathDateHistoryExtension |
+| Active as of 2026-03-25 | *Computable Name*:DeathDateHistoryExtension |
 
 This extension allows the Client Registry to include historical death dates and flags in a single Patient resource.
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-death-date-histor
   "name" : "DeathDateHistoryExtension",
   "title" : "BC Death Date History",
   "status" : "active",
-  "date" : "2026-03-19T00:47:30+00:00",
+  "date" : "2026-03-25T21:32:51+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",

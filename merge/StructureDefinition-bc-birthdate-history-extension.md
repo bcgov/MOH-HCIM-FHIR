@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-birthdate-history-extension | *Version*:1.0.0 |
-| Active as of 2026-03-19 | *Computable Name*:BirthDateHistoryExtension |
+| Active as of 2026-03-25 | *Computable Name*:BirthDateHistoryExtension |
 
 This extension allows the Client Registry to include historical birth dates in a single Patient resource.
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-birthdate-history
   "name" : "BirthDateHistoryExtension",
   "title" : "BC Birth Date History",
   "status" : "active",
-  "date" : "2026-03-19T00:47:30+00:00",
+  "date" : "2026-03-25T21:32:51+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",

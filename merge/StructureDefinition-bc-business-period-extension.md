@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension | *Version*:1.0.0 |
-| Active as of 2026-03-19 | *Computable Name*:BusinessPeriodExtension |
+| Active as of 2026-03-25 | *Computable Name*:BusinessPeriodExtension |
 
 The effective dates for the parent element.
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-business-period-e
   "name" : "BusinessPeriodExtension",
   "title" : "BC Business Dates",
   "status" : "active",
-  "date" : "2026-03-19T00:47:30+00:00",
+  "date" : "2026-03-25T21:32:51+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",
