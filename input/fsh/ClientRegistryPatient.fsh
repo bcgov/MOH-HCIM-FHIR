@@ -7,6 +7,8 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * identifier only http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier
 * identifier 0..* MS
 * identifier.extension contains SourceIDExtension named sourceID 0..1 MS and IdentifierStatusExtension named idStatus 0..1 MS
+* identifier.use from IdentifierUseVS (required)
+* identifier.use ^short = "official | secondary"
 * deceased[x] 0..1 MS
 * deceased[x] only dateTime
 * deceased[x].extension contains BusinessPeriodExtension named deathDateEffectiveDates 0..1 MS and SourceIDExtension named sourceID 0..1 MS and DeathDateHistoryExtension named deathDateHistory 0..* MS and DeathVerifiedFlagExtension named verifiedDeathFlag 0..1 MS
@@ -25,6 +27,7 @@ Description: "General constraints on the Patient resource for use in the BC Clie
 * telecom.system from ContactPointSystemVS (required)
 * telecom.system ^short = "phone | email"
 * telecom.extension contains SourceIDExtension named sourceID 0..1 MS
+* telecom.value ^short = "International: +ICC<space>areacode<space>phonenumber Example: +1 302 1234567, National: areacode<space>phonenumber Example: 2501234567, Email: email@domain"
 * gender 0..1 MS
 * gender.extension contains BusinessPeriodExtension named genderEffectiveDates 0..1 MS and SourceIDExtension named sourceID 0..1 MS and GenderHistoryExtension named history 0..* MS
 * birthDate 0..1 MS
@@ -36,8 +39,10 @@ Extension: BusinessPeriodExtension
 Id: bc-business-period-extension
 Title: "BC Business Dates"
 Description: "The effective dates for the parent element."
-* ^context.type = #element
-* ^context.expression = "Extension"
+* ^context[+].type = #element
+* ^context[=].expression = "Extension"
+* ^context[+].type = #element
+* ^context[=].expression = "Patient"
 * ^context[+].type = #element
 * ^context[=].expression = "Patient.gender"
 * ^context[+].type = #element
@@ -171,4 +176,3 @@ Description: "Identifier status."
 * value[x] only code
 * valueCode from IdentifierStatusVS (required)
 * value[x] ^short = "merged | active"
-

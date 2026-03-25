@@ -1,6 +1,6 @@
 
 
-### Patient Change Subscriptions - FUTURE
+### Patient Change Subscriptions
 
 Patient Change Notifications are sent when a patient record is created or changed and the user system has subscribed to receive notifications about those changes.  This guide supports the R4 Subscriptions referered in the [Subscriptions for R5 Backport Implementation Guide](http://hl7.org/fhir/uv/subscriptions-backport/).
 
@@ -8,5 +8,5 @@ User Systems **SHALL** POST a new Subscription instance to the Client Registry's
 
 In all cases, the content extension on the Subscription payload will be set to 'full-resource' and then the subscription notification will contain the changed patient data.  The notification will be an instance of a [Subscription Notification Bundle](StructureDefinition-bc-subscription-notification-bundle.html).
 
-Additional information about creating subscriptions can be found [here]({{site.data.fhir.path}}subscription.html).
+Additional information about creating subscriptions can be found [here](CodeSystem-bc-client-registry-patient-change-notification-events.html) or in the [Capability Statement](CapabilityStatement-bc-hcim-capability-statement-client.html).
 
