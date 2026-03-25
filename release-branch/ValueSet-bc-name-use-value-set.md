@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-name-use-value-set | *Version*:1.0.0 |
-| Active as of 2026-03-17 | *Computable Name*:NameUseVS |
+| Active as of 2026-03-25 | *Computable Name*:NameUseVS |
 
  
 BC Name Use value set, sliced to meet BC constraints. 
@@ -17,7 +17,10 @@ BC Name Use value set, sliced to meet BC constraints.
  **References** 
 
 * [PatientMerge](StructureDefinition-bc-merge-patient.md)
+* [PatientMerge](StructureDefinition-bc-merge-patient.md)
 * [ClientRegistryPatient](StructureDefinition-bc-patient.md)
+* [ClientRegistryPatient](StructureDefinition-bc-patient.md)
+* [PatientByExample](StructureDefinition-bc-patient-by-example.md)
 * [PatientByExample](StructureDefinition-bc-patient-by-example.md)
 
 ### Logical Definition (CLD)
@@ -53,7 +56,7 @@ BC Name Use value set, sliced to meet BC constraints.
   "title" : "BC Name Use value set.",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-03-17T18:19:20+00:00",
+  "date" : "2026-03-25T21:29:12+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-response-bundle | *Version*:1.0.0 |
-| Active as of 2026-03-17 | *Computable Name*:MergeResponseBundle |
+| Active as of 2026-03-25 | *Computable Name*:MergeResponseBundle |
 
  
 A Bundle that is used in the Client Registry response to Merge Patient requests. 
@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-merge-response-bu
   "version" : "1.0.0",
   "name" : "MergeResponseBundle",
   "status" : "active",
-  "date" : "2026-03-17T18:19:20+00:00",
+  "date" : "2026-03-25T21:29:12+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",

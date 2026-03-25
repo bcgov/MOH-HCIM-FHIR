@@ -9,13 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-address-validation-value-set | *Version*:1.0.0 |
-| Active as of 2026-03-17 | *Computable Name*:AddressValidationVS |
+| Active as of 2026-03-25 | *Computable Name*:AddressValidationVS |
 
  
 BC Address Validation value set used to describe the validation status of an address 
 
  **References** 
 
+* [BC Address Validation Status Code](StructureDefinition-bc-validation-status-extension.md)
 * [BC Address Validation Status Code](StructureDefinition-bc-validation-status-extension.md)
 
 ### Logical Definition (CLD)
@@ -51,7 +52,7 @@ BC Address Validation value set used to describe the validation status of an add
   "title" : "BC Address Validation Value Set",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-03-17T18:19:20+00:00",
+  "date" : "2026-03-25T21:29:12+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",

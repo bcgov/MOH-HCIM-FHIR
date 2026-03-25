@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-notification | *Version*:1.0.0 |
-| Active as of 2026-03-17 | *Computable Name*:PatientNotification |
+| Active as of 2026-03-25 | *Computable Name*:PatientNotification |
 
  
 This operation is used notify a user that a patient's record has changed. 
@@ -32,7 +32,7 @@ The Client Registry is acting as the client and is sending distributions when a 
   "title" : "Patient Notification",
   "status" : "active",
   "kind" : "operation",
-  "date" : "2026-03-17T18:19:20+00:00",
+  "date" : "2026-03-25T21:29:12+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",

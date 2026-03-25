@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-request-bundle | *Version*:1.0.0 |
-| Active as of 2026-03-17 | *Computable Name*:MergeRequestBundle |
+| Active as of 2026-03-25 | *Computable Name*:MergeRequestBundle |
 
  
 A Bundle that is used in the Client Registry for Add Patient requests. 
@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-bc-merge-request-bun
   "version" : "1.0.0",
   "name" : "MergeRequestBundle",
   "status" : "active",
-  "date" : "2026-03-17T18:19:20+00:00",
+  "date" : "2026-03-25T21:29:12+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",

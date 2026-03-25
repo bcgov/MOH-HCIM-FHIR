@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-merge | *Version*:1.0.0 |
-| Active as of 2026-03-17 | *Computable Name*:MergePatient |
+| Active as of 2026-03-25 | *Computable Name*:MergePatient |
 
  
 This operation is used to merge patients. 
@@ -48,7 +48,7 @@ See [Merge Patient request](Parameters-Merge-Request.md) example. See [Merge Pat
   "title" : "Merge Patient",
   "status" : "active",
   "kind" : "operation",
-  "date" : "2026-03-17T18:19:20+00:00",
+  "date" : "2026-03-25T21:29:12+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",

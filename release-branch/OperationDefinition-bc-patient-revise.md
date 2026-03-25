@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hlth.gov.bc.ca/fhir/client/OperationDefinition/bc-patient-revise | *Version*:1.0.0 |
-| Draft as of 2026-03-17 | *Computable Name*:RevisePatient |
+| Draft as of 2026-03-25 | *Computable Name*:RevisePatient |
 
  
 This operation is used to revise a patient's demographics. 
@@ -64,7 +64,7 @@ See [Revise Patient request](Bundle-Revise-withMaxData-Request.md) example.
   "title" : "Revise Patient",
   "status" : "draft",
   "kind" : "operation",
-  "date" : "2026-03-17T18:19:20+00:00",
+  "date" : "2026-03-25T21:29:12+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",

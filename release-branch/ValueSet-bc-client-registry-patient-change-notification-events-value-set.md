@@ -9,13 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://terminology.hlth.gov.bc.ca/ClientRegistry/ValueSet/bc-client-registry-patient-change-notification-events | *Version*:1.0.0 |
-| Active as of 2026-03-17 | *Computable Name*:PatientChangeNotificationEventsValueSet |
+| Active as of 2026-03-25 | *Computable Name*:PatientChangeNotificationEventsValueSet |
 
  
 Codes used to indicate that type of patient changes that a subscriber is interested in receiving. 
 
  **References** 
 
+* [MetadataParametersSubscription](StructureDefinition-bc-metadata-parameters-subscription.md)
 * [MetadataParametersSubscription](StructureDefinition-bc-metadata-parameters-subscription.md)
 
 ### Logical Definition (CLD)
@@ -51,7 +52,7 @@ Codes used to indicate that type of patient changes that a subscriber is interes
   "title" : "BC Client Registry Patient Change Notification Events Value Set",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-03-17T18:19:20+00:00",
+  "date" : "2026-03-25T21:29:12+00:00",
   "publisher" : "BC Ministry of Health",
   "contact" : [{
     "name" : "BC Ministry of Health",
